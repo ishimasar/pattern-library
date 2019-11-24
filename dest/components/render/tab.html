@@ -1,0 +1,90 @@
+
+
+<!-- src/components/tab.hbs -->
+<div class="tab-ui">
+  <ul class="tablist" role="tablist">
+    <li role="presentasion">
+      <a
+        href="#content1"
+        class="tab"
+        role="tab"
+        aria-controls="content1"
+        aria-selected="true"
+        >タブ1</a
+      >
+    </li>
+    <li role="presentasion">
+      <a href="#content2" class="tab" role="tab" aria-controls="content2"
+        >タブ2</a
+      >
+    </li>
+    <li role="presentasion">
+      <a
+        href="#content3"
+        class="tab last-of-type"
+        role="tab"
+        aria-controls="content3"
+        >タブ3</a
+      >
+    </li>
+  </ul>
+
+  <div class="tabpanel-wrap">
+    <section id="content1" class="tabpanel" role="tabpanel">
+      <h2>タブコンテンツ1</h2>
+      <ul class="tabpanel__list">
+        <li>
+          <strong>・マークアップについて</strong><br />
+          　タブパネル(コンテンツ)内に見出しが存在する場合はsection要素、存在しない場合はdiv要素でラップしてください
+        </li>
+        <li>
+          <strong>・キーボード操作について</strong><br />
+          　選択操作をしない場合、フォーカスは文書構造に沿って上/左の順で当たります(Webページでの基本的な動き)。<br />
+          　当該タブをクリックした場合、次に表示タブパネル内のリンクなどインタラクティブ要素にフォーカスします<br />
+          　※隠れたタブパネル内の要素にフォーカスしません(CSS・visibility:
+          hidden;の仕様)
+        </li>
+        <li>
+          <strong>・JavaScriptまたはCSSをオフにしても閲覧可能</strong><br />
+          　JSやCSSをユーザー側設定でオフにしてもコンテンツを見られるつくりにしています。<br />
+          　JSオフの場合タブはページ内リンクとして機能し、コンテンツは縦レイアウトになります<br />
+          　※どのような閲覧条件でも、文書情報(コンテンツ)の表示を優先する方針
+        </li>
+      </ul>
+      <a href="#" class="tabpanel__link">ダミーのリンクです</a>
+    </section>
+    <section id="content2" class="tabpanel" role="tabpanel">
+      <h2>タブコンテンツ2</h2>
+      <ul class="tabpanel__list">
+        <li>
+          <strong>・タブUIの欠点</strong><br />
+          　タブUIの欠点は各タブパネルのコンテンツ量を同等にしないと、下部に大きく余白ができたり、<br />
+          　レイアウト上の不ぞろい感を生んだりすることです。また、JSなどで高さを補う必要や手間も生じます。<br />
+          　なので、なるべく同等の情報量を持つようにそれぞれをコンテンツ設計してください<br />
+          　※「不ぞろいでも別に気にならない」という方もいるかもしれませんが...
+        </li>
+        <li>
+          <strong>・タブUIを考える</strong><br />
+          　そもそもタブUIであることの利点とは何でしょうか。<br />
+          　情報が並列化され構造把握しやすい、スクロールよりクリック/タップのほうが操作コストが低い、などが挙げられるでしょうか。<br />
+          　しかしコンテンツは常に見えていたほうが良く、「隠す」「再表示する」などは逆に認知負荷にもなるとも考えられます。<br />
+          　以上のことから、タブUIはそこまで汎用的とはいえず、使い所をよく検討したいUIです。
+        </li>
+      </ul>
+    </section>
+    <section id="content3" class="tabpanel" role="tabpanel">
+      <h2>タブコンテンツ3</h2>
+      <p class="tabpanel__paragraph">
+        タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。
+      </p>
+      <a href="#" class="tabpanel__link">ダミーのリンクです1</a><br />
+      <a href="#" class="tabpanel__link">ダミーのリンクです2</a>
+    </section>
+  </div>
+</div>
+<section class="other-content">
+  <h3>タブUIのコンポーネント外に配置されたコンテンツのサンプルです</h3>
+  <p>
+    各タブパネルのラップ要素の高さ(height)値に、各タブパネルのなかで最高値をJavaScriptで付与し、高さ固定しています。そのため、タブUIのあとに続くコンテンツは各タブパネルのコンテンツ量に応じて位置上下しません。
+  </p>
+</section>

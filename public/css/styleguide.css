@@ -1,0 +1,10 @@
+body {
+  font-size: 100%;
+}
+body * 
+body *:not(code) {
+  font-size: 1.1rem;
+}
+.Header {
+  background: rgb(14, 81, 168);
+}

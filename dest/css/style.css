@@ -1,0 +1,666 @@
+@charset "UTF-8";
+
+/* CSS variables */
+:root {
+  --black: hsla(0, 0%, 20%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --border-color: hsla(0, 0%, 40%, 1);
+  --focusring-color: hsla(217, 99%, 71%, 1);
+}
+
+/* reset-normalize */
+body {
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-size: 100%;
+  color: var(--black);
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/**
+ * ----------
+ * web accessibility
+ * -----
+ * what-input.jsによりdata属性付与
+ * マウス/タッチイベント時のフォーカスリングスタイル打消
+ * キーボードフォーカス時のみフォーカススタイル有効
+ */
+[data-whatinput="mouse"] *:focus,
+[data-whatinput="touch"] *:focus {
+  outline: none;
+}
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+/**
+  * すべてのインタラクティブ・コンテンツ(要素)に対し、
+  * focus-ringに独自カスタム疑似スタイルを定義
+  */
+[data-whatinput="keyboard"] a,
+[data-whatinput="keyboard"] audio,
+[data-whatinput="keyboard"] button,
+[data-whatinput="keyboard"] details,
+[data-whatinput="keyboard"] embed,
+[data-whatinput="keyboard"] iframe,
+[data-whatinput="keyboard"] img[usemap],
+[data-whatinput="keyboard"] input:not([hidden]),
+[data-whatinput="keyboard"] keygen,
+[data-whatinput="keyboard"] label,
+[data-whatinput="keyboard"] object[usemap],
+[data-whatinput="keyboard"] select,
+[data-whatinput="keyboard"] textarea,
+[data-whatinput="keyboard"] video {
+  outline: .125rem solid transparent;
+  outline-offset: .0625rem;
+  transition: outline .15s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+[data-whatinput="keyboard"] a:focus,
+[data-whatinput="keyboard"] audio:focus,
+[data-whatinput="keyboard"] button:focus,
+[data-whatinput="keyboard"] details:focus,
+[data-whatinput="keyboard"] embed:focus,
+[data-whatinput="keyboard"] iframe:focus,
+[data-whatinput="keyboard"] img[usemap]:focus,
+[data-whatinput="keyboard"] input:not([hidden]):focus,
+[data-whatinput="keyboard"] keygen:focus,
+[data-whatinput="keyboard"] label:focus,
+[data-whatinput="keyboard"] object[usemap]:focus,
+[data-whatinput="keyboard"] select:focus,
+[data-whatinput="keyboard"] textarea:focus,
+[data-whatinput="keyboard"] video:focus {
+  outline: .125rem solid var(--focusring-color);
+  outline-offset: .0625rem;
+}
+
+/* styling */
+.modal-dialog {
+  width: 100%;
+  max-width: 64.25rem;
+  margin: 2rem auto;
+}
+
+.modal-dialog:focus,
+.dialog-panel:focus {
+  outline: none;
+}
+
+.dialog-open {
+  display: block;
+  width: 300px;
+  margin: 4rem auto;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  text-align: center;
+  /* fade-out effect */
+  /* transition: background-color .3s ease, color .3s ease; */
+}
+
+.dialog-open:hover,
+.dialog-open:focus,
+.dialog__button:hover,
+.dialog__button:focus {
+  background-color: #777;
+  color: var(--white);
+  /* fade-in effect */
+  /* transition: background-color .25s ease, color .25s ease; */
+}
+
+.dialog-panel {
+  position: absolute;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0;
+  border: 2px solid var(--border-color);
+  background: var(--white);
+  border-radius: 5px;
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root .dialog-panel {
+  max-width: 365px;
+  width: 100%;
+  height: auto;
+}
+
+@supports (-ms-ime-align: auto) {
+  .dialog-panel {
+    max-width: 30%;
+  }
+}
+
+.dialog-panel:not([open]) {
+  display: block !important;
+  visibility: hidden;
+}
+
+.dialog-panel[open] {
+  animation: fade-in .25s ease-out, slide-down .25s ease-out;
+}
+
+.dialog-panel.is-motioned {
+  animation: fade-out .265s ease, slide-up .265s ease;
+}
+
+/* native backdrop */
+.dialog-panel::backdrop {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+/* polyfill backdrop */
+.dialog-panel+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  animation: fade-in .25s ease-out;
+}
+
+.dialog-panel__paragraph {
+  margin: auto;
+  padding: 4rem 3rem 0;
+}
+
+.dialog-panel__buttons {
+  text-align: center;
+  padding: 2rem 0 2.5rem;
+}
+
+.dialog__button {
+  display: inline-block;
+  min-width: 5rem;
+  padding-top: .625rem;
+  padding-bottom: .525rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.dialog__button:not(:first-of-type) {
+  margin-left: 1.75rem;
+}
+
+.dialog__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: var(--black);
+  font-size: 2rem;
+  color: var(--white);
+  border-radius: 50%;
+}
+
+.dialog__close:hover,
+.dialog__close:focus {
+  border: 1px solid #777;
+  background-color: var(--white);
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.dialog-response {
+  text-align: center;
+  line-height: 2;
+  font-size: 1.2rem;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translate(0, -20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, -23px);
+  }
+}
+
+/* styling */
+.header {
+  position: relative;
+  padding-top: 4rem;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid var(--black);
+}
+
+.global-nav {
+  height: 6rem;
+  width: 100%;
+  margin-top: 5.5rem;
+  border-top: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+  border-left: 1px solid var(--black);
+  background-color: #eee;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  width: 100%;
+  max-width: 80rem;
+  margin: 3rem auto;
+}
+
+@media all and (-ms-high-contrast:none) {
+
+  *::-ms-backdrop,
+  .container {
+    max-width: none;
+  }
+
+}
+
+.main {
+  min-width: 80%;
+}
+
+.section-wrap {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.section {
+  width: auto;
+  list-style-type: none;
+  font-size: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 10rem;
+  padding: 6rem 50px;
+  border: 1px solid black;
+}
+
+.section:focus {
+  outline: none;
+}
+
+
+.section__heading {
+  margin-bottom: 4rem;
+}
+
+.aside {
+  min-width: 20%;
+}
+
+.side-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12rem;
+  border: 1px solid var(--black);
+  background: #ddd;
+}
+
+.toc {
+  display: flex;
+  flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--black);
+  background: #b5e9f7;
+  text-align: center;
+  line-height: 3;
+}
+
+.toc__link.is-current,
+.toc__link:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer {
+  position: relative;
+  height: 500px;
+  padding-top: 10rem;
+  border: 1px solid var(--black);
+  text-align: center;
+  font-size: 3rem;
+}
+
+.back-to-top {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -3rem;
+  right: 8%;
+  width: 6rem;
+  height: 3rem;
+  padding-top: .5rem;
+  background-color: #ccc;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 5rem 5rem 0 0;
+}
+
+/* styling */
+.tab-ui {
+  position: relative;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+@media screen and (min-width:768px) {
+  .tab-ui {
+    max-width: 64.25rem;
+  }
+}
+
+.tab-ui__heading {
+  margin: 0 auto 1rem;
+}
+
+.tablist {
+  display: flex;
+  width: auto;
+}
+
+/* タブの隣接部分のborderが太くなることが許せない人向け */
+/* .tablist>li:not(:first-of-type) .tab {
+  margin-left: -1px;
+} */
+
+.tab {
+  display: inline-block;
+  padding: .65rem 1rem;
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
+  /* fade-out effect */
+  /* transition: background-color .3s ease, color .3s ease; */
+}
+
+@media screen and (max-width:767px) {
+  .tablist>li {
+    width: 33.33333%;
+  }
+
+  .tab {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .tab {
+    min-width: 12rem;
+    width: auto;
+  }
+}
+
+/* 選択されているタブのスタイル */
+.tab[aria-selected] {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* タブのhover状態スタイル */
+.tab:not([aria-selected]):hover,
+.tab:not([aria-selected]):focus {
+  background: #777;
+  color: var(--white);
+  /* fade-in effect */
+  /* transition: background-color .25s ease, color .25s ease; */
+}
+
+.tabpanel-wrap {
+  width: 100%;
+  height: fit-content;
+  min-height: 150px;
+  border: 1px solid var(--border-color);
+  color: var(--black);
+  overflow: hidden;
+}
+
+.tabpanel {
+  width: 100%;
+  padding: 1rem 2rem 2.5rem;
+  z-index: 0;
+}
+
+.tabpanel:focus {
+  outline: none;
+}
+
+.tabpanel[aria-hidden="false"] {
+  position: absolute;
+  top: 9.5%;
+  visibility: visible;
+}
+
+.tabpanel[aria-hidden="true"] {
+  position: absolute;
+  top: 9.5%;
+  visibility: hidden;
+}
+
+.tabpanel__list>li:not(:first-of-type) {
+  margin: .8rem auto auto;
+}
+
+.tabpanel__paragraph {
+  margin: 1.4rem auto 0;
+}
+
+.tabpanel__link {
+  display: inline-block;
+  width: auto;
+  margin: 1.4rem auto 0;
+}
+
+.other-content {
+  width: 100%;
+  max-width: 64.25rem;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border: 1px solid var(--black);
+}
+
+/* ----- */
+
+.sw-tab-menu .swiper-slide {
+  width: auto;
+}
+
+/* styling */
+.sw-tab-ui {
+  position: relative;
+  width: 100%;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+@media screen and (min-width:768px) {
+  .sw-tab-ui {
+    max-width: 64.25rem;
+  }
+}
+
+.sw-tab-container {
+  border: 1px solid var(--border-color);
+}
+
+.sw-tab-ui__heading {
+  margin: 0 auto 1rem;
+}
+
+.sw-tablist {
+  display: flex;
+  width: auto;
+}
+
+/* タブの隣接部分のborderが太くなることが許せない人向け */
+/* .sw-tablist>li:not(:first-of-type) .sw-tab {
+  margin-left: -1px;
+} */
+
+.sw-tab {
+  display: inline-block;
+  padding: .65rem 1rem;
+  /* border-radius: 5px 5px 0 0; */
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
+  cursor: pointer;
+  /* fade-out effect */
+  /* transition: background-color .3s ease, color .3s ease; */
+}
+
+.sw-tablist>li {
+  width: 30%
+}
+
+@media screen and (min-width:768px) {
+  .sw-tab {
+    min-width: 14rem;
+    width: auto;
+  }
+}
+
+/* 選択されているタブのスタイル */
+.sw-tab[aria-selected] {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* タブのhover状態スタイル */
+.sw-tab:not([aria-selected]):hover,
+.sw-tab:not([aria-selected]):focus {
+  background: #777;
+  color: var(--white);
+  /* fade-in effect */
+  /* transition: background-color .25s ease, color .25s ease; */
+}
+
+.sw-tabpanel-wrap {
+  color: var(--black);
+}
+
+.sw-tabpanel {
+  width: 100%;
+  padding: 1rem 2rem 2.5rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--black);
+  z-index: 0;
+}
+
+.sw-tabpanel:focus {
+  outline: none;
+}
+
+.sw-tabpanel__list>li:not(:first-of-type) {
+  margin: .8rem auto auto;
+}
+
+.sw-tabpanel__paragraph {
+  margin: 1.4rem auto 0;
+}
+
+.sw-tabpanel__link {
+  display: inline-block;
+  width: auto;
+  margin: 1.4rem auto 0;
+}
+
+
+
+.swiper-slide-thumb-active {
+  border-bottom: 2px solid rgb(9, 8, 53);
+  color: rgb(9, 8, 53) !important;
+  font-weight: bold;
+}
+
+.swiper-container {
+  margin: 0 auto 30px;
+}
+
+.tab-contents {
+  margin: 30px auto;
+}

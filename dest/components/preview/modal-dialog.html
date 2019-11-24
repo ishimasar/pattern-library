@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link media="all" rel="stylesheet" href="../../css/style.css">
+<title>Preview Layout</title>
+</head>
+<body>
+<!-- src/components/modal-dialog.hbs -->
+<div id="modal-dialog" class="modal-dialog">
+  <button type="button" id="dialog-open" class="dialog-open">
+    モーダルダイアログ<br />
+    (モーダルウインドウ)を開く
+  </button>
+  <dialog
+    id="dialog-panel"
+    class="dialog-panel"
+    role="dialog"
+    aria-describedby="d-message"
+  >
+    <p id="d-message" class="dialog-panel__paragraph" role="document">
+      モーダルダイアログ(モーダルウインドウ)<br />
+      とはどんなものか知っていますか？
+    </p>
+    <div class="dialog-panel__buttons">
+      <button type="button" id="dialog-yes" class="dialog__button">
+        はい
+      </button>
+      <button type="button" id="dialog-no" class="dialog__button">
+        いいえ
+      </button>
+    </div>
+    <button
+      type="button"
+      id="dialog-close"
+      class="dialog__close"
+      aria-label="このモーダルダイアログを閉じる"
+    >
+      ×
+    </button>
+  </dialog>
+  <p class="dialog-response">
+    ダイアログの返り値：<br /><em><span id="return-value"></span></em>
+  </p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.0/dialog-polyfill.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.2.6/what-input.min.js"></script>
+<script src="../../js/main.js" type="module"></script>
+</body>
+</html>
