@@ -79,7 +79,7 @@ a:focus {
 [data-whatinput="keyboard"] select,
 [data-whatinput="keyboard"] textarea,
 [data-whatinput="keyboard"] video {
-  outline: .125rem solid transparent;
+  outline: none;
   outline-offset: .0625rem;
   transition: outline .15s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
@@ -482,8 +482,8 @@ _:future,
 }
 
 /* タブのhover状態スタイル */
-.tab:not([aria-selected]):hover,
-.tab:not([aria-selected]):focus {
+.tab:hover,
+.tab:focus {
   background: #777;
   color: var(--white);
   /* fade-in effect */
@@ -663,4 +663,172 @@ _:future,
 
 .tab-contents {
   margin: 30px auto;
+}
+
+
+.fieldset {
+  width: 65%;
+}
+.fieldset:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+.checkbox,
+.radio {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+.checkbox + label,
+.radio + label{
+  display: block;
+  position: relative;
+  width: auto;
+  margin-top: .5rem;
+  padding-left: 1.8em;
+  line-height: 1.75;
+  cursor: pointer;
+}
+
+.checkbox:checked + label,
+.radio:checked + label {
+  font-weight: bold;
+  color: #000098;
+}
+
+.checkbox:hover + label,
+.radio:hover + label {
+  opacity: .75;
+  -webkit-transition: all .15s ease-in;
+  transition: all .15s ease-in;
+}
+
+.checkbox + label:before {
+  content: "";
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  top: .45rem;
+  left: .28rem;
+  width: .55rem;
+  height: .34rem;
+  border-top: 2.3px solid #000098;
+  border-right: 2.3px solid #000098;
+  z-index: 1;
+  -webkit-transition: all .15s ease-in;
+  transition: all .15s ease-in;
+   -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.checkbox:checked + label:before,
+.radio:checked + label:before {
+  opacity: 1;
+  -webkit-animation: scale .1s ease-in-out .2s 1 normal running;
+  animation: scale .1s ease-in-out .2s 1 normal running;
+}
+
+.radio:checked + label:before {
+  opacity: 1;
+  -webkit-animation: scale-radio .1s ease-in-out .2s 1 normal running;
+  animation: scale-radio .1s ease-in-out .2s 1 normal running;
+}
+
+.radio:checked + label > svg {
+  opacity: 1;
+  -webkit-animation: scale-radio .1s ease-in-out .2s 1 normal running;
+  animation: scale-radio .1s ease-in-out .2s 1 normal running;
+}
+
+[data-whatinput="keyboard"] .checkbox:focus + label:after,
+[data-whatinput="keyboard"] .radio:focus + label:after {
+  border-color: #000098;
+  box-shadow: 0 0 4px #000098;
+}
+
+.checkbox + label:after {
+  content: "";
+  position: absolute;
+  top: .2rem;   
+  left: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #888;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.checkbox:disabled,
+.checkbox + label[disabled],
+.radio:disabled,
+.radio + label[disabled] {
+  cursor: not-allowed;
+  opacity: .67;
+}
+
+.radio + label > svg {
+  opacity: 0;
+  position: absolute;
+  top: .38rem;
+  left: .16rem;
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+}
+
+.radio + label:after {
+  content: "";
+  position: absolute;
+  top: .19rem;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 2px solid #888;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+svg circle {
+  stroke: #000098;
+  fill: #000098;
+}
+
+@media screen and (-ms-high-contrast: active) { 
+  svg circle {
+     stroke: #fff;
+     fill: #fff;
+  }
+}
+
+@-webkit-keyframes scale {
+  32% { transform: scale(1.13) rotate(135deg); }
+  83% { transform: scale(1) rotate(135deg); }
+}
+
+@keyframes scale {
+  32% { transform: scale(1.13) rotate(135deg); }
+  83% { transform: scale(1) rotate(135deg); }
+}
+ 
+@-webkit-keyframes scale-radio {
+  32% { transform: scale(1.13); }
+  83% { transform: scale(1); }
+}
+
+@keyframes scale-radio {
+  32% { transform: scale(1.13); }
+  83% { transform: scale(1); }
 }

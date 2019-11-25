@@ -1,3 +1,27 @@
 
 
+<fieldset class="fieldset">
+  <legend>ラジオボタンはフォーカスしたら方向キーで選択操作</legend>
 
+  <input type="radio" id="radio1" name="radio1" checked class="radio">
+  <label for="radio1">
+    <svg>
+      <use xlink:href="#radio-icon"></use>
+    </svg>ラジオボタン1</label>
+
+  <input type="radio" id="radio2" name="radio1" class="radio">
+  <label for="radio2">
+    <svg>
+      <use xlink:href="#radio-icon"></use>
+    </svg>ラジオボタン2</label>
+  
+  <input type="radio" id="radio3" name="radio1" class="radio" disabled>
+  <label for="radio3" disabled>非活性ラジオボタン</label>
+</fieldset>
+<p>※キーボード操作時のみフォーカス・インジケーターにスタイル適用</p>
+
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="radio-icon" width="15" height="15" viewBox="-100 -100 200 200" >
+    <circle cx="0" cy="0" r="80">
+  </symbol>
+</svg>
