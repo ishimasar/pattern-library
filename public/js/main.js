@@ -1,8 +1,12 @@
+import { Carousel } from './modules/Carousel.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
 import { ModalDialog } from './modules/ModalDialog.js'
 import { scrollSmooth } from './modules/SmoothScroll.js';
 import { Tab } from './modules/Tab.js';
 // import { TabSwipe } from './modules/TabSwipe.js';
+
+const carousel = new Carousel('.js-carousel-cont', 'js-carousel-thumb', '.js-carousel-prev', '.js-carousel-next', '.js-carousel-play', '.js-carousel-pause');
+carousel.setter();
 
 const displayScreenData = new DisplayScreenData('pageTop');
 displayScreenData.addElement();
