@@ -1,15 +1,15 @@
 # Pattern Library & Style Guide
 
 ## 構成
-- COMPONENTS
-  1. Static Ui
-  2. Dynamic Ui
-  3. Form Ui
-  4. Control
-  5. Effect
-  6. Layout
-  7. Typography
-  8. Utility
+- Components
+  - Static Ui
+  - Dynamic Ui
+  - Form Ui
+  - Control
+  - Effect
+  - Layout
+  - Typography
+  - Utility
 
 ## 本ライブラリ・スタイルガイドの作成目的
 
