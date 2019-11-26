@@ -5,9 +5,9 @@
 
 UI分類 (Components)
  1. **Static Ui**  
-   静的UI：JavaScriptで動的処理などを付与しないベーシックなWeb UI。List、Card、Navigation、Tableなど。
+   静的UI：JavaScriptでDOM操作など動的処理を付与しない静的なWeb UI。List、Card、Tableなど。
  2. **Dynamic Ui**  
-   動的UI：JavaScriptで動的処理などを付与するインタラクティブなWeb UI。Carousel、Dialog、Tabなど。
+   動的UI：JavaScriptで動的処理を付与するインタラクティブなWeb UI。Carousel、Dialog、Tabなど。
  3. **Form Ui**  
    フォームUI：Webフォームでユーザーが情報入力・送信する際に用いるUI。Checkbox、Radio、Input fieldなど。
  4. **Control**  
