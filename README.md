@@ -9,15 +9,15 @@ UI分類 (Components)
  2. **Dynamic Ui**  
    動的UI：JavaScriptで動的処理を付与するインタラクティブなWeb UI。Carousel、Dialog、Tabなど。
  3. **Form Ui**  
-   フォームUI：Webフォームでユーザーが情報入力・送信する際に用いるUI。Checkbox、Radio、Input fieldなど。
+   フォームUI：ユーザーが情報入力・送信する際に用いるUI。Checkbox、Radio、Input fieldなど。
  4. **Control**  
-   コントロール系： ユーザー操作により挙動や値をコントロールするためのUI。Button、Switch、Sliderbarなど。
+   コントロール系：ユーザー操作で挙動や値をコントロールするUI。Button、Switch、Sliderbarなど。
  5. **Effect**  
    演出・効果：CSSやJavaScriptを用いたモーション/アニメーション挙動UI。Smooth scroll、Loading effectなど。
  6. **Layout**  
    配置・割付規則：空間上に要素を配置する際の手法、法則。Grid、Column、Flexboxなど。
  7. **Typography**  
-   文字表現デザイン：文字関連(書体、大きさ、字間、字数、行間、行数など)のUI。Heading、Body text、Noteなど。
+   文字表現デザイン：文字関連(書体、サイズ、字間、字数、行間、行数など)のUI。Heading、Body text、Noteなど。
  8. **Utility**  
    汎用パターン：各UI間・中で柔軟に適用できるスタイル。 Space、Line、Shapeなど。
 
