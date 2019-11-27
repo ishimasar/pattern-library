@@ -31,16 +31,13 @@ button {
   appearance: none;
 }
 
-ol,
-ul,
-li {
+ol, ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
   text-decoration: none;
 }
 
@@ -129,7 +126,8 @@ a:focus {
   transition: opacity 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53);
   z-index: 1;
 }
-.carousel__content[aria-hidden=false]:hover {
+.carousel__content[aria-hidden=false]:hover,
+.carousel__content[aria-hidden=false]:focus {
   opacity: 0.7;
   transition: opacity 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
@@ -202,7 +200,8 @@ a:focus {
   box-sizing: border-box;
   backface-visibility: hidden;
 }
-.carousel__control-next:hover, .carousel__control-prev:hover {
+.carousel__control-next:hover, .carousel__control-prev:hover,
+.carousel__control-next:focus, .carousel__control-prev:focus {
   opacity: 0.5;
   transition: all ease-out 0.2s;
 }
@@ -223,7 +222,8 @@ a:focus {
 [aria-hidden=false].carousel__control-pause, [aria-hidden=false].carousel__control-play {
   visibility: visible;
 }
-.carousel__control-pause:hover, .carousel__control-play:hover {
+.carousel__control-pause:hover, .carousel__control-play:hover,
+.carousel__control-pause:focus, .carousel__control-play:focus {
   background-color: #777;
 }
 
@@ -234,7 +234,8 @@ a:focus {
 .carousel__control-prev:before {
   transform: translate(0, -50%) rotate(135deg);
 }
-.carousel__control-prev:hover {
+.carousel__control-prev:hover,
+.carousel__control-prev:focus {
   left: -32px;
 }
 
@@ -245,7 +246,8 @@ a:focus {
 .carousel__control-next:before {
   transform: translate(0, -50%) rotate(-45deg);
 }
-.carousel__control-next:hover {
+.carousel__control-next:hover,
+.carousel__control-next:focus {
   right: -43px;
 }
 
@@ -269,18 +271,22 @@ a:focus {
   padding: 0;
 }
 
-/* インジケーター・サムネイル アイテム */
-.carousel__thumbnail-item {
+/* インジケーター・サムネイル ボタン */
+.carousel__thumbnail-btn {
   width: 65px;
   height: auto;
 }
-.carousel__thumbnail-item[aria-selected=true] {
+
+.carousel__thumbnail-btn[aria-selected=true] {
   opacity: 1;
 }
-.carousel__thumbnail-item[aria-selected=false] {
+
+.carousel__thumbnail-btn[aria-selected=false] {
   opacity: 0.35;
 }
-.carousel__thumbnail-item:hover {
+
+.carousel__thumbnail-btn:hover,
+.carousel__thumbnail-btn:focus {
   opacity: 1;
 }
 
@@ -575,7 +581,8 @@ _:future,
 }
 
 .toc__link.is-current,
-.toc__link:hover {
+.toc__link:hover,
+.toc__link:focus {
   font-weight: bold;
   text-decoration: none;
 }
@@ -669,7 +676,7 @@ _:future,
   color: var(--white);
 }
 
-/* タブのhover状態スタイル */
+/* タブのhover/focus状態スタイル */
 .tab:hover,
 .tab:focus {
   background: #777;
@@ -798,7 +805,7 @@ _:future,
   color: var(--white);
 }
 
-/* タブのhover状態スタイル */
+/* タブのhover/focus状態スタイル */
 .sw-tab:not([aria-selected]):hover,
 .sw-tab:not([aria-selected]):focus {
   background: #777;
@@ -891,8 +898,8 @@ _:future,
   color: #000098;
 }
 
-.checkbox:hover + label,
-.radio:hover + label {
+.checkbox:hover + label, .radio:hover + label,
+.checkbox:focus + label, .radio:focus + label {
   opacity: .75;
   -webkit-transition: all .15s ease-in;
   transition: all .15s ease-in;

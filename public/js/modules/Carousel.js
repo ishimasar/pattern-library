@@ -1,7 +1,7 @@
 'use strict';
 
 export class Carousel {
-  constructor(triggerClass, thumbParent, prev, next, play, pause) {
+  constructor(triggerClass, thumb, prev, next, play, pause) {
     this.current = 0; // 現在地を示すインデックス番号：初期値0=1番目
     this.timerId; // setTimeout関数の戻り値(ID)。clearTimeoutに渡す用
 
@@ -11,7 +11,8 @@ export class Carousel {
 
     console.log(this.carouselCont.length);
     if(this.carouselCont.length > 0) {
-      this.carouselThumb = document.getElementById(thumbParent).children; // DOM操作したい子Node取得(ul>liで親子関係保証されているため、IDを一意に指定する方法をとった)
+      this.carouselThumb = document.querySelectorAll(thumb); // サムネイル(button要素 = role="tab")のDOM取得
+      console.log(this.carouselThumb);
     }
 
     // 前へボタンDOM取得変数

@@ -21,11 +21,13 @@ export class DisplayScreenData {
   }
 
   displayData() {
-    window.addEventListener('scroll', () => {
-      this.scrollPos = window.pageYOffset;
-      setTimeout(() => {
-        target.textContent = 'ページスクロール量：' + Math.ceil(this.scrollPos);
-      }, 200);
-    });
+    if(this.body != null) {
+      window.addEventListener('scroll', () => {
+        this.scrollPos = window.pageYOffset;
+        setTimeout(() => {
+          target.textContent = 'ページスクロール量：' + Math.ceil(this.scrollPos);
+        }, 200);
+      });
+    }
   }
 }

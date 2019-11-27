@@ -1,9 +1,9 @@
 'use strict';
- 
+
 // fractalインスタンスを作成してエクスポート
 const fractal = module.exports = require('@frctl/fractal').create();
 // プロジェクト関連のメタデータ設定
-fractal.set('project.title', 'Clody knot');
+fractal.set('project.title', 'Pattern Library by Cloudy knot');
 fractal.set('project.author', 'masa ishii');
 // コンポーネントの設定
 fractal.components.set('path', __dirname + '/src/components');

@@ -1,61 +1,81 @@
 
 <div class="carousel">
-  <div class="carousel__main"><a class="carousel__content js-carousel-cont" id="panel1" href="#" role="tabpanel" aria-labelledby="prev next play pause tab1" aria-hidden="false" tabindex="0">
+  <div class="carousel__main">
+    <a href="#" id="panel1" class="carousel__content js-carousel-cont" role="tabpanel" aria-labelledby="prev next play pause tab1" aria-hidden="false" tabindex="0">
       <picture>
         <!-- WebP用画像-->
-        <source srcset="{{ path '/img/img_carousel_01.jpg' }}" type="image/webp" loading="lazy">
-        <!-- 従来画像--><img class="carousel__img" src="{{ path '/img/img_carousel_01.jpg' }}" alt="スライドパネル-コンテンツ画像1">
-      </picture></a><a class="carousel__content js-carousel-cont" id="panel2" href="#" role="tabpanel" aria-labelledby="prev next play pause tab2" aria-hidden="true" tabindex="-1">
+        <source srcset="{{ path '/img/img_carousel_01.jpg' }}" type="image/webp">
+        <!-- 従来画像-->
+        <img src="{{ path '/img/img_carousel_01.jpg' }}" class="carousel__img" alt="スライドパネル-コンテンツ画像1" decoding="async">
+      </picture>
+    </a>
+    <a href="#" id="panel2" class="carousel__content js-carousel-cont" role="tabpanel" aria-labelledby="prev next play pause tab2" aria-hidden="true" tabindex="-1">
       <picture>
-        <source srcset="{{ path '/img/img_carousel_02.jpg' }}" type="image/webp" loading="lazy"><img class="carousel__img" src=src="{{ path '/img/img_carousel_02.jpg' }}" alt="スライドパネル-コンテンツ画像2">
-      </picture></a><a class="carousel__content js-carousel-cont" id="panel3" href="#" role="tabpanel" aria-labelledby="prev next play pause tab3" aria-hidden="true" tabindex="-1">
+        <source srcset="{{ path '/img/img_carousel_02.jpg' }}" type="image/webp">
+        <img src="{{ path '/img/img_carousel_02.jpg' }}" class="carousel__img" alt="スライドパネル-コンテンツ画像2" decoding="async">
+      </picture>
+    </a>
+    <a href="#" id="panel3" class="carousel__content js-carousel-cont" role="tabpanel" aria-labelledby="prev next play pause tab3" aria-hidden="true" tabindex="-1">
       <picture>
-        <source srcset="{{ path '/img/img_carousel_03.jpg' }}" type="image/webp" loading="lazy"><img class="carousel__img" src="{{ path '/img/img_carousel_03.jpg' }}" alt="スライドパネル-コンテンツ画像3">
-      </picture></a><a class="carousel__content js-carousel-cont" id="panel4" href="#" role="tabpanel" aria-labelledby="prev next play pause tab4" aria-hidden="true" tabindex="-1">
+        <source srcset="{{ path '/img/img_carousel_03.jpg' }}" type="image/webp">
+        <img src="{{ path '/img/img_carousel_03.jpg' }}" class="carousel__img" alt="スライドパネル-コンテンツ画像3" decoding="async">
+      </picture>
+    </a>
+    <a href="#" id="panel4" class="carousel__content js-carousel-cont" role="tabpanel" aria-labelledby="prev next play pause tab4" aria-hidden="true" tabindex="-1">
       <picture>
-        <source srcset="{{ path '/img/img_carousel_04.jpg' }}" type="image/webp" loading="lazy"><img class="carousel__img" src="{{ path '/img/img_carousel_04.jpg' }}" alt="スライドパネル-コンテンツ画像4">
-      </picture></a><a class="carousel__content js-carousel-cont" id="panel5" href="#" role="tabpanel" aria-labelledby="prev next play pause tab5" aria-hidden="true" tabindex="-1">
+        <source srcset="{{ path '/img/img_carousel_04.jpg' }}" type="image/webp">
+        <img src="{{ path '/img/img_carousel_04.jpg' }}" class="carousel__img" alt="スライドパネル-コンテンツ画像4" decoding="async">
+      </picture>
+    </a>
+    <a href="#" id="panel5" class="carousel__content js-carousel-cont" role="tabpanel" aria-labelledby="prev next play pause tab5" aria-hidden="true" tabindex="-1">
       <picture>
-        <source srcset="{{ path '/img/img_carousel_05.jpg' }}" type="image/webp" loading="lazy"><img class="carousel__img" src="{{ path '/img/img_carousel_05.jpg' }}" alt="スライドパネル-コンテンツ画像5">
-      </picture></a>
-    <button class="carousel__control-prev js-carousel-prev" id="prev" type="button" aria-label="前のスライドコンテンツへ Previus" aria-controls="panel1 panel2 panel3 panel4 panel5"></button>
-    <button class="carousel__control-next js-carousel-next" id="next" type="button" aria-label="次のスライドコンテンツへ Next" aria-controls="panel1 panel2 panel3 panel4 panel5"></button>
-    <button class="carousel__control-play js-carousel-play" id="play" type="button" aria-label="オートスライド再生 Pray" aria-controls="panel1 panel2 panel3 panel4 panel5" aria-hidden="false"></button>
-    <button class="carousel__control-pause js-carousel-pause" id="pause" type="button" aria-label="オートスライド一時停止 Pause" aria-controls="panel1 panel2 panel3 panel4 panel5" aria-hidden="true"></button>
+        <source srcset="{{ path '/img/img_carousel_05.jpg' }}" type="image/webp">
+        <img src="{{ path '/img/img_carousel_05.jpg' }}" class="carousel__img" alt="スライドパネル-コンテンツ画像5" decoding="async">
+      </picture>
+    </a>
+    <button type="button" id="prev" class="carousel__control-prev js-carousel-prev" aria-label="前のスライドコンテンツへ Previus" aria-controls="panel1 panel2 panel3 panel4 panel5"></button>
+    <button type="button" id="next" class="carousel__control-next js-carousel-next" aria-label="次のスライドコンテンツへ Next" aria-controls="panel1 panel2 panel3 panel4 panel5"></button>
+    <button type="button" id="play" class="carousel__control-play js-carousel-play" aria-label="オートスライド再生 Pray" aria-controls="panel1 panel2 panel3 panel4 panel5" aria-hidden="false"></button>
+    <button type="button" id="pause" class="carousel__control-pause js-carousel-pause" aria-label="オートスライド一時停止 Pause" aria-controls="panel1 panel2 panel3 panel4 panel5" aria-hidden="true"></button>
   </div>
-  <ul class="carousel__thumbnail-list" id="js-carousel-thumb" role="tablist">
-    <li class="carousel__thumbnail-item" id="tab1" role="tab" aria-controls="panel1" aria-selected="true">
-      <button class="carousel__thumbnail-btn" type="button">
+  <ul class="carousel__thumbnail-list" role="tablist">
+    <li class="carousel__thumbnail-item" role="presentation">
+      <button type="button" id="tab1" class="carousel__thumbnail-btn js-carousel-thumb" role="tab" aria-controls="panel1" aria-selected="true">
         <picture>
-          <source srcset="{{ path '/img/img_carousel_01.jpg' }}" type="image/webp" loading="lazy"><img class="carousel__thumbnail-img" src="{{ path '/img/img_carousel_01.jpg' }}" alt="スライドパネル-サムネイル画像1">
+          <source srcset="{{ path '/img/img_carousel_01.jpg' }}" type="image/webp">
+          <img src="{{ path '/img/img_carousel_01.jpg' }}" class="carousel__thumbnail-img" alt="スライドパネル-サムネイル画像1" decoding="async">
         </picture>
       </button>
     </li>
-    <li class="carousel__thumbnail-item" id="tab2" role="tab" aria-controls="panel2" aria-selected="false">
-      <button class="carousel__thumbnail-btn" type="button">
+    <li class="carousel__thumbnail-item" role="presentation">
+      <button type="button" id="tab2" class="carousel__thumbnail-btn js-carousel-thumb" role="tab" aria-controls="panel2" aria-selected="false">
         <picture>
-          <source srcset="{{ path '/img/img_carousel_02.jpg' }}" type="image/webp" loading="lazy"><img class="carousel__thumbnail-img" src="{{ path '/img/img_carousel_02.jpg' }}" alt="スライドパネル-サムネイル画像2">
+          <source srcset="{{ path '/img/img_carousel_02.jpg' }}" type="image/webp">
+          <img src="{{ path '/img/img_carousel_02.jpg' }}" class="carousel__thumbnail-img" alt="スライドパネル-サムネイル画像2" decoding="async">
         </picture>
       </button>
     </li>
-    <li class="carousel__thumbnail-item" id="tab3" role="tab" aria-controls="panel3" aria-selected="false">
-      <button class="carousel__thumbnail-btn" type="button">
+    <li class="carousel__thumbnail-item" role="presentation">
+      <button type="button" id="tab3" class="carousel__thumbnail-btn js-carousel-thumb" role="tab" aria-controls="panel3" aria-selected="false">
         <picture>
-          <source srcset="{{ path '/img/img_carousel_03.jpg' }}" type="image/webp" loading="lazy"><img class="carousel__thumbnail-img" src="{{ path '/img/img_carousel_03.jpg' }}" alt="スライドパネル-サムネイル画像3">
+          <source srcset="{{ path '/img/img_carousel_03.jpg' }}" type="image/webp">
+          <img src="{{ path '/img/img_carousel_03.jpg' }}" class="carousel__thumbnail-img" alt="スライドパネル-サムネイル画像3" decoding="async">
         </picture>
       </button>
     </li>
-    <li class="carousel__thumbnail-item" id="tab4" role="tab" aria-controls="panel4" aria-selected="false">
-      <button class="carousel__thumbnail-btn" type="button">
+    <li class="carousel__thumbnail-item" role="presentation">
+      <button type="button" id="tab4" class="carousel__thumbnail-btn js-carousel-thumb" role="tab" aria-controls="panel4" aria-selected="false">
         <picture>
-          <source srcset="{{ path '/img/img_carousel_04.jpg' }}" type="image/webp" loading="lazy"><img class="carousel__thumbnail-img" src="{{ path '/img/img_carousel_04.jpg' }}" alt="スライドパネル-サムネイル画像4">
+          <source srcset="{{ path '/img/img_carousel_04.jpg' }}" type="image/webp">
+          <img src="{{ path '/img/img_carousel_04.jpg' }}" class="carousel__thumbnail-img" alt="スライドパネル-サムネイル画像4" decoding="async">
         </picture>
       </button>
     </li>
-    <li class="carousel__thumbnail-item" id="tab5" role="tab" aria-controls="panel5" aria-selected="false">
-      <button class="carousel__thumbnail-btn" type="button">
+    <li class="carousel__thumbnail-item" role="presentation">
+      <button type="button" id="tab5" class="carousel__thumbnail-btn js-carousel-thumb" role="tab" aria-controls="panel5" aria-selected="false">
         <picture>
-          <source srcset="{{ path '/img/img_carousel_05.jpg' }}" type="image/webp" loading="lazy"><img class="carousel__thumbnail-img" src="{{ path '/img/img_carousel_05.jpg' }}" alt="スライドパネル-サムネイル画像5">
+          <source srcset="{{ path '/img/img_carousel_05.jpg' }}" type="image/webp">
+          <img src="{{ path '/img/img_carousel_05.jpg' }}" class="carousel__thumbnail-img" alt="スライドパネル-サムネイル画像5" decoding="async">
         </picture>
       </button>
     </li>
@@ -64,8 +84,7 @@
 {{!-- <details class="details">
   <summary class="details__summary">このカルーセルの仕様↓</summary>
   <ol class="details__ordered-list">
-    <li class="details__ordered-item">キーボード操作に対応。<br>TabとSpace/Enterキーで「前へ(&lt;)ボタン」「次へ(&gt;)ボタン」「再生ボタン」「停止ボタン」「サムネイル
-                  ・インジケーター」などが操作可能
+    <li class="details__ordered-item">キーボード操作に対応。<br>TabとSpace/Enterキーで「前へ(&lt;)ボタン」「次へ(&gt;)ボタン」「再生ボタン」「停止ボタン」「サムネイル・インジケーター」などが操作可能
     </li>
     <li class="details__ordered-item">「再生・停止」が選択できるオートスライド機能を実装。<br>画面読み込み時からの自動スライド挙動はユーザビリティが低く、ユーザー自身が挙動選択できるようにん</li>
     <li class="details__ordered-item">カルーセルパネルの「コンテンツ(本例は画像5枚)」と「前へ(&lt;)ナビ」「次へ(&gt;)ナビ」にマウスオン、キーボードフォーカスした際は、オートスライド一時停止。<br>ユーザーが選択している際に自動で動くとユーザビリティを損ねるため</li>
