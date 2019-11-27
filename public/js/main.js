@@ -17,11 +17,14 @@ modalDialog.showDialog();
 modalDialog.hideDialog();
 modalDialog.respondValue();
 
-scrollSmooth();
-
 const tab = new Tab('.tab-ui', ".tab[role='tab']", '.tabpanel-wrap', ".tabpanel[role='tabpanel']");
 tab.setHeight();
 tab.switchTabs();
 tab.throttle();
 
 // TabSwipe();
+
+scrollSmooth();
+
+const elem = document.querySelectorAll('.toc');
+Stickyfill.add(elem);
