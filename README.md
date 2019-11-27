@@ -6,7 +6,7 @@ Webサイト・アプリ制作で使用されるUIやスタイルのコード見
 URLはこちら。※現在は随時、コード作成追加中  
 [https://ishimasar.github.io/pattern-library/dest/](https://ishimasar.github.io/pattern-library/dest/)
 
-よければ拙作コーディングガイドライン & 命名規則もあわせてご参照ください。※こちらもまだ詳細は今後作成予定  
+よければコーディングガイドライン & 命名規則もあわせてご参照ください。※こちらもまだ詳細は今後作成予定  
 [https://ishimasar.github.io/coding-guidelines/](https://ishimasar.github.io/coding-guidelines/)
 
 ## 目的
