@@ -3,10 +3,10 @@
 Webサイト・アプリ制作で使用されるUIやスタイルのコード見本・サンプル集です。  
 コーディングの参考、UI等の設計・作成方針の土台にでき、その上で作業効率にも寄与できるようなものを目指します。
 
-URLはこちら。※現在は随時、コード作成追加中。  
+URLはこちら。※現在は随時、コード作成追加中  
 [https://ishimasar.github.io/pattern-library/dest/](https://ishimasar.github.io/pattern-library/dest/)
 
-よければ拙作コーディングガイドライン & 命名規則もあわせてご参照ください。※こちらもまだ詳細は今後作成予定。  
+よければ拙作コーディングガイドライン & 命名規則もあわせてご参照ください。※こちらもまだ詳細は今後作成予定  
 [https://ishimasar.github.io/coding-guidelines/](https://ishimasar.github.io/coding-guidelines/)
 
 ## 目的
