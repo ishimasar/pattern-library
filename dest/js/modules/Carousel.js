@@ -9,10 +9,8 @@ export class Carousel {
     this.carouselCont = document.querySelectorAll(triggerClass); // .js-carousel-contをすべてカルーセルパネル(コンテンツ)とみなし、NodeList取得
     this.contArray = Array(...this.carouselCont); // 上記NodeListオブジェクトを扱いやすいよう配列に変換
 
-    console.log(this.carouselCont.length);
     if(this.carouselCont.length > 0) {
       this.carouselThumb = document.querySelectorAll(thumb); // サムネイル(button要素 = role="tab")のDOM取得
-      console.log(this.carouselThumb);
     }
 
     // 前へボタンDOM取得変数
