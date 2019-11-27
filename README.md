@@ -2,12 +2,11 @@
 
 Webサイト・アプリ制作で使用される汎用UIやスタイルの見本・サンプル集です。  
 制作者がこれを参考にして作業効率化を図ったり、コーディングの基本や書き方を振り返り、指針とできるようなものを目指します。
-※現在は随時、コードを作成追加中。
 
-本体URLはこちら。※現在は随時、コードを作成追加中。
+URLはこちら。※現在は随時、コードを作成追加中。  
 [https://ishimasar.github.io/pattern-library/dest/](https://ishimasar.github.io/pattern-library/dest/)
 
-良ければ、拙作コーディングガイドライン&命名規則もあわせてご参照ください。※こちらもまだ詳細は今後作成予定。
+良ければ、拙作コーディングガイドライン&命名規則もあわせてご参照ください。※こちらもまだ詳細は今後作成予定。  
 [https://ishimasar.github.io/coding-guidelines/](https://ishimasar.github.io/coding-guidelines/)
 
 ## 目的
