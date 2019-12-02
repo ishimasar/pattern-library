@@ -1,0 +1,125 @@
+/* styling */
+.tab-ui {
+  position: relative;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+@media screen and (min-width:768px) {
+  .tab-ui {
+    max-width: 64.25rem;
+  }
+}
+
+.tab-ui__heading {
+  margin: 0 auto 1rem;
+}
+
+.tablist {
+  display: flex;
+  width: auto;
+}
+
+/* タブの隣接部分のborderが太くなることが許せない人向け */
+/* .tablist>li:not(:first-of-type) .tab {
+  margin-left: -1px;
+} */
+
+.tab {
+  display: inline-block;
+  padding: .65rem 1rem;
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
+  /* fade-out effect */
+  /* transition: background-color .3s ease, color .3s ease; */
+}
+
+@media screen and (max-width:767px) {
+  .tablist>li {
+    width: 33.33333%;
+  }
+
+  .tab {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .tab {
+    min-width: 12rem;
+    width: auto;
+  }
+}
+
+/* 選択されているタブのスタイル */
+.tab[aria-selected] {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* タブのhover/focus状態スタイル */
+.tab:hover,
+.tab:focus {
+  background: #777;
+  color: var(--white);
+  /* fade-in effect */
+  /* transition: background-color .25s ease, color .25s ease; */
+}
+
+.tabpanel-wrap {
+  width: 100%;
+  height: fit-content;
+  min-height: 150px;
+  border: 1px solid var(--border-color);
+  color: var(--black);
+  overflow: hidden;
+}
+
+.tabpanel {
+  width: 100%;
+  padding: 1rem 2rem 2.5rem;
+  z-index: 0;
+}
+
+.tabpanel:focus {
+  outline: none;
+}
+
+.tabpanel[aria-hidden="false"] {
+  position: absolute;
+  top: 9.5%;
+  visibility: visible;
+}
+
+.tabpanel[aria-hidden="true"] {
+  position: absolute;
+  top: 9.5%;
+  visibility: hidden;
+}
+
+.tabpanel__list>li:not(:first-of-type) {
+  margin: .8rem auto auto;
+}
+
+.tabpanel__paragraph {
+  margin: 1.4rem auto 0;
+}
+
+.tabpanel__link {
+  display: inline-block;
+  width: auto;
+  margin: 1.4rem auto 0;
+}
+
+.other-content {
+  width: 100%;
+  max-width: 64.25rem;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border: 1px solid var(--black);
+}
