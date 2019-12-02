@@ -1,0 +1,32 @@
+{
+  // true = 適用
+  "tagname-lowercase": true,            // タグ名は小文字
+  "attr-lowercase": true,               // 属性名は小文字
+  "attr-value-double-quotes": true,     // 属性値は二重引用符(ダブルクォート)囲み
+  "attr-value-not-empty": true,         // 属性値は空でない ※一応チェック
+  "attr-no-duplication": true,          // 属性名が重複していない
+  "tag-pair": true,                     // タグが開き閉じになっている
+  "spec-char-escape": true,             // 特殊文字がエスケープされている ※一応チェック
+  "id-unique": true,                    // id属性はファイル内でユニーク(唯一)
+  "src-not-empty": true,                // aタグのsrc属性値が空でない ※一応チェック
+  "title-require": true,                // titleタグがある
+  "alt-require": true,                  // imgタグにalt属性がある
+  "attr-unsafe-chars": true,            // 属性値に安全でない文字の使用
+
+  // false = 不適用
+  "doctype-first": false,               // 冒頭doctype宣言
+  "doctype-html5": false,               // doctypeはhtml5
+  "empty-tag-not-self-closed": false,   // 空要素(タグ)の閉じスラッシュ禁止
+  "style-disabled": false,              // styleタグ使用禁止
+  "inline-style-disabled": false,       // インラインスタイル使用禁止
+  "inline-script-disabled": false,      // インラインスクリプト使用禁止
+  "id-class-value": false,              // id・class値に記述ルール適用
+  "id-class-ad-disabled": false,        // id、classの広告関連キーワード(ad-)使用禁止
+  "href-abs-or-rel": false,             // href属性値は絶対的または相対的
+  "head-script-disabled": false,        // headタグ中でのscriptタグ使用
+
+  // 値設定
+  "space-tab-mixed-disabled": "space"  // スペースとタブの行頭混在 -> タブ禁止
+
+  // ※更新で条件や記法が変わっていることが観測されたので要注意
+}

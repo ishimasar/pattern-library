@@ -110,7 +110,7 @@ export class Carousel {
       // カルーセル画像 前へ(<)ボタン・クリックイベント
       this.prev.addEventListener('click', () => {
         this.hideCarousel(this.contArray[this.current]);
-        this.removeCurrent(); // curretクラスを持つ要素から、curretクラスを削除する関数実行
+        this.removeCurrent(); // currentクラスを持つ要素から、currentクラスを削除する関数実行
         this.current--; // currentを1つ引く
         // currentが0未満の値になったときの戻る処理
         if (this.current < 0) this.current = this.contArray.length - 1; // currentを最大値にする(最終番目に移動する)

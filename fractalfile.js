@@ -15,8 +15,8 @@ fractal.web.set('static.path', __dirname + '/public');
 const mandelbrot = require('@frctl/mandelbrot');
 const myCustomisedTheme = mandelbrot({
   "styles": [
-      "default",
-      "/css/styleguide.css"
+    "default",
+    "/css/styleguide.css"
   ]
 });
 fractal.web.theme(myCustomisedTheme);
