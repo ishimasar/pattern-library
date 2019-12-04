@@ -5,7 +5,7 @@ import { scrollSmooth } from './modules/SmoothScroll.js';
 import { Tab } from './modules/Tab.js';
 // import { TabSwipe } from './modules/TabSwipe.js';
 
-const carousel = new Carousel('.js-carousel-cont', '.js-carousel-thumb', '.js-carousel-prev', '.js-carousel-next', '.js-carousel-play', '.js-carousel-pause');
+const carousel = new Carousel('.js-carousel-cont', '.carousel__img', '.js-carousel-thumb', '.js-carousel-prev', '.js-carousel-next', '.js-carousel-play', '.js-carousel-pause');
 carousel.setter();
 
 const displayScreenData = new DisplayScreenData('pageTop');

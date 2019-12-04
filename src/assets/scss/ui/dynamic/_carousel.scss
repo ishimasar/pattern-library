@@ -1,0 +1,261 @@
+/* styling */
+/* カルーセルパネル(スライドパネル)UI コンテナー/container */
+.carousel {
+  margin: 1rem auto auto;
+  @include mq(sp-tb) {
+    width: 90vw;
+  }
+  @include mq(dt) {
+    width: 100%;
+    max-width: 50rem;
+  }
+}
+
+.carousel__wrap {
+  position: relative;
+}
+
+/* フレーム */
+.carousel__frame {
+  padding: 33.33%;
+  overflow: hidden;
+}
+
+/* 各パネルの中身 = コンテンツ (divかaを想定) */
+.carousel__content {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  &[aria-hidden="false"] {
+    opacity: 1;
+    transition: var(--carousel-switch-effect);
+    z-index: 1;
+    &:focus {
+      opacity: .92;
+      transition: var(--in-transition);
+    }
+    @include mq(dt) {
+      &:hover {
+        opacity: .92;
+        transition: var(--in-transition);
+      }
+    }
+  }
+  &[aria-hidden="true"] {
+    transition:var(--carousel-fade);
+  }
+}
+
+/* コンテンツ画像 */
+.carousel__img {
+  width: 100%;
+  height: 100%;
+}
+
+/* カルーセル アニメーション ※必要に応じてご利用ください */
+// .carousel__img.is-motioned {
+//   animation: carouselImgMotion 4s linear 0s 1 normal;
+//   transform: translate3d(0, 0, 0) scale(1);
+// }
+
+// @keyframes carouselImgMotion {
+//   0% { transform: scale(1.075); }
+//   75% { transform: translate3d(0, 0, 0) scale(1);}
+// }
+
+/*
+ * コントローラー群 - 前へナビ、次へナビ、再生ボタン、停止ボタン
+ * 拡張性担保のため、classセレクタ名は一意にしている
+ */
+.carousel__control-pause,
+.carousel__control-play,
+.carousel__control-next,
+.carousel__control-prev {
+  position: absolute;
+  padding: .1rem .5rem;
+  text-align: center;
+}
+
+.carousel__control-next,
+.carousel__control-prev {
+  top: 50%;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  transform: translateY(-50%);
+  transition: var(--out-transition);
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    border-style: solid;
+    backface-visibility: hidden;
+    @include mq(sp-tb) {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-width: 0 2px 2px 0;
+      border-color: var(--white);
+    }
+    @include mq(dt) {
+      width: 1.5625rem;
+      height: 1.5625rem;
+      border-width: 0 3px 3px 0;
+      border-color: var(--border-color);
+    }
+  }
+  &:focus {
+    transition: var(--in-transition);
+  }
+  @include mq(dt) {
+    &:hover {
+      transition: var(--in-transition);
+    }
+  }
+}
+
+.carousel__control-pause,
+.carousel__control-play {
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  z-index: 2;
+  @include mq(sp-tb) {
+    left: 50%;
+    bottom: 3%;
+    width: 2.8rem;
+    height: 2em;
+    transform: translateX(-50%);
+  }
+  @include mq(dt) {
+    right: 2%;
+    bottom: 3%;
+    width: 3.3rem;
+    height: 2.5em;
+  }
+  &[aria-hidden=true] {
+    visibility: hidden;
+    z-index: 0;
+  }
+  &[aria-hidden=false] {
+    visibility: visible;
+  }
+  &:focus {
+    background-color: var(--contrast-limit-gray);
+  }
+  @include mq(dt) {
+    &:hover {
+      background-color: var(--contrast-limit-gray);
+    }
+  }
+}
+
+/* 前へナビ */
+.carousel__control-prev {
+  transition: all .3s var(--ease-out-quad);
+  &:before {
+    transform: translate(0, -50%) rotate(135deg);
+  }
+  &:focus {
+    transform: translate(-10%, -50%) rotate(0);
+    transition: all .25s var(--ease-in-quad);
+  }
+  @include mq(sp-tb) {
+    left: .2rem;
+    z-index: 1;
+  }
+  @include mq(dt) {
+    left: -2.2rem;
+    &:hover {
+      transform: translate(-10%, -50%) rotate(0);
+      transition: all .25s var(--ease-in-quad);
+    }
+  }
+}
+
+/* 次へナビ */
+.carousel__control-next {
+  transition: transform .3s var(--ease-out-quad);
+  @include mq(sp-tb) {
+    right: -0.3rem;
+    z-index: 1;
+  }
+  @include mq(dt) {
+    right: -2.2rem;
+    &:hover {
+      transform: translate(10%, -50%) rotate(0);
+      transition: transform .25s var(--ease-in-quad);
+    }
+  }
+  &:before {
+    transform: translate(0, -50%) rotate(-45deg);
+  }
+  &:focus {
+    transform: translate(10%, -50%) rotate(0);
+    transition: transform .25s var(--ease-in-quad);
+  }
+}
+
+/* 再生ボタン */
+.carousel__control-play {
+  @include mq(sp-tb) {
+    background: #999 url("../img/img_play.png") 53% center no-repeat;
+  }
+  @include mq(dt) {
+    background: #999 url("../img/img_play.png") 56% center no-repeat;
+  }
+}
+
+/* 停止ボタン */
+.carousel__control-pause {
+  background: #999 url("../img/img_pause.png") 50% center no-repeat;
+}
+
+/* インジケーターもしくはサムネイルのコンテナー(リスト) */
+.carousel__thumbnail-list {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  @include mq(sp-tb) {
+    grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+    gap: .5rem;
+    margin-top: .8rem;
+  }
+  @include mq(dt) {
+    grid-template-columns: repeat(auto-fit, 13%);
+    gap: .75rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* インジケーター・サムネイル ボタン */
+.carousel__thumbnail-btn {
+  width: 100%;
+  height: auto;
+  &[aria-selected=false] {
+    opacity: .8;
+    transition: opacity .3s var(--ease-out-quad);
+  }
+  &[aria-selected=true] {
+    outline: .2rem solid hsla(212, 100%, 57%, 1);
+    outline-offset: 0;
+    opacity: 1;
+  }
+  @include mq(dt) {
+    &:hover {
+      opacity: 1;
+      transition: opacity .25s var(--ease-in-quad);
+      outline: .125rem solid var(--focusring-color);
+      outline-offset: .0625rem;
+    }
+  }
+  &:focus {
+    opacity: 1;
+    transition: opacity .25s var(--ease-in-quad);
+  }
+}
+
+/* サムネイル画像(img) */
+.carousel__thumbnail-img {
+  width: 100%;
+}

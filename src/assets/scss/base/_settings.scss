@@ -20,7 +20,6 @@
 
   /*
    * font-size - declarative type
-   * 調和数列に基づくサイズ比率
    */
   --font-size-l4: 1rem * 8 / 3; // 2.66666rem / 42.66666px
   --font-size-l3: 1rem * 8 / 4; // 2rem / 32px
@@ -37,6 +36,8 @@
   /* color - declarative type */
   --black: hsla(0, 0%, 20%, 1); // #333
   --white: hsla(0, 100%, 100%, 1); // #fff
+
+  --contrast-limit-gray: hsla(0, 0%, 47%, 1); // #777
 
   /* easing - declarative type */
   /* sine */
@@ -93,15 +94,19 @@
   --footer-bg: linear-gradient(-28deg, hsla(23, 60%, 14%, 1) 7%, var(--text-dark-color) 38%, var(--text-dark-color) 76%, hsla(23, 60%, 14%, 1) 93%);
 
   /* other - semantic type */
-  // --base-radius: 6px;
+  // --base-radius: 0.375rem;
   // --small-radius: 4px;
   // --content-width: 965px;
   // --max-width: 1600;
-  // --hover-scale: scale(1.1);
+  --hover-scale: scale(1.01);
 
   /* hover effect transition - semantic type */
-  // --in-transition: color .25s var(--ease-in-out-quad), background-color .25s var(--ease-in-out-quad), transform .25s var(--ease-in-out-quad);
-  // --out-transition: color .3s var(--ease-out-quad), background-color .3s var(--ease-in-out-quad), transform .3s var(--ease-in-out-quad);
+  --in-transition: color .25s var(--ease-in-out-quad), background-color .25s var(--ease-in-out-quad), transform .25s var(--ease-in-out-quad);
+
+  --out-transition: color .3s var(--ease-out-quad), background-color .3s var(--ease-in-out-quad), transform .3s var(--ease-in-out-quad);
+
+  --carousel-fade: opacity .7s var(--ease-in-quad);
+  --carousel-switch-effect: var(--in-transition), var(--carousel-fade);
 }
 
 /* SASS variables */
