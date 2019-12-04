@@ -1,7 +1,7 @@
 {
   "name": "pattern_library",
   "version": "1.0.0",
-  "description": "",
+  "description": "Webサイト・アプリ制作で使用されるUIやスタイルのコード見本・サンプル集です。   コーディングの参考、UI等の設計・作成方針の土台にでき、その上で作業効率にも寄与できるようなものを目指します。",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +19,24 @@
     "main": "fractalfile.js"
   },
   "devDependencies": {
-    "eslint": "^6.7.1"
-  }
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^5.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^12.0.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recess-order": "^2.0.3",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^3.1.1",
+    "stylelint-scss": "^3.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishimasar/pattern-library.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ishimasar/pattern-library/issues"
+  },
+  "homepage": "https://github.com/ishimasar/pattern-library#readme"
 }

@@ -1,25 +1,15 @@
 module.exports = {
-  root: true,
   env: {
-    node: true
+    es6: 'true',
+    browser: 'true',
   },
   parserOptions: {
-    parser: 'babel-eslint',
-    ecmaVersion: 6
+    ecmaVersion: '2015',
+    sourceType: 'module',
   },
-  extends: [
-    "eslint:recommended", // ESLintで基本的なルールチェック(更に細かく個別指定可)
-    "plugin:prettier/recommended" // 一番下に書かないとうまく動かない場合も
-  ],
-  plugins: [],
-  // ここにカスタムルールを追加する
   rules: {
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true, // シングルクォーテーションのフォーマット
-        "semi": true // セミコロンのフォーマット
-      }
-    ],
-  }
-}
+    // 'no-undef': 'error',
+    // quotes: ['error', 'double'],
+  },
+  extends: ['eslint:recommended'],
+};

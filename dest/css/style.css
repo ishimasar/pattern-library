@@ -172,8 +172,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
+  margin: .67em 0;
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /**
@@ -190,9 +190,9 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
+  font-family: monospace, monospace;
   /* 2 */
 }
 
@@ -208,12 +208,12 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
   /* 1 */
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
+  border-bottom: none;
   /* 2 */
 }
 
@@ -232,9 +232,9 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
+  font-family: monospace, monospace;
   /* 2 */
 }
 
@@ -251,18 +251,18 @@ small {
  */
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
 
 /**
@@ -277,16 +277,16 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
   /* 2 */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  /* 1 */
+  margin: 0;
+  /* 1 */
+  font-size: 100%;
+  font-family: inherit;
+  /* 1 */
+  line-height: 1.15;
 }
 
 /**
@@ -330,8 +330,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  border-style: none;
   padding: 0;
+  border-style: none;
 }
 
 /**
@@ -349,7 +349,7 @@ button:-moz-focusring,
  * Correct the padding in Firefox.
  */
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+  padding: .35em .75em .625em;
 }
 
 /**
@@ -359,13 +359,13 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  color: inherit;
   /* 2 */
   display: table;
   /* 1 */
   max-width: 100%;
   /* 1 */
   padding: 0;
+  color: inherit;
   /* 3 */
   white-space: normal;
   /* 1 */
@@ -413,9 +413,9 @@ textarea {
  * 訳: Safariでアウトラインスタイルを修正
  */
 [type="search"] {
-  -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
+  -webkit-appearance: textfield;
   /* 2 */
 }
 
@@ -433,9 +433,9 @@ textarea {
  * 訳: Safariでフォントのプロパティを `inherit`に変更
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
   /* 1 */
   font: inherit;
+  -webkit-appearance: button;
   /* 2 */
 }
 
@@ -482,16 +482,16 @@ output {
  * reset
  */
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
   cursor: pointer;
 }
 
 button {
-  background-color: transparent;
-  color: inherit;
-  border-width: 0;
   padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border-width: 0;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -503,9 +503,9 @@ figure {
 }
 
 input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 ul,
@@ -523,8 +523,8 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-size: inherit;
   font-weight: inherit;
+  font-size: inherit;
 }
 
 p {
@@ -536,9 +536,9 @@ cite {
 }
 
 fieldset {
-  border-width: 0;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  border-width: 0;
 }
 
 /**
@@ -546,12 +546,12 @@ fieldset {
  * original initialization
  */
 html {
-  font-size: 100%;
   /* apply a natural box layout model to all elements, but allowing components to change */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   /*for using REM units*/
   overflow-y: scroll;
+  font-size: 100%;
   /* All browsers without overlaying scrollbars */
   -webkit-text-size-adjust: 100%;
   /* Prevent adjustments of font size after orientation changes in iOS.*/
@@ -559,17 +559,17 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  margin: 0;
-  direction: ltr;
-  line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
-  font-weight: 400;
-  color: var(--text-normal-color);
-  -webkit-font-feature-settings: "pkna" 1;
-          font-feature-settings: "pkna" 1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text-normal-color);
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
+  line-height: 1.5;
+  direction: ltr;
+  -webkit-font-feature-settings: "pkna" 1;
+          font-feature-settings: "pkna" 1;
 }
 
 body * {
@@ -580,16 +580,17 @@ body * {
 
 *::before,
 *::after {
-  background-repeat: no-repeat;
   /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
   text-decoration: inherit;
   /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
   vertical-align: inherit;
+  background-repeat: no-repeat;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
@@ -602,8 +603,8 @@ address {
 img {
   max-width: 100%;
   height: auto;
-  border-style: none;
   vertical-align: middle;
+  border-style: none;
 }
 
 svg {
@@ -616,8 +617,8 @@ table {
 }
 
 caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
   color: #6c757d;
   text-align: left;
   caption-side: bottom;
@@ -629,7 +630,7 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 /* Remove the default button styling in all browsers */
@@ -637,9 +638,9 @@ button,
 input,
 select,
 textarea {
+  color: inherit;
   background-color: transparent;
   border-style: none;
-  color: inherit;
 }
 
 /* Replace pointer cursor in disabled elements */
@@ -649,17 +650,17 @@ textarea {
 
 /* Specify text selection background color and omit drop shadow */
 ::-moz-selection {
-  background-color: #b3d4fc;
   /* Required when declaring ::selection */
   color: #000;
   text-shadow: none;
+  background-color: #b3d4fc;
 }
 
 ::selection {
-  background-color: #b3d4fc;
   /* Required when declaring ::selection */
   color: #000;
   text-shadow: none;
+  background-color: #b3d4fc;
 }
 
 ::-webkit-input-placeholder {
@@ -742,12 +743,12 @@ textarea {
  */
 .visually-hidden {
   position: absolute;
-  white-space: nowrap;
   width: 1px;
   height: 1px;
-  overflow: hidden;
-  border: 0;
   padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
@@ -831,22 +832,22 @@ select::-ms-value {
 }
 
 legend {
-  border: 0;
-  /* Correct `color` not being inherited in IE 8/9/10/11 */
-  color: inherit;
   /* Correct the color inheritance from `fieldset` elements in IE */
   display: table;
   /* Correct the text wrapping in Edge and IE */
   max-width: 100%;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
   /* Correct the text wrapping in Edge and IE */
   white-space: normal;
+  border: 0;
   /* Correct the text wrapping in Edge and IE */
 }
 
 [type="search"] {
-  -webkit-appearance: textfield;
   /* Correct the odd appearance in Chrome and Safari */
   outline-offset: -2px;
+  -webkit-appearance: textfield;
   /* Correct the outline style in Safari */
 }
 
@@ -867,9 +868,9 @@ legend {
 }
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
   /* Correct the inability to style clickable types in iOS and Safari */
   font: inherit;
+  -webkit-appearance: button;
   /* Change font properties to `inherit` in Chrome and Safari */
 }
 
@@ -889,21 +890,21 @@ legend {
 }
 
 .button {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   width: 12.5rem;
   height: 4rem;
   margin: 0 1rem;
-  border: 2px solid var(--black);
   text-align: center;
   text-decoration: none;
+  border: 2px solid var(--black);
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
 .button:hover, .button:focus {
-  background-color: #787878;
   color: var(--white);
+  background-color: #787878;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -919,27 +920,27 @@ legend {
 
 .depth-effect > .after,
 .depth-effect > .before {
-  display: block;
   position: absolute;
   top: 0;
+  display: block;
   width: 12.5rem;
   height: 4rem;
-  text-align: center;
-  line-height: 3.5rem;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  background-color: #f4dc71;
   color: #b15602;
+  line-height: 3.5rem;
+  text-align: center;
+  background-color: #f4dc71;
   border: 2px solid #074015;
   -webkit-transform: rotateX(90deg);
           transform: rotateX(90deg);
   -webkit-transform-origin: 50% 50% -2rem;
           transform-origin: 50% 50% -2rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .depth-effect > .before {
-  background-color: #96e4a3;
   color: #074015;
+  background-color: #96e4a3;
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg);
   -webkit-transform-origin: 50% 50% -2rem;
@@ -947,15 +948,15 @@ legend {
 }
 
 .depth-effect:hover, .depth-effect:focus {
+  color: transparent;
   background-color: transparent;
   border-color: transparent;
-  color: transparent;
 }
 
 .depth-effect:hover > .after,
 .depth-effect:focus > .after {
-  border: 2px solid #b15602;
   z-index: 3;
+  border: 2px solid #b15602;
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg);
 }
@@ -967,23 +968,23 @@ legend {
 }
 
 .double-door-effect {
-  border: 2px solid #035ca5;
-  color: var(--white);
   z-index: 2;
+  color: var(--white);
+  border: 2px solid #035ca5;
   /* double-door hover effect  */
 }
 
 .double-door-effect:before, .double-door-effect:after {
-  content: "";
-  display: block;
   position: absolute;
   top: 0;
+  z-index: -1;
+  display: block;
   width: 12rem;
   height: calc(4rem - 4px);
   background-color: #339ee6;
   -webkit-transition: all .5s;
   transition: all .5s;
-  z-index: -1;
+  content: "";
 }
 
 .double-door-effect:before {
@@ -995,9 +996,9 @@ legend {
 }
 
 .double-door-effect:hover, .double-door-effect:focus {
+  color: #035ca5;
   background-color: var(--white);
   border-color: #035ca5;
-  color: #035ca5;
 }
 
 .double-door-effect:hover:before, .double-door-effect:hover:after, .double-door-effect:focus:before, .double-door-effect:focus:after {
@@ -1038,7 +1039,6 @@ legend {
 
 /* 各パネルの中身 = コンテンツ (divかaを想定) */
 .carousel__content {
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -1046,10 +1046,10 @@ legend {
 }
 
 .carousel__content[aria-hidden="false"] {
+  z-index: 1;
   opacity: 1;
   -webkit-transition: var(--carousel-switch-effect);
   transition: var(--carousel-switch-effect);
-  z-index: 1;
 }
 
 .carousel__content[aria-hidden="false"]:focus {
@@ -1104,13 +1104,13 @@ legend {
 
 .carousel__control-next:before,
 .carousel__control-prev:before {
-  content: "";
-  display: block;
   position: absolute;
   top: 50%;
+  display: block;
   border-style: solid;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  content: "";
 }
 
 @media print, screen and (max-width: 63.9375em) {
@@ -1118,8 +1118,8 @@ legend {
   .carousel__control-prev:before {
     width: 1.25rem;
     height: 1.25rem;
-    border-width: 0 2px 2px 0;
     border-color: var(--white);
+    border-width: 0 2px 2px 0;
   }
 }
 
@@ -1128,8 +1128,8 @@ legend {
   .carousel__control-prev:before {
     width: 1.5625rem;
     height: 1.5625rem;
-    border-width: 0 3px 3px 0;
     border-color: var(--border-color);
+    border-width: 0 3px 3px 0;
   }
 }
 
@@ -1149,16 +1149,16 @@ legend {
 
 .carousel__control-pause,
 .carousel__control-play {
+  z-index: 2;
   border: 1px solid #bbb;
   border-radius: 2px;
-  z-index: 2;
 }
 
 @media print, screen and (max-width: 63.9375em) {
   .carousel__control-pause,
   .carousel__control-play {
-    left: 50%;
     bottom: 3%;
+    left: 50%;
     width: 2.8rem;
     height: 2em;
     -webkit-transform: translateX(-50%);
@@ -1176,14 +1176,14 @@ legend {
   }
 }
 
-.carousel__control-pause[aria-hidden=true],
-.carousel__control-play[aria-hidden=true] {
-  visibility: hidden;
+.carousel__control-pause[aria-hidden="true"],
+.carousel__control-play[aria-hidden="true"] {
   z-index: 0;
+  visibility: hidden;
 }
 
-.carousel__control-pause[aria-hidden=false],
-.carousel__control-play[aria-hidden=false] {
+.carousel__control-pause[aria-hidden="false"],
+.carousel__control-play[aria-hidden="false"] {
   visibility: visible;
 }
 
@@ -1246,7 +1246,7 @@ legend {
 
 @media print, screen and (max-width: 63.9375em) {
   .carousel__control-next {
-    right: -0.3rem;
+    right: -.3rem;
     z-index: 1;
   }
 }
@@ -1282,19 +1282,19 @@ legend {
 /* 再生ボタン */
 @media print, screen and (max-width: 63.9375em) {
   .carousel__control-play {
-    background: #999 url("../img/img_play.png") 53% center no-repeat;
+    background: #999 url(../img/img_play.png) 53% center no-repeat;
   }
 }
 
 @media print, screen and (min-width: 64em) {
   .carousel__control-play {
-    background: #999 url("../img/img_play.png") 56% center no-repeat;
+    background: #999 url(../img/img_play.png) 56% center no-repeat;
   }
 }
 
 /* 停止ボタン */
 .carousel__control-pause {
-  background: #999 url("../img/img_pause.png") 50% center no-repeat;
+  background: #999 url(../img/img_pause.png) 50% center no-repeat;
 }
 
 /* インジケーターもしくはサムネイルのコンテナー(リスト) */
@@ -1331,13 +1331,13 @@ legend {
   height: auto;
 }
 
-.carousel__thumbnail-btn[aria-selected=false] {
+.carousel__thumbnail-btn[aria-selected="false"] {
   opacity: .8;
   -webkit-transition: opacity 0.3s var(--ease-out-quad);
   transition: opacity 0.3s var(--ease-out-quad);
 }
 
-.carousel__thumbnail-btn[aria-selected=true] {
+.carousel__thumbnail-btn[aria-selected="true"] {
   outline: 0.2rem solid #248aff;
   outline-offset: 0;
   opacity: 1;
@@ -1345,11 +1345,11 @@ legend {
 
 @media print, screen and (min-width: 64em) {
   .carousel__thumbnail-btn:hover {
+    outline: 0.125rem solid var(--focusring-color);
+    outline-offset: .0625rem;
     opacity: 1;
     -webkit-transition: opacity 0.25s var(--ease-in-quad);
     transition: opacity 0.25s var(--ease-in-quad);
-    outline: 0.125rem solid var(--focusring-color);
-    outline-offset: .0625rem;
   }
 }
 
@@ -1381,9 +1381,9 @@ legend {
   width: 300px;
   margin: 4rem auto;
   padding: 1rem;
+  text-align: center;
   border: 1px solid var(--border-color);
   border-radius: 5px;
-  text-align: center;
   /* fade-out effect */
   /* transition: background-color .3s ease, color .3s ease; */
 }
@@ -1392,35 +1392,35 @@ legend {
 .dialog-open:focus,
 .dialog__button:hover,
 .dialog__button:focus {
-  background-color: #777;
   color: var(--white);
+  background-color: #777;
   /* fade-in effect */
   /* transition: background-color .25s ease, color .25s ease; */
 }
 
 .dialog-panel {
   position: absolute;
+  top: 15%;
+  right: 0;
+  left: 0;
   width: -moz-fit-content;
   width: -webkit-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: -webkit-fit-content;
   height: fit-content;
-  top: 15%;
-  left: 0;
-  right: 0;
   margin: auto;
   padding: 0;
-  border: 2px solid var(--border-color);
   background: var(--white);
+  border: 2px solid var(--border-color);
   border-radius: 5px;
 }
 
 _::-webkit-full-page-media,
 _:future,
 :root .dialog-panel {
-  max-width: 365px;
   width: 100%;
+  max-width: 365px;
   height: auto;
 }
 
@@ -1471,8 +1471,8 @@ _:future,
 }
 
 .dialog-panel__buttons {
-  text-align: center;
   padding: 2rem 0 2.5rem;
+  text-align: center;
 }
 
 .dialog__button {
@@ -1480,10 +1480,10 @@ _:future,
   min-width: 5rem;
   padding-top: .625rem;
   padding-bottom: .525rem;
+  line-height: 1.5;
+  text-align: center;
   border: 1px solid var(--border-color);
   border-radius: 5px;
-  text-align: center;
-  line-height: 1.5;
 }
 
 .dialog__button:not(:first-of-type) {
@@ -1496,24 +1496,24 @@ _:future,
   right: 1rem;
   width: 2.3rem;
   height: 2.3rem;
-  background-color: var(--black);
-  font-size: 2rem;
   color: var(--white);
+  font-size: 2rem;
+  background-color: var(--black);
   border-radius: 50%;
 }
 
 .dialog__close:hover,
 .dialog__close:focus {
-  border: 1px solid #777;
-  background-color: var(--white);
-  font-size: 2rem;
   color: var(--black);
+  font-size: 2rem;
+  background-color: var(--white);
+  border: 1px solid #777;
 }
 
 .dialog-response {
-  text-align: center;
-  line-height: 2;
   font-size: 1.2rem;
+  line-height: 2;
+  text-align: center;
 }
 
 @-webkit-keyframes fade-in {
@@ -1554,53 +1554,53 @@ _:future,
 
 @-webkit-keyframes slide-down {
   0% {
-    opacity: 0;
     -webkit-transform: translate(0, -20px);
             transform: translate(0, -20px);
+    opacity: 0;
   }
   100% {
-    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+    opacity: 1;
   }
 }
 
 @keyframes slide-down {
   0% {
-    opacity: 0;
     -webkit-transform: translate(0, -20px);
             transform: translate(0, -20px);
+    opacity: 0;
   }
   100% {
-    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes slide-up {
   0% {
-    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+    opacity: 1;
   }
   100% {
-    opacity: 0;
     -webkit-transform: translate(0, -23px);
             transform: translate(0, -23px);
+    opacity: 0;
   }
 }
 
 @keyframes slide-up {
   0% {
-    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+    opacity: 1;
   }
   100% {
-    opacity: 0;
     -webkit-transform: translate(0, -23px);
             transform: translate(0, -23px);
+    opacity: 0;
   }
 }
 
@@ -1635,13 +1635,13 @@ _:future,
 .tab {
   display: inline-block;
   padding: .65rem 1rem;
+  color: var(--black);
+  text-align: center;
+  text-decoration: none;
   border-top: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
   border-radius: 5px 5px 0 0;
-  text-align: center;
-  text-decoration: none;
-  color: var(--black);
   /* fade-out effect */
   /* transition: background-color .3s ease, color .3s ease; */
 }
@@ -1657,22 +1657,22 @@ _:future,
 
 @media screen and (min-width: 768px) {
   .tab {
-    min-width: 12rem;
     width: auto;
+    min-width: 12rem;
   }
 }
 
 /* 選択されているタブのスタイル */
 .tab[aria-selected] {
-  background: var(--black);
   color: var(--white);
+  background: var(--black);
 }
 
 /* タブのhover/focus状態スタイル */
 .tab:hover,
 .tab:focus {
-  background: #777;
   color: var(--white);
+  background: #777;
   /* fade-in effect */
   /* transition: background-color .25s ease, color .25s ease; */
 }
@@ -1683,15 +1683,15 @@ _:future,
   height: -moz-fit-content;
   height: fit-content;
   min-height: 150px;
-  border: 1px solid var(--border-color);
-  color: var(--black);
   overflow: hidden;
+  color: var(--black);
+  border: 1px solid var(--border-color);
 }
 
 .tabpanel {
+  z-index: 0;
   width: 100%;
   padding: 1rem 2rem 2.5rem;
-  z-index: 0;
 }
 
 .tabpanel:focus {
@@ -1736,32 +1736,32 @@ _:future,
 .header {
   position: relative;
   padding-top: 4rem;
-  text-align: center;
   font-size: 1rem;
+  text-align: center;
   border: 1px solid var(--black);
 }
 
 .global-nav {
-  height: 6rem;
   width: 100%;
+  height: 6rem;
   margin-top: 5.5rem;
+  background-color: #eee;
   border-top: 1px solid var(--black);
   border-right: 1px solid var(--black);
   border-left: 1px solid var(--black);
-  background-color: #eee;
 }
 
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
   max-width: 80rem;
   margin: 3rem auto;
@@ -1791,11 +1791,11 @@ _:future,
 
 .section {
   width: auto;
-  list-style-type: none;
-  font-size: 1rem;
-  margin-left: 2rem;
   margin-bottom: 10rem;
+  margin-left: 2rem;
   padding: 6rem 50px;
+  font-size: 1rem;
+  list-style-type: none;
   border: 1px solid black;
 }
 
@@ -1822,11 +1822,14 @@ _:future,
       -ms-flex-pack: center;
           justify-content: center;
   height: 12rem;
-  border: 1px solid var(--black);
   background: #ddd;
+  border: 1px solid var(--black);
 }
 
 .toc {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1834,16 +1837,13 @@ _:future,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 2rem;
   width: 100%;
   margin-top: 3rem;
   padding: 1.5rem 2rem;
-  border: 1px solid var(--black);
-  background: #b5e9f7;
-  text-align: center;
   line-height: 3;
+  text-align: center;
+  background: #b5e9f7;
+  border: 1px solid var(--black);
 }
 
 .toc__link.is-current,
@@ -1857,28 +1857,28 @@ _:future,
   position: relative;
   height: 500px;
   padding-top: 10rem;
-  border: 1px solid var(--black);
-  text-align: center;
   font-size: 3rem;
+  text-align: center;
+  border: 1px solid var(--black);
 }
 
 .back-to-top {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: absolute;
   top: -3rem;
   right: 8%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 6rem;
   height: 3rem;
   padding-top: .5rem;
-  background-color: #ccc;
-  line-height: 1.5rem;
-  font-size: 1.5rem;
   font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  background-color: #ccc;
   border-radius: 5rem 5rem 0 0;
 }
 
@@ -1892,20 +1892,20 @@ _:future,
 
 .checkbox {
   position: absolute;
-  white-space: nowrap;
   width: 1px;
   height: 1px;
-  overflow: hidden;
-  border: 0;
   padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
 }
 
 .checkbox + label {
-  display: block;
   position: relative;
+  display: block;
   width: auto;
   margin-top: .5rem;
   padding-left: 1.8em;
@@ -1914,8 +1914,8 @@ _:future,
 }
 
 .checkbox:checked + label {
-  font-weight: bold;
   color: #000098;
+  font-weight: bold;
 }
 
 .checkbox:hover + label,
@@ -1926,21 +1926,21 @@ _:future,
 }
 
 .checkbox + label:before {
-  content: "";
-  opacity: 0;
-  display: inline-block;
   position: absolute;
   top: .45rem;
   left: .28rem;
+  z-index: 1;
+  display: inline-block;
   width: .55rem;
   height: .34rem;
   border-top: 2.3px solid #000098;
   border-right: 2.3px solid #000098;
-  z-index: 1;
-  -webkit-transition: all .15s ease-in;
-  transition: all .15s ease-in;
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
+  opacity: 0;
+  -webkit-transition: all .15s ease-in;
+  transition: all .15s ease-in;
+  content: "";
 }
 
 .checkbox:checked + label:before {
@@ -1956,7 +1956,6 @@ _:future,
 }
 
 .checkbox + label:after {
-  content: "";
   position: absolute;
   top: .2rem;
   left: 0;
@@ -1964,9 +1963,10 @@ _:future,
   box-sizing: border-box;
   width: 1.25rem;
   height: 1.25rem;
-  border: 2px solid #888;
   background-color: #fff;
+  border: 2px solid #888;
   border-radius: 4px;
+  content: "";
 }
 
 .checkbox:disabled,
@@ -2007,20 +2007,20 @@ _:future,
 
 .radio {
   position: absolute;
-  white-space: nowrap;
   width: 1px;
   height: 1px;
-  overflow: hidden;
-  border: 0;
   padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
 }
 
 .radio + label {
-  display: block;
   position: relative;
+  display: block;
   width: auto;
   margin-top: .5rem;
   padding-left: 1.8em;
@@ -2029,8 +2029,8 @@ _:future,
 }
 
 .radio:checked + label {
-  font-weight: bold;
   color: #000098;
+  font-weight: bold;
 }
 
 .radio:hover + label,
@@ -2071,19 +2071,18 @@ _:future,
 }
 
 .radio + label > svg {
-  opacity: 0;
   position: absolute;
   top: .38rem;
   left: .16rem;
+  z-index: 1;
   width: 15px;
   height: 15px;
-  z-index: 1;
+  opacity: 0;
   -webkit-transition: all .25s ease-in;
   transition: all .25s ease-in;
 }
 
 .radio + label:after {
-  content: "";
   position: absolute;
   top: .19rem;
   left: 0;
@@ -2091,20 +2090,21 @@ _:future,
   box-sizing: border-box;
   width: 1.3rem;
   height: 1.3rem;
-  border: 2px solid #888;
   background-color: #fff;
+  border: 2px solid #888;
   border-radius: 50%;
+  content: "";
 }
 
 svg circle {
-  stroke: #000098;
   fill: #000098;
+  stroke: #000098;
 }
 
 @media screen and (-ms-high-contrast: active) {
   svg circle {
-    stroke: #fff;
     fill: #fff;
+    stroke: #fff;
   }
 }
 

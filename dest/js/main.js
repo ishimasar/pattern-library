@@ -1,3 +1,5 @@
+console.log('hoge');
+
 import { Carousel } from './modules/Carousel.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
 import { ModalDialog } from './modules/ModalDialog.js';

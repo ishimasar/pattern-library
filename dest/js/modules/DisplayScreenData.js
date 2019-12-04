@@ -15,7 +15,7 @@ export class DisplayScreenData {
       target.style.top = '.3rem';
       target.style.right = '73%';
       target.style.fontWeight = 'bold';
-      
+
       this.body.appendChild(target);
     }
   }

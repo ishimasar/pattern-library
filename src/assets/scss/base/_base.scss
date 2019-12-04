@@ -34,8 +34,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
+  margin: .67em 0;
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /**
@@ -53,10 +53,10 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
 
   /* 1 */
   font-size: 1em;
+  font-family: monospace, monospace;
 
   /* 2 */
 }
@@ -73,13 +73,13 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
 
   /* 1 */
   text-decoration: underline;
 
   /* 2 */
   text-decoration: underline dotted;
+  border-bottom: none;
 
   /* 2 */
 }
@@ -99,10 +99,10 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
 
   /* 1 */
   font-size: 1em;
+  font-family: monospace, monospace;
 
   /* 2 */
 }
@@ -121,18 +121,18 @@ small {
  */
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
 
 /**
@@ -147,20 +147,20 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-
-  /* 1 */
-  font-size: 100%;
-
-  /* 1 */
-  line-height: 1.15;
-
-  /* 1 */
-  margin: 0;
 
   /* 2 */
 
   box-sizing: border-box;
+
+  /* 1 */
+  margin: 0;
+
+  /* 1 */
+  font-size: 100%;
+  font-family: inherit;
+
+  /* 1 */
+  line-height: 1.15;
 }
 
 /**
@@ -204,8 +204,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  border-style: none;
   padding: 0;
+  border-style: none;
 }
 
 /**
@@ -223,7 +223,7 @@ button:-moz-focusring,
  * Correct the padding in Firefox.
  */
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+  padding: .35em .75em .625em;
 }
 
 /**
@@ -233,7 +233,6 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  color: inherit;
 
   /* 2 */
   display: table;
@@ -243,6 +242,7 @@ legend {
 
   /* 1 */
   padding: 0;
+  color: inherit;
 
   /* 3 */
   white-space: normal;
@@ -293,10 +293,10 @@ textarea {
  * 訳: Safariでアウトラインスタイルを修正
  */
 [type="search"] {
-  -webkit-appearance: textfield;
 
   /* 1 */
   outline-offset: -2px;
+  -webkit-appearance: textfield;
 
   /* 2 */
 }
@@ -315,10 +315,10 @@ textarea {
  * 訳: Safariでフォントのプロパティを `inherit`に変更
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
 
   /* 1 */
   font: inherit;
+  -webkit-appearance: button;
 
   /* 2 */
 }
@@ -366,16 +366,16 @@ output {
  * reset
  */
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
   cursor: pointer;
 }
 
 button {
-  background-color: transparent;
-  color: inherit;
-  border-width: 0;
   padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border-width: 0;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -387,9 +387,9 @@ figure {
 }
 
 input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 ul,
@@ -407,8 +407,8 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-size: inherit;
   font-weight: inherit;
+  font-size: inherit;
 }
 
 p {
@@ -420,9 +420,9 @@ cite {
 }
 
 fieldset {
-  border-width: 0;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  border-width: 0;
 }
 
 /**
@@ -430,13 +430,13 @@ fieldset {
  * original initialization
  */
 html {
-  font-size: 100%;
 
   /* apply a natural box layout model to all elements, but allowing components to change */
   box-sizing: border-box;
 
   /*for using REM units*/
   overflow-y: scroll;
+  font-size: 100%;
 
   /* All browsers without overlaying scrollbars */
   -webkit-text-size-adjust: 100%;
@@ -446,15 +446,16 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   min-height: 100vh;
   margin: 0;
-  direction: ltr;
-  line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
-  font-weight: 400;
   color: var(--text-normal-color);
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue,
+    Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
+  line-height: 1.5;
+  direction: ltr;
   font-feature-settings: "pkna" 1;
-  box-sizing: border-box;
 }
 
 body * {
@@ -464,7 +465,6 @@ body * {
 
 *::before,
 *::after {
-  background-repeat: no-repeat;
 
   /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
   box-sizing: inherit;
@@ -472,9 +472,11 @@ body * {
 
   /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
   vertical-align: inherit;
+  background-repeat: no-repeat;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
@@ -487,8 +489,8 @@ address {
 img {
   max-width: 100%;
   height: auto;
-  border-style: none;
   vertical-align: middle;
+  border-style: none;
 }
 
 svg {
@@ -501,8 +503,8 @@ table {
 }
 
 caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
   color: #6c757d;
   text-align: left;
   caption-side: bottom;
@@ -514,7 +516,7 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 /* Remove the default button styling in all browsers */
@@ -522,9 +524,9 @@ button,
 input,
 select,
 textarea {
+  color: inherit;
   background-color: transparent;
   border-style: none;
-  color: inherit;
 }
 
 /* Replace pointer cursor in disabled elements */
@@ -534,29 +536,29 @@ textarea {
 
 /* Specify text selection background color and omit drop shadow */
 ::-moz-selection {
-  background-color: #b3d4fc;
 
   /* Required when declaring ::selection */
   color: #000;
   text-shadow: none;
+  background-color: #b3d4fc;
 }
 
 ::selection {
-  background-color: #b3d4fc;
 
   /* Required when declaring ::selection */
   color: #000;
   text-shadow: none;
+  background-color: #b3d4fc;
 }
 
 ::-webkit-input-placeholder {
-	color: #6f6f6f;
+  color: #6f6f6f;
 }
 :-ms-input-placeholder {
-	color: #6f6f6f;
+  color: #6f6f6f;
 }
 ::-moz-placeholder {
-	color: #6f6f6f;
+  color: #6f6f6f;
 }
 
 :placeholder-shown {
@@ -584,54 +586,54 @@ textarea {
   * すべてのインタラクティブ・コンテンツ(要素)に対し、
   * focus-ringに独自カスタム疑似スタイルを定義
   */
-  [data-whatinput="keyboard"] a,
-  [data-whatinput="keyboard"] audio,
-  [data-whatinput="keyboard"] button,
-  [data-whatinput="keyboard"] details,
-  [data-whatinput="keyboard"] embed,
-  [data-whatinput="keyboard"] iframe,
-  [data-whatinput="keyboard"] img[usemap],
-  [data-whatinput="keyboard"] input:not([hidden]),
-  [data-whatinput="keyboard"] keygen,
-  [data-whatinput="keyboard"] label,
-  [data-whatinput="keyboard"] object[usemap],
-  [data-whatinput="keyboard"] select,
-  [data-whatinput="keyboard"] textarea,
-  [data-whatinput="keyboard"] video {
-    outline: none;
-    outline-offset: .0625rem;
-    transition: outline .15s cubic-bezier(0.47, 0, 0.745, 0.715);
-  }
+[data-whatinput="keyboard"] a,
+[data-whatinput="keyboard"] audio,
+[data-whatinput="keyboard"] button,
+[data-whatinput="keyboard"] details,
+[data-whatinput="keyboard"] embed,
+[data-whatinput="keyboard"] iframe,
+[data-whatinput="keyboard"] img[usemap],
+[data-whatinput="keyboard"] input:not([hidden]),
+[data-whatinput="keyboard"] keygen,
+[data-whatinput="keyboard"] label,
+[data-whatinput="keyboard"] object[usemap],
+[data-whatinput="keyboard"] select,
+[data-whatinput="keyboard"] textarea,
+[data-whatinput="keyboard"] video {
+  outline: none;
+  outline-offset: .0625rem;
+  transition: outline .15s cubic-bezier(.47, 0, .745, .715);
+}
 
-  [data-whatinput="keyboard"] a:focus,
-  [data-whatinput="keyboard"] audio:focus,
-  [data-whatinput="keyboard"] button:focus,
-  [data-whatinput="keyboard"] details:focus,
-  [data-whatinput="keyboard"] embed:focus,
-  [data-whatinput="keyboard"] iframe:focus,
-  [data-whatinput="keyboard"] img[usemap]:focus,
-  [data-whatinput="keyboard"] input:not([hidden]):focus,
-  [data-whatinput="keyboard"] keygen:focus,
-  [data-whatinput="keyboard"] label:focus,
-  [data-whatinput="keyboard"] object[usemap]:focus,
-  [data-whatinput="keyboard"] select:focus,
-  [data-whatinput="keyboard"] textarea:focus,
-  [data-whatinput="keyboard"] video:focus {
-    outline: .125rem solid var(--focusring-color);
-    outline-offset: .0625rem;
-  }
+[data-whatinput="keyboard"] a:focus,
+[data-whatinput="keyboard"] audio:focus,
+[data-whatinput="keyboard"] button:focus,
+[data-whatinput="keyboard"] details:focus,
+[data-whatinput="keyboard"] embed:focus,
+[data-whatinput="keyboard"] iframe:focus,
+[data-whatinput="keyboard"] img[usemap]:focus,
+[data-whatinput="keyboard"] input:not([hidden]):focus,
+[data-whatinput="keyboard"] keygen:focus,
+[data-whatinput="keyboard"] label:focus,
+[data-whatinput="keyboard"] object[usemap]:focus,
+[data-whatinput="keyboard"] select:focus,
+[data-whatinput="keyboard"] textarea:focus,
+[data-whatinput="keyboard"] video:focus {
+  outline: .125rem solid var(--focusring-color);
+  outline-offset: .0625rem;
+}
 
 /**
  * コンテンツを視覚的に隠し、スクリーンリーダーで読ませる用途
  */
 .visually-hidden {
   position: absolute;
-  white-space: nowrap;
   width: 1px;
   height: 1px;
-  overflow: hidden;
-  border: 0;
   padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
 }
@@ -724,10 +726,6 @@ select::-ms-value {
 }
 
 legend {
-  border: 0;
-
-  /* Correct `color` not being inherited in IE 8/9/10/11 */
-  color: inherit;
 
   /* Correct the color inheritance from `fieldset` elements in IE */
   display: table;
@@ -735,17 +733,21 @@ legend {
   /* Correct the text wrapping in Edge and IE */
   max-width: 100%;
 
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+
   /* Correct the text wrapping in Edge and IE */
   white-space: normal;
+  border: 0;
 
   /* Correct the text wrapping in Edge and IE */
 }
 
 [type="search"] {
-  -webkit-appearance: textfield;
 
   /* Correct the odd appearance in Chrome and Safari */
   outline-offset: -2px;
+  -webkit-appearance: textfield;
 
   /* Correct the outline style in Safari */
 }
@@ -770,10 +772,10 @@ legend {
 }
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
 
   /* Correct the inability to style clickable types in iOS and Safari */
   font: inherit;
+  -webkit-appearance: button;
 
   /* Change font properties to `inherit` in Chrome and Safari */
 }

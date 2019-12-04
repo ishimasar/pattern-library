@@ -1,17 +1,17 @@
 .button {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   width: 12.5rem;
   height: 4rem;
   margin: 0 1rem;
-  border: 2px solid var(--black);
   text-align: center;
   text-decoration: none;
+  border: 2px solid var(--black);
   transition: all .3s;
   &:hover,
   &:focus {
-    background-color: hsla(0, 0%, 47%, 1);
     color: var(--white);
+    background-color: hsla(0, 0%, 47%, 1);
     transition: all .3s;
   }
 }
@@ -23,37 +23,37 @@
   perspective: 19rem;
   & > .after,
   & > .before {
-    display: block;
     position: absolute;
     top: 0;
+    display: block;
     width: 12.5rem;
     height: 4rem;
-    text-align: center;
-    line-height: 3.5rem;
-    transition: all .3s;
-    background-color: hsla(49, 85%, 70%, 1);
     color: hsla(29, 98%, 35%, 1);
+    line-height: 3.5rem;
+    text-align: center;
+    background-color: hsla(49, 85%, 70%, 1);
     border: 2px solid hsla(135, 80%, 14%, 1);
     transform: rotateX(90deg);
     transform-origin: 50% 50% -2rem;
+    transition: all .3s;
   }
   & > .before {
-    background-color: hsla(130, 59%, 74%, 1);
     color: hsla(135, 80%, 14%, 1);
+    background-color: hsla(130, 59%, 74%, 1);
     transform: rotateX(0deg);
     transform-origin: 50% 50% -2rem;
   }
   /* hover 3D effect */
   &:hover,
   &:focus {
+    color: transparent;
     background-color: transparent;
     border-color: transparent;
-    color: transparent;
   }
   &:hover > .after,
   &:focus > .after {
-    border: 2px solid hsla(29, 98%, 35%, 1);
     z-index: 3;
+    border: 2px solid hsla(29, 98%, 35%, 1);
     transform: rotateX(0deg);
   }
   &:hover > .before,
@@ -63,23 +63,23 @@
 }
 
 .double-door-effect {
-  border: 2px solid hsla(207, 96%, 33%, 1);
-  color: var(--white);
   z-index: 2;
+  color: var(--white);
+  border: 2px solid hsla(207, 96%, 33%, 1);
   &:before,
   &:after {
-    content: "";
-    display: block;
     position: absolute;
     top: 0;
+    z-index: -1;
+    display: block;
     width: 12rem;
     height: calc(4rem - 4px);
     background-color: hsla(204, 78%, 55%, 1);
     transition: all .5s;
-    z-index: -1;
+    content: "";
   }
   &:before {
-    left: 0
+    left: 0;
   }
   &:after {
     right: 0;
@@ -87,9 +87,9 @@
   /* double-door hover effect  */
   &:hover,
   &:focus {
+    color: hsla(207, 96%, 33%, 1);
     background-color: var(--white);
     border-color: hsla(207, 96%, 33%, 1);
-    color: hsla(207, 96%, 33%, 1);
     &:before,
     &:after {
       width: 0;

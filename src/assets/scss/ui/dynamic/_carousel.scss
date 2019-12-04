@@ -23,15 +23,14 @@
 
 /* 各パネルの中身 = コンテンツ (divかaを想定) */
 .carousel__content {
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
   &[aria-hidden="false"] {
+    z-index: 1;
     opacity: 1;
     transition: var(--carousel-switch-effect);
-    z-index: 1;
     &:focus {
       opacity: .92;
       transition: var(--in-transition);
@@ -44,7 +43,7 @@
     }
   }
   &[aria-hidden="true"] {
-    transition:var(--carousel-fade);
+    transition: var(--carousel-fade);
   }
 }
 
@@ -86,23 +85,23 @@
   transform: translateY(-50%);
   transition: var(--out-transition);
   &:before {
-    content: "";
-    display: block;
     position: absolute;
     top: 50%;
+    display: block;
     border-style: solid;
     backface-visibility: hidden;
+    content: "";
     @include mq(sp-tb) {
       width: 1.25rem;
       height: 1.25rem;
-      border-width: 0 2px 2px 0;
       border-color: var(--white);
+      border-width: 0 2px 2px 0;
     }
     @include mq(dt) {
       width: 1.5625rem;
       height: 1.5625rem;
-      border-width: 0 3px 3px 0;
       border-color: var(--border-color);
+      border-width: 0 3px 3px 0;
     }
   }
   &:focus {
@@ -117,12 +116,12 @@
 
 .carousel__control-pause,
 .carousel__control-play {
+  z-index: 2;
   border: 1px solid #bbb;
   border-radius: 2px;
-  z-index: 2;
   @include mq(sp-tb) {
-    left: 50%;
     bottom: 3%;
+    left: 50%;
     width: 2.8rem;
     height: 2em;
     transform: translateX(-50%);
@@ -133,11 +132,11 @@
     width: 3.3rem;
     height: 2.5em;
   }
-  &[aria-hidden=true] {
-    visibility: hidden;
+  &[aria-hidden="true"] {
     z-index: 0;
+    visibility: hidden;
   }
-  &[aria-hidden=false] {
+  &[aria-hidden="false"] {
     visibility: visible;
   }
   &:focus {
@@ -177,7 +176,7 @@
 .carousel__control-next {
   transition: transform .3s var(--ease-out-quad);
   @include mq(sp-tb) {
-    right: -0.3rem;
+    right: -.3rem;
     z-index: 1;
   }
   @include mq(dt) {
@@ -199,16 +198,16 @@
 /* 再生ボタン */
 .carousel__control-play {
   @include mq(sp-tb) {
-    background: #999 url("../img/img_play.png") 53% center no-repeat;
+    background: #999 url(../img/img_play.png) 53% center no-repeat;
   }
   @include mq(dt) {
-    background: #999 url("../img/img_play.png") 56% center no-repeat;
+    background: #999 url(../img/img_play.png) 56% center no-repeat;
   }
 }
 
 /* 停止ボタン */
 .carousel__control-pause {
-  background: #999 url("../img/img_pause.png") 50% center no-repeat;
+  background: #999 url(../img/img_pause.png) 50% center no-repeat;
 }
 
 /* インジケーターもしくはサムネイルのコンテナー(リスト) */
@@ -232,21 +231,21 @@
 .carousel__thumbnail-btn {
   width: 100%;
   height: auto;
-  &[aria-selected=false] {
+  &[aria-selected="false"] {
     opacity: .8;
     transition: opacity .3s var(--ease-out-quad);
   }
-  &[aria-selected=true] {
+  &[aria-selected="true"] {
     outline: .2rem solid hsla(212, 100%, 57%, 1);
     outline-offset: 0;
     opacity: 1;
   }
   @include mq(dt) {
     &:hover {
-      opacity: 1;
-      transition: opacity .25s var(--ease-in-quad);
       outline: .125rem solid var(--focusring-color);
       outline-offset: .0625rem;
+      opacity: 1;
+      transition: opacity .25s var(--ease-in-quad);
     }
   }
   &:focus {

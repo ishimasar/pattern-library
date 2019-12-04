@@ -24,13 +24,15 @@
 $css-default-font-size: 16px;
 
 /* Breakpoint */
-$screen: (sp: 767px,
+$screen: (
+  sp: 767px,
   tb: 1023px,
-  dt: 1599px) !default;
+  dt: 1599px,
+) !default;
 
 /* 数値から単位を除外 */
 @function strip-unit($number) {
-  @if (type-of($number)=='number'and not unitless($number)) {
+  @if (type-of($number) == "number" and not unitless($number)) {
     @return $number;
   }
 
@@ -41,7 +43,7 @@ $screen: (sp: 767px,
 @function px2rem($number) {
   $result: $number;
 
-  @if (not(unit($number)=='px')) {
+  @if (not(unit($number) == "px")) {
     @return $result;
   }
 
@@ -54,7 +56,7 @@ $screen: (sp: 767px,
 @function px2em($number, $parent-number: $css-default-font-size) {
   $result: $number;
 
-  @if (not(unit($number)=='px')) {
+  @if (not(unit($number) == "px")) {
     @return $result;
   }
 
@@ -64,26 +66,30 @@ $screen: (sp: 767px,
 }
 
 /* fluid size */
-@mixin flsz($max-font-size, $min-font-size, $max-viewport, $min-viewport, $propaty: 'font-size') {
-
+@mixin flsz(
+  $max-font-size,
+  $min-font-size,
+  $max-viewport,
+  $min-viewport,
+  $property: "font-size"
+) {
   $maxvw: 0;
   $minvw: 0;
 
-  @if(type-of($max-viewport)==number) {
+  @if (type-of($max-viewport) ==number) {
     $maxvw: $max-viewport;
   }
 
-  @if(type-of($min-viewport)==number) {
+  @if (type-of($min-viewport) ==number) {
     $minvw: $min-viewport;
   }
 
-  @each $key,
-  $value in $screen {
-    @if(($key==$max-viewport) and ($maxvw==0)) {
+  @each $key, $value in $screen {
+    @if (($key==$max-viewport) and ($maxvw==0)) {
       $maxvw: $value;
     }
 
-    @if(($key==$min-viewport) and ($minvw==0)) {
+    @if (($key==$min-viewport) and ($minvw==0)) {
       $minvw: $value;
     }
   }
@@ -92,20 +98,20 @@ $screen: (sp: 767px,
   $y: 100 * ($max-font-size - $min-font-size) / ($maxvw - $minvw);
   $z: $min-font-size;
 
-  @if($px2rem) {
+  @if ($px2rem) {
     $z: px2rem($z);
   }
 
-  #{$propaty}: $z;
+  #{$property}: $z;
 
   $maxmq: px2em($maxvw + 1);
   $minmq: px2em($minvw + 1);
 
   @media (min-width: #{$minmq}) {
-    #{$propaty}: calc(#{$z} + ((1vw - #{$x}) * #{strip-unit($y)}));
+    #{$property}: calc(#{$z} + ((1vw - #{$x}) * #{strip-unit($y)}));
   }
 
   @media (min-width: #{$maxmq}) {
-    #{$propaty}: $max-font-size;
+    #{$property}: $max-font-size;
   }
 }
