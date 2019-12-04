@@ -1,7 +1,7 @@
 'use strict';
 
 export class Carousel {
-  constructor(triggerClass, thumb, prev, next, play, pause) {
+  constructor(triggerClass, img, thumb, prev, next, play, pause) {
     this.current = 0; // 現在地を示すインデックス番号：初期値0=1番目
     this.timerId; // setTimeout関数の戻り値(ID)。clearTimeoutに渡す用
 
@@ -10,6 +10,7 @@ export class Carousel {
     this.contArray = Array(...this.carouselCont); // 上記NodeListオブジェクトを扱いやすいよう配列に変換
 
     if(this.carouselCont.length > 0) {
+      this.carouselImg = document.querySelectorAll(img);
       this.carouselThumb = document.querySelectorAll(thumb); // サムネイル(button要素 = role="tab")のDOM取得
     }
 
@@ -27,29 +28,34 @@ export class Carousel {
   }
   // ---メソッド---
 
-  // カルーセルを表示する([aria-hidden="false"]スタイル)にする関数
+  // カルーセルを表示([aria-hidden="false"]スタイル)
   showCarousel() {
     this.carouselCont[this.current].setAttribute('aria-hidden', 'false'); // 表示状態(ARIA)
     this.carouselCont[this.current].setAttribute('tabindex', '0'); // キーボードフォーカス可に
+
+    // this.carouselImg[this.current].classList.add('is-motioned'); // スケールモーションclass付与 ※必要に応じてご利用ください
+
   }
 
-  // カルーセルを非表示([aria-hidden="true"]スタイル)にする関数
+  // カルーセルを非表示([aria-hidden="true"]スタイル)
   hideCarousel() {
     this.carouselCont[this.current].setAttribute('aria-hidden', 'true'); // 非表示状態(ARIA)
     this.carouselCont[this.current].setAttribute('tabindex', '-1'); // キーボードフォーカス不可に
+
+    // this.carouselImg[this.current].classList.remove('is-motioned'); // スケールモーションclass削除 ※必要に応じてご利用ください
   }
 
-  // サムネイル画像を非選択状態([aria-selected="false"]スタイル)にする関数
+  // サムネイル画像を非選択状態([aria-selected="false"]スタイル)
   removeCurrent() {
     this.carouselThumb[this.current].setAttribute('aria-selected', 'false'); // 非選択状態(ARIA)
   }
 
-  // サムネイル画像を選択状態([aria-selected="false"]スタイル)にする関数
+  // サムネイル画像を選択状態([aria-selected="false"]スタイル)
   addCurrent() {
     this.carouselThumb[this.current].setAttribute('aria-selected', 'true'); // 選択状態(ARIA)
   }
 
-  // オートスライド再生関数
+  // オートスライド再生
   playCarousel() {
     this.timerId = setTimeout(() => {
       this.next.click(); // 次へボタンクリックイベント呼び出し(buttonオブジェクトのメソッド)
@@ -57,12 +63,12 @@ export class Carousel {
     }, 3500);
   }
 
-  // オートスライド停止関数
+  // オートスライド停止
   stopCarousel() {
     clearTimeout(this.timerId);
   }
 
-  // ---イベントおよび関数実行処理----
+  // ---イベントおよびメソッド実行処理----
   setter() {
     if(this.carouselCont.length > 0) {
       // 格納したNodeListオブジェクトを配列として要素1つ1つにループ処理
