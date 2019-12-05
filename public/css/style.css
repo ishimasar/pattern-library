@@ -16,6 +16,12 @@
    * - SASSのmixinでレスポンシブ(media query)対応している(下の方↓)
    * - デバイス別表示の接尾辞(suffix) -> Mb: Mobile, Tablet、Dt: Desktop
    */
+  --logo-font: Brandon Grotesque Bold;
+  --sentence-font: Brandon Text Medium, YakuHanJPs, Noto Sans JP;
+  --home-section-heading-font: YakuHanJPs, Noto Serif JP;
+  --english-font: Brandon Grotesque Medium;
+  --english-font-print: Arial;
+  --number-font: Lato;
   /*
    * font-size - declarative type
    */
@@ -576,6 +582,7 @@ body * {
   /* 全称セレクタ単体は使いたくないのでbody、ボックスモデル(margin、paddin、border、content)を幅・高さに含めたいので、やむを得ずborder-box値適用(継承) */
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  font-family: var(--sentence-font);
 }
 
 *::before,

@@ -2,6 +2,7 @@
 
 // fractalインスタンスを作成してエクスポート
 const fractal = module.exports = require('@frctl/fractal').create();
+
 // プロジェクト関連のメタデータ設定
 fractal.set('project.title', 'Pattern Library by Cloudy knot');
 fractal.set('project.author', 'masa ishii');
@@ -22,3 +23,11 @@ const myCustomisedTheme = mandelbrot({
 fractal.web.theme(myCustomisedTheme);
 // HTMLの生成
 fractal.web.set('builder.dest', __dirname + '/dest');
+
+// browsersync設定 / 使用できない・WSLのためか？
+// fractal.web.set('server.sync', true);
+// fractal.web.set('server.syncOptions', { open: true});
+
+// Pugテンプレートの利用 / 使用できない・WSLのためか？
+// fractal.components.engine('@rsm/fractal-pug-adapter');
+// fractal.components.set('ext', '.pug');

@@ -461,6 +461,7 @@ body {
 body * {
   /* 全称セレクタ単体は使いたくないのでbody、ボックスモデル(margin、paddin、border、content)を幅・高さに含めたいので、やむを得ずborder-box値適用(継承) */
   box-sizing: inherit;
+  font-family: var(--sentence-font);
 }
 
 *::before,
