@@ -1448,13 +1448,6 @@ legend {
           transform: translate(0, -50%) rotate(135deg);
 }
 
-.carousel__control-prev:focus {
-  -webkit-transform: translate(-10%, -50%) rotate(0);
-          transform: translate(-10%, -50%) rotate(0);
-  -webkit-transition: all 0.25s var(--ease-in-quad);
-  transition: all 0.25s var(--ease-in-quad);
-}
-
 @media print, screen and (max-width: 63.9375em) {
   .carousel__control-prev {
     left: .2rem;
@@ -1506,15 +1499,6 @@ legend {
 .carousel__control-next:before {
   -webkit-transform: translate(0, -50%) rotate(-45deg);
           transform: translate(0, -50%) rotate(-45deg);
-}
-
-.carousel__control-next:focus {
-  -webkit-transform: translate(10%, -50%) rotate(0);
-          transform: translate(10%, -50%) rotate(0);
-  -webkit-transition: -webkit-transform 0.25s var(--ease-in-quad);
-  transition: -webkit-transform 0.25s var(--ease-in-quad);
-  transition: transform 0.25s var(--ease-in-quad);
-  transition: transform 0.25s var(--ease-in-quad), -webkit-transform 0.25s var(--ease-in-quad);
 }
 
 /* 再生ボタン */

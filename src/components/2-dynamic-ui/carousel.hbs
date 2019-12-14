@@ -7,38 +7,38 @@
           <!-- WebP用画像-->
           <source srcset="{{ path '/img/img_carousel_01.webp' }}" type="image/webp">
           <!-- 従来画像-->
-          <img src="{{ path '/img/img_carousel_01.jpg' }}" class="carousel__img is-motioned" alt="スライドパネル-コンテンツ画像1" decoding="async">
+          <img src="{{ path '/img/img_carousel_01.jpg' }}" class="carousel__img is-motioned" alt="スライドパネルのコンテンツ画像1" decoding="async">
         </picture>
       </a>
       <a href="#" id="panel2" class="carousel__content js-carousel-cont" role="tabpanel" aria-labelledby="prev next play pause tab2" aria-hidden="true" tabindex="-1">
         <picture>
           <source srcset="{{ path '/img/img_carousel_02.webp' }}" type="image/webp">
-          <img src="{{ path '/img/img_carousel_02.jpg' }}" class="carousel__img" alt="スライドパネル-コンテンツ画像2" decoding="async">
+          <img src="{{ path '/img/img_carousel_02.jpg' }}" class="carousel__img" alt="スライドパネルのコンテンツ画像2" decoding="async">
         </picture>
       </a>
       <a href="#" id="panel3" class="carousel__content js-carousel-cont" role="tabpanel" aria-labelledby="prev next play pause tab3" aria-hidden="true" tabindex="-1">
         <picture>
           <source srcset="{{ path '/img/img_carousel_03.webp' }}" type="image/webp">
-          <img src="{{ path '/img/img_carousel_03.jpg' }}" class="carousel__img" alt="スライドパネル-コンテンツ画像3" decoding="async">
+          <img src="{{ path '/img/img_carousel_03.jpg' }}" class="carousel__img" alt="スライドパネルのコンテンツ画像3" decoding="async">
         </picture>
       </a>
       <a href="#" id="panel4" class="carousel__content js-carousel-cont" role="tabpanel" aria-labelledby="prev next play pause tab4" aria-hidden="true" tabindex="-1">
         <picture>
           <source srcset="{{ path '/img/img_carousel_04.webp' }}" type="image/webp">
-          <img src="{{ path '/img/img_carousel_04.jpg' }}" class="carousel__img" alt="スライドパネル-コンテンツ画像4" decoding="async">
+          <img src="{{ path '/img/img_carousel_04.jpg' }}" class="carousel__img" alt="スライドパネルのコンテンツ画像4" decoding="async">
         </picture>
       </a>
       <a href="#" id="panel5" class="carousel__content js-carousel-cont" role="tabpanel" aria-labelledby="prev next play pause tab5" aria-hidden="true" tabindex="-1">
         <picture>
           <source srcset="{{ path '/img/img_carousel_05.webp' }}" type="image/webp">
-          <img src="{{ path '/img/img_carousel_05.jpg' }}" class="carousel__img" alt="スライドパネル-コンテンツ画像5" decoding="async">
+          <img src="{{ path '/img/img_carousel_05.jpg' }}" class="carousel__img" alt="スライドパネルのコンテンツ画像5" decoding="async">
         </picture>
       </a>
     </div>
-    <button type="button" id="prev" class="carousel__control-prev js-carousel-prev" title="前のスライドコンテンツへ" aria-label="前のスライドコンテンツへ" aria-controls="panel1 panel2 panel3 panel4 panel5"></button>
-    <button type="button" id="next" class="carousel__control-next js-carousel-next" title="次のスライドコンテンツへ" aria-label="次のスライドコンテンツへ" aria-controls="panel1 panel2 panel3 panel4 panel5"></button>
-    <button type="button" id="play" class="carousel__control-play js-carousel-play" title="再生" aria-label="オートスライド再生" aria-controls="panel1 panel2 panel3 panel4 panel5" aria-hidden="false"></button>
-    <button type="button" id="pause" class="carousel__control-pause js-carousel-pause" title="停止" aria-label="オートスライド一時停止" aria-controls="panel1 panel2 panel3 panel4 panel5" aria-hidden="true"></button>
+    <button type="button" id="prev" class="carousel__control-prev js-carousel-prev" aria-label="前のスライドコンテンツへ" aria-controls="panel1 panel2 panel3 panel4 panel5"></button>
+    <button type="button" id="next" class="carousel__control-next js-carousel-next" aria-label="次のスライドコンテンツへ" aria-controls="panel1 panel2 panel3 panel4 panel5"></button>
+    <button type="button" id="play" class="carousel__control-play js-carousel-play" aria-label="オートスライド再生" aria-controls="panel1 panel2 panel3 panel4 panel5" aria-hidden="false"></button>
+    <button type="button" id="pause" class="carousel__control-pause js-carousel-pause" aria-label="オートスライド一時停止" aria-controls="panel1 panel2 panel3 panel4 panel5" aria-hidden="true"></button>
   </div>
   <ul class="carousel__thumbnail-list" role="tablist">
     <li class="carousel__thumbnail-item" role="presentation">
