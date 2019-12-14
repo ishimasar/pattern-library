@@ -17,6 +17,12 @@ export class Accordion {
     this.summary.addEventListener('click', this.handlers.click);
     this.handlers.transitionEnd = this.onTransitionEnd.bind(this);
 
+    this.handlers.click = this.allClick.bind(this);
+    this.allOpen.addEventListener('click', this.handlers.click);
+
+    // this.handlers.click = this.allClose.bind(this);
+    // this.allClose.addEventListener('click', this.handlers.click);
+
     window.addEventListener('resize', () => {
       setTimeout(() => {
         this.onResize();
@@ -25,6 +31,7 @@ export class Accordion {
   }
 
   onClick(e) {
+    console.log(this.details);
     if (this.details.open) {
       this.collapse.style.height = '';
       this.collapse.addEventListener('transitionend', this.handlers.transitionEnd);
@@ -46,6 +53,23 @@ export class Accordion {
     this.collapse.removeEventListener('transitionend', this.handlers.transitionEnd);
     this.details.open = false;
   }
+
+  allClick() {
+    this.details.open = true;
+    this.collapse.style.height = this.collapseCont.offsetHeight / 16 + 'rem';
+    this.details.setAttribute('aria-expanded', 'true');
+    this.collapse.setAttribute('aria-hidden', 'false');
+  }
+
+  // allClose() {
+  //   if (this.details.open) {
+  //     this.collapse.style.height = '';
+  //     this.collapse.addEventListener('transitionend', this.handlers.transitionEnd);
+
+  //     this.details.setAttribute('aria-expanded', 'false');
+  //     this.collapse.setAttribute('aria-hidden', 'true');
+  //   }
+  // }
 
   onResize() {
     if (this.details.open) {

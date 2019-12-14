@@ -1167,6 +1167,42 @@ legend {
   }
 }
 
+.accordion-button-box {
+  margin: 2rem auto auto;
+  text-align: center;
+}
+
+.accordion-all-button {
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-all-button {
+    min-width: 5rem;
+    padding: .8rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-all-button {
+    min-width: 8rem;
+    padding: 1rem;
+  }
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-all-button:not(:first-of-type) {
+    margin-left: 1rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-all-button:not(:first-of-type) {
+    margin-left: 2rem;
+  }
+}
+
 /* styling */
 /* カルーセルパネル(スライドパネル)UI コンテナー/container */
 .carousel {
