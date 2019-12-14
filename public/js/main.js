@@ -1,11 +1,19 @@
-console.log('hoge');
-
+import { Accordion } from './modules/Accordion.js';
 import { Carousel } from './modules/Carousel.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
 import { ModalDialog } from './modules/ModalDialog.js';
 import { scrollSmooth } from './modules/SmoothScroll.js';
 import { Tab } from './modules/Tab.js';
 // import { TabSwipe } from './modules/TabSwipe.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const detailsEls = document.getElementsByTagName('details')
+
+  for (let i = 0; i < detailsEls.length; i++) {
+    const accordion = new Accordion(detailsEls[i]);
+    accordion.handleEvents();
+  }
+});
 
 const carousel = new Carousel('.js-carousel-cont', '.carousel__img', '.js-carousel-thumb', '.js-carousel-prev', '.js-carousel-next', '.js-carousel-play', '.js-carousel-pause');
 carousel.setter();

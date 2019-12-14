@@ -16,6 +16,12 @@
    * - SASSのmixinでレスポンシブ(media query)対応している(下の方↓)
    * - デバイス別表示の接尾辞(suffix) -> Mb: Mobile, Tablet、Dt: Desktop
    */
+  --logo-font: Brandon Grotesque Bold;
+  --sentence-font: Brandon Text Medium, YakuHanJPs, Noto Sans JP;
+  --home-section-heading-font: YakuHanJPs, Noto Serif JP;
+  --english-font: Brandon Grotesque Medium;
+  --english-font-print: Arial;
+  --number-font: Lato;
   /*
    * font-size - declarative type
    */
@@ -576,6 +582,7 @@ body * {
   /* 全称セレクタ単体は使いたくないのでbody、ボックスモデル(margin、paddin、border、content)を幅・高さに含めたいので、やむを得ずborder-box値適用(継承) */
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  font-family: var(--sentence-font);
 }
 
 *::before,
@@ -704,6 +711,7 @@ textarea {
 [data-whatinput="keyboard"] audio,
 [data-whatinput="keyboard"] button,
 [data-whatinput="keyboard"] details,
+[data-whatinput="keyboard"] summary,
 [data-whatinput="keyboard"] embed,
 [data-whatinput="keyboard"] iframe,
 [data-whatinput="keyboard"] img[usemap],
@@ -724,6 +732,7 @@ textarea {
 [data-whatinput="keyboard"] audio:focus,
 [data-whatinput="keyboard"] button:focus,
 [data-whatinput="keyboard"] details:focus,
+[data-whatinput="keyboard"] summary:focus,
 [data-whatinput="keyboard"] embed:focus,
 [data-whatinput="keyboard"] iframe:focus,
 [data-whatinput="keyboard"] img[usemap]:focus,
@@ -1006,6 +1015,156 @@ legend {
   background-color: #5cb2eb;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+.accordion-wrap {
+  margin: 2rem auto;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-wrap {
+    width: 85%;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-wrap {
+    width: 60%;
+  }
+}
+
+.accordion-list > li {
+  color: var(--black);
+  background-color: #d9d9d9;
+}
+
+.accordion-list > li:not(:last-of-type) {
+  margin-bottom: .25rem;
+}
+
+.accordion-details {
+  height: auto;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-details {
+    font-size: 1rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-details {
+    font-size: 1.1rem;
+  }
+  .accordion-details:hover {
+    text-decoration: underline;
+  }
+}
+
+.accordion-details > summary {
+  padding: 1.5rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-details > summary {
+    padding: 1rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-details > summary {
+    padding: 1.5rem;
+  }
+}
+
+.accordion-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-details > summary:before {
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: 0px transparent solid;
+    border-top: 6.5px transparent solid;
+    border-bottom: 6.5px transparent solid;
+    border-left: 11px var(--black) solid;
+    -webkit-transition: border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+    transition: border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+    content: '';
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-details > summary:before {
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: 0px transparent solid;
+    border-top: 7.5px transparent solid;
+    border-bottom: 7.5px transparent solid;
+    border-left: 13px var(--black) solid;
+    -webkit-transition: border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+    transition: border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+    content: '';
+  }
+}
+
+.accordion-details > summary:before {
+  display: inline-block;
+  width: auto;
+  margin-right: 1rem;
+  -webkit-transition: -webkit-transform 0.25s var(--ease-in-quad);
+  transition: -webkit-transform 0.25s var(--ease-in-quad);
+  transition: transform 0.25s var(--ease-in-quad);
+  transition: transform 0.25s var(--ease-in-quad), -webkit-transform 0.25s var(--ease-in-quad);
+}
+
+.accordion-details[aria-expanded="true"] > summary:before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition-timing-function: var(--ease-in-quad);
+          transition-timing-function: var(--ease-in-quad);
+}
+
+.accordion-details__content {
+  height: 0;
+  overflow: hidden;
+  color: var(--black);
+  background-color: #e6e6e6;
+  -webkit-transition: height 0.25s var(--ease-in-quad);
+  transition: height 0.25s var(--ease-in-quad);
+  pointer-events: none;
+}
+
+[open] .accordion-details__content {
+  -webkit-transition-timing-function: var(--ease-in-quad);
+          transition-timing-function: var(--ease-in-quad);
+}
+
+.accordion-details__paragraph {
+  border-top: 0.0625rem solid #b3b3b3;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-details__paragraph {
+    padding: 1rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-details__paragraph {
+    padding: 1.5rem;
+  }
 }
 
 /* styling */

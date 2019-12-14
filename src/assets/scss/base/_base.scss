@@ -53,7 +53,6 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-
   /* 1 */
   font-size: 1em;
   font-family: monospace, monospace;
@@ -73,7 +72,6 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-
   /* 1 */
   text-decoration: underline;
 
@@ -99,7 +97,6 @@ strong {
 code,
 kbd,
 samp {
-
   /* 1 */
   font-size: 1em;
   font-family: monospace, monospace;
@@ -147,7 +144,6 @@ input,
 optgroup,
 select,
 textarea {
-
   /* 2 */
 
   box-sizing: border-box;
@@ -233,7 +229,6 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-
   /* 2 */
   display: table;
 
@@ -293,7 +288,6 @@ textarea {
  * 訳: Safariでアウトラインスタイルを修正
  */
 [type="search"] {
-
   /* 1 */
   outline-offset: -2px;
   -webkit-appearance: textfield;
@@ -315,7 +309,6 @@ textarea {
  * 訳: Safariでフォントのプロパティを `inherit`に変更
  */
 ::-webkit-file-upload-button {
-
   /* 1 */
   font: inherit;
   -webkit-appearance: button;
@@ -430,7 +423,6 @@ fieldset {
  * original initialization
  */
 html {
-
   /* apply a natural box layout model to all elements, but allowing components to change */
   box-sizing: border-box;
 
@@ -466,7 +458,6 @@ body * {
 
 *::before,
 *::after {
-
   /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
   box-sizing: inherit;
   text-decoration: inherit;
@@ -537,7 +528,6 @@ textarea {
 
 /* Specify text selection background color and omit drop shadow */
 ::-moz-selection {
-
   /* Required when declaring ::selection */
   color: #000;
   text-shadow: none;
@@ -545,7 +535,6 @@ textarea {
 }
 
 ::selection {
-
   /* Required when declaring ::selection */
   color: #000;
   text-shadow: none;
@@ -591,6 +580,7 @@ textarea {
 [data-whatinput="keyboard"] audio,
 [data-whatinput="keyboard"] button,
 [data-whatinput="keyboard"] details,
+[data-whatinput="keyboard"] summary,
 [data-whatinput="keyboard"] embed,
 [data-whatinput="keyboard"] iframe,
 [data-whatinput="keyboard"] img[usemap],
@@ -610,6 +600,7 @@ textarea {
 [data-whatinput="keyboard"] audio:focus,
 [data-whatinput="keyboard"] button:focus,
 [data-whatinput="keyboard"] details:focus,
+[data-whatinput="keyboard"] summary:focus,
 [data-whatinput="keyboard"] embed:focus,
 [data-whatinput="keyboard"] iframe:focus,
 [data-whatinput="keyboard"] img[usemap]:focus,
@@ -727,7 +718,6 @@ select::-ms-value {
 }
 
 legend {
-
   /* Correct the color inheritance from `fieldset` elements in IE */
   display: table;
 
@@ -745,7 +735,6 @@ legend {
 }
 
 [type="search"] {
-
   /* Correct the odd appearance in Chrome and Safari */
   outline-offset: -2px;
   -webkit-appearance: textfield;
@@ -773,7 +762,6 @@ legend {
 }
 
 ::-webkit-file-upload-button {
-
   /* Correct the inability to style clickable types in iOS and Safari */
   font: inherit;
   -webkit-appearance: button;

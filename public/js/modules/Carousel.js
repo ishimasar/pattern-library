@@ -14,8 +14,6 @@ export class Carousel {
       this.carouselThumb = document.querySelectorAll(thumb); // サムネイル(button要素 = role="tab")のDOM取得
     }
 
-      console.log('hoge');
-
     // 前へボタンDOM取得変数
     this.prev = document.querySelector(prev);
 
