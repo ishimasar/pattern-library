@@ -13,41 +13,45 @@
   </head>
   <body>
     <div class="accordion-wrap">
-  <ul class="accordion-list" role="tree">
-    <li role="treeitem">
-      <details class="accordion-details" aria-expanded="false">
+  <div class="accordion-button-box">
+    <button type="button" id="all-open" class="accordion-all-button" aria-controls="panel1 panel2 panel3 panel4 panel5">すべて開く</button>
+    <button type="button" id="all-close" class="accordion-all-button is-disabled" aria-controls="panel1 panel2 panel3 panel4 panel5">すべて閉じる</button>
+  </div>
+  <ul class="accordion-list" role="presentation">
+    <li role="presentation">
+      <details id="panel1" class="accordion-details" aria-expanded="false">
         <summary>リスト項目1</summary>
         <div class="accordion-details__content">
           <p class="accordion-details__paragraph">リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1</p>
         </div>
       </details>
     </li>
-    <li role="treeitem">
-      <details class="accordion-details" aria-expanded="false">
+    <li role="presentation">
+      <details id="panel2" class="accordion-details" aria-expanded="false">
         <summary>リスト項目2</summary>
         <div class="accordion-details__content">
           <p class="accordion-details__paragraph">リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2</p>
         </div>
       </details>
     </li>
-    <li role="treeitem">
-      <details class="accordion-details" aria-expanded="false">
+    <li role="presentation">
+      <details id="panel3" class="accordion-details" aria-expanded="false">
         <summary>リスト項目3</summary>
         <div class="accordion-details__content">
           <p class="accordion-details__paragraph">リスト内容3リスト内容3リスト内容3リスト内容3リスト内容3リスト内容3</p>
         </div>
-      </details>
+      </details id="panel1">
     </li>
-    <li role="treeitem">
-      <details class="accordion-details" aria-expanded="false">
+    <li role="presentation">
+      <details id="panel4" class="accordion-details" aria-expanded="false">
         <summary>リスト項目4</summary>
         <div class="accordion-details__content">
           <p class="accordion-details__paragraph">リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4</p>
         </div>
       </details>
     </li>
-    <li role="treeitem">
-      <details class="accordion-details" aria-expanded="false">
+    <li role="presentation">
+      <details id="panel5" class="accordion-details" aria-expanded="false">
         <summary>リスト項目5</summary>
         <div class="accordion-details__content">
           <p class="accordion-details__paragraph">リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5</p>
@@ -55,10 +59,6 @@
       </details>
     </li>
   </ul>
-  <div class="accordion-button-box">
-    <button type="button" id="all-open" class="accordion-all-button">すべて開く</button>
-    <button type="button" id="all-close" class="accordion-all-button">すべて閉じる</button>
-  </div>
 </div>
   </body>
 </html>

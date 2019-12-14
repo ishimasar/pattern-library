@@ -106,10 +106,10 @@
   // --max-width: 1600;
   --hover-scale: scale(1.01);
 
-  /* hover effect transition - semantic type */
-  --in-transition: color .25s var(--ease-in-out-quad), background-color .25s var(--ease-in-out-quad), transform .25s var(--ease-in-out-quad);
+  /* hover & focus effect transition - semantic type */
+  --in-transition: color .15s var(--ease-in-out-quad), background-color .15s var(--ease-in-out-quad), transform .15s var(--ease-in-out-quad);
 
-  --out-transition: color .3s var(--ease-out-quad), background-color .3s var(--ease-in-out-quad), transform .3s var(--ease-in-out-quad);
+  --out-transition: color .2s var(--ease-out-quad), background-color .2s var(--ease-in-out-quad), transform .2s var(--ease-in-out-quad);
 
   --carousel-fade: opacity .7s var(--ease-in-quad);
   --carousel-switch-effect: var(--in-transition), var(--carousel-fade);

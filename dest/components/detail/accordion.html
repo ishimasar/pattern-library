@@ -156,41 +156,45 @@
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-wrap"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-list"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tree"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"treeitem"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-button-box"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"all-open"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-all-button"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"panel1 panel2 panel3 panel4 panel5"</span>&gt;</span>すべて開く<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"all-close"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-all-button is-disabled"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"panel1 panel2 panel3 panel4 panel5"</span>&gt;</span>すべて閉じる<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-list"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>リスト項目1<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__content"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__paragraph"</span>&gt;</span>リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"treeitem"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>リスト項目2<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__content"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__paragraph"</span>&gt;</span>リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"treeitem"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>リスト項目3<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__content"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__paragraph"</span>&gt;</span>リスト内容3リスト内容3リスト内容3リスト内容3リスト内容3リスト内容3<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel1"</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"treeitem"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>リスト項目4<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__content"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__paragraph"</span>&gt;</span>リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"treeitem"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>リスト項目5<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__content"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__paragraph"</span>&gt;</span>リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -198,10 +202,6 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-button-box"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"all-open"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-all-button"</span>&gt;</span>すべて開く<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"all-close"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-all-button"</span>&gt;</span>すべて閉じる<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -211,41 +211,45 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-f91703e5689bf2738329c2c26585b92a-panel-view">
     <code class="Code Code--lang-handlebars">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-wrap"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-list"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tree"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"treeitem"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-button-box"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"all-open"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-all-button"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"panel1 panel2 panel3 panel4 panel5"</span>&gt;</span>すべて開く<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"all-close"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-all-button is-disabled"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"panel1 panel2 panel3 panel4 panel5"</span>&gt;</span>すべて閉じる<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-list"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>リスト項目1<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__content"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__paragraph"</span>&gt;</span>リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1リスト内容1<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"treeitem"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>リスト項目2<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__content"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__paragraph"</span>&gt;</span>リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2リスト内容2<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"treeitem"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>リスト項目3<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__content"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__paragraph"</span>&gt;</span>リスト内容3リスト内容3リスト内容3リスト内容3リスト内容3リスト内容3<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel1"</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"treeitem"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>リスト項目4<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__content"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__paragraph"</span>&gt;</span>リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4リスト内容4<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"treeitem"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>リスト項目5<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__content"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-details__paragraph"</span>&gt;</span>リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5リスト内容5<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -253,10 +257,6 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-button-box"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"all-open"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-all-button"</span>&gt;</span>すべて開く<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"all-close"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-all-button"</span>&gt;</span>すべて閉じる<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
 </div>

@@ -4,11 +4,13 @@ export class Accordion {
   constructor(el) {
     this.details = el;
     this.summary = this.details.firstElementChild;
-		this.collapse = this.summary.nextElementSibling;
+    this.collapse = this.summary.nextElementSibling;
     this.collapseCont = this.collapse.firstElementChild;
 
+    this.list = document.querySelector('.accordion-list');
+
     this.allOpen = document.getElementById('all-open');
-    this.allClose = document.getElementById('all-close')
+    this.allClose = document.getElementById('all-close');
   }
 
   handleEvents() {
@@ -17,11 +19,11 @@ export class Accordion {
     this.summary.addEventListener('click', this.handlers.click);
     this.handlers.transitionEnd = this.onTransitionEnd.bind(this);
 
-    this.handlers.click = this.allClick.bind(this);
+    this.handlers.click = this.onAllOpen.bind(this);
     this.allOpen.addEventListener('click', this.handlers.click);
 
-    // this.handlers.click = this.allClose.bind(this);
-    // this.allClose.addEventListener('click', this.handlers.click);
+    this.handlers.click = this.onAllClose.bind(this);
+    this.allClose.addEventListener('click', this.handlers.click);
 
     window.addEventListener('resize', () => {
       setTimeout(() => {
@@ -31,7 +33,6 @@ export class Accordion {
   }
 
   onClick(e) {
-    console.log(this.details);
     if (this.details.open) {
       this.collapse.style.height = '';
       this.collapse.addEventListener('transitionend', this.handlers.transitionEnd);
@@ -44,32 +45,39 @@ export class Accordion {
 
       this.details.setAttribute('aria-expanded', 'true');
       this.collapse.setAttribute('aria-hidden', 'false');
-    }
 
+      this.allClose.classList.remove('is-disabled');
+    }
     e.preventDefault();
   }
 
   onTransitionEnd() {
     this.collapse.removeEventListener('transitionend', this.handlers.transitionEnd);
     this.details.open = false;
+    this.allOpen.classList.remove('is-disabled');
   }
 
-  allClick() {
-    this.details.open = true;
-    this.collapse.style.height = this.collapseCont.offsetHeight / 16 + 'rem';
-    this.details.setAttribute('aria-expanded', 'true');
-    this.collapse.setAttribute('aria-hidden', 'false');
+  onAllOpen() {
+    if (!this.details.open) {
+      this.details.open = true;
+      this.allOpen.classList.add('is-disabled');
+      this.allClose.classList.remove('is-disabled');
+      this.collapse.style.height = this.collapseCont.offsetHeight / 16 + 'rem';
+      this.details.setAttribute('aria-expanded', 'true');
+      this.collapse.setAttribute('aria-hidden', 'false');
+    }
   }
 
-  // allClose() {
-  //   if (this.details.open) {
-  //     this.collapse.style.height = '';
-  //     this.collapse.addEventListener('transitionend', this.handlers.transitionEnd);
-
-  //     this.details.setAttribute('aria-expanded', 'false');
-  //     this.collapse.setAttribute('aria-hidden', 'true');
-  //   }
-  // }
+  onAllClose() {
+    if (this.details.open) {
+      this.allClose.classList.add('is-disabled');
+      this.allOpen.classList.remove('is-disabled');
+      this.collapse.style.height = '';
+      this.collapse.addEventListener('transitionend', this.handlers.transitionEnd);
+      this.details.setAttribute('aria-expanded', 'false');
+      this.collapse.setAttribute('aria-hidden', 'true');
+    }
+  }
 
   onResize() {
     if (this.details.open) {
