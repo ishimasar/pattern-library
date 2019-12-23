@@ -11,6 +11,7 @@ Component・UIは随時、作成追加中。
 以下がひとまずの作成アップリスト。
 
 **Dynamic Ui**
+- Accordion
 - Carousel
 - Modal Dialog
 - Tab
