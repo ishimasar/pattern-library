@@ -8,7 +8,7 @@ export function scrollSmooth() {
   const endTime = transitionTime / 1000 * 60;
 
   // easing計算式 -> easeInOutQuad
-  const easing = function ( t, b, c, d) {
+  const easing = function (t, b, c, d) {
     if ((t/=d/2) < 1) return c/2*t*t + b;
     return -c/2 * ((--t)*(t-2) - 1) + b;
   };

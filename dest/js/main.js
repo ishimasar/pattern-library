@@ -5,9 +5,10 @@ import { ModalDialog } from './modules/ModalDialog.js';
 import { scrollSmooth } from './modules/SmoothScroll.js';
 import { Tab } from './modules/Tab.js';
 // import { TabSwipe } from './modules/TabSwipe.js';
+import { switchUiColor } from './modules/UiColorMode.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const detailsEls = document.getElementsByTagName('details')
+  const detailsEls = document.getElementsByTagName('details');
 
   for (let i = 0; i < detailsEls.length; i++) {
     const accordion = new Accordion(detailsEls[i]);
@@ -35,6 +36,7 @@ tab.throttle();
 // TabSwipe();
 
 scrollSmooth();
+switchUiColor();
 
 const elem = document.querySelectorAll('.toc');
 Stickyfill.add(elem);

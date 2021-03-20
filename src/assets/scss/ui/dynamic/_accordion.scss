@@ -78,7 +78,7 @@
 
   & > summary {
     padding: 1.5rem;
-    list-style: none;
+    // list-style: none;
     cursor: pointer;
     @include mq(sp-tb) {
       padding: 1rem;

@@ -40,21 +40,21 @@
 }
 
 .checkbox + label:before {
+  content: "";
   position: absolute;
   top: .45rem;
   left: .28rem;
   z-index: 1;
   display: inline-block;
-  width: .55rem;
-  height: .34rem;
-  border-top: 2.3px solid #000098;
-  border-right: 2.3px solid #000098;
+  width: .75rem;
+  height: .45rem;
+  border-top: 2.5px solid #000098;
+  border-right: 2.5px solid #000098;
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
   opacity: 0;
   -webkit-transition: all .15s ease-in;
   transition: all .15s ease-in;
-  content: "";
 }
 
 .checkbox:checked + label:before {

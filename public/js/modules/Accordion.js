@@ -7,8 +7,6 @@ export class Accordion {
     this.collapse = this.summary.nextElementSibling;
     this.collapseCont = this.collapse.firstElementChild;
 
-    this.list = document.querySelector('.accordion-list');
-
     this.allOpen = document.getElementById('all-open');
     this.allClose = document.getElementById('all-close');
   }
@@ -49,6 +47,9 @@ export class Accordion {
       this.allClose.classList.remove('is-disabled');
     }
     e.preventDefault();
+
+    const state = this.details.getAttribute('aria-expanded');
+    console.log(state);
   }
 
   onTransitionEnd() {
