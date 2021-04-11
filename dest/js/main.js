@@ -5,7 +5,7 @@ import { ModalDialog } from './modules/ModalDialog.js';
 import { scrollSmooth } from './modules/SmoothScroll.js';
 import { Tab } from './modules/Tab.js';
 // import { TabSwipe } from './modules/TabSwipe.js';
-import { switchUiColor } from './modules/UiColorMode.js';
+import { UiColorSwitcher } from './modules/UiColorMode.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const detailsEls = document.getElementsByTagName('details');
@@ -36,7 +36,9 @@ tab.throttle();
 // TabSwipe();
 
 scrollSmooth();
-switchUiColor();
+
+const uiColorSwitcher = new UiColorSwitcher('#switch1', '.switch-content');
+uiColorSwitcher.switchColor();
 
 const elem = document.querySelectorAll('.toc');
 Stickyfill.add(elem);

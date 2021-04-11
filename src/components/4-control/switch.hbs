@@ -1,84 +1,9 @@
-<style>
-.switch-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 2rem;
-}
-.switch-state-on {
-  margin-right: 1rem;
-}
-.switch-state-off {
-  margin-left: 1rem;
-}
-.switch-fieldset {
-  position: relative;
-  width: 7rem;
-  height: 3.2rem;
-  border: none;
-}
-.switch {
-  width: 2.8rem;
-  height: 2.8rem;
-  margin-left: 0.5rem;
-  border: 2px solid #fff;
-  background-color: rgb(84, 85, 85);
-  border-radius: 50%;
-  box-shadow: 0.12rem 0.08rem 0.07rem 0.07rem rgba(85, 67, 67, 0.2);
-  transition: transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53),
-    background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transform: translateX(3.2rem);
-  cursor: pointer;
-  appearance: none;
-  z-index: 1;
-}
-.switch:checked {
-  background-color: #35c6b6;
-  transform: translateX(0);
-}
-.switch-rail {
-  position: absolute;
-  top: 44%;
-  left: 0;
-  width: 7rem;
-  height: 3.2rem;
-  border: 1px solid #666;
-  background-color: rgb(158, 158, 158);
-  border-radius: 35px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  z-index: 0;
-}
-[data-whatinput="keyboard"] .switch:focus + label:after {
-  border-color: #000098;
-  box-shadow: 0 0 4px #000098;
-}
-.switch-content {
-  display: flex;
-  align-items: center;
-  height: 50vh;
-  padding: 2rem;
-  background-color: white;
-}
-.switch-content.light-theme {
-  background: #fff;
-  color: #333;
-  transition: all 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53),
-    color 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-}
-.switch-content.dark-theme {
-  background: #333;
-  color: #eee;
-  transition: all 0.38s, color 0.48s;
-}
-</style>
 <div class="switch-container">
   <div class="switch-state-on">OFF</div>
   <fieldset class="switch-fieldset">
     <label for="switch1" class="switch-rail"></label>
     <input
       type="checkbox"
-      checked
       name="switch"
       id="switch1"
       class="switch"
