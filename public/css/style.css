@@ -1235,8 +1235,12 @@ legend {
   }
 }
 
+.accordion-details > summary::marker {
+  font-size: 0;
+}
+
 .accordion-details > summary::-webkit-details-marker {
-  display: none;
+  font-size: 0;
 }
 
 @media print, screen and (max-width: 63.9375em) {
