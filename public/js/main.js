@@ -13,6 +13,29 @@ document.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < detailsEls.length; i++) {
     const accordion = new Accordion(detailsEls[i]);
     accordion.handleEvents();
+
+    // アコーディオンリストopen状態のDOM監視およびclass付け替え・要リファクタ
+    if (detailsEls) {
+      const allOpen = document.getElementById('all-open');
+      const allClose = document.getElementById('all-close');
+      const observer = new MutationObserver(records => {
+        if (detailsEls[0].open === true && detailsEls[1].open === true && detailsEls[2].open === true && detailsEls[3].open === true && detailsEls[4].open === true) {
+          allOpen.classList.add('is-disabled');
+        } else {
+          allOpen.classList.remove('is-disabled');
+        }
+
+        if (detailsEls[0].open === false && detailsEls[1].open === false && detailsEls[2].open === false && detailsEls[3].open === false && detailsEls[4].open === false) {
+          allClose.classList.add('is-disabled');
+        } else {
+          allClose.classList.remove('is-disabled');
+        }
+      })
+      observer.observe(detailsEls[i], {
+        attributes: true,
+        attributeFilter: ['open'],
+      })
+    }
   }
 });
 

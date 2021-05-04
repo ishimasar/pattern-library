@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@frctl/fractal": "^1.5.1",
+    "@frctl/fractal": "^1.5.6",
     "@rsm/fractal-pug-adapter": "^0.5.0",
     "braces": "^3.0.2",
     "highlight.js": "^10.4.1",
