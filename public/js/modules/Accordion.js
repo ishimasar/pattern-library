@@ -60,8 +60,8 @@ export class Accordion {
   onAllOpen() {
     if (!this.details.open) {
       this.details.open = true;
-      this.allOpen.classList.add('is-disabled');
-      this.allClose.classList.remove('is-disabled');
+      this.allOpen.setAttribute('disabled', 'true');
+      this.allClose.removeAttribute('disabled');
       this.collapse.style.height = this.collapseCont.offsetHeight / 16 + 'rem';
       this.details.setAttribute('aria-expanded', 'true');
       this.collapse.setAttribute('aria-hidden', 'false');
@@ -70,8 +70,8 @@ export class Accordion {
 
   onAllClose() {
     if (this.details.open) {
-      this.allClose.classList.add('is-disabled');
-      this.allOpen.classList.remove('is-disabled');
+      this.allClose.setAttribute('disabled', 'true');
+      this.allOpen.removeAttribute('disabled');
       this.collapse.style.height = '';
       this.collapse.addEventListener('transitionend', this.handlers.transitionEnd);
       this.details.setAttribute('aria-expanded', 'false');

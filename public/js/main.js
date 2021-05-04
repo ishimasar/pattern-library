@@ -20,15 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const allClose = document.getElementById('all-close');
       const observer = new MutationObserver(records => {
         if (detailsEls[0].open === true && detailsEls[1].open === true && detailsEls[2].open === true && detailsEls[3].open === true && detailsEls[4].open === true) {
-          allOpen.classList.add('is-disabled');
+          allOpen.setAttribute('disabled', 'true');
         } else {
-          allOpen.classList.remove('is-disabled');
+          allOpen.removeAttribute('disabled');
         }
 
         if (detailsEls[0].open === false && detailsEls[1].open === false && detailsEls[2].open === false && detailsEls[3].open === false && detailsEls[4].open === false) {
-          allClose.classList.add('is-disabled');
+          allClose.setAttribute('disabled', 'true');
         } else {
-          allClose.classList.remove('is-disabled');
+          allClose.removeAttribute('disabled');
         }
       })
       observer.observe(detailsEls[i], {

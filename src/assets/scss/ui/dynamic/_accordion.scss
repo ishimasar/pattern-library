@@ -45,7 +45,7 @@
       margin-left: 1.75rem;
     }
   }
-  &.is-disabled {
+  &[disabled="true"] {
     color: #666;
     border: none;
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3) inset;
