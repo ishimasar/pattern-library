@@ -49,7 +49,6 @@ export class Accordion {
     e.preventDefault();
 
     const state = this.details.getAttribute('aria-expanded');
-    console.log(state);
   }
 
   onTransitionEnd() {
