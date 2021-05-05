@@ -3,7 +3,7 @@
 Webサイト・アプリ制作で使用されるUIやスタイルのコード見本・サンプル集です。  
 コーディングの参考、UI等の設計・作成方針の土台にでき、その上で作業効率にも寄与できるようなものを目指します。
 
-また、JavaScriptはフレームワークやライブラリの陳腐化リスクに備え、ネイティブ(そのまま)のJavaScript(ES6)で書くことを旨とします。
+また、JavaScriptはフレームワークやライブラリの陳腐化リスクに備え、ネイティブ(そのまま)のJavaScript(ES6以上)で書くことを旨とします。
 
 URLはこちら。※現在は随時、コード作成追加中  
 [https://ishimasar.github.io/pattern-library/dest/](https://ishimasar.github.io/pattern-library/dest/)
@@ -37,7 +37,7 @@ UI分類 (Components)
  7. **Typography**  
    文字表現：文字や書体、サイズ、字間、行間などに関連するUI。Heading、Body textなど。
  8. **Utility**  
-   汎用パターン：各UI間・内で柔軟に適用できるスタイル。 Space、Line、Shapeなど。
+   汎用パターン：各UI間・内で柔軟に適用できるスタイル。 Display、Line、Shapeなど。
 
 ## 仕様・注記
 
