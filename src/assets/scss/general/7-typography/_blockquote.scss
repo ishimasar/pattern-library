@@ -1,0 +1,45 @@
+.blockquote {
+  position: relative;
+  margin: 2rem 0 auto;
+  padding: 2rem 0 2rem 4rem;
+  border-left: .8em solid #b1b1b1;
+  background: #efefef;
+  color: #333;
+  &:before {
+    content: "\f10d";
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1;
+    font-family: "Font Awesome 5 Free";
+    color: #b1b1b1;
+  }
+  > p {
+    line-height: 1.7;
+    font-size: calc(var(--font-size-m2));
+    > cite {
+      font-style: italic;
+    }
+  }
+  .link {
+    display: inline-block;
+    width: auto;
+    text-decoration: underline;
+    color: #0d1a54;
+    &:hover {
+      text-decoration: none;
+    }
+    > .icon {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      margin-left: .2rem;
+      vertical-align: -.125em;
+      font-size: calc(var(--font-size-m1));
+      overflow: visible;
+    }
+  }
+}

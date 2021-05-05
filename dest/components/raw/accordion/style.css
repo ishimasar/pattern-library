@@ -1,0 +1,213 @@
+.accordion-wrap {
+  margin: 2rem auto;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-wrap {
+    width: 85%;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-wrap {
+    width: 60%;
+  }
+}
+
+.accordion-button-box {
+  display: flex;
+  margin: auto auto 1.5rem;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-button-box {
+    justify-content: center;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-button-box {
+    justify-content: flex-end;
+  }
+}
+
+.accordion-all-button {
+  border: 1px solid var(--black);
+  border-radius: 5px;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-all-button {
+    width: 43%;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-all-button {
+    min-width: 8.5rem;
+    padding: 1rem;
+    transition: var(--out-transition);
+  }
+  .accordion-all-button:hover,
+  .accordion-all-button:focus {
+    color: var(--white);
+    background-color: var(--black);
+    transition: var(--in-transition);
+  }
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-all-button:not(:first-of-type) {
+    margin-left: 1rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-all-button:not(:first-of-type) {
+    margin-left: 1.75rem;
+  }
+}
+
+.accordion-all-button[disabled="true"] {
+  color: #666;
+  border: none;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3) inset;
+  cursor: not-allowed;
+}
+
+.accordion-all-button[disabled="true"]:hover,
+.accordion-all-button[disabled="true"]:focus {
+  color: #666;
+  background-color: var(--white);
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+.accordion-list > li {
+  color: var(--black);
+  background-color: #d9d9d9;
+}
+
+.accordion-list > li:not(:last-of-type) {
+  margin-bottom: 0.25rem;
+}
+
+.accordion-details {
+  height: auto;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-details {
+    font-size: 1rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-details {
+    font-size: 1.1rem;
+  }
+}
+
+.accordion-details > summary {
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-details > summary {
+    padding: 1rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-details > summary {
+    padding: 1.5rem;
+  }
+  .accordion-details > summary:hover,
+  .accordion-details > summary:focus {
+    padding: calc(1.5rem - 0.0625rem);
+    font-weight: bold;
+    border: 0.0625rem solid var(--black);
+  }
+}
+
+.accordion-details > summary::marker {
+  font-size: 0;
+}
+
+.accordion-details > summary::-webkit-details-marker {
+  font-size: 0;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-details > summary:before {
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: 0px transparent solid;
+    border-top: 6.5px transparent solid;
+    border-bottom: 6.5px transparent solid;
+    border-left: 11px var(--black) solid;
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s,
+      border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+    content: "";
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-details > summary:before {
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: 0px transparent solid;
+    border-top: 7.5px transparent solid;
+    border-bottom: 7.5px transparent solid;
+    border-left: 13px var(--black) solid;
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s,
+      border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+    content: "";
+  }
+}
+
+.accordion-details > summary:before {
+  display: inline-block;
+  width: auto;
+  margin-right: 1rem;
+  transition: transform 0.25s var(--ease-out-quad);
+}
+
+.accordion-details[aria-expanded="true"] > summary:before {
+  transform: rotate(90deg);
+  transition-timing-function: var(--ease-out-quad);
+}
+
+.accordion-details__content {
+  height: 0;
+  overflow: hidden;
+  color: var(--black);
+  background-color: #e6e6e6;
+  transition: height 0.25s var(--ease-out-quad);
+  pointer-events: none;
+}
+
+[open] .accordion-details__content {
+  transition-timing-function: var(--ease-out-quad);
+}
+
+.accordion-details__paragraph {
+  border-top: 0.0625rem solid #b3b3b3;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .accordion-details__paragraph {
+    padding: 1rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .accordion-details__paragraph {
+    padding: 1.5rem;
+  }
+}

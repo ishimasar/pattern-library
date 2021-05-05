@@ -1,0 +1,193 @@
+.geCard {
+  display: flex;
+  background-color: var(--white);
+  // transform: translateY(40px);
+  @include mq(dt) {
+    width: 32%;
+    height: auto;
+    &:nth-of-type(n + 4) {
+      margin-top: 1.5rem;
+    }
+  }
+  @include mq(tb) {
+    width: 32%;
+    max-width: 48%;
+    &:not(:first-of-type),
+    &:not(:nth-of-type(n + 3)) {
+      margin-left: 2%;
+    }
+    &:nth-of-type(n + 3) {
+      margin-top: 1.5rem;
+    }
+  }
+  @include mq(sp) {
+    width: 100%;
+    max-width: 100%;
+    &:nth-of-type(n + 2) {
+      margin-top: 1.5rem;
+    }
+  }
+  .link {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-family: var(--sentence-font);
+    border: 0.5px solid hsla(0, 0%, 90%, 1);
+    border-radius: 0.25rem;
+    box-shadow: var(--textbox-shadow);
+    transition: all var(--ease-out-cubic) 0.3s;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    &:hover,
+    &:focus {
+      background-position: 0 0;
+      transform: scale(1.008, 1.008);
+      transition: all var(--ease-in-cubic) 0.2s;
+      box-shadow: var(--textbox-hover-shadow);
+      -webkit-font-smoothing: antialiased;
+    }
+    &:hover .thumbnail,
+    &:focus .thumbnail {
+      transform: scale(1.03, 1.03) translate(-48%, -48%);
+      transition: all var(--ease-in-out-quad) 0.45s 0.02s;
+    }
+    &:hover .textContainer > .title,
+    &:focus .textContainer > .title {
+      color: var(--text-normal-color);
+      background: linear-gradient(transparent 95%, transparent 5%);
+      transform: scale(1, 1) translate(1, 1);
+      transition: all var(--ease-in-cubic) 0.3s;
+    }
+  }
+  .frame {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-family: var(--sentence-font);
+    border: 0.5px solid hsla(0, 0%, 90%, 1);
+    border-radius: 0.25rem;
+    box-shadow: var(--textbox-shadow);
+    overflow: hidden;
+  }
+  .imgContainer {
+    position: relative;
+    width: 100%; /* 画像トリミングしたい枠の幅 */
+    overflow: hidden;
+    @include mq(dt) {
+      height: 180px; /* 画像トリミングしたい枠の高さ */
+    }
+    @include mq(sp-tb) {
+      height: 130px;
+    }
+  }
+  .thumbnail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    transition: all var(--ease-out-cubic) 0.35s 0.01s;
+  }
+  .textContainer {
+    height: auto;
+    -webkit-font-smoothing: antialiased;
+    @include mq(tb-dth) {
+      padding: 1.2rem 2rem;
+    }
+    @include mq(sp) {
+      padding: 1rem 1.6rem;
+    }
+    > .title {
+      display: inline;
+      background: linear-gradient(transparent 94%, #333 6%);
+      font-family: var(--sentence-font);
+      font-weight: bold;
+      @include mq(dt) {
+        font-size: calc(var(--font-size-m2));
+      }
+      @include mq(sp-tb) {
+        font-size: calc(var(--font-size-m1));
+      }
+    }
+    > .excerpt {
+      margin-top: 0.7rem;
+      line-height: 1.6;
+      font-family: var(--sentence-font);
+      color: var(--black);
+    }
+    .rule {
+      width: 100%;
+      height: 1px;
+      margin-top: 0.5rem;
+      border: none;
+      background-color: #333;
+    }
+    .dateContainer {
+      display: block;
+      text-align: right;
+      @include mq(dt) {
+        margin: {
+          top: 0.5rem;
+        }
+      }
+      @include mq(sp) {
+        line-height: 1.4;
+        margin-top: 0.3rem;
+      }
+      > .date {
+        display: inline-block;
+        @include mq(sp) {
+          width: auto;
+        }
+      }
+      & .time {
+        display: inline-block;
+        width: auto;
+        font-size: calc(var(--font-size-s1));
+        color: var(--text-dark-color);
+      }
+    }
+    .tagContainer {
+      display: flex;
+      justify-content: flex-end;
+      @include mq(tb-dth) {
+        margin: {
+          top: 0.2rem;
+        }
+      }
+      @include mq(sp) {
+        line-height: 1.4;
+        margin-top: 0.1rem;
+      }
+      > .tag {
+        display: inline-block;
+        width: auto;
+        font-size: calc(var(--font-size-s1));
+      }
+    }
+  }
+  .categoryLabel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #14f;
+    font-size: calc(var(--font-size-s1));
+    color: var(--white);
+    transition: all var(--ease-out-cubic) 0.35s 0.01s;
+    @include mq(tb-dth) {
+      padding: 0.25rem 0.4rem;
+    }
+    @include mq(sp) {
+      padding: 0.15rem 0.25rem;
+    }
+  }
+}
+// IE11用記述
+@media all and (-ms-high-contrast: none) {
+  *::-ms-backdrop,
+  .geCardBlog {
+    transform: none;
+    opacity: 1;
+  }
+}

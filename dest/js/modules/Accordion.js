@@ -1,5 +1,6 @@
-'use strict';
-
+/**
+ * Accordion UI class
+ */
 export class Accordion {
   constructor(el) {
     this.details = el;
@@ -10,6 +11,7 @@ export class Accordion {
     this.allOpen = document.getElementById('all-open');
     this.allClose = document.getElementById('all-close');
   }
+
 
   handleEvents() {
     this.handlers = {};
@@ -47,8 +49,6 @@ export class Accordion {
       this.allClose.classList.remove('is-disabled');
     }
     e.preventDefault();
-
-    const state = this.details.getAttribute('aria-expanded');
   }
 
   onTransitionEnd() {

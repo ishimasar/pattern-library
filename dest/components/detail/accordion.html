@@ -147,6 +147,10 @@
         
         
         
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-f91703e5689bf2738329c2c26585b92a-panel-assets">Assets</a>
+        </li>
+        
         
         
         
@@ -296,6 +300,421 @@
     
 
 
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-f91703e5689bf2738329c2c26585b92a-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-d52c31b6f1a0005a9de88fe767b06497">index.js</option>
+                
+                <option value="file-de340de281205593c85e88f7da398be6">style.css</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-d52c31b6f1a0005a9de88fe767b06497" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code hljs">
+                                <pre><span class="hljs-comment">/* Described in /modules/Accordion.js */</span>
+
+<span class="hljs-comment">/**
+* Accordionクラスのインスタンスを作成する
+* <span class="hljs-doctag">@constructor</span>
+* <span class="hljs-doctag">@this <span class="hljs-type">{Accordion}</span></span>
+* <span class="hljs-doctag">@param <span class="hljs-type">{String}</span> </span>el 要素セレクタ
+*/</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Accordion</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">el</span>)</span> {
+    <span class="hljs-built_in">this</span>.details = el;
+    <span class="hljs-built_in">this</span>.summary = <span class="hljs-built_in">this</span>.details.firstElementChild;
+    <span class="hljs-built_in">this</span>.collapse = <span class="hljs-built_in">this</span>.summary.nextElementSibling;
+    <span class="hljs-built_in">this</span>.collapseCont = <span class="hljs-built_in">this</span>.collapse.firstElementChild;
+
+    <span class="hljs-built_in">this</span>.allOpen = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;all-open&#x27;</span>);
+    <span class="hljs-built_in">this</span>.allClose = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;all-close&#x27;</span>);
+  }
+
+  <span class="hljs-function"><span class="hljs-title">handleEvents</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.handlers = {};
+    <span class="hljs-built_in">this</span>.handlers.click = <span class="hljs-built_in">this</span>.onClick.bind(<span class="hljs-built_in">this</span>);
+    <span class="hljs-built_in">this</span>.summary.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-built_in">this</span>.handlers.click);
+    <span class="hljs-built_in">this</span>.handlers.transitionEnd = <span class="hljs-built_in">this</span>.onTransitionEnd.bind(<span class="hljs-built_in">this</span>);
+
+    <span class="hljs-built_in">this</span>.handlers.click = <span class="hljs-built_in">this</span>.onAllOpen.bind(<span class="hljs-built_in">this</span>);
+    <span class="hljs-built_in">this</span>.allOpen.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-built_in">this</span>.handlers.click);
+
+    <span class="hljs-built_in">this</span>.handlers.click = <span class="hljs-built_in">this</span>.onAllClose.bind(<span class="hljs-built_in">this</span>);
+    <span class="hljs-built_in">this</span>.allClose.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-built_in">this</span>.handlers.click);
+
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&#x27;resize&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.onResize();
+      }, <span class="hljs-number">50</span>);
+    });
+  }
+
+  <span class="hljs-function"><span class="hljs-title">onClick</span>(<span class="hljs-params">e</span>)</span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.details.open) {
+      <span class="hljs-built_in">this</span>.collapse.style.height = <span class="hljs-string">&#x27;&#x27;</span>;
+      <span class="hljs-built_in">this</span>.collapse.addEventListener(<span class="hljs-string">&#x27;transitionend&#x27;</span>, <span class="hljs-built_in">this</span>.handlers.transitionEnd);
+
+      <span class="hljs-built_in">this</span>.details.setAttribute(<span class="hljs-string">&#x27;aria-expanded&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>);
+      <span class="hljs-built_in">this</span>.collapse.setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-built_in">this</span>.details.open = <span class="hljs-literal">true</span>;
+      <span class="hljs-built_in">this</span>.collapse.style.height = <span class="hljs-built_in">this</span>.collapseCont.offsetHeight / <span class="hljs-number">16</span> + <span class="hljs-string">&#x27;rem&#x27;</span>;
+
+      <span class="hljs-built_in">this</span>.details.setAttribute(<span class="hljs-string">&#x27;aria-expanded&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+      <span class="hljs-built_in">this</span>.collapse.setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>);
+
+      <span class="hljs-built_in">this</span>.allClose.classList.remove(<span class="hljs-string">&#x27;is-disabled&#x27;</span>);
+    }
+    e.preventDefault();
+  }
+
+  <span class="hljs-function"><span class="hljs-title">onTransitionEnd</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.collapse.removeEventListener(<span class="hljs-string">&#x27;transitionend&#x27;</span>, <span class="hljs-built_in">this</span>.handlers.transitionEnd);
+    <span class="hljs-built_in">this</span>.details.open = <span class="hljs-literal">false</span>;
+    <span class="hljs-built_in">this</span>.allOpen.classList.remove(<span class="hljs-string">&#x27;is-disabled&#x27;</span>);
+  }
+
+  <span class="hljs-function"><span class="hljs-title">onAllOpen</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.details.open) {
+      <span class="hljs-built_in">this</span>.details.open = <span class="hljs-literal">true</span>;
+      <span class="hljs-built_in">this</span>.allOpen.setAttribute(<span class="hljs-string">&#x27;disabled&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+      <span class="hljs-built_in">this</span>.allClose.removeAttribute(<span class="hljs-string">&#x27;disabled&#x27;</span>);
+      <span class="hljs-built_in">this</span>.collapse.style.height = <span class="hljs-built_in">this</span>.collapseCont.offsetHeight / <span class="hljs-number">16</span> + <span class="hljs-string">&#x27;rem&#x27;</span>;
+      <span class="hljs-built_in">this</span>.details.setAttribute(<span class="hljs-string">&#x27;aria-expanded&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+      <span class="hljs-built_in">this</span>.collapse.setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>);
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-title">onAllClose</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.details.open) {
+      <span class="hljs-built_in">this</span>.allClose.setAttribute(<span class="hljs-string">&#x27;disabled&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+      <span class="hljs-built_in">this</span>.allOpen.removeAttribute(<span class="hljs-string">&#x27;disabled&#x27;</span>);
+      <span class="hljs-built_in">this</span>.collapse.style.height = <span class="hljs-string">&#x27;&#x27;</span>;
+      <span class="hljs-built_in">this</span>.collapse.addEventListener(<span class="hljs-string">&#x27;transitionend&#x27;</span>, <span class="hljs-built_in">this</span>.handlers.transitionEnd);
+      <span class="hljs-built_in">this</span>.details.setAttribute(<span class="hljs-string">&#x27;aria-expanded&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>);
+      <span class="hljs-built_in">this</span>.collapse.setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-title">onResize</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.details.open) {
+      <span class="hljs-built_in">this</span>.collapse.style.height = <span class="hljs-built_in">this</span>.collapseCont.offsetHeight / <span class="hljs-number">16</span> + <span class="hljs-string">&#x27;rem&#x27;</span>;
+    }
+  }
+}
+
+<span class="hljs-comment">/* Described in /js/main.js */</span>
+
+<span class="hljs-keyword">import</span> { Accordion } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./modules/Accordion.js&#x27;</span>;
+
+<span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">&#x27;DOMContentLoaded&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">const</span> detailsEls = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&#x27;details&#x27;</span>);
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; detailsEls.length; i++) {
+    <span class="hljs-keyword">const</span> accordion = <span class="hljs-keyword">new</span> Accordion(detailsEls[i]);
+    accordion.handleEvents();
+
+    <span class="hljs-comment">// アコーディオンリストopen状態のDOM監視およびclass付け替え・要リファクタ</span>
+    <span class="hljs-keyword">if</span> (detailsEls) {
+      <span class="hljs-keyword">const</span> allOpen = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;all-open&#x27;</span>);
+      <span class="hljs-keyword">const</span> allClose = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;all-close&#x27;</span>);
+      <span class="hljs-keyword">const</span> observer = <span class="hljs-keyword">new</span> MutationObserver(<span class="hljs-function"><span class="hljs-params">records</span> =&gt;</span> {
+        <span class="hljs-keyword">if</span> (detailsEls[<span class="hljs-number">0</span>].open === <span class="hljs-literal">true</span> &amp;&amp; detailsEls[<span class="hljs-number">1</span>].open === <span class="hljs-literal">true</span> &amp;&amp; detailsEls[<span class="hljs-number">2</span>].open === <span class="hljs-literal">true</span> &amp;&amp; detailsEls[<span class="hljs-number">3</span>].open === <span class="hljs-literal">true</span> &amp;&amp; detailsEls[<span class="hljs-number">4</span>].open === <span class="hljs-literal">true</span>) {
+          allOpen.setAttribute(<span class="hljs-string">&#x27;disabled&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+        } <span class="hljs-keyword">else</span> {
+          allOpen.removeAttribute(<span class="hljs-string">&#x27;disabled&#x27;</span>);
+        }
+
+        <span class="hljs-keyword">if</span> (detailsEls[<span class="hljs-number">0</span>].open === <span class="hljs-literal">false</span> &amp;&amp; detailsEls[<span class="hljs-number">1</span>].open === <span class="hljs-literal">false</span> &amp;&amp; detailsEls[<span class="hljs-number">2</span>].open === <span class="hljs-literal">false</span> &amp;&amp; detailsEls[<span class="hljs-number">3</span>].open === <span class="hljs-literal">false</span> &amp;&amp; detailsEls[<span class="hljs-number">4</span>].open === <span class="hljs-literal">false</span>) {
+          allClose.setAttribute(<span class="hljs-string">&#x27;disabled&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+        } <span class="hljs-keyword">else</span> {
+          allClose.removeAttribute(<span class="hljs-string">&#x27;disabled&#x27;</span>);
+        }
+      })
+      observer.observe(detailsEls[i], {
+        <span class="hljs-attr">attributes</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">attributeFilter</span>: [<span class="hljs-string">&#x27;open&#x27;</span>],
+      })
+    }
+  }
+});</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/accordion/index.js"><span>/components/raw/accordion/index.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/2-dynamic-ui/accordion/index.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">4.2 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-de340de281205593c85e88f7da398be6" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-CSS FileBrowser-code hljs">
+                                <pre><span class="hljs-selector-class">.accordion-wrap</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">2rem</span> auto;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.accordion-wrap</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">85%</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.accordion-wrap</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">60%</span>;
+  }
+}
+
+<span class="hljs-selector-class">.accordion-button-box</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">margin</span>: auto auto <span class="hljs-number">1.5rem</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.accordion-button-box</span> {
+    <span class="hljs-attribute">justify-content</span>: center;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.accordion-button-box</span> {
+    <span class="hljs-attribute">justify-content</span>: flex-end;
+  }
+}
+
+<span class="hljs-selector-class">.accordion-all-button</span> {
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.accordion-all-button</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">43%</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span> <span class="hljs-number">0.5rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.accordion-all-button</span> {
+    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">8.5rem</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+    <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--out-transition);
+  }
+  <span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-pseudo">:hover</span>,
+  <span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--black);
+    <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first</span>-of-type) {
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first</span>-of-type) {
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1.75rem</span>;
+  }
+}
+
+<span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-attr">[disabled=<span class="hljs-string">&quot;true&quot;</span>]</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#666</span>;
+  <span class="hljs-attribute">border</span>: none;
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.3</span>) inset;
+  <span class="hljs-attribute">cursor</span>: not-allowed;
+}
+
+<span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-attr">[disabled=<span class="hljs-string">&quot;true&quot;</span>]</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-attr">[disabled=<span class="hljs-string">&quot;true&quot;</span>]</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#666</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.3</span>) inset;
+}
+
+<span class="hljs-selector-class">.accordion-list</span> &gt; <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#d9d9d9</span>;
+}
+
+<span class="hljs-selector-class">.accordion-list</span> &gt; <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-of-type</span>) {
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.25rem</span>;
+}
+
+<span class="hljs-selector-class">.accordion-details</span> {
+  <span class="hljs-attribute">height</span>: auto;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.accordion-details</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.accordion-details</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.1rem</span>;
+  }
+}
+
+<span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">1.5rem</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1.5rem</span>;
+  }
+  <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span><span class="hljs-selector-pseudo">:hover</span>,
+  <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span><span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-number">1.5rem</span> - <span class="hljs-number">0.0625rem</span>);
+    <span class="hljs-attribute">font-weight</span>: bold;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">0.0625rem</span> solid <span class="hljs-built_in">var</span>(--black);
+  }
+}
+
+<span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span><span class="hljs-selector-pseudo">::marker</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span>::-webkit-details-marker {
+  font-size: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span>:before {
+    display: block;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">border-style</span>: solid;
+    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">0px</span> transparent solid;
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">6.5px</span> transparent solid;
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">6.5px</span> transparent solid;
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">11px</span> <span class="hljs-built_in">var</span>(--black) solid;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.215</span>, <span class="hljs-number">0.61</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>) <span class="hljs-number">0.15s</span>,
+      border-color <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.215</span>, <span class="hljs-number">0.61</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>) <span class="hljs-number">0.15s</span>;
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span>:before {
+    display: block;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">border-style</span>: solid;
+    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">0px</span> transparent solid;
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">7.5px</span> transparent solid;
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">7.5px</span> transparent solid;
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">13px</span> <span class="hljs-built_in">var</span>(--black) solid;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.215</span>, <span class="hljs-number">0.61</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>) <span class="hljs-number">0.15s</span>,
+      border-color <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.215</span>, <span class="hljs-number">0.61</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>) <span class="hljs-number">0.15s</span>;
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
+  }
+}
+
+<span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span>:before {
+  display: inline-block;
+  <span class="hljs-attribute">width</span>: auto;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+}
+
+<span class="hljs-selector-class">.accordion-details</span><span class="hljs-selector-attr">[aria-expanded=<span class="hljs-string">&quot;true&quot;</span>]</span> &gt; <span class="hljs-selector-tag">summary</span>:before {
+  transform: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">90deg</span>);
+  <span class="hljs-attribute">transition-timing-function</span>: <span class="hljs-built_in">var</span>(--ease-out-quad);
+}
+
+<span class="hljs-selector-class">.accordion-details__content</span> {
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#e6e6e6</span>;
+  <span class="hljs-attribute">transition</span>: height <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">pointer-events</span>: none;
+}
+
+<span class="hljs-selector-attr">[open]</span> <span class="hljs-selector-class">.accordion-details__content</span> {
+  <span class="hljs-attribute">transition-timing-function</span>: <span class="hljs-built_in">var</span>(--ease-out-quad);
+}
+
+<span class="hljs-selector-class">.accordion-details__paragraph</span> {
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">0.0625rem</span> solid <span class="hljs-number">#b3b3b3</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.accordion-details__paragraph</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.accordion-details__paragraph</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1.5rem</span>;
+  }
+}</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/accordion/style.css"><span>/components/raw/accordion/style.css</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/2-dynamic-ui/accordion/style.css</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">4.5 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
 
 
     
@@ -325,7 +744,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/2-dynamic-ui/accordion.hbs</span>
+            <span class="Meta-value">src/components/2-dynamic-ui/accordion/accordion.hbs</span>
         </li>
         
         
@@ -1114,8 +1533,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-04T05:39:16.248Z">
-                                5/4/2021
+                            <time datetime="2021-05-04T18:49:12.487Z">
+                                5/5/2021
                             </time>
                         
                     </dd>

@@ -1,0 +1,25 @@
+.geFlexbox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 90vw;
+  max-width: 100rem;
+  margin: auto;
+  @include mq(dt) {
+    margin-top: 2rem;
+  }
+  @include mq(sp-tb) {
+    margin-top: 1.5rem;
+  }
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    width: 32%;
+    height: 0;
+  }
+  &::before {
+    order: 1;
+  }
+}

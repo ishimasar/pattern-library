@@ -1,3 +1,5 @@
+'use strict';
+
 import { Accordion } from './modules/Accordion.js';
 import { Carousel } from './modules/Carousel.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (detailsEls) {
       const allOpen = document.getElementById('all-open');
       const allClose = document.getElementById('all-close');
-      const observer = new MutationObserver(records => {
+      const observer = new MutationObserver(() => {
         if (detailsEls[0].open === true && detailsEls[1].open === true && detailsEls[2].open === true && detailsEls[3].open === true && detailsEls[4].open === true) {
           allOpen.setAttribute('disabled', 'true');
         } else {

@@ -14,10 +14,9 @@
     <script src="../../js/main.js" type="module" defer></script>
   </head>
   <body>
-    <!-- src/components/modal-dialog.hbs -->
-<div id="modal-dialog" class="modal-dialog">
+    <div id="modal-dialog" class="modal-dialog">
   <button type="button" id="dialog-open" class="dialog-open">
-    モーダルダイアログ<br />
+    モーダルダイアログ<br>
     (モーダルウインドウ)を開く
   </button>
   <dialog
@@ -27,28 +26,29 @@
     aria-describedby="d-message"
   >
     <p id="d-message" class="dialog-panel__paragraph" role="document">
-      モーダルダイアログ(モーダルウインドウ)<br />
+      モーダルダイアログ(モーダルウインドウ)<br>
       とはどんなものか知っていますか？
     </p>
     <div class="dialog-panel__buttons">
-      <button type="button" id="dialog-yes" class="dialog__button">
+      <button type="button" id="dialog-yes" class="dialog-panel__button">
         はい
       </button>
-      <button type="button" id="dialog-no" class="dialog__button">
+      <button type="button" id="dialog-no" class="dialog-panel__button">
         いいえ
       </button>
     </div>
     <button
       type="button"
       id="dialog-close"
-      class="dialog__close"
+      class="dialog-panel__close"
       aria-label="このモーダルダイアログを閉じる"
     >
-      ×
+      <span class="positioning">×</span>
     </button>
   </dialog>
   <p class="dialog-response">
-    ダイアログの返り値：<br /><em><span id="return-value"></span></em>
+    ダイアログの返り値：<br>
+    <em><span id="return-value"></span></em>
   </p>
 </div>
   </body>

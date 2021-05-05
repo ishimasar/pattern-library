@@ -1,0 +1,157 @@
+.modal-dialog {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-width: 64.25rem;
+  margin: auto;
+  overflow: hidden;
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+.dialog-open {
+  display: block;
+  width: 300px;
+  margin: 4rem auto;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  &:hover,
+  &:focus {
+    color: var(--white);
+    background-color: #777;
+  }
+}
+.dialog-panel {
+  position: absolute;
+  top: -20%;
+  right: 0;
+  left: 0;
+  width: fit-content;
+  max-width: 90%;
+  height: fit-content;
+  margin: auto;
+  padding: 0;
+  background: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  &:not([open]) {
+    display: block !important;
+    visibility: hidden;
+  }
+  &[open] {
+    animation: fade-in .25s ease-out, slide-down .25s ease-out;
+  }
+  &.is-motioned {
+    animation: fade-out .45s ease, slide-up .45s ease;
+  }
+  /* native backdrop */
+  &::backdrop {
+    background-color: rgba(0, 0, 0, .5);
+    animation: backdrop-fade-in .35s ease-out;
+  }
+  /* polyfill backdrop */
+  & + .backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    animation: fade-in .25s ease-out;
+  }
+}
+/* Safariのみ適用 */
+_::-webkit-full-page-media, _:future, :root .dialog-panel {
+  width: 100%;
+  max-width: 365px;
+  height: auto;
+}
+/* Edgeのみ適用 */
+@supports (-ms-ime-align: auto) {
+  .dialog-panel {
+    max-width: 30%;
+  }
+}
+.dialog-panel__paragraph {
+  margin: auto;
+  padding: 3.5rem 3rem 0;
+}
+.dialog-panel__buttons {
+  padding: 2rem 0 3.5rem;
+  text-align: center;
+}
+.dialog-panel__button {
+  display: inline-block;
+  min-width: 5rem;
+  padding-top: .625rem;
+  padding-bottom: .525rem;
+  line-height: 1.5;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  &:not(:first-of-type) {
+    margin-left: 1.75rem;
+  }
+  &:hover,
+  &:focus {
+    color: var(--white);
+    background-color: #777;
+  }
+}
+.dialog-panel__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  color: var(--white);
+  font-size: 2rem;
+  background-color: var(--black);
+  border-radius: 50%;
+  &:hover,
+  &:focus {
+    background-color: var(--white);
+    border: 1px solid #777;
+    color: var(--black);
+    > .positioning {
+      line-height: 1.9rem;
+    }
+  }
+  > .positioning {
+    line-height: 2rem;
+    display: block;
+    height: 2.3rem;
+  }
+}
+.dialog-response {
+  font-size: 1.2rem;
+  line-height: 2;
+  text-align: center;
+}
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes slide-down {
+  0% { transform: translate(0, -20px); opacity: 0; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+@keyframes slide-up {
+  0% { top: 20%; transform: translate(0, 0); opacity: 1; }
+  100% { top: 20%; transform: translate(0, -15px); opacity: 0; }
+}
+@keyframes backdrop-fade-in {
+  0% { background-color: rgba(0, 0, 0, 0); }
+  100% { background-color: rgba(0, 0, 0, .5); }
+}
+@keyframes backdrop-fade-out {
+  0% { background-color: rgba(0, 0, 0, .5); }
+  100% { background-color: rgba(0, 0, 0, 0); }
+}
