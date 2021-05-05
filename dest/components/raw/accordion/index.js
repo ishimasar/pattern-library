@@ -1,12 +1,8 @@
-/* Described in /modules/Accordion.js */
+/* /js/modules/Accordion.js */
 
 /**
-* Accordionクラスのインスタンスを作成する
-* @constructor
-* @this {Accordion}
-* @param {String} el 要素セレクタ
-*/
-
+ * Accordion UI class
+ */
 export class Accordion {
   constructor(el) {
     this.details = el;
@@ -91,7 +87,7 @@ export class Accordion {
   }
 }
 
-/* Described in /js/main.js */
+/* /js/main.js */
 
 import { Accordion } from './modules/Accordion.js';
 

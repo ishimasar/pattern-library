@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.0" type="text/css">
 
 
-<title>Moving Text | Pattern Library by Cloudy knot</title>
+<title>Tooltip | Pattern Library by Cloudy knot</title>
 
 </head>
 <body>
@@ -63,14 +63,14 @@
             <div class="Frame-inner" id="pjax-container">
             
 
-<div class="Pen" data-behaviour="pen" id="pen-ed6ecd279b17f1984443340bac86df55">
+<div class="Pen" data-behaviour="pen" id="pen-05dca5b4c8b600bd3a8114cd378dbf89">
 
     
 
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
-        <a class="Pen-previewLink" href="../preview/moving_text.html" title="Preview">
-            Moving Text
+        <a class="Pen-previewLink" href="../preview/tooltip.html" title="Preview">
+            Tooltip
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -93,13 +93,13 @@
 </div>
 
 
-    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-ed6ecd279b17f1984443340bac86df55">
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-05dca5b4c8b600bd3a8114cd378dbf89">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
              <iframe
                 class="Preview-iframe"
                 data-role="window"
-                src="../preview/moving_text.html"
+                src="../preview/tooltip.html"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -113,7 +113,7 @@
     <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
 
     <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-ed6ecd279b17f1984443340bac86df55">
+    <div class="Browser" data-behaviour="browser" id="browser-05dca5b4c8b600bd3a8114cd378dbf89">
 
     
 
@@ -122,7 +122,7 @@
         
         
         <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
-            <a href="#browser-ed6ecd279b17f1984443340bac86df55-panel-html">
+            <a href="#browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-html">
                 HTML
             </a>
         </li>
@@ -130,7 +130,7 @@
         
         
         <li class="Browser-tab Browser-tab--view" data-role="tab">
-            <a href="#browser-ed6ecd279b17f1984443340bac86df55-panel-view">
+            <a href="#browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-view">
                 View
             </a>
         </li>
@@ -138,7 +138,7 @@
         
         
         <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-ed6ecd279b17f1984443340bac86df55-panel-context">
+            <a href="#browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-context">
                 Context
             </a>
         </li>
@@ -147,12 +147,16 @@
         
         
         
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-assets">Assets</a>
+        </li>
+        
         
         
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-ed6ecd279b17f1984443340bac86df55-panel-info">
+            <a href="#browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-info">
                 Info
             </a>
         </li>
@@ -160,7 +164,7 @@
         
         
         <li class="Browser-tab Browser-tab--notes" data-role="tab">
-            <a href="#browser-ed6ecd279b17f1984443340bac86df55-panel-notes">
+            <a href="#browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-notes">
                 Notes
             </a>
         </li>
@@ -172,108 +176,23 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-ed6ecd279b17f1984443340bac86df55-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-    <span class="hljs-selector-class">.ml12</span> {
-        <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
-        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.8em</span>;
-        <span class="hljs-attribute">text-transform</span>: uppercase;
-        <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">0.5em</span>;
-    }
-
-    <span class="hljs-selector-class">.ml12</span> <span class="hljs-selector-class">.letter</span> {
-        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
-        <span class="hljs-attribute">display</span>: inline-block;
-        <span class="hljs-attribute">line-height</span>: .<span class="hljs-number">5rem</span>;
-    }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ml12&quot;</span>&gt;</span>A new production<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-comment">// Wrap every letter in a span</span>
-    <span class="hljs-keyword">var</span> textWrapper = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.ml12&#x27;</span>);
-    textWrapper.innerHTML = textWrapper.textContent.replace(<span class="hljs-regexp">/\S/g</span>, <span class="hljs-string">&quot;&lt;span class=&#x27;letter&#x27;&gt;$&amp;&lt;/span&gt;&quot;</span>);
-    anime.timeline({
-            <span class="hljs-attr">loop</span>: <span class="hljs-literal">false</span>
-        })
-        .add({
-            <span class="hljs-attr">targets</span>: <span class="hljs-string">&#x27;.ml12 .letter&#x27;</span>,
-            <span class="hljs-attr">translateX</span>: [<span class="hljs-number">40</span>, <span class="hljs-number">0</span>],
-            <span class="hljs-attr">translateZ</span>: <span class="hljs-number">0</span>,
-            <span class="hljs-attr">opacity</span>: [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
-            <span class="hljs-attr">easing</span>: <span class="hljs-string">&quot;easeOutQuad&quot;</span>,
-            <span class="hljs-attr">duration</span>: <span class="hljs-number">1000</span>,
-            <span class="hljs-attr">delay</span>: <span class="hljs-function">(<span class="hljs-params">el, i</span>) =&gt;</span> <span class="hljs-number">500</span> + <span class="hljs-number">30</span> * i
-        });
-    <span class="hljs-comment">// .add({</span>
-    <span class="hljs-comment">//   targets: &#x27;.ml12 .letter&#x27;,</span>
-    <span class="hljs-comment">//   translateX: [0,-30],</span>
-    <span class="hljs-comment">//   opacity: [1,0],</span>
-    <span class="hljs-comment">//   easing: &quot;easeInExpo&quot;,</span>
-    <span class="hljs-comment">//   duration: 1100,</span>
-    <span class="hljs-comment">//   delay: (el, i) =&gt; 100 + 30 * i</span>
-    <span class="hljs-comment">// });</span>
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+        <pre></pre>
         
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-ed6ecd279b17f1984443340bac86df55-panel-view">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-  <span class="hljs-selector-class">.ml12</span> {
-    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.8em</span>;
-    <span class="hljs-attribute">text-transform</span>: uppercase;
-    <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">0.5em</span>;
-  }
-
-  <span class="hljs-selector-class">.ml12</span> <span class="hljs-selector-class">.letter</span> {
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">display</span>: inline-block;
-    <span class="hljs-attribute">line-height</span>: .<span class="hljs-number">5rem</span>;
-  }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ml12&quot;</span>&gt;</span>A new production<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-comment">// Wrap every letter in a span</span>
-  <span class="hljs-keyword">var</span> textWrapper = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.ml12&#x27;</span>);
-  textWrapper.innerHTML = textWrapper.textContent.replace(<span class="hljs-regexp">/\S/g</span>, <span class="hljs-string">&quot;&lt;span class=&#x27;letter&#x27;&gt;$&amp;&lt;/span&gt;&quot;</span>);
-
-  anime.timeline({<span class="hljs-attr">loop</span>: <span class="hljs-literal">false</span>})
-    .add({
-      <span class="hljs-attr">targets</span>: <span class="hljs-string">&#x27;.ml12 .letter&#x27;</span>,
-      <span class="hljs-attr">translateX</span>: [<span class="hljs-number">40</span>,<span class="hljs-number">0</span>],
-      <span class="hljs-attr">translateZ</span>: <span class="hljs-number">0</span>,
-      <span class="hljs-attr">opacity</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>],
-      <span class="hljs-attr">easing</span>: <span class="hljs-string">&quot;easeOutQuad&quot;</span>,
-      <span class="hljs-attr">duration</span>: <span class="hljs-number">1000</span>,
-      <span class="hljs-attr">delay</span>: <span class="hljs-function">(<span class="hljs-params">el, i</span>) =&gt;</span> <span class="hljs-number">500</span> + <span class="hljs-number">30</span> * i
-    });
-    <span class="hljs-comment">// .add({</span>
-    <span class="hljs-comment">//   targets: &#x27;.ml12 .letter&#x27;,</span>
-    <span class="hljs-comment">//   translateX: [0,-30],</span>
-    <span class="hljs-comment">//   opacity: [1,0],</span>
-    <span class="hljs-comment">//   easing: &quot;easeInExpo&quot;,</span>
-    <span class="hljs-comment">//   duration: 1100,</span>
-    <span class="hljs-comment">//   delay: (el, i) =&gt; 100 + 30 * i</span>
-    <span class="hljs-comment">// });</span>
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></pre>
+        <pre></pre>
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-ed6ecd279b17f1984443340bac86df55-panel-context">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-context">
     <code class="Code Code--lang-json hljs">
         
             
@@ -287,26 +206,71 @@
     
 
 
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-08aa47525cd2a58d3866b08cdf27a30c">style.css</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-08aa47525cd2a58d3866b08cdf27a30c" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-CSS FileBrowser-code hljs">
+                                <pre></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/tooltip/style.css"><span>/components/raw/tooltip/style.css</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/2-dynamic-ui/tooltip/style.css</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">0 Byte</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
 
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-ed6ecd279b17f1984443340bac86df55-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@moving_text</span>
+            <span class="Meta-value">@tooltip</span>
         </li>
         
         <li class="Meta-item">
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
-                    <li><a data-no-pjax href="../preview/moving_text.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../preview/tooltip.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
 </a></li>
-                    <li><a data-no-pjax href="../render/moving_text.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../render/tooltip.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
@@ -316,7 +280,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/5-effect/moving_text.hbs</span>
+            <span class="Meta-value">src/components/2-dynamic-ui/tooltip/tooltip.hbs</span>
         </li>
         
         
@@ -324,7 +288,7 @@
 </div>
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-ed6ecd279b17f1984443340bac86df55-panel-notes">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-05dca5b4c8b600bd3a8114cd378dbf89-panel-notes">
     <div class="Prose Prose--condensed">
         
         <p class="Browser-isEmptyNote">No notes defined.</p>
@@ -487,8 +451,60 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="pagination.html" data-role="tree-link" data-pjax data-handle="pagination">
+                <span>Pagination</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="table.html" data-role="tree-link" data-pjax data-handle="table">
                 <span>Table</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table-of-contens.html" data-role="tree-link" data-pjax data-handle="table-of-contens">
+                <span>Table Of Contens</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -632,6 +648,32 @@
         </li>
         
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="tooltip">
+                <span>Tooltip</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
                 </ul>
             </li>
@@ -683,8 +725,60 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="input.html" data-role="tree-link" data-pjax data-handle="input">
+                <span>Input</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="radio.html" data-role="tree-link" data-pjax data-handle="radio">
                 <span>Radio</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="selectbox.html" data-role="tree-link" data-pjax data-handle="selectbox">
+                <span>Selectbox</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -800,8 +894,8 @@
         
         
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="moving_text">
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="moving-text.html" data-role="tree-link" data-pjax data-handle="moving-text">
                 <span>Moving Text</span>
                 
 
@@ -971,6 +1065,84 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote.html" data-role="tree-link" data-pjax data-handle="blockquote">
+                <span>Blockquote</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="body-text.html" data-role="tree-link" data-pjax data-handle="body-text">
+                <span>Body Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="code.html" data-role="tree-link" data-pjax data-handle="code">
+                <span>Code</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="heading.html" data-role="tree-link" data-pjax data-handle="heading">
                 <span>Heading</span>
                 
@@ -1017,8 +1189,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="space.html" data-role="tree-link" data-pjax data-handle="space">
-                <span>Space</span>
+            <a class="Tree-entityLink" href="display.html" data-role="tree-link" data-pjax data-handle="display">
+                <span>Display</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1105,7 +1277,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-04T18:49:12.487Z">
+                            <time datetime="2021-05-05T07:09:18.925Z">
                                 5/5/2021
                             </time>
                         
@@ -1131,6 +1303,20 @@
                 Back
             </button>
         </div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
         
     
         
