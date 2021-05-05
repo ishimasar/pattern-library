@@ -1,28 +1,14 @@
 ---
 title: Pattern Library & Style Guide by Cloudy knot
 ---
-このサイトは、
-フリーランスの開発者であるCloudy knotが更新・管理している
+このサイトは、<br>
+フリーランスの開発者であるCloudy knotが更新・管理している<br>
 パターンライブラリおよびスタイルガイドです。
 
 ---
 
-Component・UIは随時、作成追加中。
-以下がひとまずの作成アップリスト。
+Component・UIは随時、作成追加中。<br>
+構成や使い方等については以下のドキュメントをご参照ください。
 
-**Dynamic Ui**
-- Accordion
-- Carousel
-- Modal Dialog
-- Tab
-
-**Form Ui**
-- Checkbox
-- Radio
-
-**Control**
-- Button (まだ正式ではない、とりあえずのもの)
-- Switch
-
-**Effect**
-- Smooth Scroll
+→ <a href="https://ishimasar.github.io/pattern-library/" target="_blank">pattern-library
+Pattern Library & Style Guide by Cloudy knot</a> (外部リンク)
