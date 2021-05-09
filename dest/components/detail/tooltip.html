@@ -179,7 +179,10 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-d17c2b4106b005941f3971f868b08fab-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;menu&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tooltip&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;ツールチップ（外部リンク）&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tooltip&quot;</span>&gt;</span>
+    ツールチップ<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+    カーソルを当ててね
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -187,7 +190,10 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-d17c2b4106b005941f3971f868b08fab-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre></pre>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;menu&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tooltip&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;ツールチップ（外部リンク）&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tooltip&quot;</span>&gt;</span>
+  ツールチップ<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  カーソルを当ててね
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -227,7 +233,98 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-selector-class">.tooltip</span> {
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">width</span>: auto;
+  <span class="hljs-attribute">height</span>: auto;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">10rem</span> auto auto;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">transition</span>: -webkit-transform <span class="hljs-built_in">var</span>(--ease-out-cubic) <span class="hljs-number">0.3s</span>;
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">var</span>(--ease-out-cubic) <span class="hljs-number">0.3s</span>;
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">var</span>(--ease-out-cubic) <span class="hljs-number">0.3s</span>, -webkit-transform <span class="hljs-built_in">var</span>(--ease-out-cubic) <span class="hljs-number">0.3s</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.tooltip</span> {
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">text-decoration</span>: none;
+  }
+  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">transition</span>: -webkit-transform <span class="hljs-built_in">var</span>(--ease-in-cubic) <span class="hljs-number">0.25s</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">var</span>(--ease-in-cubic) <span class="hljs-number">0.25s</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">var</span>(--ease-in-cubic) <span class="hljs-number">0.25s</span>, -webkit-transform <span class="hljs-built_in">var</span>(--ease-in-cubic) <span class="hljs-number">0.25s</span>;
+  }
+  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::before</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0.375rem</span>;
+    <span class="hljs-attribute">border-style</span>: solid;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
+  }
+  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::after</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-built_in">attr</span>(aria-label);
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">1.5625rem</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">3rem</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">0.625rem</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#333</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">white-space</span>: nowrap;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.9rem</span>;
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--sentence-font);
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.9rem</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
+    <span class="hljs-attribute">border-radius</span>: .<span class="hljs-number">5rem</span>;
+  }
+  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::before</span>, <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::after</span> {
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">left</span>: -<span class="hljs-number">2000px</span>;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">93%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">3rem</span>;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1.5rem</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">6</span>;
+    <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.5s</span> ease-in-out, bottom <span class="hljs-number">0.5s</span> ease-in-out;
+  }
+  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::before</span> {
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-built_in">var</span>(--white);
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.0625rem</span>;
+    <span class="hljs-attribute">top</span>: -<span class="hljs-number">1.5rem</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">border-style</span>: solid;
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0px</span> transparent solid;
+    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">10px</span> transparent solid;
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">10px</span> transparent solid;
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">17px</span> <span class="hljs-number">#333</span> solid;
+  }
+  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:hover</span><span class="hljs-selector-pseudo">::after</span>, <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:focus</span><span class="hljs-selector-pseudo">::after</span>, <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:hover</span><span class="hljs-selector-pseudo">::before</span>, <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:focus</span><span class="hljs-selector-pseudo">::before</span> {
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
+            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
+    <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.25s</span> ease-in-out, bottom <span class="hljs-number">0.25s</span> ease-in-out;
+  }
+  <span class="hljs-selector-class">.tooltip</span> &gt; <span class="hljs-selector-class">.icon</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-l4));
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.tooltip</span> {
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">width</span>: auto;
+    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">2.5rem</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0.6rem</span> <span class="hljs-number">0.3rem</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.4rem</span> <span class="hljs-number">0</span>;
+  }
+  <span class="hljs-selector-class">.tooltip</span> &gt; <span class="hljs-selector-class">.icon</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-l3) + <span class="hljs-number">0.5rem</span>);
+  }
+}</pre>
                             </code>
                             
                         </div>
@@ -243,7 +340,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">2.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -1303,7 +1400,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-09T15:43:16.736Z">
+                            <time datetime="2021-05-09T16:09:04.585Z">
                                 5/10/2021
                             </time>
                         
