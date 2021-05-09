@@ -4,7 +4,6 @@
 .fieldset:not(:first-of-type) {
   margin-top: 1rem;
 }
-
 .checkbox {
   position: absolute;
   width: 1px;
@@ -16,7 +15,6 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
 }
-
 .checkbox + label {
   position: relative;
   display: block;
@@ -26,19 +24,16 @@
   line-height: 1.75;
   cursor: pointer;
 }
-
 .checkbox:checked + label {
   color: #000098;
   font-weight: bold;
 }
-
 .checkbox:hover + label,
 .checkbox:focus + label {
   opacity: .75;
   -webkit-transition: all .15s ease-in;
   transition: all .15s ease-in;
 }
-
 .checkbox + label:before {
   content: "";
   position: absolute;
@@ -56,18 +51,15 @@
   -webkit-transition: all .15s ease-in;
   transition: all .15s ease-in;
 }
-
 .checkbox:checked + label:before {
   opacity: 1;
   -webkit-animation: scale .1s ease-in-out .2s 1 normal running;
   animation: scale .1s ease-in-out .2s 1 normal running;
 }
-
 [data-whatinput="keyboard"] .checkbox:focus + label:after {
   border-color: #000098;
   box-shadow: 0 0 4px #000098;
 }
-
 .checkbox + label:after {
   position: absolute;
   top: .2rem;
@@ -81,13 +73,11 @@
   border-radius: 4px;
   content: "";
 }
-
 .checkbox:disabled,
 .checkbox + label[disabled] {
   cursor: not-allowed;
   opacity: .67;
 }
-
 @-webkit-keyframes scale {
   32% {
     transform: scale(1.13) rotate(135deg);
@@ -96,7 +86,6 @@
     transform: scale(1) rotate(135deg);
   }
 }
-
 @keyframes scale {
   32% {
     transform: scale(1.13) rotate(135deg);

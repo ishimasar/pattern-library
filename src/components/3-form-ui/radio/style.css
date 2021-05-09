@@ -1,0 +1,150 @@
+.fieldset {
+  width: 65%;
+}
+
+.fieldset:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+.radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+}
+
+.radio + label {
+  position: relative;
+  display: block;
+  width: auto;
+  margin-top: .5rem;
+  padding-left: 1.8em;
+  line-height: 1.75;
+  cursor: pointer;
+}
+
+.radio:checked + label {
+  color: #000098;
+  font-weight: bold;
+}
+
+.radio:hover + label,
+.radio:focus + label {
+  opacity: .75;
+  transition: all .15s ease-in;
+}
+
+.radio:checked + label:before {
+  opacity: 1;
+  -webkit-animation: scale .1s ease-in-out .2s 1 normal running;
+  animation: scale .1s ease-in-out .2s 1 normal running;
+}
+
+.radio:checked + label:before {
+  opacity: 1;
+  -webkit-animation: scale-radio .1s ease-in-out .2s 1 normal running;
+  animation: scale-radio .1s ease-in-out .2s 1 normal running;
+}
+
+.radio:checked + label > svg {
+  opacity: 1;
+  -webkit-animation: scale-radio .1s ease-in-out .2s 1 normal running;
+  animation: scale-radio .1s ease-in-out .2s 1 normal running;
+}
+
+[data-whatinput="keyboard"] .radio:focus + label:after {
+  border-color: #000098;
+  box-shadow: 0 0 4px #000098;
+}
+
+.radio:disabled,
+.radio + label[disabled] {
+  cursor: not-allowed;
+  opacity: .67;
+}
+
+.radio + label > svg {
+  position: absolute;
+  top: .38rem;
+  left: .16rem;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  transition: all .25s ease-in;
+}
+
+.radio + label:after {
+  position: absolute;
+  top: .19rem;
+  left: 0;
+  box-sizing: border-box;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: #fff;
+  border: 2px solid #888;
+  border-radius: 50%;
+  content: "";
+}
+
+svg circle {
+  fill: #000098;
+  stroke: #000098;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  svg circle {
+    fill: #fff;
+    stroke: #fff;
+  }
+}
+
+@-webkit-keyframes scale {
+  32% {
+    -webkit-transform: scale(1.13) rotate(135deg);
+            transform: scale(1.13) rotate(135deg);
+  }
+  83% {
+    -webkit-transform: scale(1) rotate(135deg);
+            transform: scale(1) rotate(135deg);
+  }
+}
+
+@keyframes scale {
+  32% {
+    -webkit-transform: scale(1.13) rotate(135deg);
+            transform: scale(1.13) rotate(135deg);
+  }
+  83% {
+    -webkit-transform: scale(1) rotate(135deg);
+            transform: scale(1) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes scale-radio {
+  32% {
+    -webkit-transform: scale(1.13);
+            transform: scale(1.13);
+  }
+  83% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale-radio {
+  32% {
+    -webkit-transform: scale(1.13);
+            transform: scale(1.13);
+  }
+  83% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
