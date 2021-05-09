@@ -393,7 +393,7 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code hljs">
-                                <pre><span class="hljs-meta">&#x27;use strict&#x27;</span>;
+                                <pre><span class="hljs-comment">/* /js/modules/SmoothScroll.js */</span>
 
 <span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">scrollSmooth</span>(<span class="hljs-params"></span>) </span>{
 
@@ -436,7 +436,7 @@
   }
 
   <span class="hljs-comment">// ページ内リンクを取得</span>
-  <span class="hljs-keyword">const</span> entryPageLinks = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;#pageTop a[href^=&quot;#&quot;]&#x27;</span>);
+  <span class="hljs-keyword">const</span> entryPageLinks = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;a[href^=&quot;#&quot;]&#x27;</span>);
   <span class="hljs-keyword">const</span> toc = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;.toc__link&#x27;</span>);
   <span class="hljs-keyword">const</span> section = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;.section&#x27;</span>);
 
@@ -462,9 +462,9 @@
                 toc[i].classList.remove(<span class="hljs-string">&#x27;is-current&#x27;</span>);
               }
             }
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; section.length &gt; i; i++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; section.length &gt; j; j++) {
               <span class="hljs-keyword">if</span> (targetElm !== section[i]) {
-                section[i].removeAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>);
+                section[j].removeAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>);
               }
             }
             <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
@@ -473,7 +473,12 @@
       });
     }
   }
-}</pre>
+}
+
+<span class="hljs-comment">/* /js/main.js */</span>
+<span class="hljs-keyword">import</span> { scrollSmooth } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./modules/SmoothScroll.js&#x27;</span>;
+
+scrollSmooth();</pre>
                             </code>
                             
                         </div>
@@ -489,7 +494,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.6 KB</span>
+                    <span class="Meta-value">2.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -898,8 +903,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="table-of-contens.html" data-role="tree-link" data-pjax data-handle="table-of-contens">
-                <span>Table Of Contens</span>
+            <a class="Tree-entityLink" href="table-of-contents.html" data-role="tree-link" data-pjax data-handle="table-of-contents">
+                <span>Table Of Contents</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1698,8 +1703,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-09T13:54:01.027Z">
-                                5/9/2021
+                            <time datetime="2021-05-09T15:30:38.154Z">
+                                5/10/2021
                             </time>
                         
                     </dd>

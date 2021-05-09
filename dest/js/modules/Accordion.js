@@ -14,22 +14,24 @@ export class Accordion {
 
 
   handleEvents() {
-    this.handlers = {};
-    this.handlers.click = this.onClick.bind(this);
-    this.summary.addEventListener('click', this.handlers.click);
-    this.handlers.transitionEnd = this.onTransitionEnd.bind(this);
+    if (this.details.open) {
+      this.handlers = {};
+      this.handlers.click = this.onClick.bind(this);
+      this.summary.addEventListener('click', this.handlers.click);
+      this.handlers.transitionEnd = this.onTransitionEnd.bind(this);
 
-    this.handlers.click = this.onAllOpen.bind(this);
-    this.allOpen.addEventListener('click', this.handlers.click);
+      this.handlers.click = this.onAllOpen.bind(this);
+      this.allOpen.addEventListener('click', this.handlers.click);
 
-    this.handlers.click = this.onAllClose.bind(this);
-    this.allClose.addEventListener('click', this.handlers.click);
+      this.handlers.click = this.onAllClose.bind(this);
+      this.allClose.addEventListener('click', this.handlers.click);
 
-    window.addEventListener('resize', () => {
-      setTimeout(() => {
-        this.onResize();
-      }, 50);
-    });
+      window.addEventListener('resize', () => {
+        setTimeout(() => {
+          this.onResize();
+        }, 50);
+      });
+    }
   }
 
   onClick(e) {

@@ -1,0 +1,51 @@
+.toc-container {
+  padding: 0.5rem 2rem;
+  border: 1px dotted #333;
+  text-align: center;
+  @include mq(dt) {
+    width: 30rem;
+    margin: 1.5rem auto 2rem;
+  }
+  @include mq(sp-tb) {
+    width: 90%;
+    margin: 1rem auto 1.5rem;
+  }
+}
+.toc-title {
+  display: block;
+  font-weight: bold;
+}
+.toc-open {
+  display: inline-block;
+  font-family: var(--sentence-font);
+  @include mq(sp) {
+    font-size: calc(var(--font-size-s1));
+  }
+  // /* marker消すスタイル */
+  // & summary::marker {
+  //   font-size: 0;
+  // }
+  // & summary::-webkit-details-marker {
+  //   font-size: 0;
+  // }
+}
+.toc {
+  list-style-type: disc;
+  > li {
+    margin-top: 0.5rem;
+    margin-left: 1.4em;
+    text-align: left;
+  }
+}
+.toc__link {
+  text-decoration: underline;
+  font-family: var(--sentence-font);
+  @include mq(tb-dth) {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  @include mq(sp) {
+    padding-top: 0.4rem;
+  }
+}

@@ -9,9 +9,10 @@ import { Tab } from './modules/Tab.js';
 // import { TabSwipe } from './modules/TabSwipe.js';
 import { ToggleSwitch } from './modules/ToggleSwitch.js';
 import { UiModeSwitcher } from './modules/UiModeSwitcher.js';
+import { toggleToc } from './modules/ToggleToc.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const detailsEls = document.getElementsByTagName('details');
+  const detailsEls = document.getElementsByClassName('accordion-details');
 
   for (let i = 0; i < detailsEls.length; i++) {
     const accordion = new Accordion(detailsEls[i]);
@@ -62,6 +63,7 @@ tab.throttle();
 // TabSwipe();
 
 scrollSmooth();
+toggleToc();
 
 const toggleSwitch = new ToggleSwitch('#switch1', '.switch-state-on', '.switch-state-off');
 toggleSwitch.switchState();

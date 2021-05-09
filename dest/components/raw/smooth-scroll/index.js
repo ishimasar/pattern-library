@@ -1,4 +1,4 @@
-'use strict';
+/* /js/modules/SmoothScroll.js */
 
 export function scrollSmooth() {
 
@@ -41,7 +41,7 @@ export function scrollSmooth() {
   }
 
   // ページ内リンクを取得
-  const entryPageLinks = document.querySelectorAll('#pageTop a[href^="#"]');
+  const entryPageLinks = document.querySelectorAll('a[href^="#"]');
   const toc = document.querySelectorAll('.toc__link');
   const section = document.querySelectorAll('.section');
 
@@ -67,9 +67,9 @@ export function scrollSmooth() {
                 toc[i].classList.remove('is-current');
               }
             }
-            for(var i = 0; section.length > i; i++) {
+            for(var j = 0; section.length > j; j++) {
               if (targetElm !== section[i]) {
-                section[i].removeAttribute('tabindex');
+                section[j].removeAttribute('tabindex');
               }
             }
             return false;
@@ -79,3 +79,8 @@ export function scrollSmooth() {
     }
   }
 }
+
+/* /js/main.js */
+import { scrollSmooth } from './modules/SmoothScroll.js';
+
+scrollSmooth();
