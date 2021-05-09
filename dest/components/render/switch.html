@@ -1,19 +1,20 @@
 
 
-<div class="switch-container">
-  <div class="switch-state-on">OFF</div>
-  <fieldset class="switch-fieldset">
+<div class="switch-wrapper">
+  <button type="button" class="switch-state-off" aria-checked="true">OFF</button>
+  <div class="switch-container">
     <label for="switch1" class="switch-rail"></label>
-    <input
-      type="checkbox"
-      name="switch"
+    <button
+      type="button"
       id="switch1"
       class="switch"
-    />
-  </fieldset>
-  <div class="switch-state-off">ON</div>
+      role="switch"
+      aria-checked="false"
+    ></button>
+  </div>
+  <button type="button" class="switch-state-on" aria-checked="false">ON</button>
 </div>
-<div class="switch-content light-theme">
+<div class="switch-target light-theme">
   <svg
     aria-hidden="true"
     focusable="false"

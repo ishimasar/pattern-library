@@ -1,16 +1,16 @@
-.switch-container {
+.switch-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 2rem;
 }
-.switch-state-on {
+.switch-state-off {
   margin-right: 1rem;
 }
-.switch-state-off {
+.switch-state-on {
   margin-left: 1rem;
 }
-.switch-fieldset {
+.switch-container {
   position: relative;
   width: 7rem;
   height: 3.2rem;
@@ -30,7 +30,7 @@
   cursor: pointer;
   appearance: none;
   z-index: 1;
-  &:checked {
+  &[aria-checked="true"] {
     background-color: #35c6b6;
     transform: translateX(3.2rem);
     transition: transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53),
@@ -54,21 +54,21 @@
   border-color: #000098;
   box-shadow: 0 0 4px #000098;
 }
-.switch-content {
+.switch-target{
   display: flex;
   align-items: center;
   height: 50vh;
   padding: 2rem;
   background-color: white;
-}
-.switch-content.light-theme {
-  background: #fff;
-  color: #333;
-  transition: all 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53),
-    color 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-}
-.switch-content.dark-theme {
-  background: #333;
-  color: #eee;
-  transition: all 0.38s, color 0.48s;
+  &.light-theme {
+    background: #fff;
+    color: #333;
+    transition: all 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53),
+      color 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+  &.dark-theme {
+    background: #333;
+    color: #eee;
+    transition: all 0.38s, color 0.48s;
+  }
 }

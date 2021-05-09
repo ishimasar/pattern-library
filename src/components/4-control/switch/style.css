@@ -1,0 +1,79 @@
+.switch-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem
+}
+.switch-state-off {
+  margin-right: 1rem
+}
+.switch-state-on {
+  margin-left: 1rem
+}
+.switch-container {
+  position: relative;
+  width: 7rem;
+  height: 3.2rem;
+  border: none
+}
+.switch {
+  width: 2.8rem;
+  height: 2.8rem;
+  margin-left: 0.5rem;
+  border: 2px solid #fff;
+  background-color: #545555;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  border-radius: 50%;
+  -webkit-box-shadow: 0.12rem 0.08rem 0.07rem 0.07rem rgba(85, 67, 67, 0.2);
+  box-shadow: 0.12rem 0.08rem 0.07rem 0.07rem rgba(85, 67, 67, 0.2);
+  transition: background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53), background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53), background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  cursor: pointer;
+  appearance: none;
+  z-index: 1
+}
+.switch[aria-checked="true"] {
+  background-color: #35c6b6;
+  transform: translateX(3.2rem);
+  transition: background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53), background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53), background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+}
+.switch-rail {
+  position: absolute;
+  top: 44%;
+  left: 0;
+  width: 7rem;
+  height: 3.2rem;
+  border: 1px solid #666;
+  background-color: #9e9e9e;
+  border-radius: 35px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 0
+}
+[data-whatinput="keyboard"] .switch:focus+label:after {
+  border-color: #000098;
+  box-shadow: 0 0 4px #000098
+}
+.switch-target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  height: 50vh;
+  padding: 2rem;
+  background-color: white
+}
+.switch-target.light-theme {
+  background: #fff;
+  color: #333;
+  transition: all 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), color 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+}
+.switch-target.dark-theme {
+  background: #333;
+  color: #eee;
+  transition: all 0.38s, color 0.48s
+}
