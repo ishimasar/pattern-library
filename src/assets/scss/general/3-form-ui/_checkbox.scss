@@ -1,5 +1,6 @@
 .fieldset {
   width: 65%;
+  font-size: calc(var(--font-size-m2));
 }
 .fieldset:not(:first-of-type) {
   margin-top: 1rem;

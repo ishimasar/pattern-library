@@ -1,3 +1,25 @@
 
 
-
+<fieldset>
+  <legend class="heading3">- Input field: type="text"</legend>
+  <div class="input-text-container">
+    <label for="name" class="input-text-label">お名前 ：</label>
+    <input type="text" id="name" name="name" placeholder="姓 名" maxlength="50" required="required" class="input-text">
+  </div>
+</fieldset>
+<hr>
+<fieldset>
+  <legend class="heading3">- Input field: type="email"</legend>
+  <div class="input-text-container">
+    <label for="email" class="input-text-label">Emailアドレス  ：</label>
+    <input type="email" id="email" name="email" pattern=".{1,}@.*" placeholder="xxxx@xxx.com（.co.jpなど）" maxlength="50" required="required" class="input-text">
+  </div>
+</fieldset>
+<hr>
+<fieldset>
+  <legend class="heading3">- Input field: textarea</legend>
+  <div class="input-text-container">
+    <label for="textarea" class="textarea-label">問い合わせ内容 ：</label>
+    <textarea id="textarea" name="message" placeholder="内容をご記入ください" required="required" class="textarea"></textarea>
+  </div>
+</fieldset>

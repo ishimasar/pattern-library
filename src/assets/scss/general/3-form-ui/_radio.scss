@@ -1,10 +1,10 @@
 .fieldset {
   width: 65%;
+  font-size: calc(var(--font-size-m2));
 }
 .fieldset:not(:first-of-type) {
   margin-top: 1rem;
 }
-
 .radio {
   position: absolute;
   width: 1px;
@@ -16,7 +16,6 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
 }
-
 .radio + label {
   position: relative;
   display: block;
@@ -26,48 +25,40 @@
   line-height: 1.75;
   cursor: pointer;
 }
-
 .radio:checked + label {
   color: #000098;
   font-weight: bold;
 }
-
 .radio:hover + label,
 .radio:focus + label {
   opacity: .75;
   -webkit-transition: all .15s ease-in;
   transition: all .15s ease-in;
 }
-
 .radio:checked + label:before {
   opacity: 1;
   -webkit-animation: scale .1s ease-in-out .2s 1 normal running;
   animation: scale .1s ease-in-out .2s 1 normal running;
 }
-
 .radio:checked + label:before {
   opacity: 1;
   -webkit-animation: scale-radio .1s ease-in-out .2s 1 normal running;
   animation: scale-radio .1s ease-in-out .2s 1 normal running;
 }
-
 .radio:checked + label > svg {
   opacity: 1;
   -webkit-animation: scale-radio .1s ease-in-out .2s 1 normal running;
   animation: scale-radio .1s ease-in-out .2s 1 normal running;
 }
-
 [data-whatinput="keyboard"] .radio:focus + label:after {
   border-color: #000098;
   box-shadow: 0 0 4px #000098;
 }
-
 .radio:disabled,
 .radio + label[disabled] {
   cursor: not-allowed;
   opacity: .67;
 }
-
 .radio + label > svg {
   position: absolute;
   top: .38rem;
@@ -79,7 +70,6 @@
   -webkit-transition: all .25s ease-in;
   transition: all .25s ease-in;
 }
-
 .radio + label:after {
   position: absolute;
   top: .19rem;
@@ -93,19 +83,16 @@
   border-radius: 50%;
   content: "";
 }
-
 svg circle {
   fill: #000098;
   stroke: #000098;
 }
-
 @media screen and (-ms-high-contrast: active) {
   svg circle {
     fill: #fff;
     stroke: #fff;
   }
 }
-
 @-webkit-keyframes scale {
   32% {
     transform: scale(1.13) rotate(135deg);
@@ -114,7 +101,6 @@ svg circle {
     transform: scale(1) rotate(135deg);
   }
 }
-
 @keyframes scale {
   32% {
     transform: scale(1.13) rotate(135deg);
@@ -123,7 +109,6 @@ svg circle {
     transform: scale(1) rotate(135deg);
   }
 }
-
 @-webkit-keyframes scale-radio {
   32% {
     transform: scale(1.13);
@@ -132,7 +117,6 @@ svg circle {
     transform: scale(1);
   }
 }
-
 @keyframes scale-radio {
   32% {
     transform: scale(1.13);

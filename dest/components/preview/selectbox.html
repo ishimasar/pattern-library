@@ -13,6 +13,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js" defer></script>
     <script src="../../js/main.js" type="module" defer></script>
   <body>
-    
+    <div class="selectbox-container">
+  <label for="selectbox" class="selectbox-label">問い合わせ種別 ：</label>
+  <select id="selectbox" name="subject" required="required" class="selectbox">
+    <option label="以下から選択してください" selected="selected" disabled="disabled"></option>
+    <option value="work">仕事のご依頼・ご相談</option>
+    <option value="activity">運営者の活動について</option>
+    <option value="about">このサイトについて</option>
+    <option value="interview">取材</option>
+    <option value="other">そのほか</option>
+  </select>
+</div>
   </body>
 </html>

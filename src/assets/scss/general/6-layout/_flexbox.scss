@@ -1,4 +1,7 @@
 .flexbox {
+  &.-primary {
+    justify-content: space-between;
+  }
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -20,8 +23,5 @@
   }
   &::before {
     order: 1;
-  }
-  &.-primary {
-    justify-content: space-between;
   }
 }
