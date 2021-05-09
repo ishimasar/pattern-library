@@ -1,45 +1,10 @@
 
 
-<style>
-  .ml12 {
-    font-weight: 700;
-    font-size: 1.8em;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-  }
-
-  .ml12 .letter {
-    opacity: 0;
-    display: inline-block;
-    line-height: .5rem;
-  }
-</style>
-
-<h1 class="ml12">A new production</h1>
+<h2 class="heading2">- Temporary code</h2>
+<p id="js-anime-target" class="move-text">
+  A new production
+  Hello...
+</p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
-<script>
-  // Wrap every letter in a span
-  var textWrapper = document.querySelector('.ml12');
-  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, '<span class="letter">$&</span>');
-
-  anime.timeline({loop: false})
-    .add({
-      targets: '.ml12 .letter',
-      translateX: [40,0],
-      translateZ: 0,
-      opacity: [0,1],
-      easing: "easeOutQuad",
-      duration: 1000,
-      delay: (el, i) => 500 + 30 * i
-    });
-    // .add({
-    //   targets: '.ml12 .letter',
-    //   translateX: [0,-30],
-    //   opacity: [1,0],
-    //   easing: "easeInExpo",
-    //   duration: 1100,
-    //   delay: (el, i) => 100 + 30 * i
-    // });
-</script>
+<script src="../../js/vendor/moving-text.js"></script>

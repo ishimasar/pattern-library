@@ -179,50 +179,14 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-714f84c461d82e96e01f5d41941e6bbb-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-    <span class="hljs-selector-class">.ml12</span> {
-        <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
-        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.8em</span>;
-        <span class="hljs-attribute">text-transform</span>: uppercase;
-        <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">0.5em</span>;
-    }
-
-    <span class="hljs-selector-class">.ml12</span> <span class="hljs-selector-class">.letter</span> {
-        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
-        <span class="hljs-attribute">display</span>: inline-block;
-        <span class="hljs-attribute">line-height</span>: .<span class="hljs-number">5rem</span>;
-    }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ml12&quot;</span>&gt;</span>A new production<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>- Temporary code<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-anime-target&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;move-text&quot;</span>&gt;</span>
+    A new production
+    Hello...
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-comment">// Wrap every letter in a span</span>
-    <span class="hljs-keyword">var</span> textWrapper = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.ml12&#x27;</span>);
-    textWrapper.innerHTML = textWrapper.textContent.replace(<span class="hljs-regexp">/\S/g</span>, <span class="hljs-string">&#x27;&lt;span class=&quot;letter&quot;&gt;$&amp;&lt;/span&gt;&#x27;</span>);
-    anime.timeline({
-            <span class="hljs-attr">loop</span>: <span class="hljs-literal">false</span>
-        })
-        .add({
-            <span class="hljs-attr">targets</span>: <span class="hljs-string">&#x27;.ml12 .letter&#x27;</span>,
-            <span class="hljs-attr">translateX</span>: [<span class="hljs-number">40</span>, <span class="hljs-number">0</span>],
-            <span class="hljs-attr">translateZ</span>: <span class="hljs-number">0</span>,
-            <span class="hljs-attr">opacity</span>: [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
-            <span class="hljs-attr">easing</span>: <span class="hljs-string">&quot;easeOutQuad&quot;</span>,
-            <span class="hljs-attr">duration</span>: <span class="hljs-number">1000</span>,
-            <span class="hljs-attr">delay</span>: <span class="hljs-function">(<span class="hljs-params">el, i</span>) =&gt;</span> <span class="hljs-number">500</span> + <span class="hljs-number">30</span> * i
-        });
-    <span class="hljs-comment">// .add({</span>
-    <span class="hljs-comment">//   targets: &#x27;.ml12 .letter&#x27;,</span>
-    <span class="hljs-comment">//   translateX: [0,-30],</span>
-    <span class="hljs-comment">//   opacity: [1,0],</span>
-    <span class="hljs-comment">//   easing: &quot;easeInExpo&quot;,</span>
-    <span class="hljs-comment">//   duration: 1100,</span>
-    <span class="hljs-comment">//   delay: (el, i) =&gt; 100 + 30 * i</span>
-    <span class="hljs-comment">// });</span>
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../js/vendor/moving-text.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -230,49 +194,14 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-714f84c461d82e96e01f5d41941e6bbb-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-  <span class="hljs-selector-class">.ml12</span> {
-    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.8em</span>;
-    <span class="hljs-attribute">text-transform</span>: uppercase;
-    <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">0.5em</span>;
-  }
-
-  <span class="hljs-selector-class">.ml12</span> <span class="hljs-selector-class">.letter</span> {
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">display</span>: inline-block;
-    <span class="hljs-attribute">line-height</span>: .<span class="hljs-number">5rem</span>;
-  }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ml12&quot;</span>&gt;</span>A new production<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>- Temporary code<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-anime-target&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;move-text&quot;</span>&gt;</span>
+  A new production
+  Hello...
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-comment">// Wrap every letter in a span</span>
-  <span class="hljs-keyword">var</span> textWrapper = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.ml12&#x27;</span>);
-  textWrapper.innerHTML = textWrapper.textContent.replace(<span class="hljs-regexp">/\S/g</span>, <span class="hljs-string">&#x27;&lt;span class=&quot;letter&quot;&gt;$&amp;&lt;/span&gt;&#x27;</span>);
-
-  anime.timeline({<span class="hljs-attr">loop</span>: <span class="hljs-literal">false</span>})
-    .add({
-      <span class="hljs-attr">targets</span>: <span class="hljs-string">&#x27;.ml12 .letter&#x27;</span>,
-      <span class="hljs-attr">translateX</span>: [<span class="hljs-number">40</span>,<span class="hljs-number">0</span>],
-      <span class="hljs-attr">translateZ</span>: <span class="hljs-number">0</span>,
-      <span class="hljs-attr">opacity</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>],
-      <span class="hljs-attr">easing</span>: <span class="hljs-string">&quot;easeOutQuad&quot;</span>,
-      <span class="hljs-attr">duration</span>: <span class="hljs-number">1000</span>,
-      <span class="hljs-attr">delay</span>: <span class="hljs-function">(<span class="hljs-params">el, i</span>) =&gt;</span> <span class="hljs-number">500</span> + <span class="hljs-number">30</span> * i
-    });
-    <span class="hljs-comment">// .add({</span>
-    <span class="hljs-comment">//   targets: &#x27;.ml12 .letter&#x27;,</span>
-    <span class="hljs-comment">//   translateX: [0,-30],</span>
-    <span class="hljs-comment">//   opacity: [1,0],</span>
-    <span class="hljs-comment">//   easing: &quot;easeInExpo&quot;,</span>
-    <span class="hljs-comment">//   duration: 1100,</span>
-    <span class="hljs-comment">//   delay: (el, i) =&gt; 100 + 30 * i</span>
-    <span class="hljs-comment">// });</span>
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">path</span> <span class="hljs-string">&#x27;/js/vendor/moving-text.js&#x27;</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -298,13 +227,59 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
+                <option value="file-69d0d9b72ce13d115fd12064950a908d">index.js</option>
+                
                 <option value="file-bbb46d75438f9d8390d8bf4d28803180">style.css</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-bbb46d75438f9d8390d8bf4d28803180" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-69d0d9b72ce13d115fd12064950a908d" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code hljs">
+                                <pre>moveLetter();
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">moveLetter</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> textWrapper = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;#js-anime-target&#x27;</span>);
+  textWrapper.innerHTML = textWrapper.textContent.replace(<span class="hljs-regexp">/\S/g</span>, <span class="hljs-string">&#x27;&lt;span class=&quot;letter&quot;&gt;$&amp;&lt;/span&gt;&#x27;</span>);
+
+  anime.timeline({<span class="hljs-attr">loop</span>: <span class="hljs-literal">false</span>})
+    .add({
+      <span class="hljs-attr">targets</span>: <span class="hljs-string">&#x27;#js-anime-target .letter&#x27;</span>,
+      <span class="hljs-attr">translateX</span>: [<span class="hljs-number">40</span>,<span class="hljs-number">0</span>],
+      <span class="hljs-attr">translateZ</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">opacity</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>],
+      <span class="hljs-attr">easing</span>: <span class="hljs-string">&quot;easeOutQuad&quot;</span>,
+      <span class="hljs-attr">duration</span>: <span class="hljs-number">1000</span>,
+      <span class="hljs-attr">delay</span>: <span class="hljs-function">(<span class="hljs-params">el, i</span>) =&gt;</span> <span class="hljs-number">500</span> + <span class="hljs-number">30</span> * i
+  });
+}</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/moving-text/index.js"><span>/components/raw/moving-text/index.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/5-effect/moving-text/index.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">453 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-bbb46d75438f9d8390d8bf4d28803180" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -312,7 +287,17 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-selector-class">.move-text</span> {
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">text-transform</span>: uppercase;
+  <span class="hljs-attribute">font-weight</span>: bold;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-l3));
+}
+<span class="hljs-selector-class">.move-text</span> <span class="hljs-selector-class">.letter</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">0.5em</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+}</pre>
                             </code>
                             
                         </div>
@@ -328,7 +313,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">212 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -1388,7 +1373,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-09T10:28:21.210Z">
+                            <time datetime="2021-05-09T12:17:03.018Z">
                                 5/9/2021
                             </time>
                         
