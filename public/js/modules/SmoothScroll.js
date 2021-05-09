@@ -1,7 +1,4 @@
-'use strict';
-
 export function scrollSmooth() {
-
   // スクロール移動時間(ms)
   const transitionTime = 500;
   // 繰り返す回数(アニメーションの回数）の計算
@@ -26,7 +23,7 @@ export function scrollSmooth() {
         window.requestAnimationFrame(scrollMoved);
       }
     })();
-  };
+  }
 
   // hashからelementを取得する関数
   function getElm(h) {
@@ -38,7 +35,7 @@ export function scrollSmooth() {
   function getPos(t) {
     let tPos = t.getBoundingClientRect();
     return tPos.top + window.pageYOffset;
-  };
+  }
 
   // ページ内リンクを取得
   const entryPageLinks = document.querySelectorAll('#pageTop a[href^="#"]');

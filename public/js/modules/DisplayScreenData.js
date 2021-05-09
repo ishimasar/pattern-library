@@ -1,5 +1,3 @@
-'use strict';
-
 export class DisplayScreenData {
   constructor(id) {
     this.body = document.getElementById(id);

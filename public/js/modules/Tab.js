@@ -1,3 +1,6 @@
+/**
+ * Tab UI class
+ */
 export class Tab {
   constructor(selector1, selector2, selector3, selector4) {
     this.tabUi = document.querySelector(selector1);

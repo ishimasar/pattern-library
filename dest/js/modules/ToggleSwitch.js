@@ -1,3 +1,6 @@
+/**
+ * ToggleSwitch UI class
+ */
 export class ToggleSwitch {
   constructor(theSwitch, onBtn, offBtn) {
     this.theSwitch = document.querySelector(theSwitch);

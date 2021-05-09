@@ -1,3 +1,6 @@
+/**
+ * UiModeSwitcher UI class
+ */
 export class UiModeSwitcher {
   constructor(switchLabel, switchOn, switchOff, switchContent) {
     // チェックボックスの取得
