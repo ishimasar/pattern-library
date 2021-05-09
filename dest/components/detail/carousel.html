@@ -397,7 +397,233 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-comment">/* /js/modules/Carousel.js */</span>
+
+<span class="hljs-comment">/**
+ * Carousel UI class
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Carousel</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">triggerClass, img, thumb, prev, next, play, pause</span>)</span> {
+    <span class="hljs-built_in">this</span>.current = <span class="hljs-number">0</span>; <span class="hljs-comment">// 現在地を示すインデックス番号：初期値0=1番目</span>
+    <span class="hljs-built_in">this</span>.timerId; <span class="hljs-comment">// setTimeout関数の戻り値(ID)。clearTimeoutに渡す用</span>
+
+    <span class="hljs-comment">// カルーセル関連のNodeListを取得して変数に格納</span>
+    <span class="hljs-built_in">this</span>.carouselCont = <span class="hljs-built_in">document</span>.querySelectorAll(triggerClass); <span class="hljs-comment">// .js-carousel-contをすべてカルーセルパネル(コンテンツ)とみなし、NodeList取得</span>
+    <span class="hljs-built_in">this</span>.contArray = <span class="hljs-built_in">Array</span>(...this.carouselCont); <span class="hljs-comment">// 上記NodeListオブジェクトを扱いやすいよう配列に変換</span>
+
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.carouselCont.length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-built_in">this</span>.carouselImg = <span class="hljs-built_in">document</span>.querySelectorAll(img);
+      <span class="hljs-built_in">this</span>.carouselThumb = <span class="hljs-built_in">document</span>.querySelectorAll(thumb); <span class="hljs-comment">// サムネイル(button要素 = role=&quot;tab&quot;)のDOM取得</span>
+    }
+
+    <span class="hljs-comment">// 前へボタンDOM取得変数</span>
+    <span class="hljs-built_in">this</span>.prev = <span class="hljs-built_in">document</span>.querySelector(prev);
+
+    <span class="hljs-comment">// 次へボタンDOM取得変数</span>
+    <span class="hljs-built_in">this</span>.next = <span class="hljs-built_in">document</span>.querySelector(next);
+
+    <span class="hljs-comment">// 再生ボタン、停止ボタンのDOM取得変数</span>
+    <span class="hljs-built_in">this</span>.play = <span class="hljs-built_in">document</span>.querySelector(play);
+    <span class="hljs-built_in">this</span>.pause = <span class="hljs-built_in">document</span>.querySelector(pause);
+
+    <span class="hljs-built_in">this</span>.runFlg = <span class="hljs-literal">false</span>; <span class="hljs-comment">// オートスライド実行中フラグ初期値</span>
+  }
+  <span class="hljs-comment">// ---メソッド---</span>
+
+  <span class="hljs-comment">// カルーセルを表示([aria-hidden=&quot;false&quot;]スタイル)</span>
+  <span class="hljs-function"><span class="hljs-title">showCarousel</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.carouselCont[<span class="hljs-built_in">this</span>.current].setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>); <span class="hljs-comment">// 表示状態(ARIA)</span>
+    <span class="hljs-built_in">this</span>.carouselCont[<span class="hljs-built_in">this</span>.current].setAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>, <span class="hljs-string">&#x27;0&#x27;</span>); <span class="hljs-comment">// キーボードフォーカス可に</span>
+
+    <span class="hljs-comment">// this.carouselImg[this.current].classList.add(&#x27;is-motioned&#x27;); // スケールモーションclass付与 ※必要に応じてご利用ください</span>
+
+  }
+
+  <span class="hljs-comment">// カルーセルを非表示([aria-hidden=&quot;true&quot;]スタイル)</span>
+  <span class="hljs-function"><span class="hljs-title">hideCarousel</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.carouselCont[<span class="hljs-built_in">this</span>.current].setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>); <span class="hljs-comment">// 非表示状態(ARIA)</span>
+    <span class="hljs-built_in">this</span>.carouselCont[<span class="hljs-built_in">this</span>.current].setAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>, <span class="hljs-string">&#x27;-1&#x27;</span>); <span class="hljs-comment">// キーボードフォーカス不可に</span>
+
+    <span class="hljs-comment">// this.carouselImg[this.current].classList.remove(&#x27;is-motioned&#x27;); // スケールモーションclass削除 ※必要に応じてご利用ください</span>
+  }
+
+  <span class="hljs-comment">// サムネイル画像を非選択状態([aria-selected=&quot;false&quot;]スタイル)</span>
+  <span class="hljs-function"><span class="hljs-title">removeCurrent</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.carouselThumb[<span class="hljs-built_in">this</span>.current].setAttribute(<span class="hljs-string">&#x27;aria-selected&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>); <span class="hljs-comment">// 非選択状態(ARIA)</span>
+  }
+
+  <span class="hljs-comment">// サムネイル画像を選択状態([aria-selected=&quot;false&quot;]スタイル)</span>
+  <span class="hljs-function"><span class="hljs-title">addCurrent</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.carouselThumb[<span class="hljs-built_in">this</span>.current].setAttribute(<span class="hljs-string">&#x27;aria-selected&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>); <span class="hljs-comment">// 選択状態(ARIA)</span>
+  }
+
+  <span class="hljs-comment">// オートスライド再生</span>
+  <span class="hljs-function"><span class="hljs-title">playCarousel</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.timerId = <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-built_in">this</span>.next.click(); <span class="hljs-comment">// 次へボタンクリックイベント呼び出し(buttonオブジェクトのメソッド)</span>
+      <span class="hljs-built_in">this</span>.playCarousel(); <span class="hljs-comment">// 再帰</span>
+    }, <span class="hljs-number">3500</span>);
+  }
+
+  <span class="hljs-comment">// オートスライド停止</span>
+  <span class="hljs-function"><span class="hljs-title">stopCarousel</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">clearTimeout</span>(<span class="hljs-built_in">this</span>.timerId);
+  }
+
+  <span class="hljs-comment">// ---イベントおよびメソッド実行処理----</span>
+  <span class="hljs-function"><span class="hljs-title">setter</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.carouselCont.length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-comment">// 格納したNodeListオブジェクトを配列として要素1つ1つにループ処理</span>
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">this</span>.contArray.length; i++) {
+        <span class="hljs-comment">// カルーセルのメインコンテンツのマウンスエンターイベント</span>
+        <span class="hljs-built_in">this</span>.carouselCont[i].addEventListener(<span class="hljs-string">&#x27;mouseenter&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+          <span class="hljs-built_in">this</span>.stopCarousel(); <span class="hljs-comment">// 自動再生止める</span>
+        });
+
+        <span class="hljs-comment">// カルーセルのメインコンテンツのマウンスリーブイベント</span>
+        <span class="hljs-built_in">this</span>.carouselCont[i].addEventListener(<span class="hljs-string">&#x27;mouseleave&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+          <span class="hljs-comment">// 再生ボタンオンなら再生、停止ボタンオンなら停止</span>
+          <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.runFlg === <span class="hljs-literal">true</span>) {
+            <span class="hljs-built_in">this</span>.playCarousel();
+          } <span class="hljs-keyword">else</span> {
+            <span class="hljs-built_in">this</span>.stopCarousel();
+          }
+        });
+
+        <span class="hljs-comment">// カルーセルのメインコンテンツのキーボードフォーカスインイベント</span>
+        <span class="hljs-built_in">this</span>.carouselCont[i].addEventListener(<span class="hljs-string">&#x27;focus&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+          <span class="hljs-built_in">this</span>.stopCarousel(); <span class="hljs-comment">// 自動再生止める</span>
+        });
+
+        <span class="hljs-comment">// カルーセルのメインコンテンツのキーボードフォーカスアウトイベント</span>
+        <span class="hljs-built_in">this</span>.carouselCont[i].addEventListener(<span class="hljs-string">&#x27;blur&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+          <span class="hljs-comment">// 再生ボタンオンなら再生、停止ボタンオンなら停止</span>
+          <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.runFlg === <span class="hljs-literal">true</span>) {
+            <span class="hljs-built_in">this</span>.playCarousel();
+          } <span class="hljs-keyword">else</span> {
+            <span class="hljs-built_in">this</span>.stopCarousel();
+          }
+        });
+
+        <span class="hljs-comment">// thumbnailBtn(button要素)クリックイベント時に実行する関数群</span>
+        <span class="hljs-built_in">this</span>.carouselThumb[i].addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+          <span class="hljs-built_in">this</span>.hideCarousel(<span class="hljs-built_in">this</span>.contArray);
+          <span class="hljs-built_in">this</span>.removeCurrent();
+          <span class="hljs-built_in">this</span>.current = i; <span class="hljs-comment">// currentにクリックされた要素のインデックス番号を格納</span>
+          <span class="hljs-built_in">this</span>.addCurrent();
+          <span class="hljs-built_in">this</span>.showCarousel(<span class="hljs-built_in">this</span>.contArray);
+        });
+      }
+
+      <span class="hljs-comment">// カルーセル画像 前へ(&lt;)ボタン・クリックイベント</span>
+      <span class="hljs-built_in">this</span>.prev.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.hideCarousel(<span class="hljs-built_in">this</span>.contArray[<span class="hljs-built_in">this</span>.current]);
+        <span class="hljs-built_in">this</span>.removeCurrent(); <span class="hljs-comment">// currentクラスを持つ要素から、currentクラスを削除する関数実行</span>
+        <span class="hljs-built_in">this</span>.current--; <span class="hljs-comment">// currentを1つ引く</span>
+        <span class="hljs-comment">// currentが0未満の値になったときの戻る処理</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.current &lt; <span class="hljs-number">0</span>) <span class="hljs-built_in">this</span>.current = <span class="hljs-built_in">this</span>.contArray.length - <span class="hljs-number">1</span>; <span class="hljs-comment">// currentを最大値にする(最終番目に移動する)</span>
+        <span class="hljs-built_in">this</span>.addCurrent();
+        <span class="hljs-built_in">this</span>.showCarousel(<span class="hljs-built_in">this</span>.contArray[<span class="hljs-built_in">this</span>.current]);
+      });
+
+      <span class="hljs-comment">// 前へボタン・マウスオンイベント</span>
+      <span class="hljs-built_in">this</span>.prev.addEventListener(<span class="hljs-string">&#x27;mouseenter&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.stopCarousel();
+      });
+
+      <span class="hljs-comment">// 前へボタン・マウスアウトイベント</span>
+      <span class="hljs-built_in">this</span>.prev.addEventListener(<span class="hljs-string">&#x27;mouseleave&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-comment">// 再生ボタンオンなら再生、停止ボタンオンなら停止</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.runFlg === <span class="hljs-literal">true</span>) {
+          <span class="hljs-built_in">this</span>.playCarousel();
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-built_in">this</span>.stopCarousel();
+        }
+      });
+
+      <span class="hljs-comment">// 前へボタン・キーボードフォーカスインイベント</span>
+      <span class="hljs-built_in">this</span>.prev.addEventListener(<span class="hljs-string">&#x27;focus&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.stopCarousel();
+      });
+
+      <span class="hljs-comment">// 前へボタン・キーボードフォーカスアウトイベント</span>
+      <span class="hljs-built_in">this</span>.prev.addEventListener(<span class="hljs-string">&#x27;blur&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-comment">// 再生ボタンオンなら再生、停止ボタンオンなら停止</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.runFlg === <span class="hljs-literal">true</span>) {
+          <span class="hljs-built_in">this</span>.playCarousel();
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-built_in">this</span>.stopCarousel();
+        }
+      });
+
+      <span class="hljs-comment">// カルーセル画像 次へ(&gt;)ボタン・クリックイベント</span>
+      <span class="hljs-built_in">this</span>.next.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.hideCarousel(<span class="hljs-built_in">this</span>.contArray[<span class="hljs-built_in">this</span>.current]);
+        <span class="hljs-built_in">this</span>.removeCurrent();
+        <span class="hljs-built_in">this</span>.current++; <span class="hljs-comment">// currentを1つ足す</span>
+        <span class="hljs-comment">// currentが配列の数(最大数)と同じときの処理</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.current === <span class="hljs-built_in">this</span>.contArray.length) <span class="hljs-built_in">this</span>.current = <span class="hljs-number">0</span>; <span class="hljs-comment">// currentを0にする(1番目に戻す)</span>
+        <span class="hljs-built_in">this</span>.addCurrent(); <span class="hljs-comment">//</span>
+        <span class="hljs-built_in">this</span>.showCarousel(<span class="hljs-built_in">this</span>.contArray[<span class="hljs-built_in">this</span>.current]);
+      });
+
+      <span class="hljs-comment">// 次へボタン・マウスオンイベント</span>
+      <span class="hljs-built_in">this</span>.next.addEventListener(<span class="hljs-string">&#x27;mouseenter&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.stopCarousel();
+      });
+
+      <span class="hljs-comment">// 次へボタン・マウスアウトイベント</span>
+      <span class="hljs-built_in">this</span>.next.addEventListener(<span class="hljs-string">&#x27;mouseleave&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-comment">// 再生ボタンオンなら再生、停止ボタンオンなら停止</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.runFlg === <span class="hljs-literal">true</span>) {
+          <span class="hljs-built_in">this</span>.playCarousel();
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-built_in">this</span>.stopCarousel();
+        }
+      });
+
+      <span class="hljs-comment">// 次へボタン・キーボードフォーカスオンイベント</span>
+      <span class="hljs-built_in">this</span>.next.addEventListener(<span class="hljs-string">&#x27;focus&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.stopCarousel();
+      });
+
+      <span class="hljs-comment">// 次へボタン・キーボードフォーカスアウトイベント</span>
+      <span class="hljs-built_in">this</span>.next.addEventListener(<span class="hljs-string">&#x27;blur&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-comment">// 再生ボタンオンなら再生、停止ボタンオンなら停止</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.runFlg === <span class="hljs-literal">true</span>) {
+          <span class="hljs-built_in">this</span>.playCarousel();
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-built_in">this</span>.stopCarousel();
+        }
+      });
+
+      <span class="hljs-comment">// 再生ボタン・クリックイベント</span>
+      <span class="hljs-built_in">this</span>.play.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.play.setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+        <span class="hljs-built_in">this</span>.pause.setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>);
+        <span class="hljs-built_in">this</span>.pause.focus(); <span class="hljs-comment">// 停止ボタンにフォーカスさせる</span>
+        <span class="hljs-built_in">this</span>.playCarousel();
+        <span class="hljs-built_in">this</span>.runFlg = <span class="hljs-literal">true</span>; <span class="hljs-comment">// 再生フラグオン</span>
+      });
+
+      <span class="hljs-comment">// 停止ボタン・クリックイベント</span>
+      <span class="hljs-built_in">this</span>.pause.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.pause.setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+        <span class="hljs-built_in">this</span>.play.setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>);
+        <span class="hljs-built_in">this</span>.play.focus(); <span class="hljs-comment">// 再生ボタンにフォーカスさせる</span>
+        <span class="hljs-built_in">this</span>.stopCarousel();
+        <span class="hljs-built_in">this</span>.runFlg = <span class="hljs-literal">false</span>; <span class="hljs-comment">// 再生フラグオフ</span>
+      });
+    }
+  }
+}
+
+<span class="hljs-comment">/* /js/main.js */</span>
+
+<span class="hljs-keyword">import</span> { Carousel } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./modules/Carousel.js&#x27;</span>;
+
+<span class="hljs-keyword">const</span> carousel = <span class="hljs-keyword">new</span> Carousel(<span class="hljs-string">&#x27;.js-carousel-cont&#x27;</span>, <span class="hljs-string">&#x27;.carousel__img&#x27;</span>, <span class="hljs-string">&#x27;.js-carousel-thumb&#x27;</span>, <span class="hljs-string">&#x27;.js-carousel-prev&#x27;</span>, <span class="hljs-string">&#x27;.js-carousel-next&#x27;</span>, <span class="hljs-string">&#x27;.js-carousel-play&#x27;</span>, <span class="hljs-string">&#x27;.js-carousel-pause&#x27;</span>);
+carousel.setter();</pre>
                             </code>
                             
                         </div>
@@ -413,7 +639,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">9.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -426,7 +652,327 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-selector-class">.carousel</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1rem</span> auto auto;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.carousel</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">90vw</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50rem</span>;
+  }
+}
+
+<span class="hljs-selector-class">.carousel__wrap</span> {
+  <span class="hljs-attribute">position</span>: relative;
+}
+
+<span class="hljs-comment">/* フレーム */</span>
+<span class="hljs-selector-class">.carousel__frame</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">33.33%</span>;
+  <span class="hljs-attribute">overflow</span>: hidden;
+}
+
+<span class="hljs-comment">/* 各パネルの中身 = コンテンツ (divかaを想定) */</span>
+<span class="hljs-selector-class">.carousel__content</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span> {
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--carousel-switch-effect);
+}
+
+<span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">92</span>;
+  <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">92</span>;
+    <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
+  }
+}
+
+<span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;true&quot;</span>]</span> {
+  <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--carousel-fade);
+}
+
+<span class="hljs-comment">/* コンテンツ画像 */</span>
+<span class="hljs-selector-class">.carousel__img</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+}
+
+<span class="hljs-comment">/* カルーセル アニメーション ※必要に応じてご利用ください */</span>
+<span class="hljs-comment">/*
+ * コントローラー群 - 前へナビ、次へナビ、再生ボタン、停止ボタン
+ * 拡張性担保のため、classセレクタ名は一意にしている
+ */</span>
+<span class="hljs-selector-class">.carousel__control-pause</span>,
+<span class="hljs-selector-class">.carousel__control-play</span>,
+<span class="hljs-selector-class">.carousel__control-next</span>,
+<span class="hljs-selector-class">.carousel__control-prev</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">1rem</span> .<span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+}
+
+<span class="hljs-selector-class">.carousel__control-next</span>,
+<span class="hljs-selector-class">.carousel__control-prev</span> {
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">2.8125rem</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">2.8125rem</span>;
+  -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-<span class="hljs-number">50%</span>);
+          <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-<span class="hljs-number">50%</span>);
+  <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--out-transition);
+}
+
+<span class="hljs-selector-class">.carousel__control-next</span>:before,
+.carousel__control-prev:before {
+  position: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">border-style</span>: solid;
+  -webkit-<span class="hljs-attribute">backface-visibility</span>: hidden;
+          <span class="hljs-attribute">backface-visibility</span>: hidden;
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.carousel__control-next</span>:before,
+  .carousel__control-prev:before {
+    width: <span class="hljs-number">1.25rem</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">1.25rem</span>;
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-built_in">var</span>(--white);
+    <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-number">2px</span> <span class="hljs-number">0</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__control-next</span>:before,
+  .carousel__control-prev:before {
+    width: <span class="hljs-number">1.5625rem</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">1.5625rem</span>;
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-built_in">var</span>(--border-color);
+    <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-number">3px</span> <span class="hljs-number">0</span>;
+  }
+}
+
+<span class="hljs-selector-class">.carousel__control-next</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-class">.carousel__control-prev</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__control-next</span><span class="hljs-selector-pseudo">:hover</span>,
+  <span class="hljs-selector-class">.carousel__control-prev</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
+  }
+}
+
+<span class="hljs-selector-class">.carousel__control-pause</span>,
+<span class="hljs-selector-class">.carousel__control-play</span> {
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#bbb</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">2px</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.carousel__control-pause</span>,
+  <span class="hljs-selector-class">.carousel__control-play</span> {
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">3%</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">2.8rem</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">2em</span>;
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
+            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__control-pause</span>,
+  <span class="hljs-selector-class">.carousel__control-play</span> {
+    <span class="hljs-attribute">right</span>: <span class="hljs-number">2%</span>;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">3%</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">3.3rem</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">2.5em</span>;
+  }
+}
+
+<span class="hljs-selector-class">.carousel__control-pause</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;true&quot;</span>]</span>,
+<span class="hljs-selector-class">.carousel__control-play</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;true&quot;</span>]</span> {
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">visibility</span>: hidden;
+}
+
+<span class="hljs-selector-class">.carousel__control-pause</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span>,
+<span class="hljs-selector-class">.carousel__control-play</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span> {
+  <span class="hljs-attribute">visibility</span>: visible;
+}
+
+<span class="hljs-selector-class">.carousel__control-pause</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-class">.carousel__control-play</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--contrast-limit-gray);
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__control-pause</span><span class="hljs-selector-pseudo">:hover</span>,
+  <span class="hljs-selector-class">.carousel__control-play</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--contrast-limit-gray);
+  }
+}
+
+<span class="hljs-comment">/* 前へナビ */</span>
+<span class="hljs-selector-class">.carousel__control-prev</span> {
+  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+}
+
+<span class="hljs-selector-class">.carousel__control-prev</span>:before {
+  -webkit-transform: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">135deg</span>);
+          <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">135deg</span>);
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.carousel__control-prev</span> {
+    <span class="hljs-attribute">left</span>: .<span class="hljs-number">2rem</span>;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__control-prev</span> {
+    <span class="hljs-attribute">left</span>: -<span class="hljs-number">2.2rem</span>;
+  }
+  <span class="hljs-selector-class">.carousel__control-prev</span><span class="hljs-selector-pseudo">:hover</span> {
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(-<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
+            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(-<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+  }
+}
+
+<span class="hljs-comment">/* 次へナビ */</span>
+<span class="hljs-selector-class">.carousel__control-next</span> {
+  <span class="hljs-attribute">transition</span>: -webkit-transform <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad), -webkit-transform <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.carousel__control-next</span> {
+    <span class="hljs-attribute">right</span>: -.<span class="hljs-number">3rem</span>;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__control-next</span> {
+    <span class="hljs-attribute">right</span>: -<span class="hljs-number">2.2rem</span>;
+  }
+  <span class="hljs-selector-class">.carousel__control-next</span><span class="hljs-selector-pseudo">:hover</span> {
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
+            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-attribute">transition</span>: -webkit-transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad), -webkit-transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+  }
+}
+
+<span class="hljs-selector-class">.carousel__control-next</span>:before {
+  -webkit-transform: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">45deg</span>);
+          <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">45deg</span>);
+}
+
+<span class="hljs-comment">/* 再生ボタン */</span>
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.carousel__control-play</span> {
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#999</span> <span class="hljs-built_in">url</span>(<span class="hljs-string">../img/img_play.png</span>) <span class="hljs-number">53%</span> center no-repeat;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__control-play</span> {
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#999</span> <span class="hljs-built_in">url</span>(<span class="hljs-string">../img/img_play.png</span>) <span class="hljs-number">56%</span> center no-repeat;
+  }
+}
+
+<span class="hljs-comment">/* 停止ボタン */</span>
+<span class="hljs-selector-class">.carousel__control-pause</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#999</span> <span class="hljs-built_in">url</span>(<span class="hljs-string">../img/img_pause.png</span>) <span class="hljs-number">50%</span> center no-repeat;
+}
+
+<span class="hljs-comment">/* インジケーターもしくはサムネイルのコンテナー(リスト) */</span>
+<span class="hljs-selector-class">.carousel__thumbnail-list</span> {
+  <span class="hljs-attribute">display</span>: -ms-grid;
+  <span class="hljs-attribute">display</span>: grid;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.carousel__thumbnail-list</span> {
+    -ms-grid-<span class="hljs-attribute">columns</span>: (<span class="hljs-built_in">minmax</span>(<span class="hljs-number">15%</span>, <span class="hljs-number">1</span>fr))[auto-fit];
+        grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-built_in">minmax</span>(<span class="hljs-number">15%</span>, <span class="hljs-number">1</span>fr));
+    gap: .<span class="hljs-number">5rem</span>;
+    <span class="hljs-attribute">margin-top</span>: .<span class="hljs-number">8rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__thumbnail-list</span> {
+    -ms-grid-<span class="hljs-attribute">columns</span>: (<span class="hljs-number">13%</span>)[auto-fit];
+        grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-number">13%</span>);
+    gap: .<span class="hljs-number">75rem</span>;
+    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">1.5rem</span>;
+  }
+}
+
+<span class="hljs-comment">/* インジケーター・サムネイル ボタン */</span>
+<span class="hljs-selector-class">.carousel__thumbnail-btn</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">height</span>: auto;
+}
+
+<span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&quot;false&quot;</span>]</span> {
+  <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">8</span>;
+  <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+}
+
+<span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&quot;true&quot;</span>]</span> {
+  <span class="hljs-attribute">outline</span>: <span class="hljs-number">0.2rem</span> solid <span class="hljs-number">#248aff</span>;
+  <span class="hljs-attribute">outline-offset</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">outline</span>: <span class="hljs-number">0.125rem</span> solid <span class="hljs-built_in">var</span>(--focusring-color);
+    <span class="hljs-attribute">outline-offset</span>: .<span class="hljs-number">0625rem</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+  }
+}
+
+<span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+}
+
+<span class="hljs-comment">/* サムネイル画像(img) */</span>
+<span class="hljs-selector-class">.carousel__thumbnail-img</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}</pre>
                             </code>
                             
                         </div>
@@ -442,7 +988,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">7.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -1502,7 +2048,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-09T13:38:25.583Z">
+                            <time datetime="2021-05-09T13:51:13.137Z">
                                 5/9/2021
                             </time>
                         

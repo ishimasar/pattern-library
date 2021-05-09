@@ -179,8 +179,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-3ae19607bee71e6d6467a2d17675689c-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-comment">&lt;!-- src/components/tab.hbs --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tab-ui&quot;</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tab-ui&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tablist&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tablist&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;presentasion&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#content1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tab&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tab&quot;</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">&quot;content1&quot;</span> <span class="hljs-attr">aria-selected</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>タブ1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -259,8 +258,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-3ae19607bee71e6d6467a2d17675689c-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-comment">&lt;!-- src/components/tab.hbs --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tab-ui&quot;</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tab-ui&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tablist&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tablist&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;presentasion&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
@@ -388,7 +386,107 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-comment">/* /js/modules/Tab.js */</span>
+
+<span class="hljs-comment">/**
+ * Tab UI class
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tab</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">selector1, selector2, selector3, selector4</span>)</span> {
+    <span class="hljs-built_in">this</span>.tabUi = <span class="hljs-built_in">document</span>.querySelector(selector1);
+    <span class="hljs-built_in">this</span>.tabs = <span class="hljs-built_in">document</span>.querySelectorAll(selector2);
+    <span class="hljs-built_in">this</span>.tabPanelWrap = <span class="hljs-built_in">document</span>.querySelector(selector3);
+    <span class="hljs-built_in">this</span>.tabPanels = <span class="hljs-built_in">document</span>.querySelectorAll(selector4);
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.tabPanels.length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-built_in">this</span>.tabPanels[<span class="hljs-number">0</span>].setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>);
+      <span class="hljs-built_in">this</span>.tabPanels[<span class="hljs-number">1</span>].setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+      <span class="hljs-built_in">this</span>.tabPanels[<span class="hljs-number">2</span>].setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+
+      <span class="hljs-comment">// NodeListを配列に変換</span>
+      <span class="hljs-built_in">this</span>.tabPanelArray = [].slice.call(<span class="hljs-built_in">this</span>.tabPanels);
+      <span class="hljs-built_in">this</span>.heightArray = [];
+    }
+  }
+
+  <span class="hljs-comment">// tabpanelの高さを配列で返す</span>
+  <span class="hljs-function"><span class="hljs-title">getHeight</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.tabPanels.length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">this</span>.tabPanelArray.length; i++) {
+        <span class="hljs-built_in">this</span>.heightArray[i] = <span class="hljs-built_in">this</span>.tabPanelArray[i].offsetHeight;
+        <span class="hljs-comment">// tabPanelHeightにtabpanelの高さの配列を代入</span>
+        <span class="hljs-built_in">this</span>.tabPanelHeight = <span class="hljs-built_in">this</span>.heightArray;
+        <span class="hljs-comment">// tabPanelHeightのなかで最も大きい値を算出し代入</span>
+        <span class="hljs-built_in">this</span>.tabPanelHeight = <span class="hljs-built_in">Math</span>.max.apply(<span class="hljs-literal">null</span>, <span class="hljs-built_in">this</span>.tabPanelHeight);
+      }
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.tabPanelHeight;
+    }
+  }
+
+  <span class="hljs-comment">// 戻り値(算出した最高値)をラップ要素と各tabpanelに高さ付与する</span>
+  <span class="hljs-function"><span class="hljs-title">setHeight</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.tabPanelHeight = <span class="hljs-built_in">this</span>.getHeight();
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.tabPanels.length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-comment">// tabUI全体の高さをtabpanelの最大値分付与(visivility: hidden;で高さが失われた分)</span>
+      <span class="hljs-built_in">this</span>.tabPanelWrap.style.height = <span class="hljs-built_in">this</span>.tabPanelHeight + <span class="hljs-string">&#x27;px&#x27;</span>;
+    }
+  }
+
+  <span class="hljs-comment">// タブを切り替える</span>
+  <span class="hljs-function"><span class="hljs-title">switchTabs</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">this</span>.tabs.length; i++) {
+
+      <span class="hljs-comment">// tabのクリックイベント</span>
+      <span class="hljs-built_in">this</span>.tabs[i].addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        e.preventDefault();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">this</span>.tabs.length; i++) {
+          <span class="hljs-comment">// tabがaria-selected=&quot;true&quot;を持ち、選択状態を示す場合</span>
+          <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.tabs[i].hasAttribute(<span class="hljs-string">&#x27;aria-selected&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>)) {
+            <span class="hljs-comment">// そのtabからaria-selected=&quot;true&quot;を削除して非選択状態を示す</span>
+            <span class="hljs-built_in">this</span>.tabs[i].removeAttribute(<span class="hljs-string">&#x27;aria-selected&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+          }
+          <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.tabPanels[i].hasAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>, <span class="hljs-string">&#x27;0&#x27;</span>)) {
+            <span class="hljs-built_in">this</span>.tabPanels[i].removeAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>, <span class="hljs-string">&#x27;0&#x27;</span>);
+          }
+        }
+        <span class="hljs-comment">// クリックされたtabにaria-selected=&quot;true&quot;を付与して選択状態を示す</span>
+        <span class="hljs-built_in">this</span>.tabs[i].setAttribute(<span class="hljs-string">&#x27;aria-selected&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+
+        <span class="hljs-keyword">let</span> pairedId = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-built_in">this</span>.tabs[i].getAttribute(<span class="hljs-string">&#x27;aria-controls&#x27;</span>));
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">this</span>.tabPanels.length; i++) {
+          <span class="hljs-comment">// tabpanelがaria-hidden=&quot;false&quot;を持ち、表示を示す場合</span>
+          <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.tabPanels[i].hasAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>)) {
+            <span class="hljs-comment">// そのtabpanelにaria-hidden=&quot;true&quot;を付与して非表示を示す</span>
+            <span class="hljs-built_in">this</span>.tabPanels[i].setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+          }
+        }
+        <span class="hljs-comment">// クリックされたtabのaria-control値を参照し、対応するtabpanelに対してaria-hidden=&quot;false&quot;を付与して表示を示す</span>
+        pairedId.setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>);
+
+        pairedId.setAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>, <span class="hljs-string">&#x27;0&#x27;</span>);
+        pairedId.focus();
+      }, { <span class="hljs-attr">passive</span>: <span class="hljs-literal">false</span> });
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-title">throttle</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&#x27;resize&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.setHeight()
+      }, <span class="hljs-number">50</span>);
+    });
+  }
+}
+
+<span class="hljs-comment">/* /js/main.js */</span>
+
+<span class="hljs-keyword">import</span> { Tab } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./modules/Tab.js&#x27;</span>;
+
+<span class="hljs-keyword">const</span> tab = <span class="hljs-keyword">new</span> Tab(<span class="hljs-string">&#x27;.tab-ui&#x27;</span>, <span class="hljs-string">&quot;.tab[role=&#x27;tab&#x27;]&quot;</span>, <span class="hljs-string">&#x27;.tabpanel-wrap&#x27;</span>, <span class="hljs-string">&quot;.tabpanel[role=&#x27;tabpanel&#x27;]&quot;</span>);
+tab.setHeight();
+tab.switchTabs();
+tab.throttle();</pre>
                             </code>
                             
                         </div>
@@ -404,7 +502,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">3.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -417,7 +515,143 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-selector-class">.tab-ui</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">2rem</span> auto;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
+  <span class="hljs-selector-class">.tab-ui</span> {
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">64.25rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.tab-ui</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">90%</span>;
+  }
+}
+
+<span class="hljs-selector-class">.tab-ui__heading</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto <span class="hljs-number">1rem</span>;
+}
+
+<span class="hljs-selector-class">.tablist</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">width</span>: auto;
+}
+
+<span class="hljs-comment">/* タブの隣接部分のborderが太くなることが許せない人向け */</span>
+<span class="hljs-comment">/* .tablist&gt;li:not(:first-of-type) .tab {
+  margin-left: -1px;
+} */</span>
+<span class="hljs-selector-class">.tab</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">65rem</span> <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">text-decoration</span>: none;
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--border-color);
+  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--border-color);
+  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--border-color);
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span> <span class="hljs-number">5px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+  <span class="hljs-comment">/* fade-out effect */</span>
+  <span class="hljs-comment">/* transition: background-color .3s ease, color .3s ease; */</span>
+  <span class="hljs-comment">/* 選択されているタブのスタイル */</span>
+}
+
+<span class="hljs-selector-class">.tab</span><span class="hljs-selector-attr">[aria-selected]</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--black);
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
+  <span class="hljs-selector-class">.tab</span> {
+    <span class="hljs-attribute">width</span>: auto;
+    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">12rem</span>;
+    <span class="hljs-comment">/* タブのhover/focus状態スタイル */</span>
+  }
+  <span class="hljs-selector-class">.tab</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.tab</span><span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#777</span>;
+    <span class="hljs-comment">/* fade-in effect */</span>
+    <span class="hljs-comment">/* transition: background-color .25s ease, color .25s ease; */</span>
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.9375em</span>) {
+  <span class="hljs-selector-class">.tab</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.9375em</span>) {
+  <span class="hljs-selector-class">.tablist</span> &gt; <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">33.33333%</span>;
+  }
+}
+
+<span class="hljs-selector-class">.tabpanel-wrap</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">height</span>: -webkit-fit-content;
+  <span class="hljs-attribute">height</span>: -moz-fit-content;
+  <span class="hljs-attribute">height</span>: fit-content;
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">150px</span>;
+  <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--border-color);
+}
+
+<span class="hljs-selector-class">.tabpanel</span> {
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span> <span class="hljs-number">2rem</span> <span class="hljs-number">2.5rem</span>;
+}
+
+<span class="hljs-selector-class">.tabpanel</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">outline</span>: none;
+}
+
+<span class="hljs-selector-class">.tabpanel</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">9.5%</span>;
+  <span class="hljs-attribute">visibility</span>: visible;
+}
+
+<span class="hljs-selector-class">.tabpanel</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;true&quot;</span>]</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">9.5%</span>;
+  <span class="hljs-attribute">visibility</span>: hidden;
+}
+
+<span class="hljs-selector-class">.tabpanel__list</span> &gt; <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first</span>-of-type) {
+  <span class="hljs-attribute">margin</span>: .<span class="hljs-number">8rem</span> auto auto;
+}
+
+<span class="hljs-selector-class">.tabpanel__paragraph</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1.4rem</span> auto <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.tabpanel__link</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">width</span>: auto;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1.4rem</span> auto <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.other-content</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">64.25rem</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">2rem</span> auto;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span> <span class="hljs-number">2rem</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.other-content</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">90%</span>;
+  }
+}</pre>
                             </code>
                             
                         </div>
@@ -433,7 +667,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">2.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -1493,7 +1727,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-09T13:38:25.583Z">
+                            <time datetime="2021-05-09T13:51:13.137Z">
                                 5/9/2021
                             </time>
                         

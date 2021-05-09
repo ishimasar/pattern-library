@@ -1,0 +1,321 @@
+.carousel {
+  margin: 1rem auto auto;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .carousel {
+    width: 90vw;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .carousel {
+    width: 100%;
+    max-width: 50rem;
+  }
+}
+
+.carousel__wrap {
+  position: relative;
+}
+
+/* フレーム */
+.carousel__frame {
+  padding: 33.33%;
+  overflow: hidden;
+}
+
+/* 各パネルの中身 = コンテンツ (divかaを想定) */
+.carousel__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.carousel__content[aria-hidden="false"] {
+  z-index: 1;
+  opacity: 1;
+  transition: var(--carousel-switch-effect);
+}
+
+.carousel__content[aria-hidden="false"]:focus {
+  opacity: .92;
+  transition: var(--in-transition);
+}
+
+@media print, screen and (min-width: 64em) {
+  .carousel__content[aria-hidden="false"]:hover {
+    opacity: .92;
+    transition: var(--in-transition);
+  }
+}
+
+.carousel__content[aria-hidden="true"] {
+  transition: var(--carousel-fade);
+}
+
+/* コンテンツ画像 */
+.carousel__img {
+  width: 100%;
+  height: 100%;
+}
+
+/* カルーセル アニメーション ※必要に応じてご利用ください */
+/*
+ * コントローラー群 - 前へナビ、次へナビ、再生ボタン、停止ボタン
+ * 拡張性担保のため、classセレクタ名は一意にしている
+ */
+.carousel__control-pause,
+.carousel__control-play,
+.carousel__control-next,
+.carousel__control-prev {
+  position: absolute;
+  padding: .1rem .5rem;
+  text-align: center;
+}
+
+.carousel__control-next,
+.carousel__control-prev {
+  top: 50%;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  transition: var(--out-transition);
+}
+
+.carousel__control-next:before,
+.carousel__control-prev:before {
+  position: absolute;
+  top: 50%;
+  display: block;
+  border-style: solid;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  content: "";
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .carousel__control-next:before,
+  .carousel__control-prev:before {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-color: var(--white);
+    border-width: 0 2px 2px 0;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .carousel__control-next:before,
+  .carousel__control-prev:before {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border-color: var(--border-color);
+    border-width: 0 3px 3px 0;
+  }
+}
+
+.carousel__control-next:focus,
+.carousel__control-prev:focus {
+  transition: var(--in-transition);
+}
+
+@media print, screen and (min-width: 64em) {
+  .carousel__control-next:hover,
+  .carousel__control-prev:hover {
+    transition: var(--in-transition);
+  }
+}
+
+.carousel__control-pause,
+.carousel__control-play {
+  z-index: 2;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .carousel__control-pause,
+  .carousel__control-play {
+    bottom: 3%;
+    left: 50%;
+    width: 2.8rem;
+    height: 2em;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .carousel__control-pause,
+  .carousel__control-play {
+    right: 2%;
+    bottom: 3%;
+    width: 3.3rem;
+    height: 2.5em;
+  }
+}
+
+.carousel__control-pause[aria-hidden="true"],
+.carousel__control-play[aria-hidden="true"] {
+  z-index: 0;
+  visibility: hidden;
+}
+
+.carousel__control-pause[aria-hidden="false"],
+.carousel__control-play[aria-hidden="false"] {
+  visibility: visible;
+}
+
+.carousel__control-pause:focus,
+.carousel__control-play:focus {
+  background-color: var(--contrast-limit-gray);
+}
+
+@media print, screen and (min-width: 64em) {
+  .carousel__control-pause:hover,
+  .carousel__control-play:hover {
+    background-color: var(--contrast-limit-gray);
+  }
+}
+
+/* 前へナビ */
+.carousel__control-prev {
+  transition: all 0.3s var(--ease-out-quad);
+}
+
+.carousel__control-prev:before {
+  -webkit-transform: translate(0, -50%) rotate(135deg);
+          transform: translate(0, -50%) rotate(135deg);
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .carousel__control-prev {
+    left: .2rem;
+    z-index: 1;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .carousel__control-prev {
+    left: -2.2rem;
+  }
+  .carousel__control-prev:hover {
+    -webkit-transform: translate(-10%, -50%) rotate(0);
+            transform: translate(-10%, -50%) rotate(0);
+    transition: all 0.25s var(--ease-in-quad);
+  }
+}
+
+/* 次へナビ */
+.carousel__control-next {
+  transition: -webkit-transform 0.3s var(--ease-out-quad);
+  transition: transform 0.3s var(--ease-out-quad);
+  transition: transform 0.3s var(--ease-out-quad), -webkit-transform 0.3s var(--ease-out-quad);
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .carousel__control-next {
+    right: -.3rem;
+    z-index: 1;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .carousel__control-next {
+    right: -2.2rem;
+  }
+  .carousel__control-next:hover {
+    -webkit-transform: translate(10%, -50%) rotate(0);
+            transform: translate(10%, -50%) rotate(0);
+    transition: -webkit-transform 0.25s var(--ease-in-quad);
+    transition: transform 0.25s var(--ease-in-quad);
+    transition: transform 0.25s var(--ease-in-quad), -webkit-transform 0.25s var(--ease-in-quad);
+  }
+}
+
+.carousel__control-next:before {
+  -webkit-transform: translate(0, -50%) rotate(-45deg);
+          transform: translate(0, -50%) rotate(-45deg);
+}
+
+/* 再生ボタン */
+@media print, screen and (max-width: 63.9375em) {
+  .carousel__control-play {
+    background: #999 url(../img/img_play.png) 53% center no-repeat;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .carousel__control-play {
+    background: #999 url(../img/img_play.png) 56% center no-repeat;
+  }
+}
+
+/* 停止ボタン */
+.carousel__control-pause {
+  background: #999 url(../img/img_pause.png) 50% center no-repeat;
+}
+
+/* インジケーターもしくはサムネイルのコンテナー(リスト) */
+.carousel__thumbnail-list {
+  display: -ms-grid;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .carousel__thumbnail-list {
+    -ms-grid-columns: (minmax(15%, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+    gap: .5rem;
+    margin-top: .8rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .carousel__thumbnail-list {
+    -ms-grid-columns: (13%)[auto-fit];
+        grid-template-columns: repeat(auto-fit, 13%);
+    gap: .75rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* インジケーター・サムネイル ボタン */
+.carousel__thumbnail-btn {
+  width: 100%;
+  height: auto;
+}
+
+.carousel__thumbnail-btn[aria-selected="false"] {
+  opacity: .8;
+  transition: opacity 0.3s var(--ease-out-quad);
+}
+
+.carousel__thumbnail-btn[aria-selected="true"] {
+  outline: 0.2rem solid #248aff;
+  outline-offset: 0;
+  opacity: 1;
+}
+
+@media print, screen and (min-width: 64em) {
+  .carousel__thumbnail-btn:hover {
+    outline: 0.125rem solid var(--focusring-color);
+    outline-offset: .0625rem;
+    opacity: 1;
+    transition: opacity 0.25s var(--ease-in-quad);
+  }
+}
+
+.carousel__thumbnail-btn:focus {
+  opacity: 1;
+  transition: opacity 0.25s var(--ease-in-quad);
+}
+
+/* サムネイル画像(img) */
+.carousel__thumbnail-img {
+  width: 100%;
+}

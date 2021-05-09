@@ -1,5 +1,3 @@
-'use strict'
-
 export class Tab {
   constructor(selector1, selector2, selector3, selector4) {
     this.tabUi = document.querySelector(selector1);
@@ -87,7 +85,3 @@ export class Tab {
     });
   }
 }
-
-// new Tab().setHeight();
-// new Tab().switchTabs();
-// new Tab().throttle();

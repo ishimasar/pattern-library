@@ -1,5 +1,3 @@
-'use strict';
-
 export class Carousel {
   constructor(triggerClass, img, thumb, prev, next, play, pause) {
     this.current = 0; // 現在地を示すインデックス番号：初期値0=1番目

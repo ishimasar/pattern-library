@@ -1,0 +1,137 @@
+.tab-ui {
+  position: relative;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+@media print, screen and (min-width: 48em) {
+  .tab-ui {
+    max-width: 64.25rem;
+  }
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .tab-ui {
+    width: 90%;
+  }
+}
+
+.tab-ui__heading {
+  margin: 0 auto 1rem;
+}
+
+.tablist {
+  display: flex;
+  width: auto;
+}
+
+/* タブの隣接部分のborderが太くなることが許せない人向け */
+/* .tablist>li:not(:first-of-type) .tab {
+  margin-left: -1px;
+} */
+.tab {
+  display: inline-block;
+  padding: .65rem 1rem;
+  color: var(--black);
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  border-radius: 5px 5px 0 0;
+  /* fade-out effect */
+  /* transition: background-color .3s ease, color .3s ease; */
+  /* 選択されているタブのスタイル */
+}
+
+.tab[aria-selected] {
+  color: var(--white);
+  background: var(--black);
+}
+
+@media print, screen and (min-width: 48em) {
+  .tab {
+    width: auto;
+    min-width: 12rem;
+    /* タブのhover/focus状態スタイル */
+  }
+  .tab:hover, .tab:focus {
+    color: var(--white);
+    background: #777;
+    /* fade-in effect */
+    /* transition: background-color .25s ease, color .25s ease; */
+  }
+}
+
+@media print, screen and (max-width: 47.9375em) {
+  .tab {
+    width: 100%;
+  }
+}
+
+@media print, screen and (max-width: 47.9375em) {
+  .tablist > li {
+    width: 33.33333%;
+  }
+}
+
+.tabpanel-wrap {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 150px;
+  overflow: hidden;
+  color: var(--black);
+  border: 1px solid var(--border-color);
+}
+
+.tabpanel {
+  z-index: 0;
+  width: 100%;
+  padding: 1rem 2rem 2.5rem;
+}
+
+.tabpanel:focus {
+  outline: none;
+}
+
+.tabpanel[aria-hidden="false"] {
+  position: absolute;
+  top: 9.5%;
+  visibility: visible;
+}
+
+.tabpanel[aria-hidden="true"] {
+  position: absolute;
+  top: 9.5%;
+  visibility: hidden;
+}
+
+.tabpanel__list > li:not(:first-of-type) {
+  margin: .8rem auto auto;
+}
+
+.tabpanel__paragraph {
+  margin: 1.4rem auto 0;
+}
+
+.tabpanel__link {
+  display: inline-block;
+  width: auto;
+  margin: 1.4rem auto 0;
+}
+
+.other-content {
+  width: 100%;
+  max-width: 64.25rem;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border: 1px solid var(--black);
+}
+
+@media print, screen and (max-width: 63.9375em) {
+  .other-content {
+    width: 90%;
+  }
+}

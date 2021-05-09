@@ -1,5 +1,3 @@
-'use strict';
-
 export class ModalDialog {
   constructor(id1) {
     this.wrap = document.getElementById(id1);
