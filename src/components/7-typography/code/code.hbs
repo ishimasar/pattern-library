@@ -1,13 +1,15 @@
 <div class="code-highliter-prism">
   <span>hoge/fuga/index.html</span>
   <div class="code-toolbar">
-    <pre class="language-html">
+    <pre>
       <code class="language-html">
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Introduction to The Mating Rituals of Bees<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-  ...
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>heading<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Introduction<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>This companion guide to the highly successful
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span><span class="token punctuation">&gt;</span></span>Introduction to Medieval Bee-Keeping<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">&gt;</span></span> book is...</code>
+  &lt;title&gt;Introduction to The Mating Rituals of Bees&lt;/title&gt;
+    ...
+  &lt;h1 class="heading"&gt;Introduction&lt;/h1&gt;
+  &lt;p&gt;This companion guide to the highly successful
+    &lt;cite&gt;Introduction to Medieval Bee-Keeping&lt;/cite&gt;
+    book is...
+  &lt;/p&gt;</code>
     </pre>
     <div class="toolbar">
       <div class="toolbar-item"><span class="file-name">HTML</span></div>
@@ -18,27 +20,27 @@
   <div class="code-toolbar">
     <pre class="language-js">
       <code class="language-js">
-  <span class="token keyword">function</span> <span class="token function">$initHighlight</span><span class="token punctuation">(</span><span class="token parameter">block<span class="token punctuation">,</span> cls</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">try</span> <span class="token punctuation">{</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>cls<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\bno\-highlight\b</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> <span class="token function">process</span><span class="token punctuation">(</span>block<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token number">0x0F</span><span class="token punctuation">)</span> <span class="token operator">+</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string"> class="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>cls<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">"</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token comment">/* handle exception */</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> classes<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">checkCondition</span><span class="token punctuation">(</span>classes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'undefined'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">return</span> <span class="token punctuation">(</span>
-  <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-  <span class="token operator">&lt;</span>web<span class="token operator">-</span>component<span class="token operator">&gt;</span><span class="token punctuation">{</span>block<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>web<span class="token operator">-</span>component<span class="token operator">&gt;</span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
-  <span class="token keyword">export</span>  $initHighlight<span class="token punctuation">;</span></code>
+  function $initHighlight(block, cls) {
+    try {
+      if (cls.search(/\bno\-highlight\b/) != -1) {
+        return process(block, true, 0x0F) +` class="${cls}"`;
+      }
+    } catch (e) {
+      /* handle exception */
+    }
+    for (var i = 0 / 2; i < classes.length; i++) {
+      if (checkCondition(classes[i]) === undefined) {
+        console.log('undefined');
+      }
+    }
+    return ( &lt;div&gt; &lt;web-component&gt;{block}&lt;/web-component&gt; &lt;/div&gt; )
+  }
+  export $initHighlight;</code>
     </pre>
     <div class="toolbar">
       <div class="toolbar-item"><span class="file-name">JavaScript</span>
     </div>
   </div>
 </div>
+
+<script src="{{ path '/js/prism.js' }}" type="module" defer></script>
