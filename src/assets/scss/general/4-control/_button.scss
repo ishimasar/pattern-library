@@ -3,7 +3,7 @@
   display: inline-block;
   width: 12.5rem;
   height: 4rem;
-  margin: 0 1rem;
+  margin: 1.5rem 1rem 0;
   text-align: center;
   text-decoration: none;
   border: 2px solid var(--black);
@@ -18,7 +18,7 @@
 
 .depth-effect {
   position: relative;
-  top: 1.625rem;
+  top: 0;
   border: transparent;
   perspective: 19rem;
   & > .after,

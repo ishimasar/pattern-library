@@ -2460,7 +2460,7 @@ svg circle {
   display: inline-block;
   width: 12.5rem;
   height: 4rem;
-  margin: 0 1rem;
+  margin: 1.5rem 1rem 0;
   text-align: center;
   text-decoration: none;
   border: 2px solid var(--black);
@@ -2475,7 +2475,7 @@ svg circle {
 
 .depth-effect {
   position: relative;
-  top: 1.625rem;
+  top: 0;
   border: transparent;
   -webkit-perspective: 19rem;
           perspective: 19rem;
@@ -2795,9 +2795,8 @@ svg circle {
   border-radius: 5rem 5rem 0 0;
 }
 
-.flexbox.-primary {
+.flexbox {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   align-items: stretch;
   width: 90vw;
@@ -2806,26 +2805,30 @@ svg circle {
 }
 
 @media print, screen and (min-width: 64em) {
-  .flexbox.-primary {
+  .flexbox {
     margin-top: 2rem;
   }
 }
 
 @media print, screen and (max-width: 63.9375em) {
-  .flexbox.-primary {
+  .flexbox {
     margin-top: 1.5rem;
   }
 }
 
-.flexbox.-primary::after, .flexbox.-primary::before {
+.flexbox::after, .flexbox::before {
   content: "";
   display: block;
   width: 32%;
   height: 0;
 }
 
-.flexbox.-primary::before {
+.flexbox::before {
   order: 1;
+}
+
+.flexbox.-primary {
+  justify-content: space-between;
 }
 
 .blockquote {
