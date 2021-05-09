@@ -179,9 +179,9 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-fa649292ad42d612867c3402ce5927d6-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pageTop&quot;</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pageTop&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;smooth-scroll&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>スムーズスクロール(Back to top含む)<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>スムーズスクロール(Back to top含む) *レスポンシブ未対応<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;global-nav&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
@@ -265,9 +265,9 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-fa649292ad42d612867c3402ce5927d6-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pageTop&quot;</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pageTop&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;smooth-scroll&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>スムーズスクロール(Back to top含む)<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>スムーズスクロール(Back to top含む) *レスポンシブ未対応<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;global-nav&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
@@ -393,7 +393,87 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-meta">&#x27;use strict&#x27;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">scrollSmooth</span>(<span class="hljs-params"></span>) </span>{
+
+  <span class="hljs-comment">// スクロール移動時間(ms)</span>
+  <span class="hljs-keyword">const</span> transitionTime = <span class="hljs-number">500</span>;
+  <span class="hljs-comment">// 繰り返す回数(アニメーションの回数）の計算</span>
+  <span class="hljs-keyword">const</span> endTime = transitionTime / <span class="hljs-number">1000</span> * <span class="hljs-number">60</span>;
+
+  <span class="hljs-comment">// easing計算式 -&gt; easeInOutQuad</span>
+  <span class="hljs-keyword">const</span> easing = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t, b, c, d</span>) </span>{
+    <span class="hljs-keyword">if</span> ((t/=d/<span class="hljs-number">2</span>) &lt; <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> c/<span class="hljs-number">2</span>*t*t + b;
+    <span class="hljs-keyword">return</span> -c/<span class="hljs-number">2</span> * ((--t)*(t-<span class="hljs-number">2</span>) - <span class="hljs-number">1</span>) + b;
+  };
+
+  <span class="hljs-comment">// 移動関数(スムーズアニメーション実行関数)</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">pageScroll</span>(<span class="hljs-params">pos</span>) </span>{
+    <span class="hljs-keyword">let</span> xPos = <span class="hljs-built_in">window</span>.pageXOffset; <span class="hljs-comment">// 画面横位置</span>
+    <span class="hljs-keyword">let</span> yPos = <span class="hljs-built_in">window</span>.pageYOffset; <span class="hljs-comment">// 画面縦位置</span>
+    <span class="hljs-keyword">let</span> moved = pos - yPos; <span class="hljs-comment">// 移動距離</span>
+    <span class="hljs-keyword">let</span> time = <span class="hljs-number">1</span>;
+    (<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">scrollMoved</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-built_in">window</span>.scrollTo(xPos, easing(time, yPos, moved, endTime));
+      time++ ;
+      <span class="hljs-keyword">if</span> (time &lt;= endTime) {
+        <span class="hljs-built_in">window</span>.requestAnimationFrame(scrollMoved);
+      }
+    })();
+  }
+
+  <span class="hljs-comment">// hashからelementを取得する関数</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getElm</span>(<span class="hljs-params">h</span>) </span>{
+    <span class="hljs-keyword">let</span> deCode = <span class="hljs-built_in">decodeURI</span>(h);
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">document</span>.querySelector( deCode + <span class="hljs-string">&#x27;,a[name=&quot;&#x27;</span> + deCode.substr(<span class="hljs-number">1</span>)  + <span class="hljs-string">&#x27;&quot;]&#x27;</span>);
+  }
+
+  <span class="hljs-comment">// 移動先の位置を取得する関数</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getPos</span>(<span class="hljs-params">t</span>) </span>{
+    <span class="hljs-keyword">let</span> tPos = t.getBoundingClientRect();
+    <span class="hljs-keyword">return</span> tPos.top + <span class="hljs-built_in">window</span>.pageYOffset;
+  }
+
+  <span class="hljs-comment">// ページ内リンクを取得</span>
+  <span class="hljs-keyword">const</span> entryPageLinks = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;#pageTop a[href^=&quot;#&quot;]&#x27;</span>);
+  <span class="hljs-keyword">const</span> toc = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;.toc__link&#x27;</span>);
+  <span class="hljs-keyword">const</span> section = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;.section&#x27;</span>);
+
+  <span class="hljs-comment">// ページ内リンクにイベントを登録</span>
+  <span class="hljs-keyword">if</span> (entryPageLinks.length) {
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; entryPageLinks.length &gt; i; i++) {
+      entryPageLinks[i].addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">e</span>)  =&gt;</span> {
+        <span class="hljs-keyword">let</span> href = e.target.hash;
+        <span class="hljs-keyword">if</span> ( (href != <span class="hljs-string">&#x27;&#x27;</span>) &amp;&amp; (href != <span class="hljs-string">&#x27;#&#x27;</span>)) {
+          <span class="hljs-keyword">let</span> targetElm = getElm(href);
+          <span class="hljs-keyword">if</span> (targetElm) {
+            (e.preventDefault) ? e.preventDefault(): e.returnValue = <span class="hljs-literal">false</span>;
+            pageScroll(getPos(targetElm));
+            targetElm.setAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>, <span class="hljs-string">&#x27;0&#x27;</span>);
+            targetElm.focus();
+            targetElm.addEventListener(<span class="hljs-string">&#x27;blur&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+              targetElm.removeAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>);
+            });
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; toc.length &gt; i; i++) {
+              <span class="hljs-keyword">if</span> (href === toc[i].hash) {
+                toc[i].classList.add(<span class="hljs-string">&#x27;is-current&#x27;</span>);
+              } <span class="hljs-keyword">else</span> {
+                toc[i].classList.remove(<span class="hljs-string">&#x27;is-current&#x27;</span>);
+              }
+            }
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; section.length &gt; i; i++) {
+              <span class="hljs-keyword">if</span> (targetElm !== section[i]) {
+                section[i].removeAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>);
+              }
+            }
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+          }
+        }
+      });
+    }
+  }
+}</pre>
                             </code>
                             
                         </div>
@@ -409,7 +489,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">2.6 KB</span>
                 </li>
             </ul>
         </div>
@@ -422,7 +502,127 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.header</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">4rem</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.global-nav</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">6rem</span>;
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">5.5rem</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#eee</span>;
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: row-reverse;
+  <span class="hljs-attribute">justify-content</span>: flex-start;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">80rem</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">3rem</span> auto;
+}
+
+<span class="hljs-keyword">@media</span> all <span class="hljs-keyword">and</span> (<span class="hljs-attribute">-ms-high-contrast</span>: none) {
+  <span class="hljs-selector-class">.smooth-scroll</span> *::-ms-backdrop,
+  .smooth-scroll .container {
+    max-width: none;
+  }
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.main</span> {
+  <span class="hljs-attribute">min-width</span>: <span class="hljs-number">80%</span>;
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section-wrap</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">width</span>: auto;
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span> {
+  <span class="hljs-attribute">width</span>: auto;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">10rem</span>;
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">2rem</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">6rem</span> <span class="hljs-number">50px</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">list-style-type</span>: none;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">outline</span>: none;
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section__heading</span> {
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">4rem</span>;
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.aside</span> {
+  <span class="hljs-attribute">min-width</span>: <span class="hljs-number">20%</span>;
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.side-box</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">12rem</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#ddd</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc</span> {
+  <span class="hljs-attribute">position</span>: -webkit-sticky;
+  <span class="hljs-attribute">position</span>: sticky;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">2rem</span>;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">1.5rem</span> <span class="hljs-number">2rem</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">3</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#b5e9f7</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-class">.is-current</span>,
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">font-weight</span>: bold;
+  <span class="hljs-attribute">text-decoration</span>: none;
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.footer</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">500px</span>;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">10rem</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+}
+
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.back-to-top</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: -<span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">8%</span>;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">6rem</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">padding-top</span>: .<span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">font-weight</span>: bold;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5rem</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5rem</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ccc</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5rem</span> <span class="hljs-number">5rem</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+}</pre>
                             </code>
                             
                         </div>
@@ -438,7 +638,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">2.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -1498,7 +1698,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-09T12:17:03.018Z">
+                            <time datetime="2021-05-09T12:22:56.687Z">
                                 5/9/2021
                             </time>
                         

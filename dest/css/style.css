@@ -2673,8 +2673,7 @@ svg circle {
   opacity: 1;
 }
 
-/* styling */
-.header {
+.smooth-scroll .header {
   position: relative;
   padding-top: 4rem;
   font-size: 1rem;
@@ -2682,7 +2681,7 @@ svg circle {
   border: 1px solid var(--black);
 }
 
-.global-nav {
+.smooth-scroll .global-nav {
   width: 100%;
   height: 6rem;
   margin-top: 5.5rem;
@@ -2692,7 +2691,7 @@ svg circle {
   border-left: 1px solid var(--black);
 }
 
-.container {
+.smooth-scroll .container {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;
@@ -2702,23 +2701,23 @@ svg circle {
 }
 
 @media all and (-ms-high-contrast: none) {
-  *::-ms-backdrop,
-  .container {
+  .smooth-scroll *::-ms-backdrop,
+  .smooth-scroll .container {
     max-width: none;
   }
 }
 
-.main {
+.smooth-scroll .main {
   min-width: 80%;
 }
 
-.section-wrap {
+.smooth-scroll .section-wrap {
   display: flex;
   flex-direction: column;
   width: auto;
 }
 
-.section {
+.smooth-scroll .section {
   width: auto;
   margin-bottom: 10rem;
   margin-left: 2rem;
@@ -2728,19 +2727,19 @@ svg circle {
   border: 1px solid black;
 }
 
-.section:focus {
+.smooth-scroll .section:focus {
   outline: none;
 }
 
-.section__heading {
+.smooth-scroll .section__heading {
   margin-bottom: 4rem;
 }
 
-.aside {
+.smooth-scroll .aside {
   min-width: 20%;
 }
 
-.side-box {
+.smooth-scroll .side-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2749,7 +2748,7 @@ svg circle {
   border: 1px solid var(--black);
 }
 
-.toc {
+.smooth-scroll .toc {
   position: -webkit-sticky;
   position: sticky;
   top: 2rem;
@@ -2764,14 +2763,14 @@ svg circle {
   border: 1px solid var(--black);
 }
 
-.toc__link.is-current,
-.toc__link:hover,
-.toc__link:focus {
+.smooth-scroll .toc__link.is-current,
+.smooth-scroll .toc__link:hover,
+.smooth-scroll .toc__link:focus {
   font-weight: bold;
   text-decoration: none;
 }
 
-.footer {
+.smooth-scroll .footer {
   position: relative;
   height: 500px;
   padding-top: 10rem;
@@ -2780,7 +2779,7 @@ svg circle {
   border: 1px solid var(--black);
 }
 
-.back-to-top {
+.smooth-scroll .back-to-top {
   position: absolute;
   top: -3rem;
   right: 8%;
