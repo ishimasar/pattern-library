@@ -48,4 +48,8 @@
   @include mq(sp) {
     padding-top: 0.4rem;
   }
+  &.is-current {
+    font-weight: bold;
+    text-decoration: none;
+  }
 }

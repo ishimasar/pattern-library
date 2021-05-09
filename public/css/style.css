@@ -1285,6 +1285,11 @@ legend {
   }
 }
 
+.toc__link.is-current {
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .accordion-wrap {
   margin: 2rem auto;
 }
