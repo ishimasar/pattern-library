@@ -1,0 +1,72 @@
+.list {
+  margin-left: 1.7rem;
+  line-height: 1.8;
+}
+
+.list.-itemized {
+  list-style: disc inside;
+}
+
+.list.-itemized ul {
+  list-style: circle inside;
+}
+
+.list.-itemized ul ul {
+  list-style: square inside;
+}
+
+.list.-ordered {
+  list-style: decimal inside;
+}
+
+.list.-ordered ol {
+  list-style: inherit;
+}
+
+.list li {
+  margin-top: 0.8rem;
+}
+
+.list li > * {
+  display: block;
+  margin-top: 0.4rem;
+  text-indent: 1.5rem;
+}
+
+.list li > * li > * {
+  text-indent: 3rem;
+}
+
+.list li > * li > * li > * {
+  text-indent: 4.5rem;
+}
+
+.list li ul {
+  margin-top: 0.3rem;
+  text-indent: 1.5rem;
+}
+
+.list li ul ul {
+  margin-top: 0.6rem;
+  text-indent: 3rem;
+}
+
+.list .link {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+@media print, screen and (min-width: 64em) {
+  .list .link:hover {
+    text-decoration: none;
+  }
+}
+
+.list .link > .icon {
+  margin-left: 0.2rem;
+  font-size: calc(var(--font-size-m1));
+}

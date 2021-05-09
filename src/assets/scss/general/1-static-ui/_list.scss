@@ -1,27 +1,48 @@
-.geList {
-  margin-left: 1.7em;
-  line-height: 1.7rem;
-  &.-disc {
-    list-style-type: disc;
-  }
-  > li {
-    margin-top: 0.8rem;
-    > ul {
-      margin-top: 0.3rem;
-      padding-left: 1.5rem;
-      list-style-type: circle;
-      text-indent: 1.5rem;
-      > li {
-        line-height: 1.8;
-        > div {
-          text-indent: 0;
-        }
+.list {
+  margin-left: 1.7rem;
+  line-height: 1.8;
+  &.-itemized {
+    list-style: disc inside;
+    & ul {
+      list-style: circle inside;
+      & ul {
+        list-style: square inside;
       }
     }
   }
+  &.-ordered {
+    list-style: decimal inside;
+    & ol {
+      list-style: inherit;
+    }
+  }
+
+  & li {
+    margin-top: 0.8rem;
+    > * {
+      display: block;
+      margin-top: 0.4rem;
+      text-indent: 1.5rem;
+      & li > * {
+        text-indent: 1.5rem * 2;
+        & li > * {
+          text-indent: 1.5rem * 3;
+        }
+      }
+    }
+    & ul {
+      margin-top: 0.3rem;
+      text-indent: 1.5rem;
+      & ul {
+        margin-top: 0.3rem * 2;
+        text-indent: 1.5rem * 2;
+      }
+    }
+  }
+
   & .link {
-    display: inline-block;
-    width: auto;
+    display: block;
+    width: fit-content;
     text-decoration: underline;
     color: var(--accent-color);
     @include mq(dt) {
