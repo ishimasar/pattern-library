@@ -2783,7 +2783,7 @@ svg circle {
   border-radius: 5rem 5rem 0 0;
 }
 
-.geFlexbox {
+.flexbox.-primary {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -2794,25 +2794,25 @@ svg circle {
 }
 
 @media print, screen and (min-width: 64em) {
-  .geFlexbox {
+  .flexbox.-primary {
     margin-top: 2rem;
   }
 }
 
 @media print, screen and (max-width: 63.9375em) {
-  .geFlexbox {
+  .flexbox.-primary {
     margin-top: 1.5rem;
   }
 }
 
-.geFlexbox::after, .geFlexbox::before {
+.flexbox.-primary::after, .flexbox.-primary::before {
   content: "";
   display: block;
   width: 32%;
   height: 0;
 }
 
-.geFlexbox::before {
+.flexbox.-primary::before {
   order: 1;
 }
 
