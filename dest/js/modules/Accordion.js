@@ -1,6 +1,8 @@
 /**
  * Accordion UI class
  */
+ 'use strict';
+
 export class Accordion {
   constructor(el) {
     this.details = el;
@@ -12,26 +14,23 @@ export class Accordion {
     this.allClose = document.getElementById('all-close');
   }
 
-
   handleEvents() {
-    if (this.details.open) {
-      this.handlers = {};
-      this.handlers.click = this.onClick.bind(this);
-      this.summary.addEventListener('click', this.handlers.click);
-      this.handlers.transitionEnd = this.onTransitionEnd.bind(this);
+    this.handlers = {};
+    this.handlers.click = this.onClick.bind(this);
+    this.summary.addEventListener('click', this.handlers.click);
+    this.handlers.transitionEnd = this.onTransitionEnd.bind(this);
 
-      this.handlers.click = this.onAllOpen.bind(this);
-      this.allOpen.addEventListener('click', this.handlers.click);
+    this.handlers.click = this.onAllOpen.bind(this);
+    this.allOpen.addEventListener('click', this.handlers.click);
 
-      this.handlers.click = this.onAllClose.bind(this);
-      this.allClose.addEventListener('click', this.handlers.click);
+    this.handlers.click = this.onAllClose.bind(this);
+    this.allClose.addEventListener('click', this.handlers.click);
 
-      window.addEventListener('resize', () => {
-        setTimeout(() => {
-          this.onResize();
-        }, 50);
-      });
-    }
+    window.addEventListener('resize', () => {
+      setTimeout(() => {
+        this.onResize();
+      }, 50);
+    });
   }
 
   onClick(e) {
@@ -50,13 +49,8 @@ export class Accordion {
 
       this.allClose.classList.remove('is-disabled');
     }
-    e.preventDefault();
-  }
 
-  onTransitionEnd() {
-    this.collapse.removeEventListener('transitionend', this.handlers.transitionEnd);
-    this.details.open = false;
-    this.allOpen.classList.remove('is-disabled');
+    e.preventDefault();
   }
 
   onAllOpen() {
@@ -79,6 +73,12 @@ export class Accordion {
       this.details.setAttribute('aria-expanded', 'false');
       this.collapse.setAttribute('aria-hidden', 'true');
     }
+  }
+
+  onTransitionEnd() {
+    this.collapse.removeEventListener('transitionend', this.handlers.transitionEnd);
+    this.details.open = false;
+    this.allOpen.classList.remove('is-disabled');
   }
 
   onResize() {

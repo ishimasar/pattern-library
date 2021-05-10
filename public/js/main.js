@@ -12,7 +12,7 @@ import { UiModeSwitcher } from './modules/UiModeSwitcher.js';
 import { toggleToc } from './modules/ToggleToc.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const detailsEls = document.getElementsByClassName('accordion-details');
+  const detailsEls = document.querySelectorAll('.accordion-details');
 
   for (let i = 0; i < detailsEls.length; i++) {
     const accordion = new Accordion(detailsEls[i]);
