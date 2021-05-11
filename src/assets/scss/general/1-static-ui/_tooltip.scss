@@ -61,13 +61,20 @@
     border-top: 17px #333 solid;
   }
   &:hover::after,
+  &:focus::after {
+    transition: opacity 0.15s ease-out, bottom 0.1s ease-in-out;
+  }
+  &:hover::before,
+  &:focus::before {
+    transition: opacity 0.4s ease-out, bottom 0.4s ease-in-out;
+  }
+  &:hover::after,
   &:focus::after,
   &:hover::before,
   &:focus::before {
     left: 50%;
     opacity: 1;
     transform: translateX(-50%);
-    transition: opacity 0.25s ease-in-out, bottom 0.25s ease-in-out;
   }
   > .icon {
     font-size: calc(var(--font-size-l4));

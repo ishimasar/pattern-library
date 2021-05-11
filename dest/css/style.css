@@ -1222,6 +1222,133 @@ legend {
   font-size: calc(var(--font-size-m1));
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+@media print, screen and (min-width: 48em) {
+  .pagination {
+    max-width: 50rem;
+    margin: 3rem auto auto;
+  }
+}
+
+@media print, screen and (max-width: 47.9375em) {
+  .pagination {
+    max-width: 80vw;
+    margin: 2.5rem auto auto;
+  }
+}
+
+@media print, screen and (min-width: 48em) {
+  .pagination > li {
+    margin-left: 2rem;
+  }
+}
+
+@media print, screen and (max-width: 47.9375em) {
+  .pagination > li {
+    margin-left: 3rem;
+  }
+}
+
+.pagination .link,
+.pagination .current {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+@media print, screen and (min-width: 48em) {
+  .pagination .link,
+  .pagination .current {
+    padding: 0.6rem 0.8rem;
+    font-size: calc(var(--font-size-l1));
+  }
+}
+
+@media print, screen and (max-width: 47.9375em) {
+  .pagination .link,
+  .pagination .current {
+    padding: 0.3rem 0.4rem;
+  }
+}
+
+.pagination .link:after,
+.pagination .current:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+@media print, screen and (min-width: 48em) {
+  .pagination .link:after,
+  .pagination .current:after {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 1rem;
+  }
+}
+
+@media print, screen and (max-width: 47.9375em) {
+  .pagination .link:after,
+  .pagination .current:after {
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+  }
+}
+
+.pagination .link {
+  color: var(--text-dark-color);
+}
+
+.pagination .link:after {
+  border: 1px solid #0e51a8;
+  background-color: var(--white);
+}
+
+.pagination .current {
+  font-weight: bold;
+  color: var(--white);
+}
+
+.pagination .current:after {
+  background-color: #0e51a8;
+}
+
+.pagination-prev {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: auto;
+  height: 100%;
+  -webkit-transform: translateY(-38%);
+          transform: translateY(-38%);
+}
+
+.pagination-next {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-left: 3rem;
+  margin-right: 0;
+  width: auto;
+  height: 100%;
+  -webkit-transform: translateY(-38%);
+          transform: translateY(-38%);
+}
+
 .toc-container {
   padding: 0.5rem 2rem;
   border: 1px dotted #333;
@@ -1360,12 +1487,19 @@ legend {
   border-top: 17px #333 solid;
 }
 
+.tooltip:hover::after, .tooltip:focus::after {
+  transition: opacity 0.15s ease-out, bottom 0.1s ease-in-out;
+}
+
+.tooltip:hover::before, .tooltip:focus::before {
+  transition: opacity 0.4s ease-out, bottom 0.4s ease-in-out;
+}
+
 .tooltip:hover::after, .tooltip:focus::after, .tooltip:hover::before, .tooltip:focus::before {
   left: 50%;
   opacity: 1;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  transition: opacity 0.25s ease-in-out, bottom 0.25s ease-in-out;
 }
 
 .tooltip > .icon {

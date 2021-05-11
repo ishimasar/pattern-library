@@ -1,0 +1,89 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  @include mq(tb-dth) {
+    max-width: 50rem;
+    margin: 3rem auto auto;
+  }
+  @include mq(sp) {
+    max-width: 80vw;
+    margin: 2.5rem auto auto;
+  }
+  > li {
+    @include mq(tb-dth) {
+      margin-left: 2rem;
+    }
+    @include mq(sp) {
+      margin-left: 3rem;
+    }
+  }
+  & .link,
+  & .current {
+    display: block;
+    position: relative;
+    z-index: 1;
+    @include mq(tb-dth) {
+      padding: 0.6rem 0.8rem;
+      font-size: calc(var(--font-size-l1));
+    }
+    @include mq(sp) {
+      padding: 0.3rem 0.4rem;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      @include mq(tb-dth) {
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 1rem;
+      }
+      @include mq(sp) {
+        width: 3rem;
+        height: 3rem;
+        padding: 1rem;
+      }
+    }
+  }
+  & .link {
+    color: var(--text-dark-color);
+    &:after {
+      border: 1px solid rgb(14, 81, 168);
+      background-color: var(--white);
+    }
+  }
+  & .current {
+    font-weight: bold;
+    color: var(--white);
+    &:after {
+      background-color: rgb(14, 81, 168);
+    }
+  }
+}
+
+.pagination-prev {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: auto;
+  height: 100%;
+  transform: translateY(-38%);
+}
+.pagination-next {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-left: 3rem;
+  margin-right: 0;
+  width: auto;
+  height: 100%;
+  transform: translateY(-38%);
+}
