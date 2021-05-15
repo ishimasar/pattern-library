@@ -35,7 +35,7 @@
     font-family: var(--sentence-font);
     font-size: 0.9rem;
     color: var(--white);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
   &::before,
   &::after {
@@ -62,11 +62,11 @@
   }
   &:hover::after,
   &:focus::after {
-    transition: opacity 0.15s ease-out, bottom 0.1s ease-in-out;
+    transition: opacity 0.1s ease-out, bottom 0.1s ease-in-out;
   }
   &:hover::before,
   &:focus::before {
-    transition: opacity 0.4s ease-out, bottom 0.4s ease-in-out;
+    transition: opacity 0.35s ease-out, bottom 0.4s ease-in-out;
   }
   &:hover::after,
   &:focus::after,
