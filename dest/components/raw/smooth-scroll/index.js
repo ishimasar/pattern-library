@@ -41,7 +41,7 @@ export function scrollSmooth() {
   }
 
   // ページ内リンクを取得
-  const entryPageLinks = document.querySelectorAll('a[href^="#"]');
+  const entryPageLinks = document.querySelectorAll('.js-smooth-scroll a[href^="#"]');
   const toc = document.querySelectorAll('.toc__link');
   const section = document.querySelectorAll('.section');
 

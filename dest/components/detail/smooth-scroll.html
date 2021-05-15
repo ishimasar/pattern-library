@@ -179,7 +179,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-fa649292ad42d612867c3402ce5927d6-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pageTop&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;smooth-scroll&quot;</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pageTop&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;js-smooth-scroll smooth-scroll&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>スムーズスクロール(Back to top含む) *レスポンシブ未対応<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;global-nav&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
@@ -265,7 +265,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-fa649292ad42d612867c3402ce5927d6-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pageTop&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;smooth-scroll&quot;</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pageTop&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;js-smooth-scroll smooth-scroll&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>スムーズスクロール(Back to top含む) *レスポンシブ未対応<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;global-nav&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
@@ -436,7 +436,7 @@
   }
 
   <span class="hljs-comment">// ページ内リンクを取得</span>
-  <span class="hljs-keyword">const</span> entryPageLinks = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;a[href^=&quot;#&quot;]&#x27;</span>);
+  <span class="hljs-keyword">const</span> entryPageLinks = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;.js-smooth-scroll a[href^=&quot;#&quot;]&#x27;</span>);
   <span class="hljs-keyword">const</span> toc = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;.toc__link&#x27;</span>);
   <span class="hljs-keyword">const</span> section = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;.section&#x27;</span>);
 
@@ -1703,7 +1703,7 @@ scrollSmooth();</pre>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-15T00:39:26.060Z">
+                            <time datetime="2021-05-15T00:47:25.260Z">
                                 5/15/2021
                             </time>
                         
