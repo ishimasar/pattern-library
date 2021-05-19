@@ -18,7 +18,8 @@
     width: 32%;
     max-width: 48%;
   }
-  .card:not(:first-of-type), .card:not(:nth-of-type(n + 3)) {
+  .card:not(:first-of-type),
+  .card:not(:nth-of-type(n + 3)) {
     margin-left: 2%;
   }
   .card:nth-of-type(n + 3) {
@@ -40,49 +41,50 @@
   display: block;
   position: relative;
   width: 100%;
+  border: .5px solid #e6e6e6;
   font-family: var(--sentence-font);
-  border: 0.5px solid #e6e6e6;
-  border-radius: 0.25rem;
-  box-shadow: var(--textbox-shadow);
-  transition: all var(--ease-out-cubic) 0.3s;
   -webkit-font-smoothing: antialiased;
   overflow: hidden;
+  border-radius: .25rem;
+  box-shadow: var(--textbox-shadow);
+  transition: all var(--ease-out-cubic) .3s;
 }
 
-.card > .link:hover, .card > .link:focus {
+.card > .link:hover,
+.card > .link:focus {
   background-position: 0 0;
-  -webkit-transform: scale(1.008, 1.008);
-          transform: scale(1.008, 1.008);
-  transition: all var(--ease-in-cubic) 0.2s;
-  box-shadow: var(--textbox-hover-shadow);
   -webkit-font-smoothing: antialiased;
+  -webkit-transform: scale(1.008, 1.008);
+  transform: scale(1.008, 1.008);
+  box-shadow: var(--textbox-hover-shadow);
+  transition: all var(--ease-in-cubic) .2s;
 }
 
 .card > .link:hover .thumbnail,
 .card > .link:focus .thumbnail {
   -webkit-transform: scale(1.03, 1.03) translate(-48%, -48%);
-          transform: scale(1.03, 1.03) translate(-48%, -48%);
-  transition: all var(--ease-in-out-quad) 0.45s 0.02s;
+  transform: scale(1.03, 1.03) translate(-48%, -48%);
+  transition: all var(--ease-in-out-quad) .45s .02s;
 }
 
 .card > .link:hover .textContainer > .title,
 .card > .link:focus .textContainer > .title {
-  color: var(--text-normal-color);
   background: linear-gradient(transparent 95%, transparent 5%);
+  color: var(--text-normal-color);
   -webkit-transform: scale(1, 1) translate(1, 1);
-          transform: scale(1, 1) translate(1, 1);
-  transition: all var(--ease-in-cubic) 0.3s;
+  transform: scale(1, 1) translate(1, 1);
+  transition: all var(--ease-in-cubic) .3s;
 }
 
 .card .frame {
   display: block;
   position: relative;
   width: 100%;
+  border: .5px solid #e6e6e6;
   font-family: var(--sentence-font);
-  border: 0.5px solid #e6e6e6;
-  border-radius: 0.25rem;
-  box-shadow: var(--textbox-shadow);
   overflow: hidden;
+  border-radius: .25rem;
+  box-shadow: var(--textbox-shadow);
 }
 
 .card .imgContainer {
@@ -112,8 +114,8 @@
   width: 100%;
   height: auto;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  transition: all var(--ease-out-cubic) 0.35s 0.01s;
+  transform: translate(-50%, -50%);
+  transition: all var(--ease-out-cubic) .35s .01s;
 }
 
 .card .textContainer {
@@ -153,7 +155,7 @@
 }
 
 .card .textContainer > .excerpt {
-  margin-top: 0.7rem;
+  margin-top: .7rem;
   line-height: 1.6;
   font-family: var(--sentence-font);
   color: var(--black);
@@ -162,7 +164,7 @@
 .card .textContainer .rule {
   width: 100%;
   height: 1px;
-  margin-top: 0.5rem;
+  margin-top: .5rem;
   border: none;
   background-color: #333;
 }
@@ -174,14 +176,14 @@
 
 @media print, screen and (min-width: 64em) {
   .card .textContainer .dateContainer {
-    margin-top: 0.5rem;
+    margin-top: .5rem;
   }
 }
 
 @media print, screen and (max-width: 47.9375em) {
   .card .textContainer .dateContainer {
+    margin-top: .3rem;
     line-height: 1.4;
-    margin-top: 0.3rem;
   }
 }
 
@@ -209,14 +211,14 @@
 
 @media print, screen and (min-width: 48em) {
   .card .textContainer .tagContainer {
-    margin-top: 0.2rem;
+    margin-top: .2rem;
   }
 }
 
 @media print, screen and (max-width: 47.9375em) {
   .card .textContainer .tagContainer {
+    margin-top: .1rem;
     line-height: 1.4;
-    margin-top: 0.1rem;
   }
 }
 
@@ -233,25 +235,25 @@
   background-color: #14f;
   font-size: calc(var(--font-size-s1));
   color: var(--white);
-  transition: all var(--ease-out-cubic) 0.35s 0.01s;
+  transition: all var(--ease-out-cubic) .35s .01s;
 }
 
 @media print, screen and (min-width: 48em) {
   .card .categoryLabel {
-    padding: 0.25rem 0.4rem;
+    padding: .25rem .4rem;
   }
 }
 
 @media print, screen and (max-width: 47.9375em) {
   .card .categoryLabel {
-    padding: 0.15rem 0.25rem;
+    padding: .15rem .25rem;
   }
 }
 
 @media all and (-ms-high-contrast: none) {
   *::-ms-backdrop,
   .card {
-    transform: none;
     opacity: 1;
+    transform: none;
   }
 }

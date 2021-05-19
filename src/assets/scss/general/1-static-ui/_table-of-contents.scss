@@ -1,5 +1,5 @@
 .toc-container {
-  padding: 0.5rem 2rem;
+  padding: .5rem 2rem;
   border: 1px dotted #333;
   text-align: center;
   @include mq(dt) {
@@ -32,7 +32,7 @@
 .toc {
   list-style-type: disc;
   > li {
-    margin-top: 0.5rem;
+    margin-top: .5rem;
     margin-left: 1.4em;
     text-align: left;
   }
@@ -46,10 +46,10 @@
     }
   }
   @include mq(sp) {
-    padding-top: 0.4rem;
+    padding-top: .4rem;
   }
   &.is-current {
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
   }
 }

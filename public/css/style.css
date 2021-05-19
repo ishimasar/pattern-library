@@ -1373,21 +1373,21 @@ legend {
 
 /* table */
 table {
-  border-left: solid 1px #bbb;
   border-top: solid 1px #bbb;
+  border-left: solid 1px #bbb;
 }
 
 caption {
+  margin: 0 0 .2rem;
   font-size: 1rem;
   font-weight: bold;
-  margin: 0 0 0.2rem;
 }
 
 th,
 td {
+  padding: .75rem 1rem;
   border-right: solid 1px #bbb;
   border-bottom: solid 1px #bbb;
-  padding: 0.75rem 1rem;
   vertical-align: top;
 }
 
@@ -1450,7 +1450,7 @@ td {
 }
 
 .toc-container {
-  padding: 0.5rem 2rem;
+  padding: .5rem 2rem;
   border: 1px dotted #333;
   text-align: center;
 }
@@ -1490,7 +1490,7 @@ td {
 }
 
 .toc > li {
-  margin-top: 0.5rem;
+  margin-top: .5rem;
   margin-left: 1.4em;
   text-align: left;
 }
@@ -1508,13 +1508,13 @@ td {
 
 @media print, screen and (max-width: 47.9375em) {
   .toc__link {
-    padding-top: 0.4rem;
+    padding-top: .4rem;
   }
 }
 
 .toc__link.is-current {
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .tooltip {

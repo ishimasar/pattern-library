@@ -24,12 +24,12 @@
 }
 
 .list li {
-  margin-top: 0.8rem;
+  margin-top: .8rem;
 }
 
 .list li > * {
   display: block;
-  margin-top: 0.4rem;
+  margin-top: .4rem;
   text-indent: 1.5rem;
 }
 
@@ -42,12 +42,12 @@
 }
 
 .list li ul {
-  margin-top: 0.3rem;
+  margin-top: .3rem;
   text-indent: 1.5rem;
 }
 
 .list li ul ul {
-  margin-top: 0.6rem;
+  margin-top: .6rem;
   text-indent: 3rem;
 }
 
@@ -67,6 +67,6 @@
 }
 
 .list .link > .icon {
-  margin-left: 0.2rem;
+  margin-left: .2rem;
   font-size: calc(var(--font-size-m1));
 }

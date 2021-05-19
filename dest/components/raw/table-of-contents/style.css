@@ -1,5 +1,5 @@
 .toc-container {
-  padding: 0.5rem 2rem;
+  padding: .5rem 2rem;
   border: 1px dotted #333;
   text-align: center;
 }
@@ -39,7 +39,7 @@
 }
 
 .toc > li {
-  margin-top: 0.5rem;
+  margin-top: .5rem;
   margin-left: 1.4em;
   text-align: left;
 }
@@ -57,6 +57,11 @@
 
 @media print, screen and (max-width: 47.9375em) {
   .toc__link {
-    padding-top: 0.4rem;
+    padding-top: .4rem;
   }
+}
+
+.toc__link.is-current {
+  text-decoration: none;
+  font-weight: bold;
 }

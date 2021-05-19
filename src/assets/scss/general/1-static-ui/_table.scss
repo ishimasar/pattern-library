@@ -1,20 +1,19 @@
 /* table */
 table {
-  border-left: solid 1px #bbb;
   border-top: solid 1px #bbb;
+  border-left: solid 1px #bbb;
 }
 caption {
+  margin: 0 0 .2rem;
   font-size: 1rem;
   font-weight: bold;
-  margin: 0 0 0.2rem;
 }
 th,
 td {
+  padding: .75rem 1rem;
   border-right: solid 1px #bbb;
   border-bottom: solid 1px #bbb;
-  padding: 0.75rem 1rem;
   vertical-align: top;
-
   p {
     font-size: 100%;
   }

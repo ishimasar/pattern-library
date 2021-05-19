@@ -1,0 +1,76 @@
+table {
+  border-top: solid 1px #bbb;
+  border-left: solid 1px #bbb;
+}
+
+caption {
+  margin: 0 0 .2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: .75rem 1rem;
+  border-right: solid 1px #bbb;
+  border-bottom: solid 1px #bbb;
+  vertical-align: top;
+}
+
+th p,
+td p {
+  font-size: 100%;
+}
+
+th .shortcut,
+td .shortcut {
+  margin-left: 0;
+}
+
+th {
+  background: #efefef;
+}
+
+td {
+  background: #fff;
+}
+
+.table-scroll {
+  width: 90%;
+  margin: 2rem auto auto;
+  overflow: auto;
+}
+
+.table-scroll table {
+  white-space: pre;
+}
+
+.table-text-center td {
+  text-align: center;
+}
+
+.table-highlight td {
+  background: #fffdc9;
+}
+
+.table-60 {
+  width: 100%;
+}
+
+@media screen and (min-width: 840px) {
+  .table-60 {
+    width: 60%;
+  }
+}
+
+.cell-left {
+  text-align: left;
+}
+
+.cell-center {
+  text-align: center;
+}
+
+.cell-right {
+  text-align: right;
+}

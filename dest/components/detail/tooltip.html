@@ -235,95 +235,89 @@
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
                                 <pre><span class="hljs-selector-class">.tooltip</span> {
   <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">width</span>: auto;
   <span class="hljs-attribute">height</span>: auto;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">10rem</span> auto auto;
-  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
-  <span class="hljs-attribute">transition</span>: -webkit-transform <span class="hljs-built_in">var</span>(--ease-out-cubic) <span class="hljs-number">0.3s</span>;
-  <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">var</span>(--ease-out-cubic) <span class="hljs-number">0.3s</span>;
-  <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">var</span>(--ease-out-cubic) <span class="hljs-number">0.3s</span>, -webkit-transform <span class="hljs-built_in">var</span>(--ease-out-cubic) <span class="hljs-number">0.3s</span>;
+  <span class="hljs-attribute">text-decoration</span>: none;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
+  <span class="hljs-attribute">transition</span>: -webkit-transform <span class="hljs-built_in">var</span>(--ease-out-cubic) .<span class="hljs-number">3s</span>;
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">var</span>(--ease-out-cubic) .<span class="hljs-number">3s</span>;
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">var</span>(--ease-out-cubic) .<span class="hljs-number">3s</span>, -webkit-transform <span class="hljs-built_in">var</span>(--ease-out-cubic) .<span class="hljs-number">3s</span>;
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
-  <span class="hljs-selector-class">.tooltip</span> {
-    <span class="hljs-attribute">position</span>: relative;
-    <span class="hljs-attribute">text-decoration</span>: none;
-  }
-  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:focus</span> {
-    <span class="hljs-attribute">transition</span>: -webkit-transform <span class="hljs-built_in">var</span>(--ease-in-cubic) <span class="hljs-number">0.25s</span>;
-    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">var</span>(--ease-in-cubic) <span class="hljs-number">0.25s</span>;
-    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">var</span>(--ease-in-cubic) <span class="hljs-number">0.25s</span>, -webkit-transform <span class="hljs-built_in">var</span>(--ease-in-cubic) <span class="hljs-number">0.25s</span>;
-  }
-  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::before</span> {
-    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0.375rem</span>;
-    <span class="hljs-attribute">border-style</span>: solid;
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
-  }
-  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::after</span> {
-    <span class="hljs-attribute">content</span>: <span class="hljs-built_in">attr</span>(aria-label);
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">1.5625rem</span>;
-    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">3rem</span>;
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">0.625rem</span>;
-    <span class="hljs-attribute">background</span>: <span class="hljs-number">#333</span>;
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
-    <span class="hljs-attribute">text-align</span>: center;
-    <span class="hljs-attribute">white-space</span>: nowrap;
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.9rem</span>;
-    <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--sentence-font);
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.9rem</span>;
-    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
-    <span class="hljs-attribute">border-radius</span>: .<span class="hljs-number">5rem</span>;
-  }
-  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::before</span>, <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::after</span> {
-    <span class="hljs-attribute">position</span>: absolute;
-    <span class="hljs-attribute">left</span>: -<span class="hljs-number">2000px</span>;
-    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">93%</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">3rem</span>;
-    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1.5rem</span>;
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">6</span>;
-    <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.5s</span> ease-in-out, bottom <span class="hljs-number">0.5s</span> ease-in-out;
-  }
-  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::before</span> {
-    <span class="hljs-attribute">border-color</span>: <span class="hljs-built_in">var</span>(--white);
-    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.0625rem</span>;
-    <span class="hljs-attribute">top</span>: -<span class="hljs-number">1.5rem</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">border-style</span>: solid;
-    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0px</span> transparent solid;
-    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">10px</span> transparent solid;
-    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">10px</span> transparent solid;
-    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">17px</span> <span class="hljs-number">#333</span> solid;
-  }
-  <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:hover</span><span class="hljs-selector-pseudo">::after</span>, <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:focus</span><span class="hljs-selector-pseudo">::after</span>, <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:hover</span><span class="hljs-selector-pseudo">::before</span>, <span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:focus</span><span class="hljs-selector-pseudo">::before</span> {
-    <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
-    <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.25s</span> ease-in-out, bottom <span class="hljs-number">0.25s</span> ease-in-out;
-  }
-  <span class="hljs-selector-class">.tooltip</span> &gt; <span class="hljs-selector-class">.icon</span> {
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-l4));
-  }
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">border-style</span>: solid;
+  <span class="hljs-attribute">border-width</span>: .<span class="hljs-number">375rem</span>;
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
-  <span class="hljs-selector-class">.tooltip</span> {
-    <span class="hljs-attribute">display</span>: block;
-    <span class="hljs-attribute">width</span>: auto;
-    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">2.5rem</span>;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0.6rem</span> <span class="hljs-number">0.3rem</span>;
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.4rem</span> <span class="hljs-number">0</span>;
-  }
-  <span class="hljs-selector-class">.tooltip</span> &gt; <span class="hljs-selector-class">.icon</span> {
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-l3) + <span class="hljs-number">0.5rem</span>);
-  }
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-built_in">attr</span>(aria-label);
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">1.5625rem</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> .<span class="hljs-number">625rem</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--sentence-font);
+  <span class="hljs-attribute">font-size</span>: .<span class="hljs-number">9rem</span>;
+  <span class="hljs-attribute">white-space</span>: nowrap;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
+  <span class="hljs-attribute">border-radius</span>: .<span class="hljs-number">5rem</span>;
+}
+
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::before</span>,
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">93%</span>;
+  <span class="hljs-attribute">left</span>: -<span class="hljs-number">2000px</span>;
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">6</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1.5rem</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">transition</span>: opacity .<span class="hljs-number">5s</span> ease-in-out, bottom .<span class="hljs-number">5s</span> ease-in-out;
+}
+
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">top</span>: -<span class="hljs-number">1.5rem</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">0625rem</span>;
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">17px</span> <span class="hljs-number">#333</span> solid;
+  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">10px</span> transparent solid;
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0</span> transparent solid;
+  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">10px</span> transparent solid;
+  <span class="hljs-attribute">border-style</span>: solid;
+}
+
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:hover</span><span class="hljs-selector-pseudo">::before</span>,
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:focus</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">transition</span>: opacity .<span class="hljs-number">3s</span>;
+}
+
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:hover</span><span class="hljs-selector-pseudo">::after</span>,
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:focus</span><span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">transition</span>: opacity .<span class="hljs-number">15s</span> ease-out;
+}
+
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:hover</span><span class="hljs-selector-pseudo">::before</span>,
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:focus</span><span class="hljs-selector-pseudo">::before</span>,
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:hover</span><span class="hljs-selector-pseudo">::after</span>,
+<span class="hljs-selector-class">.tooltip</span><span class="hljs-selector-pseudo">:focus</span><span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+  -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
+}
+
+<span class="hljs-selector-class">.tooltip</span> &gt; <span class="hljs-selector-class">.icon</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-l4));
 }</pre>
                             </code>
                             
@@ -340,7 +334,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.4 KB</span>
+                    <span class="Meta-value">1.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -1400,8 +1394,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-17T17:05:56.711Z">
-                                5/18/2021
+                            <time datetime="2021-05-19T13:46:19.019Z">
+                                5/19/2021
                             </time>
                         
                     </dd>
