@@ -1588,11 +1588,11 @@ td {
 }
 
 .tooltip:hover::after, .tooltip:focus::after {
-  transition: opacity 0.1s ease-out, bottom 0.1s ease-in-out;
+  transition: opacity 0.05s ease-out, bottom 0.05s ease-in-out;
 }
 
 .tooltip:hover::before, .tooltip:focus::before {
-  transition: opacity 0.35s ease-out, bottom 0.4s ease-in-out;
+  transition: opacity 0.15s ease-out, bottom 0.3s ease-in-out;
 }
 
 .tooltip:hover::after, .tooltip:focus::after, .tooltip:hover::before, .tooltip:focus::before {

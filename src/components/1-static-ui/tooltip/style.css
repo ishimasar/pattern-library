@@ -2,13 +2,14 @@
   display: block;
   width: auto;
   height: auto;
-  padding: 1rem;
   margin: 10rem auto auto;
-  border-radius: 5px;
+  padding: 1rem;
   border: 1px solid #333;
+  border-radius: 5px;
   transition: -webkit-transform var(--ease-out-cubic) 0.3s;
   transition: transform var(--ease-out-cubic) 0.3s;
-  transition: transform var(--ease-out-cubic) 0.3s, -webkit-transform var(--ease-out-cubic) 0.3s;
+  transition: transform var(--ease-out-cubic) 0.3s,
+    -webkit-transform var(--ease-out-cubic) 0.3s;
 }
 
 @media print, screen and (min-width: 64em) {
@@ -16,10 +17,12 @@
     position: relative;
     text-decoration: none;
   }
-  .tooltip:hover, .tooltip:focus {
+  .tooltip:hover,
+  .tooltip:focus {
     transition: -webkit-transform var(--ease-in-cubic) 0.25s;
     transition: transform var(--ease-in-cubic) 0.25s;
-    transition: transform var(--ease-in-cubic) 0.25s, -webkit-transform var(--ease-in-cubic) 0.25s;
+    transition: transform var(--ease-in-cubic) 0.25s,
+      -webkit-transform var(--ease-in-cubic) 0.25s;
   }
   .tooltip::before {
     content: "";
@@ -42,9 +45,10 @@
     font-family: var(--sentence-font);
     font-size: 0.9rem;
     color: var(--white);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
-  .tooltip::before, .tooltip::after {
+  .tooltip::before,
+  .tooltip::after {
     position: absolute;
     left: -2000px;
     bottom: 93%;
@@ -66,11 +70,14 @@
     border-left: 10px transparent solid;
     border-top: 17px #333 solid;
   }
-  .tooltip:hover::after, .tooltip:focus::after, .tooltip:hover::before, .tooltip:focus::before {
+  .tooltip:hover::after,
+  .tooltip:focus::after,
+  .tooltip:hover::before,
+  .tooltip:focus::before {
     left: 50%;
     opacity: 1;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     transition: opacity 0.25s ease-in-out, bottom 0.25s ease-in-out;
   }
   .tooltip > .icon {

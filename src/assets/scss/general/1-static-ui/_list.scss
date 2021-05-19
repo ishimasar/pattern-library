@@ -18,10 +18,10 @@
   }
 
   & li {
-    margin-top: 0.8rem;
+    margin-top: .8rem;
     > * {
       display: block;
-      margin-top: 0.4rem;
+      margin-top: .4rem;
       text-indent: 1.5rem;
       & li > * {
         text-indent: 1.5rem * 2;
@@ -31,10 +31,10 @@
       }
     }
     & ul {
-      margin-top: 0.3rem;
+      margin-top: .3rem;
       text-indent: 1.5rem;
       & ul {
-        margin-top: 0.3rem * 2;
+        margin-top: .3rem * 2;
         text-indent: 1.5rem * 2;
       }
     }
@@ -51,7 +51,7 @@
       }
     }
     > .icon {
-      margin-left: 0.2rem;
+      margin-left: .2rem;
       font-size: calc(var(--font-size-m1));
     }
   }

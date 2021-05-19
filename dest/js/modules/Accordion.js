@@ -1,7 +1,7 @@
 /**
  * Accordion UI class
  */
- 'use strict';
+'use strict';
 
 export class Accordion {
   constructor(el) {
@@ -30,7 +30,7 @@ export class Accordion {
       setTimeout(() => {
         this.onResize();
       }, 50);
-    });
+    })
   }
 
   onClick(e) {
