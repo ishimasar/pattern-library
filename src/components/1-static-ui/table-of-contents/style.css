@@ -4,14 +4,14 @@
   text-align: center;
 }
 
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width: 48em) {
   .toc-container {
     width: 30rem;
     margin: 1.5rem auto 2rem;
   }
 }
 
-@media print, screen and (max-width: 63.9375em) {
+@media print, screen and (max-width: 47.9375em) {
   .toc-container {
     width: 90%;
     margin: 1rem auto 1.5rem;
@@ -34,6 +34,14 @@
   }
 }
 
+.toc-open summary {
+  cursor: pointer;
+}
+
+.toc-open .summary-text:hover, .toc-open .summary-text:focus {
+  text-decoration: underline;
+}
+
 .toc {
   list-style-type: disc;
 }
@@ -50,7 +58,7 @@
 }
 
 @media print, screen and (min-width: 48em) {
-  .toc__link:hover {
+  .toc__link:hover, .toc__link:focus {
     text-decoration: none;
   }
 }
@@ -64,4 +72,20 @@
 .toc__link.is-current {
   text-decoration: none;
   font-weight: bold;
+}
+
+.back-to-top-container.-text {
+  display: flex;
+  justify-content: center;
+}
+
+.back-to-top-container.-text .back-to-top {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  text-decoration: underline;
+}
+
+.back-to-top-container.-text .back-to-top:hover, .back-to-top-container.-text .back-to-top:focus {
+  text-decoration: none;
 }
