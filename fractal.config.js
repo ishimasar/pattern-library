@@ -24,10 +24,10 @@ fractal.web.theme(myCustomisedTheme);
 // HTMLの生成
 fractal.web.set('builder.dest', __dirname + '/dest');
 
-// browsersync設定 / 使用できない・WSLのためか？
-// fractal.web.set('server.sync', true);
-// fractal.web.set('server.syncOptions', { open: true});
+// browsersync設定
+fractal.web.set('server.sync', true);
+fractal.web.set('server.syncOptions', { open: true});
 
-// Pugテンプレートの利用 / 使用できない・WSLのためか？
+// Pugテンプレートの利用※未使用
 // fractal.components.engine('@rsm/fractal-pug-adapter');
 // fractal.components.set('ext', '.pug');

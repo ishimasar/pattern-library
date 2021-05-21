@@ -1,15 +1,15 @@
 ## パターンライブラリ & スタイルガイドについて
 
-Webサイト・アプリ制作で使用されるUIやスタイルのコード見本・サンプル集です。  
+Webサイト・アプリ制作で使用されるUIやスタイルのコード見本・サンプル集です。
 コーディングの参考、UI等の設計・作成方針の土台にでき、その上で作業効率にも寄与できるようなものを目指します。
 
 また、JavaScriptはフレームワークやライブラリの陳腐化リスクに備え、ネイティブ(そのまま)のJavaScript(ES6以上)で書くことを旨とします。
 
-URLはこちら。※現在は随時、コード作成追加中  
+URLはこちら。※現在は随時、コード作成追加中
 [https://ishimasar.github.io/pattern-library/dest/](https://ishimasar.github.io/pattern-library/dest/)
 
-**コーディングガイドライン & 命名規則**もあわせてご参照ください。  
-※こちらもまだ詳細は今後作成予定  
+**コーディングガイドライン & 命名規則**もあわせてご参照ください。
+※こちらもまだ詳細は今後作成予定
 [https://ishimasar.github.io/coding-guidelines/](https://ishimasar.github.io/coding-guidelines/)
 
 ## 目的
@@ -22,21 +22,21 @@ URLはこちら。※現在は随時、コード作成追加中
 ## 構成
 
 UI分類 (Components)
- 1. **Static Ui**  
+ 1. **Static Ui**
    静的UI：JavaScriptでDOM操作など動的処理を付与しないWeb UI。List、Card、Tableなど。
- 2. **Dynamic Ui**  
+ 2. **Dynamic Ui**
    動的UI：JavaScriptで動的処理を付与したインタラクティブWeb UI。Carousel、Dialog、Tabなど。
- 3. **Form Ui**  
+ 3. **Form Ui**
    フォームUI：ユーザーが情報入力・送信する際に用いるUI。Checkbox、Radio、Input fieldなど。
- 4. **Control**  
+ 4. **Control**
    コントロール系：ユーザー操作で挙動や値をコントロールするUI。Button、Switch、Sliderなど。
- 5. **Effect**  
+ 5. **Effect**
    演出・効果：CSSやJavaScriptを用いたモーション、UI。Smooth scroll、Loading effectなど。
- 6. **Layout**  
+ 6. **Layout**
    配置・割付規則：空間上に要素を配置する際の手法、法則。Grid、Column、Flexboxなど。
- 7. **Typography**  
+ 7. **Typography**
    文字表現：文字や書体、サイズ、字間、行間などに関連するUI。Heading、Body textなど。
- 8. **Utility**  
+ 8. **Utility**
    汎用パターン：各UI間・内で柔軟に適用できるスタイル。 Display、Line、Shapeなど。
 
 ## 仕様・注記
