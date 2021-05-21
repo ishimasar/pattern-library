@@ -32,21 +32,16 @@
 .tab {
   display: inline-block;
   padding: .65rem 1rem;
-  color: var(--black);
-  text-align: center;
-  text-decoration: none;
   border-top: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
   border-radius: 5px 5px 0 0;
   /* fade-out effect */
   /* transition: background-color .3s ease, color .3s ease; */
   /* 選択されているタブのスタイル */
-}
-
-.tab[aria-selected] {
-  color: var(--white);
-  background: var(--black);
 }
 
 @media print, screen and (min-width: 48em) {
@@ -55,9 +50,10 @@
     min-width: 12rem;
     /* タブのhover/focus状態スタイル */
   }
-  .tab:hover, .tab:focus {
-    color: var(--white);
+  .tab:hover,
+  .tab:focus {
     background: #777;
+    color: var(--white);
     /* fade-in effect */
     /* transition: background-color .25s ease, color .25s ease; */
   }
@@ -67,6 +63,11 @@
   .tab {
     width: 100%;
   }
+}
+
+.tab[aria-selected] {
+  background: var(--black);
+  color: var(--white);
 }
 
 @media print, screen and (max-width: 47.9375em) {
@@ -81,9 +82,9 @@
   height: -moz-fit-content;
   height: fit-content;
   min-height: 150px;
-  overflow: hidden;
-  color: var(--black);
   border: 1px solid var(--border-color);
+  color: var(--black);
+  overflow: hidden;
 }
 
 .tabpanel {
@@ -120,18 +121,4 @@
   display: inline-block;
   width: auto;
   margin: 1.4rem auto 0;
-}
-
-.other-content {
-  width: 100%;
-  max-width: 64.25rem;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  border: 1px solid var(--black);
-}
-
-@media print, screen and (max-width: 63.9375em) {
-  .other-content {
-    width: 90%;
-  }
 }

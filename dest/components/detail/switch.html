@@ -415,82 +415,93 @@ uiModeSwitcher.switchMode();</pre>
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
                                 <pre><span class="hljs-selector-class">.switch-wrapper</span> {
   <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">justify-content</span>: flex-start;
   <span class="hljs-attribute">align-items</span>: center;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">2rem</span>
+  <span class="hljs-attribute">justify-content</span>: flex-start;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">2rem</span>;
 }
+
 <span class="hljs-selector-class">.switch-state-off</span> {
-  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1rem</span>
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1rem</span>;
 }
+
 <span class="hljs-selector-class">.switch-state-on</span> {
-  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1rem</span>
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1rem</span>;
 }
+
 <span class="hljs-selector-class">.switch-container</span> {
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">7rem</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">3.2rem</span>;
-  <span class="hljs-attribute">border</span>: none
+  <span class="hljs-attribute">border</span>: none;
 }
+
 <span class="hljs-selector-class">.switch</span> {
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">2.8rem</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">2.8rem</span>;
-  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0.5rem</span>;
+  <span class="hljs-attribute">margin-left</span>: .<span class="hljs-number">5rem</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#fff</span>;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#545555</span>;
   -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(<span class="hljs-number">0</span>);
   <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(<span class="hljs-number">0</span>);
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
-  -webkit-<span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0.12rem</span> <span class="hljs-number">0.08rem</span> <span class="hljs-number">0.07rem</span> <span class="hljs-number">0.07rem</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">85</span>, <span class="hljs-number">67</span>, <span class="hljs-number">67</span>, <span class="hljs-number">0.2</span>);
-  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0.12rem</span> <span class="hljs-number">0.08rem</span> <span class="hljs-number">0.07rem</span> <span class="hljs-number">0.07rem</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">85</span>, <span class="hljs-number">67</span>, <span class="hljs-number">67</span>, <span class="hljs-number">0.2</span>);
-  <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.5s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>), -webkit-transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.55</span>, <span class="hljs-number">0.085</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.53</span>);
-  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.55</span>, <span class="hljs-number">0.085</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.53</span>), background-color <span class="hljs-number">0.5s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>);
-  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.55</span>, <span class="hljs-number">0.085</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.53</span>), background-color <span class="hljs-number">0.5s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>), -webkit-transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.55</span>, <span class="hljs-number">0.085</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.53</span>);
+  <span class="hljs-attribute">box-shadow</span>: .<span class="hljs-number">12rem</span> .<span class="hljs-number">08rem</span> .<span class="hljs-number">07rem</span> .<span class="hljs-number">07rem</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">85</span>, <span class="hljs-number">67</span>, <span class="hljs-number">67</span>, .<span class="hljs-number">2</span>);
+  <span class="hljs-attribute">transition</span>: background-color .<span class="hljs-number">5s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">645</span>, .<span class="hljs-number">045</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>), -webkit-transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">085</span>, .<span class="hljs-number">68</span>, .<span class="hljs-number">53</span>);
+  <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">085</span>, .<span class="hljs-number">68</span>, .<span class="hljs-number">53</span>), background-color .<span class="hljs-number">5s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">645</span>, .<span class="hljs-number">045</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>);
+  <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">085</span>, .<span class="hljs-number">68</span>, .<span class="hljs-number">53</span>), background-color .<span class="hljs-number">5s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">645</span>, .<span class="hljs-number">045</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>), -webkit-transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">085</span>, .<span class="hljs-number">68</span>, .<span class="hljs-number">53</span>);
   <span class="hljs-attribute">cursor</span>: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
-  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>
 }
+
 <span class="hljs-selector-class">.switch</span><span class="hljs-selector-attr">[aria-checked=<span class="hljs-string">&quot;true&quot;</span>]</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#35c6b6</span>;
+  -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(<span class="hljs-number">3.2rem</span>);
   <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(<span class="hljs-number">3.2rem</span>);
-  <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.5s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>), -webkit-transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.55</span>, <span class="hljs-number">0.085</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.53</span>);
-  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.55</span>, <span class="hljs-number">0.085</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.53</span>), background-color <span class="hljs-number">0.5s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>);
-  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.55</span>, <span class="hljs-number">0.085</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.53</span>), background-color <span class="hljs-number">0.5s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.645</span>, <span class="hljs-number">0.045</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>), -webkit-transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.55</span>, <span class="hljs-number">0.085</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.53</span>)
+  <span class="hljs-attribute">transition</span>: background-color .<span class="hljs-number">5s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">645</span>, .<span class="hljs-number">045</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>), -webkit-transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">085</span>, .<span class="hljs-number">68</span>, .<span class="hljs-number">53</span>);
+  <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">085</span>, .<span class="hljs-number">68</span>, .<span class="hljs-number">53</span>), background-color .<span class="hljs-number">5s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">645</span>, .<span class="hljs-number">045</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>);
+  <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">085</span>, .<span class="hljs-number">68</span>, .<span class="hljs-number">53</span>), background-color .<span class="hljs-number">5s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">645</span>, .<span class="hljs-number">045</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>), -webkit-transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">085</span>, .<span class="hljs-number">68</span>, .<span class="hljs-number">53</span>);
 }
+
 <span class="hljs-selector-class">.switch-rail</span> {
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">44%</span>;
   <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">7rem</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">3.2rem</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#666</span>;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#9e9e9e</span>;
-  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">35px</span>;
+  -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-<span class="hljs-number">50%</span>);
   <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-<span class="hljs-number">50%</span>);
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">35px</span>;
   <span class="hljs-attribute">cursor</span>: pointer;
-  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">0</span>
 }
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-class">.switch</span><span class="hljs-selector-pseudo">:focus</span>+<span class="hljs-selector-tag">label</span>:after {
+
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-class">.switch</span><span class="hljs-selector-pseudo">:focus</span> + <span class="hljs-selector-tag">label</span>:after {
   border-color: <span class="hljs-number">#000098</span>;
-  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">4px</span> <span class="hljs-number">#000098</span>
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">4px</span> <span class="hljs-number">#000098</span>;
 }
+
 <span class="hljs-selector-class">.switch-target</span> {
-  <span class="hljs-attribute">display</span>: -webkit-box;
-  <span class="hljs-attribute">display</span>: -ms-flexbox;
   <span class="hljs-attribute">display</span>: flex;
   <span class="hljs-attribute">align-items</span>: center;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">50vh</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">2rem</span>;
-  <span class="hljs-attribute">background-color</span>: white
+  <span class="hljs-attribute">background-color</span>: white;
 }
+
 <span class="hljs-selector-class">.switch-target</span><span class="hljs-selector-class">.light-theme</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#333</span>;
-  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.35s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.55</span>, <span class="hljs-number">0.085</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.53</span>), color <span class="hljs-number">0.4s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.55</span>, <span class="hljs-number">0.085</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.53</span>)
+  <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">35s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">085</span>, .<span class="hljs-number">68</span>, .<span class="hljs-number">53</span>), color .<span class="hljs-number">4s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">085</span>, .<span class="hljs-number">68</span>, .<span class="hljs-number">53</span>);
 }
+
 <span class="hljs-selector-class">.switch-target</span><span class="hljs-selector-class">.dark-theme</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-number">#333</span>;
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#eee</span>;
-  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.38s</span>, color <span class="hljs-number">0.48s</span>
+  <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">38s</span>, color .<span class="hljs-number">48s</span>;
 }</pre>
                             </code>
                             
@@ -507,7 +518,7 @@ uiModeSwitcher.switchMode();</pre>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.5 KB</span>
+                    <span class="Meta-value">2.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -1567,7 +1578,7 @@ uiModeSwitcher.switchMode();</pre>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-21T03:17:04.841Z">
+                            <time datetime="2021-05-21T05:12:36.168Z">
                                 5/21/2021
                             </time>
                         

@@ -1,18 +1,19 @@
 .button {
-  position: relative;
   display: inline-block;
+  position: relative;
   width: 12.5rem;
   height: 4rem;
   margin: 1.5rem 1rem 0;
+  border: 2px solid var(--black);
   text-align: center;
   text-decoration: none;
-  border: 2px solid var(--black);
   transition: all .3s;
 }
 
-.button:hover, .button:focus {
-  color: var(--white);
+.button:hover,
+.button:focus {
   background-color: #787878;
+  color: var(--white);
   transition: all .3s;
 }
 
@@ -21,42 +22,43 @@
   top: 0;
   border: transparent;
   -webkit-perspective: 19rem;
-          perspective: 19rem;
+  perspective: 19rem;
   /* hover 3D effect */
 }
 
 .depth-effect > .after,
 .depth-effect > .before {
+  display: block;
   position: absolute;
   top: 0;
-  display: block;
   width: 12.5rem;
   height: 4rem;
-  color: #b15602;
-  line-height: 3.5rem;
-  text-align: center;
-  background-color: #f4dc71;
   border: 2px solid #074015;
+  background-color: #f4dc71;
+  text-align: center;
+  line-height: 3.5rem;
+  color: #b15602;
   -webkit-transform: rotateX(90deg);
-          transform: rotateX(90deg);
-  -webkit-transform-origin: 50% 50% -2rem;
-          transform-origin: 50% 50% -2rem;
+  transform: rotateX(90deg);
   transition: all .3s;
+  -webkit-transform-origin: 50% 50% -2rem;
+  transform-origin: 50% 50% -2rem;
 }
 
 .depth-effect > .before {
-  color: #074015;
   background-color: #96e4a3;
+  color: #074015;
   -webkit-transform: rotateX(0deg);
-          transform: rotateX(0deg);
+  transform: rotateX(0deg);
   -webkit-transform-origin: 50% 50% -2rem;
-          transform-origin: 50% 50% -2rem;
+  transform-origin: 50% 50% -2rem;
 }
 
-.depth-effect:hover, .depth-effect:focus {
-  color: transparent;
-  background-color: transparent;
+.depth-effect:hover,
+.depth-effect:focus {
   border-color: transparent;
+  background-color: transparent;
+  color: transparent;
 }
 
 .depth-effect:hover > .after,
@@ -64,32 +66,33 @@
   z-index: 3;
   border: 2px solid #b15602;
   -webkit-transform: rotateX(0deg);
-          transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
 
 .depth-effect:hover > .before,
 .depth-effect:focus > .before {
   -webkit-transform: rotateX(-90deg);
-          transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
 }
 
 .double-door-effect {
   z-index: 2;
-  color: var(--white);
   border: 2px solid #035ca5;
+  color: var(--white);
   /* double-door hover effect  */
 }
 
-.double-door-effect:before, .double-door-effect:after {
+.double-door-effect:before,
+.double-door-effect:after {
+  content: "";
+  display: block;
   position: absolute;
   top: 0;
   z-index: -1;
-  display: block;
   width: 12rem;
   height: calc(4rem - 4px);
   background-color: #339ee6;
   transition: all .5s;
-  content: "";
 }
 
 .double-door-effect:before {
@@ -100,13 +103,17 @@
   right: 0;
 }
 
-.double-door-effect:hover, .double-door-effect:focus {
-  color: #035ca5;
-  background-color: var(--white);
+.double-door-effect:hover,
+.double-door-effect:focus {
   border-color: #035ca5;
+  background-color: var(--white);
+  color: #035ca5;
 }
 
-.double-door-effect:hover:before, .double-door-effect:hover:after, .double-door-effect:focus:before, .double-door-effect:focus:after {
+.double-door-effect:hover:before,
+.double-door-effect:hover:after,
+.double-door-effect:focus:before,
+.double-door-effect:focus:after {
   width: 0;
   background-color: #5cb2eb;
   transition: all .3s;

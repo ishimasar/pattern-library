@@ -1,5 +1,6 @@
 .fieldset {
   width: 65%;
+  font-size: calc(var(--font-size-m2));
 }
 
 .fieldset:not(:first-of-type) {
@@ -11,17 +12,17 @@
   width: 1px;
   height: 1px;
   padding: 0;
-  overflow: hidden;
-  white-space: nowrap;
   border: 0;
+  white-space: nowrap;
+  overflow: hidden;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
 }
 
 .checkbox + label {
-  position: relative;
   display: block;
+  position: relative;
   width: auto;
   margin-top: .5rem;
   padding-left: 1.8em;
@@ -30,8 +31,8 @@
 }
 
 .checkbox:checked + label {
-  color: #000098;
   font-weight: bold;
+  color: #000098;
 }
 
 .checkbox:hover + label,
@@ -42,18 +43,18 @@
 
 .checkbox + label:before {
   content: "";
+  display: inline-block;
   position: absolute;
   top: .45rem;
   left: .28rem;
   z-index: 1;
-  display: inline-block;
   width: .75rem;
   height: .45rem;
   border-top: 2.5px solid #000098;
   border-right: 2.5px solid #000098;
+  opacity: 0;
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
-  opacity: 0;
   transition: all .15s ease-in;
 }
 
@@ -69,42 +70,42 @@
 }
 
 .checkbox + label:after {
+  content: "";
   position: absolute;
   top: .2rem;
   left: 0;
-  box-sizing: border-box;
   width: 1.25rem;
   height: 1.25rem;
-  background-color: #fff;
   border: 2px solid #888;
+  background-color: #fff;
   border-radius: 4px;
-  content: "";
+  box-sizing: border-box;
 }
 
 .checkbox:disabled,
 .checkbox + label[disabled] {
-  cursor: not-allowed;
   opacity: .67;
+  cursor: not-allowed;
 }
 
 @-webkit-keyframes scale {
   32% {
     -webkit-transform: scale(1.13) rotate(135deg);
-            transform: scale(1.13) rotate(135deg);
+    transform: scale(1.13) rotate(135deg);
   }
   83% {
     -webkit-transform: scale(1) rotate(135deg);
-            transform: scale(1) rotate(135deg);
+    transform: scale(1) rotate(135deg);
   }
 }
 
 @keyframes scale {
   32% {
     -webkit-transform: scale(1.13) rotate(135deg);
-            transform: scale(1.13) rotate(135deg);
+    transform: scale(1.13) rotate(135deg);
   }
   83% {
     -webkit-transform: scale(1) rotate(135deg);
-            transform: scale(1) rotate(135deg);
+    transform: scale(1) rotate(135deg);
   }
 }

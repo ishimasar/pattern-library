@@ -24,7 +24,7 @@
   border-radius: 5px;
   @include mq(sp-tb) {
     width: 43%;
-    padding: 1rem 0.5rem;
+    padding: 1rem .5rem;
   }
   @include mq(dt) {
     min-width: 8.5rem;
@@ -32,8 +32,8 @@
     transition: var(--out-transition);
     &:hover,
     &:focus {
-      color: var(--white);
       background-color: var(--black);
+      color: var(--white);
       transition: var(--in-transition);
     }
   }
@@ -46,24 +46,24 @@
     }
   }
   &[disabled="true"] {
-    color: #666;
     border: none;
-    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3) inset;
+    color: #666;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, .3) inset;
     cursor: not-allowed;
     &:hover,
     &:focus {
-      color: #666;
       background-color: var(--white);
-      box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3) inset;
+      color: #666;
+      box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, .3) inset;
     }
   }
 }
 
 .accordion-list > li {
-  color: var(--black);
   background-color: hsla(0, 0%, 85%, 1);
+  color: var(--black);
   &:not(:last-of-type) {
-    margin-bottom: 0.25rem;
+    margin-bottom: .25rem;
   }
 }
 
@@ -87,16 +87,10 @@
       padding: 1.5rem;
       &:hover,
       &:focus {
-        padding: calc(1.5rem - 0.0625rem);
+        padding: calc(1.5rem - .0625rem);
+        border: .0625rem solid var(--black);
         font-weight: bold;
-        border: 0.0625rem solid var(--black);
       }
-    }
-    &::marker {
-      font-size: 0;
-    }
-    &::-webkit-details-marker {
-      font-size: 0;
     }
     @include mq(sp-tb) {
       &:before {
@@ -108,11 +102,17 @@
         @include triangle(13, 15, right, var(--black));
       }
     }
+    &::marker {
+      font-size: 0;
+    }
+    &::-webkit-details-marker {
+      font-size: 0;
+    }
     &:before {
       display: inline-block;
       width: auto;
       margin-right: 1rem;
-      transition: transform 0.25s var(--ease-out-quad);
+      transition: transform .25s var(--ease-out-quad);
     }
   }
   &[aria-expanded="true"] > summary:before {
@@ -123,10 +123,10 @@
 
 .accordion-details__content {
   height: 0;
-  overflow: hidden;
-  color: var(--black);
   background-color: hsla(0, 0%, 90%, 1);
-  transition: height 0.25s var(--ease-out-quad);
+  color: var(--black);
+  overflow: hidden;
+  transition: height .25s var(--ease-out-quad);
   pointer-events: none;
   [open] & {
     transition-timing-function: var(--ease-out-quad);
@@ -134,7 +134,7 @@
 }
 
 .accordion-details__paragraph {
-  border-top: 0.0625rem solid hsla(0, 0%, 70%, 1);
+  border-top: .0625rem solid hsla(0, 0%, 70%, 1);
   @include mq(sp-tb) {
     padding: 1rem;
   }

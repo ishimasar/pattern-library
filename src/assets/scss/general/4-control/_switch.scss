@@ -1,7 +1,7 @@
 .switch-wrapper {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   padding: 2rem;
 }
 .switch-state-off {
@@ -17,44 +17,46 @@
   border: none;
 }
 .switch {
+  z-index: 1;
   width: 2.8rem;
   height: 2.8rem;
-  margin-left: 0.5rem;
+  margin-left: .5rem;
   border: 2px solid #fff;
   background-color: rgb(84, 85, 85);
   transform: translateX(0);
   border-radius: 50%;
-  box-shadow: 0.12rem 0.08rem 0.07rem 0.07rem rgba(85, 67, 67, 0.2);
-  transition: transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53),
-    background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: .12rem .08rem .07rem .07rem rgba(85, 67, 67, .2);
+  transition:
+    transform .25s cubic-bezier(.55, .085, .68, .53),
+    background-color .5s cubic-bezier(.645, .045, .355, 1);
   cursor: pointer;
   appearance: none;
-  z-index: 1;
   &[aria-checked="true"] {
     background-color: #35c6b6;
     transform: translateX(3.2rem);
-    transition: transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53),
-      background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:
+      transform .25s cubic-bezier(.55, .085, .68, .53),
+      background-color .5s cubic-bezier(.645, .045, .355, 1);
   }
 }
 .switch-rail {
   position: absolute;
   top: 44%;
   left: 0;
+  z-index: 0;
   width: 7rem;
   height: 3.2rem;
   border: 1px solid #666;
   background-color: rgb(158, 158, 158);
-  border-radius: 35px;
   transform: translateY(-50%);
+  border-radius: 35px;
   cursor: pointer;
-  z-index: 0;
 }
 [data-whatinput="keyboard"] .switch:focus + label:after {
   border-color: #000098;
   box-shadow: 0 0 4px #000098;
 }
-.switch-target{
+.switch-target {
   display: flex;
   align-items: center;
   height: 50vh;
@@ -63,12 +65,13 @@
   &.light-theme {
     background: #fff;
     color: #333;
-    transition: all 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53),
-      color 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transition:
+      all .35s cubic-bezier(.55, .085, .68, .53),
+      color .4s cubic-bezier(.55, .085, .68, .53);
   }
   &.dark-theme {
     background: #333;
     color: #eee;
-    transition: all 0.38s, color 0.48s;
+    transition: all .38s, color .48s;
   }
 }

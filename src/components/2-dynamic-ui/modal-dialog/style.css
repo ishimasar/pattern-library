@@ -7,7 +7,8 @@
   overflow: hidden;
 }
 
-.modal-dialog:hover, .modal-dialog:focus {
+.modal-dialog:hover,
+.modal-dialog:focus {
   outline: none;
 }
 
@@ -16,14 +17,15 @@
   width: 300px;
   margin: 4rem auto;
   padding: 1rem;
-  text-align: center;
   border: 1px solid var(--border-color);
+  text-align: center;
   border-radius: 5px;
 }
 
-.dialog-open:hover, .dialog-open:focus {
-  color: var(--white);
+.dialog-open:hover,
+.dialog-open:focus {
   background-color: #777;
+  color: var(--white);
 }
 
 .dialog-panel {
@@ -34,14 +36,14 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 90%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  max-width: 90%;
   margin: auto;
   padding: 0;
-  background: var(--white);
   border: 2px solid var(--border-color);
+  background: var(--white);
   border-radius: 5px;
   /* native backdrop */
   /* polyfill backdrop */
@@ -54,24 +56,24 @@
 
 .dialog-panel[open] {
   -webkit-animation: fade-in .25s ease-out, slide-down .25s ease-out;
-          animation: fade-in .25s ease-out, slide-down .25s ease-out;
+  animation: fade-in .25s ease-out, slide-down .25s ease-out;
 }
 
 .dialog-panel.is-motioned {
   -webkit-animation: fade-out .45s ease, slide-up .45s ease;
-          animation: fade-out .45s ease, slide-up .45s ease;
+  animation: fade-out .45s ease, slide-up .45s ease;
 }
 
 .dialog-panel::-webkit-backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, .5);
   -webkit-animation: backdrop-fade-in .35s ease-out;
-          animation: backdrop-fade-in .35s ease-out;
+  animation: backdrop-fade-in .35s ease-out;
 }
 
 .dialog-panel::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, .5);
   -webkit-animation: backdrop-fade-in .35s ease-out;
-          animation: backdrop-fade-in .35s ease-out;
+  animation: backdrop-fade-in .35s ease-out;
 }
 
 .dialog-panel + .backdrop {
@@ -80,16 +82,18 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, .5);
   -webkit-animation: fade-in .25s ease-out;
-          animation: fade-in .25s ease-out;
+  animation: fade-in .25s ease-out;
 }
 
 /* Safariのみ適用 */
-_::-webkit-full-page-media, _:future, :root .dialog-panel {
+_::-webkit-full-page-media,
+_:future,
+:root .dialog-panel {
   width: 100%;
-  max-width: 365px;
   height: auto;
+  max-width: 365px;
 }
 
 /* Edgeのみ適用 */
@@ -114,9 +118,9 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
   min-width: 5rem;
   padding-top: .625rem;
   padding-bottom: .525rem;
-  line-height: 1.5;
-  text-align: center;
   border: 1px solid var(--border-color);
+  text-align: center;
+  line-height: 1.5;
   border-radius: 5px;
 }
 
@@ -124,9 +128,10 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
   margin-left: 1.75rem;
 }
 
-.dialog-panel__button:hover, .dialog-panel__button:focus {
-  color: var(--white);
+.dialog-panel__button:hover,
+.dialog-panel__button:focus {
   background-color: #777;
+  color: var(--white);
 }
 
 .dialog-panel__close {
@@ -135,32 +140,34 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
   right: 1rem;
   width: 2.3rem;
   height: 2.3rem;
-  color: var(--white);
-  font-size: 2rem;
   background-color: var(--black);
+  font-size: 2rem;
+  color: var(--white);
   border-radius: 50%;
 }
 
-.dialog-panel__close:hover, .dialog-panel__close:focus {
-  background-color: var(--white);
+.dialog-panel__close:hover,
+.dialog-panel__close:focus {
   border: 1px solid #777;
+  background-color: var(--white);
   color: var(--black);
 }
 
-.dialog-panel__close:hover > .positioning, .dialog-panel__close:focus > .positioning {
+.dialog-panel__close:hover > .positioning,
+.dialog-panel__close:focus > .positioning {
   line-height: 1.9rem;
 }
 
 .dialog-panel__close > .positioning {
-  line-height: 2rem;
   display: block;
   height: 2.3rem;
+  line-height: 2rem;
 }
 
 .dialog-response {
-  font-size: 1.2rem;
-  line-height: 2;
   text-align: center;
+  line-height: 2;
+  font-size: 1.2rem;
 }
 
 @-webkit-keyframes fade-in {
@@ -201,57 +208,57 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
 
 @-webkit-keyframes slide-down {
   0% {
-    -webkit-transform: translate(0, -20px);
-            transform: translate(0, -20px);
     opacity: 0;
+    -webkit-transform: translate(0, -20px);
+    transform: translate(0, -20px);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
 @keyframes slide-down {
   0% {
-    -webkit-transform: translate(0, -20px);
-            transform: translate(0, -20px);
     opacity: 0;
+    -webkit-transform: translate(0, -20px);
+    transform: translate(0, -20px);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
 @-webkit-keyframes slide-up {
   0% {
     top: 20%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   100% {
     top: 20%;
-    -webkit-transform: translate(0, -15px);
-            transform: translate(0, -15px);
     opacity: 0;
+    -webkit-transform: translate(0, -15px);
+    transform: translate(0, -15px);
   }
 }
 
 @keyframes slide-up {
   0% {
     top: 20%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   100% {
     top: 20%;
-    -webkit-transform: translate(0, -15px);
-            transform: translate(0, -15px);
     opacity: 0;
+    -webkit-transform: translate(0, -15px);
+    transform: translate(0, -15px);
   }
 }
 
@@ -260,7 +267,7 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
     background-color: rgba(0, 0, 0, 0);
   }
   100% {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, .5);
   }
 }
 
@@ -269,13 +276,13 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
     background-color: rgba(0, 0, 0, 0);
   }
   100% {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, .5);
   }
 }
 
 @-webkit-keyframes backdrop-fade-out {
   0% {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, .5);
   }
   100% {
     background-color: rgba(0, 0, 0, 0);
@@ -284,7 +291,7 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
 
 @keyframes backdrop-fade-out {
   0% {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, .5);
   }
   100% {
     background-color: rgba(0, 0, 0, 0);

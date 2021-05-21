@@ -405,7 +405,8 @@ modalDialog.respondValue();</pre>
   <span class="hljs-attribute">overflow</span>: hidden;
 }
 
-<span class="hljs-selector-class">.modal-dialog</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.modal-dialog</span><span class="hljs-selector-pseudo">:focus</span> {
+<span class="hljs-selector-class">.modal-dialog</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.modal-dialog</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">outline</span>: none;
 }
 
@@ -414,14 +415,15 @@ modalDialog.respondValue();</pre>
   <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">4rem</span> auto;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
-  <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--border-color);
+  <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
 }
 
-<span class="hljs-selector-class">.dialog-open</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.dialog-open</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
+<span class="hljs-selector-class">.dialog-open</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.dialog-open</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#777</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
 }
 
 <span class="hljs-selector-class">.dialog-panel</span> {
@@ -432,14 +434,14 @@ modalDialog.respondValue();</pre>
   <span class="hljs-attribute">width</span>: -webkit-fit-content;
   <span class="hljs-attribute">width</span>: -moz-fit-content;
   <span class="hljs-attribute">width</span>: fit-content;
-  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">90%</span>;
   <span class="hljs-attribute">height</span>: -webkit-fit-content;
   <span class="hljs-attribute">height</span>: -moz-fit-content;
   <span class="hljs-attribute">height</span>: fit-content;
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">90%</span>;
   <span class="hljs-attribute">margin</span>: auto;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--white);
   <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-built_in">var</span>(--border-color);
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--white);
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
   <span class="hljs-comment">/* native backdrop */</span>
   <span class="hljs-comment">/* polyfill backdrop */</span>
@@ -452,24 +454,24 @@ modalDialog.respondValue();</pre>
 
 <span class="hljs-selector-class">.dialog-panel</span><span class="hljs-selector-attr">[open]</span> {
   -webkit-<span class="hljs-attribute">animation</span>: fade-in .<span class="hljs-number">25s</span> ease-out, slide-down .<span class="hljs-number">25s</span> ease-out;
-          <span class="hljs-attribute">animation</span>: fade-in .<span class="hljs-number">25s</span> ease-out, slide-down .<span class="hljs-number">25s</span> ease-out;
+  <span class="hljs-attribute">animation</span>: fade-in .<span class="hljs-number">25s</span> ease-out, slide-down .<span class="hljs-number">25s</span> ease-out;
 }
 
 <span class="hljs-selector-class">.dialog-panel</span><span class="hljs-selector-class">.is-motioned</span> {
   -webkit-<span class="hljs-attribute">animation</span>: fade-out .<span class="hljs-number">45s</span> ease, slide-up .<span class="hljs-number">45s</span> ease;
-          <span class="hljs-attribute">animation</span>: fade-out .<span class="hljs-number">45s</span> ease, slide-up .<span class="hljs-number">45s</span> ease;
+  <span class="hljs-attribute">animation</span>: fade-out .<span class="hljs-number">45s</span> ease, slide-up .<span class="hljs-number">45s</span> ease;
 }
 
 <span class="hljs-selector-class">.dialog-panel</span>::-webkit-backdrop {
-  background-color: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+  background-color: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">5</span>);
   -webkit-<span class="hljs-attribute">animation</span>: backdrop-fade-in .<span class="hljs-number">35s</span> ease-out;
-          <span class="hljs-attribute">animation</span>: backdrop-fade-in .<span class="hljs-number">35s</span> ease-out;
+  <span class="hljs-attribute">animation</span>: backdrop-fade-in .<span class="hljs-number">35s</span> ease-out;
 }
 
 <span class="hljs-selector-class">.dialog-panel</span><span class="hljs-selector-pseudo">::backdrop</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">5</span>);
   -webkit-<span class="hljs-attribute">animation</span>: backdrop-fade-in .<span class="hljs-number">35s</span> ease-out;
-          <span class="hljs-attribute">animation</span>: backdrop-fade-in .<span class="hljs-number">35s</span> ease-out;
+  <span class="hljs-attribute">animation</span>: backdrop-fade-in .<span class="hljs-number">35s</span> ease-out;
 }
 
 <span class="hljs-selector-class">.dialog-panel</span> + <span class="hljs-selector-class">.backdrop</span> {
@@ -478,16 +480,18 @@ modalDialog.respondValue();</pre>
   <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">5</span>);
   -webkit-<span class="hljs-attribute">animation</span>: fade-in .<span class="hljs-number">25s</span> ease-out;
-          <span class="hljs-attribute">animation</span>: fade-in .<span class="hljs-number">25s</span> ease-out;
+  <span class="hljs-attribute">animation</span>: fade-in .<span class="hljs-number">25s</span> ease-out;
 }
 
 <span class="hljs-comment">/* Safariのみ適用 */</span>
-_::-webkit-full-page-media, _:future, :root .dialog-panel {
+_::-webkit-full-page-media,
+_:future,
+:root .dialog-panel {
   width: <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">365px</span>;
   <span class="hljs-attribute">height</span>: auto;
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">365px</span>;
 }
 
 <span class="hljs-comment">/* Edgeのみ適用 */</span>
@@ -512,9 +516,9 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
   <span class="hljs-attribute">min-width</span>: <span class="hljs-number">5rem</span>;
   <span class="hljs-attribute">padding-top</span>: .<span class="hljs-number">625rem</span>;
   <span class="hljs-attribute">padding-bottom</span>: .<span class="hljs-number">525rem</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
-  <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--border-color);
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
 }
 
@@ -522,9 +526,10 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
   <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1.75rem</span>;
 }
 
-<span class="hljs-selector-class">.dialog-panel__button</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.dialog-panel__button</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
+<span class="hljs-selector-class">.dialog-panel__button</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.dialog-panel__button</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#777</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
 }
 
 <span class="hljs-selector-class">.dialog-panel__close</span> {
@@ -533,32 +538,34 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
   <span class="hljs-attribute">right</span>: <span class="hljs-number">1rem</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">2.3rem</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">2.3rem</span>;
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2rem</span>;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2rem</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
 }
 
-<span class="hljs-selector-class">.dialog-panel__close</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.dialog-panel__close</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);
+<span class="hljs-selector-class">.dialog-panel__close</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.dialog-panel__close</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#777</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);
   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--black);
 }
 
-<span class="hljs-selector-class">.dialog-panel__close</span><span class="hljs-selector-pseudo">:hover</span> &gt; <span class="hljs-selector-class">.positioning</span>, <span class="hljs-selector-class">.dialog-panel__close</span><span class="hljs-selector-pseudo">:focus</span> &gt; <span class="hljs-selector-class">.positioning</span> {
+<span class="hljs-selector-class">.dialog-panel__close</span><span class="hljs-selector-pseudo">:hover</span> &gt; <span class="hljs-selector-class">.positioning</span>,
+<span class="hljs-selector-class">.dialog-panel__close</span><span class="hljs-selector-pseudo">:focus</span> &gt; <span class="hljs-selector-class">.positioning</span> {
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.9rem</span>;
 }
 
 <span class="hljs-selector-class">.dialog-panel__close</span> &gt; <span class="hljs-selector-class">.positioning</span> {
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">2rem</span>;
   <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">2.3rem</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">2rem</span>;
 }
 
 <span class="hljs-selector-class">.dialog-response</span> {
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.2rem</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">2</span>;
   <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">2</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.2rem</span>;
 }
 
 <span class="hljs-keyword">@-webkit-keyframes</span> fade-in {
@@ -599,57 +606,57 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
 
 <span class="hljs-keyword">@-webkit-keyframes</span> slide-down {
   <span class="hljs-number">0%</span> {
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">20px</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">20px</span>);
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">20px</span>);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">20px</span>);
   }
   <span class="hljs-number">100%</span> {
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
   }
 }
 
 <span class="hljs-keyword">@keyframes</span> slide-down {
   <span class="hljs-number">0%</span> {
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">20px</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">20px</span>);
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">20px</span>);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">20px</span>);
   }
   <span class="hljs-number">100%</span> {
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
   }
 }
 
 <span class="hljs-keyword">@-webkit-keyframes</span> slide-up {
   <span class="hljs-number">0%</span> {
     <span class="hljs-attribute">top</span>: <span class="hljs-number">20%</span>;
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
   }
   <span class="hljs-number">100%</span> {
     <span class="hljs-attribute">top</span>: <span class="hljs-number">20%</span>;
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">15px</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">15px</span>);
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">15px</span>);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">15px</span>);
   }
 }
 
 <span class="hljs-keyword">@keyframes</span> slide-up {
   <span class="hljs-number">0%</span> {
     <span class="hljs-attribute">top</span>: <span class="hljs-number">20%</span>;
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
   }
   <span class="hljs-number">100%</span> {
     <span class="hljs-attribute">top</span>: <span class="hljs-number">20%</span>;
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">15px</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">15px</span>);
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">15px</span>);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">15px</span>);
   }
 }
 
@@ -658,7 +665,7 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
   }
   <span class="hljs-number">100%</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">5</span>);
   }
 }
 
@@ -667,13 +674,13 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
   }
   <span class="hljs-number">100%</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">5</span>);
   }
 }
 
 <span class="hljs-keyword">@-webkit-keyframes</span> backdrop-fade-out {
   <span class="hljs-number">0%</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">5</span>);
   }
   <span class="hljs-number">100%</span> {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
@@ -682,7 +689,7 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
 
 <span class="hljs-keyword">@keyframes</span> backdrop-fade-out {
   <span class="hljs-number">0%</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">5</span>);
   }
   <span class="hljs-number">100%</span> {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
@@ -703,7 +710,7 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">5.3 KB</span>
+                    <span class="Meta-value">5.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -1763,7 +1770,7 @@ _::-webkit-full-page-media, _:future, :root .dialog-panel {
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-21T03:17:04.841Z">
+                            <time datetime="2021-05-21T05:12:36.168Z">
                                 5/21/2021
                             </time>
                         

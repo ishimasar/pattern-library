@@ -1,11 +1,11 @@
 .move-text {
-  line-height: 5rem;
   text-transform: uppercase;
-  font-weight: bold;
+  line-height: 5rem;
   font-size: calc(var(--font-size-l3));
+  font-weight: bold;
 }
 .move-text .letter {
   display: inline-block;
-  letter-spacing: 0.5em;
+  letter-spacing: .5em;
   opacity: 1;
 }

@@ -1,4 +1,5 @@
 .selectbox-container {
+  position: relative;
   width: 65%;
   box-sizing: border-box;
   @include mq(dt) {
@@ -9,18 +10,17 @@
   @include mq(sp-tb) {
     margin-top: 1.7rem;
   }
-  position: relative;
   &:after {
+    @include triangle(12, 8, bottom, #333);
     display: inline;
     position: absolute;
-    @include triangle(12, 8, bottom, #333);
     @include mq(dt) {
-      bottom: 19.5px;
       right: 20px;
+      bottom: 19.5px;
     }
     @include mq(sp-tb) {
-      bottom: 17px;
       right: 13px;
+      bottom: 17px;
     }
   }
 }
@@ -46,27 +46,28 @@
   background: rgb(244, 239, 237);
   line-height: 1.2;
   border-radius: 5px;
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
-  &:focus {
-    border-width: 2px;
-  }
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15);
   @include mq(dt) {
     width: 75%;
     height: 51px;
-    padding: 0.65rem 1rem;
+    padding: .65rem 1rem;
     font-size: calc(var(--font-size-m2));
     &:focus {
-      padding: calc(0.65rem - 1px) calc(1rem - 1px);
+      padding: calc(.65rem - 1px) calc(1rem - 1px);
     }
   }
   @include mq(sp-tb) {
     width: 100%;
     height: 47.34px;
-    padding: 0.65rem 1.5rem 0.5rem 0.8rem;
-    font-size: calc(var(--font-size-m1) - 0.1rem);
+    padding: .65rem 1.5rem .5rem .8rem;
+    font-size: calc(var(--font-size-m1) - .1rem);
     &:focus {
-      padding: calc(0.65rem - 1px) calc(1.5rem - 1px) calc(0.5rem - 1px)
-        calc(0.8rem - 1px);
+      padding:
+        calc(.65rem - 1px) calc(1.5rem - 1px) calc(.5rem - 1px)
+        calc(.8rem - 1px);
     }
+  }
+  &:focus {
+    border-width: 2px;
   }
 }

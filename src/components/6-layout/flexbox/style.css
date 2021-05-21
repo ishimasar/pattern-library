@@ -7,10 +7,6 @@
   margin: auto;
 }
 
-.flexbox.-primary {
-  justify-content: space-between;
-}
-
 @media print, screen and (min-width: 64em) {
   .flexbox {
     margin-top: 2rem;
@@ -23,7 +19,12 @@
   }
 }
 
-.flexbox::after, .flexbox::before {
+.flexbox.-primary {
+  justify-content: space-between;
+}
+
+.flexbox::after,
+.flexbox::before {
   content: "";
   display: block;
   width: 32%;

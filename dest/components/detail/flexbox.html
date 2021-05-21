@@ -256,10 +256,6 @@
   <span class="hljs-attribute">margin</span>: auto;
 }
 
-<span class="hljs-selector-class">.flexbox</span><span class="hljs-selector-class">.-primary</span> {
-  <span class="hljs-attribute">justify-content</span>: space-between;
-}
-
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.flexbox</span> {
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">2rem</span>;
@@ -272,7 +268,12 @@
   }
 }
 
-<span class="hljs-selector-class">.flexbox</span><span class="hljs-selector-pseudo">::after</span>, <span class="hljs-selector-class">.flexbox</span><span class="hljs-selector-pseudo">::before</span> {
+<span class="hljs-selector-class">.flexbox</span><span class="hljs-selector-class">.-primary</span> {
+  <span class="hljs-attribute">justify-content</span>: space-between;
+}
+
+<span class="hljs-selector-class">.flexbox</span><span class="hljs-selector-pseudo">::after</span>,
+<span class="hljs-selector-class">.flexbox</span><span class="hljs-selector-pseudo">::before</span> {
   <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
   <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">32%</span>;
@@ -1357,7 +1358,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-21T03:17:04.841Z">
+                            <time datetime="2021-05-21T05:12:36.168Z">
                                 5/21/2021
                             </time>
                         

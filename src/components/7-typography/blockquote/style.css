@@ -13,10 +13,10 @@
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-weight: 900;
-  font-size: 2rem;
   line-height: 1;
   font-family: "Font Awesome 5 Free";
+  font-size: 2rem;
+  font-weight: 900;
   color: #b1b1b1;
 }
 
@@ -36,7 +36,8 @@
   color: #0d1a54;
 }
 
-.blockquote .link:hover {
+.blockquote .link:hover,
+.blockquote .link:focus {
   text-decoration: none;
 }
 

@@ -30,15 +30,15 @@
     z-index: 1;
     opacity: 1;
     transition: var(--carousel-switch-effect);
-    &:focus {
-      opacity: .92;
-      transition: var(--in-transition);
-    }
     @include mq(dt) {
       &:hover {
         opacity: .92;
         transition: var(--in-transition);
       }
+    }
+    &:focus {
+      opacity: .92;
+      transition: var(--in-transition);
     }
   }
   &[aria-hidden="true"] {
@@ -83,13 +83,18 @@
   height: 2.8125rem;
   transform: translateY(-50%);
   transition: var(--out-transition);
+  @include mq(dt) {
+    &:hover {
+      transition: var(--in-transition);
+    }
+  }
   &:before {
+    content: "";
+    display: block;
     position: absolute;
     top: 50%;
-    display: block;
     border-style: solid;
     backface-visibility: hidden;
-    content: "";
     @include mq(sp-tb) {
       width: 1.25rem;
       height: 1.25rem;
@@ -105,11 +110,6 @@
   }
   &:focus {
     transition: var(--in-transition);
-  }
-  @include mq(dt) {
-    &:hover {
-      transition: var(--in-transition);
-    }
   }
 }
 
@@ -131,6 +131,11 @@
     width: 3.3rem;
     height: 2.5em;
   }
+  @include mq(dt) {
+    &:hover {
+      background-color: var(--contrast-limit-gray);
+    }
+  }
   &[aria-hidden="true"] {
     z-index: 0;
     visibility: hidden;
@@ -141,19 +146,11 @@
   &:focus {
     background-color: var(--contrast-limit-gray);
   }
-  @include mq(dt) {
-    &:hover {
-      background-color: var(--contrast-limit-gray);
-    }
-  }
 }
 
 /* 前へナビ */
 .carousel__control-prev {
   transition: all .3s var(--ease-out-quad);
-  &:before {
-    transform: translate(0, -50%) rotate(135deg);
-  }
   @include mq(sp-tb) {
     left: .2rem;
     z-index: 1;
@@ -164,6 +161,9 @@
       transform: translate(-10%, -50%) rotate(0);
       transition: all .25s var(--ease-in-quad);
     }
+  }
+  &:before {
+    transform: translate(0, -50%) rotate(135deg);
   }
 }
 
@@ -207,13 +207,13 @@
   justify-content: center;
   width: 100%;
   @include mq(sp-tb) {
-    grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
     gap: .5rem;
+    grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
     margin-top: .8rem;
   }
   @include mq(dt) {
-    grid-template-columns: repeat(auto-fit, 13%);
     gap: .75rem;
+    grid-template-columns: repeat(auto-fit, 13%);
     margin-top: 1.5rem;
   }
 }
@@ -222,22 +222,22 @@
 .carousel__thumbnail-btn {
   width: 100%;
   height: auto;
+  @include mq(dt) {
+    &:hover {
+      opacity: 1;
+      transition: opacity .25s var(--ease-in-quad);
+      outline: .125rem solid var(--focusring-color);
+      outline-offset: .0625rem;
+    }
+  }
   &[aria-selected="false"] {
     opacity: .8;
     transition: opacity .3s var(--ease-out-quad);
   }
   &[aria-selected="true"] {
+    opacity: 1;
     outline: .2rem solid hsla(212, 100%, 57%, 1);
     outline-offset: 0;
-    opacity: 1;
-  }
-  @include mq(dt) {
-    &:hover {
-      outline: .125rem solid var(--focusring-color);
-      outline-offset: .0625rem;
-      opacity: 1;
-      transition: opacity .25s var(--ease-in-quad);
-    }
   }
   &:focus {
     opacity: 1;

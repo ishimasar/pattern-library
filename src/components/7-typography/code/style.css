@@ -9,29 +9,34 @@ code[class*="language-"],
 pre[class*="language-"] {
   background: none;
   text-align: left;
-  white-space: pre;
+  text-shadow: 0 1px rgba(0, 0, 0, .3);
+  line-height: 1.5;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 1em;
-  -moz-tab-size: 4;
-    -o-tab-size: 4;
-      tab-size: 4;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  white-space: pre;
   color: #f8f8f2;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+
+code[class*="language-"] *,
+pre[class*="language-"] * {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
 /* Code blocks */
 pre[class*="language-"] {
   margin: .5em 0;
   padding: 1em;
-  border-radius: 0.3em;
   overflow: auto;
+  border-radius: .3em;
 }
 
 :not(pre) > code[class*="language-"],
@@ -42,8 +47,8 @@ pre[class*="language-"] {
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
-  border-radius: .3em;
   white-space: normal;
+  border-radius: .3em;
 }
 
 .token.comment,
@@ -129,11 +134,12 @@ div.code-toolbar > .toolbar {
   position: absolute;
   top: .3em;
   right: .2em;
-  transition: opacity 0.3s ease-in-out;
   opacity: 0;
+  transition: opacity .3s ease-in-out;
 }
 
-div.code-toolbar:hover > .toolbar {
+div.code-toolbar:hover > .toolbar,
+div.code-toolbar:focus > .toolbar {
   opacity: 1;
 }
 
@@ -152,17 +158,17 @@ div.code-toolbar > .toolbar a {
 }
 
 div.code-toolbar > .toolbar button {
-  background: none;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  overflow: visible;
   padding: 0;
+  border: 0;
+  background: none;
+  line-height: normal;
+  font: inherit;
+  color: inherit;
+  overflow: visible;
   -webkit-user-select: none;
-    -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 div.code-toolbar > .toolbar a,
@@ -170,11 +176,11 @@ div.code-toolbar > .toolbar button,
 div.code-toolbar > .toolbar span {
   padding: 0 .5em;
   background: #f5f2f0;
-  background: rgba(224, 224, 224, 0.2);
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
-  border-radius: .5em;
-  color: #bbb;
+  background: rgba(224, 224, 224, .2);
   font-size: .8em;
+  color: #bbb;
+  border-radius: .5em;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, .2);
 }
 
 div.code-toolbar > .toolbar a:hover,
@@ -193,8 +199,8 @@ div.code-toolbar > .toolbar span:focus {
   padding: .2rem .8rem;
   border: 1px solid #333;
   background-color: var(--white);
-  font-weight: normal;
   font-size: calc(var(--font-size-m1) - .02rem);
+  font-weight: normal;
   color: #333;
   border-radius: .3rem .3rem 0 0;
 }
@@ -205,7 +211,7 @@ div.code-toolbar > .toolbar span:focus {
 
 .code-highliter-prism pre {
   margin-top: 0;
-  border-radius: 0 .3rem .3rem .3rem;
+  border-radius: 0 .3rem .3rem;
 }
 
 .code-highliter-prism code {

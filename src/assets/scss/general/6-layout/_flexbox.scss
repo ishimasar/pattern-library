@@ -1,7 +1,4 @@
 .flexbox {
-  &.-primary {
-    justify-content: space-between;
-  }
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -13,6 +10,9 @@
   }
   @include mq(sp-tb) {
     margin-top: 1.5rem;
+  }
+  &.-primary {
+    justify-content: space-between;
   }
   &::after,
   &::before {

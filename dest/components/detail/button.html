@@ -250,20 +250,21 @@
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
                                 <pre><span class="hljs-selector-class">.button</span> {
-  <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">12.5rem</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">4rem</span>;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">1.5rem</span> <span class="hljs-number">1rem</span> <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-built_in">var</span>(--black);
   <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">text-decoration</span>: none;
-  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-built_in">var</span>(--black);
   <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">3s</span>;
 }
 
-<span class="hljs-selector-class">.button</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.button</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
+<span class="hljs-selector-class">.button</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.button</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#787878</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
   <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">3s</span>;
 }
 
@@ -272,42 +273,43 @@
   <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">border</span>: transparent;
   -webkit-<span class="hljs-attribute">perspective</span>: <span class="hljs-number">19rem</span>;
-          <span class="hljs-attribute">perspective</span>: <span class="hljs-number">19rem</span>;
+  <span class="hljs-attribute">perspective</span>: <span class="hljs-number">19rem</span>;
   <span class="hljs-comment">/* hover 3D effect */</span>
 }
 
 <span class="hljs-selector-class">.depth-effect</span> &gt; <span class="hljs-selector-class">.after</span>,
 <span class="hljs-selector-class">.depth-effect</span> &gt; <span class="hljs-selector-class">.before</span> {
+  <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">12.5rem</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">4rem</span>;
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#b15602</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">3.5rem</span>;
-  <span class="hljs-attribute">text-align</span>: center;
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f4dc71</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#074015</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f4dc71</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">3.5rem</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#b15602</span>;
   -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">90deg</span>);
-          <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">90deg</span>);
-  -webkit-<span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span> -<span class="hljs-number">2rem</span>;
-          <span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span> -<span class="hljs-number">2rem</span>;
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">90deg</span>);
   <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">3s</span>;
+  -webkit-<span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span> -<span class="hljs-number">2rem</span>;
+  <span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span> -<span class="hljs-number">2rem</span>;
 }
 
 <span class="hljs-selector-class">.depth-effect</span> &gt; <span class="hljs-selector-class">.before</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#074015</span>;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#96e4a3</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#074015</span>;
   -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">0deg</span>);
-          <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">0deg</span>);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">0deg</span>);
   -webkit-<span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span> -<span class="hljs-number">2rem</span>;
-          <span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span> -<span class="hljs-number">2rem</span>;
+  <span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span> -<span class="hljs-number">2rem</span>;
 }
 
-<span class="hljs-selector-class">.depth-effect</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.depth-effect</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">color</span>: transparent;
-  <span class="hljs-attribute">background-color</span>: transparent;
+<span class="hljs-selector-class">.depth-effect</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.depth-effect</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">border-color</span>: transparent;
+  <span class="hljs-attribute">background-color</span>: transparent;
+  <span class="hljs-attribute">color</span>: transparent;
 }
 
 <span class="hljs-selector-class">.depth-effect</span><span class="hljs-selector-pseudo">:hover</span> &gt; <span class="hljs-selector-class">.after</span>,
@@ -315,32 +317,33 @@
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">3</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#b15602</span>;
   -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">0deg</span>);
-          <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">0deg</span>);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">0deg</span>);
 }
 
 <span class="hljs-selector-class">.depth-effect</span><span class="hljs-selector-pseudo">:hover</span> &gt; <span class="hljs-selector-class">.before</span>,
 <span class="hljs-selector-class">.depth-effect</span><span class="hljs-selector-pseudo">:focus</span> &gt; <span class="hljs-selector-class">.before</span> {
   -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(-<span class="hljs-number">90deg</span>);
-          <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(-<span class="hljs-number">90deg</span>);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(-<span class="hljs-number">90deg</span>);
 }
 
 <span class="hljs-selector-class">.double-door-effect</span> {
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
   <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#035ca5</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
   <span class="hljs-comment">/* double-door hover effect  */</span>
 }
 
-<span class="hljs-selector-class">.double-door-effect</span>:before, .double-door-effect:after {
-  position: absolute;
+<span class="hljs-selector-class">.double-door-effect</span>:before,
+.double-door-effect:after {
+  content: <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">z-index</span>: -<span class="hljs-number">1</span>;
-  <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">12rem</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-number">4rem</span> - <span class="hljs-number">4px</span>);
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#339ee6</span>;
   <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">5s</span>;
-  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
 }
 
 <span class="hljs-selector-class">.double-door-effect</span>:before {
@@ -351,13 +354,17 @@
   right: <span class="hljs-number">0</span>;
 }
 
-<span class="hljs-selector-class">.double-door-effect</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.double-door-effect</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#035ca5</span>;
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);
+<span class="hljs-selector-class">.double-door-effect</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.double-door-effect</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#035ca5</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#035ca5</span>;
 }
 
-<span class="hljs-selector-class">.double-door-effect</span><span class="hljs-selector-pseudo">:hover</span>:before, .double-door-effect:hover:after, .double-door-effect:focus:before, .double-door-effect:focus:after {
+<span class="hljs-selector-class">.double-door-effect</span><span class="hljs-selector-pseudo">:hover</span>:before,
+.double-door-effect:hover:after,
+.double-door-effect:focus:before,
+.double-door-effect:focus:after {
   width: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#5cb2eb</span>;
   <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">3s</span>;
@@ -377,7 +384,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.4 KB</span>
+                    <span class="Meta-value">2.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -1437,7 +1444,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-21T03:17:04.841Z">
+                            <time datetime="2021-05-21T05:12:36.168Z">
                                 5/21/2021
                             </time>
                         

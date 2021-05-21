@@ -693,16 +693,16 @@ carousel.setter();</pre>
   <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--carousel-switch-effect);
 }
 
-<span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">92</span>;
-  <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
-}
-
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span><span class="hljs-selector-pseudo">:hover</span> {
     <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">92</span>;
     <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
   }
+}
+
+<span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">92</span>;
+  <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
 }
 
 <span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;true&quot;</span>]</span> {
@@ -735,19 +735,26 @@ carousel.setter();</pre>
   <span class="hljs-attribute">width</span>: <span class="hljs-number">2.8125rem</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">2.8125rem</span>;
   -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-<span class="hljs-number">50%</span>);
-          <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-<span class="hljs-number">50%</span>);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-<span class="hljs-number">50%</span>);
   <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--out-transition);
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__control-next</span><span class="hljs-selector-pseudo">:hover</span>,
+  <span class="hljs-selector-class">.carousel__control-prev</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
+  }
 }
 
 <span class="hljs-selector-class">.carousel__control-next</span>:before,
 .carousel__control-prev:before {
-  position: absolute;
-  <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
+  content: <span class="hljs-string">&quot;&quot;</span>;
   <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
   <span class="hljs-attribute">border-style</span>: solid;
   -webkit-<span class="hljs-attribute">backface-visibility</span>: hidden;
-          <span class="hljs-attribute">backface-visibility</span>: hidden;
-  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-attribute">backface-visibility</span>: hidden;
 }
 
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
@@ -775,13 +782,6 @@ carousel.setter();</pre>
   <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
-  <span class="hljs-selector-class">.carousel__control-next</span><span class="hljs-selector-pseudo">:hover</span>,
-  <span class="hljs-selector-class">.carousel__control-prev</span><span class="hljs-selector-pseudo">:hover</span> {
-    <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
-  }
-}
-
 <span class="hljs-selector-class">.carousel__control-pause</span>,
 <span class="hljs-selector-class">.carousel__control-play</span> {
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
@@ -797,7 +797,7 @@ carousel.setter();</pre>
     <span class="hljs-attribute">width</span>: <span class="hljs-number">2.8rem</span>;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">2em</span>;
     -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
   }
 }
 
@@ -808,6 +808,13 @@ carousel.setter();</pre>
     <span class="hljs-attribute">bottom</span>: <span class="hljs-number">3%</span>;
     <span class="hljs-attribute">width</span>: <span class="hljs-number">3.3rem</span>;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">2.5em</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__control-pause</span><span class="hljs-selector-pseudo">:hover</span>,
+  <span class="hljs-selector-class">.carousel__control-play</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--contrast-limit-gray);
   }
 }
 
@@ -827,21 +834,9 @@ carousel.setter();</pre>
   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--contrast-limit-gray);
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
-  <span class="hljs-selector-class">.carousel__control-pause</span><span class="hljs-selector-pseudo">:hover</span>,
-  <span class="hljs-selector-class">.carousel__control-play</span><span class="hljs-selector-pseudo">:hover</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--contrast-limit-gray);
-  }
-}
-
 <span class="hljs-comment">/* 前へナビ */</span>
 <span class="hljs-selector-class">.carousel__control-prev</span> {
-  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
-}
-
-<span class="hljs-selector-class">.carousel__control-prev</span>:before {
-  -webkit-transform: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">135deg</span>);
-          <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">135deg</span>);
+  <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
 }
 
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
@@ -857,16 +852,21 @@ carousel.setter();</pre>
   }
   <span class="hljs-selector-class">.carousel__control-prev</span><span class="hljs-selector-pseudo">:hover</span> {
     -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(-<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(-<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
-    <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(-<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
   }
+}
+
+<span class="hljs-selector-class">.carousel__control-prev</span>:before {
+  -webkit-transform: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">135deg</span>);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">135deg</span>);
 }
 
 <span class="hljs-comment">/* 次へナビ */</span>
 <span class="hljs-selector-class">.carousel__control-next</span> {
-  <span class="hljs-attribute">transition</span>: -webkit-transform <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
-  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
-  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad), -webkit-transform <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">transition</span>: -webkit-transform .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad), -webkit-transform .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
 }
 
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
@@ -882,16 +882,16 @@ carousel.setter();</pre>
   }
   <span class="hljs-selector-class">.carousel__control-next</span><span class="hljs-selector-pseudo">:hover</span> {
     -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
-            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
-    <span class="hljs-attribute">transition</span>: -webkit-transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
-    <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
-    <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad), -webkit-transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-attribute">transition</span>: -webkit-transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+    <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+    <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad), -webkit-transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
   }
 }
 
 <span class="hljs-selector-class">.carousel__control-next</span>:before {
   -webkit-transform: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">45deg</span>);
-          <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">45deg</span>);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">45deg</span>);
 }
 
 <span class="hljs-comment">/* 再生ボタン */</span>
@@ -922,18 +922,18 @@ carousel.setter();</pre>
 
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
   <span class="hljs-selector-class">.carousel__thumbnail-list</span> {
-    -ms-grid-<span class="hljs-attribute">columns</span>: (<span class="hljs-built_in">minmax</span>(<span class="hljs-number">15%</span>, <span class="hljs-number">1</span>fr))[auto-fit];
-        grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-built_in">minmax</span>(<span class="hljs-number">15%</span>, <span class="hljs-number">1</span>fr));
     gap: .<span class="hljs-number">5rem</span>;
+    -ms-grid-<span class="hljs-attribute">columns</span>: (<span class="hljs-built_in">minmax</span>(<span class="hljs-number">15%</span>, <span class="hljs-number">1</span>fr))[auto-fit];
+    grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-built_in">minmax</span>(<span class="hljs-number">15%</span>, <span class="hljs-number">1</span>fr));
     <span class="hljs-attribute">margin-top</span>: .<span class="hljs-number">8rem</span>;
   }
 }
 
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.carousel__thumbnail-list</span> {
-    -ms-grid-<span class="hljs-attribute">columns</span>: (<span class="hljs-number">13%</span>)[auto-fit];
-        grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-number">13%</span>);
     gap: .<span class="hljs-number">75rem</span>;
+    -ms-grid-<span class="hljs-attribute">columns</span>: (<span class="hljs-number">13%</span>)[auto-fit];
+    grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-number">13%</span>);
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">1.5rem</span>;
   }
 }
@@ -944,29 +944,29 @@ carousel.setter();</pre>
   <span class="hljs-attribute">height</span>: auto;
 }
 
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">transition</span>: opacity .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+    <span class="hljs-attribute">outline</span>: .<span class="hljs-number">125rem</span> solid <span class="hljs-built_in">var</span>(--focusring-color);
+    <span class="hljs-attribute">outline-offset</span>: .<span class="hljs-number">0625rem</span>;
+  }
+}
+
 <span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&quot;false&quot;</span>]</span> {
   <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">8</span>;
-  <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">transition</span>: opacity .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
 }
 
 <span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&quot;true&quot;</span>]</span> {
-  <span class="hljs-attribute">outline</span>: <span class="hljs-number">0.2rem</span> solid <span class="hljs-number">#248aff</span>;
-  <span class="hljs-attribute">outline-offset</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
-}
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
-  <span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-pseudo">:hover</span> {
-    <span class="hljs-attribute">outline</span>: <span class="hljs-number">0.125rem</span> solid <span class="hljs-built_in">var</span>(--focusring-color);
-    <span class="hljs-attribute">outline-offset</span>: .<span class="hljs-number">0625rem</span>;
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
-    <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
-  }
+  <span class="hljs-attribute">outline</span>: .<span class="hljs-number">2rem</span> solid <span class="hljs-number">#248aff</span>;
+  <span class="hljs-attribute">outline-offset</span>: <span class="hljs-number">0</span>;
 }
 
 <span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
-  <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+  <span class="hljs-attribute">transition</span>: opacity .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
 }
 
 <span class="hljs-comment">/* サムネイル画像(img) */</span>
@@ -988,7 +988,7 @@ carousel.setter();</pre>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">7.3 KB</span>
+                    <span class="Meta-value">7.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -2048,7 +2048,7 @@ carousel.setter();</pre>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-21T03:17:04.841Z">
+                            <time datetime="2021-05-21T05:12:36.168Z">
                                 5/21/2021
                             </time>
                         

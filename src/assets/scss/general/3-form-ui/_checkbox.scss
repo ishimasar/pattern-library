@@ -10,15 +10,15 @@
   width: 1px;
   height: 1px;
   padding: 0;
-  overflow: hidden;
-  white-space: nowrap;
   border: 0;
+  white-space: nowrap;
+  overflow: hidden;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
 }
 .checkbox + label {
-  position: relative;
   display: block;
+  position: relative;
   width: auto;
   margin-top: .5rem;
   padding-left: 1.8em;
@@ -26,35 +26,31 @@
   cursor: pointer;
 }
 .checkbox:checked + label {
-  color: #000098;
   font-weight: bold;
+  color: #000098;
 }
 .checkbox:hover + label,
 .checkbox:focus + label {
   opacity: .75;
-  -webkit-transition: all .15s ease-in;
   transition: all .15s ease-in;
 }
 .checkbox + label:before {
   content: "";
+  display: inline-block;
   position: absolute;
   top: .45rem;
   left: .28rem;
   z-index: 1;
-  display: inline-block;
   width: .75rem;
   height: .45rem;
   border-top: 2.5px solid #000098;
   border-right: 2.5px solid #000098;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
   opacity: 0;
-  -webkit-transition: all .15s ease-in;
+  transform: rotate(135deg);
   transition: all .15s ease-in;
 }
 .checkbox:checked + label:before {
   opacity: 1;
-  -webkit-animation: scale .1s ease-in-out .2s 1 normal running;
   animation: scale .1s ease-in-out .2s 1 normal running;
 }
 [data-whatinput="keyboard"] .checkbox:focus + label:after {
@@ -62,22 +58,21 @@
   box-shadow: 0 0 4px #000098;
 }
 .checkbox + label:after {
+  content: "";
   position: absolute;
   top: .2rem;
   left: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   width: 1.25rem;
   height: 1.25rem;
-  background-color: #fff;
   border: 2px solid #888;
+  background-color: #fff;
   border-radius: 4px;
-  content: "";
+  box-sizing: border-box;
 }
 .checkbox:disabled,
 .checkbox + label[disabled] {
-  cursor: not-allowed;
   opacity: .67;
+  cursor: not-allowed;
 }
 @-webkit-keyframes scale {
   32% {

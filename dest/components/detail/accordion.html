@@ -516,7 +516,7 @@
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
   <span class="hljs-selector-class">.accordion-all-button</span> {
     <span class="hljs-attribute">width</span>: <span class="hljs-number">43%</span>;
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span> <span class="hljs-number">0.5rem</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span> .<span class="hljs-number">5rem</span>;
   }
 }
 
@@ -528,8 +528,8 @@
   }
   <span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-pseudo">:hover</span>,
   <span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-pseudo">:focus</span> {
-    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
     <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--black);
+    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
     <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
   }
 }
@@ -547,26 +547,26 @@
 }
 
 <span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-attr">[disabled=<span class="hljs-string">&quot;true&quot;</span>]</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#666</span>;
   <span class="hljs-attribute">border</span>: none;
-  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.3</span>) inset;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#666</span>;
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">3</span>) inset;
   <span class="hljs-attribute">cursor</span>: not-allowed;
 }
 
 <span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-attr">[disabled=<span class="hljs-string">&quot;true&quot;</span>]</span><span class="hljs-selector-pseudo">:hover</span>,
 <span class="hljs-selector-class">.accordion-all-button</span><span class="hljs-selector-attr">[disabled=<span class="hljs-string">&quot;true&quot;</span>]</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#666</span>;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);
-  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.3</span>) inset;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#666</span>;
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">3</span>) inset;
 }
 
 <span class="hljs-selector-class">.accordion-list</span> &gt; <span class="hljs-selector-tag">li</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--black);
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#d9d9d9</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--black);
 }
 
 <span class="hljs-selector-class">.accordion-list</span> &gt; <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-of-type</span>) {
-  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.25rem</span>;
+  <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">25rem</span>;
 }
 
 <span class="hljs-selector-class">.accordion-details</span> {
@@ -602,9 +602,43 @@
   }
   <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span><span class="hljs-selector-pseudo">:hover</span>,
   <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span><span class="hljs-selector-pseudo">:focus</span> {
-    <span class="hljs-attribute">padding</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-number">1.5rem</span> - <span class="hljs-number">0.0625rem</span>);
+    <span class="hljs-attribute">padding</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-number">1.5rem</span> - .<span class="hljs-number">0625rem</span>);
+    <span class="hljs-attribute">border</span>: .<span class="hljs-number">0625rem</span> solid <span class="hljs-built_in">var</span>(--black);
     <span class="hljs-attribute">font-weight</span>: bold;
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">0.0625rem</span> solid <span class="hljs-built_in">var</span>(--black);
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+  <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span>:before {
+    content: <span class="hljs-string">&quot;&quot;</span>;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">6.5px</span> transparent solid;
+    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">0</span> transparent solid;
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">6.5px</span> transparent solid;
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">11px</span> <span class="hljs-built_in">var</span>(--black) solid;
+    <span class="hljs-attribute">border-style</span>: solid;
+    <span class="hljs-attribute">transition</span>: border-color <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>, -webkit-transform <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>, border-color <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>, border-color <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>, -webkit-transform <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span>:before {
+    content: <span class="hljs-string">&quot;&quot;</span>;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">7.5px</span> transparent solid;
+    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">0</span> transparent solid;
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">7.5px</span> transparent solid;
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">13px</span> <span class="hljs-built_in">var</span>(--black) solid;
+    <span class="hljs-attribute">border-style</span>: solid;
+    <span class="hljs-attribute">transition</span>: border-color <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>, -webkit-transform <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>, border-color <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>, border-color <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>, -webkit-transform <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>) .<span class="hljs-number">15s</span>;
   }
 }
 
@@ -616,56 +650,27 @@
   font-size: <span class="hljs-number">0</span>;
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
-  <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span>:before {
-    display: block;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">border-style</span>: solid;
-    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">0px</span> transparent solid;
-    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">6.5px</span> transparent solid;
-    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">6.5px</span> transparent solid;
-    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">11px</span> <span class="hljs-built_in">var</span>(--black) solid;
-    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.215</span>, <span class="hljs-number">0.61</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>) <span class="hljs-number">0.15s</span>,
-      border-color <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.215</span>, <span class="hljs-number">0.61</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>) <span class="hljs-number">0.15s</span>;
-    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
-  }
-}
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
-  <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span>:before {
-    display: block;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">border-style</span>: solid;
-    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">0px</span> transparent solid;
-    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">7.5px</span> transparent solid;
-    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">7.5px</span> transparent solid;
-    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">13px</span> <span class="hljs-built_in">var</span>(--black) solid;
-    <span class="hljs-attribute">transition</span>: transform <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.215</span>, <span class="hljs-number">0.61</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>) <span class="hljs-number">0.15s</span>,
-      border-color <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.215</span>, <span class="hljs-number">0.61</span>, <span class="hljs-number">0.355</span>, <span class="hljs-number">1</span>) <span class="hljs-number">0.15s</span>;
-    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
-  }
-}
-
 <span class="hljs-selector-class">.accordion-details</span> &gt; <span class="hljs-selector-tag">summary</span>:before {
   display: inline-block;
   <span class="hljs-attribute">width</span>: auto;
   <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1rem</span>;
-  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">transition</span>: -webkit-transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-out-quad), -webkit-transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
 }
 
 <span class="hljs-selector-class">.accordion-details</span><span class="hljs-selector-attr">[aria-expanded=<span class="hljs-string">&quot;true&quot;</span>]</span> &gt; <span class="hljs-selector-tag">summary</span>:before {
-  transform: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">90deg</span>);
+  -webkit-transform: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">90deg</span>);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">90deg</span>);
   <span class="hljs-attribute">transition-timing-function</span>: <span class="hljs-built_in">var</span>(--ease-out-quad);
 }
 
 <span class="hljs-selector-class">.accordion-details__content</span> {
   <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">overflow</span>: hidden;
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--black);
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#e6e6e6</span>;
-  <span class="hljs-attribute">transition</span>: height <span class="hljs-number">0.25s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-attribute">transition</span>: height .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
   <span class="hljs-attribute">pointer-events</span>: none;
 }
 
@@ -674,7 +679,7 @@
 }
 
 <span class="hljs-selector-class">.accordion-details__paragraph</span> {
-  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">0.0625rem</span> solid <span class="hljs-number">#b3b3b3</span>;
+  <span class="hljs-attribute">border-top</span>: .<span class="hljs-number">0625rem</span> solid <span class="hljs-number">#b3b3b3</span>;
 }
 
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
@@ -703,7 +708,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4.5 KB</span>
+                    <span class="Meta-value">5.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -1763,7 +1768,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-21T03:17:04.841Z">
+                            <time datetime="2021-05-21T05:12:36.168Z">
                                 5/21/2021
                             </time>
                         

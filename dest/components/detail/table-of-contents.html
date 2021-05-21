@@ -296,14 +296,17 @@
 <span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleToc</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> detailsElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.toc-open&#x27;</span>);
   <span class="hljs-keyword">const</span> summaryElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.toc-open &gt; summary&#x27;</span>);
+  <span class="hljs-keyword">const</span> summaryText = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.toc-open .summary-text&#x27;</span>);
 
-  detailsElement.addEventListener(<span class="hljs-string">&quot;toggle&quot;</span>, <span class="hljs-function">() =&gt;</span> {
-    <span class="hljs-keyword">if</span> (detailsElement.open) {
-      summaryElement.innerHTML = <span class="hljs-string">&#x27;&lt;span&gt;[ 閉じる ]&lt;/span&gt;&#x27;</span>
-    } <span class="hljs-keyword">else</span> {
-      summaryElement.innerHTML = <span class="hljs-string">&#x27;&lt;span&gt;[ 開く ]&lt;/span&gt;&#x27;</span>
-    }
-  });
+  <span class="hljs-keyword">if</span> (detailsElement !== <span class="hljs-literal">null</span>) {
+    detailsElement.addEventListener(<span class="hljs-string">&quot;toggle&quot;</span>, <span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-keyword">if</span> (detailsElement.open) {
+        summaryText.innerText = <span class="hljs-string">&#x27;[ 閉じる ]&#x27;</span>
+      } <span class="hljs-keyword">else</span> {
+        summaryText.innerText = <span class="hljs-string">&#x27;[ 開く ]&#x27;</span>
+      }
+    });
+  }
 }
 
 <span class="hljs-comment">/* /js/main.js */</span>
@@ -326,7 +329,7 @@ toggleToc();</pre>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">513 Bytes</span>
+                    <span class="Meta-value">605 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -345,14 +348,14 @@ toggleToc();</pre>
   <span class="hljs-attribute">text-align</span>: center;
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
   <span class="hljs-selector-class">.toc-container</span> {
     <span class="hljs-attribute">width</span>: <span class="hljs-number">30rem</span>;
     <span class="hljs-attribute">margin</span>: <span class="hljs-number">1.5rem</span> auto <span class="hljs-number">2rem</span>;
   }
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.9375em</span>) {
   <span class="hljs-selector-class">.toc-container</span> {
     <span class="hljs-attribute">width</span>: <span class="hljs-number">90%</span>;
     <span class="hljs-attribute">margin</span>: <span class="hljs-number">1rem</span> auto <span class="hljs-number">1.5rem</span>;
@@ -375,6 +378,14 @@ toggleToc();</pre>
   }
 }
 
+<span class="hljs-selector-class">.toc-open</span> <span class="hljs-selector-tag">summary</span> {
+  <span class="hljs-attribute">cursor</span>: pointer;
+}
+
+<span class="hljs-selector-class">.toc-open</span> <span class="hljs-selector-class">.summary-text</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.toc-open</span> <span class="hljs-selector-class">.summary-text</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">text-decoration</span>: underline;
+}
+
 <span class="hljs-selector-class">.toc</span> {
   <span class="hljs-attribute">list-style-type</span>: disc;
 }
@@ -391,7 +402,7 @@ toggleToc();</pre>
 }
 
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
-  <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-pseudo">:focus</span> {
     <span class="hljs-attribute">text-decoration</span>: none;
   }
 }
@@ -405,6 +416,22 @@ toggleToc();</pre>
 <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-class">.is-current</span> {
   <span class="hljs-attribute">text-decoration</span>: none;
   <span class="hljs-attribute">font-weight</span>: bold;
+}
+
+<span class="hljs-selector-class">.back-to-top-container</span><span class="hljs-selector-class">.-text</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center;
+}
+
+<span class="hljs-selector-class">.back-to-top-container</span><span class="hljs-selector-class">.-text</span> <span class="hljs-selector-class">.back-to-top</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">2rem</span>;
+  <span class="hljs-attribute">text-decoration</span>: underline;
+}
+
+<span class="hljs-selector-class">.back-to-top-container</span><span class="hljs-selector-class">.-text</span> <span class="hljs-selector-class">.back-to-top</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.back-to-top-container</span><span class="hljs-selector-class">.-text</span> <span class="hljs-selector-class">.back-to-top</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">text-decoration</span>: none;
 }</pre>
                             </code>
                             
@@ -421,7 +448,7 @@ toggleToc();</pre>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1 KB</span>
+                    <span class="Meta-value">1.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -1481,7 +1508,7 @@ toggleToc();</pre>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-21T03:17:04.841Z">
+                            <time datetime="2021-05-21T05:12:36.168Z">
                                 5/21/2021
                             </time>
                         
