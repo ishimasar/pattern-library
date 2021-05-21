@@ -18,6 +18,12 @@
 .toc-open {
   display: inline-block;
   font-family: var(--sentence-font);
+  cursor: pointer;
+  @include mq(tb-dth) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   @include mq(sp) {
     font-size: calc(var(--font-size-s1));
   }

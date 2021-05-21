@@ -8,8 +8,8 @@ import { scrollSmooth } from './modules/SmoothScroll.js';
 import { Tab } from './modules/Tab.js';
 // import { TabSwipe } from './modules/TabSwipe.js';
 import { ToggleSwitch } from './modules/ToggleSwitch.js';
-import { toggleToc } from './modules/ToggleToc.js';
 import { UiModeSwitcher } from './modules/UiModeSwitcher.js';
+import { toggleToc } from './modules/ToggleToc.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const detailsEls = document.querySelectorAll('.accordion-details');

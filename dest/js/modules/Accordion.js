@@ -1,7 +1,7 @@
 /**
  * Accordion UI class
  */
-'use strict';
+ 'use strict';
 
 export class Accordion {
   constructor(el) {

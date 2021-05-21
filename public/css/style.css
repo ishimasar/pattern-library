@@ -1477,6 +1477,13 @@ td {
 .toc-open {
   display: inline-block;
   font-family: var(--sentence-font);
+  cursor: pointer;
+}
+
+@media print, screen and (min-width: 48em) {
+  .toc-open:hover {
+    text-decoration: underline;
+  }
 }
 
 @media print, screen and (max-width: 47.9375em) {
