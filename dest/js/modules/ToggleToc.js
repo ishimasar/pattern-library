@@ -1,13 +1,14 @@
 export function toggleToc() {
   const detailsElement = document.querySelector('.toc-open');
   const summaryElement = document.querySelector('.toc-open > summary');
+  const summaryText = document.querySelector('.toc-open .summary-text');
 
   if (detailsElement !== null) {
     detailsElement.addEventListener("toggle", () => {
       if (detailsElement.open) {
-        summaryElement.innerHTML = '<span>[ 閉じる ]</span>'
+        summaryText.innerText = '[ 閉じる ]'
       } else {
-        summaryElement.innerHTML = '<span>[ 開く ]</span>'
+        summaryText.innerText = '[ 開く ]'
       }
     });
   }

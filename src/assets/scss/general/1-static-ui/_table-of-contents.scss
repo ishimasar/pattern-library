@@ -2,11 +2,11 @@
   padding: .5rem 2rem;
   border: 1px dotted #333;
   text-align: center;
-  @include mq(dt) {
+  @include mq(tb-dth) {
     width: 30rem;
     margin: 1.5rem auto 2rem;
   }
-  @include mq(sp-tb) {
+  @include mq(sp) {
     width: 90%;
     margin: 1rem auto 1.5rem;
   }
@@ -18,14 +18,17 @@
 .toc-open {
   display: inline-block;
   font-family: var(--sentence-font);
-  cursor: pointer;
-  @include mq(tb-dth) {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
   @include mq(sp) {
     font-size: calc(var(--font-size-s1));
+  }
+  & summary {
+    cursor: pointer;
+  }
+  & .summary-text {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
   // /* marker消すスタイル */
   // & summary::marker {
@@ -47,7 +50,8 @@
   text-decoration: underline;
   font-family: var(--sentence-font);
   @include mq(tb-dth) {
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
     }
   }
@@ -57,5 +61,20 @@
   &.is-current {
     text-decoration: none;
     font-weight: bold;
+  }
+}
+
+.back-to-top-container.-text {
+  display: flex;
+  justify-content: center;
+  & .back-to-top {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }

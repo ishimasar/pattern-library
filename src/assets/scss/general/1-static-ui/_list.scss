@@ -46,7 +46,8 @@
     text-decoration: underline;
     color: var(--accent-color);
     @include mq(dt) {
-      &:hover {
+      &:hover,
+      &:focus {
         text-decoration: none;
       }
     }

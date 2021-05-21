@@ -57,13 +57,13 @@ export function scrollSmooth() {
             targetElm.addEventListener('blur', () => {
               targetElm.removeAttribute('tabindex');
             });
-            for(var i = 0; toc.length > i; i++) {
-              if (href === toc[i].hash) {
-                toc[i].classList.add('is-current');
-              } else {
-                toc[i].classList.remove('is-current');
-              }
-            }
+            // for(var i = 0; toc.length > i; i++) {
+            //   if (href === toc[i].hash) {
+            //     toc[i].classList.add('is-current');
+            //   } else {
+            //     toc[i].classList.remove('is-current');
+            //   }
+            // }
             for(var i = 0; section.length > i; i++) {
               if (targetElm !== section[i]) {
                 section[i].removeAttribute('tabindex');
