@@ -1,18 +1,14 @@
 .selectbox-container {
   position: relative;
-  width: 65%;
+  width: 75%;
+  margin: auto;
   box-sizing: border-box;
   @include mq(dt) {
     display: flex;
     justify-content: flex-start;
-    margin-top: 2.5rem;
   }
-  @include mq(sp-tb) {
-    margin-top: 1.7rem;
-  }
-  &:after {
+  &.-pulldown:after {
     @include triangle(12, 8, bottom, #333);
-    display: inline;
     position: absolute;
     @include mq(dt) {
       right: 20px;
@@ -37,19 +33,25 @@
     width: 100%;
     margin-bottom: .7rem;
   }
+  &.-multi {
+    @include mq(dt) {
+      align-items: flex-start;
+      margin-top: .625rem;
+    }
+  }
 }
 .selectbox {
   display: inline-block;
   position: relative;
+  max-width: 60rem;
   margin: auto 1px auto -1px;
   border: 1px solid #333;
-  background: rgb(244, 239, 237);
+  // background: hsla(17, 24%, 94%, 1);
   line-height: 1.2;
-  border-radius: 5px;
+  // border-radius: 5px;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15);
   @include mq(dt) {
     width: 75%;
-    height: 51px;
     padding: .65rem 1rem;
     font-size: calc(var(--font-size-m2));
     &:focus {
@@ -58,7 +60,6 @@
   }
   @include mq(sp-tb) {
     width: 100%;
-    height: 47.34px;
     padding: .65rem 1.5rem .5rem .8rem;
     font-size: calc(var(--font-size-m1) - .1rem);
     &:focus {
@@ -69,5 +70,16 @@
   }
   &:focus {
     border-width: 2px;
+  }
+  &.-single-select {
+    @include mq(dt) {
+      height: 51px;
+    }
+    @include mq(sp-tb) {
+      height: 47.34px;
+    }
+  }
+  &.-multiple-select {
+
   }
 }

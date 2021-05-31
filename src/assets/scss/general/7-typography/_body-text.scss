@@ -1,4 +1,7 @@
 .body-text {
+  & .-paragraph {
+    width: 100%;
+  }
   & .link {
     display: block;
     width: fit-content;

@@ -179,33 +179,35 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-d3f77a62b6bc37597cab4ce51b355658-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;modal-dialog&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-dialog&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-open&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-open&quot;</span>&gt;</span>
-        モーダルダイアログ<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-        (モーダルウインドウ)を開く
-    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">dialog</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-panel&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;dialog&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;d-message&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;d-message&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__paragraph&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;document&quot;</span>&gt;</span>
-            モーダルダイアログ(モーダルウインドウ)<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-            とはどんなものか知っていますか？
-        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__buttons&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-yes&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__button&quot;</span>&gt;</span>
-                はい
-            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-no&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__button&quot;</span>&gt;</span>
-                いいえ
-            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__close&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;このモーダルダイアログを閉じる&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;positioning&quot;</span>&gt;</span>×<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;main&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main-wrapper&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;modal-dialog&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-dialog&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-open&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-open&quot;</span>&gt;</span>
+            モーダルダイアログ<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            (モーダルウインドウ)を開く
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">dialog</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-response&quot;</span>&gt;</span>
-        ダイアログの返り値：<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;return-value&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dialog</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-panel&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;dialog&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;d-message&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;d-message&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__paragraph&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;document&quot;</span>&gt;</span>
+                モーダルダイアログ(モーダルウインドウ)<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                とはどんなものか知っていますか？
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__buttons&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-yes&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__button&quot;</span>&gt;</span>
+                    はい
+                <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-no&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__button&quot;</span>&gt;</span>
+                    いいえ
+                <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__close&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;このモーダルダイアログを閉じる&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;positioning&quot;</span>&gt;</span>×<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dialog</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-response&quot;</span>&gt;</span>
+            ダイアログの返り値：<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;return-value&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -213,43 +215,45 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-d3f77a62b6bc37597cab4ce51b355658-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;modal-dialog&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-dialog&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-open&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-open&quot;</span>&gt;</span>
-    モーダルダイアログ<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-    (モーダルウインドウ)を開く
-  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">dialog</span>
-    <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-panel&quot;</span>
-    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel&quot;</span>
-    <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;dialog&quot;</span>
-    <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;d-message&quot;</span>
-  &gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;d-message&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__paragraph&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;document&quot;</span>&gt;</span>
-      モーダルダイアログ(モーダルウインドウ)<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-      とはどんなものか知っていますか？
-    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__buttons&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-yes&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__button&quot;</span>&gt;</span>
-        はい
-      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-no&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__button&quot;</span>&gt;</span>
-        いいえ
-      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
-      <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>
-      <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-close&quot;</span>
-      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__close&quot;</span>
-      <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;このモーダルダイアログを閉じる&quot;</span>
-    &gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;positioning&quot;</span>&gt;</span>×<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;main&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main-wrapper&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;modal-dialog&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-dialog&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-open&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-open&quot;</span>&gt;</span>
+      モーダルダイアログ<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+      (モーダルウインドウ)を開く
     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">dialog</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-response&quot;</span>&gt;</span>
-    ダイアログの返り値：<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;return-value&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dialog</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-panel&quot;</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel&quot;</span>
+      <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;dialog&quot;</span>
+      <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;d-message&quot;</span>
+    &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;d-message&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__paragraph&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;document&quot;</span>&gt;</span>
+        モーダルダイアログ(モーダルウインドウ)<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+        とはどんなものか知っていますか？
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__buttons&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-yes&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__button&quot;</span>&gt;</span>
+          はい
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-no&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__button&quot;</span>&gt;</span>
+          いいえ
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+        <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>
+        <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-close&quot;</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__close&quot;</span>
+        <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;このモーダルダイアログを閉じる&quot;</span>
+      &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;positioning&quot;</span>&gt;</span>×<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dialog</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-response&quot;</span>&gt;</span>
+      ダイアログの返り値：<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;return-value&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -1512,6 +1516,32 @@ _:future,
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="frame.html" data-role="tree-link" data-pjax data-handle="frame">
+                <span>Frame</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="grid.html" data-role="tree-link" data-pjax data-handle="grid">
                 <span>Grid</span>
                 
@@ -1682,8 +1712,8 @@ _:future,
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="display.html" data-role="tree-link" data-pjax data-handle="display">
-                <span>Display</span>
+            <a class="Tree-entityLink" href="utility.html" data-role="tree-link" data-pjax data-handle="utility">
+                <span>Utility</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1770,7 +1800,7 @@ _:future,
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-31T05:39:52.207Z">
+                            <time datetime="2021-05-31T14:15:32.701Z">
                                 5/31/2021
                             </time>
                         
@@ -1796,6 +1826,8 @@ _:future,
                 Back
             </button>
         </div>
+        
+    
         
     
         

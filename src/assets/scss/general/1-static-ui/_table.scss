@@ -29,11 +29,12 @@ td {
 }
 
 .table-scroll {
-  width: 90%;
-  margin: 2rem auto auto;
+  width: 100%;
+  margin: auto;
   overflow: auto;
 
   table {
+    table-layout: fixed;
     white-space: pre;
   }
 }

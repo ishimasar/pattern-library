@@ -1,11 +1,35 @@
-<div class="selectbox-container">
-  <label for="selectbox" class="selectbox-label">問い合わせ種別 ：</label>
-  <select id="selectbox" name="subject" required="required" class="selectbox">
-    <option label="以下から選択してください" selected="selected" disabled="disabled"></option>
-    <option value="work">仕事のご依頼・ご相談</option>
-    <option value="activity">運営者の活動について</option>
-    <option value="about">このサイトについて</option>
-    <option value="interview">取材</option>
-    <option value="other">そのほか</option>
-  </select>
-</div>
+<main role="main" class="main-wrapper">
+  <h2 class="heading2">- single select</h2>
+  <div class="selectbox-container -pulldown">
+    <label for="selectbox" class="selectbox-label">問い合わせ種別 ：</label>
+    <select id="selectbox" class="selectbox -single-select" name="subject" required>
+      <option label="以下から選択してください" selected disabled></option>
+      <option value="work">仕事のご依頼・ご相談</option>
+      <option value="activity">運営者の活動について</option>
+      <option value="about">このサイトについて</option>
+      <option value="interview">取材</option>
+      <option value="other">そのほか</option>
+    </select>
+  </div>
+  <div class="divider" role="separator"></div>
+  <h2 class="heading2">- multiple select</h2>
+  <div class="selectbox-container">
+    <label for="selectbox-multi" class="selectbox-label -multi">問い合わせ種別 ：</label>
+    <select id="selectbox-multi" class="selectbox -multiple-select" name="subject" multiple>
+      <optgroup label="以下から選択してください">
+        <option value="work">仕事のご依頼・ご相談</option>
+        <option value="activity">運営者の活動について</option>
+        <option value="about">このサイトについて</option>
+        <option value="interview">取材</option>
+        <option value="other">そのほか</option>
+      </optgroup>
+      <optgroup label="好きな動物">
+        <option value="work">ペンギン</option>
+        <option value="activity">コツメカワウソ</option>
+        <option value="about">フェネック</option>
+        <option value="about">フクロウ</option>
+        <option value="about">ゴリラ</option>
+      </optgroup>
+    </select>
+  </div>
+</main>

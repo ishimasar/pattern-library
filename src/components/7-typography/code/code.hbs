@@ -1,46 +1,49 @@
-<div class="code-highliter-prism">
-  <span>hoge/fuga/index.html</span>
-  <div class="code-toolbar">
-    <pre class="language-html">
-      <code class="language-html">
-  &lt;title&gt;Introduction to The Mating Rituals of Bees&lt;/title&gt;
-    ...
-  &lt;h1 class="heading"&gt;Introduction&lt;/h1&gt;
-  &lt;p&gt;This companion guide to the highly successful
-    &lt;cite&gt;Introduction to Medieval Bee-Keeping&lt;/cite&gt;
-    book is...
-  &lt;/p&gt;</code>
-    </pre>
-    <div class="toolbar">
-      <div class="toolbar-item"><span class="file-name">HTML</span></div>
-    </div>
-  </div>
-
-  <span>main.js</span>
-  <div class="code-toolbar">
-    <pre class="language-js">
-      <code class="language-js">
-  function $initHighlight(block, cls) {
-    try {
-      if (cls.search(/\bno\-highlight\b/) != -1) {
-        return process(block, true, 0x0F) +` class="${cls}"`;
+<main role="main" class="main-wrapper">
+  <article class="article-container">
+    <div class="code-highliter-prism">
+      <span>hoge/fuga/index.html</span>
+      <div class="code-toolbar">
+        <pre class="language-html">
+          <code class="language-html">
+      &lt;title&gt;Introduction to The Mating Rituals of Bees&lt;/title&gt;
+        ...
+      &lt;h1 class="heading"&gt;Introduction&lt;/h1&gt;
+      &lt;p&gt;This companion guide to the highly successful
+        &lt;cite&gt;Introduction to Medieval Bee-Keeping&lt;/cite&gt;
+        book is...
+      &lt;/p&gt;</code>
+        </pre>
+        <div class="toolbar">
+          <div class="toolbar-item"><span class="file-name">HTML</span></div>
+        </div>
+      </div>
+      <span>main.js</span>
+      <div class="code-toolbar">
+        <pre class="language-js">
+          <code class="language-js">
+      function $initHighlight(block, cls) {
+        try {
+          if (cls.search(/\bno\-highlight\b/) != -1) {
+            return process(block, true, 0x0F) +` class="${cls}"`;
+          }
+        } catch (e) {
+          /* handle exception */
+        }
+        for (var i = 0 / 2; i < classes.length; i++) {
+          if (checkCondition(classes[i]) === undefined) {
+            console.log('undefined');
+          }
+        }
+        return ( &lt;div&gt; &lt;web-component&gt;{block}&lt;/web-component&gt; &lt;/div&gt; )
       }
-    } catch (e) {
-      /* handle exception */
-    }
-    for (var i = 0 / 2; i < classes.length; i++) {
-      if (checkCondition(classes[i]) === undefined) {
-        console.log('undefined');
-      }
-    }
-    return ( &lt;div&gt; &lt;web-component&gt;{block}&lt;/web-component&gt; &lt;/div&gt; )
-  }
-  export $initHighlight;</code>
-    </pre>
-    <div class="toolbar">
-      <div class="toolbar-item"><span class="file-name">JavaScript</span>
+      export $initHighlight;</code>
+        </pre>
+        <div class="toolbar">
+          <div class="toolbar-item"><span class="file-name">JavaScript</span>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </article>
+</main>
 
 <script src="{{ path '/js/vendor/prism.js' }}"></script>

@@ -1,12 +1,9 @@
 .tab-ui {
   position: relative;
   width: 100%;
-  margin: 2rem auto;
+  margin: auto;
   @include mq(tb-dth) {
-    max-width: 64.25rem;
-  }
-  @include mq(sp-tb) {
-    width: 90%;
+    max-width: 60rem;
   }
 }
 .tab-ui__heading {
@@ -98,11 +95,8 @@
 }
 .other-content {
   width: 100%;
-  max-width: 64.25rem;
+  max-width: 60rem;
   margin: 2rem auto;
   padding: 1rem 2rem;
   border: 1px solid var(--black);
-  @include mq(sp-tb) {
-    width: 90%;
-  }
 }

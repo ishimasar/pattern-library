@@ -1,0 +1,14 @@
+.main-wrapper {
+  @include contentWidth;
+  padding: {
+    top: 3rem;
+    bottom: 3rem;
+  }
+}
+.article-container {
+  width: 100%;
+  margin: auto;
+  @include mq(tb-dth) {
+    max-width: 40rem;
+  }
+}

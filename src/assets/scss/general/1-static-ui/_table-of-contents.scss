@@ -1,14 +1,13 @@
 .toc-container {
+  margin: auto;
   padding: .5rem 2rem;
   border: 1px dotted #333;
   text-align: center;
   @include mq(tb-dth) {
     width: 30rem;
-    margin: 1.5rem auto 2rem;
   }
   @include mq(sp) {
     width: 90%;
-    margin: 1rem auto 1.5rem;
   }
 }
 .toc-title {

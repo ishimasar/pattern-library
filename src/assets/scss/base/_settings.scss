@@ -166,15 +166,18 @@ $breakpointVar: (
 // }
 
 // ### content width Mixin
-@mixin contentWidth {
+@mixin contentWidth() {
   @include mq(tb-dth) {
-    width: 965px;
-    max-width: 100%;
-
-    margin: {
-      right: auto;
-      left: auto;
-    }
+    width: 90%;
+    max-width: 64.0625em;
+    min-width: 48rem;
+  }
+  @include mq(sp) {
+    width: 90vw;
+  }
+  margin: {
+    right: auto;
+    left: auto;
   }
 }
 
@@ -207,7 +210,7 @@ $breakpointVar: (
     content: "";
     position: absolute;
     left: 0;
-    width: $width + px;
+    width: $width + %;
     height: 2px;
     background-color: var(--black);
     @if ($pos=="top") {

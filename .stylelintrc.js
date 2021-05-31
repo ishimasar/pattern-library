@@ -201,6 +201,7 @@ module.exports = {
       'min-width',
       'min-height',
       'margin',
+      'margin: {',
       'margin-top',
       'margin-right',
       'margin-bottom',

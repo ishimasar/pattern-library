@@ -3,13 +3,12 @@
   justify-content: center;
   position: relative;
   width: 100%;
+  margin: auto;
   @include mq(tb-dth) {
     max-width: 50rem;
-    margin: 3rem auto auto;
   }
   @include mq(sp) {
     max-width: 80%;
-    margin: 2rem auto auto;
   }
   @include mq(tb-dth) {
     & .prev:before {
@@ -29,17 +28,13 @@
   }
   > li {
     &:not(:first-of-type) {
-      @media print, screen and (max-width: 21em) {
-        margin-left: auto;
+      @include mq(sp) {
         &:not(:first-of-type) > .link {
           border-left: none;
         }
       }
       @include mq(tb-dth) {
-        margin-left: 1.4rem;
-      }
-      @include mq(sp) {
-        margin-left: .7rem;
+        margin-left: 1.2rem;
       }
     }
   }
@@ -49,12 +44,13 @@
   & .next {
     display: block;
     padding: .575rem 1rem;
+    color: #0e51a8;
     @include mq(tb-dth) {
       min-width: 2.85rem;
       font-size: calc(var(--font-size-m2));
     }
     @include mq(sp) {
-      min-width: 2rem;
+      min-width: 2.5rem;
     }
   }
   & .link {
@@ -95,7 +91,7 @@
   }
   & .tethering {
     line-height: 2rem;
-    @media print, screen and (max-width: 21em) {
+    @include mq(sp) {
       width: 0;
       height: 0;
       visibility: hidden;

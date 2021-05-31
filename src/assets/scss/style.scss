@@ -18,20 +18,29 @@
 @import "general/1-static-ui/table";
 @import "general/1-static-ui/table-of-contents";
 @import "general/1-static-ui/tooltip";
+
 @import "general/2-dynamic-ui/accordion";
 @import "general/2-dynamic-ui/carousel";
 @import "general/2-dynamic-ui/modal-dialog";
 @import "general/2-dynamic-ui/tab";
+
 @import "general/3-form-ui/checkbox";
 @import "general/3-form-ui/input-field";
 @import "general/3-form-ui/radio";
 @import "general/3-form-ui/selectbox";
+
 @import "general/4-control/button";
 @import "general/4-control/switch";
+
 @import "general/5-effect/moving-text";
 @import "general/5-effect/smooth-scroll";
+
 @import "general/6-layout/flexbox";
+@import "general/6-layout/frame";
+
 @import "general/7-typography/blockquote";
 @import "general/7-typography/body-text";
 @import "general/7-typography/code";
 @import "general/7-typography/heading";
+
+@import "general/8-utility/divider";

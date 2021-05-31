@@ -5,12 +5,6 @@
   width: 90vw;
   max-width: 100rem;
   margin: auto;
-  @include mq(dt) {
-    margin-top: 2rem;
-  }
-  @include mq(sp-tb) {
-    margin-top: 1.5rem;
-  }
   &.-primary {
     justify-content: space-between;
   }
