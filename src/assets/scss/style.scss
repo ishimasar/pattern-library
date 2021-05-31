@@ -9,6 +9,7 @@
 
 @import "base/settings";
 @import "base/base";
+@import "base/font-face";
 @import "base/print";
 
 @import "general/1-static-ui/card";
@@ -31,5 +32,6 @@
 @import "general/5-effect/smooth-scroll";
 @import "general/6-layout/flexbox";
 @import "general/7-typography/blockquote";
+@import "general/7-typography/body-text";
 @import "general/7-typography/code";
 @import "general/7-typography/heading";

@@ -31,7 +31,7 @@
     position: relative;
     width: 100%;
     border: .5px solid hsla(0, 0%, 90%, 1);
-    font-family: var(--sentence-font);
+    font-family: var(--common-font);
     -webkit-font-smoothing: antialiased;
     overflow: hidden;
     border-radius: .25rem;
@@ -63,7 +63,7 @@
     position: relative;
     width: 100%;
     border: .5px solid hsla(0, 0%, 90%, 1);
-    font-family: var(--sentence-font);
+    font-family: var(--common-font);
     overflow: hidden;
     border-radius: .25rem;
     box-shadow: var(--textbox-shadow);
@@ -100,7 +100,7 @@
     > .title {
       display: inline;
       background: linear-gradient(transparent 94%, #333 6%);
-      font-family: var(--sentence-font);
+      font-family: var(--common-font);
       font-weight: bold;
       @include mq(dt) {
         font-size: calc(var(--font-size-m2));
@@ -112,7 +112,7 @@
     > .excerpt {
       margin-top: .7rem;
       line-height: 1.6;
-      font-family: var(--sentence-font);
+      font-family: var(--common-font);
       color: var(--black);
     }
     & .rule {

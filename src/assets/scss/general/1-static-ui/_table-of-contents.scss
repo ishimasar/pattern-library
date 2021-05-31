@@ -17,7 +17,7 @@
 }
 .toc-open {
   display: inline-block;
-  font-family: var(--sentence-font);
+  font-family: var(--common-font);
   @include mq(sp) {
     font-size: calc(var(--font-size-s1));
   }
@@ -48,7 +48,7 @@
 }
 .toc__link {
   text-decoration: underline;
-  font-family: var(--sentence-font);
+  font-family: var(--common-font);
   @include mq(tb-dth) {
     &:hover,
     &:focus {

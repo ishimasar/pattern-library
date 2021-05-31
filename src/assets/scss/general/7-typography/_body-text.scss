@@ -1,0 +1,20 @@
+.body-text {
+  & .link {
+    display: block;
+    width: fit-content;
+    text-decoration: underline;
+    @include mq(dt) {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    &[target="_blank"]:not([class*="icon"]) {
+      @include blank(13, 13, right, #00e, 6);
+    }
+    &[target="_blank"] > svg {
+      margin-left: .12rem;
+      font-size: calc(var(--font-size-m1));
+    }
+  }
+}

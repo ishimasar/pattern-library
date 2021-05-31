@@ -119,6 +119,21 @@ module.exports = {
         name: 'extend',
         hasBlock: true
       },
+      {
+        type: 'at-rule',
+        name: 'if',
+        hasBlock: true
+      },
+      {
+        type: 'at-rule',
+        name: 'else if',
+        hasBlock: true
+      },
+      {
+        type: 'at-rule',
+        name: 'else',
+        hasBlock: true
+      },
       'rules'
     ],
     'order/properties-order': [
