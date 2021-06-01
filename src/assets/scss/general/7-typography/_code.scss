@@ -169,7 +169,7 @@ div.code-toolbar > .toolbar span:focus {
     font-weight: normal;
     color: #333;
     // border-radius: .3rem .3rem 0 0;
-    &:first-of-type() {
+    &:not(:first-of-type) {
       margin-top: 2rem;
     }
   }

@@ -4294,7 +4294,7 @@ div.code-toolbar > .toolbar span:focus {
   color: #333;
 }
 
-.code-highliter-prism span:not([class*="token"]):not([class="line-numbers-rows"]):not([class="file-name"]):first-of-type {
+.code-highliter-prism span:not([class*="token"]):not([class="line-numbers-rows"]):not([class="file-name"]):not(:first-of-type) {
   margin-top: 2rem;
 }
 
