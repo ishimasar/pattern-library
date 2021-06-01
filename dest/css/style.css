@@ -4300,7 +4300,6 @@ div.code-toolbar > .toolbar span:focus {
 
 .code-highliter-prism pre {
   margin-top: 0;
-  border-radius: .3rem;
 }
 
 .code-highliter-prism code {
