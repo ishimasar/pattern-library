@@ -162,14 +162,16 @@ div.code-toolbar > .toolbar span:focus {
 .code-highliter-prism {
   & span:not([class*="token"]):not([class="line-numbers-rows"]):not([class="file-name"]) {
     display: inline-block;
-    margin-top: 2rem;
     padding: .2rem .8rem;
-    border: 1px solid #333;
+    // border: 1px solid #333;
     background-color: var(--white);
     font-size: calc(var(--font-size-m1) - .02rem);
     font-weight: normal;
     color: #333;
-    border-radius: .3rem .3rem 0 0;
+    // border-radius: .3rem .3rem 0 0;
+    &:first-of-type() {
+      margin-top: 2rem;
+    }
   }
   & pre {
     margin-top: 0;

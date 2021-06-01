@@ -1,0 +1,59 @@
+// コンテンツを視覚的に隠し、スクリーンリーダーでは読ませるためのもの
+.geVisuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+// 画面サイズ(デバイスサイズ)に応じ、
+// 以下条件に当てはまる場合に適用要素を表示し、
+// それ以外の場合を非表示にする
+
+// 画面サイズ767px以下(スマートフォン想定)のとき
+.geDisplaySp {
+  @include mq(tb-dth) {
+    display: none;
+  }
+  @include mq(sp) {
+    display: inline-block;
+  }
+}
+
+// 画面サイズ1024px以下(スマホ~タブレット想定)のとき
+.geDisplaySpTb {
+  @include mq(dt) {
+    display: none;
+  }
+  @include mq(sp-tb) {
+    display: inline-block;
+  }
+}
+
+// 画面サイズ768px以上(タブレット~デスクトップ想定)のとき
+.geDisplayTbDt {
+  @include mq(dt) {
+    display: block;
+  }
+  @include mq(tb) {
+    display: block;
+  }
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+// 画面サイズ1025px以上(デスクトップ全般想定)のとき
+.geDisplayDt {
+  @include mq(dt) {
+    display: block;
+  }
+  @include mq(sp-tb) {
+    display: none;
+  }
+}

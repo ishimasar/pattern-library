@@ -1,0 +1,237 @@
+.nav {
+  @include mq(sp) {
+    z-index: 1;
+    width: 100%;
+    border-top: 1px solid var(--line-color);
+    background-color: var(--white);
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, .2);
+  }
+}
+.nav-list {
+  display: flex;
+  @include mq(sp) {
+    display: flex;
+  }
+  > li {
+    position: relative;
+    border: 1px solid var(--black);
+    @include mq(sp) {
+      width: 100%;
+      &:not(:first-of-type):before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 1.5px;
+        height: 55%;
+        border-left: 1px solid var(--line-color);
+        transform: translateY(-50%);
+      }
+    }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -.25rem;
+      height: 25%;
+      transform: translateY(-50%);
+      @include mq(tb-dth) {
+        border-left: .25rem double var(--line-color);
+      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: -.25rem;
+      height: 25%;
+      transform: translateY(-50%);
+      @include mq(tb-dth) {
+        border-left: .25rem double var(--line-color);
+      }
+    }
+  }
+  > li:not(:first-of-type) {
+    @include mq(dt) {
+      margin-left: 1vw;
+    }
+    @include mq(tb) {
+      width: auto;
+      margin-left: .5vw;
+    }
+  }
+}
+%_lineAbstraction {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: var(--logo-color);
+  transition: transform .35s var(--ease-out-quad);
+  @include mq(tb-dth) {
+    height: 3px;
+  }
+  @include mq(sp) {
+    height: 4px;
+  }
+}
+.nav-link,
+span[aria-current="page"] {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  @include mq(dth) {
+    min-width: 10rem;
+    padding: .6rem 1.5rem .8rem;
+  }
+  @include mq(dtl) {
+    min-width: 8.1rem;
+    padding: .6rem 0 .8rem;
+  }
+  @include mq(dt) {
+    &:hover,
+    &:focus {
+      font-style: italic;
+      -webkit-font-smoothing: antialiased;
+      -webkit-backface-visibility: hidden;
+    }
+    &:hover:before,
+    &:focus:before,
+    &:hover:after,
+    &:focus:after {
+      transform: translateX(0);
+      transition: transform .3s var(--ease-in-quad);
+    }
+  }
+  @include mq(tb) {
+    min-width: 6.5rem;
+    padding: .6rem 0 .8rem;
+  }
+  @include mq(sp) {
+    padding: .3rem .2rem .4rem;
+  }
+  &:before {
+    @extend %_lineAbstraction;
+    top: 0;
+    background-image: var(--globalnav-hover-gradient-r);
+    transform: translateX(-101%);
+  }
+  &:after {
+    @extend %_lineAbstraction;
+    bottom: 0;
+    background-image: var(--globalnav-hover-gradient-l);
+    transform: translateX(101%);
+  }
+  > .ja {
+    display: block;
+    width: 100%;
+    line-height: 1.85;
+    font-family: var(--sentence-font);
+    font-weight: bold;
+    @include mq(dt) {
+      font-size: calc(var(--font-size-m1) + .05rem);
+    }
+    @include mq(sp-tb) {
+      vertical-align: baseline;
+      font-size: calc(var(--font-size-s1));
+    }
+  }
+  > .en {
+    // @include engFont;
+    display: block;
+    vertical-align: baseline;
+    text-transform: uppercase;
+    @include mq(dt) {
+      font-size: calc(var(--font-size-s2) + .1rem);
+      letter-spacing: .1rem;
+    }
+    @include mq(tb-dth) {
+      padding-top: .5rem;
+    }
+    @include mq(tb) {
+      font-size: calc(var(--font-size-s2));
+      letter-spacing: .1rem;
+    }
+    @include mq(sp) {
+      font-size: calc(var(--font-size-s2));
+      letter-spacing: .05rem;
+    }
+  }
+}
+span[aria-current="page"] {
+  font-family: var(--sentence-font);
+  font-style: italic;
+  pointer-events: none;
+  @include mq(sp) {
+    &:before {
+      content: none !important;
+    }
+  }
+  &:before,
+  &:after {
+    transform: translateX(0);
+  }
+}
+
+.breadcrumb-container {
+  width: 100%;
+  border-top: 1px solid var(--line-color);
+  background-color: var(--white);
+}
+.breadcrumb-list {
+  width: 100%;
+  margin: auto;
+  font-family: var(--sentence-font);
+  overflow: auto;
+  @include mq(dt) {
+    max-width: 90vw;
+  }
+  @include mq(sp-tb) {
+    max-width: 90vw;
+    white-space: nowrap;
+  }
+  > li {
+    display: inline-block;
+    &:after {
+      @include inlineArrowHead(9, right, var(--text-normal-color));
+    }
+    &:last-of-type:after {
+      content: none;
+    }
+  }
+}
+.breadcrumb-link {
+  display: inline-block;
+  text-decoration: underline;
+  @include mq(dt) {
+    padding: .8rem 1.3rem;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  @include mq(sp-tb) {
+    padding: .7rem 1rem .65rem;
+  }
+  @include mq(sp) {
+    font-size: calc(var(--font-size-m1) - .08rem);
+  }
+}
+.breadcrumb-current {
+  display: inline-block;
+  font-weight: bold;
+  @include mq(dt) {
+    padding: .8rem 1.3rem;
+  }
+  @include mq(sp-tb) {
+    padding: .5rem 1rem;
+  }
+  @include mq(sp) {
+    font-size: calc(var(--font-size-m1) - .08rem);
+  }
+}

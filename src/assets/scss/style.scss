@@ -14,6 +14,7 @@
 
 @import "general/1-static-ui/card";
 @import "general/1-static-ui/list";
+@import "general/1-static-ui/navigation";
 @import "general/1-static-ui/pagination";
 @import "general/1-static-ui/table";
 @import "general/1-static-ui/table-of-contents";
@@ -30,17 +31,21 @@
 @import "general/3-form-ui/selectbox";
 
 @import "general/4-control/button";
+@import "general/4-control/slider";
 @import "general/4-control/switch";
 
 @import "general/5-effect/moving-text";
 @import "general/5-effect/smooth-scroll";
 
+@import "general/6-layout/column";
 @import "general/6-layout/flexbox";
 @import "general/6-layout/frame";
+@import "general/6-layout/grid";
 
 @import "general/7-typography/blockquote";
 @import "general/7-typography/body-text";
 @import "general/7-typography/code";
 @import "general/7-typography/heading";
 
-@import "general/8-utility/divider";
+@import "general/8-utility/display";
+@import "general/8-utility/shape";

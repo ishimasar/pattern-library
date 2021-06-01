@@ -1,8 +1,22 @@
+.contents-wrapper {
+  @include mq(sp) {
+
+  }
+  display: grid;
+  padding: 1rem;
+  @include mq(tb-dth) {
+    width: 100%;
+  }
+}
 .main-wrapper {
   @include contentWidth;
+  @include mq(tb-dth) {
+    // width: 70%;
+  }
   padding: {
     top: 3rem;
     bottom: 3rem;
+    left: .5rem;
   }
 }
 .article-container {
@@ -10,5 +24,16 @@
   margin: auto;
   @include mq(tb-dth) {
     max-width: 40rem;
+  }
+}
+.aside-wrapper {
+  @include contentWidth;
+  @include mq(tb-dth) {
+    // width: 30%;
+  }
+  padding: {
+    top: 3rem;
+    bottom: 3rem;
+    left: .5rem;
   }
 }

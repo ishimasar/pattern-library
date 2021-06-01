@@ -1,0 +1,9 @@
+.content-box {
+  margin: auto;
+  @include mq(tb-dth) {
+    columns: 3 auto;
+  }
+  @include mq(sp) {
+    columns: 2 auto;
+  }
+}

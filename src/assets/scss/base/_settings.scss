@@ -683,8 +683,9 @@ $breakpointVar: (
 
 // ### figure Mixin
 // #### 正円
-@mixin circle($size) {
-  width: $size + px;
-  height: $size + px;
+@mixin circle($size, $color) {
+  width: $size + rem;
+  height: $size + rem;
+  background-color: $color;
   border-radius: 50%;
 }
