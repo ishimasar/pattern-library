@@ -183,8 +183,8 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;article-container&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>- Text<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-text -paragraph&quot;</span>&gt;</span>
-                HTMLでマークアップをした際に「そのコード群/UIパーツが検証してみて、意味を持っているか？=セマンティックであるか？」がWAI-ARIAで補完すべきかどうかの判断基準だと思います。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-text&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;HyperText Markup Language（ハイパーテキスト マークアップ ランゲージ）&quot;</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>でマークアップをした際に「そのコード群/UIパーツが、明確に意味を持っているか、それが人にもマシンにも伝わるようになっているか？言い換えるとセマンティックであるか？」が<span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Web Accessibility Initiative – Accessible Rich Internet Applications&quot;</span>&gt;</span>WAI-ARIA<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>（ウェイ エリア）の記述で補足をすべきかどうかの判断基準だと思います。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -215,17 +215,15 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>- Highlight<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">mark</span>&gt;</span>
-                    ハイライト (Highlight)
-                <span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-text&quot;</span>&gt;</span>
+                正直あまり、使う場面を想定していませんが、<span class="hljs-tag">&lt;<span class="hljs-name">mark</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mark&quot;</span>&gt;</span>ハイライト (Highlight)<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span>はこんな感じで少しだけ強調したいときに使ってくださってもかまいませんことよオホホ。
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>- Shortcut<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-text&quot;</span>&gt;</span>
-                このツールでの当該操作のショートカットキーは <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>Shift<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> + <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>Command<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> + <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>↑<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> です。
+                このツールでの当該操作のショートカットキーは<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>Shift<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>Command<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>↑<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>と<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>⌘ + スペース<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>です。
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
@@ -243,8 +241,8 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;article-container&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>- Text<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-text -paragraph&quot;</span>&gt;</span>
-        HTMLでマークアップをした際に「そのコード群/UIパーツが検証してみて、意味を持っているか？=セマンティックであるか？」がWAI-ARIAで補完すべきかどうかの判断基準だと思います。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-text&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;HyperText Markup Language（ハイパーテキスト マークアップ ランゲージ）&quot;</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>でマークアップをした際に「そのコード群/UIパーツが、明確に意味を持っているか、それが人にもマシンにも伝わるようになっているか？言い換えるとセマンティックであるか？」が<span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Web Accessibility Initiative – Accessible Rich Internet Applications&quot;</span>&gt;</span>WAI-ARIA<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>（ウェイ エリア）の記述で補足をすべきかどうかの判断基準だと思います。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -275,17 +273,15 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>- Highlight<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">mark</span>&gt;</span>
-          ハイライト (Highlight)
-        <span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-text&quot;</span>&gt;</span>
+        正直あまり、使う場面を想定していませんが、<span class="hljs-tag">&lt;<span class="hljs-name">mark</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mark&quot;</span>&gt;</span>ハイライト (Highlight)<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span>はこんな感じで少しだけ強調したいときに使ってくださってもかまいませんことよオホホ。
       <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>- Shortcut<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-text&quot;</span>&gt;</span>
-        このツールでの当該操作のショートカットキーは <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>Shift<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> + <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>Command<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> + <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>↑<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> です。
+        このツールでの当該操作のショートカットキーは<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>Shift<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>Command<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>↑<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>と<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shortcut&quot;</span>&gt;</span>⌘ + スペース<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>です。
       <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
@@ -1433,8 +1429,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-31T14:15:32.701Z">
-                                5/31/2021
+                            <time datetime="2021-06-01T00:40:41.688Z">
+                                6/1/2021
                             </time>
                         
                     </dd>

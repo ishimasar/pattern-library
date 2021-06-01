@@ -1,7 +1,6 @@
 .body-text {
-  & .-paragraph {
-    width: 100%;
-  }
+  width: 100%;
+  line-height: 1.8;
   & .link {
     display: block;
     width: fit-content;
@@ -19,5 +18,15 @@
       margin-left: .12rem;
       font-size: calc(var(--font-size-m1));
     }
+  }
+  & .mark {
+    background-color: #bdfdff;
+  }
+  & .shortcut {
+    margin: -.2em .3em 0;
+    padding: .1em .4em .15em;
+    background-color: #efefef;
+    border-radius: 3px;
+    box-shadow: .1em .1em 0 rgba(0, 0, 0, .4);
   }
 }

@@ -992,6 +992,7 @@ legend {
   background: linear-gradient(transparent 94%, #333 6%);
   font-family: var(--common-font);
   font-weight: bold;
+  color: var(--black);
 }
 
 @media print, screen and (min-width: 64.0625em) {
@@ -1024,6 +1025,7 @@ legend {
 .card .textContainer .dateContainer {
   display: block;
   text-align: right;
+  color: var(--black);
 }
 
 @media print, screen and (min-width: 64.0625em) {
@@ -1059,6 +1061,7 @@ legend {
 .card .textContainer .tagContainer {
   display: flex;
   justify-content: flex-end;
+  color: var(--black);
 }
 
 @media print, screen and (min-width: 48em) {
@@ -1235,7 +1238,7 @@ legend {
 .pagination .next {
   display: block;
   padding: .575rem 1rem;
-  color: #0e51a8;
+  color: var(--black);
 }
 
 @media print, screen and (min-width: 48em) {
@@ -1253,7 +1256,8 @@ legend {
   .pagination [aria-current="page"],
   .pagination .prev,
   .pagination .next {
-    min-width: 2.5rem;
+    width: auto;
+    min-width: 2.7rem;
   }
 }
 
@@ -1364,8 +1368,13 @@ td {
 }
 
 .table-scroll table {
-  table-layout: fixed;
   white-space: pre;
+}
+
+@media print, screen and (min-width: 64.0625em) {
+  .table-scroll table {
+    table-layout: fixed;
+  }
 }
 
 .table-text-center td {
@@ -1454,6 +1463,7 @@ td {
 .toc__link {
   text-decoration: underline;
   font-family: var(--common-font);
+  color: var(--black);
 }
 
 @media print, screen and (min-width: 48em) {
@@ -2758,6 +2768,14 @@ _:future,
   }
 }
 
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+.input-switch-pass {
+  margin-top: .5rem;
+}
+
 .fieldset {
   width: 65%;
   font-size: calc(var(--font-size-m2));
@@ -3035,7 +3053,7 @@ svg circle {
   position: relative;
   width: 12.5rem;
   height: 4rem;
-  margin: auto 1rem;
+  margin: auto 1rem 2rem;
   border: 2px solid var(--black);
   text-align: center;
   text-decoration: none;
@@ -3479,8 +3497,9 @@ svg circle {
   overflow: visible;
 }
 
-.body-text .-paragraph {
+.body-text {
   width: 100%;
+  line-height: 1.8;
 }
 
 .body-text .link {
@@ -3543,6 +3562,18 @@ svg circle {
 .body-text .link[target="_blank"] > svg {
   margin-left: .12rem;
   font-size: calc(var(--font-size-m1));
+}
+
+.body-text .mark {
+  background-color: #bdfdff;
+}
+
+.body-text .shortcut {
+  margin: -.2em .3em 0;
+  padding: .1em .4em .15em;
+  background-color: #efefef;
+  border-radius: 3px;
+  box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.4);
 }
 
 /* PrismJS 1.23.0

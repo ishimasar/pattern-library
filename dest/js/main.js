@@ -75,3 +75,12 @@ uiModeSwitcher.switchMode();
 
 const elem = document.querySelectorAll('.toc');
 Stickyfill.add(elem);
+
+// show password script 移設及びリファクタリング予定
+const password = document.getElementById('js-display-pass');
+const showPassword = document.getElementById('js-show-pass');
+
+showPassword.addEventListener('change', function() {
+  const type = this.checked ? 'text' : 'password';
+  password.setAttribute('type', type);
+});

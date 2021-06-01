@@ -102,6 +102,7 @@
       background: linear-gradient(transparent 94%, #333 6%);
       font-family: var(--common-font);
       font-weight: bold;
+      color: var(--black);
       @include mq(dt) {
         font-size: calc(var(--font-size-m2));
       }
@@ -125,6 +126,7 @@
     & .dateContainer {
       display: block;
       text-align: right;
+      color: var(--black);
       @include mq(dt) {
         margin: {
           top: .5rem;
@@ -150,6 +152,7 @@
     & .tagContainer {
       display: flex;
       justify-content: flex-end;
+      color: var(--black);
       @include mq(tb-dth) {
         margin: {
           top: .2rem;

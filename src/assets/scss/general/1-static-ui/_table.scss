@@ -34,8 +34,10 @@ td {
   overflow: auto;
 
   table {
-    table-layout: fixed;
     white-space: pre;
+    @include mq(dt) {
+      table-layout: fixed;
+    }
   }
 }
 .table-text-center td {
@@ -44,15 +46,12 @@ td {
 .table-highlight td {
   background: #fffdc9;
 }
-
 .table-60 {
   width: 100%;
-
   @media screen and (min-width: 840px) {
     width: 60%;
   }
 }
-
 .cell-left {
   text-align: left;
 }
