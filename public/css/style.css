@@ -2646,6 +2646,16 @@ _:future,
   box-sizing: border-box;
 }
 
+.input-text-container .password-toggle {
+  margin-top: .5rem;
+}
+
+@media print, screen and (min-width: 64.0625em) {
+  .input-text-container .password-toggle {
+    margin-left: 25%;
+  }
+}
+
 .input-text-label {
   width: 24%;
 }
@@ -2770,10 +2780,6 @@ _:future,
 
 input[type="password"]::-ms-reveal {
   display: none;
-}
-
-.input-switch-pass {
-  margin-top: .5rem;
 }
 
 .fieldset {
@@ -3480,7 +3486,6 @@ svg circle {
   display: inline-block;
   width: auto;
   text-decoration: underline;
-  color: #0d1a54;
 }
 
 .blockquote .link:hover, .blockquote .link:focus {

@@ -3,25 +3,25 @@
     <legend class="heading3">- Type Text</legend>
     <div class="input-text-container">
       <label for="name" class="input-text-label">お名前 ：</label>
-      <input type="text" id="name" name="name" placeholder="姓 名" maxlength="50" required="required" class="input-text">
+      <input type="text" id="name" name="name" placeholder="姓 名" maxlength="50" required class="input-text">
     </div>
   </fieldset>
   <div class="divider" role="separator"></div>
   <fieldset>
     <legend class="heading3">- Type Email</legend>
     <div class="input-text-container">
-      <label for="email" class="input-text-label">Emailアドレス  ：</label>
-      <input type="email" id="email" name="email" pattern=".{1,}@.*" placeholder="xxxx@xxx.com（.co.jpなど）" maxlength="50" required="required" class="input-text">
+      <label for="email" class="input-text-label">Emailアドレス ：</label>
+      <input type="email" id="email" name="email" pattern=".{1,}@.*" placeholder="xxxx@xxx.com（.co.jpなど）" maxlength="50" required class="input-text">
     </div>
   </fieldset>
   <div class="divider" role="separator"></div>
   <fieldset>
     <legend class="heading3">- Type Password</legend>
     <div class="input-text-container">
-      <label for="password" class="input-text-label">パスワード：</label>
-      <input type="password" id="js-display-pass" name="password" class="input-text">
-      <label>
-        <input type="checkbox" id="js-show-pass" class="input-switch-pass"> パスワードを表示する
+      <label for="password" class="input-text-label">パスワード ：</label>
+      <input type="password" id="js-display-pass" name="password" placeholder="任意のパスワード(英数字8文字以上)" required class="input-text">
+      <label class="password-toggle">
+        <input type="checkbox" id="js-show-pass"> パスワードを表示する
       </label>
     </div>
   </fieldset>
@@ -30,7 +30,7 @@
     <legend class="heading3">- Textarea</legend>
     <div class="input-text-container">
       <label for="textarea" class="textarea-label">問い合わせ内容 ：</label>
-      <textarea id="textarea" name="message" placeholder="内容をご記入ください" required="required" class="textarea"></textarea>
+      <textarea id="textarea" name="message" placeholder="内容をご記入ください" required class="textarea"></textarea>
     </div>
   </fieldset>
 </main>
