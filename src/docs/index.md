@@ -3,10 +3,7 @@ title: Pattern Library & Style Guide by Cloudy knot
 ---
 このサイトは、フリーランスのWeb開発・制作者であるCloudy knotが更新・管理しているパターンライブラリおよびスタイルガイドです。
 
----
-
-Components(UI)は随時、作成追加・メンテ更新。<br>
-2021/6時点で29個(固定8分類)掲載。<br>
+Components(UI)は随時、作成追加・メンテ更新。29種(固定8分類)掲載 - 2021/6。<br>
 詳細については以下のドキュメントもご参照ください。
 
 <a href="https://ishimasar.github.io/pattern-library/" target="_blank">
@@ -26,3 +23,9 @@ Pattern Library & Style Guide by Cloudy knot</a> (外部リンク)
 | 6. | **Layout** | 配置・割付規則 |
 | 7. | **Typography** | 文字表現 |
 | 8. | **Utility**| 汎用パターン|
+
+## 使い方・参照方法
+
+Components(UI)詳細画面の下部「View」タブ内からHTML、「Assets」タブ内からCSS、JavaScript(使用されている場合)コードのファイル名(style.css、index.js)を選び、コード参照が可能です。
+
+<img src="https://ishimasar.github.io/pattern-library/dest/img/guidance-image.png" class="carousel__img is-motioned" alt="スライドパネルのコンテンツ画像1" width="300" height="541" decoding="async">
