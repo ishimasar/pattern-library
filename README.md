@@ -26,7 +26,7 @@ Webサイト・アプリ制作で使用されるUIやスタイルのコード見
 
 Components(UI)詳細画面の下部エリアに共通ドキュメントタブ(HTML、View、Context..等)が表示されます。おもに「View」タブ内からHTML、「Asset」タブ内からCSS、JavaScript(使用されている場合)のファイル名(style.css、index.js)をSelect boxから選ぶことでコード参照できます。ほかのFractalデフォルトタブは特に利用していません。ご自由に参照利用ください。
 
-<img src="https://ishimasar.github.io/pattern-library/dest/img/guidance-image.png" class="carousel__img is-motioned" alt="スライドパネルのコンテンツ画像1" width="364" height="656" decoding="async">
+<img src="https://ishimasar.github.io/pattern-library/dest/img/guidance-image.png" class="carousel__img is-motioned" alt="スライドパネルのコンテンツ画像1" width="300" height="541" decoding="async">
 
 背景技術として、HTMLテンプレートエンジンはHandlebars(Fractalデフォルト)、CSSはSass、JavaScriptはネイティブ(拡大に伴いTypeScriptへ移行中)を利用しています。
 
