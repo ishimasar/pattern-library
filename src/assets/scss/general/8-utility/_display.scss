@@ -1,5 +1,5 @@
 // コンテンツを視覚的に隠し、スクリーンリーダーでは読ませるためのもの
-.geVisuallyHidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -16,7 +16,7 @@
 // それ以外の場合を非表示にする
 
 // 画面サイズ767px以下(スマートフォン想定)のとき
-.geDisplaySp {
+.display-sp {
   @include mq(tb-dth) {
     display: none;
   }
@@ -26,7 +26,7 @@
 }
 
 // 画面サイズ1024px以下(スマホ~タブレット想定)のとき
-.geDisplaySpTb {
+.display-sptb {
   @include mq(dt) {
     display: none;
   }
@@ -36,7 +36,7 @@
 }
 
 // 画面サイズ768px以上(タブレット~デスクトップ想定)のとき
-.geDisplayTbDt {
+.display-tbdt {
   @include mq(dt) {
     display: block;
   }
@@ -49,7 +49,7 @@
 }
 
 // 画面サイズ1025px以上(デスクトップ全般想定)のとき
-.geDisplayDt {
+.display-dt {
   @include mq(dt) {
     display: block;
   }
