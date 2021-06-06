@@ -317,7 +317,306 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--line-color);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);
+  }
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-list</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-list</span> {
+    <span class="hljs-attribute">display</span>: flex;
+  }
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-list</span> &gt; <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">25%</span>;
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-list</span> &gt; <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:first</span>-of-type {
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-list</span> &gt; <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first</span>-of-type) {
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span>:before,
+.regular-nav span[aria-current=<span class="hljs-string">&quot;page&quot;</span>]:before,
+.regular-nav .nav-link:after,
+.regular-nav span[aria-current=<span class="hljs-string">&quot;page&quot;</span>]:after {
+  content: <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--logo-color);
+  <span class="hljs-attribute">transition</span>: -webkit-transform .<span class="hljs-number">35s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">35s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+  <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">35s</span> <span class="hljs-built_in">var</span>(--ease-out-quad), -webkit-transform .<span class="hljs-number">35s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span>:before,
+  .regular-nav span[aria-current=<span class="hljs-string">&quot;page&quot;</span>]:before,
+  .regular-nav .nav-link:after,
+  .regular-nav span[aria-current=<span class="hljs-string">&quot;page&quot;</span>]:after {
+    height: <span class="hljs-number">3px</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span>:before,
+  .regular-nav span[aria-current=<span class="hljs-string">&quot;page&quot;</span>]:before,
+  .regular-nav .nav-link:after,
+  .regular-nav span[aria-current=<span class="hljs-string">&quot;page&quot;</span>]:after {
+    height: <span class="hljs-number">4px</span>;
+  }
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span> {
+  <span class="hljs-attribute">text-decoration</span>: underline;
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">text-decoration</span>: none;
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span>,
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">overflow</span>: hidden;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">100.0625em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> {
+    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">10rem</span>;
+    <span class="hljs-attribute">padding</span>: .<span class="hljs-number">6rem</span> <span class="hljs-number">1.5rem</span> .<span class="hljs-number">8rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">100em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> {
+    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">8.1rem</span>;
+    <span class="hljs-attribute">padding</span>: .<span class="hljs-number">6rem</span> <span class="hljs-number">0</span> .<span class="hljs-number">8rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span><span class="hljs-selector-pseudo">:hover</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span><span class="hljs-selector-pseudo">:focus</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span><span class="hljs-selector-pseudo">:hover</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span><span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">text-decoration</span>: none;
+    -webkit-<span class="hljs-attribute">font-smoothing</span>: antialiased;
+    <span class="hljs-attribute">backface-visibility</span>: hidden;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> {
+    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">6.5rem</span>;
+    <span class="hljs-attribute">padding</span>: .<span class="hljs-number">6rem</span> <span class="hljs-number">0</span> .<span class="hljs-number">8rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> {
+    <span class="hljs-attribute">padding</span>: .<span class="hljs-number">3rem</span> .<span class="hljs-number">2rem</span> .<span class="hljs-number">4rem</span>;
+  }
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span>:before,
+.regular-nav span[aria-current=<span class="hljs-string">&quot;page&quot;</span>]:before {
+  top: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">var</span>(--globalnav-hover-gradient-r);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">101%</span>);
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span>:after,
+.regular-nav span[aria-current=<span class="hljs-string">&quot;page&quot;</span>]:after {
+  bottom: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">var</span>(--globalnav-hover-gradient-l);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(<span class="hljs-number">101%</span>);
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span> &gt; <span class="hljs-selector-class">.ja</span>,
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> &gt; <span class="hljs-selector-class">.ja</span> {
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.85</span>;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--sentence-font);
+  <span class="hljs-attribute">font-weight</span>: bold;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span> &gt; <span class="hljs-selector-class">.ja</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> &gt; <span class="hljs-selector-class">.ja</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-m1) + .<span class="hljs-number">05rem</span>);
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span> &gt; <span class="hljs-selector-class">.ja</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> &gt; <span class="hljs-selector-class">.ja</span> {
+    <span class="hljs-attribute">vertical-align</span>: baseline;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-s1));
+  }
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span> &gt; <span class="hljs-selector-class">.en</span>,
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> &gt; <span class="hljs-selector-class">.en</span> {
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">text-transform</span>: uppercase;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span> &gt; <span class="hljs-selector-class">.en</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> &gt; <span class="hljs-selector-class">.en</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-s2) + .<span class="hljs-number">1rem</span>);
+    <span class="hljs-attribute">letter-spacing</span>: .<span class="hljs-number">1rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span> &gt; <span class="hljs-selector-class">.en</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> &gt; <span class="hljs-selector-class">.en</span> {
+    <span class="hljs-attribute">padding-top</span>: .<span class="hljs-number">5rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span> &gt; <span class="hljs-selector-class">.en</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> &gt; <span class="hljs-selector-class">.en</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-s2));
+    <span class="hljs-attribute">letter-spacing</span>: .<span class="hljs-number">1rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-class">.nav-link</span> &gt; <span class="hljs-selector-class">.en</span>,
+  <span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> &gt; <span class="hljs-selector-class">.en</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-s2));
+    <span class="hljs-attribute">letter-spacing</span>: .<span class="hljs-number">05rem</span>;
+  }
+}
+
+<span class="hljs-selector-class">.regular-nav</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--sentence-font);
+  <span class="hljs-attribute">pointer-events</span>: none;
+}
+
+<span class="hljs-selector-class">.breadcrumb-container</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--line-color);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);
+}
+
+<span class="hljs-selector-class">.breadcrumb-list</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">margin</span>: auto;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--sentence-font);
+  <span class="hljs-attribute">overflow</span>: auto;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.breadcrumb-list</span> {
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">90vw</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.breadcrumb-list</span> {
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">90vw</span>;
+    <span class="hljs-attribute">white-space</span>: nowrap;
+  }
+}
+
+<span class="hljs-selector-class">.breadcrumb-list</span> &gt; <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+}
+
+<span class="hljs-selector-class">.breadcrumb-list</span> &gt; <span class="hljs-selector-tag">li</span>:after {
+  content: <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">top</span>: -.<span class="hljs-number">1em</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">9px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">9px</span>;
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1.5px</span> solid <span class="hljs-built_in">var</span>(--text-normal-color);
+  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1.5px</span> solid <span class="hljs-built_in">var</span>(--text-normal-color);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>);
+}
+
+<span class="hljs-selector-class">.breadcrumb-list</span> &gt; <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:last-of-type</span>:after {
+  content: none;
+}
+
+<span class="hljs-selector-class">.breadcrumb-link</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">text-decoration</span>: underline;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.breadcrumb-link</span> {
+    <span class="hljs-attribute">padding</span>: .<span class="hljs-number">8rem</span> <span class="hljs-number">1.3rem</span>;
+  }
+  <span class="hljs-selector-class">.breadcrumb-link</span><span class="hljs-selector-pseudo">:hover</span>,
+  <span class="hljs-selector-class">.breadcrumb-link</span><span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">text-decoration</span>: none;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.breadcrumb-link</span> {
+    <span class="hljs-attribute">padding</span>: .<span class="hljs-number">7rem</span> <span class="hljs-number">1rem</span> .<span class="hljs-number">65rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.breadcrumb-link</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-m1) - .<span class="hljs-number">08rem</span>);
+  }
+}
+
+<span class="hljs-selector-class">.breadcrumb-current</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">font-weight</span>: bold;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.breadcrumb-current</span> {
+    <span class="hljs-attribute">padding</span>: .<span class="hljs-number">8rem</span> <span class="hljs-number">1.3rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.breadcrumb-current</span> {
+    <span class="hljs-attribute">padding</span>: .<span class="hljs-number">5rem</span> <span class="hljs-number">1rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.breadcrumb-current</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-m1) - .<span class="hljs-number">08rem</span>);
+  }
+}</pre>
                             </code>
                             
                         </div>
@@ -333,7 +632,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">6.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -1419,7 +1718,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-06-06T08:46:10.828Z">
+                            <time datetime="2021-06-06T09:10:33.037Z">
                                 6/6/2021
                             </time>
                         

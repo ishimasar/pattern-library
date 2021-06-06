@@ -253,7 +253,29 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-selector-class">.grid</span> {
+  <span class="hljs-attribute">display</span>: grid;
+}
+
+<span class="hljs-selector-class">.grid</span><span class="hljs-selector-class">.-responsive</span> {
+  place-items: center;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
+  <span class="hljs-selector-class">.grid</span><span class="hljs-selector-class">.-responsive</span> {
+    grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-built_in">minmax</span>(<span class="hljs-number">14rem</span>, <span class="hljs-number">1</span>fr));
+    grid-<span class="hljs-attribute">auto</span>-flow: row;
+    grid-row-gap: <span class="hljs-number">1.5rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.grid</span><span class="hljs-selector-class">.-responsive</span> {
+    gap: <span class="hljs-number">1rem</span>;
+    grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-built_in">minmax</span>(<span class="hljs-number">8rem</span>, <span class="hljs-number">1</span>fr));
+    grid-<span class="hljs-attribute">auto</span>-flow: row;
+  }
+}</pre>
                             </code>
                             
                         </div>
@@ -269,7 +291,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">446 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -1355,7 +1377,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-06-06T08:46:10.828Z">
+                            <time datetime="2021-06-06T09:10:33.037Z">
                                 6/6/2021
                             </time>
                         

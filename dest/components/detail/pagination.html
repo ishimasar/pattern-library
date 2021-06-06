@@ -256,19 +256,18 @@
   <span class="hljs-attribute">justify-content</span>: center;
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">margin</span>: auto;
 }
 
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
   <span class="hljs-selector-class">.pagination</span> {
     <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50rem</span>;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">3rem</span> auto auto;
   }
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
   <span class="hljs-selector-class">.pagination</span> {
     <span class="hljs-attribute">max-width</span>: <span class="hljs-number">80%</span>;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">2rem</span> auto auto;
   }
 }
 
@@ -281,7 +280,7 @@
   }
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
   <span class="hljs-selector-class">.pagination</span> <span class="hljs-selector-class">.prev</span>:before {
     border-right: <span class="hljs-number">8px</span> solid <span class="hljs-number">#464646</span>;
   }
@@ -290,10 +289,7 @@
   }
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">21em</span>) {
-  <span class="hljs-selector-class">.pagination</span> &gt; <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first</span>-of-type) {
-    <span class="hljs-attribute">margin-left</span>: auto;
-  }
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
   <span class="hljs-selector-class">.pagination</span> &gt; <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first</span>-of-type)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first</span>-of-type) &gt; <span class="hljs-selector-class">.link</span> {
     <span class="hljs-attribute">border-left</span>: none;
   }
@@ -301,13 +297,7 @@
 
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
   <span class="hljs-selector-class">.pagination</span> &gt; <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first</span>-of-type) {
-    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1.4rem</span>;
-  }
-}
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.9375em</span>) {
-  <span class="hljs-selector-class">.pagination</span> &gt; <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first</span>-of-type) {
-    <span class="hljs-attribute">margin-left</span>: .<span class="hljs-number">7rem</span>;
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1.2rem</span>;
   }
 }
 
@@ -329,23 +319,25 @@
   }
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
   <span class="hljs-selector-class">.pagination</span> <span class="hljs-selector-class">.link</span>,
   <span class="hljs-selector-class">.pagination</span> <span class="hljs-selector-attr">[aria-current=<span class="hljs-string">&quot;page&quot;</span>]</span>,
   <span class="hljs-selector-class">.pagination</span> <span class="hljs-selector-class">.prev</span>,
   <span class="hljs-selector-class">.pagination</span> <span class="hljs-selector-class">.next</span> {
-    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">2rem</span>;
+    <span class="hljs-attribute">width</span>: auto;
+    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">2.7rem</span>;
   }
 }
 
 <span class="hljs-selector-class">.pagination</span> <span class="hljs-selector-class">.link</span> {
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">text-decoration</span>: underline;
 }
 
 <span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
   <span class="hljs-selector-class">.pagination</span> <span class="hljs-selector-class">.link</span><span class="hljs-selector-pseudo">:hover</span>,
   <span class="hljs-selector-class">.pagination</span> <span class="hljs-selector-class">.link</span><span class="hljs-selector-pseudo">:focus</span> {
-    <span class="hljs-attribute">text-decoration</span>: underline;
+    <span class="hljs-attribute">text-decoration</span>: none;
   }
 }
 
@@ -369,7 +361,6 @@
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
   <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
-  -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(-<span class="hljs-number">50%</span>, -<span class="hljs-number">50%</span>);
   <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(-<span class="hljs-number">50%</span>, -<span class="hljs-number">50%</span>);
 }
 
@@ -381,7 +372,7 @@
   }
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
   <span class="hljs-selector-class">.pagination</span> <span class="hljs-selector-class">.prev</span>:before,
   .pagination .next:before {
     border-top: <span class="hljs-number">6px</span> solid transparent;
@@ -393,7 +384,7 @@
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">2rem</span>;
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">21em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
   <span class="hljs-selector-class">.pagination</span> <span class="hljs-selector-class">.tethering</span> {
     <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
@@ -415,7 +406,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.9 KB</span>
+                    <span class="Meta-value">2.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -1501,7 +1492,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-06-06T08:46:10.828Z">
+                            <time datetime="2021-06-06T09:10:33.037Z">
                                 6/6/2021
                             </time>
                         

@@ -1,0 +1,31 @@
+.column-box {
+  column-gap: 3rem;
+  column-rule: solid 1px;
+  margin: auto;
+}
+
+@media print, screen and (min-width: 64.0625em) {
+  .column-box {
+    columns: 3 auto;
+  }
+}
+
+@media print, screen and (min-width: 48em) and (max-width: 64em) {
+  .column-box {
+    columns: 2 auto;
+  }
+}
+
+@media print, screen and (max-width: 47.96875em) {
+  .column-box {
+    columns: 1 auto;
+  }
+}
+
+.column-box .paragraph {
+  line-height: 1.8;
+}
+
+.column-box .paragraph:not(:first-of-type) {
+  margin-top: 1.2rem;
+}

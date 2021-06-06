@@ -1,0 +1,33 @@
+
+.body-text {
+  width: 100%;
+  line-height: 1.8;
+}
+
+.body-text .link {
+  display: block;
+  width: fit-content;
+  text-decoration: underline;
+}
+
+.body-text .link:hover,
+.body-text .link:focus {
+  text-decoration: none;
+}
+
+.body-text .link[target="_blank"] > svg {
+  margin-left: .12rem;
+  font-size: calc(var(--font-size-m1));
+}
+
+.body-text .mark {
+  background-color: #bdfdff;
+}
+
+.body-text .shortcut {
+  margin: -.2em .3em 0;
+  padding: .1em .4em .15em;
+  background-color: #efefef;
+  border-radius: 3px;
+  box-shadow: .1em .1em 0 rgba(0, 0, 0, .4);
+}

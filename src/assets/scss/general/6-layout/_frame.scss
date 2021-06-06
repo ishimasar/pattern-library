@@ -43,7 +43,7 @@
       & article {
         width: calc(100% - 1rem);
         width: 95%;
-        height: fit-content;
+        height: auto;
         margin: 1rem auto .5rem;
         border: 1px solid #333;
         @include mq(tb-dth) {

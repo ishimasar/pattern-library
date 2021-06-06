@@ -4,23 +4,31 @@
 }
 
 .list.-itemized {
-  list-style: disc inside;
+  list-style: disc;
+  font-family: var(--common-font);
 }
 
 .list.-itemized ul {
-  list-style: circle inside;
+  list-style: circle;
+  margin-left: 1.7em;
 }
 
 .list.-itemized ul ul {
-  list-style: square inside;
+  list-style: square;
+  margin-left: 1.7em;
 }
 
 .list.-ordered {
-  list-style: decimal inside;
+  list-style: decimal;
 }
 
 .list.-ordered ol {
   list-style: inherit;
+  margin-left: 1.7em;
+}
+
+.list.-ordered ol ol {
+  margin-left: 1.7em;
 }
 
 .list li {
@@ -30,40 +38,26 @@
 .list li > * {
   display: block;
   margin-top: .4rem;
-  text-indent: 1.5rem;
-}
-
-.list li > * li > * {
-  text-indent: 3rem;
-}
-
-.list li > * li > * li > * {
-  text-indent: 4.5rem;
 }
 
 .list li ul {
   margin-top: .3rem;
-  text-indent: 1.5rem;
 }
 
 .list li ul ul {
   margin-top: .6rem;
-  text-indent: 3rem;
 }
 
 .list .link {
   display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   text-decoration: underline;
-  color: var(--accent-color);
+  text-indent: 0;
 }
 
-@media print, screen and (min-width: 64em) {
-  .list .link:hover {
-    text-decoration: none;
-  }
+.list .link:hover,
+.list .link:focus {
+  text-decoration: none;
 }
 
 .list .link > .icon {

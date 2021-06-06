@@ -265,7 +265,199 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-selector-class">.main-wrapper</span> {
+  <span class="hljs-attribute">margin-right</span>: auto;
+  <span class="hljs-attribute">margin-left</span>: auto;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3rem</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
+  <span class="hljs-selector-class">.main-wrapper</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">90%</span>;
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">64.0625em</span>;
+    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">48rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.main-wrapper</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">90vw</span>;
+  }
+}
+
+<span class="hljs-selector-class">.frame-wrapper</span> {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100rem</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  }
+}
+
+<span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> {
+  <span class="hljs-attribute">display</span>: grid;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> {
+    grid-row-gap: <span class="hljs-number">1rem</span>;
+    grid-<span class="hljs-attribute">column-gap</span>: <span class="hljs-number">1rem</span>;
+    <span class="hljs-comment">/* 1行目から順番の高さ */</span>
+    grid-template-rows: <span class="hljs-number">5rem</span> <span class="hljs-number">1</span>fr <span class="hljs-number">5rem</span>;
+    <span class="hljs-comment">/* 1列目から順番の幅 */</span>
+    grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-number">12rem</span> <span class="hljs-number">1</span>fr <span class="hljs-number">10rem</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> {
+    grid-template-rows: <span class="hljs-number">3rem</span> <span class="hljs-number">3rem</span> <span class="hljs-number">1</span>fr <span class="hljs-number">3rem</span> <span class="hljs-number">3rem</span>;
+    grid-gap: <span class="hljs-number">1rem</span>;
+  }
+}
+
+<span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> &gt; * {
+  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
+}
+
+<span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> &gt; * <span class="hljs-selector-tag">article</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-number">100%</span> - <span class="hljs-number">1rem</span>);
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">95%</span>;
+  <span class="hljs-attribute">height</span>: auto;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1rem</span> auto .<span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">padding-top</span>: .<span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">padding-left</span>: .<span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> &gt; * <span class="hljs-selector-tag">article</span> {
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50rem</span>;
+  }
+}
+
+<span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> &gt; * <span class="hljs-selector-tag">article</span> &gt; <span class="hljs-selector-tag">section</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">95%</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1rem</span> auto;
+  <span class="hljs-attribute">padding-top</span>: .<span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">padding-left</span>: .<span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
+}
+
+<span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.header</span> {
+  grid-row-start: <span class="hljs-number">1</span>;
+  grid-column-start: <span class="hljs-number">1</span>;
+  grid-row-end: auto;
+  grid-column-end: <span class="hljs-number">4</span>;
+}
+
+<span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.main</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">1rem</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.main</span> {
+    grid-row-start: <span class="hljs-number">2</span>;
+    grid-column-start: <span class="hljs-number">2</span>;
+    grid-row-end: auto;
+    grid-column-end: auto;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.main</span> {
+    grid-row-start: <span class="hljs-number">2</span>;
+    grid-column-start: <span class="hljs-number">2</span>;
+    grid-row-end: auto;
+    grid-column-end: <span class="hljs-number">4</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.main</span> {
+    grid-row-start: <span class="hljs-number">3</span>;
+    grid-column-start: <span class="hljs-number">1</span>;
+    grid-row-end: auto;
+    grid-column-end: <span class="hljs-number">4</span>;
+  }
+}
+
+<span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.nav</span> {
+  grid-row-start: <span class="hljs-number">2</span>;
+  grid-column-start: <span class="hljs-number">1</span>;
+  grid-row-end: auto;
+  grid-column-end: auto;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.nav</span> {
+    grid-row-start: <span class="hljs-number">2</span>;
+    grid-column-start: <span class="hljs-number">1</span>;
+    grid-row-end: auto;
+    grid-column-end: <span class="hljs-number">4</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.aside</span> {
+    grid-row-start: <span class="hljs-number">2</span>;
+    grid-column-start: <span class="hljs-number">3</span>;
+    grid-row-end: auto;
+    grid-column-end: auto;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.aside</span> {
+    grid-row-start: <span class="hljs-number">3</span>;
+    grid-column-start: <span class="hljs-number">1</span>;
+    grid-row-end: auto;
+    grid-column-end: <span class="hljs-number">4</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.aside</span> {
+    grid-row-start: <span class="hljs-number">4</span>;
+    grid-column-start: <span class="hljs-number">1</span>;
+    grid-row-end: auto;
+    grid-column-end: <span class="hljs-number">4</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.footer</span> {
+    grid-row-start: <span class="hljs-number">3</span>;
+    grid-column-start: <span class="hljs-number">1</span>;
+    grid-row-end: auto;
+    grid-column-end: <span class="hljs-number">4</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.footer</span> {
+    grid-row-start: <span class="hljs-number">4</span>;
+    grid-column-start: <span class="hljs-number">1</span>;
+    grid-row-end: auto;
+    grid-column-end: <span class="hljs-number">4</span>;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.frame-wrapper</span><span class="hljs-selector-class">.grid-area</span> <span class="hljs-selector-class">.footer</span> {
+    grid-row-start: <span class="hljs-number">5</span>;
+    grid-column-start: <span class="hljs-number">1</span>;
+    grid-row-end: auto;
+    grid-column-end: <span class="hljs-number">4</span>;
+  }
+}</pre>
                             </code>
                             
                         </div>
@@ -281,7 +473,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">3.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -1367,7 +1559,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-06-06T08:46:10.828Z">
+                            <time datetime="2021-06-06T09:10:33.037Z">
                                 6/6/2021
                             </time>
                         

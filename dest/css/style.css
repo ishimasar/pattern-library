@@ -918,12 +918,12 @@ legend {
   transition: all var(--ease-in-out-quad) 0.45s 0.02s;
 }
 
-.card > .link > .textContainer > .title {
+.card > .link > .text-container > .title {
   background: linear-gradient(transparent 94%, #00e 6%);
 }
 
-.card > .link:hover .textContainer > .title,
-.card > .link:focus .textContainer > .title {
+.card > .link:hover .text-container > .title,
+.card > .link:focus .text-container > .title {
   background: linear-gradient(transparent 95%, transparent 5%);
   -webkit-transform: scale(1, 1) translate(1, 1);
           transform: scale(1, 1) translate(1, 1);
@@ -940,7 +940,7 @@ legend {
   box-shadow: var(--textbox-shadow);
 }
 
-.card .imgContainer {
+.card .img-container {
   position: relative;
   width: 100%;
   /* 画像トリミングしたい枠の幅 */
@@ -948,14 +948,14 @@ legend {
 }
 
 @media print, screen and (min-width: 64.0625em) {
-  .card .imgContainer {
+  .card .img-container {
     height: 180px;
     /* 画像トリミングしたい枠の高さ */
   }
 }
 
 @media print, screen and (max-width: 64em) {
-  .card .imgContainer {
+  .card .img-container {
     height: 130px;
   }
 }
@@ -971,24 +971,24 @@ legend {
   transition: all var(--ease-out-cubic) 0.35s 0.01s;
 }
 
-.card .textContainer {
+.card .text-container {
   height: auto;
   -webkit-font-smoothing: antialiased;
 }
 
 @media print, screen and (min-width: 48em) {
-  .card .textContainer {
+  .card .text-container {
     padding: 1.2rem 2rem;
   }
 }
 
 @media print, screen and (max-width: 47.96875em) {
-  .card .textContainer {
+  .card .text-container {
     padding: 1rem 1.6rem;
   }
 }
 
-.card .textContainer > .title {
+.card .text-container > .title {
   display: inline;
   background: linear-gradient(transparent 94%, #333 6%);
   font-family: var(--common-font);
@@ -996,25 +996,25 @@ legend {
 }
 
 @media print, screen and (min-width: 64.0625em) {
-  .card .textContainer > .title {
+  .card .text-container > .title {
     font-size: calc(var(--font-size-m2));
   }
 }
 
 @media print, screen and (max-width: 64em) {
-  .card .textContainer > .title {
+  .card .text-container > .title {
     font-size: calc(var(--font-size-m1));
   }
 }
 
-.card .textContainer > .excerpt {
+.card .text-container > .excerpt {
   margin-top: .7rem;
   line-height: 1.6;
   font-family: var(--common-font);
   color: var(--black);
 }
 
-.card .textContainer .rule {
+.card .text-container .rule {
   width: 100%;
   height: 1px;
   margin-top: .5rem;
@@ -1022,68 +1022,68 @@ legend {
   background-color: #333;
 }
 
-.card .textContainer .dateContainer {
+.card .text-container .date-container {
   display: block;
   text-align: right;
   color: var(--black);
 }
 
 @media print, screen and (min-width: 64.0625em) {
-  .card .textContainer .dateContainer {
+  .card .text-container .date-container {
     margin-top: .5rem;
   }
 }
 
 @media print, screen and (max-width: 47.96875em) {
-  .card .textContainer .dateContainer {
+  .card .text-container .date-container {
     margin-top: .3rem;
     line-height: 1.4;
   }
 }
 
-.card .textContainer .dateContainer > .date {
+.card .text-container .date-container > .date {
   display: inline-block;
 }
 
 @media print, screen and (max-width: 47.96875em) {
-  .card .textContainer .dateContainer > .date {
+  .card .text-container .date-container > .date {
     width: auto;
   }
 }
 
-.card .textContainer .dateContainer .time {
+.card .text-container .date-container .time {
   display: inline-block;
   width: auto;
   font-size: calc(var(--font-size-s1));
   color: var(--text-dark-color);
 }
 
-.card .textContainer .tagContainer {
+.card .text-container .tag-container {
   display: flex;
   justify-content: flex-end;
   color: var(--black);
 }
 
 @media print, screen and (min-width: 48em) {
-  .card .textContainer .tagContainer {
+  .card .text-container .tag-container {
     margin-top: .2rem;
   }
 }
 
 @media print, screen and (max-width: 47.96875em) {
-  .card .textContainer .tagContainer {
+  .card .text-container .tag-container {
     margin-top: .1rem;
     line-height: 1.4;
   }
 }
 
-.card .textContainer .tagContainer > .tag {
+.card .text-container .tag-container > .tag {
   display: inline-block;
   width: auto;
   font-size: calc(var(--font-size-s1));
 }
 
-.card .categoryLabel {
+.card .category-label {
   position: absolute;
   top: 0;
   right: 0;
@@ -1094,13 +1094,13 @@ legend {
 }
 
 @media print, screen and (min-width: 48em) {
-  .card .categoryLabel {
+  .card .category-label {
     padding: .25rem .4rem;
   }
 }
 
 @media print, screen and (max-width: 47.96875em) {
-  .card .categoryLabel {
+  .card .category-label {
     padding: .15rem .25rem;
   }
 }
@@ -3905,9 +3905,7 @@ input[type="range"]:active::-webkit-slider-thumb {
 .frame-wrapper.grid-area > * article {
   width: calc(100% - 1rem);
   width: 95%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: auto;
   margin: 1rem auto .5rem;
   border: 1px solid #333;
   padding-top: .5rem;

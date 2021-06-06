@@ -1,36 +1,32 @@
 .flexbox {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
-  width: 90vw;
-  max-width: 100rem;
+  align-items: center;
+  gap: 1rem;
   margin: auto;
 }
 
-@media print, screen and (min-width: 64em) {
-  .flexbox {
-    margin-top: 2rem;
-  }
+.flexbox.-centered {
+  justify-content: safe center;
 }
 
-@media print, screen and (max-width: 63.9375em) {
-  .flexbox {
-    margin-top: 1.5rem;
-  }
+.flexbox.-ended {
+  justify-content: flex-end;
 }
 
-.flexbox.-primary {
-  justify-content: space-between;
+.flexbox.-only-flex-component {
+  width: 100%;
+  max-width: 30rem;
 }
 
-.flexbox::after,
-.flexbox::before {
+.flexbox.-only-flex-component > * {
+  width: 6rem;
+  height: 6rem;
+  background-color: #425eec;
+}
+
+.flexbox.-only-flex-component::after {
   content: "";
   display: block;
-  width: 32%;
-  height: 0;
-}
-
-.flexbox::before {
-  order: 1;
+  width: 6rem;
 }

@@ -49,11 +49,11 @@
       transform: scale(1.03, 1.03) translate(-48%, -48%);
       transition: all var(--ease-in-out-quad) .45s .02s;
     }
-    > .textContainer > .title {
+    > .text-container > .title {
       background: linear-gradient(transparent 94%, #00e 6%);
     }
-    &:hover .textContainer > .title,
-    &:focus .textContainer > .title {
+    &:hover .text-container > .title,
+    &:focus .text-container > .title {
       background: linear-gradient(transparent 95%, transparent 5%);
       transform: scale(1, 1) translate(1, 1);
       transition: all var(--ease-in-cubic) .3s;
@@ -68,7 +68,7 @@
     overflow: hidden;
     box-shadow: var(--textbox-shadow);
   }
-  & .imgContainer {
+  & .img-container {
     position: relative;
     width: 100%; /* 画像トリミングしたい枠の幅 */
     overflow: hidden;
@@ -88,7 +88,7 @@
     transform: translate(-50%, -50%);
     transition: all var(--ease-out-cubic) .35s .01s;
   }
-  & .textContainer {
+  & .text-container {
     height: auto;
     -webkit-font-smoothing: antialiased;
     @include mq(tb-dth) {
@@ -122,7 +122,7 @@
       border: none;
       background-color: #333;
     }
-    & .dateContainer {
+    & .date-container {
       display: block;
       text-align: right;
       color: var(--black);
@@ -148,7 +148,7 @@
         color: var(--text-dark-color);
       }
     }
-    & .tagContainer {
+    & .tag-container {
       display: flex;
       justify-content: flex-end;
       color: var(--black);
@@ -168,7 +168,7 @@
       }
     }
   }
-  & .categoryLabel {
+  & .category-label {
     position: absolute;
     top: 0;
     right: 0;

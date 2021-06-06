@@ -12,17 +12,13 @@ pre[class*="language-"] {
   text-shadow: 0 1px rgba(0, 0, 0, .3);
   line-height: 1.5;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: 1em;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
+  font-size: 1rem;
   hyphens: none;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
   white-space: pre;
   color: #f8f8f2;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
   tab-size: 4;
 }
 
@@ -36,7 +32,6 @@ pre[class*="language-"] {
   margin: .5em 0;
   padding: 1em;
   overflow: auto;
-  border-radius: .3em;
 }
 
 :not(pre) > code[class*="language-"],
@@ -46,7 +41,7 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: .1em;
+  padding: .1rem .4rem .15rem;
   white-space: normal;
   border-radius: .3em;
 }
@@ -144,7 +139,7 @@ div.code-toolbar:focus > .toolbar {
 }
 
 /* Separate line b/c rules are thrown out if selector is invalid.
-  IE11 and old Edge versions don't support :focus-within. */
+   IE11 and old Edge versions don't support :focus-within. */
 div.code-toolbar:focus-within > .toolbar {
   opacity: 1;
 }
@@ -165,9 +160,6 @@ div.code-toolbar > .toolbar button {
   font: inherit;
   color: inherit;
   overflow: visible;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -195,23 +187,19 @@ div.code-toolbar > .toolbar span:focus {
 
 .code-highliter-prism span:not([class*="token"]):not([class="line-numbers-rows"]):not([class="file-name"]) {
   display: inline-block;
-  margin-top: 1rem;
   padding: .2rem .8rem;
-  border: 1px solid #333;
   background-color: var(--white);
   font-size: calc(var(--font-size-m1) - .02rem);
   font-weight: normal;
   color: #333;
-  border-radius: .3rem .3rem 0 0;
 }
 
-.code-highliter-prism span:not([class*="token"]):not([class="line-numbers-rows"]):not([class="file-name"]):first-of-type {
-  margin-top: 1.8rem;
+.code-highliter-prism span:not([class*="token"]):not([class="line-numbers-rows"]):not([class="file-name"]):not(:first-of-type) {
+  margin-top: 2rem;
 }
 
 .code-highliter-prism pre {
   margin-top: 0;
-  border-radius: 0 .3rem .3rem;
 }
 
 .code-highliter-prism code {
@@ -224,7 +212,7 @@ div.code-toolbar > .toolbar span:focus {
   }
 }
 
-@media print, screen and (max-width: 47.9375em) {
+@media print, screen and (max-width: 47.96875em) {
   .code-highliter-prism code {
     line-height: 1.4;
     font-size: calc(var(--font-size-s1));

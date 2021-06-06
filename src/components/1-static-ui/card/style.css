@@ -3,7 +3,7 @@
   background-color: var(--white);
 }
 
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width: 64.0625em) {
   .card {
     width: 32%;
     height: auto;
@@ -13,7 +13,7 @@
   }
 }
 
-@media print, screen and (min-width: 48em) and (max-width: 63.9375em) {
+@media print, screen and (min-width: 48em) and (max-width: 64em) {
   .card {
     width: 32%;
     max-width: 48%;
@@ -27,7 +27,7 @@
   }
 }
 
-@media print, screen and (max-width: 47.9375em) {
+@media print, screen and (max-width: 47.96875em) {
   .card {
     width: 100%;
     max-width: 100%;
@@ -42,10 +42,9 @@
   position: relative;
   width: 100%;
   border: .5px solid #e6e6e6;
-  font-family: var(--sentence-font);
+  font-family: var(--common-font);
   -webkit-font-smoothing: antialiased;
   overflow: hidden;
-  border-radius: .25rem;
   box-shadow: var(--textbox-shadow);
   transition: all var(--ease-out-cubic) .3s;
 }
@@ -54,7 +53,6 @@
 .card > .link:focus {
   background-position: 0 0;
   -webkit-font-smoothing: antialiased;
-  -webkit-transform: scale(1.008, 1.008);
   transform: scale(1.008, 1.008);
   box-shadow: var(--textbox-hover-shadow);
   transition: all var(--ease-in-cubic) .2s;
@@ -62,16 +60,17 @@
 
 .card > .link:hover .thumbnail,
 .card > .link:focus .thumbnail {
-  -webkit-transform: scale(1.03, 1.03) translate(-48%, -48%);
   transform: scale(1.03, 1.03) translate(-48%, -48%);
   transition: all var(--ease-in-out-quad) .45s .02s;
 }
 
-.card > .link:hover .textContainer > .title,
-.card > .link:focus .textContainer > .title {
+.card > .link > .text-container > .title {
+  background: linear-gradient(transparent 94%, #00e 6%);
+}
+
+.card > .link:hover .text-container > .title,
+.card > .link:focus .text-container > .title {
   background: linear-gradient(transparent 95%, transparent 5%);
-  color: var(--text-normal-color);
-  -webkit-transform: scale(1, 1) translate(1, 1);
   transform: scale(1, 1) translate(1, 1);
   transition: all var(--ease-in-cubic) .3s;
 }
@@ -81,28 +80,27 @@
   position: relative;
   width: 100%;
   border: .5px solid #e6e6e6;
-  font-family: var(--sentence-font);
+  font-family: var(--common-font);
   overflow: hidden;
-  border-radius: .25rem;
   box-shadow: var(--textbox-shadow);
 }
 
-.card .imgContainer {
+.card .img-container {
   position: relative;
   width: 100%;
   /* 画像トリミングしたい枠の幅 */
   overflow: hidden;
 }
 
-@media print, screen and (min-width: 64em) {
-  .card .imgContainer {
+@media print, screen and (min-width: 64.0625em) {
+  .card .img-container {
     height: 180px;
     /* 画像トリミングしたい枠の高さ */
   }
 }
 
-@media print, screen and (max-width: 63.9375em) {
-  .card .imgContainer {
+@media print, screen and (max-width: 64em) {
+  .card .img-container {
     height: 130px;
   }
 }
@@ -113,55 +111,54 @@
   left: 50%;
   width: 100%;
   height: auto;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   transition: all var(--ease-out-cubic) .35s .01s;
 }
 
-.card .textContainer {
+.card .text-container {
   height: auto;
   -webkit-font-smoothing: antialiased;
 }
 
 @media print, screen and (min-width: 48em) {
-  .card .textContainer {
+  .card .text-container {
     padding: 1.2rem 2rem;
   }
 }
 
-@media print, screen and (max-width: 47.9375em) {
-  .card .textContainer {
+@media print, screen and (max-width: 47.96875em) {
+  .card .text-container {
     padding: 1rem 1.6rem;
   }
 }
 
-.card .textContainer > .title {
+.card .text-container > .title {
   display: inline;
   background: linear-gradient(transparent 94%, #333 6%);
-  font-family: var(--sentence-font);
+  font-family: var(--common-font);
   font-weight: bold;
 }
 
-@media print, screen and (min-width: 64em) {
-  .card .textContainer > .title {
+@media print, screen and (min-width: 64.0625em) {
+  .card .text-container > .title {
     font-size: calc(var(--font-size-m2));
   }
 }
 
-@media print, screen and (max-width: 63.9375em) {
-  .card .textContainer > .title {
+@media print, screen and (max-width: 64em) {
+  .card .text-container > .title {
     font-size: calc(var(--font-size-m1));
   }
 }
 
-.card .textContainer > .excerpt {
+.card .text-container > .excerpt {
   margin-top: .7rem;
   line-height: 1.6;
-  font-family: var(--sentence-font);
+  font-family: var(--common-font);
   color: var(--black);
 }
 
-.card .textContainer .rule {
+.card .text-container .rule {
   width: 100%;
   height: 1px;
   margin-top: .5rem;
@@ -169,83 +166,85 @@
   background-color: #333;
 }
 
-.card .textContainer .dateContainer {
+.card .text-container .date-container {
   display: block;
   text-align: right;
+  color: var(--black);
 }
 
-@media print, screen and (min-width: 64em) {
-  .card .textContainer .dateContainer {
+@media print, screen and (min-width: 64.0625em) {
+  .card .text-container .date-container {
     margin-top: .5rem;
   }
 }
 
-@media print, screen and (max-width: 47.9375em) {
-  .card .textContainer .dateContainer {
+@media print, screen and (max-width: 47.96875em) {
+  .card .text-container .date-container {
     margin-top: .3rem;
     line-height: 1.4;
   }
 }
 
-.card .textContainer .dateContainer > .date {
+.card .text-container .date-container > .date {
   display: inline-block;
 }
 
-@media print, screen and (max-width: 47.9375em) {
-  .card .textContainer .dateContainer > .date {
+@media print, screen and (max-width: 47.96875em) {
+  .card .text-container .date-container > .date {
     width: auto;
   }
 }
 
-.card .textContainer .dateContainer .time {
+.card .text-container .date-container .time {
   display: inline-block;
   width: auto;
   font-size: calc(var(--font-size-s1));
   color: var(--text-dark-color);
 }
 
-.card .textContainer .tagContainer {
+.card .text-container .tag-container {
   display: flex;
   justify-content: flex-end;
+  color: var(--black);
 }
 
 @media print, screen and (min-width: 48em) {
-  .card .textContainer .tagContainer {
+  .card .text-container .tag-container {
     margin-top: .2rem;
   }
 }
 
-@media print, screen and (max-width: 47.9375em) {
-  .card .textContainer .tagContainer {
+@media print, screen and (max-width: 47.96875em) {
+  .card .text-container .tag-container {
     margin-top: .1rem;
     line-height: 1.4;
   }
 }
 
-.card .textContainer .tagContainer > .tag {
+.card .text-container .tag-container > .tag {
   display: inline-block;
   width: auto;
   font-size: calc(var(--font-size-s1));
 }
 
-.card .categoryLabel {
+.card .category-label {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #14f;
+  background-color: #0e51a8;
   font-size: calc(var(--font-size-s1));
   color: var(--white);
   transition: all var(--ease-out-cubic) .35s .01s;
 }
 
 @media print, screen and (min-width: 48em) {
-  .card .categoryLabel {
+  .card .category-label {
     padding: .25rem .4rem;
   }
 }
 
-@media print, screen and (max-width: 47.9375em) {
-  .card .categoryLabel {
+@media print, screen and (max-width: 47.96875em) {
+  .card .category-label {
     padding: .15rem .25rem;
   }
 }

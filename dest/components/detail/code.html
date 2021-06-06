@@ -337,17 +337,13 @@ pre<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;lang
   <span class="hljs-attribute">text-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">3</span>);
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
   <span class="hljs-attribute">font-family</span>: Consolas, Monaco, <span class="hljs-string">&quot;Andale Mono&quot;</span>, <span class="hljs-string">&quot;Ubuntu Mono&quot;</span>, monospace;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
-  -webkit-<span class="hljs-attribute">hyphens</span>: none;
-  -ms-<span class="hljs-attribute">hyphens</span>: none;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
   <span class="hljs-attribute">hyphens</span>: none;
   <span class="hljs-attribute">word-spacing</span>: normal;
   <span class="hljs-attribute">word-break</span>: normal;
   <span class="hljs-attribute">word-wrap</span>: normal;
   <span class="hljs-attribute">white-space</span>: pre;
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#f8f8f2</span>;
-  -moz-<span class="hljs-attribute">tab-size</span>: <span class="hljs-number">4</span>;
-  -o-<span class="hljs-attribute">tab-size</span>: <span class="hljs-number">4</span>;
   <span class="hljs-attribute">tab-size</span>: <span class="hljs-number">4</span>;
 }
 
@@ -361,7 +357,6 @@ pre<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;lang
   <span class="hljs-attribute">margin</span>: .<span class="hljs-number">5em</span> <span class="hljs-number">0</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
   <span class="hljs-attribute">overflow</span>: auto;
-  <span class="hljs-attribute">border-radius</span>: .<span class="hljs-number">3em</span>;
 }
 
 <span class="hljs-selector-pseudo">:not</span>(pre) &gt; <span class="hljs-selector-tag">code</span><span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;language-&quot;</span>]</span>,
@@ -371,7 +366,7 @@ pre<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;lang
 
 <span class="hljs-comment">/* Inline code */</span>
 <span class="hljs-selector-pseudo">:not</span>(pre) &gt; <span class="hljs-selector-tag">code</span><span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;language-&quot;</span>]</span> {
-  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">1em</span>;
+  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">1rem</span> .<span class="hljs-number">4rem</span> .<span class="hljs-number">15rem</span>;
   <span class="hljs-attribute">white-space</span>: normal;
   <span class="hljs-attribute">border-radius</span>: .<span class="hljs-number">3em</span>;
 }
@@ -469,7 +464,7 @@ pre<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;lang
 }
 
 <span class="hljs-comment">/* Separate line b/c rules are thrown out if selector is invalid.
-  IE11 and old Edge versions don&#x27;t support :focus-within. */</span>
+   IE11 and old Edge versions don&#x27;t support :focus-within. */</span>
 <span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.code-toolbar</span><span class="hljs-selector-pseudo">:focus</span>-within &gt; <span class="hljs-selector-class">.toolbar</span> {
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
 }
@@ -490,9 +485,6 @@ pre<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;lang
   <span class="hljs-attribute">font</span>: inherit;
   <span class="hljs-attribute">color</span>: inherit;
   <span class="hljs-attribute">overflow</span>: visible;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -520,23 +512,19 @@ pre<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;lang
 
 <span class="hljs-selector-class">.code-highliter-prism</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;token&quot;</span>]</span>)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[class=<span class="hljs-string">&quot;line-numbers-rows&quot;</span>]</span>)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[class=<span class="hljs-string">&quot;file-name&quot;</span>]</span>) {
   <span class="hljs-attribute">display</span>: inline-block;
-  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">1rem</span>;
   <span class="hljs-attribute">padding</span>: .<span class="hljs-number">2rem</span> .<span class="hljs-number">8rem</span>;
-  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);
   <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-m1) - .<span class="hljs-number">02rem</span>);
   <span class="hljs-attribute">font-weight</span>: normal;
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#333</span>;
-  <span class="hljs-attribute">border-radius</span>: .<span class="hljs-number">3rem</span> .<span class="hljs-number">3rem</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
 }
 
-<span class="hljs-selector-class">.code-highliter-prism</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;token&quot;</span>]</span>)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[class=<span class="hljs-string">&quot;line-numbers-rows&quot;</span>]</span>)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[class=<span class="hljs-string">&quot;file-name&quot;</span>]</span>)<span class="hljs-selector-pseudo">:first</span>-of-type {
-  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">1.8rem</span>;
+<span class="hljs-selector-class">.code-highliter-prism</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;token&quot;</span>]</span>)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[class=<span class="hljs-string">&quot;line-numbers-rows&quot;</span>]</span>)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[class=<span class="hljs-string">&quot;file-name&quot;</span>]</span>)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first</span>-of-type) {
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">2rem</span>;
 }
 
 <span class="hljs-selector-class">.code-highliter-prism</span> pre {
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0</span> .<span class="hljs-number">3rem</span> .<span class="hljs-number">3rem</span>;
 }
 
 <span class="hljs-selector-class">.code-highliter-prism</span> <span class="hljs-selector-tag">code</span> {
@@ -549,7 +537,7 @@ pre<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;lang
   }
 }
 
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
   <span class="hljs-selector-class">.code-highliter-prism</span> <span class="hljs-selector-tag">code</span> {
     <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.4</span>;
     <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-s1));
@@ -570,7 +558,7 @@ pre<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;lang
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4.5 KB</span>
+                    <span class="Meta-value">4.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -1656,7 +1644,7 @@ pre<span class="hljs-selector-attr">[class*=<span class="hljs-string">&quot;lang
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-06-06T08:46:10.828Z">
+                            <time datetime="2021-06-06T09:10:33.037Z">
                                 6/6/2021
                             </time>
                         

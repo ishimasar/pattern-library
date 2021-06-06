@@ -251,7 +251,37 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-selector-class">.column-box</span> {
+  <span class="hljs-attribute">column-gap</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">column-rule</span>: solid <span class="hljs-number">1px</span>;
+  <span class="hljs-attribute">margin</span>: auto;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.column-box</span> {
+    <span class="hljs-attribute">columns</span>: <span class="hljs-number">3</span> auto;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.column-box</span> {
+    <span class="hljs-attribute">columns</span>: <span class="hljs-number">2</span> auto;
+  }
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.column-box</span> {
+    <span class="hljs-attribute">columns</span>: <span class="hljs-number">1</span> auto;
+  }
+}
+
+<span class="hljs-selector-class">.column-box</span> <span class="hljs-selector-class">.paragraph</span> {
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.8</span>;
+}
+
+<span class="hljs-selector-class">.column-box</span> <span class="hljs-selector-class">.paragraph</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first</span>-of-type) {
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">1.2rem</span>;
+}</pre>
                             </code>
                             
                         </div>
@@ -267,7 +297,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">495 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -1353,7 +1383,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-06-06T08:46:10.828Z">
+                            <time datetime="2021-06-06T09:10:33.037Z">
                                 6/6/2021
                             </time>
                         
