@@ -1,9 +1,20 @@
-.content-box {
+.column-box {
+  column-gap: 3rem;
+  column-rule: solid 1px;
   margin: auto;
-  @include mq(tb-dth) {
+  @include mq(dt) {
     columns: 3 auto;
   }
-  @include mq(sp) {
+  @include mq(tb) {
     columns: 2 auto;
+  }
+  @include mq(sp) {
+    columns: 1 auto;
+  }
+  & .paragraph {
+    line-height: 1.8;
+    &:not(:first-of-type) {
+      margin-top: 1.2rem;
+    }
   }
 }

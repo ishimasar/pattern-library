@@ -1,20 +1,29 @@
 .flexbox {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
-  max-width: 100rem;
+  align-items: center;
+  gap: 1rem;
   margin: auto;
-  &.-primary {
-    justify-content: space-between;
+  // 子要素が中央並び
+  &.-centered {
+    justify-content: safe center;
   }
-  &::after,
-  &::before {
-    content: "";
-    display: block;
-    width: 32%;
-    height: 0;
+  // 子要素が終点側並び
+  &.-ended {
+    justify-content: flex-end;
   }
-  &::before {
-    order: 1;
+  &.-only-flex-component {
+    width: 100%;
+    max-width: 30rem;
+    > * {
+      width: 6rem;
+      height: 6rem;
+      background-color: #425eec;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 6rem;
+    }
   }
 }

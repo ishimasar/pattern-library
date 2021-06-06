@@ -44,7 +44,6 @@
   & .next {
     display: block;
     padding: .575rem 1rem;
-    color: var(--black);
     @include mq(tb-dth) {
       min-width: 2.85rem;
       font-size: calc(var(--font-size-m2));
@@ -56,10 +55,11 @@
   }
   & .link {
     border: 1px solid #333;
+    text-decoration: underline;
     @include mq(tb-dth) {
       &:hover,
       &:focus {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
