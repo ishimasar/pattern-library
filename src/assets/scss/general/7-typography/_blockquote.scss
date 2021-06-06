@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   margin: auto;
-  padding: 2rem 0 2rem 4rem;
+  padding: 1.75rem 0 1.5rem 4rem;
   border-left: .8em solid #b1b1b1;
   background: #efefef;
   color: #333;
@@ -14,13 +14,13 @@
     left: 1rem;
     line-height: 1;
     font-family: "Font Awesome 5 Free";
-    font-size: 2rem;
+    font-size: calc(var(--font-size-l2));
     font-weight: 900;
     color: #b1b1b1;
   }
   > p {
     line-height: 1.7;
-    font-size: calc(var(--font-size-m2));
+    font-size: calc(var(--font-size-m1));
     > cite {
       font-style: italic;
     }
