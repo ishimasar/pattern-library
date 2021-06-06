@@ -20,7 +20,7 @@ Webサイト・アプリ制作で使用されるUIやスタイルのコード見
 1. コーディングの基本原則の確認、UI等の設計・作成方針の参考または手がかりにできる
 2. ベースとなるWeb UIコードをストックし、自由に取り出せることで作業効率・速度を向上(車輪の再発明抑止)
 3. ベストプラクティスを都度模索し、最適なフォーマット更新を継続することによる品質の保持、向上
-4. <a href="https://www.w3.org/standards/semanticweb/" target="_blank" rel="noopener">セマンティック</a> / <a href="https://developer.mozilla.org/ja/docs/Web/Accessibility" target="_blank" rel="noopener">Webアクセシビリティ</a>(<a href="WAI-ARIA" target="_blank" rel="noopener">WAI-ARIA</a>含む)および<a href="https://en.wikipedia.org/wiki/Object-oriented_user_interface" target="_blank" rel="noopener">OOUI(Object-Oriented User Interface)</a>などの原理を考え実践した、インクルーシブなコーディングプロダクトの実現　※前述参照リンク先はすべて外部リンク
+4. <a href="https://www.w3.org/standards/semanticweb/" target="_blank" rel="noopener">セマンティック</a> / <a href="https://developer.mozilla.org/ja/docs/Web/Accessibility" target="_blank" rel="noopener">Webアクセシビリティ</a>(<a href="https://developer.mozilla.org/ja/docs/Learn/Accessibility/WAI-ARIA_basics" target="_blank" rel="noopener">WAI-ARIA</a>含む)および<a href="https://en.wikipedia.org/wiki/Object-oriented_user_interface" target="_blank" rel="noopener">OOUI(Object-Oriented User Interface)</a>などの原理を考え実践した、インクルーシブなコーディングプロダクトの実現　※前述参照リンク先はすべて外部リンク
 
 ## 使い方・参照方法
 
