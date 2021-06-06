@@ -9,7 +9,7 @@ Webサイト・アプリ制作で使用されるUIやスタイルのコード見
 
 [https://ishimasar.github.io/pattern-library/dest/](https://ishimasar.github.io/pattern-library/dest/)
 
-※このプロジェクトは、コンポーネント ライブラリ&スタイルガイドツール「<a src="https://fractal.build/" target="_blank" rel="noopener">Fractal</a> (外部リンク)」を利用しています
+※このプロジェクトは、コンポーネント ライブラリ&スタイルガイドツール「<a href="https://fractal.build/" target="_blank" rel="noopener">Fractal</a> (外部リンク)」を利用しています
 
 **コーディングガイドライン & 命名規則**もあわせてご参照ください
 
@@ -17,10 +17,10 @@ Webサイト・アプリ制作で使用されるUIやスタイルのコード見
 
 ## 目的
 
-- コーディングの基本原則の確認、UI等の設計・作成方針の参考または手がかりにできる
-- ベースとなるWeb UIコードをストックし、自由に取り出せることで作業効率・速度を向上(車輪の再発明抑止)
-- ベストプラクティスを都度模索し、最適なフォーマット更新を継続することによる品質の保持、向上
-- <a src="https://www.w3.org/standards/semanticweb/" target="_blank" rel="noopener">セマンティック</a> / <a src="https://developer.mozilla.org/ja/docs/Web/Accessibility" target="_blank" rel="noopener">Webアクセシビリティ</a>(<a src="WAI-ARIA" target="_blank" rel="noopener">WAI-ARIA</a>含む)および<a src="https://en.wikipedia.org/wiki/Object-oriented_user_interface" target="_blank" rel="noopener">OOUI(Object-Oriented User Interface)</a>などの原理を考え実践した、インクルーシブなコーディングプロダクトの実現　※前述参照リンク先はすべて外部リンク
+1. コーディングの基本原則の確認、UI等の設計・作成方針の参考または手がかりにできる
+2. ベースとなるWeb UIコードをストックし、自由に取り出せることで作業効率・速度を向上(車輪の再発明抑止)
+3. ベストプラクティスを都度模索し、最適なフォーマット更新を継続することによる品質の保持、向上
+4. <a href="https://www.w3.org/standards/semanticweb/" target="_blank" rel="noopener">セマンティック</a> / <a href="https://developer.mozilla.org/ja/docs/Web/Accessibility" target="_blank" rel="noopener">Webアクセシビリティ</a>(<a href="WAI-ARIA" target="_blank" rel="noopener">WAI-ARIA</a>含む)および<a href="https://en.wikipedia.org/wiki/Object-oriented_user_interface" target="_blank" rel="noopener">OOUI(Object-Oriented User Interface)</a>などの原理を考え実践した、インクルーシブなコーディングプロダクトの実現　※前述参照リンク先はすべて外部リンク
 
 ## 使い方・参照方法
 
@@ -54,7 +54,7 @@ UI分類 (Components)
 
 本ライブラリはWeb UIコードの土台またはひとつの見本となることを目指し作成しています。そのため、必要最低限のスタイリングと挙動でコーディングしたシンプルなUI集となっています。制作現場ごとの多様なコンテクストに応じ、即適用や容易なカスタマイズを目的とした便利スニペットではないことをご承知ください。
 
-コードのカスタマイズや個別に改変しての適用はご自由にどうぞ。しかしながら、それによりセマンティック/Webアクセシビリティ/OOUIといった基本観点を崩す実装になっていないかのチェック意識や、ヒューマンリーダブルおよびマシンリーダブルの原則を見つめるきっかけになると良いなあと運営者は考えています。
+コードのカスタマイズや個別に改変しての適用はご自由にどうぞ。しかしながら、それによりおもに[目的 4.](https://ishimasar.github.io/pattern-library/#%E7%9B%AE%E7%9A%84)の内容・観点を崩す実装になっていないかのチェック意識や、ヒューマンリーダブルおよびマシンリーダブルの原則を見つめるきっかけになると良いなあと運営者は考えています。
 
 ## 制作・運営
 
