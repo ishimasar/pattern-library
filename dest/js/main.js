@@ -77,7 +77,7 @@ const elem = document.querySelectorAll('.toc');
 Stickyfill.add(elem);
 
 // show password script 移設及びリファクタリング予定
-const password = document.getElementById('js-display-pass');
+const password = document.querySelector('js-display-pass');
 const showPassword = document.getElementById('js-show-pass');
 
 showPassword.addEventListener('change', function() {

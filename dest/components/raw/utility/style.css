@@ -12,13 +12,13 @@
 }
 
 @media print, screen and (min-width: 48em) {
-  .display-sptb {
+  .display-sp {
     display: none;
   }
 }
 
 @media print, screen and (max-width: 47.96875em) {
-  .display-sptb {
+  .display-sp {
     display: inline-block;
   }
 }
