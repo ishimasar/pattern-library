@@ -2,14 +2,17 @@
   column-gap: 3rem;
   column-rule: solid 1px;
   margin: auto;
+  @media print, screen and (min-width: 37.5625em) {
+    columns: 2 auto;
+  }
+  @media print, screen and (max-width: 37.5em) {
+    columns: 1 auto;
+  }
   @include mq(dt) {
     columns: 3 auto;
   }
   @include mq(tb) {
     columns: 2 auto;
-  }
-  @include mq(sp) {
-    columns: 1 auto;
   }
   & .paragraph {
     line-height: 1.8;

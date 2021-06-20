@@ -3839,6 +3839,20 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin: auto;
 }
 
+@media print, screen and (min-width: 37.5625em) {
+  .column-box {
+    -webkit-columns: 2 auto;
+            columns: 2 auto;
+  }
+}
+
+@media print, screen and (max-width: 37.5em) {
+  .column-box {
+    -webkit-columns: 1 auto;
+            columns: 1 auto;
+  }
+}
+
 @media print, screen and (min-width: 64.0625em) {
   .column-box {
     -webkit-columns: 3 auto;
@@ -3850,13 +3864,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   .column-box {
     -webkit-columns: 2 auto;
             columns: 2 auto;
-  }
-}
-
-@media print, screen and (max-width: 47.96875em) {
-  .column-box {
-    -webkit-columns: 1 auto;
-            columns: 1 auto;
   }
 }
 
