@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 import { Accordion } from './modules/Accordion.js';
@@ -10,6 +11,7 @@ import { Tab } from './modules/Tab.js';
 import { ToggleSwitch } from './modules/ToggleSwitch.js';
 import { UiModeSwitcher } from './modules/UiModeSwitcher.js';
 import { toggleToc } from './modules/ToggleToc.js';
+import { PasswordRevealCheckbox, PasswordRevealButton } from './modules/PasswordReveal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const detailsEls = document.querySelectorAll('.accordion-details');
@@ -76,11 +78,6 @@ uiModeSwitcher.switchMode();
 const elem = document.querySelectorAll('.toc');
 Stickyfill.add(elem);
 
-// show password script 移設及びリファクタリング予定
-const password = document.querySelector('.js-display-pass');
-const showPassword = document.getElementById('js-show-pass');
+const passwordRevealCheckbox = new PasswordRevealCheckbox('.js-display-pass', 'js-show-pass');
 
-showPassword.addEventListener('change', function() {
-  const type = this.checked ? 'text' : 'password';
-  password.setAttribute('type', type);
-});
+const passwordRevealBottun = new PasswordRevealButton('js-input', 'js-reveal-btn');

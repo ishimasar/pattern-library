@@ -4,8 +4,24 @@
   box-sizing: border-box;
   & .password-toggle {
     margin-top: .5rem;
+    cursor: pointer;
     @include mq(dt) {
-      margin-left: 25%;
+      margin-left: 24.5%;
+    }
+    & [type="checkbox"] {
+      cursor: inherit;
+    }
+    &.-button {
+      @include mq(sp-tb) {
+        width: 25%;
+        height: 100%;
+        min-height: 47px;
+        padding: .1rem;
+        vertical-align: top;
+      }
+      @include mq(sp) {
+        font-size: calc(var(--font-size-s2));
+      }
     }
   }
 }
@@ -95,4 +111,35 @@
 }
 input[type="password"]::-ms-reveal {
   display: none;
+}
+
+.input-password-wrapper {
+  @include mq(dt) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  & .password-toggle {
+    min-width: 21%;
+    margin: 0;
+    border: {
+      top: 1px solid #333;
+      right: 1px solid #333;
+      bottom: 1px solid #333;
+    }
+  }
+}
+[for="js-input"] {
+  @include mq(dt) {
+    margin-top: .8rem;
+  }
+}
+#js-input.input-text {
+  margin: 0;
+  @include mq(dt) {
+    width: 55%;
+  }
+  @include mq(sp-tb) {
+    width: 75%;
+  }
 }

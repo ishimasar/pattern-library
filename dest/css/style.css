@@ -2952,11 +2952,32 @@ _:future,
 
 .input-text-container .password-toggle {
   margin-top: .5rem;
+  cursor: pointer;
 }
 
 @media print, screen and (min-width: 64.0625em) {
   .input-text-container .password-toggle {
-    margin-left: 25%;
+    margin-left: 24.5%;
+  }
+}
+
+.input-text-container .password-toggle [type="checkbox"] {
+  cursor: inherit;
+}
+
+@media print, screen and (max-width: 64em) {
+  .input-text-container .password-toggle.-button {
+    width: 25%;
+    height: 100%;
+    min-height: 47px;
+    padding: .1rem;
+    vertical-align: top;
+  }
+}
+
+@media print, screen and (max-width: 47.96875em) {
+  .input-text-container .password-toggle.-button {
+    font-size: calc(var(--font-size-s2));
   }
 }
 
@@ -3084,6 +3105,44 @@ _:future,
 
 input[type="password"]::-ms-reveal {
   display: none;
+}
+
+@media print, screen and (min-width: 64.0625em) {
+  .input-password-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.input-password-wrapper .password-toggle {
+  min-width: 21%;
+  margin: 0;
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+@media print, screen and (min-width: 64.0625em) {
+  [for="js-input"] {
+    margin-top: .8rem;
+  }
+}
+
+#js-input.input-text {
+  margin: 0;
+}
+
+@media print, screen and (min-width: 64.0625em) {
+  #js-input.input-text {
+    width: 55%;
+  }
+}
+
+@media print, screen and (max-width: 64em) {
+  #js-input.input-text {
+    width: 75%;
+  }
 }
 
 .fieldset {
