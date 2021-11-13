@@ -30,10 +30,7 @@
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.13.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ishimasar/pattern-library.git"
-  },
+  "repository": "git+https://github.com/ishimasar/pattern-library.git",
   "keywords": [],
   "bugs": {
     "url": "https://github.com/ishimasar/pattern-library/issues"
