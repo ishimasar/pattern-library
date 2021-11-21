@@ -11,7 +11,6 @@
   "alt-require": true,                     // imgタグにalt属性がある
   "input-requires-label": true,            // input要素に対応するlabel要素がある
   // Tags
-  "tags-check": true,                      //
   "tag-pair": true,                        // タグが開き閉じになっている
   "tagname-lowercase": true,               // タグ名は小文字
   "src-not-empty": true,                   // aタグのsrc属性値が空でない ※一応チェック
@@ -30,6 +29,7 @@
   "attr-lowercase": false,                 // 属性名は小文字
   "attr-value-not-empty": false,           // 属性値は空でない
   // Tags
+  "tags-check": false,                      // 任意要素にルールを指定&検証 ※謎
   "tag-self-close": false,
   "empty-tag-not-self-closed": false,      // 空要素(タグ)の閉じスラッシュ禁止
   "href-abs-or-rel": false,                // href属性値は絶対的または相対的
