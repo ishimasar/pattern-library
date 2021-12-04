@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   max-width: 60rem;
+  height: calc(100vh - 6rem);
   margin: auto;
   &:hover,
   &:focus {
@@ -10,7 +11,9 @@
 }
 .dialog-open {
   display: block;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
+  min-width: fit-content;
   margin: auto auto 4rem;
   padding: 1rem;
   border: 1px solid var(--border-color);
@@ -23,13 +26,13 @@
   }
 }
 .dialog-panel {
-  position: absolute;
-  top: -20%;
+  position: fixed;
+  top: 0;
   right: 0;
+  bottom: 0;
   left: 0;
   width: fit-content;
   height: fit-content;
-  max-width: 90%;
   margin: auto;
   padding: 0;
   border: 2px solid var(--border-color);
@@ -43,6 +46,8 @@
     animation: fade-in .25s ease-out, slide-down .25s ease-out;
   }
   &.is-motioned {
+    max-width: calc((100% - 6px) - 2em);
+    max-height: calc((100% - 6px) - 2em);
     animation: fade-out .45s ease, slide-up .45s ease;
   }
   /* native backdrop */
@@ -140,12 +145,12 @@ _:future,
   100% { opacity: 0; }
 }
 @keyframes slide-down {
-  0% { opacity: 0; transform: translate(0, -20px); }
+  0% { opacity: 0; transform: translate(0, -1rem); }
   100% { opacity: 1; transform: translate(0, 0); }
 }
 @keyframes slide-up {
-  0% { top: 20%; opacity: 1; transform: translate(0, 0); }
-  100% { top: 20%; opacity: 0; transform: translate(0, -15px); }
+  0% { opacity: 1; transform: translate(0, 0); }
+  100% { opacity: 0; transform: translate(0, -1rem); }
 }
 @keyframes backdrop-fade-in {
   0% { background-color: rgba(0, 0, 0, 0); }

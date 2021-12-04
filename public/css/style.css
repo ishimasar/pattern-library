@@ -2417,6 +2417,7 @@ td {
   position: relative;
   width: 100%;
   max-width: 60rem;
+  height: calc(100vh - 6rem);
   margin: auto;
 }
 
@@ -2426,7 +2427,11 @@ td {
 
 .dialog-open {
   display: block;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   margin: auto auto 4rem;
   padding: 1rem;
   border: 1px solid var(--border-color);
@@ -2440,9 +2445,10 @@ td {
 }
 
 .dialog-panel {
-  position: absolute;
-  top: -20%;
+  position: fixed;
+  top: 0;
   right: 0;
+  bottom: 0;
   left: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -2450,7 +2456,6 @@ td {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  max-width: 90%;
   margin: auto;
   padding: 0;
   border: 2px solid var(--border-color);
@@ -2471,6 +2476,8 @@ td {
 }
 
 .dialog-panel.is-motioned {
+  max-width: calc((100% - 6px) - 2em);
+  max-height: calc((100% - 6px) - 2em);
   -webkit-animation: fade-out .45s ease, slide-up .45s ease;
           animation: fade-out .45s ease, slide-up .45s ease;
 }
@@ -2617,8 +2624,8 @@ _:future,
 @-webkit-keyframes slide-down {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0, -20px);
-            transform: translate(0, -20px);
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
   }
   100% {
     opacity: 1;
@@ -2630,8 +2637,8 @@ _:future,
 @keyframes slide-down {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0, -20px);
-            transform: translate(0, -20px);
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
   }
   100% {
     opacity: 1;
@@ -2642,31 +2649,27 @@ _:future,
 
 @-webkit-keyframes slide-up {
   0% {
-    top: 20%;
     opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
   100% {
-    top: 20%;
     opacity: 0;
-    -webkit-transform: translate(0, -15px);
-            transform: translate(0, -15px);
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
   }
 }
 
 @keyframes slide-up {
   0% {
-    top: 20%;
     opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
   100% {
-    top: 20%;
     opacity: 0;
-    -webkit-transform: translate(0, -15px);
-            transform: translate(0, -15px);
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
   }
 }
 
