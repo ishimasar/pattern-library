@@ -2466,7 +2466,7 @@ td {
 }
 
 .dialog-panel:not([open]) {
-  display: block !important;
+  display: block;
   visibility: hidden;
 }
 
@@ -2833,6 +2833,65 @@ _:future,
   margin: 2rem auto;
   padding: 1rem 2rem;
   border: 1px solid var(--black);
+}
+
+.toast-trigger {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  margin: 4rem auto;
+  padding: .75rem 1rem .65rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.15rem;
+  border-radius: 10rem;
+}
+
+.toast-trigger:hover,
+[data-whatintent="keyboard"] .toast-trigger:focus {
+  background-color: #777;
+  color: var(--white);
+}
+
+.toast {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 0;
+  max-width: 90%;
+  margin: auto;
+  padding: .5rem  1rem .45rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
+  border-radius: .25rem;
+  visibility: hidden;
+  transition: opacity var(--ease-in-cubic) 0.45s;
+}
+
+.toast.is-motioned {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity var(--ease-out-cubic) 0.4s;
+}
+
+.toast > .text {
+  text-align: center;
+  font-weight: bold;
+}
+
+.toast .supplement-line {
+  display: inline-block;
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  margin-top: 3px;
+  padding-top: 2px;
 }
 
 .fieldset {

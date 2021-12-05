@@ -39,7 +39,7 @@
   background: var(--white);
   border-radius: 5px;
   &:not([open]) {
-    display: block !important;
+    display: block;
     visibility: hidden;
   }
   &[open] {

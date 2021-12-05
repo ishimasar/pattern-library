@@ -8,6 +8,7 @@ import { ModalDialog } from './modules/ModalDialog.js';
 import { scrollSmooth } from './modules/SmoothScroll.js';
 import { Tab } from './modules/Tab.js';
 // import { TabSwipe } from './modules/TabSwipe.js';
+import { Toast } from './modules/Toast.js';
 import { ToggleSwitch } from './modules/ToggleSwitch.js';
 import { UiModeSwitcher } from './modules/UiModeSwitcher.js';
 import { toggleToc } from './modules/ToggleToc.js';
@@ -63,6 +64,9 @@ tab.switchTabs();
 tab.throttle();
 
 // TabSwipe();
+
+const toast = new Toast('js-toast-trigger', 'js-toast-popup');
+toast.showToast();
 
 scrollSmooth();
 toggleToc();

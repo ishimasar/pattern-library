@@ -19,6 +19,7 @@ export class ModalDialog {
     if(this.wrap != null) {
       this.open.addEventListener('click', () => {
         this.dialog.showModal();
+        this.dialog.style.display = 'block';
         this.dialog.style.visibility = 'visible';
         this.dialog.classList.remove('is-motioned');
         this.dialog.setAttribute('tabindex', '0');
@@ -54,6 +55,7 @@ export class ModalDialog {
     this.wrap.focus();
     setTimeout(() => {
       this.dialog.style.visibility = 'hidden';
+      this.dialog.style.display = 'none';
     }, 250);
   }
   respondValue() {

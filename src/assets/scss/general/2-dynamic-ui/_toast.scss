@@ -1,0 +1,48 @@
+.toast-trigger {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  min-width: fit-content;
+  margin: 4rem auto;
+  padding: .75rem 1rem .65rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.15rem;
+  border-radius: 10rem;
+  &:hover,
+  [data-whatintent="keyboard"] &:focus {
+    background-color: #777;
+    color: var(--white);
+  }
+}
+
+.toast {
+  width: fit-content;
+  height: 0;
+  max-width: 90%;
+  margin: auto;
+  padding: .5rem  1rem .45rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
+  border-radius: .25rem;
+  visibility: hidden;
+  transition: opacity var(--ease-in-cubic) .45s;
+  &.is-motioned {
+    height: fit-content;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity var(--ease-out-cubic) .4s;
+  }
+  > .text {
+    text-align: center;
+    font-weight: bold;
+  }
+  .supplement-line {
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid var(--border-color);
+    margin-top: 3px;
+    padding-top: 2px;
+  }
+}
