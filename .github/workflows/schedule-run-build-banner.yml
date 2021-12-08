@@ -16,7 +16,7 @@ jobs:
           git merge test
           git tag 20211208.01
           git checkout 20211208.01
-          git push origin main
+          git push origin 20211208.01
       - name: hello
         run: |
           echo "hello world!1"
