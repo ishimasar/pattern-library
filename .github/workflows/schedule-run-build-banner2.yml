@@ -1,0 +1,14 @@
+name: build02
+on:
+  schedule:
+    - cron: '24 11 8 12 *' # 12/8 (UTC)11:24=(JST)20:24に実行
+  workflow_dispatch:
+
+jobs:
+  build02:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: hello
+        run: |
+          echo "hello world!2"

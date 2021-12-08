@@ -1,0 +1,14 @@
+name: build01
+on:
+  schedule:
+    - cron: '*/10 * * * *' # 10分おきに動くかテスト
+  workflow_dispatch:
+
+jobs:
+  build01:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: hello
+        run: |
+          echo "hello world!1"
