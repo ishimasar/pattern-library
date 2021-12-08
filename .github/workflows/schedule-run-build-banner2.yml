@@ -8,15 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: git checkout & merge
+      - name: create git tag
         run: |
-          git config --global user.name "${GITHUB_ACTOR}"
-          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git checkout main
-          git merge test
-          git tag 20211208.01
-          git checkout 20211208.01
-          git push origin 20211208.01
+          echo "v1-$(TZ=Asia/Tokyo date +%Y%m%d-%H%M%S+.01)" > TAG_NAME
+          git tag $(cat TAG_NAME)
+          git push origin $(cat TAG_NAME)
       - name: hello
         run: |
           echo "hello world!2"
