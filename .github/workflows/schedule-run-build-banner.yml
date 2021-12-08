@@ -1,13 +1,19 @@
 name: build01
 on:
   schedule:
-    - cron: '*/10 * * * *' # 10分おきに動くかテスト
+    - cron: '30 12 8 12 *'
 
 jobs:
   build01:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: git checkout & merge
+        run: |
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git checkout main
+          git merge test
       - name: hello
         run: |
           echo "hello world!1"
