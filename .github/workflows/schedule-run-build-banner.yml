@@ -2,7 +2,6 @@ name: build01
 on:
   schedule:
     - cron: '*/10 * * * *' # 10分おきに動くかテスト
-  workflow_dispatch:
 
 jobs:
   build01:

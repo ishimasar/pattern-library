@@ -1,8 +1,7 @@
 name: build02
 on:
   schedule:
-    - cron: '24 11 8 12 *' # 12/8 (UTC)11:24=(JST)20:24に実行
-  workflow_dispatch:
+    - cron: '30 11 8 12 *' # 12/8 (UTC)11:30=(JST)20:30に実行
 
 jobs:
   build02:
