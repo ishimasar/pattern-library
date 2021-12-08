@@ -1,7 +1,7 @@
 name: build02
 on:
   schedule:
-    - cron: '30 11 8 12 *' # 12/8 (UTC)11:30=(JST)20:30に実行
+    - cron: '40 11 8 12 *' # 12/8 (UTC)11:40=(JST)20:40に実行
 
 jobs:
   build02:
