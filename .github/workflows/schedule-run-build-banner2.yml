@@ -20,7 +20,6 @@ jobs:
           github_token: ${{ github.token }}
       - name: Create git tag & push
         run: |
-          git merge origin/test
           echo "$(TZ=Asia/Tokyo date +%Y%m%d.01)" > TAG_NAME
           git tag $(cat TAG_NAME)
           git push origin $(cat TAG_NAME)
