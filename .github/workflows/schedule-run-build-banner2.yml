@@ -8,9 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: create git tag
+      - name: merge & create git tag & push
         run: |
-          echo "v1-$(TZ=Asia/Tokyo date +%Y%m%d)" > TAG_NAME
+          git merge test
+          echo "$(TZ=Asia/Tokyo date +%Y%m%d.01)" > TAG_NAME
           git tag $(cat TAG_NAME)
           git push origin $(cat TAG_NAME)
       - name: hello
