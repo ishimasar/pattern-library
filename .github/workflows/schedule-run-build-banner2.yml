@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: merge & create git tag & push
         run: |
-          git merge test
+          git merge origin/test
           echo "$(TZ=Asia/Tokyo date +%Y%m%d.01)" > TAG_NAME
           git tag $(cat TAG_NAME)
           git push origin $(cat TAG_NAME)
