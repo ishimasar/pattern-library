@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: create git tag
         run: |
-          echo "v1-$(TZ=Asia/Tokyo date +%Y%m%d-%H%M%S+.01)" > TAG_NAME
+          echo "v1-$(TZ=Asia/Tokyo date +%Y%m%d)" > TAG_NAME
           git tag $(cat TAG_NAME)
           git push origin $(cat TAG_NAME)
       - name: hello
