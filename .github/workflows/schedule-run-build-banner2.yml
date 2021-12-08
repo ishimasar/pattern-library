@@ -1,14 +1,21 @@
 name: build02
 on:
   schedule:
-    # - cron: '*/10 * * * *'
+    - cron: '*/10 * * * *'
 
 jobs:
   build02:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: merge & create git tag & push
+      - name: Merge release/* -> main
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: test
+          target_branch: main
+          github_token: ${{ github.token }}
+      - name: Create git tag & push
         run: |
           git merge origin/test
           echo "$(TZ=Asia/Tokyo date +%Y%m%d.01)" > TAG_NAME
