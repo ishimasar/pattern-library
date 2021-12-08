@@ -15,7 +15,7 @@ jobs:
         uses: devmasx/merge-branch@master
         with:
           type: now
-          from_branch: master
+          from_branch: release/2021-12-09
           target_branch: main
           github_token: ${{ github.token }}
       - name: Create git tag & push
