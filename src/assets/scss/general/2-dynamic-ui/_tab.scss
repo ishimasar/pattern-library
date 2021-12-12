@@ -82,7 +82,7 @@
     visibility: hidden;
   }
 }
-.tabpanel__list > li:not(:first-of-type) {
+.tabpanel__list > li {
   margin: .8rem auto auto;
 }
 .tabpanel__paragraph {
