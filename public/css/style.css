@@ -2910,6 +2910,7 @@ _:future,
 
 .fieldset {
   width: 65%;
+  margin-bottom: 1.5rem;
   font-size: calc(var(--font-size-m2));
 }
 
@@ -2934,7 +2935,7 @@ _:future,
   display: block;
   position: relative;
   width: auto;
-  margin-top: .5rem;
+  margin-top: 1rem;
   padding-left: 1.8em;
   line-height: 1.75;
   cursor: pointer;
@@ -2951,45 +2952,45 @@ _:future,
   transition: all .15s ease-in;
 }
 
+[data-whatinput="keyboard"] .checkbox:focus + label:before {
+  border-color: #000098;
+  box-shadow: 0 0 4px #000098;
+}
+
 .checkbox + label:before {
+  content: "";
+  position: absolute;
+  top: .2rem;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #888;
+  background-color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.checkbox + label:after {
   content: "";
   display: inline-block;
   position: absolute;
-  top: .45rem;
-  left: .28rem;
+  top: .575rem;
+  left: .3rem;
   z-index: 1;
-  width: .75rem;
-  height: .45rem;
-  border-top: 2.5px solid #000098;
-  border-right: 2.5px solid #000098;
+  width: .9rem;
+  height: .55rem;
+  border-top: 3px solid #000098;
+  border-right: 3px solid #000098;
   opacity: 0;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
   transition: all .15s ease-in;
 }
 
-.checkbox:checked + label:before {
+.checkbox:checked + label:after {
   opacity: 1;
-  -webkit-animation: scale .1s ease-in-out .2s 1 normal running;
-          animation: scale .1s ease-in-out .2s 1 normal running;
-}
-
-[data-whatinput="keyboard"] .checkbox:focus + label:after {
-  border-color: #000098;
-  box-shadow: 0 0 4px #000098;
-}
-
-.checkbox + label:after {
-  content: "";
-  position: absolute;
-  top: .2rem;
-  left: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  border: 2px solid #888;
-  background-color: #fff;
-  border-radius: 4px;
-  box-sizing: border-box;
+  -webkit-animation: scale .25s ease-in-out .1s normal running;
+          animation: scale .25s ease-in-out .1s normal running;
 }
 
 .checkbox:disabled,
@@ -2999,9 +3000,9 @@ _:future,
 }
 
 @-webkit-keyframes scale {
-  32% {
-    -webkit-transform: scale(1.13) rotate(135deg);
-            transform: scale(1.13) rotate(135deg);
+  25% {
+    -webkit-transform: scale(1.175) rotate(135deg);
+            transform: scale(1.175) rotate(135deg);
   }
   83% {
     -webkit-transform: scale(1) rotate(135deg);
@@ -3010,9 +3011,9 @@ _:future,
 }
 
 @keyframes scale {
-  32% {
-    -webkit-transform: scale(1.13) rotate(135deg);
-            transform: scale(1.13) rotate(135deg);
+  25% {
+    -webkit-transform: scale(1.175) rotate(135deg);
+            transform: scale(1.175) rotate(135deg);
   }
   83% {
     -webkit-transform: scale(1) rotate(135deg);
@@ -3045,7 +3046,7 @@ _:future,
   .input-text-container .password-toggle.-button {
     width: 25%;
     height: 100%;
-    min-height: 47px;
+    min-height: 50px;
     padding: .1rem;
     vertical-align: top;
   }
@@ -3206,6 +3207,7 @@ input[type="password"]::-ms-reveal {
 }
 
 #js-input.input-text {
+  min-height: 50px;
   margin: 0;
 }
 
@@ -3223,6 +3225,7 @@ input[type="password"]::-ms-reveal {
 
 .fieldset {
   width: 65%;
+  margin-bottom: 1.5rem;
   font-size: calc(var(--font-size-m2));
 }
 
@@ -3247,7 +3250,7 @@ input[type="password"]::-ms-reveal {
   display: block;
   position: relative;
   width: auto;
-  margin-top: .5rem;
+  margin-top: 1rem;
   padding-left: 1.8em;
   line-height: 1.75;
   cursor: pointer;
@@ -3264,27 +3267,41 @@ input[type="password"]::-ms-reveal {
   transition: all .15s ease-in;
 }
 
-.radio:checked + label:before {
-  opacity: 1;
-  -webkit-animation: scale .1s ease-in-out .2s 1 normal running;
-          animation: scale .1s ease-in-out .2s 1 normal running;
+.radio + label:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #888;
+  background-color: #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.radio:checked + label:before {
-  opacity: 1;
-  -webkit-animation: scale-radio .1s ease-in-out .2s 1 normal running;
-          animation: scale-radio .1s ease-in-out .2s 1 normal running;
+.radio:checked + label:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 1rem;
+  height: 1rem;
+  background: #000098;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.radio:checked + label > svg {
+.radio:checked + label:after {
   opacity: 1;
-  -webkit-animation: scale-radio .1s ease-in-out .2s 1 normal running;
-          animation: scale-radio .1s ease-in-out .2s 1 normal running;
-}
-
-[data-whatinput="keyboard"] .radio:focus + label:after {
-  border-color: #000098;
-  box-shadow: 0 0 4px #000098;
+  -webkit-animation: scale-radio .2s ease-in-out normal running;
+          animation: scale-radio .2s ease-in-out normal running;
 }
 
 .radio:disabled,
@@ -3293,83 +3310,49 @@ input[type="password"]::-ms-reveal {
   cursor: not-allowed;
 }
 
-.radio + label > svg {
-  position: absolute;
-  top: .38rem;
-  left: .16rem;
-  z-index: 1;
-  width: 15px;
-  height: 15px;
-  opacity: 0;
-  transition: all .25s ease-in;
-}
-
-.radio + label:after {
-  content: "";
-  position: absolute;
-  top: .19rem;
-  left: 0;
-  width: 1.3rem;
-  height: 1.3rem;
-  border: 2px solid #888;
-  background-color: #fff;
-  border-radius: 50%;
-  box-sizing: border-box;
-}
-
-svg circle {
-  fill: #000098;
-  stroke: #000098;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  svg circle {
-    fill: #fff;
-    stroke: #fff;
-  }
-}
-
-@-webkit-keyframes scale {
-  32% {
-    -webkit-transform: scale(1.13) rotate(135deg);
-            transform: scale(1.13) rotate(135deg);
-  }
-  83% {
-    -webkit-transform: scale(1) rotate(135deg);
-            transform: scale(1) rotate(135deg);
-  }
-}
-
-@keyframes scale {
-  32% {
-    -webkit-transform: scale(1.13) rotate(135deg);
-            transform: scale(1.13) rotate(135deg);
-  }
-  83% {
-    -webkit-transform: scale(1) rotate(135deg);
-            transform: scale(1) rotate(135deg);
-  }
-}
-
 @-webkit-keyframes scale-radio {
-  32% {
-    -webkit-transform: scale(1.13);
-            transform: scale(1.13);
+  0% {
+    top: 43%;
+    -webkit-transform: scale(0.75) translateY(-50%);
+            transform: scale(0.75) translateY(-50%);
+  }
+  10% {
+    top: 43%;
+    -webkit-transform: scale(0.75) translateY(-50%);
+            transform: scale(0.75) translateY(-50%);
   }
   83% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    top: 50%;
+    -webkit-transform: scale(1) translateY(-50%);
+            transform: scale(1) translateY(-50%);
+  }
+  100% {
+    top: 50%;
+    -webkit-transform: scale(1) translateY(-50%);
+            transform: scale(1) translateY(-50%);
   }
 }
 
 @keyframes scale-radio {
-  32% {
-    -webkit-transform: scale(1.13);
-            transform: scale(1.13);
+  0% {
+    top: 43%;
+    -webkit-transform: scale(0.75) translateY(-50%);
+            transform: scale(0.75) translateY(-50%);
+  }
+  10% {
+    top: 43%;
+    -webkit-transform: scale(0.75) translateY(-50%);
+            transform: scale(0.75) translateY(-50%);
   }
   83% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    top: 50%;
+    -webkit-transform: scale(1) translateY(-50%);
+            transform: scale(1) translateY(-50%);
+  }
+  100% {
+    top: 50%;
+    -webkit-transform: scale(1) translateY(-50%);
+            transform: scale(1) translateY(-50%);
   }
 }
 

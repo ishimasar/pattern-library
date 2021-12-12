@@ -1,5 +1,6 @@
 .fieldset {
   width: 65%;
+  margin-bottom: 1.5rem;
   font-size: calc(var(--font-size-m2));
 }
 .fieldset:not(:first-of-type) {
@@ -20,7 +21,7 @@
   display: block;
   position: relative;
   width: auto;
-  margin-top: .5rem;
+  margin-top: 1rem;
   padding-left: 1.8em;
   line-height: 1.75;
   cursor: pointer;
@@ -34,40 +35,40 @@
   opacity: .75;
   transition: all .15s ease-in;
 }
-.checkbox + label:before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: .45rem;
-  left: .28rem;
-  z-index: 1;
-  width: .75rem;
-  height: .45rem;
-  border-top: 2.5px solid #000098;
-  border-right: 2.5px solid #000098;
-  opacity: 0;
-  transform: rotate(135deg);
-  transition: all .15s ease-in;
-}
-.checkbox:checked + label:before {
-  opacity: 1;
-  animation: scale .1s ease-in-out .2s 1 normal running;
-}
-[data-whatinput="keyboard"] .checkbox:focus + label:after {
+[data-whatinput="keyboard"] .checkbox:focus + label:before {
   border-color: #000098;
   box-shadow: 0 0 4px #000098;
 }
-.checkbox + label:after {
+.checkbox + label:before {
   content: "";
   position: absolute;
   top: .2rem;
   left: 0;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border: 2px solid #888;
   background-color: #fff;
   border-radius: 4px;
   box-sizing: border-box;
+}
+.checkbox + label:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: .575rem;
+  left: .3rem;
+  z-index: 1;
+  width: .9rem;
+  height: .55rem;
+  border-top: 3px solid #000098;
+  border-right: 3px solid #000098;
+  opacity: 0;
+  transform: rotate(135deg);
+  transition: all .15s ease-in;
+}
+.checkbox:checked + label:after {
+  opacity: 1;
+  animation: scale .25s ease-in-out .1s normal running;
 }
 .checkbox:disabled,
 .checkbox + label[disabled] {
@@ -75,16 +76,16 @@
   cursor: not-allowed;
 }
 @-webkit-keyframes scale {
-  32% {
-    transform: scale(1.13) rotate(135deg);
+  25% {
+    transform: scale(1.175) rotate(135deg);
   }
   83% {
     transform: scale(1) rotate(135deg);
   }
 }
 @keyframes scale {
-  32% {
-    transform: scale(1.13) rotate(135deg);
+  25% {
+    transform: scale(1.175) rotate(135deg);
   }
   83% {
     transform: scale(1) rotate(135deg);

@@ -15,7 +15,7 @@
       @include mq(sp-tb) {
         width: 25%;
         height: 100%;
-        min-height: 47px;
+        min-height: 50px;
         padding: .1rem;
         vertical-align: top;
       }
@@ -41,9 +41,7 @@
   display: inline-block;
   margin: auto;
   border: 1px solid #333;
-  // background: hsla(17, 24%, 94%, 1);
   line-height: 1.5;
-  // border-radius: 5px;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15) inset;
   @include mq(dt) {
     width: 75%;
@@ -135,6 +133,7 @@ input[type="password"]::-ms-reveal {
   }
 }
 #js-input.input-text {
+  min-height: 50px;
   margin: 0;
   @include mq(dt) {
     width: 55%;
