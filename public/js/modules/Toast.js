@@ -30,13 +30,15 @@ export class Toast {
     }
   }
   removeToast() {
-    this.toastBody.addEventListener('click', (e) => {
-      const target = e.target || e.srcElement;
-      if (target.id == this.close.id) {
-        this.toastBody.setAttribute('aria-atomic', 'false');
-        this.toastBody.setAttribute('aria-hidden', 'true');
-      }
-    });
+    if (this.toastBody) {
+      this.toastBody.addEventListener('click', (e) => {
+        const target = e.target || e.srcElement;
+        if (target.id == this.close.id) {
+          this.toastBody.setAttribute('aria-atomic', 'false');
+          this.toastBody.setAttribute('aria-hidden', 'true');
+        }
+      });
+    }
   }
   stopDisappearing() {
     clearTimeout(this.timerId);
