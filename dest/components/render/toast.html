@@ -5,10 +5,8 @@
     トースト(ポップアップ通知)<br>
     トリガーボタン
   </button>
-  <div id="js-toast-popup" class="toast">
-    <p class="text">
-      notification!<br>
-      <span class="supplement-line">1件の通知があります</span>
-    </p>
+  <div id="js-toast-popup" class="toast" aria-live="polite" aria-atomic="false" aria-hidden="true">
+    <button id="js-toast-close" type="button" class="close-button">
+    <!-- 通知テキストをここにJSで追加・表示 -->
   </div>
 </main>

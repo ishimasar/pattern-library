@@ -1,0 +1,59 @@
+.toast-trigger {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  min-width: fit-content;
+  margin: 4rem auto;
+  padding: .85rem 1rem .75rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.15rem;
+  border-radius: 10rem;
+}
+.toast-trigger:hover,
+[data-whatintent="keyboard"] .toast-trigger:focus {
+  background-color: #777;
+  color: var(--white);
+}
+
+.toast[aria-hidden="false"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  max-width: 90%;
+  margin: auto;
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
+  border-radius: .25rem;
+  animation: fade-in .25s var(--ease-in-cubic);
+}
+.toast[aria-hidden="true"] {
+  display: none;
+}
+.toast.is-invisible {
+  animation: fade-out .5s var(--ease-in-cubic);
+}
+.toast > .text {
+  padding: .5rem 1rem .45rem;
+  text-align: center;
+  font-weight: bold;
+}
+.toast .supplement-line {
+  display: inline-block;
+  width: 100%;
+  margin-top: 3px;
+  padding-top: 2px;
+  border-top: 1px solid var(--border-color);
+}
+.toast .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .15rem .6rem 1.2rem 1.4rem;
+  font-size: 1.2rem;
+}
+.toast .close-button:hover,
+.toast .close-button:focus {
+  font-weight: bold;
+}

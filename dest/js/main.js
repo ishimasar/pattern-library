@@ -65,8 +65,9 @@ tab.throttle();
 
 // TabSwipe();
 
-const toast = new Toast('js-toast-trigger', 'js-toast-popup');
+const toast = new Toast('js-toast-trigger', 'js-toast-popup', '.toast > .text', 'js-toast-close');
 toast.showToast();
+toast.removeToast();
 
 scrollSmooth();
 toggleToc();

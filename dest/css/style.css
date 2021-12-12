@@ -2842,7 +2842,7 @@ _:future,
   min-width: -moz-fit-content;
   min-width: fit-content;
   margin: 4rem auto;
-  padding: .75rem 1rem .65rem;
+  padding: .85rem 1rem .75rem;
   border: 1px solid var(--border-color);
   text-align: center;
   line-height: 1.6;
@@ -2856,31 +2856,32 @@ _:future,
   color: var(--white);
 }
 
-.toast {
+.toast[aria-hidden="false"] {
+  display: block;
+  position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 0;
   max-width: 90%;
   margin: auto;
-  padding: .5rem  1rem .45rem;
-  border: 1px solid var(--border-color);
   background-color: var(--white);
   border-radius: .25rem;
-  visibility: hidden;
-  transition: opacity var(--ease-in-cubic) 0.45s;
+  border: 1px solid var(--border-color);
+  -webkit-animation: fade-in 0.25s var(--ease-in-cubic);
+          animation: fade-in 0.25s var(--ease-in-cubic);
 }
 
-.toast.is-motioned {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  visibility: visible;
-  opacity: 1;
-  transition: opacity var(--ease-out-cubic) 0.4s;
+.toast[aria-hidden="true"] {
+  display: none;
+}
+
+.toast.is-invisible {
+  -webkit-animation: fade-out 0.5s var(--ease-in-cubic);
+          animation: fade-out 0.5s var(--ease-in-cubic);
 }
 
 .toast > .text {
+  padding: .5rem  1rem .45rem;
   text-align: center;
   font-weight: bold;
 }
@@ -2891,6 +2892,18 @@ _:future,
   border-top: 1px solid var(--border-color);
   margin-top: 3px;
   padding-top: 2px;
+}
+
+.toast .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .15rem .6rem 1.2rem 1.4rem;
+  font-size: 1.2rem;
+}
+
+.toast .close-button:hover, .toast .close-button:focus {
+  font-weight: bold;
 }
 
 .fieldset {
