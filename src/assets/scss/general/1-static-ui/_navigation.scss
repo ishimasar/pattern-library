@@ -1,5 +1,7 @@
+@use "../../base/settings";
+
 .regular-nav {
-  @include mq(sp) {
+  @include settings.mq(sp) {
     width: 100%;
     border-top: 1px solid var(--line-color);
     background-color: var(--white);
@@ -7,7 +9,7 @@
   & .nav-list {
     display: flex;
     width: 100%;
-    @include mq(sp) {
+    @include settings.mq(sp) {
       display: flex;
     }
     > li {
@@ -29,10 +31,10 @@
     width: 100%;
     background-color: var(--logo-color);
     transition: transform .35s var(--ease-out-quad);
-    @include mq(tb-dth) {
+    @include settings.mq(tb-dth) {
       height: 3px;
     }
-    @include mq(sp) {
+    @include settings.mq(sp) {
       height: 4px;
     }
   }
@@ -50,15 +52,15 @@
     position: relative;
     text-align: center;
     overflow: hidden;
-    @include mq(dth) {
+    @include settings.mq(dth) {
       min-width: 10rem;
       padding: .6rem 1.5rem .8rem;
     }
-    @include mq(dtl) {
+    @include settings.mq(dtl) {
       min-width: 8.1rem;
       padding: .6rem 0 .8rem;
     }
-    @include mq(dt) {
+    @include settings.mq(dt) {
       &:hover,
       &:focus {
         text-decoration: none;
@@ -66,11 +68,11 @@
         backface-visibility: hidden;
       }
     }
-    @include mq(tb) {
+    @include settings.mq(tb) {
       min-width: 6.5rem;
       padding: .6rem 0 .8rem;
     }
-    @include mq(sp) {
+    @include settings.mq(sp) {
       padding: .3rem .2rem .4rem;
     }
     &:before {
@@ -91,10 +93,10 @@
       line-height: 1.85;
       font-family: var(--sentence-font);
       font-weight: bold;
-      @include mq(dt) {
+      @include settings.mq(dt) {
         font-size: calc(var(--font-size-m1) + .05rem);
       }
-      @include mq(sp-tb) {
+      @include settings.mq(sp-tb) {
         vertical-align: baseline;
         font-size: calc(var(--font-size-s1));
       }
@@ -102,18 +104,18 @@
     > .en {
       display: block;
       text-transform: uppercase;
-      @include mq(dt) {
+      @include settings.mq(dt) {
         font-size: calc(var(--font-size-s2) + .1rem);
         letter-spacing: .1rem;
       }
-      @include mq(tb-dth) {
+      @include settings.mq(tb-dth) {
         padding-top: .5rem;
       }
-      @include mq(tb) {
+      @include settings.mq(tb) {
         font-size: calc(var(--font-size-s2));
         letter-spacing: .1rem;
       }
-      @include mq(sp) {
+      @include settings.mq(sp) {
         font-size: calc(var(--font-size-s2));
         letter-spacing: .05rem;
       }
@@ -135,17 +137,17 @@
   margin: auto;
   font-family: var(--sentence-font);
   overflow: auto;
-  @include mq(dt) {
+  @include settings.mq(dt) {
     max-width: 90vw;
   }
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     max-width: 90vw;
     white-space: nowrap;
   }
   > li {
     display: inline-block;
     &:after {
-      @include inlineArrowHead(9, right, var(--text-normal-color));
+      @include settings.inlineArrowHead(9, right, var(--text-normal-color));
     }
     &:last-of-type:after {
       content: none;
@@ -155,30 +157,30 @@
 .breadcrumb-link {
   display: inline-block;
   text-decoration: underline;
-  @include mq(dt) {
+  @include settings.mq(dt) {
     padding: .8rem 1.3rem;
     &:hover,
     &:focus {
       text-decoration: none;
     }
   }
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     padding: .7rem 1rem .65rem;
   }
-  @include mq(sp) {
+  @include settings.mq(sp) {
     font-size: calc(var(--font-size-m1) - .08rem);
   }
 }
 .breadcrumb-current {
   display: inline-block;
   font-weight: bold;
-  @include mq(dt) {
+  @include settings.mq(dt) {
     padding: .8rem 1.3rem;
   }
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     padding: .5rem 1rem;
   }
-  @include mq(sp) {
+  @include settings.mq(sp) {
     font-size: calc(var(--font-size-m1) - .08rem);
   }
 }

@@ -1,10 +1,10 @@
 /* PrismJS 1.23.0
 https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+bash+git+markup-templating+php+pug+python+ruby+scss+typescript&plugins=toolbar */
 /**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
- */
+* okaidia theme for JavaScript, CSS and HTML
+* Loosely based on Monokai textmate theme by http://www.monokai.nl/
+* @author ocodia
+*/
 code[class*="language-"],
 pre[class*="language-"] {
   background: none;
@@ -21,7 +21,6 @@ pre[class*="language-"] {
   color: #f8f8f2;
   tab-size: 4;
 }
-
 code[class*="language-"] *,
 pre[class*="language-"] * {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -139,7 +138,7 @@ div.code-toolbar:focus > .toolbar {
 }
 
 /* Separate line b/c rules are thrown out if selector is invalid.
-   IE11 and old Edge versions don't support :focus-within. */
+  IE11 and old Edge versions don't support :focus-within. */
 div.code-toolbar:focus-within > .toolbar {
   opacity: 1;
 }
@@ -193,26 +192,21 @@ div.code-toolbar > .toolbar span:focus {
   font-weight: normal;
   color: #333;
 }
-
 .code-highliter-prism span:not([class*="token"]):not([class="line-numbers-rows"]):not([class="file-name"]):not(:first-of-type) {
   margin-top: 2rem;
 }
-
 .code-highliter-prism pre {
   margin-top: 0;
 }
-
 .code-highliter-prism code {
   font-size: calc(var(--font-size-m1) - .01rem);
 }
-
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width:48em) {
   .code-highliter-prism code {
     line-height: 1.6;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .code-highliter-prism code {
     line-height: 1.4;
     font-size: calc(var(--font-size-s1));

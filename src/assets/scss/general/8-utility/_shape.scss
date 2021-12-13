@@ -1,5 +1,7 @@
+@use "../../base/settings";
+
 .circle-figure {
-  @include circle(5, #333);
+  @include settings.circle(5, #333);
 }
 .divider {
   width: 100%;

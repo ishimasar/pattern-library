@@ -1,43 +1,31 @@
 .column-box {
   column-gap: 3rem;
-  column-gap: 3rem;
-  column-rule: solid 1px;
   column-rule: solid 1px;
   margin: auto;
 }
-
-@media print, screen and (min-width: 64.0625em) {
-  .column-box {
-    columns: 3 auto;
-    columns: 3 auto;
-  }
-}
-
-@media print, screen and (min-width: 48em) and (max-width: 64em) {
-  .column-box {
-    columns: 2 auto;
-    columns: 2 auto;
-  }
-}
-
 @media print, screen and (min-width: 37.5625em) {
   .column-box {
     columns: 2 auto;
-    columns: 2 auto;
   }
 }
-
 @media print, screen and (max-width: 37.5em) {
   .column-box {
     columns: 1 auto;
-    columns: 1 auto;
   }
 }
-
+@media print, screen and (min-width:64.0625em) {
+  .column-box {
+    columns: 3 auto;
+  }
+}
+@media print, screen and (min-width:48em) and (max-width:64em) {
+  .column-box {
+    columns: 2 auto;
+  }
+}
 .column-box .paragraph {
   line-height: 1.8;
 }
-
 .column-box .paragraph:not(:first-of-type) {
   margin-top: 1.2rem;
 }

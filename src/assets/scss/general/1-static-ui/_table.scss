@@ -1,4 +1,5 @@
-/* table */
+@use "../../base/settings";
+
 table {
   border-top: solid 1px #bbb;
   border-left: solid 1px #bbb;
@@ -35,7 +36,7 @@ td {
 
   table {
     white-space: pre;
-    @include mq(dt) {
+    @include settings.mq(dt) {
       table-layout: fixed;
     }
   }

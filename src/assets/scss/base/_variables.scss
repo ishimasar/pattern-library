@@ -1,0 +1,94 @@
+/**
+ * ## variable
+ * ### CSS variables (CSS custom properties for cascading variables)
+ */
+
+// * デバイス別 接尾辞(suffix)ルール -> *-Mb: Mobile/Tablet、*-Dt: Desktop
+:root {
+  // #### font-family
+  --common-font: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
+  // --text-font: (you set);
+  // --heading-font: (you set);
+  // --home-section-heading-font: (you set);
+  // --number-font: (you set);
+  // --logo-font: (you set);
+  // --english-font: (you set);
+  --english-font-print: Arial;
+
+  // #### font-size
+  --font-size-l4: 1rem * 8 / 3; // 2.66666rem / 42.66666px
+  --font-size-l3: 1rem * 8 / 4; // 2rem / 32px
+  --font-size-l2: 1rem * 8 / 5; // 1.6rem / 25.6px
+  --font-size-l1: 1rem * 8 / 6; // 1.33333rem / 21.33333px
+  --font-size-m2: 1rem * 8 / 7; // 1.14286rem / 18.28571px
+  --font-size-m1: 1rem; // 16px
+  --font-size-s1: 1rem * 8 / 9; // 0.88889rem / 14.22222px
+  --font-size-s2: 1rem * 8 / 10; // 0.8rem / 12.8px
+
+  // #### color
+  --black: hsla(0, 0%, 20%, 1); // #333
+  --white: hsla(0, 100%, 100%, 1); // #fff
+  --contrast-limit-gray: hsla(0, 0%, 47%, 1); // #777
+
+  --text-normal-color: var(--black);
+  --border-color: var(--contrast-limit-gray);
+  --focusring-color: hsla(217, 99%, 71%, 1);
+  // --link-color: (you set);
+  // --accent-color: (you set);
+
+  // #### easing
+  // ##### sine
+  // --ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
+  // --ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
+  // --ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  // ##### quad
+  --ease-in-quad: cubic-bezier(.55, .085, .68, .53);
+  --ease-out-quad: cubic-bezier(.25, .46, .45, .94);
+  --ease-in-out-quad: cubic-bezier(.455, .03, .515, .955);
+  // ##### cubic
+  --ease-in-cubic: cubic-bezier(.55, .055, .675, .19);
+  --ease-out-cubic: cubic-bezier(.215, .61, .355, 1);
+  --ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1);
+  // ##### quart
+  // --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  // --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  // --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+  // ##### quint
+  // --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  // --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  // --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+  // ##### expo
+  // --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  // --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  // --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+  // ##### circ
+  // --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  // --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+  // --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  // ##### back
+  // --ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  // --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  // --ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  // #### ui decoration
+  --textbox-shadow: 0 10px 15px -3px rgba(0, 0, 0, .2), 0 4px 6px -2px rgba(0, 0, 0, .1);
+  --textbox-bg: rgba(255, 255, 255, .925);
+  --textbox-hover-shadow: 0 12px 12px 0 rgba(0, 0, 0, .14), 0 5px 7px 0 rgba(0, 0, 0, .065);
+
+  // --button-shadow: (you set);
+  // --button-hover-shadow: (you set);
+  // --button-transition: (you set);
+  // --bg-gradient: linear-gradient(you set);
+  // --base-radius: (you set);
+  // --small-radius: (you set);
+  // --content-width: (you set);
+  // --max-width: (you set);
+  // --hover-scale: scale(you set);
+
+  // #### hover & focus effect transition
+  --in-transition: color .15s var(--ease-in-out-quad), background-color .15s var(--ease-in-out-quad), transform .15s var(--ease-in-out-quad);
+  --out-transition: color .2s var(--ease-out-quad), background-color .2s var(--ease-in-out-quad), transform .2s var(--ease-in-out-quad);
+
+  --carousel-fade: opacity .7s var(--ease-in-quad);
+  --carousel-switch-effect: var(--in-transition), var(--carousel-fade);
+}

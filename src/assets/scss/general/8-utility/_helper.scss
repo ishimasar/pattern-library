@@ -1,34 +1,45 @@
-// margin, paddingの余白調整用
-@for $i from 0 through 160 {
-  .mt#{$i * 2} { margin-top: 2px * $i !important; }
-  .mr#{$i * 2} { margin-right: 2px * $i !important; }
-  .mb#{$i * 2} { margin-bottom: 2px * $i !important; }
-  .ml#{$i * 2} { margin-left: 2px * $i !important; }
-  .mv#{$i * 2} { margin-top: 2px * $i !important; margin-bottom: 2px * $i !important; }
-  .mh#{$i * 2} { margin-right: 2px * $i !important; margin-left: 2px * $i !important; }
-  .ma#{$i * 2} { margin: 2px * $i !important; }
-  .pt#{$i * 2} { padding-top: 2px * $i !important; }
-  .pr#{$i * 2} { padding-right: 2px * $i !important; }
-  .pb#{$i * 2} { padding-bottom: 2px * $i !important; }
-  .pl#{$i * 2} { padding-left: 2px * $i !important; }
-  .pv#{$i * 2} { padding-top: 2px * $i !important; padding-bottom: 2px * $i !important; }
-  .ph#{$i * 2} { padding-right: 2px * $i !important; padding-left: 2px * $i !important; }
-  .pa#{$i * 2} { padding: 2px * $i !important; }
-}
+// ---
 
-@for $i from 0 through 40 {
-  .mt#{$i * -4} { margin-top: -4px * $i !important; }
-  .mr#{$i * -4} { margin-right: -4px * $i !important; }
-  .mb#{$i * -4} { margin-bottom: -4px * $i !important; }
-  .ml#{$i * -4} { margin-left: -4px * $i !important; }
-  .mv#{$i * -4} { margin-top: -4px * $i !important; margin-bottom: -4px * $i !important; }
-  .mh#{$i * -4} { margin-right: -4px * $i !important; margin-left: -4px * $i !important; }
-  .ma#{$i * -4} { margin: -4px * $i !important; }
-  .pt#{$i * -4} { padding-top: -4px * $i !important; }
-  .pr#{$i * -4} { padding-right: -4px * $i !important; }
-  .pb#{$i * -4} { padding-bottom: -4px * $i !important; }
-  .pl#{$i * -4} { padding-left: -4px * $i !important; }
-  .pv#{$i * -4} { padding-top: -4px * $i !important; padding-bottom: -4px * $i !important; }
-  .ph#{$i * -4} { padding-right: -4px * $i !important; padding-left: -4px * $i !important; }
-  .pa#{$i * -4} { padding: -4px * $i !important; }
+// ## helper
+// 命名規則：[margin,paddingの頭文字] + [top,right,bottom,left,allの頭文字] + [数値]
+// 例）mt10 => margin-top:10px;
+// 例）mt-10 => margin-top:-10px;
+
+// margin, paddingの余白調整用
+
+$sizes: 8;
+
+@mixin margin-classes {
+  @for $i from -3 through 5 {
+     $margin: $i * 0.5;
+    // .ml#{$i * $sizes} {margin-left: $margin + rem;}
+    // .mr#{$i * $sizes} {margin-right: $margin + rem;}
+    .mt#{$i * $sizes} {margin-top: $margin + rem;}
+    .mb#{$i * $sizes} {margin-bottom: $margin + rem;}
+  }
+}
+@include margin-classes;
+
+@mixin padding-classes {
+  @for $i from 0 through 5 {
+    $padding: $i * 0.5;
+  //  .pl#{$i * $sizes} {padding-left: $padding + rem;}
+  //  .pr#{$i * $sizes} {padding-right: $padding + rem;}
+  //  .pt#{$i * $sizes} {padding-top: $padding + rem;}
+  //  .pb#{$i * $sizes} {padding-bottom: $padding + rem;}
+ }
+}
+@include padding-classes;
+
+/* 視覚的に非表示にしスクリーンリーダーには読ませる。SEO/アクセシビリティ対応 */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
 }

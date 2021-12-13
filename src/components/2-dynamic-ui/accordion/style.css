@@ -1,16 +1,10 @@
 .accordion-wrap {
-  margin: 2rem auto;
+  width: 100%;
+  margin: auto;
 }
-
-@media print, screen and (max-width: 63.9375em) {
+@media print, screen and (min-width:48em) {
   .accordion-wrap {
-    width: 85%;
-  }
-}
-
-@media print, screen and (min-width: 64em) {
-  .accordion-wrap {
-    width: 60%;
+    max-width: 50rem;
   }
 }
 
@@ -18,14 +12,12 @@
   display: flex;
   margin: auto auto 1.5rem;
 }
-
-@media print, screen and (max-width: 63.9375em) {
+@media print, screen and (max-width:64em) {
   .accordion-button-box {
     justify-content: center;
   }
 }
-
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width:64.0625em) {
   .accordion-button-box {
     justify-content: flex-end;
   }
@@ -35,49 +27,41 @@
   border: 1px solid var(--black);
   border-radius: 5px;
 }
-
-@media print, screen and (max-width: 63.9375em) {
+@media print, screen and (max-width:64em) {
   .accordion-all-button {
     width: 43%;
     padding: 1rem .5rem;
   }
 }
-
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width:64.0625em) {
   .accordion-all-button {
     min-width: 8.5rem;
     padding: 1rem;
     transition: var(--out-transition);
   }
-  .accordion-all-button:hover,
-  .accordion-all-button:focus {
+  .accordion-all-button:hover, .accordion-all-button:focus {
     background-color: var(--black);
     color: var(--white);
     transition: var(--in-transition);
   }
 }
-
-@media print, screen and (max-width: 63.9375em) {
+@media print, screen and (max-width:64em) {
   .accordion-all-button:not(:first-of-type) {
     margin-left: 1rem;
   }
 }
-
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width:64.0625em) {
   .accordion-all-button:not(:first-of-type) {
     margin-left: 1.75rem;
   }
 }
-
 .accordion-all-button[disabled="true"] {
   border: none;
   color: #666;
   box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, .3) inset;
   cursor: not-allowed;
 }
-
-.accordion-all-button[disabled="true"]:hover,
-.accordion-all-button[disabled="true"]:focus {
+.accordion-all-button[disabled="true"]:hover, .accordion-all-button[disabled="true"]:focus {
   background-color: var(--white);
   color: #666;
   box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, .3) inset;
@@ -87,7 +71,6 @@
   background-color: #d9d9d9;
   color: var(--black);
 }
-
 .accordion-list > li:not(:last-of-type) {
   margin-bottom: .25rem;
 }
@@ -95,43 +78,36 @@
 .accordion-details {
   height: auto;
 }
-
-@media print, screen and (max-width: 63.9375em) {
+@media print, screen and (max-width:64em) {
   .accordion-details {
     font-size: 1rem;
   }
 }
-
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width:64.0625em) {
   .accordion-details {
     font-size: 1.1rem;
   }
 }
-
 .accordion-details > summary {
   padding: 1.5rem;
   cursor: pointer;
 }
-
-@media print, screen and (max-width: 63.9375em) {
+@media print, screen and (max-width:64em) {
   .accordion-details > summary {
     padding: 1rem;
   }
 }
-
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width:64.0625em) {
   .accordion-details > summary {
     padding: 1.5rem;
   }
-  .accordion-details > summary:hover,
-  .accordion-details > summary:focus {
-    padding: calc(1.5rem - .0625rem);
+  .accordion-details > summary:hover, .accordion-details > summary:focus {
+    padding: 1.4375rem;
     border: .0625rem solid var(--black);
     font-weight: bold;
   }
 }
-
-@media print, screen and (max-width: 63.9375em) {
+@media print, screen and (max-width:64em) {
   .accordion-details > summary:before {
     content: "";
     display: block;
@@ -142,13 +118,10 @@
     border-bottom: 6.5px transparent solid;
     border-left: 11px var(--black) solid;
     border-style: solid;
-    transition: border-color cubic-bezier(.215, .61, .355, 1) .15s, -webkit-transform cubic-bezier(.215, .61, .355, 1) .15s;
     transition: transform cubic-bezier(.215, .61, .355, 1) .15s, border-color cubic-bezier(.215, .61, .355, 1) .15s;
-    transition: transform cubic-bezier(.215, .61, .355, 1) .15s, border-color cubic-bezier(.215, .61, .355, 1) .15s, -webkit-transform cubic-bezier(.215, .61, .355, 1) .15s;
   }
 }
-
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width:64.0625em) {
   .accordion-details > summary:before {
     content: "";
     display: block;
@@ -159,31 +132,22 @@
     border-bottom: 7.5px transparent solid;
     border-left: 13px var(--black) solid;
     border-style: solid;
-    transition: border-color cubic-bezier(.215, .61, .355, 1) .15s, -webkit-transform cubic-bezier(.215, .61, .355, 1) .15s;
     transition: transform cubic-bezier(.215, .61, .355, 1) .15s, border-color cubic-bezier(.215, .61, .355, 1) .15s;
-    transition: transform cubic-bezier(.215, .61, .355, 1) .15s, border-color cubic-bezier(.215, .61, .355, 1) .15s, -webkit-transform cubic-bezier(.215, .61, .355, 1) .15s;
   }
 }
-
 .accordion-details > summary::marker {
   font-size: 0;
 }
-
 .accordion-details > summary::-webkit-details-marker {
   font-size: 0;
 }
-
 .accordion-details > summary:before {
   display: inline-block;
   width: auto;
   margin-right: 1rem;
-  transition: -webkit-transform .25s var(--ease-out-quad);
   transition: transform .25s var(--ease-out-quad);
-  transition: transform .25s var(--ease-out-quad), -webkit-transform .25s var(--ease-out-quad);
 }
-
 .accordion-details[aria-expanded="true"] > summary:before {
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   transition-timing-function: var(--ease-out-quad);
 }
@@ -196,7 +160,6 @@
   transition: height .25s var(--ease-out-quad);
   pointer-events: none;
 }
-
 [open] .accordion-details__content {
   transition-timing-function: var(--ease-out-quad);
 }
@@ -204,14 +167,12 @@
 .accordion-details__paragraph {
   border-top: .0625rem solid #b3b3b3;
 }
-
-@media print, screen and (max-width: 63.9375em) {
+@media print, screen and (max-width:64em) {
   .accordion-details__paragraph {
     padding: 1rem;
   }
 }
-
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width:64.0625em) {
   .accordion-details__paragraph {
     padding: 1.5rem;
   }

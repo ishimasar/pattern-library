@@ -1,77 +1,60 @@
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .regular-nav {
     width: 100%;
     border-top: 1px solid var(--line-color);
     background-color: var(--white);
   }
 }
-
 .regular-nav .nav-list {
   display: flex;
   width: 100%;
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .regular-nav .nav-list {
     display: flex;
   }
 }
-
 .regular-nav .nav-list > li {
   width: 25%;
 }
-
 .regular-nav .nav-list > li:first-of-type {
   border: 1px solid var(--black);
 }
-
 .regular-nav .nav-list > li:not(:first-of-type) {
   border-top: 1px solid var(--black);
   border-right: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
 }
-
-.regular-nav .nav-link:before,
-.regular-nav span[aria-current="page"]:before,
 .regular-nav .nav-link:after,
-.regular-nav span[aria-current="page"]:after {
+.regular-nav span[aria-current="page"]:after, .regular-nav .nav-link:before,
+.regular-nav span[aria-current="page"]:before {
   content: "";
   position: absolute;
   left: 0;
   width: 100%;
   background-color: var(--logo-color);
-  transition: -webkit-transform .35s var(--ease-out-quad);
   transition: transform .35s var(--ease-out-quad);
-  transition: transform .35s var(--ease-out-quad), -webkit-transform .35s var(--ease-out-quad);
 }
-
-@media print, screen and (min-width: 48em) {
-  .regular-nav .nav-link:before,
-  .regular-nav span[aria-current="page"]:before,
+@media print, screen and (min-width:48em) {
   .regular-nav .nav-link:after,
-  .regular-nav span[aria-current="page"]:after {
+  .regular-nav span[aria-current="page"]:after, .regular-nav .nav-link:before,
+  .regular-nav span[aria-current="page"]:before {
     height: 3px;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
-  .regular-nav .nav-link:before,
-  .regular-nav span[aria-current="page"]:before,
+@media print, screen and (max-width:47.96875em) {
   .regular-nav .nav-link:after,
-  .regular-nav span[aria-current="page"]:after {
+  .regular-nav span[aria-current="page"]:after, .regular-nav .nav-link:before,
+  .regular-nav span[aria-current="page"]:before {
     height: 4px;
   }
 }
-
 .regular-nav .nav-link {
   text-decoration: underline;
 }
-
-.regular-nav .nav-link:hover,
-.regular-nav .nav-link:focus {
+.regular-nav .nav-link:hover, .regular-nav .nav-link:focus {
   text-decoration: none;
 }
-
 .regular-nav .nav-link,
 .regular-nav span[aria-current="page"] {
   display: flex;
@@ -80,26 +63,22 @@
   text-align: center;
   overflow: hidden;
 }
-
-@media print, screen and (min-width: 100.0625em) {
+@media print, screen and (min-width:100.0625em) {
   .regular-nav .nav-link,
   .regular-nav span[aria-current="page"] {
     min-width: 10rem;
     padding: .6rem 1.5rem .8rem;
   }
 }
-
-@media print, screen and (min-width: 64.0625em) and (max-width: 100em) {
+@media print, screen and (min-width:64.0625em) and (max-width:100em) {
   .regular-nav .nav-link,
   .regular-nav span[aria-current="page"] {
     min-width: 8.1rem;
     padding: .6rem 0 .8rem;
   }
 }
-
-@media print, screen and (min-width: 64.0625em) {
-  .regular-nav .nav-link:hover,
-  .regular-nav .nav-link:focus,
+@media print, screen and (min-width:64.0625em) {
+  .regular-nav .nav-link:hover, .regular-nav .nav-link:focus,
   .regular-nav span[aria-current="page"]:hover,
   .regular-nav span[aria-current="page"]:focus {
     text-decoration: none;
@@ -107,36 +86,31 @@
     backface-visibility: hidden;
   }
 }
-
-@media print, screen and (min-width: 48em) and (max-width: 64em) {
+@media print, screen and (min-width:48em) and (max-width:64em) {
   .regular-nav .nav-link,
   .regular-nav span[aria-current="page"] {
     min-width: 6.5rem;
     padding: .6rem 0 .8rem;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .regular-nav .nav-link,
   .regular-nav span[aria-current="page"] {
     padding: .3rem .2rem .4rem;
   }
 }
-
 .regular-nav .nav-link:before,
 .regular-nav span[aria-current="page"]:before {
   top: 0;
   background-image: var(--globalnav-hover-gradient-r);
   transform: translateX(-101%);
 }
-
 .regular-nav .nav-link:after,
 .regular-nav span[aria-current="page"]:after {
   bottom: 0;
   background-image: var(--globalnav-hover-gradient-l);
   transform: translateX(101%);
 }
-
 .regular-nav .nav-link > .ja,
 .regular-nav span[aria-current="page"] > .ja {
   display: block;
@@ -145,59 +119,51 @@
   font-family: var(--sentence-font);
   font-weight: bold;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .regular-nav .nav-link > .ja,
   .regular-nav span[aria-current="page"] > .ja {
     font-size: calc(var(--font-size-m1) + .05rem);
   }
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .regular-nav .nav-link > .ja,
   .regular-nav span[aria-current="page"] > .ja {
     vertical-align: baseline;
     font-size: calc(var(--font-size-s1));
   }
 }
-
 .regular-nav .nav-link > .en,
 .regular-nav span[aria-current="page"] > .en {
   display: block;
   text-transform: uppercase;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .regular-nav .nav-link > .en,
   .regular-nav span[aria-current="page"] > .en {
     font-size: calc(var(--font-size-s2) + .1rem);
     letter-spacing: .1rem;
   }
 }
-
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width:48em) {
   .regular-nav .nav-link > .en,
   .regular-nav span[aria-current="page"] > .en {
     padding-top: .5rem;
   }
 }
-
-@media print, screen and (min-width: 48em) and (max-width: 64em) {
+@media print, screen and (min-width:48em) and (max-width:64em) {
   .regular-nav .nav-link > .en,
   .regular-nav span[aria-current="page"] > .en {
     font-size: calc(var(--font-size-s2));
     letter-spacing: .1rem;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .regular-nav .nav-link > .en,
   .regular-nav span[aria-current="page"] > .en {
     font-size: calc(var(--font-size-s2));
     letter-spacing: .05rem;
   }
 }
-
 .regular-nav span[aria-current="page"] {
   font-family: var(--sentence-font);
   pointer-events: none;
@@ -215,24 +181,20 @@
   font-family: var(--sentence-font);
   overflow: auto;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .breadcrumb-list {
     max-width: 90vw;
   }
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .breadcrumb-list {
     max-width: 90vw;
     white-space: nowrap;
   }
 }
-
 .breadcrumb-list > li {
   display: inline-block;
 }
-
 .breadcrumb-list > li:after {
   content: "";
   display: inline-block;
@@ -244,7 +206,6 @@
   border-right: 1.5px solid var(--text-normal-color);
   transform: rotate(45deg);
 }
-
 .breadcrumb-list > li:last-of-type:after {
   content: none;
 }
@@ -253,24 +214,20 @@
   display: inline-block;
   text-decoration: underline;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .breadcrumb-link {
     padding: .8rem 1.3rem;
   }
-  .breadcrumb-link:hover,
-  .breadcrumb-link:focus {
+  .breadcrumb-link:hover, .breadcrumb-link:focus {
     text-decoration: none;
   }
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .breadcrumb-link {
     padding: .7rem 1rem .65rem;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .breadcrumb-link {
     font-size: calc(var(--font-size-m1) - .08rem);
   }
@@ -280,20 +237,17 @@
   display: inline-block;
   font-weight: bold;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .breadcrumb-current {
     padding: .8rem 1.3rem;
   }
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .breadcrumb-current {
     padding: .5rem 1rem;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .breadcrumb-current {
     font-size: calc(var(--font-size-m1) - .08rem);
   }

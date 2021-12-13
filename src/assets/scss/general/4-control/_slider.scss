@@ -1,9 +1,11 @@
+@use "../../base/settings";
+
 .range-slider-container {
   margin: auto;
-  @include mq(tb-dth) {
+  @include settings.mq(tb-dth) {
     width: 50%;
   }
-  @include mq(sp) {
+  @include settings.mq(sp) {
     width: 90%;
   }
   & .ui-name {

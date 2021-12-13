@@ -5,6 +5,9 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
  * @author ocodia
  */
+
+ @use "../../base/settings";
+
 code[class*="language-"],
 pre[class*="language-"] {
   background: none;
@@ -179,10 +182,10 @@ div.code-toolbar > .toolbar span:focus {
   }
   & code {
     font-size: calc(var(--font-size-m1) - .01rem);
-    @include mq(tb-dth) {
+    @include settings.mq(tb-dth) {
       line-height: 1.6;
     }
-    @include mq(sp) {
+    @include settings.mq(sp) {
       line-height: 1.4;
       font-size: calc(var(--font-size-s1));
     }

@@ -1,3 +1,5 @@
+@use "../../base/settings";
+
 // コンテンツを視覚的に隠し、スクリーンリーダーでは読ませるためのもの
 .visually-hidden {
   position: absolute;
@@ -17,43 +19,43 @@
 
 // 画面サイズ767px以下(スマートフォン想定)のとき
 .display-sp {
-  @include mq(tb-dth) {
+  @include settings.mq(tb-dth) {
     display: none;
   }
-  @include mq(sp) {
+  @include settings.mq(sp) {
     display: inline-block;
   }
 }
 
 // 画面サイズ1024px以下(スマホ~タブレット想定)のとき
 .display-sptb {
-  @include mq(dt) {
+  @include settings.mq(dt) {
     display: none;
   }
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     display: inline-block;
   }
 }
 
 // 画面サイズ768px以上(タブレット~デスクトップ想定)のとき
 .display-tbdt {
-  @include mq(dt) {
+  @include settings.mq(dt) {
     display: block;
   }
-  @include mq(tb) {
+  @include settings.mq(tb) {
     display: block;
   }
-  @include mq(sp) {
+  @include settings.mq(sp) {
     display: none;
   }
 }
 
 // 画面サイズ1025px以上(デスクトップ全般想定)のとき
 .display-dt {
-  @include mq(dt) {
+  @include settings.mq(dt) {
     display: block;
   }
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     display: none;
   }
 }

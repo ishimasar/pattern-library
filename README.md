@@ -1,4 +1,4 @@
-## パターンライブラリ & スタイルガイドについて
+# パターンライブラリ & スタイルガイドについて
 
 Webサイト・アプリ制作で使用されるUIやスタイルのコード見本・サンプル集です。
 コーディングの参考、UI等の設計・作成方針の土台にでき、その上で作業効率にも寄与できるようなものを目指します。
@@ -33,21 +33,22 @@ Components(UI)詳細画面の下部エリアに共通ドキュメントタブ(HT
 ## 構成
 
 UI分類 (Components)
- 1. **Static Ui**<br>
+
+ 1. **Static Ui**  
    静的UI：JavaScriptでDOM操作など動的処理を付与しないWeb UI。List、Card、Tableなど
- 2. **Dynamic Ui**<br>
+ 2. **Dynamic Ui**  
    動的UI：JavaScriptで動的処理を付与したインタラクティブWeb UI。Carousel、Dialog、Tabなど
- 3. **Form Ui**<br>
+ 3. **Form Ui**  
    フォームUI：ユーザーが情報入力・送信する際に用いるUI。Checkbox、Input field、Radioなど
- 4. **Control**<br>
+ 4. **Control**  
    コントロール系：ユーザー操作で挙動や値をコントロールするUI。Button、Slider、Switchなど
- 5. **Effect**<br>
+ 5. **Effect**  
    演出・効果：CSSやJavaScriptを用いたモーション、UI。Smooth scroll、Loading effectなど
- 6. **Layout**<br>
+ 6. **Layout**  
    配置・割付規則：空間上に要素を配置する際の手法、法則。Column、Flexbox、Gridなど
- 7. **Typography**<br>
+ 7. **Typography**  
    文字表現：文字や書体、サイズ、字間、行間などに関連するUI。Body text、Headingなど
- 8. **Utility**<br>
+ 8. **Utility**  
    汎用パターン：各UI間・内で柔軟に適用できるスタイル。 Display、Shapeなど
 
 ## 仕様・注記

@@ -1,0 +1,48 @@
+@media print, screen and (min-width:48em) {
+  .display-sp {
+    display: none;
+  }
+}
+@media print, screen and (max-width:47.96875em) {
+  .display-sp {
+    display: inline-block;
+  }
+}
+
+@media print, screen and (min-width:64.0625em) {
+  .display-sptb {
+    display: none;
+  }
+}
+@media print, screen and (max-width:64em) {
+  .display-sptb {
+    display: inline-block;
+  }
+}
+
+@media print, screen and (min-width:64.0625em) {
+  .display-tbdt {
+    display: block;
+  }
+}
+@media print, screen and (min-width:48em) and (max-width:64em) {
+  .display-tbdt {
+    display: block;
+  }
+}
+@media print, screen and (max-width:47.96875em) {
+  .display-tbdt {
+    display: none;
+  }
+}
+
+@media print, screen and (min-width:64.0625em) {
+  .display-dt {
+    display: block;
+  }
+}
+@media print, screen and (max-width:64em) {
+  .display-dt {
+    display: none;
+  }
+}

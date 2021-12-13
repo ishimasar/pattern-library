@@ -1,23 +1,19 @@
 .range-slider-container {
   margin: auto;
 }
-
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width:48em) {
   .range-slider-container {
     width: 50%;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .range-slider-container {
     width: 90%;
   }
 }
-
 .range-slider-container .ui-name {
   margin: auto auto 2rem;
 }
-
 .range-slider-container .control-name {
   display: flex;
   justify-content: center;
@@ -32,8 +28,7 @@ input[type="range"] {
   border-radius: 10px;
   outline: none;
   cursor: pointer;
-  appearance: none;
-  appearance: none;
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -44,7 +39,7 @@ input[type="range"]::-webkit-slider-thumb {
   background: #065ab4;
   border-radius: 50%;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .15);
-  appearance: none;
+  -webkit-appearance: none;
 }
 
 /* Moz向けのつまみ */

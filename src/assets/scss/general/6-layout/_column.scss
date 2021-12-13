@@ -1,3 +1,5 @@
+@use "../../base/settings";
+
 .column-box {
   column-gap: 3rem;
   column-rule: solid 1px;
@@ -8,10 +10,10 @@
   @media print, screen and (max-width: 37.5em) {
     columns: 1 auto;
   }
-  @include mq(dt) {
+  @include settings.mq(dt) {
     columns: 3 auto;
   }
-  @include mq(tb) {
+  @include settings.mq(tb) {
     columns: 2 auto;
   }
   & .paragraph {

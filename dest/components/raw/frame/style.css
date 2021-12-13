@@ -1,3 +1,4 @@
+/* ※.main-wrapperはすべてのパターンの共通ラッパーとしても使用 */
 .main-wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -5,36 +6,31 @@
   padding-bottom: 3rem;
 }
 
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width:48em) {
   .main-wrapper {
     width: 90%;
     max-width: 64.0625em;
     min-width: 48rem;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .main-wrapper {
     width: 90vw;
   }
 }
-
 .frame-wrapper {
   max-width: 100rem;
   padding: 1rem;
 }
-
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width:48em) {
   .frame-wrapper {
     width: 100%;
   }
 }
-
 .frame-wrapper.grid-area {
   display: grid;
 }
-
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width:48em) {
   .frame-wrapper.grid-area {
     grid-row-gap: 1rem;
     grid-column-gap: 1rem;
@@ -44,19 +40,16 @@
     grid-template-columns: 12rem 1fr 10rem;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .frame-wrapper.grid-area {
     grid-template-rows: 3rem 3rem 1fr 3rem 3rem;
     grid-gap: 1rem;
   }
 }
-
 .frame-wrapper.grid-area > * {
   padding: .5rem;
   border: 1px solid #333;
 }
-
 .frame-wrapper.grid-area > * article {
   width: calc(100% - 1rem);
   width: 95%;
@@ -66,13 +59,11 @@
   padding-left: .5rem;
   border: 1px solid #333;
 }
-
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width:48em) {
   .frame-wrapper.grid-area > * article {
     max-width: 50rem;
   }
 }
-
 .frame-wrapper.grid-area > * article > section {
   width: 95%;
   height: 5rem;
@@ -81,21 +72,18 @@
   padding-left: .5rem;
   border: 1px solid #333;
 }
-
 .frame-wrapper.grid-area .header {
   grid-row-start: 1;
   grid-column-start: 1;
   grid-row-end: auto;
   grid-column-end: 4;
 }
-
 .frame-wrapper.grid-area .main {
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .frame-wrapper.grid-area .main {
     grid-row-start: 2;
     grid-column-start: 2;
@@ -103,8 +91,7 @@
     grid-column-end: auto;
   }
 }
-
-@media print, screen and (min-width: 48em) and (max-width: 64em) {
+@media print, screen and (min-width:48em) and (max-width:64em) {
   .frame-wrapper.grid-area .main {
     grid-row-start: 2;
     grid-column-start: 2;
@@ -112,8 +99,7 @@
     grid-column-end: 4;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .frame-wrapper.grid-area .main {
     grid-row-start: 3;
     grid-column-start: 1;
@@ -121,15 +107,13 @@
     grid-column-end: 4;
   }
 }
-
 .frame-wrapper.grid-area .nav {
   grid-row-start: 2;
   grid-column-start: 1;
   grid-row-end: auto;
   grid-column-end: auto;
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .frame-wrapper.grid-area .nav {
     grid-row-start: 2;
     grid-column-start: 1;
@@ -137,8 +121,7 @@
     grid-column-end: 4;
   }
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .frame-wrapper.grid-area .aside {
     grid-row-start: 2;
     grid-column-start: 3;
@@ -146,8 +129,7 @@
     grid-column-end: auto;
   }
 }
-
-@media print, screen and (min-width: 48em) and (max-width: 64em) {
+@media print, screen and (min-width:48em) and (max-width:64em) {
   .frame-wrapper.grid-area .aside {
     grid-row-start: 3;
     grid-column-start: 1;
@@ -155,8 +137,7 @@
     grid-column-end: 4;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .frame-wrapper.grid-area .aside {
     grid-row-start: 4;
     grid-column-start: 1;
@@ -164,8 +145,7 @@
     grid-column-end: 4;
   }
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .frame-wrapper.grid-area .footer {
     grid-row-start: 3;
     grid-column-start: 1;
@@ -173,8 +153,7 @@
     grid-column-end: 4;
   }
 }
-
-@media print, screen and (min-width: 48em) and (max-width: 64em) {
+@media print, screen and (min-width:48em) and (max-width:64em) {
   .frame-wrapper.grid-area .footer {
     grid-row-start: 4;
     grid-column-start: 1;
@@ -182,8 +161,7 @@
     grid-column-end: 4;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .frame-wrapper.grid-area .footer {
     grid-row-start: 5;
     grid-column-start: 1;

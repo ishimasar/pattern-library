@@ -1,0 +1,84 @@
+.mt-24 {
+  margin-top: -1.5rem;
+}
+
+.mb-24 {
+  margin-bottom: -1.5rem;
+}
+
+.mt-16 {
+  margin-top: -1rem;
+}
+
+.mb-16 {
+  margin-bottom: -1rem;
+}
+
+.mt-8 {
+  margin-top: -.5rem;
+}
+
+.mb-8 {
+  margin-bottom: -.5rem;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mt8 {
+  margin-top: .5rem;
+}
+
+.mb8 {
+  margin-bottom: .5rem;
+}
+
+.mt16 {
+  margin-top: 1rem;
+}
+
+.mb16 {
+  margin-bottom: 1rem;
+}
+
+.mt24 {
+  margin-top: 1.5rem;
+}
+
+.mb24 {
+  margin-bottom: 1.5rem;
+}
+
+.mt32 {
+  margin-top: 2rem;
+}
+
+.mb32 {
+  margin-bottom: 2rem;
+}
+
+.mt40 {
+  margin-top: 2.5rem;
+}
+
+.mb40 {
+  margin-bottom: 2.5rem;
+}
+
+/* 視覚的に非表示にしスクリーンリーダーには読ませる。SEO/アクセシビリティ対応 */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}

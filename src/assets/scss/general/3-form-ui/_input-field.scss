@@ -1,3 +1,5 @@
+@use "../../base/settings";
+
 .input-text-container {
   width: 75%;
   margin: auto;
@@ -5,21 +7,21 @@
   & .password-toggle {
     margin-top: .5rem;
     cursor: pointer;
-    @include mq(dt) {
+    @include settings.mq(dt) {
       margin-left: 24.5%;
     }
     & [type="checkbox"] {
       cursor: inherit;
     }
     &.-button {
-      @include mq(sp-tb) {
+      @include settings.mq(sp-tb) {
         width: 25%;
         height: 100%;
         min-height: 50px;
         padding: .1rem;
         vertical-align: top;
       }
-      @include mq(sp) {
+      @include settings.mq(sp) {
         font-size: calc(var(--font-size-s2));
       }
     }
@@ -27,11 +29,11 @@
 }
 .input-text-label {
   width: 24%;
-  @include mq(dt) {
+  @include settings.mq(dt) {
     display: inline-block;
     font-size: calc(var(--font-size-m2));
   }
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     display: block;
     width: 100%;
     margin-bottom: .7rem;
@@ -43,12 +45,12 @@
   border: 1px solid #333;
   line-height: 1.5;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15) inset;
-  @include mq(dt) {
+  @include settings.mq(dt) {
     width: 75%;
     padding: .65rem 1rem;
     font-size: calc(var(--font-size-m2));
   }
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     width: 100%;
     padding: .75rem .9rem;
     font-size: calc(var(--font-size-m1) - .1rem);
@@ -56,22 +58,22 @@
   &:focus {
     border-width: 2px;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .15) inset;
-    @include mq(dt) {
+    @include settings.mq(dt) {
       padding: calc(.65rem - 1px) calc(1rem - 1px);
     }
-    @include mq(sp-tb) {
+    @include settings.mq(sp-tb) {
       padding: calc(.75rem - 1px) calc(.9rem - 1px);
     }
   }
 }
 .textarea-label {
   vertical-align: top;
-  @include mq(dt) {
+  @include settings.mq(dt) {
     width: 24%;
     margin-top: .625rem;
     font-size: calc(var(--font-size-m2));
   }
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     width: 100%;
   }
 }
@@ -84,13 +86,13 @@
   // border-radius: 5px;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15) inset;
   resize: vertical;
-  @include mq(dt) {
+  @include settings.mq(dt) {
     width: 75%;
     height: 200px;
     padding: 1.2rem 1rem;
     font-size: calc(var(--font-size-m2));
   }
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     width: 100%;
     height: 170px;
     padding: .8rem;
@@ -99,10 +101,10 @@
   &:focus {
     border-width: 2px;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .15) inset;
-    @include mq(dt) {
+    @include settings.mq(dt) {
       padding: calc(1.2rem - 1px) calc(1rem - 1px);
     }
-    @include mq(sp-tb) {
+    @include settings.mq(sp-tb) {
       padding: calc(.8rem - 1px);
     }
   }
@@ -112,7 +114,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .input-password-wrapper {
-  @include mq(dt) {
+  @include settings.mq(dt) {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -128,17 +130,17 @@ input[type="password"]::-ms-reveal {
   }
 }
 [for="js-input"] {
-  @include mq(dt) {
+  @include settings.mq(dt) {
     margin-top: .8rem;
   }
 }
 #js-input.input-text {
   min-height: 50px;
   margin: 0;
-  @include mq(dt) {
+  @include settings.mq(dt) {
     width: 55%;
   }
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     width: 75%;
   }
 }

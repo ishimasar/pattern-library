@@ -5,30 +5,37 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint:eslint": "eslint"
+    "lint:eslint": "eslint",
+    "lint:css": "stylelint **/*.{css,scss,sass}",
+    "fix:css": "stylelint -fix **/*.{css,scss,sass}"
   },
-  "author": "",
+  "author": "ishimasar <ishimasar1106@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@frctl/fractal": "^1.5.6",
-    "@rsm/fractal-pug-adapter": "^0.5.0",
+    "@frctl/fractal": "^1.5.11",
     "braces": "^3.0.2",
-    "highlight.js": "^10.4.1",
-    "htmlhint": "^0.11.0",
-    "micromatch": "^4.0.2"
+    "highlight.js": "^11.3.1",
+    "htmlhint": "^1.0.0",
+    "micromatch": "^4.0.4"
   },
   "fractal": {
     "main": "fractal.config.js"
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
+    "@stylelint/postcss-css-in-js": "^0.37.2",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^5.1.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "prettier-stylelint": "^0.4.2",
-    "stylelint": "^13.13.0",
-    "stylelint-config-standard": "^22.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.13.0"
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.0.0",
+    "sass": "^1.45.0",
+    "stylelint": "^14.0.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.0.1"
   },
   "repository": "git+https://github.com/ishimasar/pattern-library.git",
   "keywords": [],

@@ -1,3 +1,5 @@
+@use "../../base/settings";
+
 .smooth-scroll {
   @media all and (-ms-high-contrast: none) {
     *::-ms-backdrop,

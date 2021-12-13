@@ -1,0 +1,63 @@
+/**
+ * web font使用時の書き方参考
+ * web font使用は、描画パフォーマンスを阻害する大きなボトルネックなので濫用禁止
+ * 和文web fontの使用は特に推奨しない。欧文は1~2ウェイト程度使用は許容
+ */
+
+/* 欧文フォント */
+@font-face {
+  font-family: "Brandon Grotesque Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../font/BrandonGrotesque/Brandon_med.woff2) format(woff2), url(../font/BrandonGrotesque/Brandon_med.woff) format(woff);
+}
+@font-face {
+  font-family: "Brandon Grotesque Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../font/BrandonGrotesque/Brandon_bld.woff2) format(woff2), url(../font/BrandonGrotesque/Brandon_bld.woff) format(woff);
+}
+@font-face {
+  font-family: "Brandon Text Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../font/BrandonText/BrandonText-Regular.woff2) format(woff2), url(../font/BrandonText/BrandonText-Regular.woff) format(woff);
+}
+@font-face {
+  font-family: "Brandon Text Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../font/BrandonText/BrandonText-Medium.woff2) format(woff2), url(../font/BrandonText/BrandonText-Medium.woff) format(woff);
+}
+@font-face {
+  font-family: "Brandon Text Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../font/BrandonText/BrandonText-Bold.woff2) format(woff2), url(../font/BrandonText/BrandonText-Bold.woff) format(woff);
+}
+
+/* 和文フォント */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NotoSansCJKjp-subset/NotoSansJp-Regular.woff2) format(woff2), url(../font/NotoSansCJKjp-subset/NotoSansJp-Regular.woff) format(woff);
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../font/NotoSansCJKjp-subset/NotoSansJp-Bold.woff2) format(woff2), url(../font/NotoSansCJKjp-subset/NotoSansJp-Bold.woff) format(woff);
+}
+@font-face {
+  font-family: "Noto Serif JP";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NotoSerifCJKjp-subset/NotoSerifJp-Regular.woff2) format(woff2), url(../font/NotoSerifCJKjp-subset/NotoSerifJp-Regular.woff) format(woff);
+}
+@font-face {
+  font-family: "Noto Serif JP";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../font/NotoSerifCJKjp-subset/NotoSerifJp-Bold.woff2) format(woff2), url(../font/NotoSerifCJKjp-subset/NotoSerifJp-Bold.woff) format(woff);
+}

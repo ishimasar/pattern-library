@@ -1,10 +1,11 @@
-/* カルーセルパネル(スライドパネル)UI コンテナー/container */
+@use "../../base/settings";
+
 .carousel {
   margin: auto;
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     width: 90vw;
   }
-  @include mq(dt) {
+  @include settings.mq(dt) {
     width: 100%;
     max-width: 40rem;
   }
@@ -30,7 +31,7 @@
     z-index: 1;
     opacity: 1;
     transition: var(--carousel-switch-effect);
-    @include mq(dt) {
+    @include settings.mq(dt) {
       &:hover {
         opacity: .92;
         transition: var(--in-transition);
@@ -83,7 +84,7 @@
   height: 2.8125rem;
   transform: translateY(-50%);
   transition: var(--out-transition);
-  @include mq(dt) {
+  @include settings.mq(dt) {
     &:hover {
       transition: var(--in-transition);
     }
@@ -95,13 +96,13 @@
     top: 50%;
     border-style: solid;
     backface-visibility: hidden;
-    @include mq(sp-tb) {
+    @include settings.mq(sp-tb) {
       width: 1.25rem;
       height: 1.25rem;
       border-color: var(--white);
       border-width: 0 2px 2px 0;
     }
-    @include mq(dt) {
+    @include settings.mq(dt) {
       width: 1.5625rem;
       height: 1.5625rem;
       border-color: var(--border-color);
@@ -120,12 +121,12 @@
   height: 2.5em;
   border: 1px solid #bbb;
   border-radius: 2px;
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
   }
-  @include mq(dt) {
+  @include settings.mq(dt) {
     right: 2%;
     bottom: 3%;
     &:hover {
@@ -147,11 +148,11 @@
 /* 前へナビ */
 .carousel__control-prev {
   transition: all .3s var(--ease-out-quad);
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     left: .2rem;
     z-index: 1;
   }
-  @include mq(dt) {
+  @include settings.mq(dt) {
     left: -2.2rem;
     &:hover {
       transform: translate(-10%, -50%) rotate(0);
@@ -166,11 +167,11 @@
 /* 次へナビ */
 .carousel__control-next {
   transition: transform .3s var(--ease-out-quad);
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     right: -.3rem;
     z-index: 1;
   }
-  @include mq(dt) {
+  @include settings.mq(dt) {
     right: -2.2rem;
     &:hover {
       transform: translate(10%, -50%) rotate(0);
@@ -184,10 +185,10 @@
 
 /* 再生ボタン */
 .carousel__control-play {
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     background: #999 url(../img/img_play.png) 53% center no-repeat;
   }
-  @include mq(dt) {
+  @include settings.mq(dt) {
     background: #999 url(../img/img_play.png) 56% center no-repeat;
   }
 }
@@ -202,12 +203,12 @@
   display: grid;
   justify-content: center;
   width: 100%;
-  @include mq(sp) {
+  @include settings.mq(sp) {
     gap: .5rem;
     grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
     margin-top: .8rem;
   }
-  @include mq(tb-dth) {
+  @include settings.mq(tb-dth) {
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, 15%);
     margin-top: 1rem;
@@ -218,7 +219,7 @@
 .carousel__thumbnail-btn {
   width: 100%;
   height: auto;
-  @include mq(dt) {
+  @include settings.mq(dt) {
     &:hover {
       opacity: 1;
       transition: opacity .25s var(--ease-in-quad);

@@ -1,26 +1,26 @@
 .heading1 {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   line-height: 2;
   font-size: calc(var(--font-size-l3));
   font-weight: 700;
 }
 
 .heading2 {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   line-height: 1.8;
   font-size: calc(var(--font-size-l2));
   font-weight: 700;
 }
 
 .heading3 {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   line-height: 1.75;
   font-size: calc(var(--font-size-l1));
   font-weight: 700;
 }
 
 .heading4 {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   line-height: 1.5;
   font-size: calc(var(--font-size-m2));
   font-weight: 700;

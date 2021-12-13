@@ -1,13 +1,15 @@
+@use "../../base/settings";
+
 .grid {
   display: grid;
   &.-responsive {
     place-items: center;
-    @include mq(tb-dth) {
+    @include settings.mq(tb-dth) {
       grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
       grid-auto-flow: row;
       grid-row-gap: 1.5rem;
     }
-    @include mq(sp) {
+    @include settings.mq(sp) {
       gap: 1rem;
       grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
       grid-auto-flow: row;

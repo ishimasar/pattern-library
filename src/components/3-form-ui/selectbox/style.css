@@ -1,27 +1,18 @@
 .selectbox-container {
   position: relative;
-  width: 65%;
+  width: 75%;
+  margin: auto;
   box-sizing: border-box;
 }
-
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width:64.0625em) {
   .selectbox-container {
     display: flex;
     justify-content: flex-start;
-    margin-top: 2.5rem;
   }
 }
-
-@media print, screen and (max-width: 63.9375em) {
-  .selectbox-container {
-    margin-top: 1.7rem;
-  }
-}
-
-.selectbox-container:after {
+.selectbox-container.-pulldown:after {
   content: "";
   display: block;
-  display: inline;
   position: absolute;
   width: 0;
   height: 0;
@@ -30,20 +21,16 @@
   border-bottom: 0 transparent solid;
   border-left: 6px transparent solid;
   border-style: solid;
-  transition: border-color cubic-bezier(.215, .61, .355, 1) .15s, -webkit-transform cubic-bezier(.215, .61, .355, 1) .15s;
   transition: transform cubic-bezier(.215, .61, .355, 1) .15s, border-color cubic-bezier(.215, .61, .355, 1) .15s;
-  transition: transform cubic-bezier(.215, .61, .355, 1) .15s, border-color cubic-bezier(.215, .61, .355, 1) .15s, -webkit-transform cubic-bezier(.215, .61, .355, 1) .15s;
 }
-
-@media print, screen and (min-width: 64em) {
-  .selectbox-container:after {
+@media print, screen and (min-width:64.0625em) {
+  .selectbox-container.-pulldown:after {
     right: 20px;
     bottom: 19.5px;
   }
 }
-
-@media print, screen and (max-width: 63.9375em) {
-  .selectbox-container:after {
+@media print, screen and (max-width:64em) {
+  .selectbox-container.-pulldown:after {
     right: 13px;
     bottom: 17px;
   }
@@ -52,8 +39,7 @@
 .selectbox-label {
   width: 25%;
 }
-
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width:64.0625em) {
   .selectbox-label {
     display: flex;
     align-items: center;
@@ -61,30 +47,32 @@
     font-size: calc(var(--font-size-m2));
   }
 }
-
-@media print, screen and (max-width: 63.9375em) {
+@media print, screen and (max-width:64em) {
   .selectbox-label {
     display: block;
     width: 100%;
     margin-bottom: .7rem;
   }
 }
+@media print, screen and (min-width:64.0625em) {
+  .selectbox-label.-multi {
+    align-items: flex-start;
+    margin-top: .625rem;
+  }
+}
 
 .selectbox {
   display: inline-block;
   position: relative;
+  max-width: 60rem;
   margin: auto 1px auto -1px;
   border: 1px solid #333;
-  background: #f4efed;
   line-height: 1.2;
-  border-radius: 5px;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15);
 }
-
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width:64.0625em) {
   .selectbox {
     width: 75%;
-    height: 51px;
     padding: .65rem 1rem;
     font-size: calc(var(--font-size-m2));
   }
@@ -92,11 +80,9 @@
     padding: calc(.65rem - 1px) calc(1rem - 1px);
   }
 }
-
-@media print, screen and (max-width: 63.9375em) {
+@media print, screen and (max-width:64em) {
   .selectbox {
     width: 100%;
-    height: 47.34px;
     padding: .65rem 1.5rem .5rem .8rem;
     font-size: calc(var(--font-size-m1) - .1rem);
   }
@@ -104,7 +90,16 @@
     padding: calc(.65rem - 1px) calc(1.5rem - 1px) calc(.5rem - 1px) calc(.8rem - 1px);
   }
 }
-
 .selectbox:focus {
   border-width: 2px;
+}
+@media print, screen and (min-width:64.0625em) {
+  .selectbox.-single-select {
+    height: 51px;
+  }
+}
+@media print, screen and (max-width:64em) {
+  .selectbox.-single-select {
+    height: 47.34px;
+  }
 }

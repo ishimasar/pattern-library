@@ -1,6 +1,5 @@
 export function toggleToc() {
   const detailsElement = document.querySelector('.toc-open');
-  const summaryElement = document.querySelector('.toc-open > summary');
   const summaryText = document.querySelector('.toc-open .summary-text');
 
   if (detailsElement !== null) {

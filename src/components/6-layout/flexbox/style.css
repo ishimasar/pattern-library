@@ -5,26 +5,21 @@
   gap: 1rem;
   margin: auto;
 }
-
 .flexbox.-centered {
   justify-content: safe center;
 }
-
 .flexbox.-ended {
   justify-content: flex-end;
 }
-
 .flexbox.-only-flex-component {
   width: 100%;
   max-width: 30rem;
 }
-
 .flexbox.-only-flex-component > * {
   width: 6rem;
   height: 6rem;
   background-color: #425eec;
 }
-
 .flexbox.-only-flex-component::after {
   content: "";
   display: block;

@@ -3,33 +3,28 @@
   margin: auto;
   box-sizing: border-box;
 }
-
 .input-text-container .password-toggle {
   margin-top: .5rem;
   cursor: pointer;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .input-text-container .password-toggle {
     margin-left: 24.5%;
   }
 }
-
 .input-text-container .password-toggle [type="checkbox"] {
   cursor: inherit;
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .input-text-container .password-toggle.-button {
     width: 25%;
     height: 100%;
-    min-height: 47px;
+    min-height: 50px;
     padding: .1rem;
     vertical-align: top;
   }
 }
-
-@media print, screen and (max-width: 47.96875em) {
+@media print, screen and (max-width:47.96875em) {
   .input-text-container .password-toggle.-button {
     font-size: calc(var(--font-size-s2));
   }
@@ -38,15 +33,13 @@
 .input-text-label {
   width: 24%;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .input-text-label {
     display: inline-block;
     font-size: calc(var(--font-size-m2));
   }
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .input-text-label {
     display: block;
     width: 100%;
@@ -61,35 +54,30 @@
   line-height: 1.5;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15) inset;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .input-text {
     width: 75%;
     padding: .65rem 1rem;
     font-size: calc(var(--font-size-m2));
   }
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .input-text {
     width: 100%;
     padding: .75rem .9rem;
     font-size: calc(var(--font-size-m1) - .1rem);
   }
 }
-
 .input-text:focus {
   border-width: 2px;
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .15) inset;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .input-text:focus {
     padding: calc(.65rem - 1px) calc(1rem - 1px);
   }
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .input-text:focus {
     padding: calc(.75rem - 1px) calc(.9rem - 1px);
   }
@@ -98,16 +86,14 @@
 .textarea-label {
   vertical-align: top;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .textarea-label {
     width: 24%;
     margin-top: .625rem;
     font-size: calc(var(--font-size-m2));
   }
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .textarea-label {
     width: 100%;
   }
@@ -121,8 +107,7 @@
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15) inset;
   resize: vertical;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .textarea {
     width: 75%;
     height: 200px;
@@ -130,8 +115,7 @@
     font-size: calc(var(--font-size-m2));
   }
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .textarea {
     width: 100%;
     height: 170px;
@@ -139,19 +123,16 @@
     font-size: calc(var(--font-size-m1) - .1rem);
   }
 }
-
 .textarea:focus {
   border-width: 2px;
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .15) inset;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .textarea:focus {
     padding: calc(1.2rem - 1px) calc(1rem - 1px);
   }
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .textarea:focus {
     padding: calc(.8rem - 1px);
   }
@@ -161,14 +142,13 @@ input[type="password"]::-ms-reveal {
   display: none;
 }
 
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .input-password-wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
 }
-
 .input-password-wrapper .password-toggle {
   min-width: 21%;
   margin: 0;
@@ -177,23 +157,22 @@ input[type="password"]::-ms-reveal {
   border-bottom: 1px solid #333;
 }
 
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   [for="js-input"] {
     margin-top: .8rem;
   }
 }
 
 #js-input.input-text {
+  min-height: 50px;
   margin: 0;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   #js-input.input-text {
     width: 55%;
   }
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   #js-input.input-text {
     width: 75%;
   }

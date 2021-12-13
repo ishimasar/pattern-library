@@ -1,7 +1,9 @@
+@use "../../base/settings";
+
 .accordion-wrap {
   width: 100%;
   margin: auto;
-  @include mq(tb-dth) {
+  @include settings.mq(tb-dth) {
     max-width: 50rem;
   }
 }
@@ -9,10 +11,10 @@
 .accordion-button-box {
   display: flex;
   margin: auto auto 1.5rem;
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     justify-content: center;
   }
-  @include mq(dt) {
+  @include settings.mq(dt) {
     justify-content: flex-end;
   }
 }
@@ -20,11 +22,11 @@
 .accordion-all-button {
   border: 1px solid var(--black);
   border-radius: 5px;
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     width: 43%;
     padding: 1rem .5rem;
   }
-  @include mq(dt) {
+  @include settings.mq(dt) {
     min-width: 8.5rem;
     padding: 1rem;
     transition: var(--out-transition);
@@ -36,10 +38,10 @@
     }
   }
   &:not(:first-of-type) {
-    @include mq(sp-tb) {
+    @include settings.mq(sp-tb) {
       margin-left: 1rem;
     }
-    @include mq(dt) {
+    @include settings.mq(dt) {
       margin-left: 1.75rem;
     }
   }
@@ -67,10 +69,10 @@
 
 .accordion-details {
   height: auto;
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     font-size: 1rem;
   }
-  @include mq(dt) {
+  @include settings.mq(dt) {
     font-size: 1.1rem;
   }
 
@@ -78,10 +80,10 @@
     padding: 1.5rem;
     // list-style: none;
     cursor: pointer;
-    @include mq(sp-tb) {
+    @include settings.mq(sp-tb) {
       padding: 1rem;
     }
-    @include mq(dt) {
+    @include settings.mq(dt) {
       padding: 1.5rem;
       &:hover,
       &:focus {
@@ -90,14 +92,14 @@
         font-weight: bold;
       }
     }
-    @include mq(sp-tb) {
+    @include settings.mq(sp-tb) {
       &:before {
-        @include triangle(11, 13, right, var(--black));
+        @include settings.triangle(11, 13, right, var(--black));
       }
     }
-    @include mq(dt) {
+    @include settings.mq(dt) {
       &:before {
-        @include triangle(13, 15, right, var(--black));
+        @include settings.triangle(13, 15, right, var(--black));
       }
     }
     &::marker {
@@ -133,10 +135,10 @@
 
 .accordion-details__paragraph {
   border-top: .0625rem solid hsla(0, 0%, 70%, 1);
-  @include mq(sp-tb) {
+  @include settings.mq(sp-tb) {
     padding: 1rem;
   }
-  @include mq(dt) {
+  @include settings.mq(dt) {
     padding: 1.5rem;
   }
 }

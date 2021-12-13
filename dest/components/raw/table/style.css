@@ -16,12 +16,10 @@ td {
   border-bottom: solid 1px #bbb;
   vertical-align: top;
 }
-
 th p,
 td p {
   font-size: 100%;
 }
-
 th .shortcut,
 td .shortcut {
   margin-left: 0;
@@ -36,13 +34,17 @@ td {
 }
 
 .table-scroll {
-  width: 90%;
-  margin: 2rem auto auto;
+  width: 100%;
+  margin: auto;
   overflow: auto;
 }
-
 .table-scroll table {
   white-space: pre;
+}
+@media print, screen and (min-width:64.0625em) {
+  .table-scroll table {
+    table-layout: fixed;
+  }
 }
 
 .table-text-center td {
@@ -56,7 +58,6 @@ td {
 .table-60 {
   width: 100%;
 }
-
 @media screen and (min-width: 840px) {
   .table-60 {
     width: 60%;

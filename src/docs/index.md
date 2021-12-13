@@ -6,8 +6,7 @@ title: Pattern Library & Style Guide by Cloudy knot
 Components(UI)は随時、作成追加・メンテ更新。30種(固定8分類)掲載 - 2021/12。<br>
 詳細については以下のドキュメントもご参照ください。
 
-<a href="https://ishimasar.github.io/pattern-library/" target="_blank">
-Pattern Library & Style Guide by Cloudy knot</a> (外部リンク)
+<a href="https://ishimasar.github.io/pattern-library/" target="_blank">Pattern Library &amp; Style Guide by Cloudy knot</a> (外部リンク)
 
 ---
 

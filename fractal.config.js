@@ -27,7 +27,3 @@ fractal.web.set('builder.dest', __dirname + '/dest');
 // browsersync設定
 fractal.web.set('server.sync', true);
 fractal.web.set('server.syncOptions', { open: true});
-
-// Pugテンプレートの利用※未使用
-// fractal.components.engine('@rsm/fractal-pug-adapter');
-// fractal.components.set('ext', '.pug');

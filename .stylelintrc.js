@@ -1,13 +1,19 @@
 module.exports = {
   plugins: [
-    'stylelint-scss',
     'stylelint-order',
+    'stylelint-scss',
+    'stylelint-prettier'
   ],
   extends: [
-    './node_modules/prettier-stylelint/config.js',
+    // 'stylelint-config-standard',
+    // 'stylelint-config-recommended-scss',
+    'stylelint-config-recess-order',
+    'stylelint-config-prettier'
   ],
   rules: {
-    indentation: 2,
+    'at-rule-no-unknown': null,
+    'scss/at-rule-no-unknown': true,
+    indentation: null,
     'color-hex-case': 'lower', // hex値は小文字指定(大文字を禁止)
     'color-hex-length': 'short', // hex値は短い表記(冗長な表記は禁止)
     'color-named': 'never', // 名前付きカラー指定を禁止
@@ -21,13 +27,13 @@ module.exports = {
     'length-zero-no-unit': true, // 0の時の右記単位指定を禁止(em,ex,ch,vw,vh,cm,mm,in,pt,pc,px,rem,vmin,vmax)
     'unit-case': 'lower', // 単位は小文字指定(大文字を禁止)
     'unit-no-unknown': true, // 不明な単位を禁止
-    'value-no-vendor-prefix': true, // ベンダープレフィックスを禁止(autoprefixerの使用前提)
+    'value-no-vendor-prefix': null, // ベンダープレフィックスを禁止(autoprefixerの使用前提)
     'value-list-comma-newline-after': 'always-multi-line', // 値リストのカンマ後に改行は許可し改行後のカンマは禁止
     'value-list-comma-space-after': 'always-single-line', // 値リストの単一行のカンマ後には空白が必要
     'value-list-comma-space-before': 'never', // 値リストのカンマ前の空白を禁止
     'shorthand-property-no-redundant-values': true, // 省略形のプロパティで重複する値を許可しない
     'property-case': 'lower', // プロパティは小文字指定(大文字を禁止)
-    'property-no-vendor-prefix': true, // プロパティのベンダープレフィックスを禁止(autoprefixerの使用前提)
+    'property-no-vendor-prefix': null, // プロパティのベンダープレフィックスを禁止(autoprefixerの使用前提)
     'declaration-bang-space-after': 'never', // 宣言後の空白を禁止
     'declaration-bang-space-before': 'always', // 宣言前の空白を必須
     'declaration-colon-newline-after': 'always-multi-line', // 複数行の時のコロン後には改行が必須
@@ -35,14 +41,14 @@ module.exports = {
     'declaration-colon-space-before': 'never', // コロン前の空白を禁止
     'declaration-block-no-duplicate-properties': [
       // 宣言ブロック内で重複するプロパティを禁止
-      true,
+      null,
       {
         ignore: [
           'consecutive-duplicates' // 連続する場合は許可(レガシーブラウザ対応で記述する場合がある為)
         ]
       }
     ],
-    'declaration-block-no-shorthand-property-overrides': true, // ショートハンドで値の上書き禁止
+    'declaration-block-no-shorthand-property-overrides': null, // ショートハンドで値の上書き禁止
     'declaration-block-semicolon-newline-after': 'always-multi-line', // セミコロン後に改行が必須(セレクタ含め一行の場合は容認)
     'declaration-block-semicolon-newline-before': 'never-multi-line', // セミコロン前の空白・改行を禁止
     'declaration-block-semicolon-space-after': 'always-single-line', // 単一行の時のセミコロン後に空白が必須
@@ -66,10 +72,10 @@ module.exports = {
     'selector-pseudo-class-case': 'lower', // 擬似セレクタは小文字指定(大文字は禁止)
     'selector-pseudo-class-parentheses-space-inside': 'never', // 擬似セレクタ内の括弧の内側の空白を禁止
     // 'selector-type-case': 'lower', // セレクタは小文字(大文字は禁止)
-    'selector-list-comma-newline-after': 'always', // セレクタリストのカンマの後に改行を必須
-    'selector-list-comma-newline-before': 'never-multi-line', // セレクタリストのカンマの前の空白を禁止
+    'selector-list-comma-newline-after': null, // セレクタリストのカンマの後に改行を必須
+    'selector-list-comma-newline-before': null, // セレクタリストのカンマの前の空白を禁止
     'selector-list-comma-space-before': 'never', // セレクタリストのカンマの前の空白を禁止
-    'media-feature-colon-space-after': 'always', // メディアクエリ内のコロンの後の空白を指定
+    'media-feature-colon-space-after': null, // メディアクエリ内のコロンの後の空白を指定
     'media-feature-colon-space-before': 'never', // メディアクエリ内のコロンの前の空白を禁止
     'media-feature-name-case': 'lower', // メディアクエリの小文字指定(大文字を禁止)
     'media-feature-parentheses-space-inside': 'never', // メディアクエリの括弧内側の空白を禁止

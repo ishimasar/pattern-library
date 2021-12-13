@@ -18,11 +18,11 @@
     }
 </style>
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.9.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.9.4" type="text/css">
 
-<link rel="stylesheet" href="../../css/styleguide.css?cachebust=1.9.0" type="text/css">
+<link rel="stylesheet" href="../../css/styleguide.css?cachebust=1.9.4" type="text/css">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.4" type="text/css">
 
 
 <title>Toast | Pattern Library by Cloudy knot</title>
@@ -340,8 +340,7 @@ toast.removeToast();</pre>
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.15rem</span>;
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10rem</span>;
 }
-<span class="hljs-selector-class">.toast-trigger</span><span class="hljs-selector-pseudo">:hover</span>,
-<span class="hljs-selector-attr">[data-whatintent=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-class">.toast-trigger</span><span class="hljs-selector-pseudo">:focus</span> {
+<span class="hljs-selector-class">.toast-trigger</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-attr">[data-whatintent=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-class">.toast-trigger</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#777</span>;
   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
 }
@@ -349,6 +348,8 @@ toast.removeToast();</pre>
 <span class="hljs-selector-class">.toast</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span> {
   <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">10vh</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">width</span>: fit-content;
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">90%</span>;
   <span class="hljs-attribute">margin</span>: auto;
@@ -382,8 +383,7 @@ toast.removeToast();</pre>
   <span class="hljs-attribute">padding</span>: .<span class="hljs-number">15rem</span> .<span class="hljs-number">6rem</span> <span class="hljs-number">1.2rem</span> <span class="hljs-number">1.4rem</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.2rem</span>;
 }
-<span class="hljs-selector-class">.toast</span> <span class="hljs-selector-class">.close-button</span><span class="hljs-selector-pseudo">:hover</span>,
-<span class="hljs-selector-class">.toast</span> <span class="hljs-selector-class">.close-button</span><span class="hljs-selector-pseudo">:focus</span> {
+<span class="hljs-selector-class">.toast</span> <span class="hljs-selector-class">.close-button</span><span class="hljs-selector-pseudo">:hover</span>, <span class="hljs-selector-class">.toast</span> <span class="hljs-selector-class">.close-button</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">font-weight</span>: bold;
 }</pre>
                             </code>
@@ -531,7 +531,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card.html" data-role="tree-link" data-pjax data-handle="card">
+            <a class="Tree-entityLink" href="./card.html" data-role="tree-link" data-pjax data-handle="card">
                 <span>Card</span>
                 
 
@@ -557,7 +557,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="list.html" data-role="tree-link" data-pjax data-handle="list">
+            <a class="Tree-entityLink" href="./list.html" data-role="tree-link" data-pjax data-handle="list">
                 <span>List</span>
                 
 
@@ -583,7 +583,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="navigation.html" data-role="tree-link" data-pjax data-handle="navigation">
+            <a class="Tree-entityLink" href="./navigation.html" data-role="tree-link" data-pjax data-handle="navigation">
                 <span>Navigation</span>
                 
 
@@ -609,7 +609,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="pagination.html" data-role="tree-link" data-pjax data-handle="pagination">
+            <a class="Tree-entityLink" href="./pagination.html" data-role="tree-link" data-pjax data-handle="pagination">
                 <span>Pagination</span>
                 
 
@@ -635,7 +635,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="table.html" data-role="tree-link" data-pjax data-handle="table">
+            <a class="Tree-entityLink" href="./table.html" data-role="tree-link" data-pjax data-handle="table">
                 <span>Table</span>
                 
 
@@ -661,7 +661,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="table-of-contents.html" data-role="tree-link" data-pjax data-handle="table-of-contents">
+            <a class="Tree-entityLink" href="./table-of-contents.html" data-role="tree-link" data-pjax data-handle="table-of-contents">
                 <span>Table Of Contents</span>
                 
 
@@ -687,7 +687,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tooltip.html" data-role="tree-link" data-pjax data-handle="tooltip">
+            <a class="Tree-entityLink" href="./tooltip.html" data-role="tree-link" data-pjax data-handle="tooltip">
                 <span>Tooltip</span>
                 
 
@@ -733,7 +733,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="accordion.html" data-role="tree-link" data-pjax data-handle="accordion">
+            <a class="Tree-entityLink" href="./accordion.html" data-role="tree-link" data-pjax data-handle="accordion">
                 <span>Accordion</span>
                 
 
@@ -759,7 +759,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="carousel.html" data-role="tree-link" data-pjax data-handle="carousel">
+            <a class="Tree-entityLink" href="./carousel.html" data-role="tree-link" data-pjax data-handle="carousel">
                 <span>Carousel</span>
                 
 
@@ -785,7 +785,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="modal-dialog.html" data-role="tree-link" data-pjax data-handle="modal-dialog">
+            <a class="Tree-entityLink" href="./modal-dialog.html" data-role="tree-link" data-pjax data-handle="modal-dialog">
                 <span>Modal Dialog</span>
                 
 
@@ -811,7 +811,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tab.html" data-role="tree-link" data-pjax data-handle="tab">
+            <a class="Tree-entityLink" href="./tab.html" data-role="tree-link" data-pjax data-handle="tab">
                 <span>Tab</span>
                 
 
@@ -837,7 +837,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="toast">
+            <a class="Tree-entityLink" href="./toast.html" data-role="tree-link" data-pjax data-handle="toast">
                 <span>Toast</span>
                 
 
@@ -883,7 +883,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox.html" data-role="tree-link" data-pjax data-handle="checkbox">
+            <a class="Tree-entityLink" href="./checkbox.html" data-role="tree-link" data-pjax data-handle="checkbox">
                 <span>Checkbox</span>
                 
 
@@ -909,7 +909,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="input-field.html" data-role="tree-link" data-pjax data-handle="input-field">
+            <a class="Tree-entityLink" href="./input-field.html" data-role="tree-link" data-pjax data-handle="input-field">
                 <span>Input Field</span>
                 
 
@@ -935,7 +935,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio.html" data-role="tree-link" data-pjax data-handle="radio">
+            <a class="Tree-entityLink" href="./radio.html" data-role="tree-link" data-pjax data-handle="radio">
                 <span>Radio</span>
                 
 
@@ -961,7 +961,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="selectbox.html" data-role="tree-link" data-pjax data-handle="selectbox">
+            <a class="Tree-entityLink" href="./selectbox.html" data-role="tree-link" data-pjax data-handle="selectbox">
                 <span>Selectbox</span>
                 
 
@@ -1007,7 +1007,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="button.html" data-role="tree-link" data-pjax data-handle="button">
+            <a class="Tree-entityLink" href="./button.html" data-role="tree-link" data-pjax data-handle="button">
                 <span>Button</span>
                 
 
@@ -1033,7 +1033,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="slider.html" data-role="tree-link" data-pjax data-handle="slider">
+            <a class="Tree-entityLink" href="./slider.html" data-role="tree-link" data-pjax data-handle="slider">
                 <span>Slider</span>
                 
 
@@ -1059,7 +1059,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="switch.html" data-role="tree-link" data-pjax data-handle="switch">
+            <a class="Tree-entityLink" href="./switch.html" data-role="tree-link" data-pjax data-handle="switch">
                 <span>Switch</span>
                 
 
@@ -1105,7 +1105,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="moving-text.html" data-role="tree-link" data-pjax data-handle="moving-text">
+            <a class="Tree-entityLink" href="./moving-text.html" data-role="tree-link" data-pjax data-handle="moving-text">
                 <span>Moving Text</span>
                 
 
@@ -1131,34 +1131,8 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="smooth-scroll.html" data-role="tree-link" data-pjax data-handle="smooth-scroll">
+            <a class="Tree-entityLink" href="./smooth-scroll.html" data-role="tree-link" data-pjax data-handle="smooth-scroll">
                 <span>Smooth Scroll</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="typing-text.html" data-role="tree-link" data-pjax data-handle="typing-text">
-                <span>Typing Text</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1203,7 +1177,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="column.html" data-role="tree-link" data-pjax data-handle="column">
+            <a class="Tree-entityLink" href="./column.html" data-role="tree-link" data-pjax data-handle="column">
                 <span>Column</span>
                 
 
@@ -1229,7 +1203,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="flexbox.html" data-role="tree-link" data-pjax data-handle="flexbox">
+            <a class="Tree-entityLink" href="./flexbox.html" data-role="tree-link" data-pjax data-handle="flexbox">
                 <span>Flexbox</span>
                 
 
@@ -1255,7 +1229,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="frame.html" data-role="tree-link" data-pjax data-handle="frame">
+            <a class="Tree-entityLink" href="./frame.html" data-role="tree-link" data-pjax data-handle="frame">
                 <span>Frame</span>
                 
 
@@ -1281,7 +1255,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="grid.html" data-role="tree-link" data-pjax data-handle="grid">
+            <a class="Tree-entityLink" href="./grid.html" data-role="tree-link" data-pjax data-handle="grid">
                 <span>Grid</span>
                 
 
@@ -1327,7 +1301,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="blockquote.html" data-role="tree-link" data-pjax data-handle="blockquote">
+            <a class="Tree-entityLink" href="./blockquote.html" data-role="tree-link" data-pjax data-handle="blockquote">
                 <span>Blockquote</span>
                 
 
@@ -1353,7 +1327,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="body-text.html" data-role="tree-link" data-pjax data-handle="body-text">
+            <a class="Tree-entityLink" href="./body-text.html" data-role="tree-link" data-pjax data-handle="body-text">
                 <span>Body Text</span>
                 
 
@@ -1379,7 +1353,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="code.html" data-role="tree-link" data-pjax data-handle="code">
+            <a class="Tree-entityLink" href="./code.html" data-role="tree-link" data-pjax data-handle="code">
                 <span>Code</span>
                 
 
@@ -1405,7 +1379,7 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="heading.html" data-role="tree-link" data-pjax data-handle="heading">
+            <a class="Tree-entityLink" href="./heading.html" data-role="tree-link" data-pjax data-handle="heading">
                 <span>Heading</span>
                 
 
@@ -1451,7 +1425,33 @@ toast.removeToast();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="utility.html" data-role="tree-link" data-pjax data-handle="utility">
+            <a class="Tree-entityLink" href="./base-style.html" data-role="tree-link" data-pjax data-handle="base-style">
+                <span>Base Style</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./utility.html" data-role="tree-link" data-pjax data-handle="utility">
                 <span>Utility</span>
                 
 
@@ -1539,8 +1539,8 @@ toast.removeToast();</pre>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-12T08:35:49.394Z">
-                                12/12/2021
+                            <time datetime="2021-12-13T13:36:10.085Z">
+                                12/13/2021
                             </time>
                         
                     </dd>
@@ -1639,6 +1639,8 @@ toast.removeToast();</pre>
     
         
     
+        
+    
 
 
     </div>
@@ -1651,7 +1653,7 @@ toast.removeToast();</pre>
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.9.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.9.4"></script>
 
 
 

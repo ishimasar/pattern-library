@@ -1,0 +1,2410 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+<style>
+    :root {
+        
+        
+        
+    }
+</style>
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.9.4" type="text/css">
+
+<link rel="stylesheet" href="../../css/styleguide.css?cachebust=1.9.4" type="text/css">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.4" type="text/css">
+
+
+<title>Base Style | Pattern Library by Cloudy knot</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <div class="Header-navToggleIcon Header-navToggleIcon--open">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        </div>
+        <div class="Header-navToggleIcon Header-navToggleIcon--closed">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+        </div>
+    </button>
+    <a href="../../index.html" class="Header-title" data-pjax>Pattern Library by Cloudy knot</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+<div class="Pen" data-behaviour="pen" id="pen-4baeade87d4891ecf5db54b3bf9e34c4">
+
+    
+
+    <div class="Pen-panel Pen-header">
+    <h1 class="Pen-title">
+        <a class="Pen-previewLink" href="../preview/base-style.html" title="Preview">
+            Base Style
+            <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+
+        </a>
+    </h1>
+
+    <span class="Pen-preview-size" data-role="preview-size"></span>
+
+    
+
+<div class="Status Status--tag">
+
+<label class="Status-label" style="background-color: #29CC29; border-color: #29CC29;">Ready</label>
+
+</div>
+
+
+</div>
+
+
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-4baeade87d4891ecf5db54b3bf9e34c4">
+    <div class="Preview-wrapper" data-role="resizer">
+        <div class="Preview-resizer">
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/base-style.html"
+                 style=""
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
+        </div>
+        <div class="Preview-handle" data-role="resize-handle"></div>
+        <div class="Preview-overlay"></div>
+    </div>
+</div>
+
+
+    <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
+
+    <div class="Pen-panel Pen-info" data-role="info">
+    <div class="Browser" data-behaviour="browser" id="browser-4baeade87d4891ecf5db54b3bf9e34c4">
+
+    
+
+<div class="Browser-controls">
+    <ul class="Browser-tabs">
+        
+        
+        <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
+            <a href="#browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-html">
+                HTML
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--view" data-role="tab">
+            <a href="#browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-view">
+                View
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--context" data-role="tab">
+            <a href="#browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-context">
+                Context
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-assets">Assets</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-info">
+                Info
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-notes">
+                Notes
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-html">
+    <code class="Code Code--lang-html hljs">
+        
+        <pre>empty</pre>
+        
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-view">
+    <code class="Code Code--lang-handlebars hljs">
+        <pre><span class="xml">empty</span></pre>
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-context">
+    <code class="Code Code--lang-json hljs">
+        
+            
+            <pre><span class="hljs-comment">/* No context defined. */</span></pre>
+            
+        
+    </code>
+</div>
+
+    
+    
+
+
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-e013517e42ab83be925f7229f05ba6b7">base-style.css</option>
+                
+                <option value="file-3d60e70d50627fb53e688b090caab6d8">font-face-style.css</option>
+                
+                <option value="file-e53f18226f07d7e49a1c13feb2ae8929">variables-style.css</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-e013517e42ab83be925f7229f05ba6b7" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-CSS FileBrowser-code hljs">
+                                <pre><span class="hljs-keyword">@charset</span> <span class="hljs-string">&quot;UTF-8&quot;</span>;
+<span class="hljs-comment">/**
+ * 1. normalize.css + reset.css(Eric Mayer’s)の複合カスタムスタイル
+ *   - Elad Shechter&#x27;s RESETを参考にしている
+ *   - この形式にした理由は、resetは無駄が多くnormalizeでは十分ではないため
+ *   - sanitize.css、ress、Reboot.cssも一部参照している。2でも参照
+ *   - 全称セレクタ(*)はすべてのセレクタに適用アクセスするため、
+ *     レンダリングパフォーマンス観点から削除し使用しない
+ *
+ * 2. 独自定義の初期化スタイル
+ *
+ * 3. アクセシビリティ用途
+ *    - マウス操作
+ *    - タッチパネル操作
+ *    - キーボード操作(what-input.jsなど)
+ *    - スクリーンリーダーによる音声読み上げ
+ *
+ * 4. そのほかデバイス(OS) / ブラウザ別ハック
+ *
+ * ----------
+ * normalize
+ * ! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+ * -----
+ * Sections
+ * -----
+ * Render the `main` element consistently in IE.
+ */</span>
+
+<span class="hljs-selector-tag">main</span> {
+  <span class="hljs-attribute">display</span>: block;
+}
+
+<span class="hljs-comment">/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */</span>
+<span class="hljs-selector-tag">h1</span> {
+  <span class="hljs-attribute">margin</span>: .<span class="hljs-number">67em</span> <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+}
+
+<span class="hljs-comment">/**
+ * Show the overflow in Edge and IE.
+ */</span>
+hr {
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">overflow</span>: visible;
+  <span class="hljs-comment">/* 2 */</span>
+}
+
+<span class="hljs-comment">/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */</span>
+pre {
+  <span class="hljs-attribute">font-family</span>: monospace;
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
+  <span class="hljs-comment">/* 2 */</span>
+}
+
+<span class="hljs-comment">/**
+ * Remove the gray background on active links in IE 10.
+ */</span>
+<span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">background-color</span>: transparent;
+}
+
+<span class="hljs-comment">/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */</span>
+<span class="hljs-selector-tag">abbr</span><span class="hljs-selector-attr">[title]</span> {
+  <span class="hljs-attribute">border-bottom</span>: none;
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">text-decoration</span>: underline;
+  <span class="hljs-comment">/* 2 */</span>
+  <span class="hljs-attribute">text-decoration-style</span>: dotted;
+}
+
+<span class="hljs-comment">/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */</span>
+<span class="hljs-selector-tag">b</span>,
+<span class="hljs-selector-tag">strong</span> {
+  <span class="hljs-attribute">font-weight</span>: bolder;
+}
+
+<span class="hljs-comment">/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */</span>
+<span class="hljs-selector-tag">code</span>,
+<span class="hljs-selector-tag">kbd</span>,
+<span class="hljs-selector-tag">samp</span> {
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">font-family</span>: monospace;
+  <span class="hljs-comment">/* 2 */</span>
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
+}
+
+<span class="hljs-comment">/**
+ * Add the correct font size in all browsers.
+ */</span>
+<span class="hljs-comment">/*
+small {
+  font-size: 80%;
+}
+*/</span>
+<span class="hljs-comment">/**
+ * Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+ */</span>
+sub,
+<span class="hljs-selector-tag">sup</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">vertical-align</span>: baseline;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">75%</span>;
+}
+
+sub {
+  <span class="hljs-attribute">bottom</span>: -.<span class="hljs-number">25em</span>;
+}
+
+<span class="hljs-selector-tag">sup</span> {
+  <span class="hljs-attribute">top</span>: -.<span class="hljs-number">5em</span>;
+}
+
+<span class="hljs-comment">/**
+ * -----
+ * Forms
+ * -----
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */</span>
+<span class="hljs-selector-tag">button</span>,
+<span class="hljs-selector-tag">input</span>,
+optgroup,
+select,
+<span class="hljs-selector-tag">textarea</span> {
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.15</span>;
+  <span class="hljs-attribute">font-family</span>: inherit;
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-comment">/* 2 */</span>
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+}
+
+<span class="hljs-comment">/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */</span>
+<span class="hljs-selector-tag">button</span>,
+<span class="hljs-selector-tag">input</span> {
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">overflow</span>: visible;
+}
+
+<span class="hljs-comment">/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */</span>
+<span class="hljs-selector-tag">button</span>,
+select {
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">text-transform</span>: none;
+}
+
+<span class="hljs-comment">/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ * 訳: iOSとSafariで、クリッカブルタイプのスタイリングを可能に
+ */</span>
+<span class="hljs-selector-tag">button</span>,
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;button&quot;</span>]</span>,
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;reset&quot;</span>]</span>,
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;submit&quot;</span>]</span>,
+<span class="hljs-selector-attr">[role=<span class="hljs-string">&quot;button&quot;</span>]</span> {
+  <span class="hljs-attribute">cursor</span>: pointer;
+  appearance: button;
+}
+
+<span class="hljs-comment">/**
+ * Remove the inner border and padding in Firefox.
+ * 訳: Firefoxでクリッカブルタイプの内側の枠線とデフォルト余白を削除
+ */</span>
+<span class="hljs-selector-tag">button</span>::-moz-focus-inner,
+[type=<span class="hljs-string">&quot;button&quot;</span>]::-moz-focus-inner,
+[type=<span class="hljs-string">&quot;reset&quot;</span>]::-moz-focus-inner,
+[type=<span class="hljs-string">&quot;submit&quot;</span>]::-moz-focus-inner {
+  padding: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border-style</span>: none;
+}
+
+<span class="hljs-comment">/**
+ * Restore the focus styles unset by the previous rule.
+ * 訳:フォーカススタイルを元に戻す
+ */</span>
+<span class="hljs-selector-tag">button</span>:-moz-focusring,
+[type=<span class="hljs-string">&quot;button&quot;</span>]:-moz-focusring,
+[type=<span class="hljs-string">&quot;reset&quot;</span>]:-moz-focusring,
+[type=<span class="hljs-string">&quot;submit&quot;</span>]:-moz-focusring {
+  outline: <span class="hljs-number">1px</span> dotted ButtonText;
+}
+
+<span class="hljs-comment">/**
+ * Correct the padding in Firefox.
+ */</span>
+<span class="hljs-selector-tag">fieldset</span> {
+  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">35em</span> .<span class="hljs-number">75em</span> .<span class="hljs-number">625em</span>;
+}
+
+<span class="hljs-comment">/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */</span>
+<span class="hljs-selector-tag">legend</span> {
+  <span class="hljs-comment">/* 2 */</span>
+  <span class="hljs-attribute">display</span>: table;
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-comment">/* 3 */</span>
+  <span class="hljs-attribute">white-space</span>: normal;
+  <span class="hljs-attribute">color</span>: inherit;
+  <span class="hljs-comment">/* 1 */</span>
+}
+
+<span class="hljs-comment">/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */</span>
+progress {
+  <span class="hljs-attribute">vertical-align</span>: baseline;
+}
+
+<span class="hljs-comment">/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */</span>
+<span class="hljs-selector-tag">textarea</span> {
+  <span class="hljs-attribute">overflow</span>: auto;
+}
+
+<span class="hljs-comment">/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */</span>
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;checkbox&quot;</span>]</span>,
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;radio&quot;</span>]</span> {
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+  <span class="hljs-comment">/* 2 */</span>
+}
+
+<span class="hljs-comment">/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */</span>
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;number&quot;</span>]</span>::-webkit-inner-spin-button,
+[type=<span class="hljs-string">&quot;number&quot;</span>]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+<span class="hljs-comment">/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 訳: ChromeとSafariの奇妙な外観を修正
+ * 2. Correct the outline style in Safari.
+ * 訳: Safariでアウトラインスタイルを修正
+ */</span>
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;search&quot;</span>]</span> {
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">outline-offset</span>: -<span class="hljs-number">2px</span>;
+  appearance: textfield;
+  <span class="hljs-comment">/* 2 */</span>
+}
+
+<span class="hljs-comment">/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */</span>
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;search&quot;</span>]</span>::-webkit-search-decoration {
+  appearance: none;
+}
+
+<span class="hljs-comment">/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 訳: iOSおよびSafariでクリック可能タイプにスタイル設定できないのを修正
+ * 2. Change font properties to `inherit` in Safari.
+ * 訳: Safariでフォントのプロパティを `inherit`に変更
+ */</span>
+::-webkit-file-upload-button {
+  /* <span class="hljs-number">1</span> */
+  font: inherit;
+  appearance: button;
+  <span class="hljs-comment">/* 2 */</span>
+}
+
+<span class="hljs-comment">/**
+ * -----
+ * Interactive
+ * -----
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */</span>
+<span class="hljs-selector-tag">details</span> {
+  <span class="hljs-attribute">display</span>: block;
+}
+
+<span class="hljs-comment">/**
+ * Add the correct display in all browsers.
+ */</span>
+<span class="hljs-selector-tag">summary</span> {
+  <span class="hljs-attribute">display</span>: list-item;
+}
+
+<span class="hljs-comment">/**
+ * -----
+ * Misc
+ * -----
+ * Add the correct display in IE 10+.
+ */</span>
+template {
+  <span class="hljs-attribute">display</span>: none;
+}
+
+output {
+  <span class="hljs-attribute">display</span>: inline-block;
+}
+
+<span class="hljs-comment">/**
+ * Add the correct display in IE 10.
+ */</span>
+<span class="hljs-selector-attr">[hidden]</span> {
+  <span class="hljs-attribute">display</span>: none;
+}
+
+<span class="hljs-comment">/**
+ * ----------
+ * reset
+ */</span>
+<span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">text-decoration</span>: none;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#00e</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+}
+
+<span class="hljs-selector-tag">button</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">background-color</span>: transparent;
+  <span class="hljs-attribute">color</span>: inherit;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  appearance: none;
+  appearance: none;
+  appearance: none;
+}
+
+<span class="hljs-selector-tag">figure</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">input</span>::-moz-focus-inner {
+  margin: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">ul</span>,
+<span class="hljs-selector-tag">ol</span>,
+<span class="hljs-selector-tag">dd</span> {
+  <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">h1</span>,
+<span class="hljs-selector-tag">h2</span>,
+<span class="hljs-selector-tag">h3</span>,
+<span class="hljs-selector-tag">h4</span>,
+<span class="hljs-selector-tag">h5</span>,
+<span class="hljs-selector-tag">h6</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">font-size</span>: inherit;
+  <span class="hljs-attribute">font-weight</span>: inherit;
+}
+
+<span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">cite</span> {
+  <span class="hljs-attribute">font-style</span>: normal;
+}
+
+<span class="hljs-selector-tag">fieldset</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">/**
+ * ----------
+ * original initialization
+ */</span>
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-comment">/* Prevent adjustments of font size after orientation changes in iOS. */</span>
+  <span class="hljs-attribute">text-rendering</span>: optimizeLegibility;
+  <span class="hljs-comment">/* All browsers without overlaying scrollbars */</span>
+  text-size-adjust: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-comment">/* for using REM units */</span>
+  <span class="hljs-attribute">overflow-y</span>: scroll;
+  <span class="hljs-comment">/* apply a natural box layout model to all elements, but allowing components to change */</span>
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+}
+
+<span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100vh</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
+  <span class="hljs-attribute">font-family</span>: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>;
+  <span class="hljs-attribute">font-feature-settings</span>: <span class="hljs-string">&quot;pkna&quot;</span> <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--text-normal-color);
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+  <span class="hljs-attribute">direction</span>: ltr;
+}
+
+<span class="hljs-selector-tag">body</span> * {
+  <span class="hljs-comment">/* 全称セレクタ単体は使いたくないのでbody、ボックスモデル(margin、padding、border、content)を幅・高さに含めたいので、やむを得ずborder-box値適用(継承) */</span>
+  <span class="hljs-attribute">box-sizing</span>: inherit;
+}
+<span class="hljs-selector-tag">body</span> *<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-tag">a</span>) {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--common-font);
+}
+
+*<span class="hljs-selector-pseudo">::before</span>,
+*<span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">background-repeat</span>: no-repeat;
+  <span class="hljs-comment">/* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */</span>
+  <span class="hljs-attribute">vertical-align</span>: inherit;
+  <span class="hljs-attribute">text-decoration</span>: inherit;
+  <span class="hljs-comment">/* Set `background-repeat: no-repeat` to all elements and pseudo elements */</span>
+  <span class="hljs-attribute">box-sizing</span>: inherit;
+}
+
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">text-decoration</span>: none;
+}
+
+<span class="hljs-selector-tag">address</span> {
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">line-height</span>: inherit;
+  <span class="hljs-attribute">font-style</span>: normal;
+}
+
+<span class="hljs-selector-tag">img</span> {
+  <span class="hljs-attribute">height</span>: auto;
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">border-style</span>: none;
+  <span class="hljs-attribute">vertical-align</span>: middle;
+}
+
+svg {
+  <span class="hljs-attribute">vertical-align</span>: middle;
+  <span class="hljs-attribute">overflow</span>: hidden;
+}
+
+<span class="hljs-selector-tag">table</span> {
+  <span class="hljs-attribute">border-collapse</span>: collapse;
+}
+
+<span class="hljs-selector-tag">caption</span> {
+  <span class="hljs-attribute">padding-top</span>: .<span class="hljs-number">75rem</span>;
+  <span class="hljs-attribute">padding-bottom</span>: .<span class="hljs-number">75rem</span>;
+  <span class="hljs-attribute">caption-side</span>: bottom;
+  <span class="hljs-attribute">text-align</span>: left;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#6c757d</span>;
+}
+
+<span class="hljs-selector-tag">th</span> {
+  <span class="hljs-attribute">text-align</span>: inherit;
+}
+
+<span class="hljs-selector-tag">label</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">5rem</span>;
+}
+
+<span class="hljs-comment">/* Remove the default button styling in all browsers */</span>
+<span class="hljs-selector-tag">button</span>,
+<span class="hljs-selector-tag">input</span>,
+select,
+<span class="hljs-selector-tag">textarea</span> {
+  <span class="hljs-attribute">border-style</span>: none;
+  <span class="hljs-attribute">background-color</span>: transparent;
+  <span class="hljs-attribute">color</span>: inherit;
+}
+
+<span class="hljs-comment">/* Replace pointer cursor in disabled elements */</span>
+<span class="hljs-selector-attr">[disabled]</span> {
+  <span class="hljs-attribute">cursor</span>: default;
+}
+
+<span class="hljs-comment">/* Specify text selection background color and omit drop shadow */</span>
+::-moz-selection {
+  background-color: <span class="hljs-number">#b3d4fc</span>;
+  <span class="hljs-attribute">text-shadow</span>: none;
+  <span class="hljs-comment">/* Required when declaring ::selection */</span>
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
+}
+
+<span class="hljs-selector-pseudo">::selection</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#b3d4fc</span>;
+  <span class="hljs-attribute">text-shadow</span>: none;
+  <span class="hljs-comment">/* Required when declaring ::selection */</span>
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
+}
+
+::-webkit-input-placeholder {
+  color: <span class="hljs-number">#6f6f6f</span>;
+}
+
+:-ms-input-placeholder {
+  color: <span class="hljs-number">#6f6f6f</span>;
+}
+
+::-moz-placeholder {
+  color: <span class="hljs-number">#6f6f6f</span>;
+}
+
+<span class="hljs-selector-pseudo">:placeholder-shown</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--main-color);
+}
+
+<span class="hljs-comment">/**
+ * ----------
+ * web accessibility
+ * -----
+ * what-input.jsによりdata属性付与
+ * マウス/タッチイベント時のフォーカスリングスタイル打消
+ * キーボードフォーカス時のみフォーカススタイル有効
+ */</span>
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;mouse&quot;</span>]</span> *<span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;touch&quot;</span>]</span> *<span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">outline</span>: none;
+}
+
+<span class="hljs-selector-attr">[tabindex=<span class="hljs-string">&quot;-1&quot;</span>]</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">outline</span>: none <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-comment">/**
+  * すべてのインタラクティブ・コンテンツ(要素)に対し、
+  * focus-ringに独自カスタム疑似スタイルを定義
+  */</span>
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">a</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">audio</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">button</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">details</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">summary</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> embed,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">iframe</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">img</span><span class="hljs-selector-attr">[usemap]</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[hidden]</span>),
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> keygen,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">label</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">object</span><span class="hljs-selector-attr">[usemap]</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> select,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">textarea</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">video</span> {
+  <span class="hljs-attribute">transition</span>: outline .<span class="hljs-number">15s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">47</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">745</span>, .<span class="hljs-number">715</span>);
+  <span class="hljs-attribute">outline</span>: none;
+  <span class="hljs-attribute">outline-offset</span>: .<span class="hljs-number">0625rem</span>;
+}
+
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">audio</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">details</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">summary</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> embed<span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">iframe</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">img</span><span class="hljs-selector-attr">[usemap]</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[hidden]</span>)<span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> keygen<span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">label</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">object</span><span class="hljs-selector-attr">[usemap]</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> select<span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">textarea</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">video</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">outline</span>: .<span class="hljs-number">125rem</span> solid <span class="hljs-built_in">var</span>(--focusring-color);
+  <span class="hljs-attribute">outline-offset</span>: .<span class="hljs-number">0625rem</span>;
+}
+
+<span class="hljs-comment">/**
+ * -----
+ * WAI-ARIA
+ * -----
+ */</span>
+<span class="hljs-comment">/* Specify the progress cursor of updating elements */</span>
+<span class="hljs-selector-attr">[aria-busy=<span class="hljs-string">&quot;true&quot;</span>]</span> {
+  <span class="hljs-attribute">cursor</span>: progress;
+}
+
+<span class="hljs-comment">/* Specify the pointer cursor of trigger elements */</span>
+<span class="hljs-selector-attr">[aria-controls]</span> {
+  <span class="hljs-attribute">cursor</span>: pointer;
+}
+
+<span class="hljs-comment">/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */</span>
+<span class="hljs-selector-attr">[aria-disabled]</span> {
+  <span class="hljs-attribute">cursor</span>: default;
+}
+
+<span class="hljs-comment">/* Hide content from screens but not screenreaders */</span>
+<span class="hljs-keyword">@media</span> screen {
+  <span class="hljs-selector-attr">[hidden~=<span class="hljs-string">&quot;screen&quot;</span>]</span> {
+    <span class="hljs-attribute">display</span>: inherit;
+  }
+
+  <span class="hljs-selector-attr">[hidden~=<span class="hljs-string">&quot;screen&quot;</span>]</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:active</span>)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:focus</span>)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:target</span>) {
+    <span class="hljs-attribute">position</span>: absolute <span class="hljs-meta">!important</span>;
+    <span class="hljs-attribute">clip</span>: <span class="hljs-built_in">rect</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>) <span class="hljs-meta">!important</span>;
+  }
+}
+<span class="hljs-comment">/*
+ * ----------
+ * そのほかデバイス(OS) / ブラウザ別ハック
+ */</span>
+hr {
+  <span class="hljs-attribute">overflow</span>: visible;
+  <span class="hljs-comment">/* Show the overflow in Edge and IE */</span>
+}
+
+<span class="hljs-comment">/* Add the correct display in iOS 4-7. */</span>
+<span class="hljs-selector-tag">audio</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[controls]</span>) {
+  <span class="hljs-attribute">display</span>: none;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">audio</span>,
+<span class="hljs-selector-tag">canvas</span>,
+progress,
+<span class="hljs-selector-tag">video</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-comment">/* Internet Explorer 11+, Windows Phone 8.1+ */</span>
+}
+
+svg<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:root</span>) {
+  <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-comment">/* Internet Explorer 11- */</span>
+}
+
+<span class="hljs-comment">/* Style select like a standard input */</span>
+select {
+  appearance: none;
+  <span class="hljs-comment">/* Firefox 36+ */</span>
+  appearance: none;
+  <span class="hljs-comment">/* Chrome 41+ */</span>
+}
+
+select::-ms-expand {
+  display: none;
+  <span class="hljs-comment">/* Internet Explorer 11+ */</span>
+}
+
+select::-ms-value {
+  color: currentColor;
+  <span class="hljs-comment">/* Internet Explorer 11+ */</span>
+}
+
+<span class="hljs-selector-tag">legend</span> {
+  <span class="hljs-comment">/* Correct the color inheritance from `fieldset` elements in IE */</span>
+  <span class="hljs-attribute">display</span>: table;
+  <span class="hljs-comment">/* Correct the text wrapping in Edge and IE */</span>
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-comment">/* Correct the text wrapping in Edge and IE */</span>
+  <span class="hljs-attribute">white-space</span>: normal;
+  <span class="hljs-comment">/* Correct `color` not being inherited in IE 8/9/10/11 */</span>
+  <span class="hljs-attribute">color</span>: inherit;
+  <span class="hljs-comment">/* Correct the text wrapping in Edge and IE */</span>
+}
+
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;search&quot;</span>]</span> {
+  <span class="hljs-comment">/* Correct the odd appearance in Chrome and Safari */</span>
+  <span class="hljs-attribute">outline-offset</span>: -<span class="hljs-number">2px</span>;
+  appearance: textfield;
+  <span class="hljs-comment">/* Correct the outline style in Safari */</span>
+}
+
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;number&quot;</span>]</span> {
+  <span class="hljs-attribute">width</span>: auto;
+  <span class="hljs-comment">/* Firefox 36+ */</span>
+}
+
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;search&quot;</span>]</span> {
+  appearance: textfield;
+  <span class="hljs-comment">/* Safari 8+ */</span>
+}
+
+<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;search&quot;</span>]</span>::-webkit-search-cancel-button,
+[type=<span class="hljs-string">&quot;search&quot;</span>]::-webkit-search-decoration {
+  appearance: none;
+  <span class="hljs-comment">/* Safari 8 */</span>
+}
+
+::-webkit-file-upload-button {
+  /* Correct the inability to style clickable types in iOS and Safari */
+  font: inherit;
+  appearance: button;
+  <span class="hljs-comment">/* Change font properties to `inherit` in Chrome and Safari */</span>
+}
+
+<span class="hljs-selector-class">.main-wrapper</span> {
+  <span class="hljs-attribute">margin-right</span>: auto;
+  <span class="hljs-attribute">margin-left</span>: auto;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3rem</span>;
+}
+
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">48em</span>) {
+  <span class="hljs-selector-class">.main-wrapper</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">90%</span>;
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">64.0625em</span>;
+    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">48rem</span>;
+  }
+}
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">47.96875em</span>) {
+  <span class="hljs-selector-class">.main-wrapper</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">90vw</span>;
+  }
+}
+
+<span class="hljs-selector-class">.visually-hidden</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">1px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">1px</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">white-space</span>: nowrap;
+  <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-attribute">clip</span>: <span class="hljs-built_in">rect</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>);
+  <span class="hljs-attribute">clip-path</span>: <span class="hljs-built_in">inset</span>(<span class="hljs-number">50%</span>);
+}</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/base-style/base-style.css"><span>/components/raw/base-style/base-style.css</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/8-utility/base-style/base-style.css</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">14.5 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-3d60e70d50627fb53e688b090caab6d8" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-CSS FileBrowser-code hljs">
+                                <pre><span class="hljs-comment">/**
+ * web font使用時の書き方参考
+ * web font使用は、描画パフォーマンスを阻害する大きなボトルネックなので濫用禁止
+ * 和文web fontの使用は特に推奨しない。欧文は1~2ウェイト程度使用は許容
+ */</span>
+
+<span class="hljs-comment">/* 欧文フォント */</span>
+<span class="hljs-keyword">@font-face</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Brandon Grotesque Medium&quot;</span>;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/BrandonGrotesque/Brandon_med.woff2</span>) <span class="hljs-built_in">format</span>(woff2), <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/BrandonGrotesque/Brandon_med.woff</span>) <span class="hljs-built_in">format</span>(woff);
+}
+<span class="hljs-keyword">@font-face</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Brandon Grotesque Bold&quot;</span>;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/BrandonGrotesque/Brandon_bld.woff2</span>) <span class="hljs-built_in">format</span>(woff2), <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/BrandonGrotesque/Brandon_bld.woff</span>) <span class="hljs-built_in">format</span>(woff);
+}
+<span class="hljs-keyword">@font-face</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Brandon Text Regular&quot;</span>;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/BrandonText/BrandonText-Regular.woff2</span>) <span class="hljs-built_in">format</span>(woff2), <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/BrandonText/BrandonText-Regular.woff</span>) <span class="hljs-built_in">format</span>(woff);
+}
+<span class="hljs-keyword">@font-face</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Brandon Text Medium&quot;</span>;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/BrandonText/BrandonText-Medium.woff2</span>) <span class="hljs-built_in">format</span>(woff2), <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/BrandonText/BrandonText-Medium.woff</span>) <span class="hljs-built_in">format</span>(woff);
+}
+<span class="hljs-keyword">@font-face</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Brandon Text Bold&quot;</span>;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/BrandonText/BrandonText-Bold.woff2</span>) <span class="hljs-built_in">format</span>(woff2), <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/BrandonText/BrandonText-Bold.woff</span>) <span class="hljs-built_in">format</span>(woff);
+}
+
+<span class="hljs-comment">/* 和文フォント */</span>
+<span class="hljs-keyword">@font-face</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Noto Sans JP&quot;</span>;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>;
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/NotoSansCJKjp-subset/NotoSansJp-Regular.woff2</span>) <span class="hljs-built_in">format</span>(woff2), <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/NotoSansCJKjp-subset/NotoSansJp-Regular.woff</span>) <span class="hljs-built_in">format</span>(woff);
+}
+<span class="hljs-keyword">@font-face</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Noto Sans JP&quot;</span>;
+  <span class="hljs-attribute">font-style</span>: bold;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/NotoSansCJKjp-subset/NotoSansJp-Bold.woff2</span>) <span class="hljs-built_in">format</span>(woff2), <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/NotoSansCJKjp-subset/NotoSansJp-Bold.woff</span>) <span class="hljs-built_in">format</span>(woff);
+}
+<span class="hljs-keyword">@font-face</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Noto Serif JP&quot;</span>;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>;
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/NotoSerifCJKjp-subset/NotoSerifJp-Regular.woff2</span>) <span class="hljs-built_in">format</span>(woff2), <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/NotoSerifCJKjp-subset/NotoSerifJp-Regular.woff</span>) <span class="hljs-built_in">format</span>(woff);
+}
+<span class="hljs-keyword">@font-face</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Noto Serif JP&quot;</span>;
+  <span class="hljs-attribute">font-style</span>: bold;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/NotoSerifCJKjp-subset/NotoSerifJp-Bold.woff2</span>) <span class="hljs-built_in">format</span>(woff2), <span class="hljs-built_in">url</span>(<span class="hljs-string">../font/NotoSerifCJKjp-subset/NotoSerifJp-Bold.woff</span>) <span class="hljs-built_in">format</span>(woff);
+}</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/base-style/font-face-style.css"><span>/components/raw/base-style/font-face-style.css</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/8-utility/base-style/font-face-style.css</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">2.4 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-e53f18226f07d7e49a1c13feb2ae8929" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-CSS FileBrowser-code hljs">
+                                <pre><span class="hljs-comment">/**
+ * ## variable
+ * ### CSS variables (CSS custom properties for cascading variables)
+ */</span>
+
+<span class="hljs-selector-pseudo">:root</span> {
+  --common-<span class="hljs-attribute">font</span>: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
+  --english-<span class="hljs-attribute">font</span>-print: Arial;
+  --<span class="hljs-attribute">font-size</span>-l4: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">3</span>;
+  --<span class="hljs-attribute">font-size</span>-l3: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">4</span>;
+  --<span class="hljs-attribute">font-size</span>-l2: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">5</span>;
+  --<span class="hljs-attribute">font-size</span>-l1: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">6</span>;
+  --<span class="hljs-attribute">font-size</span>-m2: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">7</span>;
+  --<span class="hljs-attribute">font-size</span>-m1: <span class="hljs-number">1rem</span>;
+  --<span class="hljs-attribute">font-size</span>-s1: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">9</span>;
+  --<span class="hljs-attribute">font-size</span>-s2: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">10</span>;
+  --black: <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">20%</span>, <span class="hljs-number">1</span>);
+  --white: <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">1</span>);
+  --contrast-limit-gray: <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">47%</span>, <span class="hljs-number">1</span>);
+  --text-<span class="hljs-attribute">normal</span>-<span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--black);
+  --<span class="hljs-attribute">border-color</span>: <span class="hljs-built_in">var</span>(--contrast-limit-gray);
+  --focusring-<span class="hljs-attribute">color</span>: <span class="hljs-built_in">hsla</span>(<span class="hljs-number">217</span>, <span class="hljs-number">99%</span>, <span class="hljs-number">71%</span>, <span class="hljs-number">1</span>);
+  --ease-in-quad: <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">085</span>, .<span class="hljs-number">68</span>, .<span class="hljs-number">53</span>);
+  --ease-out-quad: <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">25</span>, .<span class="hljs-number">46</span>, .<span class="hljs-number">45</span>, .<span class="hljs-number">94</span>);
+  --ease-in-out-quad: <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">455</span>, .<span class="hljs-number">03</span>, .<span class="hljs-number">515</span>, .<span class="hljs-number">955</span>);
+  --ease-in-cubic: <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">055</span>, .<span class="hljs-number">675</span>, .<span class="hljs-number">19</span>);
+  --ease-out-cubic: <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>);
+  --ease-in-out-cubic: <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">645</span>, .<span class="hljs-number">045</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>);
+  --textbox-shadow: <span class="hljs-number">0</span> <span class="hljs-number">10px</span> <span class="hljs-number">15px</span> -<span class="hljs-number">3px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), <span class="hljs-number">0</span> <span class="hljs-number">4px</span> <span class="hljs-number">6px</span> -<span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">1</span>);
+  --textbox-bg: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, .<span class="hljs-number">925</span>);
+  --textbox-hover-shadow: <span class="hljs-number">0</span> <span class="hljs-number">12px</span> <span class="hljs-number">12px</span> <span class="hljs-number">0</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">14</span>), <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">7px</span> <span class="hljs-number">0</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">065</span>);
+  --in-<span class="hljs-attribute">transition</span>: color .<span class="hljs-number">15s</span> <span class="hljs-built_in">var</span>(--ease-in-out-quad), background-color .<span class="hljs-number">15s</span> <span class="hljs-built_in">var</span>(--ease-in-out-quad), transform .<span class="hljs-number">15s</span> <span class="hljs-built_in">var</span>(--ease-in-out-quad);
+  --out-<span class="hljs-attribute">transition</span>: color .<span class="hljs-number">2s</span> <span class="hljs-built_in">var</span>(--ease-out-quad), background-color .<span class="hljs-number">2s</span> <span class="hljs-built_in">var</span>(--ease-in-out-quad), transform .<span class="hljs-number">2s</span> <span class="hljs-built_in">var</span>(--ease-in-out-quad);
+  --carousel-fade: opacity .<span class="hljs-number">7s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
+  --carousel-switch-effect: <span class="hljs-built_in">var</span>(--in-transition), <span class="hljs-built_in">var</span>(--carousel-fade);
+}</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/base-style/variables-style.css"><span>/components/raw/base-style/variables-style.css</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/8-utility/base-style/variables-style.css</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">1.7 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+
+
+    
+    <div class="Browser-panel" data-role="tab-panel" id="browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@base-style</span>
+        </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/base-style.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                    <li><a data-no-pjax href="../render/base-style.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">src/components/8-utility/base-style/base-style.hbs</span>
+        </li>
+        
+        
+    </ul>
+</div>
+
+    
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-4baeade87d4891ecf5db54b3bf9e34c4-panel-notes">
+    <div class="Prose Prose--condensed">
+        
+        <p class="Browser-isEmptyNote">No notes defined.</p>
+        
+    </div>
+</div>
+
+    
+
+</div>
+
+</div>
+
+
+    
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            
+
+    
+    
+
+
+<nav class="Navigation" data-behaviour="navigation">
+    <div class="Navigation-panel Navigation-panel--main" data-role="main-panel">
+    
+        <div class="Navigation-group Navigation-search">
+    <form action="" class="Search" data-behaviour="search">
+        <label class="Search-label" for="search-input">Search</label>
+        <input class="Search-input" id="search-input" type="search" placeholder="Search…" data-role="input">
+        <button type="button" data-behaviour="clear-search" class="Search-clearButton" aria-label="Clear search" hidden>
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        </button>
+    </form>
+</div>
+
+    
+        
+
+    
+    
+    <div class="Navigation-group">
+        
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <div class="Tree-header">
+        <h3 class="Tree-title">components</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-static-ui">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-static-ui-items">
+                    Static Ui
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-static-ui-items">
+                
+                
+                
+                
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./card.html" data-role="tree-link" data-pjax data-handle="card">
+                <span>Card</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./list.html" data-role="tree-link" data-pjax data-handle="list">
+                <span>List</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./navigation.html" data-role="tree-link" data-pjax data-handle="navigation">
+                <span>Navigation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./pagination.html" data-role="tree-link" data-pjax data-handle="pagination">
+                <span>Pagination</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./table.html" data-role="tree-link" data-pjax data-handle="table">
+                <span>Table</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./table-of-contents.html" data-role="tree-link" data-pjax data-handle="table-of-contents">
+                <span>Table Of Contents</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./tooltip.html" data-role="tree-link" data-pjax data-handle="tooltip">
+                <span>Tooltip</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
+        
+    
+        
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-dynamic-ui">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-dynamic-ui-items">
+                    Dynamic Ui
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-dynamic-ui-items">
+                
+                
+                
+                
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./accordion.html" data-role="tree-link" data-pjax data-handle="accordion">
+                <span>Accordion</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./carousel.html" data-role="tree-link" data-pjax data-handle="carousel">
+                <span>Carousel</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./modal-dialog.html" data-role="tree-link" data-pjax data-handle="modal-dialog">
+                <span>Modal Dialog</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./tab.html" data-role="tree-link" data-pjax data-handle="tab">
+                <span>Tab</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./toast.html" data-role="tree-link" data-pjax data-handle="toast">
+                <span>Toast</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
+        
+    
+        
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-form-ui">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-form-ui-items">
+                    Form Ui
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-form-ui-items">
+                
+                
+                
+                
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./checkbox.html" data-role="tree-link" data-pjax data-handle="checkbox">
+                <span>Checkbox</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./input-field.html" data-role="tree-link" data-pjax data-handle="input-field">
+                <span>Input Field</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./radio.html" data-role="tree-link" data-pjax data-handle="radio">
+                <span>Radio</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./selectbox.html" data-role="tree-link" data-pjax data-handle="selectbox">
+                <span>Selectbox</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
+        
+    
+        
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-control">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-control-items">
+                    Control
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-control-items">
+                
+                
+                
+                
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./button.html" data-role="tree-link" data-pjax data-handle="button">
+                <span>Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./slider.html" data-role="tree-link" data-pjax data-handle="slider">
+                <span>Slider</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./switch.html" data-role="tree-link" data-pjax data-handle="switch">
+                <span>Switch</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
+        
+    
+        
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-effect">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-effect-items">
+                    Effect
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-effect-items">
+                
+                
+                
+                
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./moving-text.html" data-role="tree-link" data-pjax data-handle="moving-text">
+                <span>Moving Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./smooth-scroll.html" data-role="tree-link" data-pjax data-handle="smooth-scroll">
+                <span>Smooth Scroll</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
+        
+    
+        
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-layout">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-layout-items">
+                    Layout
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-layout-items">
+                
+                
+                
+                
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./column.html" data-role="tree-link" data-pjax data-handle="column">
+                <span>Column</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./flexbox.html" data-role="tree-link" data-pjax data-handle="flexbox">
+                <span>Flexbox</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./frame.html" data-role="tree-link" data-pjax data-handle="frame">
+                <span>Frame</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./grid.html" data-role="tree-link" data-pjax data-handle="grid">
+                <span>Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
+        
+    
+        
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-typography">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-typography-items">
+                    Typography
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-typography-items">
+                
+                
+                
+                
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./blockquote.html" data-role="tree-link" data-pjax data-handle="blockquote">
+                <span>Blockquote</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./body-text.html" data-role="tree-link" data-pjax data-handle="body-text">
+                <span>Body Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./code.html" data-role="tree-link" data-pjax data-handle="code">
+                <span>Code</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./heading.html" data-role="tree-link" data-pjax data-handle="heading">
+                <span>Heading</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
+        
+    
+        
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-utility">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-utility-items">
+                    Utility
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-utility-items">
+                
+                
+                
+                
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="./base-style.html" data-role="tree-link" data-pjax data-handle="base-style">
+                <span>Base Style</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./utility.html" data-role="tree-link" data-pjax data-handle="utility">
+                <span>Utility</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
+        
+    
+
+    </ul>
+</div>
+
+    </div>
+    
+
+
+    
+        
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <div class="Tree-header">
+        <h3 class="Tree-title">documentation</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../index.html" data-role="tree-link" data-pjax data-handle="">
+                <span>Overview</span>
+                
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+    
+        
+
+    
+        
+<div class="Navigation-group">
+    <div class="Tree">
+        <div class="Tree-header">
+            <h3 class="Tree-title">
+                Information
+            </h3>
+        </div>
+        <dl class="Tree-aside">
+            
+                <div>
+                    <dt class="Tree-asideTerm">Built on:</dt>
+                    <dd class="Tree-asideDescription">
+                        
+                            <time datetime="2021-12-13T13:36:10.085Z">
+                                12/13/2021
+                            </time>
+                        
+                    </dd>
+                </div>
+            
+        </dl>
+    </div>
+</div>
+
+
+    
+    </div>
+
+    <div class="Navigation-panel Navigation-panel--variants" data-role="variant-panel">
+        <div class="Navigation-backButtonWrapper">
+            <button class="Navigation-backButton" data-role="back" type="button">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 4.29289C13.0976 4.68342 13.0976 5.31658 12.7071 5.70711L6.41421 12L12.7071 18.2929C13.0976 18.6834 13.0976 19.3166 12.7071 19.7071C12.3166 20.0976 11.6834 20.0976 11.2929 19.7071L4.29289 12.7071C3.90237 12.3166 3.90237 11.6834 4.29289 11.2929L11.2929 4.29289C11.6834 3.90237 12.3166 3.90237 12.7071 4.29289Z"/>
+</svg>
+
+                Back
+            </button>
+        </div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    </div>
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.9.4"></script>
+
+
+
+</body>
+</html>

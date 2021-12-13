@@ -1,16 +1,18 @@
+@use "../../base/settings";
+
 .pagination {
   display: flex;
   justify-content: center;
   position: relative;
   width: 100%;
   margin: auto;
-  @include mq(tb-dth) {
+  @include settings.mq(tb-dth) {
     max-width: 50rem;
   }
-  @include mq(sp) {
+  @include settings.mq(sp) {
     max-width: 80%;
   }
-  @include mq(tb-dth) {
+  @include settings.mq(tb-dth) {
     & .prev:before {
       border-right: 12px solid #464646;
     }
@@ -18,7 +20,7 @@
       border-left: 12px solid #464646;
     }
   }
-  @include mq(sp) {
+  @include settings.mq(sp) {
     & .prev:before {
       border-right: 8px solid #464646;
     }
@@ -28,12 +30,12 @@
   }
   > li {
     &:not(:first-of-type) {
-      @include mq(sp) {
+      @include settings.mq(sp) {
         &:not(:first-of-type) > .link {
           border-left: none;
         }
       }
-      @include mq(tb-dth) {
+      @include settings.mq(tb-dth) {
         margin-left: 1.2rem;
       }
     }
@@ -44,11 +46,11 @@
   & .next {
     display: block;
     padding: .575rem 1rem;
-    @include mq(tb-dth) {
+    @include settings.mq(tb-dth) {
       min-width: 2.85rem;
       font-size: calc(var(--font-size-m2));
     }
-    @include mq(sp) {
+    @include settings.mq(sp) {
       width: auto;
       min-width: 2.7rem;
     }
@@ -56,7 +58,7 @@
   & .link {
     border: 1px solid #333;
     text-decoration: underline;
-    @include mq(tb-dth) {
+    @include settings.mq(tb-dth) {
       &:hover,
       &:focus {
         text-decoration: none;
@@ -80,11 +82,11 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      @include mq(tb-dth) {
+      @include settings.mq(tb-dth) {
         border-top: 8px solid transparent;
         border-bottom: 8px solid transparent;
       }
-      @include mq(sp) {
+      @include settings.mq(sp) {
         border-top: 6px solid transparent;
         border-bottom: 6px solid transparent;
       }
@@ -92,7 +94,7 @@
   }
   & .tethering {
     line-height: 2rem;
-    @include mq(sp) {
+    @include settings.mq(sp) {
       width: 0;
       height: 0;
       visibility: hidden;

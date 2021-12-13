@@ -11,8 +11,7 @@
   font-size: 1.15rem;
   border-radius: 10rem;
 }
-.toast-trigger:hover,
-[data-whatintent="keyboard"] .toast-trigger:focus {
+.toast-trigger:hover, [data-whatintent="keyboard"] .toast-trigger:focus {
   background-color: #777;
   color: var(--white);
 }
@@ -20,6 +19,8 @@
 .toast[aria-hidden="false"] {
   display: block;
   position: relative;
+  top: 10vh;
+  right: 0;
   width: fit-content;
   max-width: 90%;
   margin: auto;
@@ -53,7 +54,6 @@
   padding: .15rem .6rem 1.2rem 1.4rem;
   font-size: 1.2rem;
 }
-.toast .close-button:hover,
-.toast .close-button:focus {
+.toast .close-button:hover, .toast .close-button:focus {
   font-weight: bold;
 }

@@ -2,64 +2,50 @@
   margin-left: 1.7rem;
   line-height: 1.8;
 }
-
 .list.-itemized {
   list-style: disc;
   font-family: var(--common-font);
 }
-
 .list.-itemized ul {
   list-style: circle;
   margin-left: 1.7em;
 }
-
 .list.-itemized ul ul {
   list-style: square;
   margin-left: 1.7em;
 }
-
 .list.-ordered {
   list-style: decimal;
 }
-
 .list.-ordered ol {
   list-style: inherit;
   margin-left: 1.7em;
 }
-
 .list.-ordered ol ol {
   margin-left: 1.7em;
 }
-
 .list li {
   margin-top: .8rem;
 }
-
 .list li > * {
   display: block;
   margin-top: .4rem;
 }
-
 .list li ul {
   margin-top: .3rem;
 }
-
 .list li ul ul {
   margin-top: .6rem;
 }
-
 .list .link {
   display: block;
   width: fit-content;
   text-decoration: underline;
   text-indent: 0;
 }
-
-.list .link:hover,
-.list .link:focus {
+.list .link:hover, .list .link:focus {
   text-decoration: none;
 }
-
 .list .link > .icon {
   margin-left: .2rem;
   font-size: calc(var(--font-size-m1));

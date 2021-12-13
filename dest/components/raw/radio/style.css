@@ -1,5 +1,6 @@
 .fieldset {
   width: 65%;
+  margin-bottom: 1.5rem;
   font-size: calc(var(--font-size-m2));
 }
 
@@ -16,7 +17,6 @@
   white-space: nowrap;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
 }
 
@@ -24,7 +24,7 @@
   display: block;
   position: relative;
   width: auto;
-  margin-top: .5rem;
+  margin-top: 1rem;
   padding-left: 1.8em;
   line-height: 1.75;
   cursor: pointer;
@@ -41,27 +41,38 @@
   transition: all .15s ease-in;
 }
 
-.radio:checked + label:before {
-  opacity: 1;
-  -webkit-animation: scale .1s ease-in-out .2s 1 normal running;
-  animation: scale .1s ease-in-out .2s 1 normal running;
+.radio + label:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #888;
+  background-color: #fff;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border-radius: 50%;
+  box-sizing: border-box;
 }
 
-.radio:checked + label:before {
-  opacity: 1;
-  -webkit-animation: scale-radio .1s ease-in-out .2s 1 normal running;
-  animation: scale-radio .1s ease-in-out .2s 1 normal running;
+.radio:checked + label:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 1rem;
+  height: 1rem;
+  background: #000098;
+  transform: translateY(-50%);
+  border-radius: 50%;
 }
 
-.radio:checked + label > svg {
+.radio:checked + label:after {
   opacity: 1;
-  -webkit-animation: scale-radio .1s ease-in-out .2s 1 normal running;
-  animation: scale-radio .1s ease-in-out .2s 1 normal running;
-}
-
-[data-whatinput="keyboard"] .radio:focus + label:after {
-  border-color: #000098;
-  box-shadow: 0 0 4px #000098;
+  animation: scale-radio .2s ease-in-out normal running;
 }
 
 .radio:disabled,
@@ -70,82 +81,39 @@
   cursor: not-allowed;
 }
 
-.radio + label > svg {
-  position: absolute;
-  top: .38rem;
-  left: .16rem;
-  z-index: 1;
-  width: 15px;
-  height: 15px;
-  opacity: 0;
-  transition: all .25s ease-in;
-}
-
-.radio + label:after {
-  content: "";
-  position: absolute;
-  top: .19rem;
-  left: 0;
-  width: 1.3rem;
-  height: 1.3rem;
-  border: 2px solid #888;
-  background-color: #fff;
-  border-radius: 50%;
-  box-sizing: border-box;
-}
-
-svg circle {
-  fill: #000098;
-  stroke: #000098;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  svg circle {
-    fill: #fff;
-    stroke: #fff;
-  }
-}
-
-@-webkit-keyframes scale {
-  32% {
-    -webkit-transform: scale(1.13) rotate(135deg);
-    transform: scale(1.13) rotate(135deg);
-  }
-  83% {
-    -webkit-transform: scale(1) rotate(135deg);
-    transform: scale(1) rotate(135deg);
-  }
-}
-
-@keyframes scale {
-  32% {
-    -webkit-transform: scale(1.13) rotate(135deg);
-    transform: scale(1.13) rotate(135deg);
-  }
-  83% {
-    -webkit-transform: scale(1) rotate(135deg);
-    transform: scale(1) rotate(135deg);
-  }
-}
-
 @-webkit-keyframes scale-radio {
-  32% {
-    -webkit-transform: scale(1.13);
-    transform: scale(1.13);
+  0% {
+    top: 43%;
+    transform: scale(.75) translateY(-50%);
+  }
+  10% {
+    top: 43%;
+    transform: scale(.75) translateY(-50%);
   }
   83% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    top: 50%;
+    transform: scale(1) translateY(-50%);
+  }
+  100% {
+    top: 50%;
+    transform: scale(1) translateY(-50%);
   }
 }
-
 @keyframes scale-radio {
-  32% {
-    -webkit-transform: scale(1.13);
-    transform: scale(1.13);
+  0% {
+    top: 43%;
+    transform: scale(.75) translateY(-50%);
+  }
+  10% {
+    top: 43%;
+    transform: scale(.75) translateY(-50%);
   }
   83% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    top: 50%;
+    transform: scale(1) translateY(-50%);
+  }
+  100% {
+    top: 50%;
+    transform: scale(1) translateY(-50%);
   }
 }

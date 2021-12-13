@@ -7,7 +7,6 @@
   background: #efefef;
   color: #333;
 }
-
 .blockquote:before {
   content: "\f10d";
   display: inline-block;
@@ -20,27 +19,21 @@
   font-weight: 900;
   color: #b1b1b1;
 }
-
 .blockquote > p {
   line-height: 1.7;
   font-size: calc(var(--font-size-m1));
 }
-
 .blockquote > p > cite {
   font-style: italic;
 }
-
 .blockquote .link {
   display: inline-block;
   width: auto;
   text-decoration: underline;
 }
-
-.blockquote .link:hover,
-.blockquote .link:focus {
+.blockquote .link:hover, .blockquote .link:focus {
   text-decoration: none;
 }
-
 .blockquote .link > .icon {
   display: inline-block;
   width: 1em;

@@ -12,6 +12,7 @@ export class ModalDialog {
     this.returnSpan = document.getElementById('return-value');
 
     if(this.wrap != null) {
+      // eslint-disable-next-line no-undef
       dialogPolyfill.registerDialog(this.dialog);
     }
   }

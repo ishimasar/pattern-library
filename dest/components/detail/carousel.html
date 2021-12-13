@@ -18,11 +18,11 @@
     }
 </style>
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.9.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.9.4" type="text/css">
 
-<link rel="stylesheet" href="../../css/styleguide.css?cachebust=1.9.0" type="text/css">
+<link rel="stylesheet" href="../../css/styleguide.css?cachebust=1.9.4" type="text/css">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.4" type="text/css">
 
 
 <title>Carousel | Pattern Library by Cloudy knot</title>
@@ -657,19 +657,17 @@ carousel.setter();</pre>
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
                                 <pre><span class="hljs-selector-class">.carousel</span> {
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1rem</span> auto auto;
+  <span class="hljs-attribute">margin</span>: auto;
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.carousel</span> {
     <span class="hljs-attribute">width</span>: <span class="hljs-number">90vw</span>;
   }
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
   <span class="hljs-selector-class">.carousel</span> {
     <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50rem</span>;
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">40rem</span>;
   }
 }
 
@@ -690,25 +688,21 @@ carousel.setter();</pre>
   <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
 }
-
 <span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span> {
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
   <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--carousel-switch-effect);
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
   <span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span><span class="hljs-selector-pseudo">:hover</span> {
     <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">92</span>;
     <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
   }
 }
-
 <span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">92</span>;
   <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
 }
-
 <span class="hljs-selector-class">.carousel__content</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;true&quot;</span>]</span> {
   <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--carousel-fade);
 }
@@ -738,18 +732,15 @@ carousel.setter();</pre>
   <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">2.8125rem</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">2.8125rem</span>;
-  -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-<span class="hljs-number">50%</span>);
   <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-<span class="hljs-number">50%</span>);
   <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--out-transition);
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
   <span class="hljs-selector-class">.carousel__control-next</span><span class="hljs-selector-pseudo">:hover</span>,
   <span class="hljs-selector-class">.carousel__control-prev</span><span class="hljs-selector-pseudo">:hover</span> {
     <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
   }
 }
-
 <span class="hljs-selector-class">.carousel__control-next</span>:before,
 .carousel__control-prev:before {
   content: <span class="hljs-string">&quot;&quot;</span>;
@@ -757,11 +748,9 @@ carousel.setter();</pre>
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
   <span class="hljs-attribute">border-style</span>: solid;
-  -webkit-<span class="hljs-attribute">backface-visibility</span>: hidden;
   <span class="hljs-attribute">backface-visibility</span>: hidden;
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.carousel__control-next</span>:before,
   .carousel__control-prev:before {
     width: <span class="hljs-number">1.25rem</span>;
@@ -770,8 +759,7 @@ carousel.setter();</pre>
     <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-number">2px</span> <span class="hljs-number">0</span>;
   }
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
   <span class="hljs-selector-class">.carousel__control-next</span>:before,
   .carousel__control-prev:before {
     width: <span class="hljs-number">1.5625rem</span>;
@@ -780,7 +768,6 @@ carousel.setter();</pre>
     <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-number">3px</span> <span class="hljs-number">0</span>;
   }
 }
-
 <span class="hljs-selector-class">.carousel__control-next</span><span class="hljs-selector-pseudo">:focus</span>,
 <span class="hljs-selector-class">.carousel__control-prev</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">transition</span>: <span class="hljs-built_in">var</span>(--in-transition);
@@ -789,50 +776,39 @@ carousel.setter();</pre>
 <span class="hljs-selector-class">.carousel__control-pause</span>,
 <span class="hljs-selector-class">.carousel__control-play</span> {
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">2.5em</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#bbb</span>;
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">2px</span>;
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.carousel__control-pause</span>,
   <span class="hljs-selector-class">.carousel__control-play</span> {
     <span class="hljs-attribute">bottom</span>: <span class="hljs-number">3%</span>;
     <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">2.8rem</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">2em</span>;
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
     <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(-<span class="hljs-number">50%</span>);
   }
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
   <span class="hljs-selector-class">.carousel__control-pause</span>,
   <span class="hljs-selector-class">.carousel__control-play</span> {
     <span class="hljs-attribute">right</span>: <span class="hljs-number">2%</span>;
     <span class="hljs-attribute">bottom</span>: <span class="hljs-number">3%</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">3.3rem</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">2.5em</span>;
   }
-}
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.carousel__control-pause</span><span class="hljs-selector-pseudo">:hover</span>,
   <span class="hljs-selector-class">.carousel__control-play</span><span class="hljs-selector-pseudo">:hover</span> {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--contrast-limit-gray);
   }
 }
-
 <span class="hljs-selector-class">.carousel__control-pause</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;true&quot;</span>]</span>,
 <span class="hljs-selector-class">.carousel__control-play</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;true&quot;</span>]</span> {
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">visibility</span>: hidden;
 }
-
 <span class="hljs-selector-class">.carousel__control-pause</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span>,
 <span class="hljs-selector-class">.carousel__control-play</span><span class="hljs-selector-attr">[aria-hidden=<span class="hljs-string">&quot;false&quot;</span>]</span> {
   <span class="hljs-attribute">visibility</span>: visible;
 }
-
 <span class="hljs-selector-class">.carousel__control-pause</span><span class="hljs-selector-pseudo">:focus</span>,
 <span class="hljs-selector-class">.carousel__control-play</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--contrast-limit-gray);
@@ -842,70 +818,55 @@ carousel.setter();</pre>
 <span class="hljs-selector-class">.carousel__control-prev</span> {
   <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.carousel__control-prev</span> {
     <span class="hljs-attribute">left</span>: .<span class="hljs-number">2rem</span>;
     <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
   }
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
   <span class="hljs-selector-class">.carousel__control-prev</span> {
     <span class="hljs-attribute">left</span>: -<span class="hljs-number">2.2rem</span>;
   }
   <span class="hljs-selector-class">.carousel__control-prev</span><span class="hljs-selector-pseudo">:hover</span> {
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(-<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
     <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(-<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
     <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
   }
 }
-
 <span class="hljs-selector-class">.carousel__control-prev</span>:before {
-  -webkit-transform: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">135deg</span>);
-  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">135deg</span>);
+  transform: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">135deg</span>);
 }
 
 <span class="hljs-comment">/* 次へナビ */</span>
 <span class="hljs-selector-class">.carousel__control-next</span> {
-  <span class="hljs-attribute">transition</span>: -webkit-transform .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
   <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
-  <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad), -webkit-transform .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.carousel__control-next</span> {
     <span class="hljs-attribute">right</span>: -.<span class="hljs-number">3rem</span>;
     <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
   }
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
   <span class="hljs-selector-class">.carousel__control-next</span> {
     <span class="hljs-attribute">right</span>: -<span class="hljs-number">2.2rem</span>;
   }
   <span class="hljs-selector-class">.carousel__control-next</span><span class="hljs-selector-pseudo">:hover</span> {
-    -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
     <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">10%</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);
-    <span class="hljs-attribute">transition</span>: -webkit-transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
     <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
-    <span class="hljs-attribute">transition</span>: transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad), -webkit-transform .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
   }
 }
-
 <span class="hljs-selector-class">.carousel__control-next</span>:before {
-  -webkit-transform: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">45deg</span>);
-  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">45deg</span>);
+  transform: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>) <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">45deg</span>);
 }
 
 <span class="hljs-comment">/* 再生ボタン */</span>
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.carousel__control-play</span> {
     <span class="hljs-attribute">background</span>: <span class="hljs-number">#999</span> <span class="hljs-built_in">url</span>(<span class="hljs-string">../img/img_play.png</span>) <span class="hljs-number">53%</span> center no-repeat;
   }
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
   <span class="hljs-selector-class">.carousel__control-play</span> {
     <span class="hljs-attribute">background</span>: <span class="hljs-number">#999</span> <span class="hljs-built_in">url</span>(<span class="hljs-string">../img/img_play.png</span>) <span class="hljs-number">56%</span> center no-repeat;
   }
@@ -918,27 +879,22 @@ carousel.setter();</pre>
 
 <span class="hljs-comment">/* インジケーターもしくはサムネイルのコンテナー(リスト) */</span>
 <span class="hljs-selector-class">.carousel__thumbnail-list</span> {
-  <span class="hljs-attribute">display</span>: -ms-grid;
   <span class="hljs-attribute">display</span>: grid;
   <span class="hljs-attribute">justify-content</span>: center;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">63.9375em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">47.96875em</span>) {
   <span class="hljs-selector-class">.carousel__thumbnail-list</span> {
     gap: .<span class="hljs-number">5rem</span>;
-    -ms-grid-<span class="hljs-attribute">columns</span>: (<span class="hljs-built_in">minmax</span>(<span class="hljs-number">15%</span>, <span class="hljs-number">1</span>fr))[auto-fit];
     grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-built_in">minmax</span>(<span class="hljs-number">15%</span>, <span class="hljs-number">1</span>fr));
     <span class="hljs-attribute">margin-top</span>: .<span class="hljs-number">8rem</span>;
   }
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">48em</span>) {
   <span class="hljs-selector-class">.carousel__thumbnail-list</span> {
-    gap: .<span class="hljs-number">75rem</span>;
-    -ms-grid-<span class="hljs-attribute">columns</span>: (<span class="hljs-number">13%</span>)[auto-fit];
-    grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-number">13%</span>);
-    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">1.5rem</span>;
+    gap: <span class="hljs-number">1rem</span>;
+    grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-number">15%</span>);
+    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">1rem</span>;
   }
 }
 
@@ -947,8 +903,7 @@ carousel.setter();</pre>
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">height</span>: auto;
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
   <span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-pseudo">:hover</span> {
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
     <span class="hljs-attribute">transition</span>: opacity .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
@@ -956,18 +911,15 @@ carousel.setter();</pre>
     <span class="hljs-attribute">outline-offset</span>: .<span class="hljs-number">0625rem</span>;
   }
 }
-
 <span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&quot;false&quot;</span>]</span> {
   <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">8</span>;
   <span class="hljs-attribute">transition</span>: opacity .<span class="hljs-number">3s</span> <span class="hljs-built_in">var</span>(--ease-out-quad);
 }
-
 <span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&quot;true&quot;</span>]</span> {
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
   <span class="hljs-attribute">outline</span>: .<span class="hljs-number">2rem</span> solid <span class="hljs-number">#248aff</span>;
   <span class="hljs-attribute">outline-offset</span>: <span class="hljs-number">0</span>;
 }
-
 <span class="hljs-selector-class">.carousel__thumbnail-btn</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
   <span class="hljs-attribute">transition</span>: opacity .<span class="hljs-number">25s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
@@ -992,7 +944,7 @@ carousel.setter();</pre>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">7.2 KB</span>
+                    <span class="Meta-value">6.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -1122,7 +1074,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card.html" data-role="tree-link" data-pjax data-handle="card">
+            <a class="Tree-entityLink" href="./card.html" data-role="tree-link" data-pjax data-handle="card">
                 <span>Card</span>
                 
 
@@ -1148,7 +1100,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="list.html" data-role="tree-link" data-pjax data-handle="list">
+            <a class="Tree-entityLink" href="./list.html" data-role="tree-link" data-pjax data-handle="list">
                 <span>List</span>
                 
 
@@ -1174,7 +1126,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="navigation.html" data-role="tree-link" data-pjax data-handle="navigation">
+            <a class="Tree-entityLink" href="./navigation.html" data-role="tree-link" data-pjax data-handle="navigation">
                 <span>Navigation</span>
                 
 
@@ -1200,7 +1152,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="pagination.html" data-role="tree-link" data-pjax data-handle="pagination">
+            <a class="Tree-entityLink" href="./pagination.html" data-role="tree-link" data-pjax data-handle="pagination">
                 <span>Pagination</span>
                 
 
@@ -1226,7 +1178,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="table.html" data-role="tree-link" data-pjax data-handle="table">
+            <a class="Tree-entityLink" href="./table.html" data-role="tree-link" data-pjax data-handle="table">
                 <span>Table</span>
                 
 
@@ -1252,7 +1204,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="table-of-contents.html" data-role="tree-link" data-pjax data-handle="table-of-contents">
+            <a class="Tree-entityLink" href="./table-of-contents.html" data-role="tree-link" data-pjax data-handle="table-of-contents">
                 <span>Table Of Contents</span>
                 
 
@@ -1278,7 +1230,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tooltip.html" data-role="tree-link" data-pjax data-handle="tooltip">
+            <a class="Tree-entityLink" href="./tooltip.html" data-role="tree-link" data-pjax data-handle="tooltip">
                 <span>Tooltip</span>
                 
 
@@ -1324,7 +1276,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="accordion.html" data-role="tree-link" data-pjax data-handle="accordion">
+            <a class="Tree-entityLink" href="./accordion.html" data-role="tree-link" data-pjax data-handle="accordion">
                 <span>Accordion</span>
                 
 
@@ -1350,7 +1302,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="carousel">
+            <a class="Tree-entityLink" href="./carousel.html" data-role="tree-link" data-pjax data-handle="carousel">
                 <span>Carousel</span>
                 
 
@@ -1376,7 +1328,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="modal-dialog.html" data-role="tree-link" data-pjax data-handle="modal-dialog">
+            <a class="Tree-entityLink" href="./modal-dialog.html" data-role="tree-link" data-pjax data-handle="modal-dialog">
                 <span>Modal Dialog</span>
                 
 
@@ -1402,7 +1354,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tab.html" data-role="tree-link" data-pjax data-handle="tab">
+            <a class="Tree-entityLink" href="./tab.html" data-role="tree-link" data-pjax data-handle="tab">
                 <span>Tab</span>
                 
 
@@ -1428,7 +1380,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="toast.html" data-role="tree-link" data-pjax data-handle="toast">
+            <a class="Tree-entityLink" href="./toast.html" data-role="tree-link" data-pjax data-handle="toast">
                 <span>Toast</span>
                 
 
@@ -1474,7 +1426,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox.html" data-role="tree-link" data-pjax data-handle="checkbox">
+            <a class="Tree-entityLink" href="./checkbox.html" data-role="tree-link" data-pjax data-handle="checkbox">
                 <span>Checkbox</span>
                 
 
@@ -1500,7 +1452,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="input-field.html" data-role="tree-link" data-pjax data-handle="input-field">
+            <a class="Tree-entityLink" href="./input-field.html" data-role="tree-link" data-pjax data-handle="input-field">
                 <span>Input Field</span>
                 
 
@@ -1526,7 +1478,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio.html" data-role="tree-link" data-pjax data-handle="radio">
+            <a class="Tree-entityLink" href="./radio.html" data-role="tree-link" data-pjax data-handle="radio">
                 <span>Radio</span>
                 
 
@@ -1552,7 +1504,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="selectbox.html" data-role="tree-link" data-pjax data-handle="selectbox">
+            <a class="Tree-entityLink" href="./selectbox.html" data-role="tree-link" data-pjax data-handle="selectbox">
                 <span>Selectbox</span>
                 
 
@@ -1598,7 +1550,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="button.html" data-role="tree-link" data-pjax data-handle="button">
+            <a class="Tree-entityLink" href="./button.html" data-role="tree-link" data-pjax data-handle="button">
                 <span>Button</span>
                 
 
@@ -1624,7 +1576,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="slider.html" data-role="tree-link" data-pjax data-handle="slider">
+            <a class="Tree-entityLink" href="./slider.html" data-role="tree-link" data-pjax data-handle="slider">
                 <span>Slider</span>
                 
 
@@ -1650,7 +1602,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="switch.html" data-role="tree-link" data-pjax data-handle="switch">
+            <a class="Tree-entityLink" href="./switch.html" data-role="tree-link" data-pjax data-handle="switch">
                 <span>Switch</span>
                 
 
@@ -1696,7 +1648,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="moving-text.html" data-role="tree-link" data-pjax data-handle="moving-text">
+            <a class="Tree-entityLink" href="./moving-text.html" data-role="tree-link" data-pjax data-handle="moving-text">
                 <span>Moving Text</span>
                 
 
@@ -1722,34 +1674,8 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="smooth-scroll.html" data-role="tree-link" data-pjax data-handle="smooth-scroll">
+            <a class="Tree-entityLink" href="./smooth-scroll.html" data-role="tree-link" data-pjax data-handle="smooth-scroll">
                 <span>Smooth Scroll</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="typing-text.html" data-role="tree-link" data-pjax data-handle="typing-text">
-                <span>Typing Text</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1794,7 +1720,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="column.html" data-role="tree-link" data-pjax data-handle="column">
+            <a class="Tree-entityLink" href="./column.html" data-role="tree-link" data-pjax data-handle="column">
                 <span>Column</span>
                 
 
@@ -1820,7 +1746,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="flexbox.html" data-role="tree-link" data-pjax data-handle="flexbox">
+            <a class="Tree-entityLink" href="./flexbox.html" data-role="tree-link" data-pjax data-handle="flexbox">
                 <span>Flexbox</span>
                 
 
@@ -1846,7 +1772,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="frame.html" data-role="tree-link" data-pjax data-handle="frame">
+            <a class="Tree-entityLink" href="./frame.html" data-role="tree-link" data-pjax data-handle="frame">
                 <span>Frame</span>
                 
 
@@ -1872,7 +1798,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="grid.html" data-role="tree-link" data-pjax data-handle="grid">
+            <a class="Tree-entityLink" href="./grid.html" data-role="tree-link" data-pjax data-handle="grid">
                 <span>Grid</span>
                 
 
@@ -1918,7 +1844,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="blockquote.html" data-role="tree-link" data-pjax data-handle="blockquote">
+            <a class="Tree-entityLink" href="./blockquote.html" data-role="tree-link" data-pjax data-handle="blockquote">
                 <span>Blockquote</span>
                 
 
@@ -1944,7 +1870,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="body-text.html" data-role="tree-link" data-pjax data-handle="body-text">
+            <a class="Tree-entityLink" href="./body-text.html" data-role="tree-link" data-pjax data-handle="body-text">
                 <span>Body Text</span>
                 
 
@@ -1970,7 +1896,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="code.html" data-role="tree-link" data-pjax data-handle="code">
+            <a class="Tree-entityLink" href="./code.html" data-role="tree-link" data-pjax data-handle="code">
                 <span>Code</span>
                 
 
@@ -1996,7 +1922,7 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="heading.html" data-role="tree-link" data-pjax data-handle="heading">
+            <a class="Tree-entityLink" href="./heading.html" data-role="tree-link" data-pjax data-handle="heading">
                 <span>Heading</span>
                 
 
@@ -2042,7 +1968,33 @@ carousel.setter();</pre>
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="utility.html" data-role="tree-link" data-pjax data-handle="utility">
+            <a class="Tree-entityLink" href="./base-style.html" data-role="tree-link" data-pjax data-handle="base-style">
+                <span>Base Style</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./utility.html" data-role="tree-link" data-pjax data-handle="utility">
                 <span>Utility</span>
                 
 
@@ -2130,8 +2082,8 @@ carousel.setter();</pre>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-12T08:35:49.394Z">
-                                12/12/2021
+                            <time datetime="2021-12-13T13:36:10.085Z">
+                                12/13/2021
                             </time>
                         
                     </dd>
@@ -2230,6 +2182,8 @@ carousel.setter();</pre>
     
         
     
+        
+    
 
 
     </div>
@@ -2242,7 +2196,7 @@ carousel.setter();</pre>
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.9.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.9.4"></script>
 
 
 
