@@ -4,8 +4,10 @@ export class RangeSlider {
     this.volumeValue = document.getElementsByClassName('volume-value')
   }
   changeRangeNum() {
-    this.range.addEventListener('input', () => {
-      this.volumeValue[0].textContent = this.range.value;
-    });
+    if (this.range) {
+      this.range.addEventListener('input', () => {
+        this.volumeValue[0].textContent = this.range.value;
+      });
+    }
   }
 }
