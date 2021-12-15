@@ -3187,7 +3187,8 @@ input[type=range]:active::-webkit-slider-thumb {
   box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
 }
 
-.volume-value {
+.volume-value,
+.volume-value-supplement {
   text-align: center;
 }
 
@@ -4170,5 +4171,3 @@ div.code-toolbar > .toolbar span:focus {
   background-image: linear-gradient(to right, var(--contrast-limit-gray), var(--contrast-limit-gray) 3px, transparent 3px, transparent 8px);
   background-size: 5px 2px;
 }
-
-/*# sourceMappingURL=style.css.map */

@@ -185,6 +185,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;range&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;volume&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;volume&quot;</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;100&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;volume&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;control-name&quot;</span>&gt;</span>Volume Control / 音量調節<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;volume-value&quot;</span>&gt;</span>初期値:50<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;volume-value-supplement&quot;</span>&gt;</span>左:最小値0 | 右:最大値100<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span></pre>
         
@@ -200,6 +201,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;range&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;volume&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;volume&quot;</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;100&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;volume&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;control-name&quot;</span>&gt;</span>Volume Control / 音量調節<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;volume-value&quot;</span>&gt;</span>初期値:50<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;volume-value-supplement&quot;</span>&gt;</span>左:最小値0 | 右:最大値100<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span></span></pre>
     </code>
@@ -227,13 +229,44 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
+                <option value="file-aff89d9677c73c8a26a94dee5626c40d">index.js</option>
+                
                 <option value="file-90bf45c08c9c1a1039d31a1d48170ece">style.css</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-90bf45c08c9c1a1039d31a1d48170ece" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-aff89d9677c73c8a26a94dee5626c40d" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code hljs">
+                                <pre></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/slider/index.js"><span>/components/raw/slider/index.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/4-control/slider/index.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">0 Byte</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-90bf45c08c9c1a1039d31a1d48170ece" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -303,6 +336,10 @@
 <span class="hljs-comment">/* つまみをドラッグしているときのスタイル */</span>
 <span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;range&quot;</span>]</span><span class="hljs-selector-pseudo">:active</span>::-webkit-slider-thumb {
   box-shadow: <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">10px</span> -<span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">3</span>);
+}
+
+<span class="hljs-selector-class">.volume-value</span> {
+  <span class="hljs-attribute">text-align</span>: center;
 }</pre>
                             </code>
                             
@@ -1457,7 +1494,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-15T11:22:23.762Z">
+                            <time datetime="2021-12-15T11:26:15.130Z">
                                 12/15/2021
                             </time>
                         
