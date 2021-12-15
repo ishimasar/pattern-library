@@ -1,0 +1,113 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Preview Layout</title>
+    <link media="all" rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.2.6/what-input.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.0/dialog-polyfill.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js" defer></script>
+    <script src="../../js/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="drawer-header">
+  <h1 class="drawer-header-logo">Drawer Menu</h1>
+  <button type="button" class="drawer-header-btn js-open-drawer" aria-controls="drawer" aria-expanded="false" aria-label="メニューを開く">
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list" class="svg-inline--fa fa-list fa-w-16" role="img" viewBox="0 0 512 512" width="1.6rem" height="1.6rem"><path fill="currentColor" d="M80 368H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 64v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16V64a16 16 0 0 0-16-16zm0 160H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm416 176H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg>
+  </button>
+  <div class="drawer-header-menu">menu</div>
+</header>
+<div id="drawer" class="drawer js-drawer" aria-expanded="false">
+  <div class="drawer-backdrop js-backdrop"></div>
+  <nav class="drawer-nav">
+    <button type="button" class="drawer-nav-button js-close-drawer" aria-controls="drawer" aria-expanded="false" aria-label="メニューを閉じる"><span>×</span></button>
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item">
+        <a href="#" class="drawer-nav-link">- Drawer Nav Item1</a>
+      </li>
+      <li class="drawer-nav-item">
+        <a href="#" class="drawer-nav-link">- Drawer Nav Item2</a>
+      </li>
+      <li class="drawer-nav-item">
+        <a href="#" class="drawer-nav-link">- Drawer Nav Item3</a>
+      </li>
+      <li class="drawer-nav-item">
+        <a href="#" class="drawer-nav-link">- Drawer Nav Item4</a>
+      </li>
+      <li class="drawer-nav-item">
+        <a href="#" class="drawer-nav-link">- Drawer Nav Item5</a>
+      </li>
+      <li class="drawer-nav-item">
+        <a href="#" class="drawer-nav-link">- Drawer Nav Item6</a>
+      </li>
+      <li class="drawer-nav-item">
+        <a href="#" class="drawer-nav-link">- Drawer Nav Item7</a>
+      </li>
+      <li class="drawer-nav-item">
+        <a href="#" class="drawer-nav-link">- Drawer Nav Item8</a>
+      </li>
+      <li class="drawer-nav-item">
+        <a href="#" class="drawer-nav-link">- Drawer Nav Item9</a>
+      </li>
+      <li class="drawer-nav-item">
+        <a href="#" class="drawer-nav-link">- Drawer Nav Item10</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<main class="drawer-main">
+  <section class="drawer-content">
+    <h2 class="drawer-content-title">第1章 Lorem Ipsum</h2>
+    <h3>第1節</h3>
+    <p class="drawer-content-text">
+      Integer fermentum leo nec elit hendrerit, et rhoncus ligula suscipit. Nulla tincidunt blandit dolor nec scelerisque. Suspendisse vulputate consequat elit, finibus auctor dui venenatis et. Ut feugiat nibh mauris, ac dapibus ante semper eu. Sed ornare, massa nec euismod bibendum, leo mi semper sapien, vel rhoncus mi sem finibus dui. Etiam diam elit, commodo et sapien eget, pretium tincidunt orci.
+    </p>
+    <ul class="drawer-content-list LinkList">
+      <li>
+        <a href="#" class="LinkList-link">Lorem ipsum</a>
+      </li>
+      <li>
+        <a href="#" class="LinkList-link">dolor sit amet</a>
+      </li>
+      <li>
+        <a href="#" class="LinkList-link">consectetur adipiscing elit</a>
+      </li>
+    </ul>
+    <h3>第2節</h3>
+    <p class="drawer-content-text">
+      Maecenas eu felis diam. Duis pharetra luctus ante, pretium rutrum risus interdum non. Curabitur lobortis volutpat tortor ut commodo. Praesent vel dapibus turpis, eu sagittis diam. Praesent tristique justo vitae diam tristique, ac ultricies erat commodo. Quisque tincidunt laoreet ante nec semper. Proin convallis interdum tellus. Morbi eleifend et tellus mollis aliquet. Pellentesque ultrices sem quis odio aliquam accumsan. Phasellus facilisis tempor sem, et sagittis tortor molestie id.
+    </p>
+  </section>
+  <div class="divider" role="separator"></div>
+  <section class="drawer-content">
+    <h2 class="drawer-content-title">第2章(終章) Почему он используется?</h2>
+    <h3>第1節</h3>
+    <p class="drawer-content-text">
+      Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.
+    </p>
+    <h3>第2節</h3>
+    <p class="drawer-content-text">
+      Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца.
+    </p>
+    <h3>第3節</h3>
+    <p class="drawer-content-text">
+      Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём.
+    </p>
+    <h3>第4節</h3>
+    <p class="drawer-content-text">
+      Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений.
+    </p>
+    <p class="drawer-content-text">
+      Конец.
+    </p>
+  </section>
+</main>
+<footer class="drawer-footer">
+  <p class="drawer-footer-text">@ 2021 footer</p>
+</footer>
+  </body>
+</html>

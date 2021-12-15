@@ -1,0 +1,278 @@
+/* 暫定コード */
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e6e6;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .35);
+}
+
+.drawer-header-logo {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  line-height: 1;
+  font-size: 24px;
+}
+
+.drawer-header-menu {
+  position: fixed;
+  top: 4px;
+  right: 12px;
+  font-size: .9rem;
+}
+
+.drawer-header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #333;
+}
+
+.drawer-header-btn svg {
+  position: absolute;
+  top: 24px;
+}
+
+.drawer-header-button:hover::before {
+  opacity: 1;
+}
+
+.drawer-nav {
+  background-color: #333;
+}
+
+.drawer-nav-button {
+  position: absolute;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-size: 3rem;
+  color: #fff;
+  box-sizing: border-box;
+}
+.drawer-nav-button > span {
+  display: inline-block;
+  height: 60px;
+  transition: transform .5s ease-out;
+}
+.drawer-nav-button:hover span {
+  animation: rotate-anime .5s ease-out;
+}
+
+@keyframes rotate-anime {
+  0% {
+    margin-top: 1px;
+    transform: rotate(0);
+  }
+  100% {
+    margin-top: 2px;
+    transform: rotate(180deg);
+  }
+}
+.drawer-nav-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition-duration: .1s;
+  transition-property: opacity;
+  transition-timing-function: linear;
+}
+
+.drawer-nav-button:hover::before {
+  opacity: 1;
+}
+
+.drawer-nav-list {
+  list-style-type: none;
+  margin-top: 60px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.drawer-nav-item {
+  border-color: rgba(0, 0, 0, .2);
+  border-style: solid;
+  border-width: 0 0 1px;
+}
+
+.drawer-nav-item:first-child {
+  border-top-width: 1px;
+}
+
+.drawer-nav-link {
+  display: block;
+  position: relative;
+  padding: 1.5rem;
+  text-decoration: none;
+  line-height: 1.2;
+  color: ivory;
+}
+
+.drawer-nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .2);
+  opacity: 0;
+  transition-duration: .1s;
+  transition-property: opacity;
+  transition-timing-function: linear;
+}
+
+.drawer-nav-link:hover::before {
+  opacity: 1;
+}
+
+.drawer-main {
+  width: 80%;
+  margin-top: 120px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.drawer-content-title {
+  margin-block-start: .83rem;
+  margin-block-end: .83rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.content:not(:first-of-type) .drawer-content-title {
+  margin-block-start: 2rem;
+}
+
+.drawer-content-list {
+  list-style-type: disc;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  padding-inline-start: 40px;
+}
+
+.drawer-content-text {
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+
+h3 {
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  font-size: 1.17rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+.drawer-footer {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: darkgray;
+}
+
+.drawer-footer-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+}
+
+.drawer-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.drawer-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.drawer-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+}
+
+.drawer-nav {
+  overflow: auto;
+}
+
+.drawer[aria-expanded] {
+  transition-duration: .25s;
+  transition-property: visibility;
+}
+
+.drawer[aria-expanded] .drawer-backdrop {
+  transition-duration: .25s;
+  transition-property: opacity;
+  transition-timing-function: linear;
+}
+
+.drawer[aria-expanded] .drawer-nav {
+  transition-duration: .25s;
+  transition-property: transform;
+  transition-timing-function: ease;
+}
+
+/* 開いているとき */
+.drawer[aria-expanded="true"] {
+  visibility: visible;
+}
+
+.drawer[aria-expanded="true"] .drawer-backdrop {
+  opacity: 1;
+}
+
+.drawer[aria-expanded="true"] .drawer-nav {
+  transform: translateX(0);
+}
+
+/* 閉じているとき */
+.drawer[aria-expanded="false"] {
+  visibility: hidden;
+}
+
+.drawer[aria-expanded="false"] .drawer-backdrop {
+  opacity: 0;
+}
+
+.drawer[aria-expanded="false"] .drawer-nav {
+  transform: translateX(100%);
+}
