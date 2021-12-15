@@ -6,6 +6,7 @@ import { Carousel } from './modules/Carousel.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
 import { ModalDialog } from './modules/ModalDialog.js';
 import { scrollSmooth } from './modules/SmoothScroll.js';
+import { RangeSlider } from './modules/RangeSlider.js';
 import { Tab } from './modules/Tab.js';
 // import { TabSwipe } from './modules/TabSwipe.js';
 import { Toast } from './modules/Toast.js';
@@ -57,6 +58,9 @@ const modalDialog = new ModalDialog('modal-dialog');
 modalDialog.showDialog();
 modalDialog.hideDialog();
 modalDialog.respondValue();
+
+const rangeSlider = new RangeSlider();
+rangeSlider.changeRangeNum();
 
 const tab = new Tab('.tab-ui', ".tab[role='tab']", '.tabpanel-wrap', ".tabpanel[role='tabpanel']");
 tab.setHeight();

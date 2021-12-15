@@ -3187,6 +3187,10 @@ input[type=range]:active::-webkit-slider-thumb {
   box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
 }
 
+.volume-value {
+  text-align: center;
+}
+
 .switch-wrapper {
   display: flex;
   align-items: center;
@@ -3448,7 +3452,7 @@ input[type=range]:active::-webkit-slider-thumb {
   width: 6rem;
 }
 
-/* ※.main-wrapperはすべてのパターンの共通ラッパーとしても使用 */
+/* .main-wrapperはすべてのパターンの共通ラッパーとしても使用 */
 .main-wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -4031,11 +4035,21 @@ div.code-toolbar > .toolbar span:focus {
   margin-bottom: -1.5rem;
 }
 
+.mv-24 {
+  margin-top: -1.5rem;
+  margin-bottom: -1.5rem;
+}
+
 .mt-16 {
   margin-top: -1rem;
 }
 
 .mb-16 {
+  margin-bottom: -1rem;
+}
+
+.mv-16 {
+  margin-top: -1rem;
   margin-bottom: -1rem;
 }
 
@@ -4047,11 +4061,21 @@ div.code-toolbar > .toolbar span:focus {
   margin-bottom: -0.5rem;
 }
 
+.mv-8 {
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
 .mt0 {
   margin-top: 0rem;
 }
 
 .mb0 {
+  margin-bottom: 0rem;
+}
+
+.mv0 {
+  margin-top: 0rem;
   margin-bottom: 0rem;
 }
 
@@ -4063,11 +4087,21 @@ div.code-toolbar > .toolbar span:focus {
   margin-bottom: 0.5rem;
 }
 
+.mv8 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mt16 {
   margin-top: 1rem;
 }
 
 .mb16 {
+  margin-bottom: 1rem;
+}
+
+.mv16 {
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -4079,6 +4113,11 @@ div.code-toolbar > .toolbar span:focus {
   margin-bottom: 1.5rem;
 }
 
+.mv24 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .mt32 {
   margin-top: 2rem;
 }
@@ -4087,11 +4126,21 @@ div.code-toolbar > .toolbar span:focus {
   margin-bottom: 2rem;
 }
 
+.mv32 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mt40 {
   margin-top: 2.5rem;
 }
 
 .mb40 {
+  margin-bottom: 2.5rem;
+}
+
+.mv40 {
+  margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
@@ -4118,7 +4167,6 @@ div.code-toolbar > .toolbar span:focus {
 .divider {
   width: 100%;
   height: 1px;
-  margin: 3rem auto;
   background-image: linear-gradient(to right, var(--contrast-limit-gray), var(--contrast-limit-gray) 3px, transparent 3px, transparent 8px);
   background-size: 5px 2px;
 }
