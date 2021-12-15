@@ -47,6 +47,8 @@ export class Toast {
 
 /* /js/main.js */
 
+import { Toast } from './modules/Toast.js';
+
 const toast = new Toast('js-toast-trigger', 'js-toast-popup', '.toast > .text', 'js-toast-close');
 toast.showToast();
 toast.removeToast();

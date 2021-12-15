@@ -101,6 +101,9 @@ export class UiModeSwitcher {
 
 /* /js/main.js */
 
+import { ToggleSwitch } from './modules/ToggleSwitch.js';
+import { UiModeSwitcher } from './modules/UiModeSwitcher.js';
+
 const toggleSwitch = new ToggleSwitch('#switch1', '.switch-state-on', '.switch-state-off');
 toggleSwitch.switchState();
 toggleSwitch.onState();

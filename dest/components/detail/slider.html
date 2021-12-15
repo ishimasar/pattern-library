@@ -245,7 +245,29 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-comment">/* /js/modules/RangeSlider.js */</span>
+
+<span class="hljs-comment">/**
+ * RangeSlider UI class
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RangeSlider</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.range = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;volume&#x27;</span>);
+    <span class="hljs-built_in">this</span>.volumeValue = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">&#x27;volume-value&#x27;</span>)
+  }
+  <span class="hljs-function"><span class="hljs-title">changeRangeNum</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.range.addEventListener(<span class="hljs-string">&#x27;input&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-built_in">this</span>.volumeValue[<span class="hljs-number">0</span>].textContent = <span class="hljs-built_in">this</span>.range.value;
+    });
+  }
+}
+
+<span class="hljs-comment">/* /js/main.js */</span>
+
+<span class="hljs-keyword">import</span> { RangeSlider } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./modules/RangeSlider.js&#x27;</span>;
+
+<span class="hljs-keyword">const</span> rangeSlider = <span class="hljs-keyword">new</span> RangeSlider();
+rangeSlider.changeRangeNum();</pre>
                             </code>
                             
                         </div>
@@ -261,7 +283,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">525 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -1494,7 +1516,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-15T11:26:15.130Z">
+                            <time datetime="2021-12-15T11:34:21.269Z">
                                 12/15/2021
                             </time>
                         
