@@ -4,7 +4,7 @@
 import { Accordion } from './modules/Accordion.js';
 import { Carousel } from './modules/Carousel.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
-import { drawerMenu } from './modules/drawerMenu.js';
+import { drawerMenu } from './modules/DrawerMenu.js';
 import { ModalDialog } from './modules/ModalDialog.js';
 import { scrollSmooth } from './modules/SmoothScroll.js';
 import { RangeSlider } from './modules/RangeSlider.js';

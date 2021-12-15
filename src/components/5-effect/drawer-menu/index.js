@@ -67,6 +67,6 @@ export function drawerMenu() {
 
 /* /js/main.js */
 
-import { drawerMenu } from './modules/drawerMenu.js';
+import { drawerMenu } from './modules/DrawerMenu.js';
 
 const openButton = document.querySelector('.js-open-drawer') ? drawerMenu() : false;
