@@ -60,14 +60,14 @@
   & > span {
     display: inline-block;
     height: 60px;
-    transition: transform .5s ease-out;
+    transition: transform .3s linear;
   }
   &:hover span {
-    animation: rotate-anime .5s ease-out;
+    animation: rotate-anime .3s linear;
   }
 }
 @keyframes rotate-anime {
-  0%  {transform: rotate(0); margin-top: 1px;}
+  0%  {transform: rotate(0); margin-top: -1px;}
   100%  {transform: rotate(180deg); margin-top: 2px;}
 }
 

@@ -38,7 +38,24 @@
       }
     }
   }
-
+  &.-decorated-triangle {
+    list-style: none;
+    li {
+      text-indent: -1em;
+      padding-left: 1em;
+      &:before {
+        @include settings.triangle(8, 10, right, var(--black));
+        display: inline-block;
+        padding-right: .25em;
+      }
+      & ul {
+        margin-left: 1.7em;
+        & ul {
+          margin-left: 1.7em;
+        }
+      }
+    }
+  }
   & .link {
     display: block;
     width: fit-content;

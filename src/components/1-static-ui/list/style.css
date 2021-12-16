@@ -37,6 +37,33 @@
 .list li ul ul {
   margin-top: .6rem;
 }
+.list.-decorated-triangle {
+  list-style: none;
+}
+.list.-decorated-triangle li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+.list.-decorated-triangle li:before {
+  content: "";
+  display: block;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  padding-right: .25em;
+  border-top: 5px transparent solid;
+  border-right: 0 transparent solid;
+  border-bottom: 5px transparent solid;
+  border-left: 8px var(--black) solid;
+  border-style: solid;
+  transition: transform cubic-bezier(.215, .61, .355, 1) .15s, border-color cubic-bezier(.215, .61, .355, 1) .15s;
+}
+.list.-decorated-triangle li ul {
+  margin-left: 1.7em;
+}
+.list.-decorated-triangle li ul ul {
+  margin-left: 1.7em;
+}
 .list .link {
   display: block;
   width: fit-content;

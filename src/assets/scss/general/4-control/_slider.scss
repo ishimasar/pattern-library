@@ -60,3 +60,10 @@ input[type="range"]:active::-webkit-slider-thumb {
 .volume-value-supplement {
   text-align: center;
 }
+.volume-value {
+  font-size: larger;
+  font-weight: bold;
+}
+.volume-value-supplement {
+  margin-top: .5rem;
+}

@@ -1,26 +1,91 @@
 @use "../../base/settings";
 
 .heading1 {
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
   line-height: 2;
   font-size: calc(var(--font-size-l3));
   font-weight: 700;
 }
 .heading2 {
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
   line-height: 1.8;
   font-size: calc(var(--font-size-l2));
   font-weight: 700;
 }
 .heading3 {
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
   line-height: 1.75;
   font-size: calc(var(--font-size-l1));
   font-weight: 700;
 }
 .heading4 {
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
   line-height: 1.5;
   font-size: calc(var(--font-size-m2));
   font-weight: 700;
+}
+
+.heading2.-decorated-underline {
+  margin-block-end: 2rem;
+  &:after {
+    content: "";
+    display: block;
+    border-bottom: .2rem solid var(--black);
+    font-size: 0;
+  }
+}
+
+.heading2.-decorated-frame {
+  margin-block-end: 2rem;
+  padding: .5rem 1rem;
+  border: .2rem solid #333;
+}
+
+.heading2.-decorated-sideline {
+  position: relative;
+  margin-block-end: 2rem;
+  padding-inline-start: 1rem;
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2rem;
+    height: 2.5rem;
+    border-left: .5rem solid #333;
+  }
+}
+
+.heading2.-decorated-bg {
+  margin-block-end: 2rem;
+  padding: .5rem 1rem;
+  background-color: hsla(195, 13%, 94%, 1);
+}
+
+.heading2.-decorated-original01 {
+  display: inline-block;
+  position: relative;
+  margin-block-end: 2rem;
+  padding-inline-start: 1rem;
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -0.15rem;
+    left: 0;
+    width: 2rem;
+    height: 2.5rem;
+    border-left: .375rem solid hsla(214, 85%, 36%, 1);
+  }
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -0.15rem;
+    left: 0;
+    width: 100%;
+    height: .125rem;
+    background: linear-gradient(90deg,hsla(214, 85%, 36%, 1), var(--white));
+  }
 }

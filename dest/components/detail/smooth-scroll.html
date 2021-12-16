@@ -184,16 +184,15 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>スムーズスクロール(Back to top含む) *レスポンシブ未対応<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;global-nav&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container main-wrapper&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section-wrap&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sectionA&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__heading&quot;</span>&gt;</span>
-                        スムーズスクロール(Smooth scroll)の挙動について -
-                        セクションA見出し
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>
+                        スムーズスクロール(Smooth scroll)の挙動について - セクションA見出し
                     <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                        スムーズスクロールという要素間アニメーション移動は、Webページにおけるコンテンツ移動の本来的な挙動からは外れたものということは知っておきたいところです。a要素のページ内リンクを疑似的に使用していますが、ほにゃらかにゃら。
+                        スムーズスクロールという要素間アニメーション移動は、Webページにおけるコンテンツ移動の本来的な挙動からは外れたものということは知っておきたいところです。a要素の持つページ内遷移機能を疑似的に模してはいますが、それとは似て非なるものです。
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                         そのためJavaScriptを用い、インタラクティブ要素として定義されたa要素の持つリンク遷移機能などのデフォルトアクションを<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>preventDefault()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>や<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>return false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>で停止したのちに、必要な処理設定をする手法が旧来から取られてきました。
@@ -208,18 +207,15 @@
                         しかし見たことがないほど斬新で、離れ技のような動きや機能を実装すればするほど、本来持つべき機能を一度止めねばならず、また再実装で回復させることが困難になる傾向があります。
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                        では一体これの何が問題なのでしょうか。HTMLを大もととするWebアプリケーションの機能はそもそもアクセシブル
-                        &amp;
-                        ユーザブルに設計・策定されています。JSでのカスタマイズはその機能を殺してしまっているのです。
+                        では一体これの何が問題なのでしょうか。HTMLを大もととするWebアプリケーションの機能はそもそもアクセシブル&amp;ユーザブルに設計・策定されています。JSでのカスタマイズはその機能を殺してしまっているのです。
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                        改めてWeb =
-                        ソフトウェアデザインにおける各UIが何のために生み出され、どういった役割を担うべきなのか、立ち返って見つめ直す必要があると強く感じます。スムーズスクロールはそのもっとも単純な例として良いサンプルになるでしょう。
+                        改めてWeb = ソフトウェアデザインにおける各UIが何のために生み出され、どういった役割を担うべきなのか、立ち返って見つめ直す必要があると強く感じます。スムーズスクロールはそのもっとも単純な例として良いサンプルになるでしょう。
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mt24&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sectionB&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__heading&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>
                         セクションB見出し
                     <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
@@ -228,11 +224,11 @@
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                         セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mt24&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sectionC&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__heading&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>
                         セクションC見出し
                     <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
@@ -241,12 +237,11 @@
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                         セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mt24&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;aside&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;side-box&quot;</span>&gt;</span>ダミーBOX<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;toc&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#sectionA&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;toc__link&quot;</span>&gt;</span>セクションA<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#sectionB&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;toc__link&quot;</span>&gt;</span>セクションB<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -270,21 +265,18 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>スムーズスクロール(Back to top含む) *レスポンシブ未対応<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;global-nav&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container main-wrapper&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section-wrap&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sectionA&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__heading&quot;</span>&gt;</span>
-            スムーズスクロール(Smooth scroll)の挙動について -
-            セクションA見出し
+          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>
+            スムーズスクロール(Smooth scroll)の挙動について - セクションA見出し
           <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-            スムーズスクロールという要素間アニメーション移動は、Webページにおけるコンテンツ移動の本来的な挙動からは外れたものということは知っておきたいところです。a要素のページ内リンクを疑似的に使用していますが、ほにゃらかにゃら。
+            スムーズスクロールという要素間アニメーション移動は、Webページにおけるコンテンツ移動の本来的な挙動からは外れたものということは知っておきたいところです。a要素の持つページ内遷移機能を疑似的に模してはいますが、それとは似て非なるものです。
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-            そのためJavaScriptを用い、インタラクティブ要素として定義されたa要素の持つリンク遷移機能などのデフォルトアクションを<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>preventDefault()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>や<span class="hljs-tag">&lt;<span class="hljs-name">code</span>
-              &gt;</span>return false&lt;/code
-            &gt;で停止したのちに、必要な処理設定をする手法が旧来から取られてきました。
+            そのためJavaScriptを用い、インタラクティブ要素として定義されたa要素の持つリンク遷移機能などのデフォルトアクションを<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>preventDefault()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>や<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>return false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>で停止したのちに、必要な処理設定をする手法が旧来から取られてきました。
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
             このとき忘れられがちなのが、本来の挙動を強制的にキャンセルした結果、機能に抜けが発生したままになってしまうことです。フラグメント識別子(#~)をうんたらかんたらして、本来備えているキーボード操作等におけるフォーカス管理機能までが置き去りになっているケースがとても多いように見受けられます。
@@ -296,18 +288,15 @@
             しかし見たことがないほど斬新で、離れ技のような動きや機能を実装すればするほど、本来持つべき機能を一度止めねばならず、また再実装で回復させることが困難になる傾向があります。
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-            では一体これの何が問題なのでしょうか。HTMLを大もととするWebアプリケーションの機能はそもそもアクセシブル
-            &amp;
-            ユーザブルに設計・策定されています。JSでのカスタマイズはその機能を殺してしまっているのです。
+            では一体これの何が問題なのでしょうか。HTMLを大もととするWebアプリケーションの機能はそもそもアクセシブル&amp;ユーザブルに設計・策定されています。JSでのカスタマイズはその機能を殺してしまっているのです。
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-            改めてWeb =
-            ソフトウェアデザインにおける各UIが何のために生み出され、どういった役割を担うべきなのか、立ち返って見つめ直す必要があると強く感じます。スムーズスクロールはそのもっとも単純な例として良いサンプルになるでしょう。
+            改めてWeb = ソフトウェアデザインにおける各UIが何のために生み出され、どういった役割を担うべきなのか、立ち返って見つめ直す必要があると強く感じます。スムーズスクロールはそのもっとも単純な例として良いサンプルになるでしょう。
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mt24&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sectionB&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__heading&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>
             セクションB見出し
           <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
@@ -316,11 +305,11 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
             セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。セクションBコンテンツ。
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mt24&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sectionC&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__heading&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>
             セクションC見出し
           <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
@@ -329,12 +318,11 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
             セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。セクションCコンテンツ。
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mt24&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;aside&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;side-box&quot;</span>&gt;</span>ダミーBOX<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;toc&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#sectionA&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;toc__link&quot;</span>&gt;</span>セクションA<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#sectionB&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;toc__link&quot;</span>&gt;</span>セクションB<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -507,20 +495,7 @@ scrollSmooth();</pre>
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre><span class="hljs-selector-class">.move-text</span> {
-  <span class="hljs-attribute">text-transform</span>: uppercase;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">5rem</span>;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--font-size-l3));
-  <span class="hljs-attribute">font-weight</span>: bold;
-}
-
-<span class="hljs-selector-class">.move-text</span> <span class="hljs-selector-class">.letter</span> {
-  <span class="hljs-attribute">display</span>: inline-block;
-  <span class="hljs-attribute">letter-spacing</span>: .<span class="hljs-number">5em</span>;
-  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
-}
-
-<span class="hljs-keyword">@media</span> all <span class="hljs-keyword">and</span> (<span class="hljs-attribute">-ms-high-contrast</span>: none) {
+                                <pre><span class="hljs-keyword">@media</span> all <span class="hljs-keyword">and</span> (<span class="hljs-attribute">-ms-high-contrast</span>: none) {
   <span class="hljs-selector-class">.smooth-scroll</span> *::-ms-backdrop,
   .smooth-scroll .container {
     max-width: none;
@@ -528,27 +503,31 @@ scrollSmooth();</pre>
 }
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.header</span> {
   <span class="hljs-attribute">position</span>: relative;
-  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">4rem</span>;
-  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">2rem</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#eee</span>;
   <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
-}
-<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.global-nav</span> {
-  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">6rem</span>;
-  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">5.5rem</span>;
-  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
-  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
-  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#eee</span>;
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">10px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">35</span>);
 }
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.container</span> {
   <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">flex-direction</span>: row-reverse;
-  <span class="hljs-attribute">justify-content</span>: flex-start;
+  gap: <span class="hljs-number">2rem</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">80rem</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">3rem</span> auto;
+}
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">48em</span>) {
+  <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.container</span> {
+    <span class="hljs-attribute">flex-direction</span>: row-reverse;
+    <span class="hljs-attribute">justify-content</span>: flex-start;
+  }
+}
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.container</span> {
+    <span class="hljs-attribute">flex-direction</span>: column-reverse;
+    <span class="hljs-attribute">justify-content</span>: flex-start;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">90vw</span>;
+  }
 }
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.main</span> {
   <span class="hljs-attribute">min-width</span>: <span class="hljs-number">80%</span>;
@@ -561,28 +540,22 @@ scrollSmooth();</pre>
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span> {
   <span class="hljs-attribute">list-style-type</span>: none;
   <span class="hljs-attribute">width</span>: auto;
-  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">10rem</span>;
-  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">2rem</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">6rem</span> <span class="hljs-number">50px</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">3.5rem</span> <span class="hljs-number">4rem</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#111</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
+}
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span> <span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1rem</span>;
+}
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
 }
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">outline</span>: none;
 }
-<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section__heading</span> {
-  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">4rem</span>;
-}
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.aside</span> {
   <span class="hljs-attribute">min-width</span>: <span class="hljs-number">20%</span>;
-}
-<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.side-box</span> {
-  <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">align-items</span>: center;
-  <span class="hljs-attribute">justify-content</span>: center;
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">12rem</span>;
-  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
-  <span class="hljs-attribute">background</span>: <span class="hljs-number">#ddd</span>;
 }
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc</span> {
   <span class="hljs-attribute">display</span>: flex;
@@ -591,7 +564,6 @@ scrollSmooth();</pre>
   <span class="hljs-attribute">position</span>: sticky;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">2rem</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">3rem</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">1.5rem</span> <span class="hljs-number">2rem</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
   <span class="hljs-attribute">background</span>: <span class="hljs-number">#b5e9f7</span>;
@@ -606,9 +578,9 @@ scrollSmooth();</pre>
 }
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.footer</span> {
   <span class="hljs-attribute">position</span>: relative;
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">500px</span>;
-  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">10rem</span>;
-  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">15rem</span>;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">6rem</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#eee</span>;
   <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">3rem</span>;
 }
@@ -626,6 +598,10 @@ scrollSmooth();</pre>
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5rem</span>;
   <span class="hljs-attribute">font-weight</span>: bold;
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5rem</span> <span class="hljs-number">5rem</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.footer</span> + <span class="hljs-selector-tag">div</span> {
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">20rem</span>;
 }</pre>
                             </code>
                             
@@ -642,7 +618,7 @@ scrollSmooth();</pre>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.4 KB</span>
+                    <span class="Meta-value">2.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -1832,7 +1808,7 @@ scrollSmooth();</pre>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-15T16:32:23.528Z">
+                            <time datetime="2021-12-16T01:48:12.027Z">
                                 12/16/2021
                             </time>
                         
