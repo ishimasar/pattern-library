@@ -37,31 +37,27 @@
 .list li ul ul {
   margin-top: .6rem;
 }
-.list.-decorated-triangle {
+.list.-decorative-image {
   list-style: none;
 }
-.list.-decorated-triangle li {
+.list.-decorative-image li {
   padding-left: 1em;
   text-indent: -1em;
 }
-.list.-decorated-triangle li:before {
+.list.-decorative-image li:before {
   content: "";
-  display: block;
   display: inline-block;
-  width: 0;
-  height: 0;
-  padding-right: .25em;
-  border-top: 5px transparent solid;
-  border-right: 0 transparent solid;
-  border-bottom: 5px transparent solid;
-  border-left: 8px var(--black) solid;
-  border-style: solid;
-  transition: transform cubic-bezier(.215, .61, .355, 1) .15s, border-color cubic-bezier(.215, .61, .355, 1) .15s;
+  width: 1rem;
+  height: 1rem;
+  margin-right: .25rem;
+  margin-bottom: -.1rem;
+  margin-left: -.25rem;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20data-prefix%3D%22fas%22%20data-icon%3D%22check%22%20class%3D%22svg-inline--fa%20fa-check%22%20role%3D%22img%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M480%20128c0%208.188-3.125%2016.38-9.375%2022.62l-256%20256C208.4%20412.9%20200.2%20416%20192%20416s-16.38-3.125-22.62-9.375l-128-128C35.13%20272.4%2032%20264.2%2032%20256c0-18.28%2014.95-32%2032-32c8.188%200%2016.38%203.125%2022.62%209.375L192%20338.8l233.4-233.4C431.6%2099.13%20439.8%2096%20448%2096C465.1%2096%20480%20109.7%20480%20128z%22%2F%3E%3C%2Fsvg%3E");
 }
-.list.-decorated-triangle li ul {
+.list.-decorative-image li ul {
   margin-left: 1.7em;
 }
-.list.-decorated-triangle li ul ul {
+.list.-decorative-image li ul ul {
   margin-left: 1.7em;
 }
 .list .link {
