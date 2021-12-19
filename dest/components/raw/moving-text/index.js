@@ -1,8 +1,13 @@
 moveLetter();
 function moveLetter() {
-  var textWrapper = document.querySelector('#js-anime-target');
-  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, '<span class="letter">$&</span>');
+  const textWrapper = document.querySelector('#js-anime-target');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/(\S|\s)/g, '<span class="letter">$&</span>');
+  setTimeout(() => {
+      textWrapper.style.opacity = 1;
+  }, 300);
 
+
+  // eslint-disable-next-line no-undef
   anime.timeline({loop: false})
     .add({
       targets: '#js-anime-target .letter',
