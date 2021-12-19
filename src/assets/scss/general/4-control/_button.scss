@@ -1,14 +1,13 @@
 @use "../../base/settings";
 
 .button-container {
-  justify-content: center;
+  justify-content: space-around;
 }
 .button {
   display: inline-block;
   position: relative;
   width: 12.5rem;
   height: 4rem;
-  margin: auto 1rem 2rem;
   border: 2px solid var(--black);
   text-align: center;
   text-decoration: none;
@@ -26,6 +25,16 @@
   top: 0;
   border: transparent;
   perspective: 19rem;
+  // Safari new
+  _::-webkit-full-page-media, _:future, :root & {
+    perspective: 70rem;
+  }
+  // Safari old
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    ::i-block-chrome, & {
+      perspective: 70rem;
+    }
+  }
   & > .after,
   & > .before {
     display: block;

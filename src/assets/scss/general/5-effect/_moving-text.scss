@@ -3,11 +3,15 @@
 .move-text {
   text-transform: uppercase;
   line-height: 5rem;
-  font-size: calc(var(--font-size-l3));
+  font-size: calc(var(--font-size-l3) + .05rem);
   font-weight: bold;
+  font-style: italic;
+  opacity: 0;
+  transform: scaleY(1.2);
 }
 .move-text .letter {
   display: inline-block;
+  min-width: 1.1rem;
   letter-spacing: .5em;
   opacity: 1;
 }

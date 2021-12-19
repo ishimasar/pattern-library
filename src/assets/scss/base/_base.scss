@@ -684,11 +684,10 @@ svg:not(:root) {
 
 /* Style select like a standard input */
 select {
+  -webkit-appearance: none; /* Safari */
   appearance: none;
-
+  border-radius: 0;
   /* Firefox 36+ */
-  appearance: none;
-
   /* Chrome 41+ */
 }
 
