@@ -1,7 +1,7 @@
 export class RangeSlider {
-  constructor() {
-    this.range = document.getElementById('volume');
-    this.volumeValue = document.getElementsByClassName('volume-value')
+  constructor(range, value) {
+    this.range = document.getElementById(range);
+    this.volumeValue = document.getElementsByClassName(value)
   }
   changeRangeNum() {
     if (this.range) {

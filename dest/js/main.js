@@ -3,6 +3,7 @@
 
 import { Accordion } from './modules/Accordion.js';
 import { Carousel } from './modules/Carousel.js';
+// import { currentLocation } from './modules/CurrentLocation.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
 import { drawerMenu } from './modules/DrawerMenu.js';
 import { ModalDialog } from './modules/ModalDialog.js';
@@ -62,8 +63,10 @@ modalDialog.showDialog();
 modalDialog.hideDialog();
 modalDialog.respondValue();
 
-const rangeSlider = new RangeSlider();
+const rangeSlider = new RangeSlider('volume', 'volume-value');
 rangeSlider.changeRangeNum();
+const rangeSliderScale = new RangeSlider('something', 'something-value');
+rangeSliderScale.changeRangeNum();
 
 const tab = new Tab('.tab-ui', ".tab[role='tab']", '.tabpanel-wrap', ".tabpanel[role='tabpanel']");
 tab.setHeight();
@@ -78,6 +81,7 @@ toast.removeToast();
 
 scrollSmooth();
 toggleToc();
+// currentLocation();
 
 const toggleSwitch = new ToggleSwitch('#switch1', '.switch-state-on', '.switch-state-off');
 toggleSwitch.switchState();

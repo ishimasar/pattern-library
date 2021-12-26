@@ -3193,6 +3193,8 @@ input[type=range] {
   border-radius: 10px;
   outline: none;
   cursor: pointer;
+}
+input[type=range][name=volume] {
   -webkit-appearance: none;
   appearance: none;
 }
@@ -3598,7 +3600,7 @@ input[type=range]:active::-webkit-slider-thumb {
   transform: translateX(100%);
 }
 
-.drawer-overflow-hidden {
+.is-fixed {
   overflow: hidden;
   position: fixed;
   width: 100%;
@@ -3740,9 +3742,6 @@ input[type=range]:active::-webkit-slider-thumb {
     width: 90vw;
   }
 }
-.smooth-scroll .main {
-  min-width: 80%;
-}
 .smooth-scroll .section-wrap {
   display: flex;
   flex-direction: column;
@@ -3751,7 +3750,7 @@ input[type=range]:active::-webkit-slider-thumb {
 .smooth-scroll .section {
   list-style-type: none;
   width: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   padding: 3.5rem 4rem;
   border: 1px solid #111;
   font-size: 1rem;
@@ -3761,6 +3760,9 @@ input[type=range]:active::-webkit-slider-thumb {
 }
 .smooth-scroll .section a {
   display: inline-block;
+}
+.smooth-scroll .section:nth-of-type(3) {
+  margin-bottom: 30rem;
 }
 .smooth-scroll .section:focus {
   outline: none;

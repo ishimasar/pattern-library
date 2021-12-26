@@ -30,14 +30,14 @@ export function drawerMenu() {
   openButton.onclick = function() {
     // イベントと関数を紐付け
     document.addEventListener('touchmove', disableScroll, { passive: false });
-    document.body.classList.add('overflow-hidden');
+    document.body.classList.add('is-fixed');
   }
 
   // スクロール解除
   closeButton.onclick = function() {
     // イベントと関数を紐付け
     document.removeEventListener('touchmove', disableScroll, { passive: false });
-    document.body.classList.remove('overflow-hidden');
+    document.body.classList.remove('is-fixed');
   }
 
   function openDrawer() {

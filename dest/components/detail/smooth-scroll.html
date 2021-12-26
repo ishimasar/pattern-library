@@ -185,7 +185,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;global-nav&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container main-wrapper&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section-wrap&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sectionA&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>
@@ -195,13 +195,13 @@
                         スムーズスクロールという要素間アニメーション移動は、Webページにおけるコンテンツ移動の本来的な挙動からは外れたものということは知っておきたいところです。a要素の持つページ内遷移機能を疑似的に模してはいますが、それとは似て非なるものです。
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                        そのためJavaScriptを用い、インタラクティブ要素として定義されたa要素の持つリンク遷移機能などのデフォルトアクションを<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>preventDefault()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>や<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>return false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>で停止したのちに、必要な処理設定をする手法が旧来から取られてきました。
+                        そのためJavaScriptを用い、インタラクティブ要素として定義されたa要素の持つリンク遷移機能などのデフォルトアクションを<span class="hljs-tag">&lt;<span class="hljs-name">code</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;language-javascript&quot;</span>&gt;</span>preventDefault()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>や<span class="hljs-tag">&lt;<span class="hljs-name">code</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;language-javascript&quot;</span>&gt;</span>return false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>で停止したのちに、必要な処理設定をする手法が旧来から取られてきました。
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                         このとき忘れられがちなのが、本来の挙動を強制的にキャンセルした結果、機能に抜けが発生したままになってしまうことです。フラグメント識別子(#~)をうんたらかんたらして、本来備えているキーボード操作等におけるフォーカス管理機能までが置き去りになっているケースがとても多いように見受けられます。
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                        これはJavaScriptを用いて実装するインタラクティブなUIで、よく見られるケースです。スムーズスクロールであればこの点、<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>HTMLElement.focus()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>メソッドを使用したフォーカスコントロールは比較的容易です。
+                        これはJavaScriptを用いて実装するインタラクティブなUIで、よく見られるケースです。スムーズスクロールであればこの点、<span class="hljs-tag">&lt;<span class="hljs-name">code</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;language-javascript&quot;</span>&gt;</span>HTMLElement.focus()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>メソッドを使用したフォーカスコントロールは比較的容易です。
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                         しかし見たことがないほど斬新で、離れ技のような動きや機能を実装すればするほど、本来持つべき機能を一度止めねばならず、また再実装で回復させることが困難になる傾向があります。
@@ -226,7 +226,6 @@
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mt24&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-
                 <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sectionC&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>
                         セクションC見出し
@@ -252,7 +251,9 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;footer&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#pageTop&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;back-to-top&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;ページの先頭(トップ)へ戻る&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;ページの先頭(トップ)へ戻る&quot;</span>&gt;</span>↑<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../js/vendor/prism.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -266,7 +267,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;global-nav&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container main-wrapper&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section-wrap&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sectionA&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>
@@ -276,13 +277,13 @@
             スムーズスクロールという要素間アニメーション移動は、Webページにおけるコンテンツ移動の本来的な挙動からは外れたものということは知っておきたいところです。a要素の持つページ内遷移機能を疑似的に模してはいますが、それとは似て非なるものです。
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-            そのためJavaScriptを用い、インタラクティブ要素として定義されたa要素の持つリンク遷移機能などのデフォルトアクションを<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>preventDefault()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>や<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>return false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>で停止したのちに、必要な処理設定をする手法が旧来から取られてきました。
+            そのためJavaScriptを用い、インタラクティブ要素として定義されたa要素の持つリンク遷移機能などのデフォルトアクションを<span class="hljs-tag">&lt;<span class="hljs-name">code</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;language-javascript&quot;</span>&gt;</span>preventDefault()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>や<span class="hljs-tag">&lt;<span class="hljs-name">code</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;language-javascript&quot;</span>&gt;</span>return false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>で停止したのちに、必要な処理設定をする手法が旧来から取られてきました。
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
             このとき忘れられがちなのが、本来の挙動を強制的にキャンセルした結果、機能に抜けが発生したままになってしまうことです。フラグメント識別子(#~)をうんたらかんたらして、本来備えているキーボード操作等におけるフォーカス管理機能までが置き去りになっているケースがとても多いように見受けられます。
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-            これはJavaScriptを用いて実装するインタラクティブなUIで、よく見られるケースです。スムーズスクロールであればこの点、<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>HTMLElement.focus()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>メソッドを使用したフォーカスコントロールは比較的容易です。
+            これはJavaScriptを用いて実装するインタラクティブなUIで、よく見られるケースです。スムーズスクロールであればこの点、<span class="hljs-tag">&lt;<span class="hljs-name">code</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;language-javascript&quot;</span>&gt;</span>HTMLElement.focus()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>メソッドを使用したフォーカスコントロールは比較的容易です。
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
             しかし見たことがないほど斬新で、離れ技のような動きや機能を実装すればするほど、本来持つべき機能を一度止めねばならず、また再実装で回復させることが困難になる傾向があります。
@@ -307,7 +308,6 @@
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mt24&quot;</span>&gt;</span>ダミーリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-
         <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sectionC&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading2&quot;</span>&gt;</span>
             セクションC見出し
@@ -339,7 +339,9 @@
       &gt;</span>↑&lt;/a
     &gt;
   <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../js/vendor/prism.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -1808,8 +1810,8 @@ scrollSmooth();</pre>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-21T13:35:11.190Z">
-                                12/21/2021
+                            <time datetime="2021-12-26T09:52:47.000Z">
+                                12/26/2021
                             </time>
                         
                     </dd>
@@ -1834,6 +1836,10 @@ scrollSmooth();</pre>
                 Back
             </button>
         </div>
+        
+    
+        
+    
         
     
         
