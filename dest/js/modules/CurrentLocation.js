@@ -1,30 +1,49 @@
-// 未完成
 export function currentLocation() {
-  const contents = document.querySelectorAll('.section');
-  const toc = document.querySelectorAll('.toc__link');
-  const tocMap = new Map();
+  const root = document.querySelector('body');
+  const boxes = document.querySelectorAll('.section');
 
-  // IntersectionObserverでコンテンツの出入りを監視
-  const intersectCallback = (entries) => {
-    entries.forEach((element) => {
-      if (element.intersectionRatio) {
-        tocMap.get(element.target).classList.add('is-current');
-      } else {
-        tocMap.get(element.target).classList.remove('is-current');
+  const options = {
+    root: root ? null : null,
+    rootMargin: '-1px 0px -70% 0px',
+    threshold: 0.2
+  };
+
+  console.log(options);
+
+  const observer = new IntersectionObserver(doWhenIntersect, options);
+  // それぞれのboxを監視する
+  boxes.forEach(box => {
+    observer.observe(box);
+  });
+
+  /**
+    * 交差したときに呼び出す関数
+    * @param entries
+    */
+  function doWhenIntersect(entries) {
+    entries.forEach(entry => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        activateIndex(entry.target);
       }
     });
-  };
-  // wrapperの上辺を現在地の基準点にしたいので、rootMarginで微調整
-  const options = {
-    root: document.querySelector('.section-wrap'),
-    rootMargin: '-1px 0px -99% 0px',
-  };
-  const observer = new IntersectionObserver(intersectCallback, options);
+  }
 
-  // コンテンツをIntersectionObserverに登録
-  contents.forEach((content, i) => {
-    observer.observe(content);
-    tocMap.set(content, toc.item(i));
-    tocMap.set(toc.item(i), content);
-  });
+  /**
+    * 目次の色を変える関数
+    * @param element
+    */
+  function activateIndex(element) {
+    // すでにアクティブになっている目次を選択
+    const currentActiveIndex = document.querySelector('.toc .is-current');
+    // すでにアクティブになっているものが0個の時（=null）以外は、activeクラスを除去
+    if (currentActiveIndex !== null) {
+      currentActiveIndex.classList.remove('is-current');
+    }
+    // 引数で渡されたDOMが飛び先のaタグを選択し、is-currentクラスを付与
+    const newActiveIndex = document.querySelector(
+      `a[href='#${element.id}']`
+    );
+    newActiveIndex.classList.add('is-current');
+  }
 }

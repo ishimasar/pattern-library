@@ -1,18 +1,5 @@
 @use "../../base/settings";
 
-// コンテンツを視覚的に隠し、スクリーンリーダーでは読ませるためのもの
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-}
-
 // 画面サイズ(デバイスサイズ)に応じ、
 // 以下条件に当てはまる場合に適用要素を表示し、
 // それ以外の場合を非表示にする

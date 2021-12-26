@@ -3,7 +3,7 @@
 
 import { Accordion } from './modules/Accordion.js';
 import { Carousel } from './modules/Carousel.js';
-// import { currentLocation } from './modules/CurrentLocation.js';
+import { currentLocation } from './modules/CurrentLocation.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
 import { drawerMenu } from './modules/DrawerMenu.js';
 import { ModalDialog } from './modules/ModalDialog.js';
@@ -81,7 +81,7 @@ toast.removeToast();
 
 scrollSmooth();
 toggleToc();
-// currentLocation();
+currentLocation();
 
 const toggleSwitch = new ToggleSwitch('#switch1', '.switch-state-on', '.switch-state-off');
 toggleSwitch.switchState();
