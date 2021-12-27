@@ -64,15 +64,15 @@
 .drawer-nav-button > span {
   display: inline-block;
   height: 60px;
-  transition: transform .5s ease-out;
+  transition: transform .3s linear;
 }
 .drawer-nav-button:hover span {
-  animation: rotate-anime .5s ease-out;
+  animation: rotate-anime .3s linear;
 }
 
 @keyframes rotate-anime {
   0% {
-    margin-top: 1px;
+    margin-top: -1px;
     transform: rotate(0);
   }
   100% {
@@ -141,11 +141,12 @@
   opacity: 1;
 }
 
-.drawer-main {
-  width: 80%;
-  margin-top: 120px;
+.drawer-main.main-wrapper {
+  margin-top: 6rem;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .drawer-content-title {
@@ -170,14 +171,13 @@
   margin-block-end: 1rem;
 }
 
-h3 {
+.drawer-main h3 {
   margin-block-start: 1rem;
   margin-block-end: 1rem;
   font-size: 1.17rem;
   font-weight: bold;
 }
-
-h4 {
+.drawer-main h4 {
   font-weight: bold;
 }
 

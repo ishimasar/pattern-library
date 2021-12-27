@@ -17,7 +17,6 @@ export function drawerMenu() {
 
   function changeState(state) {
     if (state === drawerOpen) {
-      console.log('2回以上連続で同じ状態に変更しようとしました');
       return;
     }
     changeAriaExpanded(state);
@@ -30,26 +29,41 @@ export function drawerMenu() {
   }
 
   // スクロール禁止
-  openButton.onclick = function() {
+  openButton.onclick = () => {
     // イベントと関数を紐付け
     document.addEventListener('touchmove', disableScroll, { passive: false });
-    document.body.classList.add('overflow-hidden');
   }
 
   // スクロール解除
-  closeButton.onclick = function() {
+  closeButton.onclick = () => {
     // イベントと関数を紐付け
     document.removeEventListener('touchmove', disableScroll, { passive: false });
-    document.body.classList.remove('overflow-hidden');
   }
 
   function openDrawer() {
     changeState(true);
     disableScroll(event);
+
+    // ドロワーが開いたときに背景固定。要リファクタリング
+    const body = document.body;
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}`;
+    body.style.width = '100%';
+    body.style.overflow = 'hidden';
   }
 
   function closeDrawer() {
     changeState(false);
+
+    // ドロワーが閉じたときに背景固定解除&スクロール位置戻す。要リファクタリング
+    const body = document.body;
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    body.style.width = '';
+    body.style.overflow = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
 
   function onClickOpenButton() {
@@ -63,6 +77,9 @@ export function drawerMenu() {
   openButton.addEventListener('click', onClickOpenButton, false);
   closeButton.addEventListener('click', onClickCloseButton, false);
   backdrop.addEventListener('click', onClickCloseButton, false);
+  window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+  });
 }
 
 /* /js/main.js */

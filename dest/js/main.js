@@ -79,9 +79,10 @@ const toast = new Toast('js-toast-trigger', 'js-toast-popup', '.toast > .text', 
 toast.showToast();
 toast.removeToast();
 
-scrollSmooth();
-toggleToc();
 currentLocation();
+scrollSmooth();
+
+toggleToc();
 
 const toggleSwitch = new ToggleSwitch('#switch1', '.switch-state-on', '.switch-state-off');
 toggleSwitch.switchState();

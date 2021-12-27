@@ -3600,12 +3600,6 @@ input[type=range]:active::-webkit-slider-thumb {
   transform: translateX(100%);
 }
 
-.is-fixed {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-}
-
 .loading-spinner {
   overflow: hidden;
   width: 5.5em;
@@ -3756,8 +3750,12 @@ input[type=range]:active::-webkit-slider-thumb {
   list-style-type: none;
   width: auto;
   height: 100%;
-  padding: 3.5rem 4rem;
   font-size: 1rem;
+}
+@media print, screen and (min-width:48em) {
+  .smooth-scroll .section {
+    padding: 3.5rem 4rem;
+  }
 }
 .smooth-scroll .section p {
   margin-bottom: 1rem;
@@ -3841,10 +3839,6 @@ input[type=range]:active::-webkit-slider-thumb {
 .smooth-scroll .footer + div {
   left: 3rem;
   width: 20rem;
-}
-
-.Pen {
-  height: 100vh;
 }
 
 .column-box {
