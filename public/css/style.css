@@ -3717,25 +3717,23 @@ input[type="range"]:active::-webkit-slider-thumb {
   font-size: 1rem;
   box-shadow: 0 1px 10px rgba(0, 0, 0, .35);
 }
-
 .smooth-scroll .container {
   display: flex;
   width: 100%;
   max-width: 80rem;
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
   .smooth-scroll .container {
     gap: 2rem;
   }
 }
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width:48em) {
   .smooth-scroll .container {
     flex-direction: row;
     justify-content: flex-start;
   }
 }
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .smooth-scroll .container {
     flex-direction: column-reverse;
     justify-content: flex-start;
@@ -3748,15 +3746,13 @@ input[type="range"]:active::-webkit-slider-thumb {
   width: auto;
   height: 80%;
 }
-
 .smooth-scroll .section {
   list-style-type: none;
   width: auto;
   height: 100%;
   font-size: 1rem;
 }
-
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width:48em) {
   .smooth-scroll .section {
     padding: 3.5rem 4rem;
   }
@@ -3764,24 +3760,19 @@ input[type="range"]:active::-webkit-slider-thumb {
 .smooth-scroll .section p {
   margin-bottom: 1rem;
 }
-
 .smooth-scroll .section a {
   display: inline-block;
 }
-
 .smooth-scroll .section:nth-of-type(3) {
   margin-bottom: 20rem;
 }
-
 .smooth-scroll .section:focus {
   outline: none;
 }
-
 .smooth-scroll .aside {
   min-width: 20%;
 }
-
-@media print, screen and (max-width: 64em) {
+@media print, screen and (max-width:64em) {
   .smooth-scroll .aside {
     margin-bottom: 2rem;
   }
@@ -3796,25 +3787,29 @@ input[type="range"]:active::-webkit-slider-thumb {
   text-align: center;
   line-height: 3;
 }
-
 .smooth-scroll .toc__link {
   padding: .5rem;
   transition: all .25s;
 }
-
-.smooth-scroll .toc__link:hover,
-.smooth-scroll .toc__link:focus {
-  text-decoration: none;
-  font-weight: bold;
+@media print, screen and (max-width:64em) {
+  .smooth-scroll .toc__link,
+  .smooth-scroll .toc__link:hover,
+  .smooth-scroll .toc__link:focus {
+    text-decoration: underline;
+    font-weight: normal;
+  }
 }
-
-@media print, screen and (min-width: 64.0625em) {
+@media print, screen and (min-width:64.0625em) {
+  .smooth-scroll .toc__link:hover,
+  .smooth-scroll .toc__link:focus {
+    text-decoration: none;
+    font-weight: bold;
+  }
   .smooth-scroll .toc__link.is-current {
     position: relative;
     background-color: #ccf4ff;
     transition: all .5s;
   }
-
   .smooth-scroll .toc__link.is-current:before {
     content: "";
     display: inline-block;
@@ -3834,7 +3829,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   text-align: center;
   font-size: 3rem;
 }
-
 .smooth-scroll .back-to-top {
   align-items: center;
   justify-content: center;
@@ -3850,7 +3844,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   font-weight: bold;
   border-radius: 5rem 5rem 0 0;
 }
-
 .smooth-scroll .footer + div {
   left: 3rem;
   width: 20rem;
