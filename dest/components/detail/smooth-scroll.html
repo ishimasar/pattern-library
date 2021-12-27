@@ -566,25 +566,23 @@ scrollSmooth();</pre>
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
   <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">10px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">35</span>);
 }
-
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.container</span> {
   <span class="hljs-attribute">display</span>: flex;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">80rem</span>;
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
   <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.container</span> {
     gap: <span class="hljs-number">2rem</span>;
   }
 }
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">48em</span>) {
   <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.container</span> {
     <span class="hljs-attribute">flex-direction</span>: row;
     <span class="hljs-attribute">justify-content</span>: flex-start;
   }
 }
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.container</span> {
     <span class="hljs-attribute">flex-direction</span>: column-reverse;
     <span class="hljs-attribute">justify-content</span>: flex-start;
@@ -597,15 +595,13 @@ scrollSmooth();</pre>
   <span class="hljs-attribute">width</span>: auto;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">80%</span>;
 }
-
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span> {
   <span class="hljs-attribute">list-style-type</span>: none;
   <span class="hljs-attribute">width</span>: auto;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">48em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">48em</span>) {
   <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span> {
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">3.5rem</span> <span class="hljs-number">4rem</span>;
   }
@@ -613,24 +609,19 @@ scrollSmooth();</pre>
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span> <span class="hljs-selector-tag">p</span> {
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1rem</span>;
 }
-
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span> <span class="hljs-selector-tag">a</span> {
   <span class="hljs-attribute">display</span>: inline-block;
 }
-
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span><span class="hljs-selector-pseudo">:nth-of-type</span>(<span class="hljs-number">3</span>) {
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">20rem</span>;
 }
-
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.section</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">outline</span>: none;
 }
-
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.aside</span> {
   <span class="hljs-attribute">min-width</span>: <span class="hljs-number">20%</span>;
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">64em</span>) {
   <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.aside</span> {
     <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">2rem</span>;
   }
@@ -645,25 +636,29 @@ scrollSmooth();</pre>
   <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">3</span>;
 }
-
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span> {
   <span class="hljs-attribute">padding</span>: .<span class="hljs-number">5rem</span>;
   <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">25s</span>;
 }
-
-<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-pseudo">:hover</span>,
-<span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">text-decoration</span>: none;
-  <span class="hljs-attribute">font-weight</span>: bold;
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span>,
+  <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-pseudo">:hover</span>,
+  <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">text-decoration</span>: underline;
+    <span class="hljs-attribute">font-weight</span>: normal;
+  }
 }
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">64.0625em</span>) {
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-pseudo">:hover</span>,
+  <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">text-decoration</span>: none;
+    <span class="hljs-attribute">font-weight</span>: bold;
+  }
   <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-class">.is-current</span> {
     <span class="hljs-attribute">position</span>: relative;
     <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ccf4ff</span>;
     <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">5s</span>;
   }
-
   <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.toc__link</span><span class="hljs-selector-class">.is-current</span>:before {
     content: <span class="hljs-string">&quot;&quot;</span>;
     <span class="hljs-attribute">display</span>: inline-block;
@@ -683,7 +678,6 @@ scrollSmooth();</pre>
   <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">3rem</span>;
 }
-
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.back-to-top</span> {
   <span class="hljs-attribute">align-items</span>: center;
   <span class="hljs-attribute">justify-content</span>: center;
@@ -699,7 +693,6 @@ scrollSmooth();</pre>
   <span class="hljs-attribute">font-weight</span>: bold;
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5rem</span> <span class="hljs-number">5rem</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
 }
-
 <span class="hljs-selector-class">.smooth-scroll</span> <span class="hljs-selector-class">.footer</span> + <span class="hljs-selector-tag">div</span> {
   <span class="hljs-attribute">left</span>: <span class="hljs-number">3rem</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">20rem</span>;
@@ -719,7 +712,7 @@ scrollSmooth();</pre>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.8 KB</span>
+                    <span class="Meta-value">3 KB</span>
                 </li>
             </ul>
         </div>
@@ -1909,7 +1902,7 @@ scrollSmooth();</pre>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-27T13:14:11.264Z">
+                            <time datetime="2021-12-27T14:44:11.931Z">
                                 12/27/2021
                             </time>
                         

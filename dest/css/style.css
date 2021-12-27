@@ -3584,6 +3584,7 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 .drawer[aria-expanded="true"] .drawer-nav {
+  overflow: auto;
   transform: translateX(0);
 }
 
