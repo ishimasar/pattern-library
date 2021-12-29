@@ -187,7 +187,7 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dialog</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dialog-panel&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;dialog&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;d-message&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;d-message&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__paragraph&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;document&quot;</span>&gt;</span>
-                モーダルダイアログ(モーダルウインドウ)<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                モーダルダイアログ(モーダルウインドウ)<span class="hljs-tag">&lt;<span class="hljs-name">br</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;display-tbdt&quot;</span>&gt;</span>
                 とはどんなものか知っていますか？
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__buttons&quot;</span>&gt;</span>
@@ -228,7 +228,7 @@
       <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;d-message&quot;</span>
     &gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;d-message&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__paragraph&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;document&quot;</span>&gt;</span>
-        モーダルダイアログ(モーダルウインドウ)<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+        モーダルダイアログ(モーダルウインドウ)<span class="hljs-tag">&lt;<span class="hljs-name">br</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;display-tbdt&quot;</span>&gt;</span>
         とはどんなものか知っていますか？
       <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-panel__buttons&quot;</span>&gt;</span>
@@ -309,42 +309,81 @@
     <span class="hljs-built_in">this</span>.no = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;dialog-no&#x27;</span>);
     <span class="hljs-built_in">this</span>.close = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;dialog-close&#x27;</span>);
     <span class="hljs-built_in">this</span>.returnSpan = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;return-value&#x27;</span>);
+    <span class="hljs-built_in">this</span>.openflag = <span class="hljs-literal">true</span>;
 
     <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.wrap != <span class="hljs-literal">null</span>) {
+      <span class="hljs-comment">// eslint-disable-next-line no-undef</span>
       dialogPolyfill.registerDialog(<span class="hljs-built_in">this</span>.dialog);
     }
   }
   <span class="hljs-function"><span class="hljs-title">showDialog</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.wrap != <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.wrap != <span class="hljs-literal">null</span> &amp;&amp; !<span class="hljs-built_in">this</span>.dialog.hasAttribute(<span class="hljs-string">&#x27;open&#x27;</span>)) {
       <span class="hljs-built_in">this</span>.open.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
-        <span class="hljs-built_in">this</span>.dialog.showModal();
-        <span class="hljs-built_in">this</span>.dialog.style.visibility = <span class="hljs-string">&#x27;visible&#x27;</span>;
-        <span class="hljs-built_in">this</span>.dialog.classList.remove(<span class="hljs-string">&#x27;is-motioned&#x27;</span>);
-        <span class="hljs-built_in">this</span>.dialog.setAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>, <span class="hljs-string">&#x27;0&#x27;</span>);
-        <span class="hljs-built_in">this</span>.dialog.focus();
+        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.openflag === <span class="hljs-literal">true</span>) {
+          <span class="hljs-built_in">this</span>.dialog.showModal();
+          <span class="hljs-built_in">this</span>.dialog.style.display = <span class="hljs-string">&#x27;block&#x27;</span>;
+          <span class="hljs-built_in">this</span>.dialog.style.visibility = <span class="hljs-string">&#x27;visible&#x27;</span>;
+          <span class="hljs-built_in">this</span>.dialog.classList.remove(<span class="hljs-string">&#x27;is-motioned&#x27;</span>);
+          <span class="hljs-built_in">this</span>.dialog.setAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>, <span class="hljs-string">&#x27;0&#x27;</span>);
+          <span class="hljs-built_in">this</span>.dialog.focus();
+          <span class="hljs-built_in">this</span>.fixBackdrop();
+
+          <span class="hljs-built_in">this</span>.openflag = <span class="hljs-literal">false</span>;
+        }
       });
     }
+    <span class="hljs-built_in">this</span>.opneflag = <span class="hljs-literal">false</span>;
   }
   <span class="hljs-function"><span class="hljs-title">hideDialog</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.wrap != <span class="hljs-literal">null</span>) {
       <span class="hljs-built_in">this</span>.yes.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
-        <span class="hljs-built_in">this</span>.hideProcess(<span class="hljs-string">&#x27;はい&#x27;</span>);
+        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.dialog.hasAttribute(<span class="hljs-string">&#x27;open&#x27;</span>)) {
+          <span class="hljs-built_in">this</span>.hideProcess(<span class="hljs-string">&#x27;はい&#x27;</span>);
+          <span class="hljs-built_in">this</span>.unfixBackdrop();
+        }
       });
       <span class="hljs-built_in">this</span>.no.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
-        <span class="hljs-built_in">this</span>.hideProcess(<span class="hljs-string">&#x27;いいえ&#x27;</span>);
+        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.dialog.hasAttribute(<span class="hljs-string">&#x27;open&#x27;</span>)) {
+          <span class="hljs-built_in">this</span>.hideProcess(<span class="hljs-string">&#x27;いいえ&#x27;</span>);
+          <span class="hljs-built_in">this</span>.unfixBackdrop();
+        }
       });
       <span class="hljs-built_in">this</span>.close.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
-        <span class="hljs-built_in">this</span>.hideProcess(<span class="hljs-string">&#x27;きみ、閉じるボタンを押したね...&#x27;</span>);
+        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.dialog.hasAttribute(<span class="hljs-string">&#x27;open&#x27;</span>)) {
+          <span class="hljs-built_in">this</span>.hideProcess(<span class="hljs-string">&#x27;きみ、閉じるボタンを押したね...&#x27;</span>);
+          <span class="hljs-built_in">this</span>.unfixBackdrop();
+        }
       });
       <span class="hljs-built_in">this</span>.dialog.addEventListener(<span class="hljs-string">&#x27;cancel&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
-        <span class="hljs-built_in">this</span>.hideProcess(<span class="hljs-string">&#x27;Escapeボタン押しました？&#x27;</span>);
+        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.dialog.hasAttribute(<span class="hljs-string">&#x27;open&#x27;</span>)) {
+          <span class="hljs-built_in">this</span>.hideProcess(<span class="hljs-string">&#x27;Escapeボタン押しました？&#x27;</span>);
+          <span class="hljs-built_in">this</span>.unfixBackdrop();
+        }
       });
       <span class="hljs-built_in">this</span>.dialog.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
-        <span class="hljs-keyword">if</span> (event.target === <span class="hljs-built_in">this</span>.dialog) {
+        <span class="hljs-keyword">if</span> (event.target === <span class="hljs-built_in">this</span>.dialog &amp;&amp; <span class="hljs-built_in">this</span>.dialog.hasAttribute(<span class="hljs-string">&#x27;open&#x27;</span>)) {
           <span class="hljs-built_in">this</span>.hideProcess(<span class="hljs-string">&#x27;きみ、ウインドウの外を押したね...&#x27;</span>);
+          <span class="hljs-built_in">this</span>.unfixBackdrop();
         }
       });
     }
+  }
+  <span class="hljs-function"><span class="hljs-title">fixBackdrop</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">const</span> body = <span class="hljs-built_in">document</span>.body;
+    <span class="hljs-keyword">const</span> scrollY = <span class="hljs-built_in">document</span>.documentElement.style.getPropertyValue(<span class="hljs-string">&#x27;--scroll-y&#x27;</span>);
+    body.style.position = <span class="hljs-string">&#x27;fixed&#x27;</span>;
+    body.style.top = <span class="hljs-string">`-<span class="hljs-subst">${scrollY}</span>`</span>;
+    body.style.width = <span class="hljs-string">&#x27;100%&#x27;</span>;
+    body.style.overflow = <span class="hljs-string">&#x27;hidden&#x27;</span>;
+  }
+  <span class="hljs-function"><span class="hljs-title">unfixBackdrop</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">const</span> body = <span class="hljs-built_in">document</span>.body;
+    <span class="hljs-keyword">const</span> scrollY = body.style.top;
+    body.style.position = <span class="hljs-string">&#x27;&#x27;</span>;
+    body.style.top = <span class="hljs-string">&#x27;&#x27;</span>;
+    body.style.width = <span class="hljs-string">&#x27;&#x27;</span>;
+    body.style.overflow = <span class="hljs-string">&#x27;&#x27;</span>;
+    <span class="hljs-built_in">window</span>.scrollTo(<span class="hljs-number">0</span>, <span class="hljs-built_in">parseInt</span>(scrollY || <span class="hljs-string">&#x27;0&#x27;</span>) * -<span class="hljs-number">1</span>);
   }
   <span class="hljs-function"><span class="hljs-title">hideProcess</span>(<span class="hljs-params">resText</span>)</span> {
     <span class="hljs-built_in">this</span>.dialog.close(resText);
@@ -353,7 +392,9 @@
     <span class="hljs-built_in">this</span>.wrap.focus();
     <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
       <span class="hljs-built_in">this</span>.dialog.style.visibility = <span class="hljs-string">&#x27;hidden&#x27;</span>;
-    }, <span class="hljs-number">250</span>);
+      <span class="hljs-built_in">this</span>.dialog.style.display = <span class="hljs-string">&#x27;none&#x27;</span>;
+      <span class="hljs-built_in">this</span>.openflag = <span class="hljs-literal">true</span>;
+    }, <span class="hljs-number">200</span>);
   }
   <span class="hljs-function"><span class="hljs-title">respondValue</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.wrap != <span class="hljs-literal">null</span>) {
@@ -387,7 +428,7 @@ modalDialog.respondValue();</pre>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.3 KB</span>
+                    <span class="Meta-value">3.6 KB</span>
                 </li>
             </ul>
         </div>
@@ -1799,8 +1840,8 @@ _:future,
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-27T14:44:11.931Z">
-                                12/27/2021
+                            <time datetime="2021-12-29T07:49:57.315Z">
+                                12/29/2021
                             </time>
                         
                     </dd>

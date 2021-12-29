@@ -22,28 +22,17 @@ export function drawerMenu() {
     drawerOpen = state;
   }
 
-  // スクロールを禁止にする関数
-  function disableScroll(event) {
-    event.preventDefault();
-  }
-
-  // スクロール禁止
-  openButton.onclick = () => {
-    // イベントと関数を紐付け
-    document.addEventListener('touchmove', disableScroll, { passive: false });
-  }
-
-  // スクロール解除
-  closeButton.onclick = () => {
-    // イベントと関数を紐付け
-    document.removeEventListener('touchmove', disableScroll, { passive: false });
-  }
-
   function openDrawer() {
     changeState(true);
-    disableScroll(event);
+    fixBackdrop();
+  }
 
-    // ドロワーが開いたときに背景固定。要リファクタリング
+  function closeDrawer() {
+    changeState(false);
+    unfixBackdrop();
+  }
+
+  function fixBackdrop() {
     const body = document.body;
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     body.style.position = 'fixed';
@@ -52,10 +41,7 @@ export function drawerMenu() {
     body.style.overflow = 'hidden';
   }
 
-  function closeDrawer() {
-    changeState(false);
-
-    // ドロワーが閉じたときに背景固定解除&スクロール位置戻す。要リファクタリング
+  function unfixBackdrop() {
     const body = document.body;
     const scrollY = body.style.top;
     body.style.position = '';

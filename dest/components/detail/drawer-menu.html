@@ -444,28 +444,17 @@
     drawerOpen = state;
   }
 
-  <span class="hljs-comment">// スクロールを禁止にする関数</span>
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">disableScroll</span>(<span class="hljs-params">event</span>) </span>{
-    event.preventDefault();
-  }
-
-  <span class="hljs-comment">// スクロール禁止</span>
-  openButton.onclick = <span class="hljs-function">() =&gt;</span> {
-    <span class="hljs-comment">// イベントと関数を紐付け</span>
-    <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">&#x27;touchmove&#x27;</span>, disableScroll, { <span class="hljs-attr">passive</span>: <span class="hljs-literal">false</span> });
-  }
-
-  <span class="hljs-comment">// スクロール解除</span>
-  closeButton.onclick = <span class="hljs-function">() =&gt;</span> {
-    <span class="hljs-comment">// イベントと関数を紐付け</span>
-    <span class="hljs-built_in">document</span>.removeEventListener(<span class="hljs-string">&#x27;touchmove&#x27;</span>, disableScroll, { <span class="hljs-attr">passive</span>: <span class="hljs-literal">false</span> });
-  }
-
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">openDrawer</span>(<span class="hljs-params"></span>) </span>{
     changeState(<span class="hljs-literal">true</span>);
-    disableScroll(event);
+    fixBackdrop();
+  }
 
-    <span class="hljs-comment">// ドロワーが開いたときに背景固定。要リファクタリング</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">closeDrawer</span>(<span class="hljs-params"></span>) </span>{
+    changeState(<span class="hljs-literal">false</span>);
+    unfixBackdrop();
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fixBackdrop</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">const</span> body = <span class="hljs-built_in">document</span>.body;
     <span class="hljs-keyword">const</span> scrollY = <span class="hljs-built_in">document</span>.documentElement.style.getPropertyValue(<span class="hljs-string">&#x27;--scroll-y&#x27;</span>);
     body.style.position = <span class="hljs-string">&#x27;fixed&#x27;</span>;
@@ -474,10 +463,7 @@
     body.style.overflow = <span class="hljs-string">&#x27;hidden&#x27;</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">closeDrawer</span>(<span class="hljs-params"></span>) </span>{
-    changeState(<span class="hljs-literal">false</span>);
-
-    <span class="hljs-comment">// ドロワーが閉じたときに背景固定解除&amp;スクロール位置戻す。要リファクタリング</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">unfixBackdrop</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">const</span> body = <span class="hljs-built_in">document</span>.body;
     <span class="hljs-keyword">const</span> scrollY = body.style.top;
     body.style.position = <span class="hljs-string">&#x27;&#x27;</span>;
@@ -523,7 +509,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.7 KB</span>
+                    <span class="Meta-value">2.1 KB</span>
                 </li>
             </ul>
         </div>
@@ -536,9 +522,7 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre><span class="hljs-comment">/* 暫定コード */</span>
-
-<span class="hljs-selector-class">.drawer-header</span> {
+                                <pre><span class="hljs-selector-class">.drawer-header</span> {
   <span class="hljs-attribute">display</span>: flex;
   <span class="hljs-attribute">align-items</span>: center;
   <span class="hljs-attribute">justify-content</span>: center;
@@ -2020,8 +2004,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-27T14:44:11.931Z">
-                                12/27/2021
+                            <time datetime="2021-12-29T07:49:57.315Z">
+                                12/29/2021
                             </time>
                         
                     </dd>
