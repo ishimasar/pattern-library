@@ -4,11 +4,12 @@
  * Toast UI class
  */
 export class Toast {
-  constructor(id1, id2, insertElem, id3) {
+  constructor(id1, id2, insertElem, id3, id4) {
     this.trigger = document.getElementById(id1);
     this.toastBody = document.getElementById(id2);
     this.toastBodyText = document.querySelector(insertElem);
     this.close = document.getElementById(id3);
+    this.pattern = document.getElementById('id4');
     this.timerId;
   }
   showToast() {
@@ -42,6 +43,16 @@ export class Toast {
   }
   stopDisappearing() {
     clearTimeout(this.timerId);
+  }
+
+  addAppearancePattern() {
+    this.pattern.addEventListener('change', () => {
+      const value = this.patter.value;
+      console.log(value);
+      for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+      }
+    });
   }
 }
 

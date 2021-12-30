@@ -1,10 +1,21 @@
 
 
-<main class="main-wrapper">
+<main class="main-wrapper mt40">
   <button type="button" id="js-toast-trigger" class="toast-trigger">
     トースト(ポップアップ通知)<br>
     トリガーボタン
   </button>
+  <div class="selectbox-container -pulldown mt40" style="max-width: 55%; margin: auto;">
+    <label for="selectbox" class="selectbox-label">出現パターン ：</label>
+    <select id="appearance-pattern" class="selectbox -single-select" name="subject" required >
+      <option label="以下選択してボタンを押してください" selected disabled></option>
+      <option value="default">初期設定</option>
+      <option value="in-the-bottom-right">右下に出現</option>
+      <option value="in-the-bottom-left">左下に出現</option>
+      <option value="in-the-upper-right">右上に出現</option>
+      <option value="in-the-upper-left">左上に出現</option>
+    </select>
+  </div>
   <div id="js-toast-popup" class="toast" role="status" aria-live="polite" aria-atomic="false" aria-hidden="true">
     <button id="js-toast-close" type="button" class="close-button">
     <!-- 通知テキストをここにJSで追加・表示 -->

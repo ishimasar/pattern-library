@@ -2,11 +2,12 @@
  * Toast UI class
  */
 export class Toast {
-  constructor(id1, id2, insertElem, id3) {
+  constructor(id1, id2, insertElem, id3, id4) {
     this.trigger = document.getElementById(id1);
     this.toastBody = document.getElementById(id2);
     this.toastBodyText = document.querySelector(insertElem);
     this.close = document.getElementById(id3);
+    this.pattern = document.getElementById(id4);
     this.timerId;
   }
   showToast() {
@@ -25,8 +26,9 @@ export class Toast {
             this.toastBody.setAttribute('aria-hidden', 'true');
           }, 500);
             this.toastBody.classList.add('is-invisible');
-        }, 5500);
+        }, 4000);
       });
+      this.addAppearancePattern();
     }
   }
   removeToast() {
@@ -42,5 +44,22 @@ export class Toast {
   }
   stopDisappearing() {
     clearTimeout(this.timerId);
+  }
+
+  addAppearancePattern() {
+    this.pattern.addEventListener('change', () => {
+      this.pattern.selectedIndex === 2
+        ? this.toastBody.classList.add('is-bottom-right')
+        : this.toastBody.classList.remove('is-bottom-right')
+      this.pattern.selectedIndex === 3
+        ? this.toastBody.classList.add('is-bottom-left')
+        : this.toastBody.classList.remove('is-bottom-left')
+      this.pattern.selectedIndex === 4
+        ? this.toastBody.classList.add('is-upper-right')
+        : this.toastBody.classList.remove('is-upper-right')
+      this.pattern.selectedIndex === 5
+        ? this.toastBody.classList.add('is-upper-left')
+        : this.toastBody.classList.remove('is-upper-left')
+    });
   }
 }

@@ -75,7 +75,7 @@ tab.throttle();
 
 // TabSwipe();
 
-const toast = new Toast('js-toast-trigger', 'js-toast-popup', '.toast > .text', 'js-toast-close');
+const toast = new Toast('js-toast-trigger', 'js-toast-popup', '.toast > .text', 'js-toast-close', 'appearance-pattern');
 toast.showToast();
 toast.removeToast();
 

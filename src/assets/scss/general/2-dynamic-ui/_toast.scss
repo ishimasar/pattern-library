@@ -17,9 +17,13 @@
     background-color: #777;
     color: var(--white);
   }
+  + .selectbox-container.-pulldown:after {
+    content: none;
+  }
 }
 
 .toast {
+  width: fit-content;
   &[aria-hidden="false"] {
     display: block;
     position: relative;
@@ -32,12 +36,100 @@
     border-radius: .25rem;
     border: 1px solid var(--border-color);
     animation: fade-in .25s var(--ease-in-cubic);
+    &.is-bottom-right {
+      margin: {
+        right: 0;
+        left: auto;
+      }
+      right: 5%;
+      transition: right .85s var(--ease-out-cubic);
+    }
+    &.is-bottom-left {
+      margin: {
+        right: auto;
+        left: 0;
+      }
+      left: -5%;
+      transition: left .85s var(--ease-out-cubic);
+    }
+    &.is-upper-right {
+      margin: {
+        right: 0;
+        left: auto;
+      }
+      top: initial;
+      bottom: 300px;
+      right: 5%;
+      transition: right .85s var(--ease-out-cubic);
+    }
+    &.is-upper-left {
+      margin: {
+        right: auto;
+        left: 0;
+      }
+      top: initial;
+      bottom: 300px;
+      left: -5%;
+      transition: left .85s var(--ease-out-cubic);
+    }
   }
   &[aria-hidden="true"] {
     display: none;
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+    &.is-bottom-right {
+      display: block;
+      position: relative;
+      top: 10vh;
+      margin: {
+        right: 0;
+        left: auto;
+      }
+      right: -100%;
+      transition: right .6s var(--ease-in-cubic);
+    }
+    &.is-bottom-left {
+      display: block;
+      position: relative;
+      top: 10vh;
+      left: -100%;
+      margin: {
+        right: auto;
+        left: 0;
+      }
+      transition: left .6s var(--ease-in-cubic);
+    }
+    &.is-upper-right {
+      display: block;
+      position: relative;
+      bottom: 300px;
+      margin: {
+        right: 0;
+        left: auto;
+      }
+      right: -100%;
+      transition: right .6s var(--ease-in-cubic);
+    }
+    &.is-upper-left {
+      display: block;
+      position: relative;
+      bottom: 300px;
+      left: -100%;
+      margin: {
+        right: auto;
+        left: 0;
+      }
+      transition: left .6s var(--ease-in-cubic);
+    }
   }
   &.is-invisible {
     animation: fade-out .5s var(--ease-in-cubic);
+    &.is-bottom-right,
+    &.is-bottom-left,
+    &.is-upper-right,
+    &.is-upper-left {
+      animation: unset;
+    }
   }
   > .text {
     padding: .5rem  1rem .45rem;
