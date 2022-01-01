@@ -1,10 +1,7 @@
 @use "../../base/settings";
 
-.button-container {
-  justify-content: space-around;
-}
 .button {
-  display: inline-block;
+  display: block;
   position: relative;
   width: 12.5rem;
   height: 4rem;

@@ -3,7 +3,6 @@
 .selectbox-container {
   position: relative;
   width: 75%;
-  margin: auto;
   box-sizing: border-box;
   @include settings.mq(dt) {
     display: flex;

@@ -1,15 +1,11 @@
 @use "../../base/settings";
 
 .range-slider-container {
-  margin: auto;
   @include settings.mq(tb-dth) {
     width: 50%;
   }
   @include settings.mq(sp) {
     width: 90%;
-  }
-  & .ui-name {
-    margin: auto auto 2rem;
   }
   & .control-name {
     display: flex;
@@ -59,13 +55,7 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 .volume-value,
-.volume-value-supplement {
-  text-align: center;
-}
-.volume-value {
+.something-value {
   font-size: larger;
   font-weight: bold;
-}
-.volume-value-supplement {
-  margin-top: .5rem;
 }

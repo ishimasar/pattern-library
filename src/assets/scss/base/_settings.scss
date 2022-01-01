@@ -25,12 +25,12 @@
 // | tb-dth | 768以上     | タブレット~デスクトップの画面サイズをカバー |
 
 $breakpointVar: (
-  "sp": "print, screen and (max-width:47.96875em)",
-  "tb": "print, screen and (min-width:48em) and (max-width:64em)",
+  "sp": "screen and (max-width:47.96875em)",
+  "tb": "screen and (min-width:48em) and (max-width:64em)",
   "dt": "print, screen and (min-width:64.0625em)",
   "dtl": "print, screen and (min-width:64.0625em) and (max-width:100em)",
   "dth": "print, screen and (min-width:100.0625em)",
-  "sp-tb": "print, screen and (max-width:64em)",
+  "sp-tb": "screen and (max-width:64em)",
   "tb-dth": "print, screen and (min-width:48em)"
 ) !default;
 

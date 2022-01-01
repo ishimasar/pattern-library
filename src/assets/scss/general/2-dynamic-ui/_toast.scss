@@ -1,5 +1,9 @@
 @use "../../base/settings";
 
+html[data-whatinput][data-whatintent] {
+  overflow-x: hidden;
+}
+
 .toast-trigger {
   display: block;
   width: 100%;
@@ -32,7 +36,7 @@
     width: fit-content;
     max-width: 90%;
     margin: auto;
-    background-color: var(--white);
+    background-color: #e6e6e6;
     border-radius: .25rem;
     border: 1px solid var(--border-color);
     animation: fade-in .25s var(--ease-in-cubic);
@@ -76,7 +80,7 @@
   &[aria-hidden="true"] {
     display: none;
     border: 1px solid var(--border-color);
-    background-color: var(--white);
+    background-color: #e6e6e6;
     &.is-bottom-right {
       display: block;
       position: relative;

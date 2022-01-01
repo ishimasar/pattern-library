@@ -3,7 +3,6 @@
 .switch-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 2rem;
 }
 .switch-state-off {
@@ -61,7 +60,6 @@
 .switch-target {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 50vh;
   padding: 2rem;
   background-color: var(--white);

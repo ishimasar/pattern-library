@@ -2,10 +2,8 @@
 
 .pagination {
   display: flex;
-  justify-content: center;
   position: relative;
   width: 100%;
-  margin: auto;
   @include settings.mq(tb-dth) {
     max-width: 50rem;
   }

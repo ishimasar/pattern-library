@@ -1,5 +1,5 @@
 /**
- * # print.scss
+# print.scss
  *   - ページ印刷用CSS
 */
 
@@ -8,8 +8,13 @@
  * 当該ページにおけるメインコンテンツ以外は印刷しない
  * 共通header・footer、asideなどは基本除外
  */
+
 @media print {
   body > *:not(main) {
     display: none;
+  }
+  .drawer[aria-expanded="true"],
+  .smooth-scroll {
+    display: block!important;
   }
 }

@@ -10,18 +10,18 @@
 $sizes: 8;
 
 @mixin margin-classes {
-  @for $i from -3 through 5 {
+  @for $i from -3 through 6 {
      $margin: $i * 0.5;
-    // .ml#{$i * $sizes} { margin-left: $margin + rem; }
+    .ml#{$i * $sizes} { margin-left: $margin + rem; }
     // .mr#{$i * $sizes} { margin-right: $margin + rem; }
     .mt#{$i * $sizes} { margin-top: $margin + rem; }
     .mb#{$i * $sizes} { margin-bottom: $margin + rem; }
-    // .mh#{$i * $sizes} {
+    // .mx#{$i * $sizes} {
     //   margin: {
     //     right: $margin + rem;
     //     left: $margin + rem;
     //   }
-    .mv#{$i * $sizes} {
+    .my#{$i * $sizes} {
       margin: {
         top: $margin + rem;
         bottom: $margin + rem;
@@ -40,11 +40,11 @@ $sizes: 8;
 @include margin-classes;
 
 @mixin padding-classes {
-  @for $i from 0 through 5 {
+  @for $i from 0 through 6 {
     $padding: $i * 0.5;
-  //  .pl#{$i * $sizes} {padding-left: $padding + rem;}
+   .pl#{$i * $sizes} {padding-left: $padding + rem;}
   //  .pr#{$i * $sizes} {padding-right: $padding + rem;}
-  //  .pt#{$i * $sizes} {padding-top: $padding + rem;}
+   .pt#{$i * $sizes} {padding-top: $padding + rem;}
   //  .pb#{$i * $sizes} {padding-bottom: $padding + rem;}
  }
 }
