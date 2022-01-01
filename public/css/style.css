@@ -1498,7 +1498,12 @@ legend {
 .table-scroll {
   width: 100%;
   margin: auto;
-  overflow: scroll;
+}
+@media screen and (max-width:47.96875em) {
+  .table-scroll {
+    overflow-x: scroll;
+    overflow-y: auto;
+  }
 }
 .table-scroll .table {
   white-space: pre;
@@ -1511,7 +1516,7 @@ legend {
 
 .sticky-box {
   width: 100%;
-  height: 300px;
+  height: 18.75rem;
   overflow: scroll;
 }
 
@@ -3068,14 +3073,14 @@ input[type=password]::-ms-reveal {
 }
 @media print, screen and (min-width:64.0625em) {
   .selectbox-container.-pulldown:after {
-    right: 20px;
-    bottom: 19.5px;
+    right: 1.25rem;
+    bottom: 1.21875rem;
   }
 }
 @media screen and (max-width:64em) {
   .selectbox-container.-pulldown:after {
-    right: 13px;
-    bottom: 17px;
+    right: 0.8125rem;
+    bottom: 1.0625rem;
   }
 }
 
@@ -3108,10 +3113,10 @@ input[type=password]::-ms-reveal {
   display: inline-block;
   position: relative;
   max-width: 60rem;
-  margin: auto 1px auto -1px;
-  border: 1px solid #333;
+  margin: auto 0.0625rem auto -0.0625rem;
+  border: 0.0625rem solid #333;
   line-height: 1.2;
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0.0625rem 0.0625rem 2px 0.0625rem rgba(0, 0, 0, 0.15);
 }
 @media print, screen and (min-width:64.0625em) {
   .selectbox {
@@ -3120,7 +3125,7 @@ input[type=password]::-ms-reveal {
     font-size: calc(var(--font-size-m2));
   }
   .selectbox:focus {
-    padding: calc(0.65rem - 1px) calc(1rem - 1px);
+    padding: 0.5875rem 0.9375rem;
   }
 }
 @media screen and (max-width:64em) {
@@ -3130,24 +3135,31 @@ input[type=password]::-ms-reveal {
     font-size: calc(var(--font-size-m1) - 0.1rem);
   }
   .selectbox:focus {
-    padding: calc(0.65rem - 1px) calc(1.5rem - 1px) calc(0.5rem - 1px) calc(0.8rem - 1px);
+    padding: 0.5875rem 1.4375rem 0.4375rem 0.7375rem;
   }
 }
 .selectbox:focus {
-  border-width: 2px;
+  border-width: 0.125rem;
 }
 @media print, screen and (min-width:64.0625em) {
   .selectbox.-single-select {
-    height: 51px;
+    height: 3.1875rem;
   }
 }
 @media screen and (max-width:64em) {
   .selectbox.-single-select {
-    height: 47.34px;
+    height: 2.95875rem;
   }
 }
-.selectbox.-multiple-select {
-  min-height: 300px;
+@media print, screen and (min-width:64.0625em) {
+  .selectbox.-multiple-select {
+    min-height: 3.1875rem;
+  }
+}
+@media screen and (max-width:64em) {
+  .selectbox.-multiple-select {
+    min-height: 2.95875rem;
+  }
 }
 
 .button {
@@ -3807,8 +3819,8 @@ input[type=range]:active::-webkit-slider-thumb {
 }
 @media screen and (max-width:64em) {
   .smooth-scroll .container {
-    flex-direction: column-reverse;
     justify-content: flex-start;
+    position: relative;
     width: 90vw;
   }
 }
@@ -3846,7 +3858,13 @@ input[type=range]:active::-webkit-slider-thumb {
 }
 @media screen and (max-width:64em) {
   .smooth-scroll .aside {
-    margin-bottom: 2rem;
+    position: fixed;
+    right: 0;
+    bottom: 2rem;
+    width: 8rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(0.125rem);
+    z-index: 2;
   }
 }
 .smooth-scroll .toc {
@@ -3857,11 +3875,29 @@ input[type=range]:active::-webkit-slider-thumb {
   top: 2rem;
   width: 100%;
   text-align: center;
-  line-height: 3;
+}
+@media print, screen and (min-width:64.0625em) {
+  .smooth-scroll .toc {
+    line-height: 3;
+  }
+}
+@media screen and (max-width:64em) {
+  .smooth-scroll .toc {
+    line-height: 2;
+  }
 }
 .smooth-scroll .toc__link {
-  padding: 0.5rem;
   transition: all 0.25s;
+}
+@media print, screen and (min-width:64.0625em) {
+  .smooth-scroll .toc__link {
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width:64em) {
+  .smooth-scroll .toc__link {
+    padding: 0.4rem;
+  }
 }
 @media screen and (max-width:64em) {
   .smooth-scroll .toc__link,

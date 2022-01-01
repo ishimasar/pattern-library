@@ -3,7 +3,10 @@
 .table-scroll {
   width: 100%;
   margin: auto;
-  overflow: scroll;
+  @include settings.mq(sp) {
+    overflow-x: scroll;
+    overflow-y: auto;
+  }
   .table {
     white-space: pre;
     @include settings.mq(dt) {
@@ -13,7 +16,7 @@
 }
 .sticky-box {
   width: 100%;
-  height: 300px;
+  height: 18.75rem;
   overflow: scroll;
 }
 .table {

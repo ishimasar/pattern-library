@@ -12,12 +12,12 @@
     @include settings.triangle(12, 8, bottom, #333);
     position: absolute;
     @include settings.mq(dt) {
-      right: 20px;
-      bottom: 19.5px;
+      right: 1.25rem;
+      bottom: 1.21875rem;
     }
     @include settings.mq(sp-tb) {
-      right: 13px;
-      bottom: 17px;
+      right: .8125rem;
+      bottom: 1.0625rem;
     }
   }
 }
@@ -45,18 +45,16 @@
   display: inline-block;
   position: relative;
   max-width: 60rem;
-  margin: auto 1px auto -1px;
-  border: 1px solid #333;
-  // background: hsla(17, 24%, 94%, 1);
+  margin: auto .0625rem auto -.0625rem;
+  border: .0625rem solid #333;
   line-height: 1.2;
-  // border-radius: 5px;
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15);
+  box-shadow: .0625rem .0625rem 2px .0625rem rgba(0, 0, 0, .15);
   @include settings.mq(dt) {
     width: 75%;
     padding: .65rem 1rem;
     font-size: calc(var(--font-size-m2));
     &:focus {
-      padding: calc(.65rem - 1px) calc(1rem - 1px);
+      padding: calc(.65rem - .0625rem) calc(1rem - .0625rem);
     }
   }
   @include settings.mq(sp-tb) {
@@ -65,22 +63,27 @@
     font-size: calc(var(--font-size-m1) - .1rem);
     &:focus {
       padding:
-        calc(.65rem - 1px) calc(1.5rem - 1px) calc(.5rem - 1px)
-        calc(.8rem - 1px);
+        calc(.65rem - .0625rem) calc(1.5rem - .0625rem) calc(.5rem - .0625rem)
+        calc(.8rem - .0625rem);
     }
   }
   &:focus {
-    border-width: 2px;
+    border-width: .125rem;
   }
   &.-single-select {
     @include settings.mq(dt) {
-      height: 51px;
+      height: 3.1875rem;
     }
     @include settings.mq(sp-tb) {
-      height: 47.34px;
+      height: 2.95875rem;
     }
   }
   &.-multiple-select {
-    min-height: 300px;
+    @include settings.mq(dt) {
+      min-height: 3.1875rem;
+    }
+    @include settings.mq(sp-tb) {
+      min-height: 2.95875rem;
+    }
   }
 }
