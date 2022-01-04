@@ -3957,6 +3957,66 @@ input[type=range]:active::-webkit-slider-thumb {
   width: 20rem;
 }
 
+.typewriter-cycle {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+.typewriter-cycle li:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.typewriter-cycle li:first-child typewritten-text {
+  visibility: visible;
+}
+
+typewritten-text {
+  font-weight: bold;
+}
+typewritten-text[paused] {
+  visibility: hidden;
+}
+typewritten-text.active {
+  visibility: visible;
+}
+typewritten-text:not(.active) .typewritten-text_start::after {
+  visibility: hidden;
+}
+
+:root {
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --code-font: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --color-bg: hsl(0, 0%, 93%);
+  --color-fg: hsl(0, 0%, 100%);
+  --color-primary: 211, 69%, 57%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+body {
+  font-family: var(--font);
+  padding: 0.5em;
+  background: var(--color-bg);
+}
+
+section {
+  max-width: 80vh;
+  font-size: 1rem;
+  background-color: var(--color-fg);
+  padding: 1.5em 1rem 3rem;
+  border: 0.0625em solid hsla(var(--color-primary), 1);
+  box-shadow: 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15) inset;
+  position: relative;
+  margin: 0 0 1rem;
+}
+
 .column-box {
   column-gap: 3rem;
   column-rule: solid 1px;

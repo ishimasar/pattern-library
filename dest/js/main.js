@@ -2,6 +2,7 @@
 'use strict';
 
 import { Accordion } from './modules/Accordion.js';
+// import { Calendar } from './modules/Calendar.js';
 import { Carousel } from './modules/Carousel.js';
 import { currentLocation } from './modules/CurrentLocation.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
@@ -13,6 +14,7 @@ import { Tab } from './modules/Tab.js';
 // import { TabSwipe } from './modules/TabSwipe.js';
 import { Toast } from './modules/Toast.js';
 import { ToggleSwitch } from './modules/ToggleSwitch.js';
+import { typingText } from './modules/TypingText.js';
 import { UiModeSwitcher } from './modules/UiModeSwitcher.js';
 import { toggleToc } from './modules/ToggleToc.js';
 import { PasswordRevealCheckbox, PasswordRevealButton } from './modules/PasswordReveal.js';
@@ -83,6 +85,8 @@ currentLocation();
 scrollSmooth();
 
 toggleToc();
+
+typingText();
 
 const toggleSwitch = new ToggleSwitch('#switch1', '.switch-state-on', '.switch-state-off');
 toggleSwitch.switchState();

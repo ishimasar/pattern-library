@@ -1,0 +1,59 @@
+.typewriter-cycle {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  & li:not(:first-child) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  & li:first-child typewritten-text {
+    visibility: visible;
+  }
+}
+
+typewritten-text {
+  font-weight: bold;
+  &[paused] {
+    visibility: hidden;
+  }
+  &.active {
+    visibility: visible;
+  }
+  &:not(.active) .typewritten-text_start::after {
+    visibility: hidden;
+  }
+}
+
+:root {
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --code-font: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --color-bg: hsl(0, 0%, 93%);
+  --color-fg: hsl(0, 0%, 100%);
+  --color-primary: 211, 69%, 57%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+body {
+  font-family: var(--font);
+  padding: .5em;
+  background: var(--color-bg);
+}
+
+section {
+  max-width: 80vh;
+  font-size: 1rem;
+  background-color: var(--color-fg);
+  padding: 1.5em 1rem 3rem;
+  border: .0625em solid hsla(var(--color-primary), 1);
+  box-shadow: .125em .125em .25em hsla(0, 0%, 0%, .15) inset;
+  position: relative;
+  margin: 0 0 1rem;
+}
