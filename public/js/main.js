@@ -2,6 +2,7 @@
 'use strict';
 
 import { Accordion } from './modules/Accordion.js';
+import { Calendar } from './modules/Calendar .js';
 import { Carousel } from './modules/Carousel.js';
 import { currentLocation } from './modules/CurrentLocation.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
