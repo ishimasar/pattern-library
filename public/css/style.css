@@ -4000,13 +4000,7 @@ typewritten-text:not(.active) .typewritten-text_start::after {
   margin-top: 0;
 }
 
-body {
-  font-family: var(--font);
-  padding: 0.5em;
-  background: var(--color-bg);
-}
-
-section {
+.typewriter-section {
   max-width: 80vh;
   font-size: 1rem;
   background-color: var(--color-fg);
