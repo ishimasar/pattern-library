@@ -1,62 +1,11 @@
 @use "../../base/settings";
 
-.calendar__button-group {
+.calendar-control {
   display: flex;
   justify-content: center;
 }
-
-.main-wrapper > .calendar {
-  height: 70vh;
-}
-
-.calendar {
-  width: 100%;
-  .caption {
-    caption-side: top;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--black);
-  }
-  > .table-head > tr > th {
-    width: calc(100% / 7);
-    padding: .5rem;
-    border: .025rem solid var(--border-color);
-    background-color: hsla(0, 0%, 95%, 1);
-    text-align: center;
-    &.saturday {
-      color: hsla(229, 73%, 19%, 1);
-    }
-    &.sunday {
-      color: hsla(350, 100%, 45%, 1);
-    }
-  }
-
-  .table-body > tr > td {
-    width: calc(100% / 7);
-    height: calc(100% / 7);
-    border: .025rem solid var(--border-color);
-    text-align: center;
-    vertical-align: top;
-    &.today > .deco {
-      font-weight: bold;
-      color: var(--white);
-      background-color: hsla(229, 90%, 54%, 1);
-      border-radius: 50%;
-      display: inline-block;
-      padding: 0.2rem;
-      width: 2rem;
-      height: 2rem;
-    }
-  }
-
-  .prev-month-day,
-  .next-month-day {
-    color: hsla(0, 0%, 80%, 1);
-  }
-}
-
-.calendar__control-prev,
-.calendar__control-next {
+.calendar-control__prev,
+.calendar-control__next {
   position: relative;
   transition: transform .3s var(--ease-out-quad);
   @include settings.mq(sp-tb) {
@@ -87,13 +36,60 @@
     }
   }
 }
-
-.calendar__control-prev:before {
+.calendar-control__prev:before {
   left: .5rem;
   transform: translateY(-50%) rotate(135deg);
 }
-
-.calendar__control-next:before {
+.calendar-control__next:before {
   right: .5rem;
   transform: translateY(-50%) rotate(-45deg);
+
+}
+
+.calendar {
+  .main-wrapper > & {
+    height: 70vh;
+  }
+  width: 100%;
+  > .caption {
+    caption-side: top;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--black);
+  }
+  > .table-head > tr > th {
+    width: calc(100% / 7);
+    padding: .5rem;
+    border: .025rem solid var(--border-color);
+    background-color: hsla(0, 0%, 95%, 1);
+    text-align: center;
+    &.saturday {
+      color: hsla(229, 73%, 19%, 1);
+    }
+    &.sunday {
+      color: hsla(350, 100%, 45%, 1);
+    }
+  }
+
+  > .table-body > tr > td {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    border: .025rem solid var(--border-color);
+    text-align: center;
+    vertical-align: top;
+    &.today > .deco {
+      font-weight: bold;
+      color: var(--white);
+      background-color: hsla(229, 90%, 54%, 1);
+      border-radius: 50%;
+      display: inline-block;
+      padding: 0.2rem;
+      width: 2rem;
+      height: 2rem;
+    }
+    &.prev-month-day,
+    &.next-month-day {
+      color: hsla(0, 0%, 80%, 1);
+    }
+  }
 }
