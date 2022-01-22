@@ -2,7 +2,7 @@
 'use strict';
 
 import { Accordion } from './modules/Accordion.js';
-// import { Calendar } from './modules/Calendar.js';
+import { calendar } from './modules/Calendar.js';
 import { Carousel } from './modules/Carousel.js';
 import { currentLocation } from './modules/CurrentLocation.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+calendar();
 
 const carousel = new Carousel('.js-carousel-cont', '.carousel__img', '.js-carousel-thumb', '.js-carousel-prev', '.js-carousel-next', '.js-carousel-play', '.js-carousel-pause');
 carousel.setter();

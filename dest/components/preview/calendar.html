@@ -16,6 +16,73 @@
   </head>
   <body>
     <main class="main-wrapper">
+  <div class="calendar__button-group">
+    <button type="button" id="js-calendar-prev" class="calendar__control-prev" aria-label="前の月のカレンダーを表示">前の月へ</button>
+    <button type="button" id="js-calendar-next" class="calendar__control-next" aria-label="次の月のカレンダーを表示">次の月へ</button>
+  </div>
+  <table class="calendar">
+    <!-- 現在年月をJavaScriptで挿入 -->
+    <caption id="name" class="caption">YYYY年MM月のカレンダー</caption>
+    <thead class="table-head">
+      <tr>
+        <th>月</th>
+        <th>火</th>
+        <th>水</th>
+        <th>木</th>
+        <th>金</th>
+        <th class="saturday">土</th>
+        <th class="sunday">日</th>
+      </tr>
+    </thead>
+    <tbody id="calendar-body" class="table-body">
+      <!-- tr要素以下をJavaScriptで動的にカレンダーUIを挿入 -->
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </main>
   </body>
 </html>

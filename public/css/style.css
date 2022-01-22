@@ -1922,6 +1922,115 @@ legend {
   }
 }
 
+.calendar__button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.main-wrapper > .calendar {
+  height: 70vh;
+}
+
+.calendar {
+  width: 100%;
+}
+.calendar .caption {
+  caption-side: top;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--black);
+}
+.calendar > .table-head > tr > th {
+  width: 14.2857142857%;
+  padding: 0.5rem;
+  border: 0.025rem solid var(--border-color);
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.calendar > .table-head > tr > th.saturday {
+  color: #0d1a54;
+}
+.calendar > .table-head > tr > th.sunday {
+  color: #e60026;
+}
+.calendar .table-body > tr > td {
+  width: 14.2857142857%;
+  height: 14.2857142857%;
+  border: 0.025rem solid var(--border-color);
+  text-align: center;
+  vertical-align: top;
+}
+.calendar .table-body > tr > td.today > .deco {
+  font-weight: bold;
+  color: var(--white);
+  background-color: #2047f3;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 0.2rem;
+  width: 2rem;
+  height: 2rem;
+}
+.calendar .prev-month-day,
+.calendar .next-month-day {
+  color: #cccccc;
+}
+
+.calendar__control-prev,
+.calendar__control-next {
+  position: relative;
+  transition: transform 0.3s var(--ease-out-quad);
+}
+@media screen and (max-width:64em) {
+  .calendar__control-prev,
+.calendar__control-next {
+    width: 8rem;
+    height: 2rem;
+  }
+}
+@media print, screen and (min-width:64.0625em) {
+  .calendar__control-prev,
+.calendar__control-next {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+.calendar__control-prev:before,
+.calendar__control-next:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  border-style: solid;
+  border-color: var(--border-color);
+  backface-visibility: hidden;
+}
+@media screen and (max-width:64em) {
+  .calendar__control-prev:before,
+.calendar__control-next:before {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-width: 0 2px 2px 0;
+  }
+}
+@media print, screen and (min-width:64.0625em) {
+  .calendar__control-prev:before,
+.calendar__control-next:before {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 0 3px 3px 0;
+  }
+}
+
+.calendar__control-prev:before {
+  left: 0.5rem;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.calendar__control-next:before {
+  right: 0.5rem;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
 .carousel {
   margin: auto;
 }
