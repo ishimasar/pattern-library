@@ -16,45 +16,47 @@
   </head>
   <body>
     <main class="main-wrapper">
-  <fieldset>
-    <legend class="heading3">- Type Text</legend>
-    <div class="input-text-container">
-      <label for="name" class="input-text-label">お名前 ：</label>
-      <input type="text" id="name" name="name" placeholder="姓 名" maxlength="50" required class="input-text">
-    </div>
-  </fieldset>
-  <div class="divider" role="separator"></div>
-  <fieldset>
-    <legend class="heading3">- Type Email</legend>
-    <div class="input-text-container">
-      <label for="email" class="input-text-label">Emailアドレス ：</label>
-      <input type="email" id="email" name="email" pattern=".{1,}@.*" placeholder="xxxx@xxx.com（.co.jpなど）" maxlength="50" required class="input-text">
-    </div>
-  </fieldset>
-  <div class="divider" role="separator"></div>
-  <fieldset>
-    <legend class="heading3">- Type Password</legend>
-    <div class="input-text-container">
-      <label for="password" class="input-text-label">パスワード1 ：</label>
-      <input type="password" id="password" class="js-display-pass input-text" name="password" placeholder="英数字8文字以上" required>
-      <label class="password-toggle">
-        <input type="checkbox" id="js-show-pass"> パスワードを表示する
-      </label>
-      <div class="divider" role="separator"></div>
-      <div class="input-password-wrapper">
-        <label for="js-input" class="input-text-label">パスワード2 ：</label>
-        <input type="password" id="js-input" class="input-text" name="password" placeholder="英数字8文字以上" required><button type="button" id="js-reveal-btn" class="password-toggle -button" aria-pressed="false">パスワードを表示する</button>
+  <form name="input-sample" method="post" action="">
+    <fieldset>
+      <legend class="heading3">- Type Text</legend>
+      <div class="input-text-container">
+        <label for="name" class="input-text-label">お名前 ：</label>
+        <input type="text" id="name" name="name" placeholder="姓 名" maxlength="50" required class="input-text">
       </div>
-    </div>
-  </fieldset>
-  <div class="divider" role="separator"></div>
-  <fieldset>
-    <legend class="heading3">- Textarea</legend>
-    <div class="input-text-container">
-      <label for="textarea" class="textarea-label">問い合わせ内容 ：</label>
-      <textarea id="textarea" name="message" placeholder="内容をご記入ください" required class="textarea"></textarea>
-    </div>
-  </fieldset>
+    </fieldset>
+    <div class="divider" role="separator"></div>
+    <fieldset>
+      <legend class="heading3">- Type Email</legend>
+      <div class="input-text-container">
+        <label for="email" class="input-text-label">Emailアドレス ：</label>
+        <input type="email" id="email" name="email" pattern=".{1,}@.*" placeholder="xxxx@xxx.com（.co.jpなど）" maxlength="50" required class="input-text">
+      </div>
+    </fieldset>
+    <div class="divider" role="separator"></div>
+    <fieldset>
+      <legend class="heading3">- Type Password</legend>
+      <div class="input-text-container">
+        <label for="password" class="input-text-label">パスワード1 ：</label>
+        <input type="password" id="password" class="js-display-pass input-text" name="password" placeholder="英数字8文字以上" required autocomplete>
+        <label class="password-toggle">
+          <input type="checkbox" id="js-show-pass"> パスワードを表示する
+        </label>
+        <div class="divider" role="separator"></div>
+        <div class="input-password-wrapper">
+          <label for="js-input" class="input-text-label">パスワード2 ：</label>
+          <input type="password" id="js-input" class="input-text" name="password" placeholder="英数字8文字以上" required autocomplete><button type="button" id="js-reveal-btn" class="password-toggle -button" aria-pressed="false">パスワードを表示する</button>
+        </div>
+      </div>
+    </fieldset>
+    <div class="divider" role="separator"></div>
+    <fieldset>
+      <legend class="heading3">- Textarea</legend>
+      <div class="input-text-container">
+        <label for="textarea" class="textarea-label">問い合わせ内容 ：</label>
+        <textarea id="textarea" name="message" placeholder="内容をご記入ください" required class="textarea"></textarea>
+      </div>
+    </fieldset>
+  </form>
 </main>
   </body>
 </html>

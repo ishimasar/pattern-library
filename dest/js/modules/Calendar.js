@@ -5,6 +5,7 @@ export function calendar() {
   const buttonPrev = document.getElementById('js-calendar-prev');
   const buttonNext = document.getElementById('js-calendar-next');
   const showDate = new Date(date.getFullYear(), date.getMonth(), 1);
+  const calendarBody = document.querySelector('#calendar-body');
 
   if(name) {
     showProcess(date, calendar);
@@ -37,7 +38,7 @@ export function calendar() {
     name.innerHTML = year + '年' + (month + 1) + '月のカレンダー';
 
     let calendar = createProcess(year, month);
-    document.querySelector('#calendar-body').innerHTML = calendar;
+    calendarBody.innerHTML = calendar;
   }
 
   // カレンダー作成

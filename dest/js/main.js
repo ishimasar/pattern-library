@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-calendar();
+const calendarBody = document.querySelector('#calendar-body') ? calendar() : false;
 
 const carousel = new Carousel('.js-carousel-cont', '.carousel__img', '.js-carousel-thumb', '.js-carousel-prev', '.js-carousel-next', '.js-carousel-play', '.js-carousel-pause');
 carousel.setter();
