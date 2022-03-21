@@ -433,6 +433,7 @@
     <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; entryPageLinks.length &gt; i; i++) {
       entryPageLinks[i].addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">e</span>)  =&gt;</span> {
         <span class="hljs-keyword">let</span> href = e.target.hash;
+        <span class="hljs-comment">// console.log(e.target.hash);</span>
         <span class="hljs-keyword">if</span> ( (href != <span class="hljs-string">&#x27;&#x27;</span>) &amp;&amp; (href != <span class="hljs-string">&#x27;#&#x27;</span>)) {
           <span class="hljs-keyword">let</span> targetElm = getElm(href);
           <span class="hljs-keyword">if</span> (targetElm) {
@@ -443,14 +444,14 @@
             targetElm.addEventListener(<span class="hljs-string">&#x27;blur&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
               targetElm.removeAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>);
             });
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; toc.length &gt; i; i++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; toc.length &gt; i; i++) {
               <span class="hljs-keyword">if</span> (href === toc[i].hash) {
                 toc[i].classList.add(<span class="hljs-string">&#x27;is-current&#x27;</span>);
               } <span class="hljs-keyword">else</span> {
                 toc[i].classList.remove(<span class="hljs-string">&#x27;is-current&#x27;</span>);
               }
             }
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; section.length &gt; j; j++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; section.length &gt; j; j++) {
               <span class="hljs-keyword">if</span> (targetElm !== section[i]) {
                 section[j].removeAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>);
               }
@@ -1976,7 +1977,7 @@ scrollSmooth();</pre>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2022-03-21T10:43:41.232Z">
+                            <time datetime="2022-03-21T11:38:08.387Z">
                                 3/21/2022
                             </time>
                         

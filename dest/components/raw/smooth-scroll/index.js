@@ -50,6 +50,7 @@ export function scrollSmooth() {
     for(var i = 0; entryPageLinks.length > i; i++) {
       entryPageLinks[i].addEventListener('click', (e)  => {
         let href = e.target.hash;
+        // console.log(e.target.hash);
         if ( (href != '') && (href != '#')) {
           let targetElm = getElm(href);
           if (targetElm) {
@@ -60,14 +61,14 @@ export function scrollSmooth() {
             targetElm.addEventListener('blur', () => {
               targetElm.removeAttribute('tabindex');
             });
-            for(var i = 0; toc.length > i; i++) {
+            for(let i = 0; toc.length > i; i++) {
               if (href === toc[i].hash) {
                 toc[i].classList.add('is-current');
               } else {
                 toc[i].classList.remove('is-current');
               }
             }
-            for(var j = 0; section.length > j; j++) {
+            for(let j = 0; section.length > j; j++) {
               if (targetElm !== section[i]) {
                 section[j].removeAttribute('tabindex');
               }

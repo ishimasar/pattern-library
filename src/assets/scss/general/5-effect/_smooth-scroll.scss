@@ -107,26 +107,26 @@
       font-weight: normal;
     }
   }
+  .toc__link.is-current {
+    position: relative;
+    background-color: #ccf4ff;
+    transition: all .5s;
+  }
   @include settings.mq(dt) {
     .toc__link:hover,
     .toc__link:focus {
       text-decoration: none;
       font-weight: bold;
     }
-    .toc__link.is-current {
-      position: relative;
-      background-color: #ccf4ff;
-      transition: all .5s;
-      &:before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        left: 2.75em;
-        width: 1em;
-        height: .1rem;
-        background-color: #00e;
-      }
+    .toc__link.is-current:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 2.75em;
+      width: 1em;
+      height: .1rem;
+      background-color: #00e;
     }
   }
   .footer {

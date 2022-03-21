@@ -4099,16 +4099,16 @@ input[type=range]:active::-webkit-slider-thumb {
     font-weight: normal;
   }
 }
+.smooth-scroll .toc__link.is-current {
+  position: relative;
+  background-color: #ccf4ff;
+  transition: all 0.5s;
+}
 @media print, screen and (min-width:64.0625em) {
   .smooth-scroll .toc__link:hover,
 .smooth-scroll .toc__link:focus {
     text-decoration: none;
     font-weight: bold;
-  }
-  .smooth-scroll .toc__link.is-current {
-    position: relative;
-    background-color: #ccf4ff;
-    transition: all 0.5s;
   }
   .smooth-scroll .toc__link.is-current:before {
     content: "";

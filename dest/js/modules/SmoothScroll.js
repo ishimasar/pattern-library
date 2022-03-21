@@ -39,12 +39,11 @@ export function scrollSmooth() {
 
   // ページ内リンクを取得
   const entryPageLinks = document.querySelectorAll('.js-smooth-scroll a[href^="#"]');
-  // const toc = document.querySelectorAll('.toc__link');
   const section = document.querySelectorAll('.section');
 
   // ページ内リンクにイベントを登録
   if (entryPageLinks.length) {
-    for(var i = 0; entryPageLinks.length > i; i++) {
+    for(let i = 0; entryPageLinks.length > i; i++) {
       entryPageLinks[i].addEventListener('click', (e)  => {
         let href = e.target.hash;
         if ( (href != '') && (href != '#')) {
@@ -57,7 +56,7 @@ export function scrollSmooth() {
             targetElm.addEventListener('blur', () => {
               targetElm.removeAttribute('tabindex');
             });
-            for(var i = 0; section.length > i; i++) {
+            for(let i = 0; section.length > i; i++) {
               if (targetElm !== section[i]) {
                 section[i].removeAttribute('tabindex');
               }
