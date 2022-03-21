@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-'use strict';
-
 import { Accordion } from './modules/Accordion.js';
 import { calendar } from './modules/Calendar.js';
 import { Carousel } from './modules/Carousel.js';

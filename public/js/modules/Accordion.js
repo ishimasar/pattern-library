@@ -1,8 +1,6 @@
 /**
  * Accordion UI class
  */
- 'use strict';
-
 export class Accordion {
   constructor(el) {
     this.details = el;

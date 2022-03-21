@@ -6,12 +6,12 @@
 //  * - general = プロダクトを構成する各種UI関連スタイル、コンポーネント群
 //  * ----------
 //  */
-
 @import "base/base";
 @import "base/font-face";
 @import "base/variables";
 @import "base/print";
 
+@import "general/1-static-ui/avatar";
 @import "general/1-static-ui/card";
 @import "general/1-static-ui/list";
 @import "general/1-static-ui/navigation";

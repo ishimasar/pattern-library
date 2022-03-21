@@ -3,7 +3,7 @@ title: Pattern Library & Style Guide by Cloudy knot
 ---
 このサイトは、フリーランスのWeb開発・制作者であるCloudy knotが更新・管理しているパターンライブラリおよびスタイルガイドです。
 
-Components(UI)は随時、作成追加・メンテ更新。8分類33種(base style除く)掲載 - 2022/1。<br>
+Components(UI)は随時、作成追加・メンテ更新。8分類35種(base style除く)掲載 - 2022/3。<br>
 詳細については以下のドキュメントもご参照ください。
 
 <a href="https://ishimasar.github.io/pattern-library/" target="_blank">Pattern Library &amp; Style Guide by Cloudy knot</a> (外部リンク)

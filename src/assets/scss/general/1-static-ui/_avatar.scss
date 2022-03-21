@@ -1,0 +1,79 @@
+@use "../../base/settings";
+
+.avatar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border: .0625rem solid var(--black);
+  @include settings.mq(dt) {
+    gap: 1.5rem;
+  }
+  @include settings.mq(sp-tb) {
+    gap: 1rem;
+  }
+  > .profile-photo {
+    display: block;
+    clip-path: circle(50%);
+    // border-radius: 50%; // clip-pathのフォールバック
+    @include settings.mq(tb-dth) {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+  .name {
+    font-size: large;
+    font-weight: bold;
+  }
+  .introduction {
+    margin-top: 1rem;
+  }
+  .link {
+    width: max-content;
+    text-decoration: underline;
+    @include settings.mq(tb-dth) {
+      display: block;
+    }
+    @include settings.mq(sp) {
+      display: inline;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  &.-full, &.-half, &.-one-third {
+    @include settings.mq(sp) {
+      > .profile-photo {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+  &.-half {
+    width: calc(100% / 2);
+    @include settings.mq(sp-tb) {
+      flex-direction: column;
+      .name {
+        text-align: center;
+      }
+    }
+  }
+  &.-one-third {
+    flex-direction: column;
+    width: calc(100% / 3);
+    .name {
+      text-align: center;
+    }
+  }
+}
+
+// 1/2(half)と1/3(one third)を
+.avatar-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+  .avatar {
+    width: calc(100% / 3 - .5rem);
+  }
+}

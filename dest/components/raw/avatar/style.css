@@ -1,0 +1,84 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border: .0625rem solid var(--black);
+}
+@media print, screen and (min-width:64.0625em) {
+  .avatar {
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width:64em) {
+  .avatar {
+    gap: 1rem;
+  }
+}
+.avatar > .profile-photo {
+  display: block;
+  clip-path: circle(50%);
+}
+@media print, screen and (min-width:48em) {
+  .avatar > .profile-photo {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+.avatar .name {
+  font-size: large;
+  font-weight: bold;
+}
+.avatar .introduction {
+  margin-top: 1rem;
+}
+.avatar .link {
+  width: max-content;
+  text-decoration: underline;
+}
+@media print, screen and (min-width:48em) {
+  .avatar .link {
+    display: block;
+  }
+}
+@media screen and (max-width:47.96875em) {
+  .avatar .link {
+    display: inline;
+  }
+}
+.avatar .link:hover, .avatar .link:focus {
+  text-decoration: none;
+}
+@media screen and (max-width:47.96875em) {
+  .avatar.-full > .profile-photo, .avatar.-half > .profile-photo, .avatar.-one-third > .profile-photo {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+.avatar.-half {
+  width: 50%;
+}
+@media screen and (max-width:64em) {
+  .avatar.-half {
+    flex-direction: column;
+  }
+  .avatar.-half .name {
+    text-align: center;
+  }
+}
+.avatar.-one-third {
+  flex-direction: column;
+  width: 33.3333333333%;
+}
+.avatar.-one-third .name {
+  text-align: center;
+}
+
+.avatar-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+}
+.avatar-wrap .avatar {
+  width: calc(33.3333333333% - .5rem);
+}
