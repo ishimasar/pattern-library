@@ -4,11 +4,6 @@ export function currentLocation() {
   const root = document.querySelector('body');
   const boxes = document.querySelectorAll('.section');
 
-  // 画面幅1024px以下ならtrue、超過ならfalse
-  var width = window.innerWidth;
-
-  console.log(width);
-
   const options = {
     root: root ? null : null,
     rootMargin: '-1px 0px -50% 0px',

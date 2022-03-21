@@ -50,7 +50,6 @@ export function scrollSmooth() {
     for(var i = 0; entryPageLinks.length > i; i++) {
       entryPageLinks[i].addEventListener('click', (e)  => {
         let href = e.target.hash;
-        // console.log(e.target.hash);
         if ( (href != '') && (href != '#')) {
           let targetElm = getElm(href);
           if (targetElm) {

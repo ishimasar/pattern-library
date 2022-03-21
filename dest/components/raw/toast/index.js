@@ -48,7 +48,6 @@ export class Toast {
   addAppearancePattern() {
     this.pattern.addEventListener('change', () => {
       const value = this.patter.value;
-      console.log(value);
       for (let index = 0; index < array.length; index++) {
         const element = array[index];
       }

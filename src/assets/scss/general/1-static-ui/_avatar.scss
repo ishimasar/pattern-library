@@ -14,15 +14,15 @@
   }
   > .profile-photo {
     display: block;
-    clip-path: circle(50%);
-    // border-radius: 50%; // clip-pathのフォールバック
+    // clip-path: circle(50%);// 場合によってフチが切れるので未使用
+    border-radius: 50%;
     @include settings.mq(tb-dth) {
       width: 7rem;
       height: 7rem;
     }
   }
   .name {
-    font-size: large;
+    font-size: var(--font-size-m2)!important;
     font-weight: bold;
   }
   .introduction {
@@ -42,11 +42,17 @@
       text-decoration: none;
     }
   }
-  &.-full, &.-half, &.-one-third {
+  &.-full {
+    > .profile-photo {
+      margin: .125rem;
+    }
     @include settings.mq(sp) {
       > .profile-photo {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
+      }
+      .introduction {
+        font-size: var(--font-size-s1);
       }
     }
   }
@@ -58,6 +64,15 @@
         text-align: center;
       }
     }
+    @include settings.mq(sp) {
+      > .profile-photo {
+        width: 5.5rem;
+        height: 5.5rem;
+      }
+      .introduction {
+        font-size: var(--font-size-s1);
+      }
+    }
   }
   &.-one-third {
     flex-direction: column;
@@ -65,15 +80,40 @@
     .name {
       text-align: center;
     }
+    @include settings.mq(sp) {
+      > .profile-photo {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+      .name {
+        font-size: var(--font-size-s1);
+      }
+      .introduction {
+        font-size: var(--font-size-s1);
+      }
+    }
   }
 }
 
-// 1/2(half)と1/3(one third)を
+// 1/2(half)と1/3(one third)で複数要素ある場合のレイアウト
 .avatar-wrap {
   display: flex;
   justify-content: space-between;
   gap: .5rem;
-  .avatar {
-    width: calc(100% / 3 - .5rem);
+  @include settings.mq(dt) {
+    .avatar.-half {
+      width: calc(100% / 2 - 1.5rem);
+    }
+    .avatar.-one-third {
+      width: calc(100% / 3 - 1.5rem);
+    }
+  }
+  @include settings.mq(sp-tb) {
+    .avatar.-half {
+      width: calc(100% / 2 - .5rem);
+    }
+    .avatar.-one-third {
+      width: calc(100% / 3 - .5rem);
+    }
   }
 }
