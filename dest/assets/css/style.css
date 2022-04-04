@@ -1620,6 +1620,93 @@ legend {
   }
 }
 
+.speech-balloon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.speech-balloon-wrap .profile-photo {
+  display: block;
+  clip-path: circle(50%);
+  width: 90px;
+  height: 90px;
+}
+
+.speech-balloon {
+  display: block;
+  position: relative;
+  padding: 1rem 2rem;
+  border: 0.0625rem solid var(--black);
+  line-height: 2;
+  border-radius: 0.5rem;
+}
+.speech-balloon.-left-arrow::after {
+  content: "";
+  position: absolute;
+  top: 44%;
+  left: -1px;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.0625rem;
+  background-color: var(--white);
+  border: 0.0625rem solid;
+  border-color: var(--black) transparent transparent var(--black);
+  transform: rotate(315deg) skew(15deg, 15deg) translateY(-50%);
+}
+.speech-balloon.-right-arrow::after {
+  content: "";
+  position: absolute;
+  top: 44%;
+  right: -19px;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.0625rem;
+  background-color: var(--white);
+  border: 0.0625rem solid;
+  border-color: transparent var(--black) var(--black) transparent;
+  transform: rotate(315deg) skew(15deg, 15deg) translateY(-50%);
+}
+.speech-balloon.-bottom-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 47.25%;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.0625rem;
+  background-color: var(--white);
+  border: 0.0625rem solid;
+  border-color: transparent var(--black) var(--black) transparent;
+  transform: rotate(45deg) skew(15deg, 15deg) translate(-50%);
+}
+.speech-balloon.-bottom-left-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 16%;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.0625rem;
+  background-color: var(--white);
+  border: 0.0625rem solid;
+  border-color: transparent var(--black) var(--black) transparent;
+  transform: rotate(45deg) skew(15deg, 15deg) translate(-50%);
+}
+.speech-balloon.-bottom-right-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 12%;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.0625rem;
+  background-color: var(--white);
+  border: 0.0625rem solid;
+  border-color: transparent var(--black) var(--black) transparent;
+  transform: rotate(45deg) skew(15deg, 15deg) translate(-50%);
+}
+
 .table-scroll {
   width: 100%;
   margin: auto;

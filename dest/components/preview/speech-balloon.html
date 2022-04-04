@@ -17,72 +17,23 @@
   <body>
     <main class="main-wrapper">
   <article class="article-container">
+    <h2 class="heading2">- Side Arrow</h2>
     <div class="speech-balloon-wrap">
       <img src="https://placehold.jp/0f6bff/ffffff/x.png?text=dummy" class="profile-photo" alt="プロフィール写真" width="80" height="80" decoding="async">
       <p class="speech-balloon -left-arrow">左からの吹き出し左からの吹き出し左からの吹き出し</p>
     </div>
+    <div class="speech-balloon-wrap mt48">
+      <p class="speech-balloon -right-arrow">右からの吹き出し右からの吹き出し右からの吹き出し</p>
+      <img src="https://placehold.jp/0f6bff/ffffff/x.png?text=dummy" class="profile-photo" alt="プロフィール写真" width="90" height="90" decoding="async">
+    </div>
+    <div class="divider"></div>
+    <h2 class="heading2">- Bottom Arrow</h2>
     <div class="speech-balloon-wrap">
-      <p class="speech-balloon -right-arrow">右からの吹き出し右からの吹き出し右からの吹き出し右からの吹き出し右からの吹き出し右からの吹き出し右からの吹き出し</p>
-      <img src="https://placehold.jp/0f6bff/ffffff/x.png?text=dummy" class="profile-photo" alt="プロフィール写真" width="80" height="80" decoding="async">
+      <p class="speech-balloon -bottom-arrow mb32">下からの吹き出し</p>
+      <p class="speech-balloon -bottom-left-arrow mb32">左下からの吹き出し</p>
+      <p class="speech-balloon -bottom-right-arrow mb32">右下からの吹き出し</p>
     </div>
   </article>
 </main>
-
-<style>
-  .speech-balloon-wrap {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-  }
-  .speech-balloon {
-    display: block;
-    position: relative;
-    padding: 1rem 2rem;
-    border: .0625rem solid var(--black);
-    line-height: 2;
-    border-radius: .5rem;
-  }
-  .speech-balloon.-left-arrow::after {
-    content: "";
-    position: absolute;
-    top: 46%;
-    left: -1px;
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-bottom: .0625rem;
-    background-color: var(--white);
-    border: .0625rem solid;
-    border-color: var(--black) transparent transparent var(--black);
-    transform: rotate(315deg) skew(15deg, 15deg) translateY(-50%);
-  }
-  .speech-balloon.-right-arrow {
-    margin-left: auto;
-  }
-  .speech-balloon.-right-arrow::after {
-    content: "";
-    position: absolute;
-    top: 46%;
-    right: -19px;
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-bottom: .0625rem;
-    background-color: var(--white);
-    border: .0625rem solid;
-    border-color: transparent var(--black)var(--black) transparent ;
-    transform: rotate(315deg) skew(15deg, 15deg) translateY(-50%);
-  }
-  .profile-photo {
-    display: block;
-    clip-path: circle(50%);
-    width: 80px;
-    height: 80px;
-  }
-  .profile-photo + p {
-    margin-left: 1.5rem;
-  }
-  p + .profile-photo {
-    margin-left: 1.5rem;
-  }
-</style>
   </body>
 </html>
