@@ -1,10 +1,10 @@
-@use "../../base/settings";
+@use "../../base/setting";
 
 .tab-ui {
   position: relative;
   width: 100%;
   margin: auto;
-  @include settings.mq(tb-dth) {
+  @include setting.mq(tb-dth) {
     max-width: 60rem;
   }
 }
@@ -29,7 +29,7 @@
   text-decoration: none;
   color: var(--black);
   border-radius: 5px 5px 0 0;
-  @include settings.mq(tb-dth) {
+  @include setting.mq(tb-dth) {
     width: auto;
     min-width: 12rem;
     /* タブのhover/focus状態スタイル */
@@ -41,7 +41,7 @@
       /* transition: background-color .25s ease, color .25s ease; */
     }
   }
-  @include settings.mq(sp) {
+  @include setting.mq(sp) {
     width: 100%;
   }
   /* fade-out effect */
@@ -53,7 +53,7 @@
     color: var(--white);
   }
 }
-@include settings.mq(sp) {
+@include setting.mq(sp) {
   .tablist > li {
     width: 33.33333%;
   }

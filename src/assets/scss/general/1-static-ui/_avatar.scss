@@ -1,4 +1,4 @@
-@use "../../base/settings";
+@use "../../base/setting";
 
 .avatar {
   display: flex;
@@ -6,17 +6,17 @@
   width: 100%;
   padding: 1rem;
   border: .0625rem solid var(--black);
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     gap: 1.5rem;
   }
-  @include settings.mq(sp-tb) {
+  @include setting.mq(sp-tb) {
     gap: 1rem;
   }
   > .profile-photo {
     display: block;
     // clip-path: circle(50%);// 場合によってフチが切れるので未使用
     border-radius: 50%;
-    @include settings.mq(tb-dth) {
+    @include setting.mq(tb-dth) {
       width: 7rem;
       height: 7rem;
     }
@@ -31,10 +31,10 @@
   .link {
     width: max-content;
     text-decoration: underline;
-    @include settings.mq(tb-dth) {
+    @include setting.mq(tb-dth) {
       display: block;
     }
-    @include settings.mq(sp) {
+    @include setting.mq(sp) {
       display: inline;
     }
     &:hover,
@@ -46,7 +46,7 @@
     > .profile-photo {
       margin: .125rem;
     }
-    @include settings.mq(sp) {
+    @include setting.mq(sp) {
       > .profile-photo {
         width: 6rem;
         height: 6rem;
@@ -58,13 +58,13 @@
   }
   &.-half {
     width: calc(100% / 2);
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       flex-direction: column;
       .name {
         text-align: center;
       }
     }
-    @include settings.mq(sp) {
+    @include setting.mq(sp) {
       > .profile-photo {
         width: 5.5rem;
         height: 5.5rem;
@@ -80,7 +80,7 @@
     .name {
       text-align: center;
     }
-    @include settings.mq(sp) {
+    @include setting.mq(sp) {
       > .profile-photo {
         width: 4.5rem;
         height: 4.5rem;
@@ -100,7 +100,7 @@
   display: flex;
   justify-content: space-between;
   gap: .5rem;
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     .avatar.-half {
       width: calc(100% / 2 - 1.5rem);
     }
@@ -108,7 +108,7 @@
       width: calc(100% / 3 - 1.5rem);
     }
   }
-  @include settings.mq(sp-tb) {
+  @include setting.mq(sp-tb) {
     .avatar.-half {
       width: calc(100% / 2 - .5rem);
     }

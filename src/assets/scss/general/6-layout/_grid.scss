@@ -1,4 +1,4 @@
-@use "../../base/settings";
+@use "../../base/setting";
 
 .grid {
   display: grid;
@@ -7,10 +7,10 @@
     place-items: center;
     grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     grid-auto-flow: row;
-    @include settings.mq(tb-dth) {
+    @include setting.mq(tb-dth) {
       grid-row-gap: 1.5rem;
     }
-    @include settings.mq(sp) {
+    @include setting.mq(sp) {
       gap: 1rem;
     }
   }

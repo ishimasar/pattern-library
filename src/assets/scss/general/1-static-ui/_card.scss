@@ -1,16 +1,16 @@
-@use "../../base/settings";
+@use "../../base/setting";
 
 .card {
   display: flex;
   background-color: var(--white);
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     width: 32%;
     height: auto;
     &:nth-of-type(n + 4) {
       margin-top: 1.5rem;
     }
   }
-  @include settings.mq(tb) {
+  @include setting.mq(tb) {
     width: 32%;
     max-width: 48%;
     &:not(:first-of-type),
@@ -21,7 +21,7 @@
       margin-top: 1.5rem;
     }
   }
-  @include settings.mq(sp) {
+  @include setting.mq(sp) {
     width: 100%;
     max-width: 100%;
     &:nth-of-type(n + 2) {
@@ -74,10 +74,10 @@
     position: relative;
     width: 100%; /* 画像トリミングしたい枠の幅 */
     overflow: hidden;
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       height: 180px; /* 画像トリミングしたい枠の高さ */
     }
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       height: 130px;
     }
   }
@@ -93,10 +93,10 @@
   & .text-container {
     height: auto;
     -webkit-font-smoothing: antialiased;
-    @include settings.mq(tb-dth) {
+    @include setting.mq(tb-dth) {
       padding: 1.2rem 2rem;
     }
-    @include settings.mq(sp) {
+    @include setting.mq(sp) {
       padding: 1rem 1.6rem;
     }
     > .title {
@@ -104,10 +104,10 @@
       background: linear-gradient(transparent 94%, #333 6%);
       font-family: var(--common-font);
       font-weight: bold;
-      @include settings.mq(dt) {
+      @include setting.mq(dt) {
         font-size: calc(var(--font-size-m2));
       }
-      @include settings.mq(sp-tb) {
+      @include setting.mq(sp-tb) {
         font-size: calc(var(--font-size-m1));
       }
     }
@@ -128,18 +128,18 @@
       display: block;
       text-align: right;
       color: var(--black);
-      @include settings.mq(dt) {
+      @include setting.mq(dt) {
         margin: {
           top: .5rem;
         }
       }
-      @include settings.mq(sp) {
+      @include setting.mq(sp) {
         margin-top: .3rem;
         line-height: 1.4;
       }
       > .date {
         display: inline-block;
-        @include settings.mq(sp) {
+        @include setting.mq(sp) {
           width: auto;
         }
       }
@@ -154,12 +154,12 @@
       display: flex;
       justify-content: flex-end;
       color: var(--black);
-      @include settings.mq(tb-dth) {
+      @include setting.mq(tb-dth) {
         margin: {
           top: .2rem;
         }
       }
-      @include settings.mq(sp) {
+      @include setting.mq(sp) {
         margin-top: .1rem;
         line-height: 1.4;
       }
@@ -178,10 +178,10 @@
     font-size: calc(var(--font-size-s1));
     color: var(--white);
     transition: all var(--ease-out-cubic) .35s .01s;
-    @include settings.mq(tb-dth) {
+    @include setting.mq(tb-dth) {
       padding: .25rem .4rem;
     }
-    @include settings.mq(sp) {
+    @include setting.mq(sp) {
       padding: .15rem .25rem;
     }
   }

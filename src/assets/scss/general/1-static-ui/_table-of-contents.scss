@@ -1,13 +1,13 @@
-@use "../../base/settings";
+@use "../../base/setting";
 
 .toc-container {
   padding: .5rem 2rem;
   border: 1px dotted #333;
   text-align: center;
-  @include settings.mq(tb-dth) {
+  @include setting.mq(tb-dth) {
     width: 30rem;
   }
-  @include settings.mq(sp) {
+  @include setting.mq(sp) {
     width: 90%;
   }
 }
@@ -18,7 +18,7 @@
 .toc-open {
   display: inline-block;
   font-family: var(--common-font);
-  @include settings.mq(sp) {
+  @include setting.mq(sp) {
     font-size: calc(var(--font-size-s1));
   }
   & summary {
@@ -50,13 +50,13 @@
 .toc__link {
   text-decoration: underline;
   font-family: var(--common-font);
-  @include settings.mq(tb-dth) {
+  @include setting.mq(tb-dth) {
     &:hover,
     &:focus {
       text-decoration: none;
     }
   }
-  @include settings.mq(sp) {
+  @include setting.mq(sp) {
     padding-top: .4rem;
   }
   &.is-current {

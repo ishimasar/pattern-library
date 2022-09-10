@@ -1,15 +1,15 @@
-@use "../../base/settings";
+@use "../../base/setting";
 
 .table-scroll {
   width: 100%;
   margin: auto;
-  @include settings.mq(sp) {
+  @include setting.mq(sp) {
     overflow-x: scroll;
     overflow-y: auto;
   }
   .table {
     white-space: pre;
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       table-layout: fixed;
     }
   }
@@ -49,10 +49,10 @@
     &.empty {
       background-image: linear-gradient(to right top, transparent 50%, hsla(0, 0%, 73%, 1) 50%, hsla(0, 0%, 73%, 1) 51%, transparent 51%)
     }
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       padding: .75rem 1.5rem;
     }
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       padding: .5rem .5rem;
     }
   }

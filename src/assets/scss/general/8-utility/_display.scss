@@ -1,4 +1,4 @@
-@use "../../base/settings";
+@use "../../base/setting";
 
 // 画面サイズ(デバイスサイズ)に応じ、
 // 以下条件に当てはまる場合に適用要素を表示し、
@@ -6,43 +6,43 @@
 
 // 画面サイズ767px以下(スマートフォン想定)のとき
 .display-sp {
-  @include settings.mq(tb-dth) {
+  @include setting.mq(tb-dth) {
     display: none;
   }
-  @include settings.mq(sp) {
+  @include setting.mq(sp) {
     display: inline-block;
   }
 }
 
 // 画面サイズ1024px以下(スマホ~タブレット想定)のとき
 .display-sptb {
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     display: none;
   }
-  @include settings.mq(sp-tb) {
+  @include setting.mq(sp-tb) {
     display: inline-block;
   }
 }
 
 // 画面サイズ768px以上(タブレット~デスクトップ想定)のとき
 .display-tbdt {
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     display: block;
   }
-  @include settings.mq(tb) {
+  @include setting.mq(tb) {
     display: block;
   }
-  @include settings.mq(sp) {
+  @include setting.mq(sp) {
     display: none;
   }
 }
 
 // 画面サイズ1025px以上(デスクトップ全般想定)のとき
 .display-dt {
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     display: block;
   }
-  @include settings.mq(sp-tb) {
+  @include setting.mq(sp-tb) {
     display: none;
   }
 }

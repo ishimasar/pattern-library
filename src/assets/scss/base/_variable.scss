@@ -1,6 +1,7 @@
 /**
  * ## variable
- * ### CSS variables (CSS custom properties for cascading variables)
+ * ### CSS variable (CSS custom properties for cascading variables)
+ * Write only what you actually use
  */
 
 // * デバイス別 接尾辞(suffix)ルール -> *-Mb: Mobile/Tablet、*-Dt: Desktop
@@ -9,13 +10,13 @@
   --common-font: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
   // --text-font: (you set);
   // --heading-font: (you set);
-  // --home-section-heading-font: (you set);
   // --number-font: (you set);
   // --logo-font: (you set);
   // --english-font: (you set);
   --english-font-print: Arial;
 
   // #### font-size
+  // Under renovation Temporary storage
   --font-size-l4: calc(1rem * 8 / 3); // 2.66666rem / 42.66666px
   --font-size-l3: calc(1rem * 8 / 4); // 2rem / 32px
   --font-size-l2: calc(1rem * 8 / 5); // 1.6rem / 25.6px
@@ -24,6 +25,49 @@
   --font-size-m1: 1rem; // 16px
   --font-size-s1: calc(1rem * 8 / 9); // 0.88889rem / 14.22222px
   --font-size-s2: calc(1rem * 8 / 10); // 0.8rem / 12.8px
+  // ---
+
+  // CSS variable for calculation based on root font-size of 16px
+  // --10px-rem: 0.625rem;
+  // --11px-rem: 0.6875rem;
+  --12px-rem: 0.75rem;
+  // --13px-rem: 0.8125rem;
+  --14px-rem: 0.875rem;
+  // --15px-rem: 0.9375rem;
+  --16px-rem: 1rem;
+  // --17px-rem: 1.0625rem;
+  --18px-rem: 1.125rem;
+  // --19px-rem: 1.1875rem;
+  --20px-rem: 1.25rem;
+  // --21px-rem: 1.3125rem;
+  // --22px-rem: 1.375rem;
+  // --23px-rem: 1.4375rem;
+  --24px-rem: 1.5rem;
+  // --25px-rem: 1.5625rem;
+  // --26px-rem: 1.625rem;
+  // --27px-rem: 1.6875rem;
+  --28px-rem: 1.75rem;
+  // --29px-rem: 1.8125rem;
+  // --30px-rem: 1.875rem;
+  --32px-rem: 2rem;
+  --36px-rem: 2.25rem;
+  --40px-rem: 2.5rem;
+  // --44px-rem: 2.75rem;
+  --48px-rem: 3rem;
+  // --56px-rem: 3.5rem;
+  // --64px-rem: 4rem;
+  // --72px-rem: 4.5rem;
+  // --80px-rem: 5rem;
+
+  // Harmonic Modular Scale / Name based on scale
+  --font-size-c: calc(1rem * 8 / 10); // 0.8rem / 12.8px
+  --font-size-d: calc(1rem * 8 / 9); // 0.88889rem / 14.22222px
+  // --font-size-e: 1rem; // 16px
+  --font-size-f: calc(1rem * 8 / 7); // 1.14286rem / 18.28571px
+  --font-size-g: calc(1rem * 8 / 6); // 1.33333rem / 21.33333px
+  --font-size-a: calc(1rem * 8 / 5); // 1.6rem / 25.6px
+  // --font-size-b: calc(1rem * 8 / 4); // 2rem / 32px
+  --font-size-c: calc(1rem * 8 / 3); // 2.66666rem / 42.66666px
 
   // #### color
   --black: hsla(0, 0%, 20%, 1); // #333

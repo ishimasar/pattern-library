@@ -1,4 +1,4 @@
-@use "../../base/settings";
+@use "../../base/setting";
 
 .smooth-scroll {
   @media all and (-ms-high-contrast: none) {
@@ -22,14 +22,14 @@
     display: flex;
     width: 100%;
     max-width: 80rem;
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       gap :2rem;
     }
-    @include settings.mq(tb-dth) {
+    @include setting.mq(tb-dth) {
       flex-direction: row;
       justify-content: flex-start;
     }
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       // flex-direction: column-reverse;
       justify-content: flex-start;
       position: relative;
@@ -47,7 +47,7 @@
     width: auto;
     height: 100%;
     font-size: 1rem;
-    @include settings.mq(tb-dth) {
+    @include setting.mq(tb-dth) {
       padding: 3.5rem 4rem;
     }
     p {
@@ -65,12 +65,12 @@
   }
   .aside {
     min-width: 20%;
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       position: fixed;
       right: 0;
       bottom: 2rem;
       width: 8rem;
-      background-color: hsla(255, 255, 255, .85);
+      background-color: hsla(255, 255%, 255%, .85);
       backdrop-filter: blur(.125rem);
       z-index: 2;
     }
@@ -83,23 +83,23 @@
     top: 2rem;
     width: 100%;
     text-align: center;
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       line-height: 3;
     }
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       line-height: 2;
     }
   }
   .toc__link {
     transition: all .25s;
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       padding: .5rem;
     }
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       padding: .4rem;
     }
   }
-  @include settings.mq(sp-tb) {
+  @include setting.mq(sp-tb) {
     .toc__link,
     .toc__link:hover,
     .toc__link:focus {
@@ -112,7 +112,7 @@
     background-color: #ccf4ff;
     transition: all .5s;
   }
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     .toc__link:hover,
     .toc__link:focus {
       text-decoration: none;

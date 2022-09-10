@@ -6,7 +6,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
  * @author ocodia
  */
 
- @use "../../base/settings";
+ @use "../../base/setting";
 
 code[class*="language-"],
 pre[class*="language-"] {
@@ -182,10 +182,10 @@ div.code-toolbar > .toolbar span:focus {
   }
   & code {
     font-size: calc(var(--font-size-m1) - .01rem);
-    @include settings.mq(tb-dth) {
+    @include setting.mq(tb-dth) {
       line-height: 1.6;
     }
-    @include settings.mq(sp) {
+    @include setting.mq(sp) {
       line-height: 1.4;
       font-size: calc(var(--font-size-s1));
     }

@@ -1,9 +1,9 @@
-@use "../../base/settings";
+@use "../../base/setting";
 
 .accordion-wrap {
   width: 100%;
   margin: auto;
-  @include settings.mq(tb-dth) {
+  @include setting.mq(tb-dth) {
     max-width: 50rem;
   }
 }
@@ -11,10 +11,10 @@
 .accordion-button-box {
   display: flex;
   margin: auto auto 1.5rem;
-  @include settings.mq(sp-tb) {
+  @include setting.mq(sp-tb) {
     justify-content: center;
   }
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     justify-content: flex-end;
   }
 }
@@ -22,11 +22,11 @@
 .accordion-all-button {
   border: 1px solid var(--black);
   border-radius: 5px;
-  @include settings.mq(sp-tb) {
+  @include setting.mq(sp-tb) {
     width: 43%;
     padding: 1rem .5rem;
   }
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     min-width: 8.5rem;
     padding: 1rem;
     transition: var(--out-transition);
@@ -38,10 +38,10 @@
     }
   }
   &:not(:first-of-type) {
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       margin-left: 1rem;
     }
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       margin-left: 1.75rem;
     }
   }
@@ -69,10 +69,10 @@
 
 .accordion-details {
   height: auto;
-  @include settings.mq(sp-tb) {
+  @include setting.mq(sp-tb) {
     font-size: 1rem;
   }
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     font-size: 1.1rem;
   }
 
@@ -80,10 +80,10 @@
     padding: 1.5rem;
     // list-style: none;
     cursor: pointer;
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       padding: 1rem;
     }
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       padding: 1.5rem;
       &:hover,
       &:focus {
@@ -92,14 +92,14 @@
         font-weight: bold;
       }
     }
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       &:before {
-        @include settings.triangle(11, 13, right, var(--black));
+        @include setting.triangle(11, 13, right, var(--black));
       }
     }
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       &:before {
-        @include settings.triangle(13, 15, right, var(--black));
+        @include setting.triangle(13, 15, right, var(--black));
       }
     }
     &::marker {
@@ -135,10 +135,10 @@
 
 .accordion-details__paragraph {
   border-top: .0625rem solid hsla(0, 0%, 70%, 1);
-  @include settings.mq(sp-tb) {
+  @include setting.mq(sp-tb) {
     padding: 1rem;
   }
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     padding: 1.5rem;
   }
 }

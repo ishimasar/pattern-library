@@ -1,21 +1,21 @@
-@use "../../base/settings";
+@use "../../base/setting";
 
 .selectbox-container {
   position: relative;
   width: 75%;
   box-sizing: border-box;
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     display: flex;
     justify-content: flex-start;
   }
   &.-pulldown:after {
-    @include settings.triangle(12, 8, bottom, #333);
+    @include setting.triangle(12, 8, bottom, #333);
     position: absolute;
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       right: 1.25rem;
       bottom: 1.21875rem;
     }
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       right: .8125rem;
       bottom: 1.0625rem;
     }
@@ -23,19 +23,19 @@
 }
 .selectbox-label {
   width: 25%;
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     display: flex;
     align-items: center;
     margin-bottom: 0;
     font-size: calc(var(--font-size-m2));
   }
-  @include settings.mq(sp-tb) {
+  @include setting.mq(sp-tb) {
     display: block;
     width: 100%;
     margin-bottom: .7rem;
   }
   &.-multi {
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       align-items: flex-start;
       margin-top: .625rem;
     }
@@ -49,7 +49,7 @@
   border: .0625rem solid #333;
   line-height: 1.2;
   box-shadow: .0625rem .0625rem 2px .0625rem rgba(0, 0, 0, .15);
-  @include settings.mq(dt) {
+  @include setting.mq(dt) {
     width: 75%;
     padding: .65rem 1rem;
     font-size: calc(var(--font-size-m2));
@@ -57,7 +57,7 @@
       padding: calc(.65rem - .0625rem) calc(1rem - .0625rem);
     }
   }
-  @include settings.mq(sp-tb) {
+  @include setting.mq(sp-tb) {
     width: 100%;
     padding: .65rem 1.5rem .5rem .8rem;
     font-size: calc(var(--font-size-m1) - .1rem);
@@ -71,18 +71,18 @@
     border-width: .125rem;
   }
   &.-single-select {
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       height: 3.1875rem;
     }
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       height: 2.95875rem;
     }
   }
   &.-multiple-select {
-    @include settings.mq(dt) {
+    @include setting.mq(dt) {
       min-height: 3.1875rem;
     }
-    @include settings.mq(sp-tb) {
+    @include setting.mq(sp-tb) {
       min-height: 2.95875rem;
     }
   }
