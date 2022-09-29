@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Preview Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link media="all" rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.2.6/what-input.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.0/dialog-polyfill.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js" defer></script>
+    <script src="../../js/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <main class="main-wrapper">
+  <ul class="stepper-indicater">
+    <li><button class="indicater" aria-current="step"></button></li>
+    <li><button class="indicater"></button></li>
+    <li><button class="indicater"></button></li>
+  </ul>
+</main>
+
+<style>
+  .stepper-indicater {
+    display: flex;
+    justify-content: space-between;
+    width: 35vw;
+    margin: auto;
+  }
+  .stepper-indicater > li {
+    counter-increment: step-counter;
+  }
+  .stepper-indicater > li .indicater {
+    width: 44px;
+    height: 44px;
+    background-color: hsla(229, 73%, 19%, 1);
+    border-radius: 50%;
+    color: hsla(0, 0%, 100%, 1);
+  }
+  .stepper-indicater > li .indicater::before {
+    content: counter(step-counter);
+  }
+  .stepper-indicater > li .indicater[aria-current] {
+    font-weight: 600;
+    font-size: var(--20px-rem);
+  }
+  .stepper-indicater > li .indicater[aria-current]::before {
+
+  }
+</style>
+  </body>
+</html>

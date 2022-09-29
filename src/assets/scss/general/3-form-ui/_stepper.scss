@@ -1,0 +1,41 @@
+@use "../../base/setting";
+
+.stepper-indicater {
+  display: flex;
+  width: 100%;
+  max-width: fit-content;
+  margin: auto;
+  > li {
+    display: flex;
+    counter-increment: step-counter;
+    &:not(:first-of-type)::before {
+      content: "";
+      display: flex;
+      height: 10px;
+      background-color: var(--contrast-limit-gray);
+      border-radius: 5px;
+      @include setting.mq(dt) {
+        width: 10vw;
+        margin: auto 1vw;
+      }
+      @include setting.mq(sp-tb) {
+        width: 5.25vw;
+        margin: auto 1.05vw;
+      }
+    }
+    .indicater {
+      min-width: 44px;
+      height: 44px;
+      background-color: hsla(229, 73%, 19%, 1);
+      border-radius: 50%;
+      color: hsla(0, 0%, 100%, 1);
+      &::before {
+        content: counter(step-counter);
+      }
+      &[aria-current] {
+        font-weight: 600;
+        font-size: var(--18px-rem);
+      }
+    }
+  }
+}
