@@ -6,6 +6,7 @@
 //  * - general = プロダクトを構成する各種UI関連スタイル、コンポーネント群
 //  * ----------
 //  */
+@import "base/setting";
 @import "base/base";
 @import "base/font-face";
 @import "base/variable";
@@ -32,6 +33,7 @@
 @import "general/3-form-ui/input-field";
 @import "general/3-form-ui/radio";
 @import "general/3-form-ui/selectbox";
+@import "general/3-form-ui/stepper";
 
 @import "general/4-control/button";
 @import "general/4-control/slider";

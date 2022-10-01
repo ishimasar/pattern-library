@@ -1,0 +1,93 @@
+@use "../../base/setting";
+
+.stepper-indicater {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  .indicater {
+    display: flex;
+    counter-increment: step-counter;
+    min-width: 44px;
+    height: 44px;
+    border: solid 2px hsla(229, 73%, 19%, 1);
+    background-color: var(--white);
+    border-radius: 50%;
+    color: hsla(229, 73%, 19%, 1);
+    &::before {
+      content: counter(step-counter);
+      margin: auto;
+    }
+    &[aria-current] {
+      background-color: hsla(229, 73%, 19%, 1);
+      font-weight: 600;
+      font-size: var(--18px-rem);
+      color: var(--white);
+    }
+  }
+  .connect {
+    display: flex;
+    height: 5px;
+    background-color: var(--contrast-limit-gray);
+    border-radius: 3px;
+    @include setting.mq(dt) {
+      width: 15%;
+      margin: auto 1.5%;
+    }
+    @include setting.mq(sp-tb) {
+      width: 10%;
+      margin: auto 2%;
+    }
+  }
+}
+.stepper-contents-container {
+  display: flex;
+  width: 100%;
+}
+.stepper-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 1rem auto auto;
+  text-align: center;
+  &[aria-hidden="false"] {
+    visibility: visible;
+  }
+  &[aria-hidden="true"] {
+    display: none;
+  }
+  .label {
+
+  }
+  .control {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .control button {
+    display: block;
+    position: relative;
+    width: 4rem;
+    height: 3rem;
+    border: 2px solid var(--black);
+    text-align: center;
+    text-decoration: none;
+    &[aria-hidden="false"] {
+      visibility: visible;
+    }
+    &[aria-hidden="true"] {
+      visibility: hidden;
+      display: inline-block;
+    }
+    &::before {
+      content: "";
+    }
+    &.control-back::before {
+      @include inlineArrowHead(9, left, var(--black));
+    }
+    &.control-next::after {
+      @include inlineArrowHead(9, right, var(--black));
+    }
+  }
+}

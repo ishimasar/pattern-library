@@ -1,0 +1,38 @@
+
+
+<main class="main-wrapper">
+  <ul class="stepper-indicater">
+    <li><button class="indicater" aria-current="step"></button></li>
+    <li><button class="indicater"></button></li>
+    <li><button class="indicater"></button></li>
+  </ul>
+</main>
+
+<style>
+  .stepper-indicater {
+    display: flex;
+    justify-content: space-between;
+    width: 35vw;
+    margin: auto;
+  }
+  .stepper-indicater > li {
+    counter-increment: step-counter;
+  }
+  .stepper-indicater > li .indicater {
+    width: 44px;
+    height: 44px;
+    background-color: hsla(229, 73%, 19%, 1);
+    border-radius: 50%;
+    color: hsla(0, 0%, 100%, 1);
+  }
+  .stepper-indicater > li .indicater::before {
+    content: counter(step-counter);
+  }
+  .stepper-indicater > li .indicater[aria-current] {
+    font-weight: 600;
+    font-size: var(--20px-rem);
+  }
+  .stepper-indicater > li .indicater[aria-current]::before {
+
+  }
+</style>
