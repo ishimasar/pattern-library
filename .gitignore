@@ -4,4 +4,3 @@ node_modules/
 *.css.map
 .node-version
 .DS_Store
-dest/
