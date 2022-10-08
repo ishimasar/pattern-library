@@ -19,7 +19,7 @@
   display: inline-block;
   font-family: var(--common-font);
   @include setting.mq(sp) {
-    font-size: calc(var(--font-size-s1));
+    font-size: calc(var(--font-size-b));
   }
   & summary {
     cursor: pointer;

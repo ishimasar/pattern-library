@@ -168,7 +168,7 @@ div.code-toolbar > .toolbar span:focus {
     padding: .2rem .8rem;
     // border: 1px solid #333;
     background-color: var(--white);
-    font-size: calc(var(--font-size-m1) - .02rem);
+    font-size: calc(var(--font-size-c) - .02rem);
     font-weight: normal;
     color: #333;
     // border-radius: .3rem .3rem 0 0;
@@ -181,13 +181,13 @@ div.code-toolbar > .toolbar span:focus {
     // border-radius: 0 .3rem .3rem;
   }
   & code {
-    font-size: calc(var(--font-size-m1) - .01rem);
+    font-size: calc(var(--font-size-c) - .01rem);
     @include setting.mq(tb-dth) {
       line-height: 1.6;
     }
     @include setting.mq(sp) {
       line-height: 1.4;
-      font-size: calc(var(--font-size-s1));
+      font-size: calc(var(--font-size-b));
     }
   }
 }
