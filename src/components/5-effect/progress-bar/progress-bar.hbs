@@ -1,11 +1,29 @@
-<main class="main-wrapper">
-  <div id="progresslabel" class="progress-label">ロードの進捗状況</div>
-  <div class="progress-container">
-    <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-labelledby="progresslabel" ></div>
-  </div>
-  <div class="divider" role="separator"></div>
-  <p class="progress-label">In progress...</p>
-  <div class="progress-container">
-    <progress id="load" class="progress" max="100" value="85">85%</progress>
+<main class="main-wrapper ">
+  <h2 class="heading2">Progress bar for loading status (Under development)</h2>
+  <div class="progress-wrapper" aria-live="polite">
+    <div id="progresslabel" class="progress-label">0%</div>
+    <div class="progress-container">
+      <div class="progress-frame">
+        <div
+          class="progressbar"
+          role="progressbar"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-labelledby="progresslabel"
+        ></div>
+      </div>
+    </div>
   </div>
 </main>
+
+<script>
+  const wrapper = document.querySelector('.progress-wrapper');
+  function loaded() {
+    wrapper.setAttribute('aria-live', 'asertive');
+  }
+  window.addEventListener('load', ()=> {
+    setTimeout(loaded, 3000);
+  })
+  setTimeout(loaded, 4000)
+</script>
