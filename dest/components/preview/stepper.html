@@ -17,29 +17,29 @@
   <body>
     <main class="main-wrapper">
   <div class="stepper-indicater">
-    <button class="indicater" aria-current="step"></button>
+    <button class="indicater js-step" aria-current="step" aria-controls="step1"></button>
     <div class="connect"></div>
-    <button class="indicater"></button>
+    <button class="indicater js-step" aria-controls="step2"></button>
     <div class="connect"></div>
-    <button class="indicater"></button>
+    <button class="indicater js-step" aria-controls="step3"></button>
   </div>
   <div class="stepper-contents-container">
-    <div class="stepper-contents">
-      <div class="label">Step1</div>
+    <div id="step1" class="stepper-contents" aria-hidden="false">
+      <h2 class="label heading2">Step1</h2>
       <div class="control">
         <button class="control-back js-stepper-back" aria-hidden="true">BACK</button>
         <button class="control-next js-stepper-next">NEXT</button>
       </div>
     </div>
-    <div class="stepper-contents" aria-hidden="true">
-      <div class="label">Step2</div>
+    <div id="step2" class="stepper-contents" aria-hidden="true">
+      <h2 class="label heading2">Step2</h2>
       <div class="control">
         <button class="control-back js-stepper-back">BACK</button>
         <button class="control-next js-stepper-next">NEXT</button>
       </div>
     </div>
-    <div class="stepper-contents" aria-hidden="true">
-      <div class="label">Step3</div>
+    <div id="step3" class="stepper-contents" aria-hidden="true">
+      <h2 class="label heading2">Step3</h2>
       <div class="control">
         <button class="control-back js-stepper-back">BACK</button>
         <button class="control-next js-stepper-next" aria-hidden="true">NEXT</button>
@@ -47,77 +47,5 @@
     </div>
   </div>
 </main>
-
-<script>
-  /**
-  * Stepper UI class
-  */
-  class Stepper {
-    constructor(next, back) {
-      this.next = document.querySelectorAll(next);
-      this.back = document.querySelectorAll(back);
-      this.label = document.querySelector('.stepper-contents .label');
-
-      this.indicater = document.querySelectorAll('.indicater');
-
-      this.container = document.querySelectorAll('.stepper-contents');
-      this.containerArray = [].slice.call(this.container);
-
-      this.stepNext();
-      this.stepBack();
-    }
-    stepNext() {
-      for (let i = 0; i < this.next.length; i++) {
-        // nextボタンのクリックイベント
-        this.next[i].addEventListener('click', e => {
-          e.preventDefault();
-
-          this.container[i].setAttribute('aria-hidden', 'true');
-          this.container[i + 1].setAttribute('aria-hidden', 'false');
-
-          this.indicater[i].removeAttribute('aria-current');
-          this.indicater[i + 1].setAttribute('aria-current', 'page');
-
-          // クリックされたtabのaria-control値を参照し、対応するtabpanelに対してaria-hidden="false"を付与して表示を示す
-          // pairedId.setAttribute('aria-hidden', 'false');
-
-          // pairedId.setAttribute('tabindex', '0');
-          // pairedId.focus();
-        }, { passive: false });
-      }
-    }
-    stepBack() {
-      for (let i = 0; i < this.back.length; i++) {
-        // nextボタンのクリックイベント
-        this.back[i].addEventListener('click', e => {
-          e.preventDefault();
-
-          this.container[i].setAttribute('aria-hidden', 'true');
-          this.container[i - 1].setAttribute('aria-hidden', 'false');
-
-          this.indicater[i].removeAttribute('aria-current');
-          this.indicater[i - 1].setAttribute('aria-current', 'page');
-
-          // クリックされたtabのaria-control値を参照し、対応するtabpanelに対してaria-hidden="false"を付与して表示を示す
-          // pairedId.setAttribute('aria-hidden', 'false');
-
-          // pairedId.setAttribute('tabindex', '0');
-          // pairedId.focus();
-        }, { passive: false });
-      }
-    }
-
-        // this.label.textContent = 'Step2';
-        /*
-        this.pause.setAttribute('aria-hidden', 'false');
-        this.pause.focus(); // 停止ボタンにフォーカスさせる
-        this.playCarousel();
-        this.runFlg = true; // 再生フラグオン
-        */
-      // });
-    // }
-  }
-  const stepper = new Stepper('.js-stepper-next', '.js-stepper-back');
-</script>
   </body>
 </html>
