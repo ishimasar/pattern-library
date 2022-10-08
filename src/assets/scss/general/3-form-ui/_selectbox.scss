@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 0;
-    font-size: calc(var(--font-size-m2));
+    font-size: calc(var(--font-size-d));
   }
   @include setting.mq(sp-tb) {
     display: block;
@@ -52,7 +52,7 @@
   @include setting.mq(dt) {
     width: 75%;
     padding: .65rem 1rem;
-    font-size: calc(var(--font-size-m2));
+    font-size: calc(var(--font-size-d));
     &:focus {
       padding: calc(.65rem - .0625rem) calc(1rem - .0625rem);
     }
@@ -60,7 +60,7 @@
   @include setting.mq(sp-tb) {
     width: 100%;
     padding: .65rem 1.5rem .5rem .8rem;
-    font-size: calc(var(--font-size-m1) - .1rem);
+    font-size: calc(var(--font-size-c) - .1rem);
     &:focus {
       padding:
         calc(.65rem - .0625rem) calc(1.5rem - .0625rem) calc(.5rem - .0625rem)

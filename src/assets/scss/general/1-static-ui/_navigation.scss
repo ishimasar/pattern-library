@@ -94,29 +94,29 @@
       font-family: var(--sentence-font);
       font-weight: bold;
       @include setting.mq(dt) {
-        font-size: calc(var(--font-size-m1) + .05rem);
+        font-size: calc(var(--font-size-c) + .05rem);
       }
       @include setting.mq(sp-tb) {
         vertical-align: baseline;
-        font-size: calc(var(--font-size-s1));
+        font-size: calc(var(--font-size-b));
       }
     }
     > .en {
       display: block;
       text-transform: uppercase;
       @include setting.mq(dt) {
-        font-size: calc(var(--font-size-s2) + .1rem);
+        font-size: calc(var(--font-size-a) + .1rem);
         letter-spacing: .1rem;
       }
       @include setting.mq(tb-dth) {
         padding-top: .5rem;
       }
       @include setting.mq(tb) {
-        font-size: calc(var(--font-size-s2));
+        font-size: calc(var(--font-size-a));
         letter-spacing: .1rem;
       }
       @include setting.mq(sp) {
-        font-size: calc(var(--font-size-s2));
+        font-size: calc(var(--font-size-a));
         letter-spacing: .05rem;
       }
     }
@@ -168,7 +168,7 @@
     padding: .7rem 1rem .65rem;
   }
   @include setting.mq(sp) {
-    font-size: calc(var(--font-size-m1) - .08rem);
+    font-size: calc(var(--font-size-c) - .08rem);
   }
 }
 .breadcrumb-current {
@@ -181,6 +181,6 @@
     padding: .5rem 1rem;
   }
   @include setting.mq(sp) {
-    font-size: calc(var(--font-size-m1) - .08rem);
+    font-size: calc(var(--font-size-c) - .08rem);
   }
 }

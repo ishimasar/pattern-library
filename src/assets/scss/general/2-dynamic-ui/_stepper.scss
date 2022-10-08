@@ -18,7 +18,7 @@
       content: counter(step-counter);
       margin: auto;
     }
-    &[aria-current] {
+    &[aria-current="step"] {
       background-color: hsla(229, 73%, 19%, 1);
       font-weight: 600;
       font-size: var(--18px-rem);
@@ -50,7 +50,7 @@
   justify-content: center;
   gap: 1rem;
   width: 100%;
-  margin: 1rem auto auto;
+  margin: 1.5rem auto auto;
   text-align: center;
   &[aria-hidden="false"] {
     visibility: visible;
@@ -68,8 +68,9 @@
   .control button {
     display: block;
     position: relative;
-    width: 4rem;
+    width: 4.1rem;
     height: 3rem;
+    padding-inline-start: .1rem;
     border: 2px solid var(--black);
     text-align: center;
     text-decoration: none;

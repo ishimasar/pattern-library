@@ -1,7 +1,7 @@
 .heading1 {
   margin-block-end: 1rem;
   line-height: 2;
-  font-size: calc(var(--font-size-l3));
+  font-size: calc(var(--font-size-h));
   font-weight: 700;
 }
 

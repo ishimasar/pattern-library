@@ -22,7 +22,7 @@
     }
   }
   .name {
-    font-size: var(--font-size-m2)!important;
+    font-size: var(--font-size-d)!important;
     font-weight: bold;
   }
   .introduction {
@@ -52,7 +52,7 @@
         height: 6rem;
       }
       .introduction {
-        font-size: var(--font-size-s1);
+        font-size: var(--font-size-b);
       }
     }
   }
@@ -70,7 +70,7 @@
         height: 5.5rem;
       }
       .introduction {
-        font-size: var(--font-size-s1);
+        font-size: var(--font-size-b);
       }
     }
   }
@@ -86,10 +86,10 @@
         height: 4.5rem;
       }
       .name {
-        font-size: var(--font-size-s1);
+        font-size: var(--font-size-b);
       }
       .introduction {
-        font-size: var(--font-size-s1);
+        font-size: var(--font-size-b);
       }
     }
   }
