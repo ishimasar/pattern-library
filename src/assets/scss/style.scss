@@ -6,6 +6,7 @@
 //  * - general = プロダクトを構成する各種UI関連スタイル、コンポーネント群
 //  * ----------
 //  */
+@import "base/setting";
 @import "base/base";
 @import "base/font-face";
 @import "base/variable";
@@ -25,6 +26,7 @@
 @import "general/2-dynamic-ui/calendar";
 @import "general/2-dynamic-ui/carousel";
 @import "general/2-dynamic-ui/modal-dialog";
+@import "general/2-dynamic-ui/stepper";
 @import "general/2-dynamic-ui/tab";
 @import "general/2-dynamic-ui/toast";
 

@@ -16,13 +16,13 @@
     left: 1rem;
     line-height: 1;
     font-family: "Font Awesome 5 Free";
-    font-size: calc(var(--font-size-l2));
+    font-size: calc(var(--font-size-g));
     font-weight: 900;
     color: #b1b1b1;
   }
   > p {
     line-height: 1.7;
-    font-size: calc(var(--font-size-m1));
+    font-size: calc(var(--font-size-c));
     > cite {
       font-style: italic;
     }
@@ -42,7 +42,7 @@
       height: 1em;
       margin-left: .2rem;
       vertical-align: -.125em;
-      font-size: calc(var(--font-size-m1));
+      font-size: calc(var(--font-size-c));
       overflow: visible;
     }
   }

@@ -16,17 +16,6 @@
   --english-font-print: Arial;
 
   // #### font-size
-  // Under renovation Temporary storage
-  --font-size-l4: calc(1rem * 8 / 3); // 2.66666rem / 42.66666px
-  --font-size-l3: calc(1rem * 8 / 4); // 2rem / 32px
-  --font-size-l2: calc(1rem * 8 / 5); // 1.6rem / 25.6px
-  --font-size-l1: calc(1rem * 8 / 6); // 1.33333rem / 21.33333px
-  --font-size-m2: calc(1rem * 8 / 7); // 1.14286rem / 18.28571px
-  --font-size-m1: 1rem; // 16px
-  --font-size-s1: calc(1rem * 8 / 9); // 0.88889rem / 14.22222px
-  --font-size-s2: calc(1rem * 8 / 10); // 0.8rem / 12.8px
-  // ---
-
   // CSS variable for calculation based on root font-size of 16px
   // --10px-rem: 0.625rem;
   // --11px-rem: 0.6875rem;
@@ -59,14 +48,14 @@
   // --80px-rem: 5rem;
 
   // Harmonic Modular Scale / Name based on scale
-  --font-size-c: calc(1rem * 8 / 10); // 0.8rem / 12.8px
-  --font-size-d: calc(1rem * 8 / 9); // 0.88889rem / 14.22222px
-  // --font-size-e: 1rem; // 16px
-  --font-size-f: calc(1rem * 8 / 7); // 1.14286rem / 18.28571px
-  --font-size-g: calc(1rem * 8 / 6); // 1.33333rem / 21.33333px
-  --font-size-a: calc(1rem * 8 / 5); // 1.6rem / 25.6px
-  // --font-size-b: calc(1rem * 8 / 4); // 2rem / 32px
-  --font-size-c: calc(1rem * 8 / 3); // 2.66666rem / 42.66666px
+  --font-size-a: calc(1rem * 8 / 10); // 0.8rem / 12.8px
+  --font-size-b: calc(1rem * 8 / 9); // 0.88889rem / 14.22222px
+  --font-size-c: 1rem; // 16px
+  --font-size-d: calc(1rem * 8 / 7); // 1.14286rem / 18.28571px
+  --font-size-f: calc(1rem * 8 / 6); // 1.33333rem / 21.33333px
+  --font-size-g: calc(1rem * 8 / 5); // 1.6rem / 25.6px
+  --font-size-h: calc(1rem * 8 / 4); // 2rem / 32px
+  --font-size-i: calc(1rem * 8 / 3); // 2.66666rem / 42.66666px
 
   // #### color
   --black: hsla(0, 0%, 20%, 1); // #333

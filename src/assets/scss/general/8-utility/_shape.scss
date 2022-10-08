@@ -13,3 +13,48 @@
   background-image: linear-gradient(to right, var(--contrast-limit-gray), var(--contrast-limit-gray) 3px, transparent 3px, transparent 8px);
   background-size: 5px 2px;
 }
+.shape-arrow-top::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 9px;
+  height: 9px;
+  margin-left: .5rem;
+  border-top: 1.5px solid var(--black);
+  border-right: 1.5px solid var(--black);
+  transform: rotate(-45deg);
+}
+.shape-arrow-right::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 9px;
+  height: 9px;
+  margin-left: .5rem;
+  border-top: 1.5px solid var(--black);
+  border-right: 1.5px solid var(--black);
+  transform: rotate(45deg);
+}
+.shape-arrow-bottom::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -.2em;
+  width: 9px;
+  height: 9px;
+  margin-left: .5rem;
+  border-top: 1.5px solid var(--black);
+  border-right: 1.5px solid var(--black);
+  transform: rotate(135deg);
+}
+.shape-arrow-left::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 9px;
+  height: 9px;
+  margin-left: .5rem;
+  border-top: 1.5px solid var(--black);
+  border-right: 1.5px solid var(--black);
+  transform: rotate(-135deg);
+}

@@ -7,6 +7,7 @@ import { drawerMenu } from './modules/DrawerMenu.js';
 import { ModalDialog } from './modules/ModalDialog.js';
 import { scrollSmooth } from './modules/SmoothScroll.js';
 import { RangeSlider } from './modules/RangeSlider.js';
+import { Stepper } from './modules/Stepper.js';
 import { Tab } from './modules/Tab.js';
 // import { TabSwipe } from './modules/TabSwipe.js';
 import { Toast } from './modules/Toast.js';
@@ -68,6 +69,8 @@ const rangeSlider = new RangeSlider('volume', 'volume-value');
 rangeSlider.changeRangeNum();
 const rangeSliderScale = new RangeSlider('something', 'something-value');
 rangeSliderScale.changeRangeNum();
+
+const stepper = new Stepper('.js-stepper-next', '.js-stepper-back');
 
 const tab = new Tab('.tab-ui', ".tab[role='tab']", '.tabpanel-wrap', ".tabpanel[role='tabpanel']");
 tab.setHeight();

@@ -46,7 +46,7 @@
     padding: .575rem 1rem;
     @include setting.mq(tb-dth) {
       min-width: 2.85rem;
-      font-size: calc(var(--font-size-m2));
+      font-size: calc(var(--font-size-d));
     }
     @include setting.mq(sp) {
       width: auto;

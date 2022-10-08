@@ -105,10 +105,10 @@
       font-family: var(--common-font);
       font-weight: bold;
       @include setting.mq(dt) {
-        font-size: calc(var(--font-size-m2));
+        font-size: calc(var(--font-size-d));
       }
       @include setting.mq(sp-tb) {
-        font-size: calc(var(--font-size-m1));
+        font-size: calc(var(--font-size-c));
       }
     }
     > .excerpt {
@@ -146,7 +146,7 @@
       & .time {
         display: inline-block;
         width: auto;
-        font-size: calc(var(--font-size-s1));
+        font-size: calc(var(--font-size-b));
         color: var(--text-dark-color);
       }
     }
@@ -166,7 +166,7 @@
       > .tag {
         display: inline-block;
         width: auto;
-        font-size: calc(var(--font-size-s1));
+        font-size: calc(var(--font-size-b));
       }
     }
   }
@@ -175,7 +175,7 @@
     top: 0;
     right: 0;
     background-color: #0e51a8;
-    font-size: calc(var(--font-size-s1));
+    font-size: calc(var(--font-size-b));
     color: var(--white);
     transition: all var(--ease-out-cubic) .35s .01s;
     @include setting.mq(tb-dth) {
