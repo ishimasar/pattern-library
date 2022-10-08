@@ -8,10 +8,6 @@ export class Tab {
     this.tabPanelWrap = document.querySelector(selector3);
     this.tabPanels = document.querySelectorAll(selector4);
     if(this.tabPanels.length > 0) {
-      this.tabPanels[0].setAttribute('aria-hidden', 'false');
-      this.tabPanels[1].setAttribute('aria-hidden', 'true');
-      this.tabPanels[2].setAttribute('aria-hidden', 'true');
-
       // NodeListを配列に変換
       this.tabPanelArray = [].slice.call(this.tabPanels);
       this.heightArray = [];

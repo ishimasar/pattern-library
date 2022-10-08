@@ -74,14 +74,10 @@
     outline: none;
   }
   &[aria-hidden="false"] {
-    position: absolute;
-    top: 9.5%;
-    visibility: visible;
+    display: inline-block;
   }
   &[aria-hidden="true"] {
-    position: absolute;
-    top: 9.5%;
-    visibility: hidden;
+    display: none;
   }
 }
 .tabpanel__list > li {

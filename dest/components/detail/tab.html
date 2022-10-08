@@ -194,54 +194,54 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel-wrap&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>タブコンテンツ1<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__list&quot;</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・マークアップについて<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・マークアップについて<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
                         　タブパネル(コンテンツ)内に見出しが存在する場合はsection要素、存在しない場合はdiv要素でラップしてください
                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・キーボード操作について<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-                        　選択操作をしない場合、フォーカスは文書構造に沿って上/左の順で当たります(Webページでの基本的な動き)。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-                        　当該タブをクリックした場合、次に表示タブパネル内のリンクなどインタラクティブ要素にフォーカスします<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・キーボード操作について<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                        　選択操作をしない場合、フォーカスは文書構造に沿って上/左の順で当たります(Webページでの基本的な動き)。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                        　当該タブをクリックした場合、次に表示タブパネル内のリンクなどインタラクティブ要素にフォーカスします<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
                         　※隠れたタブパネル内の要素にフォーカスしません(CSS・visibility:
                         hidden;の仕様)
                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・JavaScriptまたはCSSをオフにしても閲覧可能<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-                        　JSやCSSをユーザー側設定でオフにしてもコンテンツを見られるつくりにしています。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-                        　JSオフの場合タブはページ内リンクとして機能し、コンテンツは縦レイアウトになります<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・JavaScriptまたはCSSをオフにしても閲覧可能<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                        　JSやCSSをユーザー側設定でオフにしてもコンテンツを見られるつくりにしています。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                        　JSオフの場合タブはページ内リンクとして機能し、コンテンツは縦レイアウトになります<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
                         　※どのような閲覧条件でも、文書情報(コンテンツ)の表示を優先する方針
                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__link&quot;</span>&gt;</span>ダミーのリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>タブコンテンツ2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__list&quot;</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・タブUIの欠点<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-                        　タブUIの欠点は各タブパネルのコンテンツ量を同等にしないと、下部に大きく余白ができたり、<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-                        　レイアウト上の不ぞろい感を生んだりすることです。また、JSなどで高さを補う必要や手間も生じます。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-                        　なので、なるべく同等の情報量を持つようにそれぞれをコンテンツ設計してください<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・タブUIの欠点<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                        　タブUIの欠点は各タブパネルのコンテンツ量を同等にしないと、下部に大きく余白ができたり、<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                        　レイアウト上の不ぞろい感を生んだりすることです。また、JSなどで高さを補う必要や手間も生じます。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                        　なので、なるべく同等の情報量を持つようにそれぞれをコンテンツ設計してください<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
                         　※「不ぞろいでも別に気にならない」という方もいるかもしれませんが...
                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・タブUIを考える<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-                        　そもそもタブUIであることの利点とは何でしょうか。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-                        　情報が並列化され構造把握しやすい、スクロールよりクリック/タップのほうが操作コストが低い、などが挙げられるでしょうか。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-                        　しかしコンテンツは常に見えていたほうが良く、「隠す」「再表示する」などは逆に認知負荷にもなるとも考えられます。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・タブUIを考える<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                        　そもそもタブUIであることの利点とは何でしょうか。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                        　情報が並列化され構造把握しやすい、スクロールよりクリック/タップのほうが操作コストが低い、などが挙げられるでしょうか。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                        　しかしコンテンツは常に見えていたほうが良く、「隠す」「再表示する」などは逆に認知負荷にもなるとも考えられます。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
                         　以上のことから、タブUIはそこまで汎用的とはいえず、使い所をよく検討したいUIです。
                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content3&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content3&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>タブコンテンツ3<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__paragraph&quot;</span>&gt;</span>
                     タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__link&quot;</span>&gt;</span>ダミーのリンクです1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__link&quot;</span>&gt;</span>ダミーのリンクです1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__link&quot;</span>&gt;</span>ダミーのリンクです2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -274,7 +274,11 @@
         &gt;
       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;presentasion&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#content2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tab&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tab&quot;</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">&quot;content2&quot;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+          <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#content2&quot;</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tab&quot;</span>
+          <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tab&quot;</span>
+          <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">&quot;content2&quot;</span>
           &gt;</span>タブ2&lt;/a
         &gt;
       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -290,54 +294,54 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel-wrap&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>タブコンテンツ1<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__list&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・マークアップについて<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・マークアップについて<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
             　タブパネル(コンテンツ)内に見出しが存在する場合はsection要素、存在しない場合はdiv要素でラップしてください
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・キーボード操作について<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-            　選択操作をしない場合、フォーカスは文書構造に沿って上/左の順で当たります(Webページでの基本的な動き)。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-            　当該タブをクリックした場合、次に表示タブパネル内のリンクなどインタラクティブ要素にフォーカスします<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・キーボード操作について<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            　選択操作をしない場合、フォーカスは文書構造に沿って上/左の順で当たります(Webページでの基本的な動き)。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            　当該タブをクリックした場合、次に表示タブパネル内のリンクなどインタラクティブ要素にフォーカスします<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
             　※隠れたタブパネル内の要素にフォーカスしません(CSS・visibility:
             hidden;の仕様)
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・JavaScriptまたはCSSをオフにしても閲覧可能<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-            　JSやCSSをユーザー側設定でオフにしてもコンテンツを見られるつくりにしています。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-            　JSオフの場合タブはページ内リンクとして機能し、コンテンツは縦レイアウトになります<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・JavaScriptまたはCSSをオフにしても閲覧可能<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            　JSやCSSをユーザー側設定でオフにしてもコンテンツを見られるつくりにしています。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            　JSオフの場合タブはページ内リンクとして機能し、コンテンツは縦レイアウトになります<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
             　※どのような閲覧条件でも、文書情報(コンテンツ)の表示を優先する方針
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__link&quot;</span>&gt;</span>ダミーのリンクです<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>タブコンテンツ2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__list&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・タブUIの欠点<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-            　タブUIの欠点は各タブパネルのコンテンツ量を同等にしないと、下部に大きく余白ができたり、<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-            　レイアウト上の不ぞろい感を生んだりすることです。また、JSなどで高さを補う必要や手間も生じます。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-            　なので、なるべく同等の情報量を持つようにそれぞれをコンテンツ設計してください<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・タブUIの欠点<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            　タブUIの欠点は各タブパネルのコンテンツ量を同等にしないと、下部に大きく余白ができたり、<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            　レイアウト上の不ぞろい感を生んだりすることです。また、JSなどで高さを補う必要や手間も生じます。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            　なので、なるべく同等の情報量を持つようにそれぞれをコンテンツ設計してください<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
             　※「不ぞろいでも別に気にならない」という方もいるかもしれませんが...
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・タブUIを考える<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-            　そもそもタブUIであることの利点とは何でしょうか。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-            　情報が並列化され構造把握しやすい、スクロールよりクリック/タップのほうが操作コストが低い、などが挙げられるでしょうか。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-            　しかしコンテンツは常に見えていたほうが良く、「隠す」「再表示する」などは逆に認知負荷にもなるとも考えられます。<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>・タブUIを考える<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            　そもそもタブUIであることの利点とは何でしょうか。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            　情報が並列化され構造把握しやすい、スクロールよりクリック/タップのほうが操作コストが低い、などが挙げられるでしょうか。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            　しかしコンテンツは常に見えていたほうが良く、「隠す」「再表示する」などは逆に認知負荷にもなるとも考えられます。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
             　以上のことから、タブUIはそこまで汎用的とはいえず、使い所をよく検討したいUIです。
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content3&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content3&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>タブコンテンツ3<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__paragraph&quot;</span>&gt;</span>
           タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。タブコンテンツ3の内容です。
         <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__link&quot;</span>&gt;</span>ダミーのリンクです1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__link&quot;</span>&gt;</span>ダミーのリンクです1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tabpanel__link&quot;</span>&gt;</span>ダミーのリンクです2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1969,7 +1973,7 @@ tab.throttle();</pre>
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2022-10-08T03:49:16.612Z">
+                            <time datetime="2022-10-08T07:11:32.527Z">
                                 10/8/2022
                             </time>
                         
