@@ -16,14 +16,3 @@
     </div>
   </div>
 </main>
-
-<script>
-  const wrapper = document.querySelector('.progress-wrapper');
-  function loaded() {
-    wrapper.setAttribute('aria-live', 'asertive');
-  }
-  window.addEventListener('load', ()=> {
-    setTimeout(loaded, 3000);
-  })
-  setTimeout(loaded, 4000)
-</script>
