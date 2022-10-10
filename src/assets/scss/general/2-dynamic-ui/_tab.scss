@@ -35,7 +35,7 @@
     /* タブのhover/focus状態スタイル */
     &:hover,
     &:focus {
-      background: #777;
+      background: hsla(0, 0%, 47%, 1);
       color: var(--white);
       /* fade-in effect */
       /* transition: background-color .25s ease, color .25s ease; */

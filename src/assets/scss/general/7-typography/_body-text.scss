@@ -17,13 +17,13 @@
     }
   }
   & .mark {
-    background-color: #bdfdff;
+    background-color: hsla(182, 100%, 87%, 1);
   }
   & .shortcut {
     margin: -.2em .3em 0;
     padding: .1em .4em .15em;
-    background-color: #efefef;
+    background-color: hsla(0, 0%, 94%, 1);
     border-radius: 3px;
-    box-shadow: .1em .1em 0 rgba(0, 0, 0, .4);
+    box-shadow: .1em .1em 0 hsla(0, 0%, 0%, .4);
   }
 }

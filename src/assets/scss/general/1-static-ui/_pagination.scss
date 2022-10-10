@@ -12,18 +12,18 @@
   }
   @include setting.mq(tb-dth) {
     & .prev:before {
-      border-right: 12px solid #464646;
+      border-right: 12px solid hsla(0, 0%, 27%, 1);
     }
     & .next:before {
-      border-left: 12px solid #464646;
+      border-left: 12px solid hsla(0, 0%, 27%, 1);
     }
   }
   @include setting.mq(sp) {
     & .prev:before {
-      border-right: 8px solid #464646;
+      border-right: 8px solid hsla(0, 0%, 27%, 1);
     }
     & .next:before {
-      border-left: 8px solid #464646;
+      border-left: 8px solid hsla(0, 0%, 27%, 1);
     }
   }
   > li {
@@ -54,7 +54,7 @@
     }
   }
   & .link {
-    border: 1px solid #333;
+    border: 1px solid hsla(0, 0%, 20%, 1);
     text-decoration: underline;
     @include setting.mq(tb-dth) {
       &:hover,
@@ -64,8 +64,8 @@
     }
   }
   & [aria-current="page"] {
-    border: 1px solid rgb(14, 81, 168);
-    background-color: rgb(14, 81, 168);
+    border: 1px solid hsla(214, 85%, 36%, 1);
+    background-color: hsla(214, 85%, 36%, 1);
     font-weight: bold;
     color: var(--white);
   }

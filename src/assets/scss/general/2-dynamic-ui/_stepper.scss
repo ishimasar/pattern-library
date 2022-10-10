@@ -85,10 +85,10 @@
       content: "";
     }
     &.control-back::before {
-      @include inlineArrowHead(9, left, var(--black));
+      @include setting.inlineArrowHead(9, left, var(--black));
     }
     &.control-next::after {
-      @include inlineArrowHead(9, right, var(--black));
+      @include setting.inlineArrowHead(9, right, var(--black));
     }
   }
 }

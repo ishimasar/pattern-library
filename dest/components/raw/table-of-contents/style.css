@@ -22,7 +22,7 @@
 
 .toc-open {
   display: inline-block;
-  font-family: var(--common-font);
+  font-family: var(--base-font);
 }
 @media print, screen and (max-width:47.96875em) {
   .toc-open {
@@ -50,7 +50,7 @@
 
 .toc__link {
   text-decoration: underline;
-  font-family: var(--common-font);
+  font-family: var(--base-font);
 }
 @media print, screen and (min-width:48em) {
   .toc__link:hover, .toc__link:focus {

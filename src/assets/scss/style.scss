@@ -6,56 +6,56 @@
 //  * - general = プロダクトを構成する各種UI関連スタイル、コンポーネント群
 //  * ----------
 //  */
-@import "base/setting";
-@import "base/base";
-@import "base/font-face";
-@import "base/variable";
-@import "base/print";
+@use "base/setting";
+@use "base/base";
+@use "base/font-face";
+@use "base/variable";
+@use "base/print";
 
-@import "general/1-static-ui/avatar";
-@import "general/1-static-ui/card";
-@import "general/1-static-ui/list";
-@import "general/1-static-ui/navigation";
-@import "general/1-static-ui/pagination";
-@import "general/1-static-ui/speech-balloon";
-@import "general/1-static-ui/table";
-@import "general/1-static-ui/table-of-contents";
-@import "general/1-static-ui/tooltip";
+@use "general/1-static-ui/avatar";
+@use "general/1-static-ui/card";
+@use "general/1-static-ui/list";
+@use "general/1-static-ui/navigation";
+@use "general/1-static-ui/pagination";
+@use "general/1-static-ui/speech-balloon";
+@use "general/1-static-ui/table";
+@use "general/1-static-ui/table-of-contents";
+@use "general/1-static-ui/tooltip";
 
-@import "general/2-dynamic-ui/accordion";
-@import "general/2-dynamic-ui/calendar";
-@import "general/2-dynamic-ui/carousel";
-@import "general/2-dynamic-ui/modal-dialog";
-@import "general/2-dynamic-ui/stepper";
-@import "general/2-dynamic-ui/tab";
-@import "general/2-dynamic-ui/toast";
+@use "general/2-dynamic-ui/accordion";
+@use "general/2-dynamic-ui/calendar";
+@use "general/2-dynamic-ui/carousel";
+@use "general/2-dynamic-ui/modal-dialog";
+@use "general/2-dynamic-ui/stepper";
+@use "general/2-dynamic-ui/tab";
+@use "general/2-dynamic-ui/toast";
 
-@import "general/3-form-ui/checkbox";
-@import "general/3-form-ui/input-field";
-@import "general/3-form-ui/radio";
-@import "general/3-form-ui/selectbox";
+@use "general/3-form-ui/checkbox";
+@use "general/3-form-ui/input-field";
+@use "general/3-form-ui/radio";
+@use "general/3-form-ui/selectbox";
 
-@import "general/4-control/button";
-@import "general/4-control/slider";
-@import "general/4-control/switch";
+@use "general/4-control/button";
+@use "general/4-control/slider";
+@use "general/4-control/switch";
 
-@import "general/5-effect/drawer-menu";
-@import "general/5-effect/loading-effect";
-@import "general/5-effect/moving-text";
-@import "general/5-effect/progress-bar";
-@import "general/5-effect/smooth-scroll";
-@import "general/5-effect/typing-text";
+@use "general/5-effect/drawer-menu";
+@use "general/5-effect/loading-effect";
+@use "general/5-effect/moving-text";
+@use "general/5-effect/progress-bar";
+@use "general/5-effect/smooth-scroll";
+@use "general/5-effect/typing-text";
 
-@import "general/6-layout/column";
-@import "general/6-layout/flexbox";
-@import "general/6-layout/frame";
-@import "general/6-layout/grid";
+@use "general/6-layout/column";
+@use "general/6-layout/flexbox";
+@use "general/6-layout/frame";
+@use "general/6-layout/grid";
 
-@import "general/7-typography/blockquote";
-@import "general/7-typography/body-text";
-@import "general/7-typography/code";
-@import "general/7-typography/heading";
+@use "general/7-typography/blockquote";
+@use "general/7-typography/body-text";
+@use "general/7-typography/code";
+@use "general/7-typography/heading";
 
-@import "general/8-utility/display";
-@import "general/8-utility/helper";
-@import "general/8-utility/shape";
+@use "general/8-utility/display";
+@use "general/8-utility/helper";
+@use "general/8-utility/shape";

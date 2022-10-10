@@ -38,7 +38,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 24px;
   background: #065ab4;
   border-radius: 50%;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .15);
+  box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, .15);
   -webkit-appearance: none;
 }
 
@@ -49,7 +49,7 @@ input[type="range"]::-moz-range-thumb {
   border: none;
   background: #53aeff;
   border-radius: 50%;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .15);
+  box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, .15);
 }
 
 /* Firefoxで点線が周りに表示されてしまう問題の解消 */
@@ -59,7 +59,7 @@ input[type="range"]::-moz-focus-outer {
 
 /* つまみをドラッグしているときのスタイル */
 input[type="range"]:active::-webkit-slider-thumb {
-  box-shadow: 0 5px 10px -2px rgba(0, 0, 0, .3);
+  box-shadow: 0 5px 10px -2px hsla(0, 0%, 0%, .3);
 }
 
 .volume-value,

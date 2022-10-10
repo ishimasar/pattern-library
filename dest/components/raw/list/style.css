@@ -4,7 +4,7 @@
 }
 .list.-itemized {
   list-style: disc;
-  font-family: var(--common-font);
+  font-family: var(--base-font);
 }
 .list.-itemized ul {
   list-style: circle;

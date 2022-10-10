@@ -52,7 +52,7 @@
   margin: auto;
   border: 1px solid #333;
   line-height: 1.5;
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15) inset;
+  box-shadow: 1px 1px 2px 1px hsla(0, 0%, 0%, .15) inset;
 }
 @media print, screen and (min-width:64.0625em) {
   .input-text {
@@ -70,7 +70,7 @@
 }
 .input-text:focus {
   border-width: 2px;
-  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .15) inset;
+  box-shadow: 2px 2px 4px 2px hsla(0, 0%, 0%, .15) inset;
 }
 @media print, screen and (min-width:64.0625em) {
   .input-text:focus {
@@ -104,7 +104,7 @@
   margin: auto;
   border: 1px solid #333;
   line-height: 1.5;
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15) inset;
+  box-shadow: 1px 1px 2px 1px hsla(0, 0%, 0%, .15) inset;
   resize: vertical;
 }
 @media print, screen and (min-width:64.0625em) {
@@ -125,7 +125,7 @@
 }
 .textarea:focus {
   border-width: 2px;
-  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .15) inset;
+  box-shadow: 2px 2px 4px 2px hsla(0, 0%, 0%, .15) inset;
 }
 @media print, screen and (min-width:64.0625em) {
   .textarea:focus {

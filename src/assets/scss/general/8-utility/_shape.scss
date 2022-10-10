@@ -1,7 +1,7 @@
 @use "../../base/setting";
 
 .circle-figure {
-  @include setting.circle(5, #333);
+  @include setting.circle(5, hsla(0, 0%, 20%, 1));
 }
 .divider {
   width: 100%;

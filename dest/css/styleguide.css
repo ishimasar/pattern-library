@@ -1,10 +1,9 @@
 body {
   font-size: 100%;
 }
-/* body *,
-body *:not(code) {
-  font-size: 1.1rem;
-} */
 .Header {
-  background: rgb(14, 81, 168);
+  background: hsla(214, 85%, 36%, 1);
+}
+.Prose {
+  font-feature-settings: inherit !important;
 }

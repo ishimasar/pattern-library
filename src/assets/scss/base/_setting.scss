@@ -194,10 +194,10 @@ $padding-max: 4;
 // #### 段落文章および通常フォント用
 // @mixin sentenceFont {
 //   @include mq(sp-tb) {
-//     font-family: var(--common-font-mb);
+//     font-family: var(--base-font-mb);
 //   }
 //   @include mq(tb-dth) {
-//     font-family: var(--common-font-dt);
+//     font-family: var(--base-font-dt);
 //   }
 // }
 

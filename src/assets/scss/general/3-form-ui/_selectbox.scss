@@ -9,7 +9,7 @@
     justify-content: flex-start;
   }
   &.-pulldown:after {
-    @include setting.triangle(12, 8, bottom, #333);
+    @include setting.triangle(12, 8, bottom, hsla(0, 0%, 20%, 1));
     position: absolute;
     @include setting.mq(dt) {
       right: 1.25rem;
@@ -46,9 +46,9 @@
   position: relative;
   max-width: 60rem;
   margin: auto .0625rem auto -.0625rem;
-  border: .0625rem solid #333;
+  border: .0625rem solid hsla(0, 0%, 20%, 1);
   line-height: 1.2;
-  box-shadow: .0625rem .0625rem 2px .0625rem rgba(0, 0, 0, .15);
+  box-shadow: .0625rem .0625rem 2px .0625rem hsla(0, 0%, 0%, .15);
   @include setting.mq(dt) {
     width: 75%;
     padding: .65rem 1rem;

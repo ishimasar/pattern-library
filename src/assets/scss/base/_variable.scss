@@ -5,16 +5,16 @@
  */
 
 // * デバイス別 接尾辞(suffix)ルール -> *-Mb: Mobile/Tablet、*-Dt: Desktop
-z
+
 :root {
   // #### font-family
-  --common-font: -apple-system, BlinkMacSystemFont, Segoe UI, Hiragino Kaku Gothic ProN, Hiragino Sans, BIZ UDPGothic, Meiryo, sans-serif;
+  --base-font: -apple-system, BlinkMacSystemFont, Segoe UI, Hiragino Kaku Gothic ProN, Hiragino Sans, BIZ UDPGothic, Meiryo, sans-serif;
   // --text-font: (you set);
   // --heading-font: (you set);
   // --number-font: (you set);
   // --logo-font: (you set);
   // --english-font: (you set);
-  --english-font-print: Arial;
+  --english-font-print: Arial, sans-serif;
 
   // #### font-size
   // CSS variable for calculation based on root font-size of 16px
@@ -104,9 +104,9 @@ z
   // --ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   // #### ui decoration
-  --textbox-shadow: 0 10px 15px -3px rgba(0, 0, 0, .2), 0 4px 6px -2px rgba(0, 0, 0, .1);
-  --textbox-bg: rgba(255, 255, 255, .925);
-  --textbox-hover-shadow: 0 12px 12px 0 rgba(0, 0, 0, .14), 0 5px 7px 0 rgba(0, 0, 0, .065);
+  --textbox-shadow: 0 10px 15px -3px hsla(0, 0%, 0%, .2), 0 4px 6px -2px hsla(0, 0%, 0%, .1);
+  --textbox-bg: hsla(0, 0%, 100%, .925);
+  --textbox-hover-shadow: 0 12px 12px 0 hsla(0, 0%, 0%, .14), 0 5px 7px 0 hsla(0, 0%, 0%, .065);
 
   // --button-shadow: (you set);
   // --button-hover-shadow: (you set);

@@ -4,7 +4,7 @@
   width: auto;
   height: auto;
   padding: 1rem;
-  border: 1px solid #333;
+  border: 1px solid hsla(0, 0%, 20%, 1);
   text-decoration: none;
   border-radius: 5px;
   transition: transform var(--ease-out-cubic) .3s;
@@ -12,7 +12,7 @@
     content: "";
     width: 0;
     height: 0;
-    border: 1px solid #333;
+    border: 1px solid hsla(0, 0%, 20%, 1);
     border-style: solid;
     border-width: .375rem;
   }
@@ -20,11 +20,11 @@
     content: attr(aria-label);
     height: 1.5625rem;
     padding: 0 .625rem;
-    border: 1px solid #333;
-    background: #333;
+    border: 1px solid hsla(0, 0%, 20%, 1);
+    background: hsla(0, 0%, 20%, 1);
     text-align: center;
     line-height: 3rem;
-    font-family: var(--common-font);
+    font-family: var(--base-font);
     font-size: .9rem;
     white-space: nowrap;
     color: var(--white);
@@ -46,7 +46,7 @@
     width: 0;
     height: 0;
     margin-bottom: .0625rem;
-    border-top: 17px #333 solid;
+    border-top: 17px hsla(0, 0%, 20%, 1) solid;
     border-right: 10px transparent solid;
     border-bottom: 0 transparent solid;
     border-left: 10px transparent solid;

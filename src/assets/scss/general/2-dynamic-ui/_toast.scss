@@ -18,7 +18,7 @@ html[data-whatinput][data-whatintent] {
   border-radius: 10rem;
   &:hover,
   [data-whatintent="keyboard"] &:focus {
-    background-color: #777;
+    background-color: hsla(0, 0%, 47%, 1);
     color: var(--white);
   }
   + .selectbox-container.-pulldown:after {
@@ -36,7 +36,7 @@ html[data-whatinput][data-whatintent] {
     width: fit-content;
     max-width: 90%;
     margin: auto;
-    background-color: #e6e6e6;
+    background-color: hsla(0, 0%, 90%, 1);
     border-radius: .25rem;
     border: 1px solid var(--border-color);
     animation: fade-in .25s var(--ease-in-cubic);
@@ -80,7 +80,7 @@ html[data-whatinput][data-whatintent] {
   &[aria-hidden="true"] {
     display: none;
     border: 1px solid var(--border-color);
-    background-color: #e6e6e6;
+    background-color: hsla(0, 0%, 90%, 1);
     &.is-bottom-right {
       display: block;
       position: relative;

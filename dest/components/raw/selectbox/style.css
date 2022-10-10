@@ -68,7 +68,7 @@
   margin: auto 1px auto -1px;
   border: 1px solid #333;
   line-height: 1.2;
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .15);
+  box-shadow: 1px 1px 2px 1px hsla(0, 0%, 0%, .15);
 }
 @media print, screen and (min-width:64.0625em) {
   .selectbox {

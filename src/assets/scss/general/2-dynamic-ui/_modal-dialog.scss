@@ -23,7 +23,7 @@
   border-radius: 5px;
   &:hover,
   &:focus {
-    background-color: #777;
+    background-color: hsla(0, 0%, 47%, 1);
     color: var(--white);
   }
 }
@@ -54,7 +54,7 @@
   }
   /* native backdrop */
   &::backdrop {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: hsla(0, 0%, 0%, .5);
     animation: backdrop-fade-in .35s ease-out;
   }
   /* polyfill backdrop */
@@ -64,7 +64,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: hsla(0, 0%, 0%, .5);
     animation: fade-in .25s ease-out;
   }
 }
@@ -103,7 +103,7 @@ _:future,
   }
   &:hover,
   &:focus {
-    background-color: #777;
+    background-color: hsla(0, 0%, 47%, 1);
     color: var(--white);
   }
 }
@@ -119,7 +119,7 @@ _:future,
   border-radius: 50%;
   &:hover,
   &:focus {
-    border: 1px solid #777;
+    border: 1px solid hsla(0, 0%, 47%, 1);
     background-color: var(--white);
     color: var(--black);
     > .positioning {
@@ -154,10 +154,10 @@ _:future,
   100% { opacity: 0; transform: translate(0, -1rem); }
 }
 @keyframes backdrop-fade-in {
-  0% { background-color: rgba(0, 0, 0, 0); }
-  100% { background-color: rgba(0, 0, 0, .5); }
+  0% { background-color: hsla(0, 0%, 0%, 0); }
+  100% { background-color: hsla(0, 0%, 0%, .5); }
 }
 @keyframes backdrop-fade-out {
-  0% { background-color: rgba(0, 0, 0, .5); }
-  100% { background-color: rgba(0, 0, 0, 0); }
+  0% { background-color: hsla(0, 0%, 0%, .5); }
+  100% { background-color: hsla(0, 0%, 0%, 0); }
 }

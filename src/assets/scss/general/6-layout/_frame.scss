@@ -42,13 +42,13 @@
     }
     > * {
       padding: .5rem;
-      border: 1px solid #333;
+      border: 1px solid hsla(0, 0%, 20%, 1);
       & article {
         width: calc(100% - 1rem);
         width: 95%;
         height: auto;
         margin: 1rem auto .5rem;
-        border: 1px solid #333;
+        border: 1px solid hsla(0, 0%, 20%, 1);
         @include setting.mq(tb-dth) {
           max-width: 50rem;
         }
@@ -60,7 +60,7 @@
           width: 95%;
           height: 5rem;
           margin: 1rem auto;
-          border: 1px solid #333;
+          border: 1px solid hsla(0, 0%, 20%, 1);
           padding: {
             top: .5rem;
             left: .5rem;

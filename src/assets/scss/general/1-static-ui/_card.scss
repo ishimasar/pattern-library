@@ -33,7 +33,7 @@
     position: relative;
     width: 100%;
     border: .5px solid hsla(0, 0%, 90%, 1);
-    font-family: var(--common-font);
+    font-family: var(--base-font);
     -webkit-font-smoothing: antialiased;
     overflow: hidden;
     box-shadow: var(--textbox-shadow);
@@ -52,7 +52,7 @@
       transition: all var(--ease-in-out-quad) .45s .02s;
     }
     > .text-container > .title {
-      background: linear-gradient(transparent 94%, #00e 6%);
+      background: linear-gradient(transparent 94%, hsla(240, 100%, 47%, 1) 6%);
     }
     &:hover .text-container > .title,
     &:focus .text-container > .title {
@@ -66,7 +66,7 @@
     position: relative;
     width: 100%;
     border: .5px solid hsla(0, 0%, 90%, 1);
-    font-family: var(--common-font);
+    font-family: var(--base-font);
     overflow: hidden;
     box-shadow: var(--textbox-shadow);
   }
@@ -101,8 +101,8 @@
     }
     > .title {
       display: inline;
-      background: linear-gradient(transparent 94%, #333 6%);
-      font-family: var(--common-font);
+      background: linear-gradient(transparent 94%, hsla(0, 0%, 20%, 1) 6%);
+      font-family: var(--base-font);
       font-weight: bold;
       @include setting.mq(dt) {
         font-size: calc(var(--font-size-d));
@@ -114,7 +114,7 @@
     > .excerpt {
       margin-top: .7rem;
       line-height: 1.6;
-      font-family: var(--common-font);
+      font-family: var(--base-font);
       color: var(--black);
     }
     & .rule {
@@ -122,7 +122,7 @@
       height: 1px;
       margin-top: .5rem;
       border: none;
-      background-color: #333;
+      background-color: hsla(0, 0%, 20%, 1);
     }
     & .date-container {
       display: block;
@@ -174,7 +174,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #0e51a8;
+    background-color: hsla(214, 85%, 36%, 1);
     font-size: calc(var(--font-size-b));
     color: var(--white);
     transition: all var(--ease-out-cubic) .35s .01s;

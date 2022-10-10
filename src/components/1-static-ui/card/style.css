@@ -37,7 +37,7 @@
   position: relative;
   width: 100%;
   border: .5px solid #e6e6e6;
-  font-family: var(--common-font);
+  font-family: var(--base-font);
   -webkit-font-smoothing: antialiased;
   overflow: hidden;
   box-shadow: var(--textbox-shadow);
@@ -67,7 +67,7 @@
   position: relative;
   width: 100%;
   border: .5px solid #e6e6e6;
-  font-family: var(--common-font);
+  font-family: var(--base-font);
   overflow: hidden;
   box-shadow: var(--textbox-shadow);
 }
@@ -114,7 +114,7 @@
 .card .text-container > .title {
   display: inline;
   background: linear-gradient(transparent 94%, #333 6%);
-  font-family: var(--common-font);
+  font-family: var(--base-font);
   font-weight: bold;
 }
 @media print, screen and (min-width:64.0625em) {
@@ -130,7 +130,7 @@
 .card .text-container > .excerpt {
   margin-top: .7rem;
   line-height: 1.6;
-  font-family: var(--common-font);
+  font-family: var(--base-font);
   color: var(--black);
 }
 .card .text-container .rule {

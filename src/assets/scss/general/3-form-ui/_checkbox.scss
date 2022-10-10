@@ -30,7 +30,7 @@
 }
 .checkbox:checked + label {
   font-weight: bold;
-  color: #000098;
+  color: hsla(240, 100%, 30%, 1);
 }
 .checkbox:hover + label,
 .checkbox:focus + label {
@@ -38,8 +38,8 @@
   transition: all .15s ease-in;
 }
 [data-whatinput="keyboard"] .checkbox:focus + label:before {
-  border-color: #000098;
-  box-shadow: 0 0 4px #000098;
+  border-color: hsla(240, 100%, 30%, 1);
+  box-shadow: 0 0 4px hsla(240, 100%, 30%, 1);
 }
 .checkbox + label:before {
   content: "";
@@ -48,8 +48,8 @@
   left: 0;
   width: 1.5rem;
   height: 1.5rem;
-  border: 2px solid #888;
-  background-color: #fff;
+  border: 2px solid hsla(0, 0%, 53%, 1);
+  background-color: hsla(0, 0%, 100%, 1);
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -62,8 +62,8 @@
   z-index: 1;
   width: .9rem;
   height: .55rem;
-  border-top: 3px solid #000098;
-  border-right: 3px solid #000098;
+  border-top: 3px solid hsla(240, 100%, 30%, 1);
+  border-right: 3px solid hsla(240, 100%, 30%, 1);
   opacity: 0;
   transform: rotate(135deg);
   transition: all .15s ease-in;

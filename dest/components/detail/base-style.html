@@ -233,12 +233,7 @@
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
                                 <pre><span class="hljs-keyword">@charset</span> <span class="hljs-string">&quot;UTF-8&quot;</span>;
 <span class="hljs-comment">/**
- * 1. normalize.css + reset.css(Eric Mayer’s)の複合カスタムスタイル
- *   - Elad Shechter&#x27;s RESETを参考にしている
- *   - この形式にした理由は、resetは無駄が多くnormalizeでは十分ではないため
- *   - sanitize.css、ress、Reboot.cssも一部参照している。2でも参照
- *   - 全称セレクタ(*)はすべてのセレクタに適用アクセスするため、
- *     レンダリングパフォーマンス観点から削除し使用しない
+ * 1.
  *
  * 2. 独自定義の初期化スタイル
  *
@@ -249,389 +244,9 @@
  *    - スクリーンリーダーによる音声読み上げ
  *
  * 4. そのほかデバイス(OS) / ブラウザ別ハック
- *
- * ----------
- * normalize
- * ! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
- * -----
- * Sections
- * -----
- * Render the `main` element consistently in IE.
  */</span>
 
-<span class="hljs-selector-tag">main</span> {
-  <span class="hljs-attribute">display</span>: block;
-}
 
-<span class="hljs-comment">/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */</span>
-<span class="hljs-selector-tag">h1</span> {
-  <span class="hljs-attribute">margin</span>: .<span class="hljs-number">67em</span> <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
-}
-
-<span class="hljs-comment">/**
- * Show the overflow in Edge and IE.
- */</span>
-hr {
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">overflow</span>: visible;
-  <span class="hljs-comment">/* 2 */</span>
-}
-
-<span class="hljs-comment">/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */</span>
-pre {
-  <span class="hljs-attribute">font-family</span>: monospace;
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
-  <span class="hljs-comment">/* 2 */</span>
-}
-
-<span class="hljs-comment">/**
- * Remove the gray background on active links in IE 10.
- */</span>
-<span class="hljs-selector-tag">a</span> {
-  <span class="hljs-attribute">background-color</span>: transparent;
-}
-
-<span class="hljs-comment">/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */</span>
-<span class="hljs-selector-tag">abbr</span><span class="hljs-selector-attr">[title]</span> {
-  <span class="hljs-attribute">border-bottom</span>: none;
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">text-decoration</span>: underline;
-  <span class="hljs-comment">/* 2 */</span>
-  <span class="hljs-attribute">text-decoration-style</span>: dotted;
-}
-
-<span class="hljs-comment">/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */</span>
-<span class="hljs-selector-tag">b</span>,
-<span class="hljs-selector-tag">strong</span> {
-  <span class="hljs-attribute">font-weight</span>: bolder;
-}
-
-<span class="hljs-comment">/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */</span>
-<span class="hljs-selector-tag">code</span>,
-<span class="hljs-selector-tag">kbd</span>,
-<span class="hljs-selector-tag">samp</span> {
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">font-family</span>: monospace;
-  <span class="hljs-comment">/* 2 */</span>
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
-}
-
-<span class="hljs-comment">/**
- * Add the correct font size in all browsers.
- */</span>
-<span class="hljs-comment">/*
-small {
-  font-size: 80%;
-}
-*/</span>
-<span class="hljs-comment">/**
- * Prevent `sub` and `sup` elements from affecting the line height in all browsers.
- */</span>
-sub,
-<span class="hljs-selector-tag">sup</span> {
-  <span class="hljs-attribute">position</span>: relative;
-  <span class="hljs-attribute">vertical-align</span>: baseline;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">75%</span>;
-}
-
-sub {
-  <span class="hljs-attribute">bottom</span>: -.<span class="hljs-number">25em</span>;
-}
-
-<span class="hljs-selector-tag">sup</span> {
-  <span class="hljs-attribute">top</span>: -.<span class="hljs-number">5em</span>;
-}
-
-<span class="hljs-comment">/**
- * -----
- * Forms
- * -----
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */</span>
-<span class="hljs-selector-tag">button</span>,
-<span class="hljs-selector-tag">input</span>,
-optgroup,
-select,
-<span class="hljs-selector-tag">textarea</span> {
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.15</span>;
-  <span class="hljs-attribute">font-family</span>: inherit;
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-comment">/* 2 */</span>
-  <span class="hljs-attribute">box-sizing</span>: border-box;
-}
-
-<span class="hljs-comment">/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */</span>
-<span class="hljs-selector-tag">button</span>,
-<span class="hljs-selector-tag">input</span> {
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">overflow</span>: visible;
-}
-
-<span class="hljs-comment">/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */</span>
-<span class="hljs-selector-tag">button</span>,
-select {
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">text-transform</span>: none;
-}
-
-<span class="hljs-comment">/**
- * Correct the inability to style clickable types in iOS and Safari.
- * 訳: iOSとSafariで、クリッカブルタイプのスタイリングを可能に
- */</span>
-<span class="hljs-selector-tag">button</span>,
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;button&quot;</span>]</span>,
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;reset&quot;</span>]</span>,
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;submit&quot;</span>]</span>,
-<span class="hljs-selector-attr">[role=<span class="hljs-string">&quot;button&quot;</span>]</span> {
-  <span class="hljs-attribute">cursor</span>: pointer;
-  appearance: button;
-}
-
-<span class="hljs-comment">/**
- * Remove the inner border and padding in Firefox.
- * 訳: Firefoxでクリッカブルタイプの内側の枠線とデフォルト余白を削除
- */</span>
-<span class="hljs-selector-tag">button</span>::-moz-focus-inner,
-[type=<span class="hljs-string">&quot;button&quot;</span>]::-moz-focus-inner,
-[type=<span class="hljs-string">&quot;reset&quot;</span>]::-moz-focus-inner,
-[type=<span class="hljs-string">&quot;submit&quot;</span>]::-moz-focus-inner {
-  padding: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">border-style</span>: none;
-}
-
-<span class="hljs-comment">/**
- * Restore the focus styles unset by the previous rule.
- * 訳:フォーカススタイルを元に戻す
- */</span>
-<span class="hljs-selector-tag">button</span>:-moz-focusring,
-[type=<span class="hljs-string">&quot;button&quot;</span>]:-moz-focusring,
-[type=<span class="hljs-string">&quot;reset&quot;</span>]:-moz-focusring,
-[type=<span class="hljs-string">&quot;submit&quot;</span>]:-moz-focusring {
-  outline: <span class="hljs-number">1px</span> dotted ButtonText;
-}
-
-<span class="hljs-comment">/**
- * Correct the padding in Firefox.
- */</span>
-<span class="hljs-selector-tag">fieldset</span> {
-  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">35em</span> .<span class="hljs-number">75em</span> .<span class="hljs-number">625em</span>;
-}
-
-<span class="hljs-comment">/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */</span>
-<span class="hljs-selector-tag">legend</span> {
-  <span class="hljs-comment">/* 2 */</span>
-  <span class="hljs-attribute">display</span>: table;
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-comment">/* 3 */</span>
-  <span class="hljs-attribute">white-space</span>: normal;
-  <span class="hljs-attribute">color</span>: inherit;
-  <span class="hljs-comment">/* 1 */</span>
-}
-
-<span class="hljs-comment">/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */</span>
-progress {
-  <span class="hljs-attribute">vertical-align</span>: baseline;
-}
-
-<span class="hljs-comment">/**
- * Remove the default vertical scrollbar in IE 10+.
- */</span>
-<span class="hljs-selector-tag">textarea</span> {
-  <span class="hljs-attribute">overflow</span>: auto;
-}
-
-<span class="hljs-comment">/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */</span>
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;checkbox&quot;</span>]</span>,
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;radio&quot;</span>]</span> {
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">box-sizing</span>: border-box;
-  <span class="hljs-comment">/* 2 */</span>
-}
-
-<span class="hljs-comment">/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */</span>
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;number&quot;</span>]</span>::-webkit-inner-spin-button,
-[type=<span class="hljs-string">&quot;number&quot;</span>]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-<span class="hljs-comment">/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 訳: ChromeとSafariの奇妙な外観を修正
- * 2. Correct the outline style in Safari.
- * 訳: Safariでアウトラインスタイルを修正
- */</span>
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;search&quot;</span>]</span> {
-  <span class="hljs-comment">/* 1 */</span>
-  <span class="hljs-attribute">outline-offset</span>: -<span class="hljs-number">2px</span>;
-  appearance: textfield;
-  <span class="hljs-comment">/* 2 */</span>
-}
-
-<span class="hljs-comment">/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */</span>
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;search&quot;</span>]</span>::-webkit-search-decoration {
-  appearance: none;
-}
-
-<span class="hljs-comment">/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 訳: iOSおよびSafariでクリック可能タイプにスタイル設定できないのを修正
- * 2. Change font properties to `inherit` in Safari.
- * 訳: Safariでフォントのプロパティを `inherit`に変更
- */</span>
-::-webkit-file-upload-button {
-  /* <span class="hljs-number">1</span> */
-  font: inherit;
-  appearance: button;
-  <span class="hljs-comment">/* 2 */</span>
-}
-
-<span class="hljs-comment">/**
- * -----
- * Interactive
- * -----
- * Add the correct display in Edge, IE 10+, and Firefox.
- */</span>
-<span class="hljs-selector-tag">details</span> {
-  <span class="hljs-attribute">display</span>: block;
-}
-
-<span class="hljs-comment">/**
- * Add the correct display in all browsers.
- */</span>
-<span class="hljs-selector-tag">summary</span> {
-  <span class="hljs-attribute">display</span>: list-item;
-}
-
-<span class="hljs-comment">/**
- * -----
- * Misc
- * -----
- * Add the correct display in IE 10+.
- */</span>
-template {
-  <span class="hljs-attribute">display</span>: none;
-}
-
-output {
-  <span class="hljs-attribute">display</span>: inline-block;
-}
-
-<span class="hljs-comment">/**
- * Add the correct display in IE 10.
- */</span>
-<span class="hljs-selector-attr">[hidden]</span> {
-  <span class="hljs-attribute">display</span>: none;
-}
-
-<span class="hljs-comment">/**
- * ----------
- * reset
- */</span>
-<span class="hljs-selector-tag">a</span> {
-  <span class="hljs-attribute">text-decoration</span>: none;
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#00e</span>;
-  <span class="hljs-attribute">cursor</span>: pointer;
-}
-
-<span class="hljs-selector-tag">button</span> {
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">background-color</span>: transparent;
-  <span class="hljs-attribute">color</span>: inherit;
-  <span class="hljs-attribute">cursor</span>: pointer;
-  appearance: none;
-  appearance: none;
-  appearance: none;
-}
-
-<span class="hljs-selector-tag">figure</span> {
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-}
-
-<span class="hljs-selector-tag">input</span>::-moz-focus-inner {
-  margin: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
-}
-
-<span class="hljs-selector-tag">ul</span>,
-<span class="hljs-selector-tag">ol</span>,
-<span class="hljs-selector-tag">dd</span> {
-  <span class="hljs-attribute">list-style</span>: none;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-}
-
-<span class="hljs-selector-tag">h1</span>,
-<span class="hljs-selector-tag">h2</span>,
-<span class="hljs-selector-tag">h3</span>,
-<span class="hljs-selector-tag">h4</span>,
-<span class="hljs-selector-tag">h5</span>,
-<span class="hljs-selector-tag">h6</span> {
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">font-size</span>: inherit;
-  <span class="hljs-attribute">font-weight</span>: inherit;
-}
-
-<span class="hljs-selector-tag">p</span> {
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-}
-
-<span class="hljs-selector-tag">cite</span> {
-  <span class="hljs-attribute">font-style</span>: normal;
-}
-
-<span class="hljs-selector-tag">fieldset</span> {
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span>;
-}
 
 <span class="hljs-comment">/**
  * ----------
@@ -662,11 +277,7 @@ output {
 }
 
 <span class="hljs-selector-tag">body</span> * {
-  <span class="hljs-comment">/* 全称セレクタ単体は使いたくないのでbody、ボックスモデル(margin、padding、border、content)を幅・高さに含めたいので、やむを得ずborder-box値適用(継承) */</span>
   <span class="hljs-attribute">box-sizing</span>: inherit;
-}
-<span class="hljs-selector-tag">body</span> *<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-tag">a</span>) {
-  <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--common-font);
 }
 
 *<span class="hljs-selector-pseudo">::before</span>,
@@ -983,7 +594,7 @@ select::-ms-value {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">14.3 KB</span>
+                    <span class="Meta-value">7.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -1089,12 +700,13 @@ select::-ms-value {
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
                                 <pre><span class="hljs-comment">/**
  * ## variable
- * ### CSS variables (CSS custom properties for cascading variables)
+ * ### CSS variable (CSS custom properties for cascading variables)
+ * Write only what you actually use
  */</span>
 
 <span class="hljs-selector-pseudo">:root</span> {
-  --common-<span class="hljs-attribute">font</span>: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
-  --english-<span class="hljs-attribute">font</span>-print: Arial;
+  --base-<span class="hljs-attribute">font</span>: -apple-system, BlinkMacSystemFont, Segoe UI, Hiragino Kaku Gothic ProN, Hiragino Sans, BIZ UDPGothic, Meiryo, sans-serif;
+  --english-<span class="hljs-attribute">font</span>-print: Arial, sans-serif;
   --<span class="hljs-attribute">font-size</span>-l4: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">3</span>;
   --<span class="hljs-attribute">font-size</span>-h: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">4</span>;
   --<span class="hljs-attribute">font-size</span>-l2: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">5</span>;
@@ -1138,7 +750,7 @@ select::-ms-value {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.7 KB</span>
+                    <span class="Meta-value">1.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -2484,7 +2096,7 @@ select::-ms-value {
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2022-10-09T15:49:50.403Z">
+                            <time datetime="2022-10-10T09:16:44.604Z">
                                 10/10/2022
                             </time>
                         
