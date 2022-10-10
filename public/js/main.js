@@ -99,8 +99,6 @@ const uiModeSwitcher = new UiModeSwitcher('#switch1', '.switch-state-on', '.swit
 uiModeSwitcher.switchMode();
 
 const elem = document.querySelectorAll('.toc');
-// eslint-disable-next-line no-undef
-Stickyfill.add(elem);
 
 const passwordRevealCheckbox = new PasswordRevealCheckbox('.js-display-pass', 'js-show-pass');
 
