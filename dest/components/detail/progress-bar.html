@@ -189,19 +189,7 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-keyword">const</span> wrapper = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.progress-wrapper&#x27;</span>);
-
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loaded</span>(<span class="hljs-params"></span>) </span>{
-        wrapper.setAttribute(<span class="hljs-string">&#x27;aria-live&#x27;</span>, <span class="hljs-string">&#x27;asertive&#x27;</span>);
-    }
-    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&#x27;load&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
-        <span class="hljs-built_in">setTimeout</span>(loaded, <span class="hljs-number">3000</span>);
-    })
-    <span class="hljs-built_in">setTimeout</span>(loaded, <span class="hljs-number">4000</span>)
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -226,18 +214,7 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-keyword">const</span> wrapper = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.progress-wrapper&#x27;</span>);
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loaded</span>(<span class="hljs-params"></span>) </span>{
-    wrapper.setAttribute(<span class="hljs-string">&#x27;aria-live&#x27;</span>, <span class="hljs-string">&#x27;asertive&#x27;</span>);
-  }
-  <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&#x27;load&#x27;</span>, <span class="hljs-function">()=&gt;</span> {
-    <span class="hljs-built_in">setTimeout</span>(loaded, <span class="hljs-number">3000</span>);
-  })
-  <span class="hljs-built_in">setTimeout</span>(loaded, <span class="hljs-number">4000</span>)
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -277,7 +254,69 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-selector-class">.progress-label</span> {
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">margin</span>: auto auto <span class="hljs-number">8px</span> auto;
+  <span class="hljs-attribute">text-align</span>: center;
+}
+
+<span class="hljs-selector-class">.progress-container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center;
+}
+
+<span class="hljs-selector-class">.progress-frame</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">500px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">34px</span>;
+  <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">5px</span>;
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">5px</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0deg</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">47%</span>, <span class="hljs-number">0.75</span>);
+}
+
+<span class="hljs-selector-class">.progressbar</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">76%</span>;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">background-size</span>: <span class="hljs-number">1.5rem</span> <span class="hljs-number">1.5rem</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">229deg</span>, <span class="hljs-number">73%</span>, <span class="hljs-number">19%</span>);
+  <span class="hljs-attribute">text-decoration</span>: none;
+  <span class="hljs-attribute">outline</span>: none;
+  <span class="hljs-attribute">overflow</span>: hidden;
+  -webkit-<span class="hljs-attribute">animation</span>: progress <span class="hljs-number">2s</span> <span class="hljs-built_in">var</span>(--ease-in-quad) <span class="hljs-number">1</span> forwards;
+  <span class="hljs-attribute">animation</span>: progress <span class="hljs-number">2s</span> <span class="hljs-built_in">var</span>(--ease-in-quad) <span class="hljs-number">1</span> forwards;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+<span class="hljs-keyword">@-webkit-keyframes</span> progress {
+  <span class="hljs-number">0%</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+  }
+  <span class="hljs-number">2%</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">2%</span>; <span class="hljs-comment">/* border-radius: 20px 0 0 20px; */</span>
+  }
+  <span class="hljs-selector-tag">to</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>; <span class="hljs-comment">/* border-radius: 20px; */</span>
+    <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0px</span> <span class="hljs-number">90px</span>;
+  }
+}
+<span class="hljs-keyword">@keyframes</span> progress {
+  <span class="hljs-number">0%</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+  }
+  <span class="hljs-number">2%</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">2%</span>; <span class="hljs-comment">/* border-radius: 20px 0 0 20px; */</span>
+  }
+  <span class="hljs-selector-tag">to</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>; <span class="hljs-comment">/* border-radius: 20px; */</span>
+    <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0px</span> <span class="hljs-number">90px</span>;
+  }
+}</pre>
                             </code>
                             
                         </div>
@@ -293,7 +332,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">1.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -425,6 +464,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./avatar.html" data-role="tree-link" data-pjax data-handle="avatar">
                 <span>Avatar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./badge.html" data-role="tree-link" data-pjax data-handle="badge">
+                <span>Badge</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1639,8 +1704,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2022-10-10T10:07:49.357Z">
-                                10/10/2022
+                            <time datetime="2022-10-13T03:40:02.908Z">
+                                10/13/2022
                             </time>
                         
                     </dd>
@@ -1665,6 +1730,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         

@@ -233,26 +233,243 @@
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
                                 <pre><span class="hljs-keyword">@charset</span> <span class="hljs-string">&quot;UTF-8&quot;</span>;
 <span class="hljs-comment">/**
- * 1.
- *
- * 2. 独自定義の初期化スタイル
- *
- * 3. アクセシビリティ用途
- *    - マウス操作
- *    - タッチパネル操作
- *    - キーボード操作(what-input.jsなど)
- *    - スクリーンリーダーによる音声読み上げ
- *
- * 4. そのほかデバイス(OS) / ブラウザ別ハック
+ * # base.scss
+ * (1) A modern CSS reset
+ * (2) Composite custom styles in normalize.css + reset.css (Eric Mayer&#x27;s). Inspired by Elad Shechter&#x27;s RESET
+ * (3) Other useful initialization
+ * (4) For A11Y / WAI-ARIA
  */</span>
+<span class="hljs-comment">/**
+ * ----------
+ * (1) A modern CSS reset
+ */</span>
+<span class="hljs-selector-tag">body</span> *, *<span class="hljs-selector-pseudo">::before</span>, *<span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+}
+
+<span class="hljs-selector-tag">body</span>, <span class="hljs-selector-tag">h1</span>, <span class="hljs-selector-tag">h2</span>, <span class="hljs-selector-tag">h3</span>, <span class="hljs-selector-tag">h4</span>, <span class="hljs-selector-tag">p</span>, <span class="hljs-selector-tag">figure</span>, <span class="hljs-selector-tag">blockquote</span>, <span class="hljs-selector-tag">dl</span>, <span class="hljs-selector-tag">dd</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">ul</span><span class="hljs-selector-attr">[role=list]</span>, <span class="hljs-selector-tag">ol</span><span class="hljs-selector-attr">[role=list]</span> {
+  <span class="hljs-attribute">list-style</span>: none;
+}
+
+<span class="hljs-selector-tag">html</span><span class="hljs-selector-pseudo">:focus</span>-within {
+  scroll-behavior: smooth;
+}
+
+<span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100vh</span>;
+  <span class="hljs-attribute">text-rendering</span>: optimizeSpeed;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
+}
+
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[class]</span>) {
+  -webkit-<span class="hljs-attribute">text-decoration</span>-skip: ink;
+  <span class="hljs-attribute">text-decoration</span>-skip-ink: auto;
+}
+
+<span class="hljs-selector-tag">img</span>, picture {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">display</span>: block;
+}
+
+<span class="hljs-keyword">@media</span> (<span class="hljs-attribute">prefers-reduced-motion</span>: reduce) {
+  <span class="hljs-selector-tag">html</span><span class="hljs-selector-pseudo">:focus</span>-within {
+    scroll-behavior: auto;
+  }
+}
+<span class="hljs-comment">/**
+ * ----------
+ * (2) Composite custom styles in normalize.css + reset.css
+ * normalize.css
+ */</span>
+<span class="hljs-comment">/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */</span>
+<span class="hljs-selector-tag">code</span>, <span class="hljs-selector-tag">kbd</span>, <span class="hljs-selector-tag">samp</span> {
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">font-family</span>: monospace;
+  <span class="hljs-comment">/* 2 */</span>
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
+}
 
 <span class="hljs-comment">/**
- * original initialization
+ * Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+ */</span>
+sub, <span class="hljs-selector-tag">sup</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">vertical-align</span>: baseline;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">75%</span>;
+}
+
+sub {
+  <span class="hljs-attribute">bottom</span>: -<span class="hljs-number">0.25em</span>;
+}
+
+<span class="hljs-selector-tag">sup</span> {
+  <span class="hljs-attribute">top</span>: -<span class="hljs-number">0.5em</span>;
+}
+
+<span class="hljs-comment">/**
+ * 1. Change the font styles in all browsers.
+ */</span>
+<span class="hljs-selector-tag">button</span>, <span class="hljs-selector-tag">input</span>, optgroup, select, <span class="hljs-selector-tag">textarea</span> {
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.15</span>;
+  <span class="hljs-attribute">font-family</span>: inherit;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
+}
+
+<span class="hljs-comment">/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */</span>
+<span class="hljs-selector-tag">button</span>, select {
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">text-transform</span>: none;
+}
+
+<span class="hljs-comment">/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */</span>
+<span class="hljs-selector-tag">button</span>,
+<span class="hljs-selector-attr">[type=button]</span>,
+<span class="hljs-selector-attr">[type=reset]</span>,
+<span class="hljs-selector-attr">[type=submit]</span>,
+<span class="hljs-selector-attr">[role=button]</span> {
+  <span class="hljs-attribute">cursor</span>: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+<span class="hljs-comment">/**
+ * Remove the inner border and padding in Firefox.
+ */</span>
+<span class="hljs-selector-tag">button</span>::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  padding: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border-style</span>: none;
+}
+
+<span class="hljs-comment">/**
+ * Restore the focus styles unset by the previous rule.
+ */</span>
+<span class="hljs-selector-tag">button</span>:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: <span class="hljs-number">1px</span> dotted ButtonText;
+}
+
+<span class="hljs-comment">/**
+ * Correct the padding in Firefox.
+ */</span>
+<span class="hljs-selector-tag">fieldset</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.35em</span> <span class="hljs-number">0.75em</span> <span class="hljs-number">0.625em</span>;
+}
+
+<span class="hljs-comment">/**
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */</span>
+<span class="hljs-selector-tag">legend</span> {
+  <span class="hljs-comment">/* 3 */</span>
+  <span class="hljs-attribute">white-space</span>: normal;
+  <span class="hljs-attribute">color</span>: inherit;
+}
+
+<span class="hljs-comment">/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */</span>
+<span class="hljs-selector-attr">[type=number]</span>::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+<span class="hljs-comment">/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ */</span>
+<span class="hljs-selector-attr">[type=search]</span> {
+  <span class="hljs-comment">/* 1 */</span>
+  <span class="hljs-attribute">outline-offset</span>: -<span class="hljs-number">2px</span>;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+<span class="hljs-comment">/**
+ * reset.css
+ */</span>
+<span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">text-decoration</span>: none;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">240deg</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">47%</span>);
+  <span class="hljs-attribute">cursor</span>: pointer;
+}
+
+<span class="hljs-selector-tag">button</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">background-color</span>: transparent;
+  <span class="hljs-attribute">color</span>: inherit;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+<span class="hljs-selector-tag">figure</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">input</span>::-moz-focus-inner {
+  margin: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">ul</span>, <span class="hljs-selector-tag">ol</span>, <span class="hljs-selector-tag">dd</span> {
+  <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">h1</span>, <span class="hljs-selector-tag">h2</span>, <span class="hljs-selector-tag">h3</span>, <span class="hljs-selector-tag">h4</span>, <span class="hljs-selector-tag">h5</span>, <span class="hljs-selector-tag">h6</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">font-size</span>: inherit;
+  <span class="hljs-attribute">font-weight</span>: inherit;
+}
+
+<span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">cite</span> {
+  <span class="hljs-attribute">font-style</span>: normal;
+}
+
+<span class="hljs-selector-tag">fieldset</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">/**
+ * ----------
+ * (3) Other useful initialization
  */</span>
 <span class="hljs-selector-tag">html</span> {
-  <span class="hljs-comment">/* Prevent adjustments of font size after orientation changes in iOS. */</span>
-  <span class="hljs-attribute">text-rendering</span>: optimizeLegibility;
   <span class="hljs-comment">/* All browsers without overlaying scrollbars */</span>
+  -webkit-text-size-adjust: <span class="hljs-number">100%</span>;
+  -moz-text-size-adjust: <span class="hljs-number">100%</span>;
+  -ms-text-size-adjust: <span class="hljs-number">100%</span>;
   text-size-adjust: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-comment">/* for using REM units */</span>
@@ -261,32 +478,25 @@
   <span class="hljs-attribute">box-sizing</span>: border-box;
 }
 
+<span class="hljs-comment">/**
+ * personal initialization style
+ */</span>
 <span class="hljs-selector-tag">body</span> {
   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100vh</span>;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
   <span class="hljs-attribute">font-family</span>: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
   <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>;
+  -webkit-<span class="hljs-attribute">font-feature-settings</span>: <span class="hljs-string">&quot;pkna&quot;</span> <span class="hljs-number">1</span>;
   <span class="hljs-attribute">font-feature-settings</span>: <span class="hljs-string">&quot;pkna&quot;</span> <span class="hljs-number">1</span>;
   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--text-normal-color);
   <span class="hljs-attribute">box-sizing</span>: border-box;
   <span class="hljs-attribute">direction</span>: ltr;
 }
 
-<span class="hljs-selector-tag">body</span> * {
-  <span class="hljs-attribute">box-sizing</span>: inherit;
-}
-
-*<span class="hljs-selector-pseudo">::before</span>,
-*<span class="hljs-selector-pseudo">::after</span> {
-  <span class="hljs-attribute">background-repeat</span>: no-repeat;
-  <span class="hljs-comment">/* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */</span>
-  <span class="hljs-attribute">vertical-align</span>: inherit;
-  <span class="hljs-attribute">text-decoration</span>: inherit;
-  <span class="hljs-comment">/* Set `background-repeat: no-repeat` to all elements and pseudo elements */</span>
-  <span class="hljs-attribute">box-sizing</span>: inherit;
-}
-
+<span class="hljs-comment">/**
+ * personal initialization style
+ */</span>
 <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span>,
 <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">text-decoration</span>: none;
@@ -315,11 +525,11 @@ svg {
 }
 
 <span class="hljs-selector-tag">caption</span> {
-  <span class="hljs-attribute">padding-top</span>: .<span class="hljs-number">75rem</span>;
-  <span class="hljs-attribute">padding-bottom</span>: .<span class="hljs-number">75rem</span>;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0.75rem</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">0.75rem</span>;
   <span class="hljs-attribute">caption-side</span>: bottom;
   <span class="hljs-attribute">text-align</span>: left;
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#6c757d</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">208deg</span>, <span class="hljs-number">7%</span>, <span class="hljs-number">46%</span>);
 }
 
 <span class="hljs-selector-tag">th</span> {
@@ -328,7 +538,7 @@ svg {
 
 <span class="hljs-selector-tag">label</span> {
   <span class="hljs-attribute">display</span>: inline-block;
-  <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">5rem</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.5rem</span>;
 }
 
 <span class="hljs-comment">/* Remove the default button styling in all browsers */</span>
@@ -341,6 +551,10 @@ select,
   <span class="hljs-attribute">color</span>: inherit;
 }
 
+<span class="hljs-selector-tag">dfn</span> {
+  <span class="hljs-attribute">font-style</span>: normal;
+}
+
 <span class="hljs-comment">/* Replace pointer cursor in disabled elements */</span>
 <span class="hljs-selector-attr">[disabled]</span> {
   <span class="hljs-attribute">cursor</span>: default;
@@ -348,102 +562,80 @@ select,
 
 <span class="hljs-comment">/* Specify text selection background color and omit drop shadow */</span>
 ::-moz-selection {
-  background-color: <span class="hljs-number">#b3d4fc</span>;
+  background-color: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">213deg</span>, <span class="hljs-number">92%</span>, <span class="hljs-number">85%</span>);
   <span class="hljs-attribute">text-shadow</span>: none;
   <span class="hljs-comment">/* Required when declaring ::selection */</span>
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0deg</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">0%</span>);
 }
 
 <span class="hljs-selector-pseudo">::selection</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#b3d4fc</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">213deg</span>, <span class="hljs-number">92%</span>, <span class="hljs-number">85%</span>);
   <span class="hljs-attribute">text-shadow</span>: none;
   <span class="hljs-comment">/* Required when declaring ::selection */</span>
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0deg</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">0%</span>);
 }
 
 ::-webkit-input-placeholder {
-  color: <span class="hljs-number">#6f6f6f</span>;
+  color: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0deg</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">44%</span>);
 }
 
 :-ms-input-placeholder {
-  color: <span class="hljs-number">#6f6f6f</span>;
+  color: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0deg</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">44%</span>);
 }
 
 ::-moz-placeholder {
-  color: <span class="hljs-number">#6f6f6f</span>;
+  color: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0deg</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">44%</span>);
+}
+
+:-moz-placeholder-shown {
+  color: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0deg</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">44%</span>);
+}
+
+:-ms-input-placeholder {
+  color: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0deg</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">44%</span>);
 }
 
 <span class="hljs-selector-pseudo">:placeholder-shown</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">44%</span>, <span class="hljs-number">1</span>);
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0deg</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">44%</span>);
 }
 
 <span class="hljs-comment">/**
  * ----------
- * web accessibility
- * -----
- * what-input.jsによりdata属性付与
- * マウス/タッチイベント時のフォーカスリングスタイル打消
- * キーボードフォーカス時のみフォーカススタイル有効
+ * (4) For A11Y / WAI-ARIA
+ * A11Y
  */</span>
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;mouse&quot;</span>]</span> *<span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;touch&quot;</span>]</span> *<span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">outline</span>: none;
-}
-
 <span class="hljs-selector-attr">[tabindex=<span class="hljs-string">&quot;-1&quot;</span>]</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">outline</span>: none <span class="hljs-meta">!important</span>;
 }
 
-<span class="hljs-comment">/**
-  * すべてのインタラクティブ・コンテンツ(要素)に対し、
-  * focus-ringに独自カスタム疑似スタイルを定義
-  */</span>
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">a</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">audio</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">button</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">details</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">summary</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> embed,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">iframe</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">img</span><span class="hljs-selector-attr">[usemap]</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[hidden]</span>),
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> keygen,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">label</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">object</span><span class="hljs-selector-attr">[usemap]</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> select,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">textarea</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">video</span> {
-  <span class="hljs-attribute">transition</span>: outline .<span class="hljs-number">15s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">47</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">745</span>, .<span class="hljs-number">715</span>);
-  <span class="hljs-attribute">outline</span>: none;
-  <span class="hljs-attribute">outline-offset</span>: .<span class="hljs-number">0625rem</span>;
-}
-
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">audio</span><span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">details</span><span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">summary</span><span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> embed<span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">iframe</span><span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">img</span><span class="hljs-selector-attr">[usemap]</span><span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[hidden]</span>)<span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> keygen<span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">label</span><span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">object</span><span class="hljs-selector-attr">[usemap]</span><span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> select<span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">textarea</span><span class="hljs-selector-pseudo">:focus</span>,
-<span class="hljs-selector-attr">[data-whatinput=<span class="hljs-string">&quot;keyboard&quot;</span>]</span> <span class="hljs-selector-tag">video</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">outline</span>: .<span class="hljs-number">125rem</span> solid <span class="hljs-built_in">var</span>(--focusring-color);
-  <span class="hljs-attribute">outline-offset</span>: .<span class="hljs-number">0625rem</span>;
+<span class="hljs-comment">/* Define your own focus-ring style for all interactive elements */</span>
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">audio</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">details</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">summary</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+embed<span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">iframe</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">img</span><span class="hljs-selector-attr">[usemap]</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[hidden]</span>)<span class="hljs-selector-pseudo">:focus</span>-visible,
+keygen<span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">label</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">object</span><span class="hljs-selector-attr">[usemap]</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+select<span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">textarea</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">video</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+dialog<span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:focus</span>-visible,
+<span class="hljs-selector-tag">section</span><span class="hljs-selector-pseudo">:focus</span>-visible {
+  <span class="hljs-attribute">outline</span>: <span class="hljs-number">0.125rem</span> solid <span class="hljs-built_in">var</span>(--focusring-color);
+  <span class="hljs-attribute">outline-offset</span>: <span class="hljs-number">0.0625rem</span>;
 }
 
 <span class="hljs-comment">/**
- * -----
  * WAI-ARIA
- * -----
  */</span>
 <span class="hljs-comment">/* Specify the progress cursor of updating elements */</span>
-<span class="hljs-selector-attr">[aria-busy=<span class="hljs-string">&quot;true&quot;</span>]</span> {
+<span class="hljs-selector-attr">[aria-busy=true]</span> {
   <span class="hljs-attribute">cursor</span>: progress;
 }
 
@@ -455,126 +647,6 @@ select,
 <span class="hljs-comment">/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */</span>
 <span class="hljs-selector-attr">[aria-disabled]</span> {
   <span class="hljs-attribute">cursor</span>: default;
-}
-
-<span class="hljs-comment">/* Hide content from screens but not screenreaders */</span>
-<span class="hljs-keyword">@media</span> screen {
-  <span class="hljs-selector-attr">[hidden~=<span class="hljs-string">&quot;screen&quot;</span>]</span> {
-    <span class="hljs-attribute">display</span>: inherit;
-  }
-
-  <span class="hljs-selector-attr">[hidden~=<span class="hljs-string">&quot;screen&quot;</span>]</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:active</span>)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:focus</span>)<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:target</span>) {
-    <span class="hljs-attribute">position</span>: absolute <span class="hljs-meta">!important</span>;
-    <span class="hljs-attribute">clip</span>: <span class="hljs-built_in">rect</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>) <span class="hljs-meta">!important</span>;
-  }
-}
-<span class="hljs-comment">/*
- * ----------
- * そのほかデバイス(OS) / ブラウザ別ハック
- */</span>
-hr {
-  <span class="hljs-attribute">overflow</span>: visible;
-  <span class="hljs-comment">/* Show the overflow in Edge and IE */</span>
-}
-
-<span class="hljs-comment">/* Add the correct display in iOS 4-7. */</span>
-<span class="hljs-selector-tag">audio</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[controls]</span>) {
-  <span class="hljs-attribute">display</span>: none;
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
-}
-
-<span class="hljs-selector-tag">audio</span>,
-<span class="hljs-selector-tag">canvas</span>,
-progress,
-<span class="hljs-selector-tag">video</span> {
-  <span class="hljs-attribute">display</span>: inline-block;
-  <span class="hljs-comment">/* Internet Explorer 11+, Windows Phone 8.1+ */</span>
-}
-
-svg<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:root</span>) {
-  <span class="hljs-attribute">overflow</span>: hidden;
-  <span class="hljs-comment">/* Internet Explorer 11- */</span>
-}
-
-<span class="hljs-comment">/* Style select like a standard input */</span>
-select {
-  appearance: none;
-  <span class="hljs-comment">/* Firefox 36+ */</span>
-  appearance: none;
-  <span class="hljs-comment">/* Chrome 41+ */</span>
-}
-
-select::-ms-expand {
-  display: none;
-  <span class="hljs-comment">/* Internet Explorer 11+ */</span>
-}
-
-select::-ms-value {
-  color: currentColor;
-  <span class="hljs-comment">/* Internet Explorer 11+ */</span>
-}
-
-<span class="hljs-selector-tag">legend</span> {
-  <span class="hljs-comment">/* Correct the color inheritance from `fieldset` elements in IE */</span>
-  <span class="hljs-attribute">display</span>: table;
-  <span class="hljs-comment">/* Correct the text wrapping in Edge and IE */</span>
-  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-comment">/* Correct the text wrapping in Edge and IE */</span>
-  <span class="hljs-attribute">white-space</span>: normal;
-  <span class="hljs-comment">/* Correct `color` not being inherited in IE 8/9/10/11 */</span>
-  <span class="hljs-attribute">color</span>: inherit;
-  <span class="hljs-comment">/* Correct the text wrapping in Edge and IE */</span>
-}
-
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;search&quot;</span>]</span> {
-  <span class="hljs-comment">/* Correct the odd appearance in Chrome and Safari */</span>
-  <span class="hljs-attribute">outline-offset</span>: -<span class="hljs-number">2px</span>;
-  appearance: textfield;
-  <span class="hljs-comment">/* Correct the outline style in Safari */</span>
-}
-
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;number&quot;</span>]</span> {
-  <span class="hljs-attribute">width</span>: auto;
-  <span class="hljs-comment">/* Firefox 36+ */</span>
-}
-
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;search&quot;</span>]</span> {
-  appearance: textfield;
-  <span class="hljs-comment">/* Safari 8+ */</span>
-}
-
-<span class="hljs-selector-attr">[type=<span class="hljs-string">&quot;search&quot;</span>]</span>::-webkit-search-cancel-button,
-[type=<span class="hljs-string">&quot;search&quot;</span>]::-webkit-search-decoration {
-  appearance: none;
-  <span class="hljs-comment">/* Safari 8 */</span>
-}
-
-::-webkit-file-upload-button {
-  /* Correct the inability to style clickable types in iOS and Safari */
-  font: inherit;
-  appearance: button;
-  <span class="hljs-comment">/* Change font properties to `inherit` in Chrome and Safari */</span>
-}
-
-<span class="hljs-selector-class">.main-wrapper</span> {
-  <span class="hljs-attribute">margin-right</span>: auto;
-  <span class="hljs-attribute">margin-left</span>: auto;
-  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">3rem</span>;
-  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3rem</span>;
-}
-
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">48em</span>) {
-  <span class="hljs-selector-class">.main-wrapper</span> {
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">90%</span>;
-    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">64.0625em</span>;
-    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">48rem</span>;
-  }
-}
-<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">47.96875em</span>) {
-  <span class="hljs-selector-class">.main-wrapper</span> {
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">90vw</span>;
-  }
 }</pre>
                             </code>
                             
@@ -591,7 +663,7 @@ select::-ms-value {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">7.4 KB</span>
+                    <span class="Meta-value">7.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -698,20 +770,21 @@ select::-ms-value {
                                 <pre><span class="hljs-comment">/**
  * ## variable
  * ### CSS variable (CSS custom properties for cascading variables)
- * Write only what you actually use
  */</span>
 
 <span class="hljs-selector-pseudo">:root</span> {
   --base-<span class="hljs-attribute">font</span>: -apple-system, BlinkMacSystemFont, Segoe UI, Hiragino Kaku Gothic ProN, Hiragino Sans, BIZ UDPGothic, Meiryo, sans-serif;
   --english-<span class="hljs-attribute">font</span>-print: Arial, sans-serif;
-  --<span class="hljs-attribute">font-size</span>-l4: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">3</span>;
-  --<span class="hljs-attribute">font-size</span>-h: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">4</span>;
-  --<span class="hljs-attribute">font-size</span>-l2: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">5</span>;
-  --<span class="hljs-attribute">font-size</span>-l1: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">6</span>;
-  --<span class="hljs-attribute">font-size</span>-m2: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">7</span>;
-  --<span class="hljs-attribute">font-size</span>-m1: <span class="hljs-number">1rem</span>;
-  --<span class="hljs-attribute">font-size</span>-s1: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">9</span>;
-  --<span class="hljs-attribute">font-size</span>-s2: <span class="hljs-number">1rem</span> * <span class="hljs-number">8</span> / <span class="hljs-number">10</span>;
+  --<span class="hljs-number">12px</span>-rem: <span class="hljs-number">0.75rem</span>;
+  --<span class="hljs-number">14px</span>-rem: <span class="hljs-number">0.875rem</span>;
+  --<span class="hljs-number">18px</span>-rem: <span class="hljs-number">1.125rem</span>;
+  --<span class="hljs-number">20px</span>-rem: <span class="hljs-number">1.25rem</span>;
+  --<span class="hljs-number">24px</span>-rem: <span class="hljs-number">1.5rem</span>;
+  --<span class="hljs-number">28px</span>-rem: <span class="hljs-number">1.75rem</span>;
+  --<span class="hljs-number">32px</span>-rem: <span class="hljs-number">2rem</span>;
+  --<span class="hljs-number">36px</span>-rem: <span class="hljs-number">2.25rem</span>;
+  --<span class="hljs-number">40px</span>-rem: <span class="hljs-number">2.5rem</span>;
+  --<span class="hljs-number">48px</span>-rem: <span class="hljs-number">3rem</span>;
   --black: <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">20%</span>, <span class="hljs-number">1</span>);
   --white: <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">1</span>);
   --contrast-limit-gray: <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">47%</span>, <span class="hljs-number">1</span>);
@@ -724,9 +797,9 @@ select::-ms-value {
   --ease-in-cubic: <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">55</span>, .<span class="hljs-number">055</span>, .<span class="hljs-number">675</span>, .<span class="hljs-number">19</span>);
   --ease-out-cubic: <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">215</span>, .<span class="hljs-number">61</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>);
   --ease-in-out-cubic: <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">645</span>, .<span class="hljs-number">045</span>, .<span class="hljs-number">355</span>, <span class="hljs-number">1</span>);
-  --textbox-shadow: <span class="hljs-number">0</span> <span class="hljs-number">10px</span> <span class="hljs-number">15px</span> -<span class="hljs-number">3px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), <span class="hljs-number">0</span> <span class="hljs-number">4px</span> <span class="hljs-number">6px</span> -<span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">1</span>);
-  --textbox-bg: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, .<span class="hljs-number">925</span>);
-  --textbox-hover-shadow: <span class="hljs-number">0</span> <span class="hljs-number">12px</span> <span class="hljs-number">12px</span> <span class="hljs-number">0</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">14</span>), <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">7px</span> <span class="hljs-number">0</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">065</span>);
+  --textbox-shadow: <span class="hljs-number">0</span> <span class="hljs-number">10px</span> <span class="hljs-number">15px</span> -<span class="hljs-number">3px</span> <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">0%</span>, .<span class="hljs-number">2</span>), <span class="hljs-number">0</span> <span class="hljs-number">4px</span> <span class="hljs-number">6px</span> -<span class="hljs-number">2px</span> <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">0%</span>, .<span class="hljs-number">1</span>);
+  --textbox-bg: <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">100%</span>, .<span class="hljs-number">925</span>);
+  --textbox-hover-shadow: <span class="hljs-number">0</span> <span class="hljs-number">12px</span> <span class="hljs-number">12px</span> <span class="hljs-number">0</span> <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">0%</span>, .<span class="hljs-number">14</span>), <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">7px</span> <span class="hljs-number">0</span> <span class="hljs-built_in">hsla</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">0%</span>, .<span class="hljs-number">065</span>);
   --in-<span class="hljs-attribute">transition</span>: color .<span class="hljs-number">15s</span> <span class="hljs-built_in">var</span>(--ease-in-out-quad), background-color .<span class="hljs-number">15s</span> <span class="hljs-built_in">var</span>(--ease-in-out-quad), transform .<span class="hljs-number">15s</span> <span class="hljs-built_in">var</span>(--ease-in-out-quad);
   --out-<span class="hljs-attribute">transition</span>: color .<span class="hljs-number">2s</span> <span class="hljs-built_in">var</span>(--ease-out-quad), background-color .<span class="hljs-number">2s</span> <span class="hljs-built_in">var</span>(--ease-in-out-quad), transform .<span class="hljs-number">2s</span> <span class="hljs-built_in">var</span>(--ease-in-out-quad);
   --carousel-fade: opacity .<span class="hljs-number">7s</span> <span class="hljs-built_in">var</span>(--ease-in-quad);
@@ -747,7 +820,7 @@ select::-ms-value {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.8 KB</span>
+                    <span class="Meta-value">1.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -879,6 +952,32 @@ select::-ms-value {
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./avatar.html" data-role="tree-link" data-pjax data-handle="avatar">
                 <span>Avatar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./badge.html" data-role="tree-link" data-pjax data-handle="badge">
+                <span>Badge</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2093,8 +2192,8 @@ select::-ms-value {
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2022-10-10T10:07:49.357Z">
-                                10/10/2022
+                            <time datetime="2022-10-13T03:40:02.908Z">
+                                10/13/2022
                             </time>
                         
                     </dd>
@@ -2119,6 +2218,8 @@ select::-ms-value {
                 Back
             </button>
         </div>
+        
+    
         
     
         

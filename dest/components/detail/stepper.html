@@ -291,7 +291,78 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-comment">/* /js/modules/Stepper.js */</span>
+
+<span class="hljs-comment">/**
+* Stepper UI class
+*/</span>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Stepper</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">next, back</span>)</span> {
+    <span class="hljs-built_in">this</span>.indicaters = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;.js-step&#x27;</span>);
+    <span class="hljs-built_in">this</span>.next = <span class="hljs-built_in">document</span>.querySelectorAll(next);
+    <span class="hljs-built_in">this</span>.back = <span class="hljs-built_in">document</span>.querySelectorAll(back);
+    <span class="hljs-built_in">this</span>.label = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.stepper-contents .label&#x27;</span>);
+
+    <span class="hljs-built_in">this</span>.container = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;.stepper-contents&#x27;</span>);
+    <span class="hljs-built_in">this</span>.containerArray = [].slice.call(<span class="hljs-built_in">this</span>.container);
+
+    <span class="hljs-built_in">this</span>.stepNext();
+    <span class="hljs-built_in">this</span>.stepBack();
+    <span class="hljs-built_in">this</span>.stepPhase();
+  }
+
+  <span class="hljs-function"><span class="hljs-title">stepNext</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">this</span>.next.length; i++) {
+      <span class="hljs-built_in">this</span>.next[i].addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        e.preventDefault();
+        <span class="hljs-built_in">this</span>.container[i].setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+        <span class="hljs-built_in">this</span>.container[i + <span class="hljs-number">1</span>].setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>);
+        <span class="hljs-built_in">this</span>.indicaters[i].removeAttribute(<span class="hljs-string">&#x27;aria-current&#x27;</span>);
+        <span class="hljs-built_in">this</span>.indicaters[i + <span class="hljs-number">1</span>].setAttribute(<span class="hljs-string">&#x27;aria-current&#x27;</span>, <span class="hljs-string">&#x27;step&#x27;</span>);
+      }, { <span class="hljs-attr">passive</span>: <span class="hljs-literal">false</span> });
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-title">stepBack</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">this</span>.back.length; i++) {
+      <span class="hljs-built_in">this</span>.back[i].addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        e.preventDefault();
+        <span class="hljs-built_in">this</span>.container[i].setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+        <span class="hljs-built_in">this</span>.container[i - <span class="hljs-number">1</span>].setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>);
+        <span class="hljs-built_in">this</span>.indicaters[i].removeAttribute(<span class="hljs-string">&#x27;aria-current&#x27;</span>);
+        <span class="hljs-built_in">this</span>.indicaters[i - <span class="hljs-number">1</span>].setAttribute(<span class="hljs-string">&#x27;aria-current&#x27;</span>, <span class="hljs-string">&#x27;step&#x27;</span>);
+      }, { <span class="hljs-attr">passive</span>: <span class="hljs-literal">false</span> });
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-title">stepPhase</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">this</span>.indicaters.length; i++) {
+      <span class="hljs-built_in">this</span>.indicaters[i].addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        e.preventDefault();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">this</span>.indicaters.length; i++) {
+          <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.indicaters[i].getAttribute(<span class="hljs-string">&#x27;aria-current&#x27;</span>) === <span class="hljs-string">&#x27;step&#x27;</span>) {
+            <span class="hljs-built_in">this</span>.indicaters[i].removeAttribute(<span class="hljs-string">&#x27;aria-current&#x27;</span>, <span class="hljs-string">&#x27;step&#x27;</span>);
+          }
+        }
+
+        <span class="hljs-built_in">this</span>.indicaters[i].setAttribute(<span class="hljs-string">&#x27;aria-current&#x27;</span>, <span class="hljs-string">&#x27;step&#x27;</span>);
+
+        <span class="hljs-keyword">let</span> pairedId = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-built_in">this</span>.indicaters[i].getAttribute(<span class="hljs-string">&#x27;aria-controls&#x27;</span>));
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">this</span>.container.length; i++) {
+          <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.container[i].hasAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>)) {
+            <span class="hljs-built_in">this</span>.container[i].setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;true&#x27;</span>);
+          }
+        }
+        pairedId.setAttribute(<span class="hljs-string">&#x27;aria-hidden&#x27;</span>, <span class="hljs-string">&#x27;false&#x27;</span>);
+
+        pairedId.setAttribute(<span class="hljs-string">&#x27;tabindex&#x27;</span>, <span class="hljs-string">&#x27;0&#x27;</span>);
+        pairedId.focus();
+      }, { <span class="hljs-attr">passive</span>: <span class="hljs-literal">false</span> });
+    }
+  }
+}</pre>
                             </code>
                             
                         </div>
@@ -307,7 +378,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">2.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -320,7 +391,120 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-selector-class">.stepper-indicater</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">margin</span>: auto;
+}
+<span class="hljs-selector-class">.stepper-indicater</span> <span class="hljs-selector-class">.indicater</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">counter-increment</span>: step-counter;
+  <span class="hljs-attribute">min-width</span>: <span class="hljs-number">44px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">44px</span>;
+  <span class="hljs-attribute">border</span>: solid <span class="hljs-number">2px</span> <span class="hljs-built_in">hsl</span>(<span class="hljs-number">229deg</span>, <span class="hljs-number">73%</span>, <span class="hljs-number">19%</span>);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">229deg</span>, <span class="hljs-number">73%</span>, <span class="hljs-number">19%</span>);
+}
+<span class="hljs-selector-class">.stepper-indicater</span> <span class="hljs-selector-class">.indicater</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-built_in">counter</span>(step-counter);
+  <span class="hljs-attribute">margin</span>: auto;
+}
+<span class="hljs-selector-class">.stepper-indicater</span> <span class="hljs-selector-class">.indicater</span><span class="hljs-selector-attr">[aria-current=step]</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">229deg</span>, <span class="hljs-number">73%</span>, <span class="hljs-number">19%</span>);
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">600</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">var</span>(--<span class="hljs-number">18px</span>-rem);
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);
+}
+<span class="hljs-selector-class">.stepper-indicater</span> <span class="hljs-selector-class">.connect</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">5px</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--contrast-limit-gray);
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span>;
+}
+<span class="hljs-keyword">@media</span> print, screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">64.0625em</span>) {
+  <span class="hljs-selector-class">.stepper-indicater</span> <span class="hljs-selector-class">.connect</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">15%</span>;
+    <span class="hljs-attribute">margin</span>: auto <span class="hljs-number">1.5%</span>;
+  }
+}
+<span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">64em</span>) {
+  <span class="hljs-selector-class">.stepper-indicater</span> <span class="hljs-selector-class">.connect</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10%</span>;
+    <span class="hljs-attribute">margin</span>: auto <span class="hljs-number">2%</span>;
+  }
+}
+
+<span class="hljs-selector-class">.stepper-contents-container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}
+
+<span class="hljs-selector-class">.stepper-contents</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">justify-content</span>: center;
+  gap: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1.5rem</span> auto auto;
+  <span class="hljs-attribute">text-align</span>: center;
+}
+<span class="hljs-selector-class">.stepper-contents</span><span class="hljs-selector-attr">[aria-hidden=false]</span> {
+  <span class="hljs-attribute">visibility</span>: visible;
+}
+<span class="hljs-selector-class">.stepper-contents</span><span class="hljs-selector-attr">[aria-hidden=true]</span> {
+  <span class="hljs-attribute">display</span>: none;
+}
+<span class="hljs-selector-class">.stepper-contents</span> <span class="hljs-selector-class">.control</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: space-evenly;
+}
+<span class="hljs-selector-class">.stepper-contents</span> <span class="hljs-selector-class">.control</span> <span class="hljs-selector-tag">button</span> {
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">4.1rem</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">3rem</span>;
+  -webkit-<span class="hljs-attribute">padding</span>-start: <span class="hljs-number">0.1rem</span>;
+  <span class="hljs-attribute">padding</span>-inline-start: <span class="hljs-number">0.1rem</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">text-decoration</span>: none;
+}
+<span class="hljs-selector-class">.stepper-contents</span> <span class="hljs-selector-class">.control</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-attr">[aria-hidden=false]</span> {
+  <span class="hljs-attribute">visibility</span>: visible;
+}
+<span class="hljs-selector-class">.stepper-contents</span> <span class="hljs-selector-class">.control</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-attr">[aria-hidden=true]</span> {
+  <span class="hljs-attribute">visibility</span>: hidden;
+  <span class="hljs-attribute">display</span>: inline-block;
+}
+<span class="hljs-selector-class">.stepper-contents</span> <span class="hljs-selector-class">.control</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
+}
+<span class="hljs-selector-class">.stepper-contents</span> <span class="hljs-selector-class">.control</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-class">.control-back</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">top</span>: -<span class="hljs-number">0.1em</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">9px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">9px</span>;
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1.5px</span> solid <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1.5px</span> solid <span class="hljs-built_in">var</span>(--black);
+  -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">135deg</span>);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">135deg</span>);
+}
+<span class="hljs-selector-class">.stepper-contents</span> <span class="hljs-selector-class">.control</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-class">.control-next</span><span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">top</span>: -<span class="hljs-number">0.1em</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">9px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">9px</span>;
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1.5px</span> solid <span class="hljs-built_in">var</span>(--black);
+  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1.5px</span> solid <span class="hljs-built_in">var</span>(--black);
+  -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>);
+}</pre>
                             </code>
                             
                         </div>
@@ -336,7 +520,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">2.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -468,6 +652,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./avatar.html" data-role="tree-link" data-pjax data-handle="avatar">
                 <span>Avatar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./badge.html" data-role="tree-link" data-pjax data-handle="badge">
+                <span>Badge</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1682,8 +1892,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2022-10-10T10:07:49.357Z">
-                                10/10/2022
+                            <time datetime="2022-10-13T03:40:02.908Z">
+                                10/13/2022
                             </time>
                         
                     </dd>
@@ -1708,6 +1918,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         

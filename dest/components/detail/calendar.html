@@ -365,7 +365,92 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code hljs">
-                                <pre></pre>
+                                <pre><span class="hljs-comment">/* /js/modules/Calendar.js */</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">calendar</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> week = [<span class="hljs-string">&#x27;月&#x27;</span>, <span class="hljs-string">&#x27;火&#x27;</span>, <span class="hljs-string">&#x27;水&#x27;</span>, <span class="hljs-string">&#x27;木&#x27;</span>, <span class="hljs-string">&#x27;金&#x27;</span>, <span class="hljs-string">&#x27;土&#x27;</span>, <span class="hljs-string">&#x27;日&#x27;</span>];
+  <span class="hljs-keyword">const</span> date = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+  <span class="hljs-keyword">const</span> name = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;#name&#x27;</span>);
+  <span class="hljs-keyword">const</span> buttonPrev = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-calendar-prev&#x27;</span>);
+  <span class="hljs-keyword">const</span> buttonNext = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-calendar-next&#x27;</span>);
+  <span class="hljs-keyword">const</span> showDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(date.getFullYear(), date.getMonth(), <span class="hljs-number">1</span>);
+  <span class="hljs-keyword">const</span> calendarBody = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;#calendar-body&#x27;</span>);
+
+  <span class="hljs-keyword">if</span>(name) {
+    showProcess(date, calendar);
+
+    buttonPrev.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+      prev();
+    });
+
+    buttonNext.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+      next();
+    });
+  }
+
+  <span class="hljs-comment">// 前の月表示</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">prev</span>(<span class="hljs-params"></span>) </span>{
+    showDate.setMonth(showDate.getMonth() - <span class="hljs-number">1</span>);
+    showProcess(showDate);
+  }
+
+  <span class="hljs-comment">// 次の月表示</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">next</span>(<span class="hljs-params"></span>) </span>{
+    showDate.setMonth(showDate.getMonth() + <span class="hljs-number">1</span>);
+    showProcess(showDate);
+  }
+
+  <span class="hljs-comment">// カレンダー表示</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showProcess</span>(<span class="hljs-params">date</span>) </span>{
+    <span class="hljs-keyword">let</span> year = date.getFullYear();
+    <span class="hljs-keyword">let</span> month = date.getMonth();
+    name.innerHTML = year + <span class="hljs-string">&#x27;年&#x27;</span> + (month + <span class="hljs-number">1</span>) + <span class="hljs-string">&#x27;月のカレンダー&#x27;</span>;
+
+    <span class="hljs-keyword">let</span> calendar = createProcess(year, month);
+    calendarBody.innerHTML = calendar;
+  }
+
+  <span class="hljs-comment">// カレンダー作成</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createProcess</span>(<span class="hljs-params">year, month</span>) </span>{
+    <span class="hljs-comment">// 曜日</span>
+    <span class="hljs-keyword">let</span> calendar = <span class="hljs-string">&#x27;&#x27;</span>;
+    calendar += <span class="hljs-string">&#x27;&#x27;</span>;
+
+    <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> startDayOfWeek = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(year, month, <span class="hljs-number">0</span>).getDay();
+    <span class="hljs-keyword">let</span> endDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(year, month + <span class="hljs-number">1</span>, <span class="hljs-number">0</span>).getDate();
+    <span class="hljs-keyword">let</span> lastMonthEndDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(year, month, <span class="hljs-number">0</span>).getDate();
+    <span class="hljs-keyword">let</span> row = <span class="hljs-built_in">Math</span>.ceil((startDayOfWeek + endDate) / week.length);
+
+    <span class="hljs-comment">// 1行ずつ設定</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; row; i++) {
+      calendar += <span class="hljs-string">&#x27;&lt;tr&gt;&#x27;</span>;
+      <span class="hljs-comment">// 1colum単位で設定</span>
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; week.length; j++) {
+        <span class="hljs-keyword">if</span> (i == <span class="hljs-number">0</span> &amp;&amp; j &lt; startDayOfWeek) {
+          <span class="hljs-comment">// 1行目で1日まで先月の日付を設定</span>
+          calendar += <span class="hljs-string">&#x27;&lt;td class=&quot;prev-month-day&quot;&gt;&#x27;</span> + (lastMonthEndDate - startDayOfWeek + j + <span class="hljs-number">1</span>) + <span class="hljs-string">&#x27;&lt;/td&gt;&#x27;</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (count &gt;= endDate) {
+          <span class="hljs-comment">// 最終行で最終日以降、翌月の日付を設定</span>
+          count++;
+          calendar += <span class="hljs-string">&#x27;&lt;td class=&quot;next-month-day&quot;&gt;&#x27;</span> + (count - endDate) + <span class="hljs-string">&#x27;&lt;/td&gt;&#x27;</span>;
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-comment">// 当月の日付を曜日に照らし合わせて設定</span>
+          count++;
+          <span class="hljs-keyword">if</span>(year == date.getFullYear()
+            &amp;&amp; month == (date.getMonth())
+            &amp;&amp; count == date.getDate()){
+              calendar += <span class="hljs-string">&#x27;&lt;td class=&quot;today&quot;&gt;&lt;span class=&quot;deco&quot;&gt;&#x27;</span> + count + <span class="hljs-string">&#x27;&lt;/span&gt;&lt;/td&gt;&#x27;</span>;
+          } <span class="hljs-keyword">else</span> {
+              calendar += <span class="hljs-string">&#x27;&lt;td&gt;&#x27;</span> + count + <span class="hljs-string">&#x27;&lt;/td&gt;&#x27;</span>;
+          }
+        }
+      }
+      calendar += <span class="hljs-string">&#x27;&lt;/tr&gt;&#x27;</span>;
+    }
+    <span class="hljs-keyword">return</span> calendar;
+  }
+}</pre>
                             </code>
                             
                         </div>
@@ -381,7 +466,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">0 Byte</span>
+                    <span class="Meta-value">2.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -647,6 +732,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./avatar.html" data-role="tree-link" data-pjax data-handle="avatar">
                 <span>Avatar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./badge.html" data-role="tree-link" data-pjax data-handle="badge">
+                <span>Badge</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1861,8 +1972,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2022-10-10T10:07:49.357Z">
-                                10/10/2022
+                            <time datetime="2022-10-13T03:40:02.908Z">
+                                10/13/2022
                             </time>
                         
                     </dd>
@@ -1887,6 +1998,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         

@@ -1,25 +1,242 @@
 @charset "UTF-8";
 /**
- * 1.
- *
- * 2. 独自定義の初期化スタイル
- *
- * 3. アクセシビリティ用途
- *    - マウス操作
- *    - タッチパネル操作
- *    - キーボード操作(what-input.jsなど)
- *    - スクリーンリーダーによる音声読み上げ
- *
- * 4. そのほかデバイス(OS) / ブラウザ別ハック
+ * # base.scss
+ * (1) A modern CSS reset
+ * (2) Composite custom styles in normalize.css + reset.css (Eric Mayer's). Inspired by Elad Shechter's RESET
+ * (3) Other useful initialization
+ * (4) For A11Y / WAI-ARIA
  */
+/**
+ * ----------
+ * (1) A modern CSS reset
+ */
+body *, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role=list], ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+/**
+ * ----------
+ * (2) Composite custom styles in normalize.css + reset.css
+ * normalize.css
+ */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code, kbd, samp {
+  /* 1 */
+  font-family: monospace;
+  /* 2 */
+  font-size: 1em;
+}
 
 /**
- * original initialization
+ * Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+ */
+sub, sup {
+  position: relative;
+  vertical-align: baseline;
+  line-height: 0;
+  font-size: 75%;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/**
+ * 1. Change the font styles in all browsers.
+ */
+button, input, optgroup, select, textarea {
+  /* 1 */
+  margin: 0;
+  line-height: 1.15;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button, select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit],
+[role=button] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  /* 3 */
+  white-space: normal;
+  color: inherit;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ */
+[type=search] {
+  /* 1 */
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/**
+ * reset.css
+ */
+a {
+  text-decoration: none;
+  color: hsl(240deg, 100%, 47%);
+  cursor: pointer;
+}
+
+button {
+  padding: 0;
+  border-width: 0;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+figure {
+  margin: 0;
+}
+
+input::-moz-focus-inner {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul, ol, dd {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+cite {
+  font-style: normal;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+}
+
+/**
+ * ----------
+ * (3) Other useful initialization
  */
 html {
-  /* Prevent adjustments of font size after orientation changes in iOS. */
-  text-rendering: optimizeLegibility;
   /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   font-size: 100%;
   /* for using REM units */
@@ -28,32 +245,25 @@ html {
   box-sizing: border-box;
 }
 
+/**
+ * personal initialization style
+ */
 body {
   min-height: 100vh;
   margin: 0;
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
   font-weight: 400;
+  -webkit-font-feature-settings: "pkna" 1;
   font-feature-settings: "pkna" 1;
   color: var(--text-normal-color);
   box-sizing: border-box;
   direction: ltr;
 }
 
-body * {
-  box-sizing: inherit;
-}
-
-*::before,
-*::after {
-  background-repeat: no-repeat;
-  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
-  vertical-align: inherit;
-  text-decoration: inherit;
-  /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
-  box-sizing: inherit;
-}
-
+/**
+ * personal initialization style
+ */
 a:hover,
 a:focus {
   text-decoration: none;
@@ -82,11 +292,11 @@ table {
 }
 
 caption {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   caption-side: bottom;
   text-align: left;
-  color: #6c757d;
+  color: hsl(208deg, 7%, 46%);
 }
 
 th {
@@ -95,7 +305,7 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Remove the default button styling in all browsers */
@@ -108,6 +318,10 @@ textarea {
   color: inherit;
 }
 
+dfn {
+  font-style: normal;
+}
+
 /* Replace pointer cursor in disabled elements */
 [disabled] {
   cursor: default;
@@ -115,102 +329,80 @@ textarea {
 
 /* Specify text selection background color and omit drop shadow */
 ::-moz-selection {
-  background-color: #b3d4fc;
+  background-color: hsl(213deg, 92%, 85%);
   text-shadow: none;
   /* Required when declaring ::selection */
-  color: #000;
+  color: hsl(0deg, 0%, 0%);
 }
 
 ::selection {
-  background-color: #b3d4fc;
+  background-color: hsl(213deg, 92%, 85%);
   text-shadow: none;
   /* Required when declaring ::selection */
-  color: #000;
+  color: hsl(0deg, 0%, 0%);
 }
 
 ::-webkit-input-placeholder {
-  color: #6f6f6f;
+  color: hsl(0deg, 0%, 44%);
 }
 
 :-ms-input-placeholder {
-  color: #6f6f6f;
+  color: hsl(0deg, 0%, 44%);
 }
 
 ::-moz-placeholder {
-  color: #6f6f6f;
+  color: hsl(0deg, 0%, 44%);
+}
+
+:-moz-placeholder-shown {
+  color: hsl(0deg, 0%, 44%);
+}
+
+:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 44%);
 }
 
 :placeholder-shown {
-  color: hsla(0, 0%, 44%, 1);
+  color: hsl(0deg, 0%, 44%);
 }
 
 /**
  * ----------
- * web accessibility
- * -----
- * what-input.jsによりdata属性付与
- * マウス/タッチイベント時のフォーカスリングスタイル打消
- * キーボードフォーカス時のみフォーカススタイル有効
+ * (4) For A11Y / WAI-ARIA
+ * A11Y
  */
-[data-whatinput="mouse"] *:focus,
-[data-whatinput="touch"] *:focus {
-  outline: none;
-}
-
 [tabindex="-1"]:focus {
   outline: none !important;
 }
 
-/**
-  * すべてのインタラクティブ・コンテンツ(要素)に対し、
-  * focus-ringに独自カスタム疑似スタイルを定義
-  */
-[data-whatinput="keyboard"] a,
-[data-whatinput="keyboard"] audio,
-[data-whatinput="keyboard"] button,
-[data-whatinput="keyboard"] details,
-[data-whatinput="keyboard"] summary,
-[data-whatinput="keyboard"] embed,
-[data-whatinput="keyboard"] iframe,
-[data-whatinput="keyboard"] img[usemap],
-[data-whatinput="keyboard"] input:not([hidden]),
-[data-whatinput="keyboard"] keygen,
-[data-whatinput="keyboard"] label,
-[data-whatinput="keyboard"] object[usemap],
-[data-whatinput="keyboard"] select,
-[data-whatinput="keyboard"] textarea,
-[data-whatinput="keyboard"] video {
-  transition: outline .15s cubic-bezier(.47, 0, .745, .715);
-  outline: none;
-  outline-offset: .0625rem;
-}
-
-[data-whatinput="keyboard"] a:focus,
-[data-whatinput="keyboard"] audio:focus,
-[data-whatinput="keyboard"] button:focus,
-[data-whatinput="keyboard"] details:focus,
-[data-whatinput="keyboard"] summary:focus,
-[data-whatinput="keyboard"] embed:focus,
-[data-whatinput="keyboard"] iframe:focus,
-[data-whatinput="keyboard"] img[usemap]:focus,
-[data-whatinput="keyboard"] input:not([hidden]):focus,
-[data-whatinput="keyboard"] keygen:focus,
-[data-whatinput="keyboard"] label:focus,
-[data-whatinput="keyboard"] object[usemap]:focus,
-[data-whatinput="keyboard"] select:focus,
-[data-whatinput="keyboard"] textarea:focus,
-[data-whatinput="keyboard"] video:focus {
-  outline: .125rem solid var(--focusring-color);
-  outline-offset: .0625rem;
+/* Define your own focus-ring style for all interactive elements */
+a:focus-visible,
+audio:focus-visible,
+button:focus-visible,
+details:focus-visible,
+summary:focus-visible,
+embed:focus-visible,
+iframe:focus-visible,
+img[usemap]:focus-visible,
+input:not([hidden]):focus-visible,
+keygen:focus-visible,
+label:focus-visible,
+object[usemap]:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+video:focus-visible,
+dialog:focus-visible,
+div:focus-visible,
+section:focus-visible {
+  outline: 0.125rem solid var(--focusring-color);
+  outline-offset: 0.0625rem;
 }
 
 /**
- * -----
  * WAI-ARIA
- * -----
  */
 /* Specify the progress cursor of updating elements */
-[aria-busy="true"] {
+[aria-busy=true] {
   cursor: progress;
 }
 
@@ -222,124 +414,4 @@ textarea {
 /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
 [aria-disabled] {
   cursor: default;
-}
-
-/* Hide content from screens but not screenreaders */
-@media screen {
-  [hidden~="screen"] {
-    display: inherit;
-  }
-
-  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
-    position: absolute !important;
-    clip: rect(0 0 0 0) !important;
-  }
-}
-/*
- * ----------
- * そのほかデバイス(OS) / ブラウザ別ハック
- */
-hr {
-  overflow: visible;
-  /* Show the overflow in Edge and IE */
-}
-
-/* Add the correct display in iOS 4-7. */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  /* Internet Explorer 11+, Windows Phone 8.1+ */
-}
-
-svg:not(:root) {
-  overflow: hidden;
-  /* Internet Explorer 11- */
-}
-
-/* Style select like a standard input */
-select {
-  appearance: none;
-  /* Firefox 36+ */
-  appearance: none;
-  /* Chrome 41+ */
-}
-
-select::-ms-expand {
-  display: none;
-  /* Internet Explorer 11+ */
-}
-
-select::-ms-value {
-  color: currentColor;
-  /* Internet Explorer 11+ */
-}
-
-legend {
-  /* Correct the color inheritance from `fieldset` elements in IE */
-  display: table;
-  /* Correct the text wrapping in Edge and IE */
-  max-width: 100%;
-  border: 0;
-  /* Correct the text wrapping in Edge and IE */
-  white-space: normal;
-  /* Correct `color` not being inherited in IE 8/9/10/11 */
-  color: inherit;
-  /* Correct the text wrapping in Edge and IE */
-}
-
-[type="search"] {
-  /* Correct the odd appearance in Chrome and Safari */
-  outline-offset: -2px;
-  appearance: textfield;
-  /* Correct the outline style in Safari */
-}
-
-[type="number"] {
-  width: auto;
-  /* Firefox 36+ */
-}
-
-[type="search"] {
-  appearance: textfield;
-  /* Safari 8+ */
-}
-
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  appearance: none;
-  /* Safari 8 */
-}
-
-::-webkit-file-upload-button {
-  /* Correct the inability to style clickable types in iOS and Safari */
-  font: inherit;
-  appearance: button;
-  /* Change font properties to `inherit` in Chrome and Safari */
-}
-
-.main-wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-@media print, screen and (min-width:48em) {
-  .main-wrapper {
-    width: 90%;
-    max-width: 64.0625em;
-    min-width: 48rem;
-  }
-}
-@media print, screen and (max-width:47.96875em) {
-  .main-wrapper {
-    width: 90vw;
-  }
 }

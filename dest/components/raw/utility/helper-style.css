@@ -1,142 +1,159 @@
-.mt-24 {
-  margin-top: -1.5rem;
+.mt-4 {
+  -webkit-margin-before: -4px !important;
+  margin-block-start: -4px !important;
 }
 
-.mb-24 {
-  margin-bottom: -1.5rem;
+.mr-4 {
+  -webkit-margin-end: -4px !important;
+  margin-inline-end: -4px !important;
 }
 
-.my-24 {
-  margin-top: -1.5rem;
-  margin-bottom: -1.5rem;
+.mb-4 {
+  -webkit-margin-after: -4px !important;
+  margin-block-end: -4px !important;
 }
 
-.mt-16 {
-  margin-top: -1rem;
+.ml-4 {
+  -webkit-margin-start: -4px !important;
+  margin-inline-start: -4px !important;
 }
 
-.mb-16 {
-  margin-bottom: -1rem;
+.mt-2 {
+  -webkit-margin-before: -2px !important;
+  margin-block-start: -2px !important;
 }
 
-.my-16 {
-  margin-top: -1rem;
-  margin-bottom: -1rem;
+.mr-2 {
+  -webkit-margin-end: -2px !important;
+  margin-inline-end: -2px !important;
 }
 
-.mt-8 {
-  margin-top: -.5rem;
+.mb-2 {
+  -webkit-margin-after: -2px !important;
+  margin-block-end: -2px !important;
 }
 
-.mb-8 {
-  margin-bottom: -.5rem;
-}
-
-.my-8 {
-  margin-top: -.5rem;
-  margin-bottom: -.5rem;
+.ml-2 {
+  -webkit-margin-start: -2px !important;
+  margin-inline-start: -2px !important;
 }
 
 .mt0 {
-  margin-top: 0;
+  -webkit-margin-before: 0px !important;
+  margin-block-start: 0px !important;
+}
+
+.mr0 {
+  -webkit-margin-end: 0px !important;
+  margin-inline-end: 0px !important;
 }
 
 .mb0 {
-  margin-bottom: 0;
+  -webkit-margin-after: 0px !important;
+  margin-block-end: 0px !important;
 }
 
-.my0 {
-  margin-top: 0;
-  margin-bottom: 0;
+.ml0 {
+  -webkit-margin-start: 0px !important;
+  margin-inline-start: 0px !important;
 }
 
-.mt8 {
-  margin-top: .5rem;
+.mt2 {
+  -webkit-margin-before: 2px !important;
+  margin-block-start: 2px !important;
 }
 
-.mb8 {
-  margin-bottom: .5rem;
+.mr2 {
+  -webkit-margin-end: 2px !important;
+  margin-inline-end: 2px !important;
 }
 
-.my8 {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+.mb2 {
+  -webkit-margin-after: 2px !important;
+  margin-block-end: 2px !important;
 }
 
-.mt16 {
-  margin-top: 1rem;
+.ml2 {
+  -webkit-margin-start: 2px !important;
+  margin-inline-start: 2px !important;
 }
 
-.mb16 {
-  margin-bottom: 1rem;
+.mt4 {
+  -webkit-margin-before: 4px !important;
+  margin-block-start: 4px !important;
 }
 
-.my16 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.mr4 {
+  -webkit-margin-end: 4px !important;
+  margin-inline-end: 4px !important;
 }
 
-.mt24 {
-  margin-top: 1.5rem;
+.mb4 {
+  -webkit-margin-after: 4px !important;
+  margin-block-end: 4px !important;
 }
 
-.mb24 {
-  margin-bottom: 1.5rem;
+.ml4 {
+  -webkit-margin-start: 4px !important;
+  margin-inline-start: 4px !important;
 }
 
-.my24 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+.pt4 {
+  -webkit-padding-before: 4px !important;
+  padding-block-start: 4px !important;
 }
 
-.mt32 {
-  margin-top: 2rem;
+.pr4 {
+  -webkit-padding-end: 4px !important;
+  padding-inline-end: 4px !important;
 }
 
-.mb32 {
-  margin-bottom: 2rem;
+.pb4 {
+  -webkit-padding-after: 4px !important;
+  padding-block-end: 4px !important;
 }
 
-.my32 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.pl4 {
+  -webkit-padding-start: 4px !important;
+  padding-inline-start: 4px !important;
 }
 
-.mt40 {
-  margin-top: 2.5rem;
+.pt6 {
+  -webkit-padding-before: 6px !important;
+  padding-block-start: 6px !important;
 }
 
-.mb40 {
-  margin-bottom: 2.5rem;
+.pr6 {
+  -webkit-padding-end: 6px !important;
+  padding-inline-end: 6px !important;
 }
 
-.my40 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+.pb6 {
+  -webkit-padding-after: 6px !important;
+  padding-block-end: 6px !important;
 }
 
-.mt48 {
-  margin-top: 3rem;
+.pl6 {
+  -webkit-padding-start: 6px !important;
+  padding-inline-start: 6px !important;
 }
 
-.mb48 {
-  margin-bottom: 3rem;
+.pt8 {
+  -webkit-padding-before: 8px !important;
+  padding-block-start: 8px !important;
 }
 
-.my48 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+.pr8 {
+  -webkit-padding-end: 8px !important;
+  padding-inline-end: 8px !important;
 }
 
-/* 視覚的に非表示にしスクリーンリーダーには読ませる。SEO/アクセシビリティ対応 */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+.pb8 {
+  -webkit-padding-after: 8px !important;
+  padding-block-end: 8px !important;
+}
+
+.pl8 {
+  -webkit-padding-start: 8px !important;
+  padding-inline-start: 8px !important;
 }
