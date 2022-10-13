@@ -828,6 +828,53 @@ section:focus-visible {
   }
 }
 
+.badge-relative {
+  display: inline-block;
+  width: auto;
+  position: relative;
+  vertical-align: bottom;
+}
+
+.nav {
+  display: inline-block;
+  padding: 16px;
+  border: 1px dashed var(--contrast-limit-gray);
+  line-height: 1.5;
+}
+
+.badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset-block-start: -12px;
+  inset-inline-end: -12px;
+  min-width: 26px;
+  min-height: 24px;
+  padding: 1px 9px;
+  color: var(--white);
+  border-radius: 50px;
+}
+.badge.-red {
+  background-color: hsl(0deg, 100%, 40%);
+}
+.badge.-blue {
+  background-color: hsl(229deg, 73%, 19%);
+}
+.badge.-icon-adj {
+  padding: 1px 5px;
+}
+.badge.-icon-adj .badge-image {
+  height: 24px;
+}
+
+.badge-image {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: var(--white);
+}
+
 .card {
   display: flex;
   background-color: var(--white);
