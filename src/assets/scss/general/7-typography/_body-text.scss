@@ -16,8 +16,16 @@
       font-size: calc(var(--font-size-c));
     }
   }
-  & .mark {
+  & .highlight-cover {
     background-color: hsla(182, 100%, 87%, 1);
+  }
+  & .highlight-shift {
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: hsla(182, 100%, 87%, 1);
+    text-decoration-thickness: .6em;
+    text-underline-offset: -.25em;
+    text-decoration-skip-ink: none;
   }
   & .shortcut {
     margin: -.2em .3em 0;

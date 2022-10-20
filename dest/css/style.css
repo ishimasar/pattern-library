@@ -5015,8 +5015,18 @@ typewritten-text:not(.active) .typewritten-text_start::after {
   margin-left: 0.12rem;
   font-size: calc(var(--font-size-c));
 }
-.body-text .mark {
+.body-text .highlight-cover {
   background-color: hsl(182deg, 100%, 87%);
+}
+.body-text .highlight-shift {
+  background-color: transparent;
+  text-decoration: underline;
+  -webkit-text-decoration-color: hsl(182deg, 100%, 87%);
+          text-decoration-color: hsl(182deg, 100%, 87%);
+  text-decoration-thickness: 0.6em;
+  text-underline-offset: -0.25em;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 .body-text .shortcut {
   margin: -0.2em 0.3em 0;
