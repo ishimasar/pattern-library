@@ -7,23 +7,48 @@
       max-width: none;
     }
   }
+  @include setting.mq(sp-tb) {
+    .toc__link,
+    .toc__link:hover,
+    .toc__link:focus {
+      text-decoration: underline;
+      font-weight: normal;
+    }
+  }
+  @include setting.mq(dt) {
+    .toc__link:hover,
+    .toc__link:focus {
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .toc__link.is-current:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 2.75em;
+      width: 1em;
+      height: 0.1rem;
+      background-color: hsla(240, 100%, 47%, 1);
+    }
+  }
   .header {
     position: relative;
-    padding: {
-      top: 3rem;
-      bottom: 2rem;
-    }
     background-color: hsla(0, 0%, 93%, 1);
     text-align: center;
     font-size: 1rem;
     box-shadow: 0 1px 10px hsla(0, 0%, 0%, 0.35);
+    padding: {
+      top: 3rem;
+      bottom: 2rem;
+    }
   }
   .container {
     display: flex;
     width: 100%;
     max-width: 80rem;
     @include setting.mq(dt) {
-      gap :2rem;
+      gap: 2rem;
     }
     @include setting.mq(tb-dth) {
       flex-direction: row;
@@ -69,10 +94,10 @@
       position: fixed;
       right: 0;
       bottom: 2rem;
-      width: 8rem;
-      background-color: hsla(255, 255%, 255%, .85);
-      backdrop-filter: blur(.125rem);
       z-index: 2;
+      width: 8rem;
+      background-color: hsla(255, 255%, 255%, 0.85);
+      backdrop-filter: blur(0.125rem);
     }
   }
   .toc {
@@ -91,43 +116,18 @@
     }
   }
   .toc__link {
-    transition: all .25s;
+    transition: all 0.25s;
     @include setting.mq(dt) {
-      padding: .5rem;
+      padding: 0.5rem;
     }
     @include setting.mq(sp-tb) {
-      padding: .4rem;
-    }
-  }
-  @include setting.mq(sp-tb) {
-    .toc__link,
-    .toc__link:hover,
-    .toc__link:focus {
-      text-decoration: underline;
-      font-weight: normal;
+      padding: 0.4rem;
     }
   }
   .toc__link.is-current {
     position: relative;
     background-color: hsla(193, 100%, 90%, 1);
-    transition: all .5s;
-  }
-  @include setting.mq(dt) {
-    .toc__link:hover,
-    .toc__link:focus {
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .toc__link.is-current:before {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      top: 50%;
-      left: 2.75em;
-      width: 1em;
-      height: .1rem;
-      background-color: hsla(240, 100%, 47%, 1);
-    }
+    transition: all 0.5s;
   }
   .footer {
     position: relative;
@@ -145,7 +145,7 @@
     right: 8%;
     width: 6rem;
     height: 3rem;
-    padding-top: .5rem;
+    padding-top: 0.5rem;
     background-color: hsla(0, 0%, 80%, 1);
     line-height: 1.5rem;
     font-size: 1.5rem;

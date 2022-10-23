@@ -34,8 +34,8 @@
 }
 .checkbox:hover + label,
 .checkbox:focus + label {
-  opacity: .75;
-  transition: all .15s ease-in;
+  opacity: 0.75;
+  transition: all 0.15s ease-in;
 }
 [data-whatinput="keyboard"] .checkbox:focus + label:before {
   border-color: hsla(240, 100%, 30%, 1);
@@ -44,7 +44,7 @@
 .checkbox + label:before {
   content: "";
   position: absolute;
-  top: .2rem;
+  top: 0.2rem;
   left: 0;
   width: 1.5rem;
   height: 1.5rem;
@@ -57,24 +57,24 @@
   content: "";
   display: inline-block;
   position: absolute;
-  top: .575rem;
-  left: .3rem;
+  top: 0.575rem;
+  left: 0.3rem;
   z-index: 1;
-  width: .9rem;
-  height: .55rem;
+  width: 0.9rem;
+  height: 0.55rem;
   border-top: 3px solid hsla(240, 100%, 30%, 1);
   border-right: 3px solid hsla(240, 100%, 30%, 1);
   opacity: 0;
   transform: rotate(135deg);
-  transition: all .15s ease-in;
+  transition: all 0.15s ease-in;
 }
 .checkbox:checked + label:after {
   opacity: 1;
-  animation: scale .25s ease-in-out .1s normal running;
+  animation: scale 0.25s ease-in-out 0.1s normal running;
 }
 .checkbox:disabled,
 .checkbox + label[disabled] {
-  opacity: .67;
+  opacity: 0.67;
   cursor: not-allowed;
 }
 @-webkit-keyframes scale {

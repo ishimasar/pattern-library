@@ -24,7 +24,7 @@
   border-radius: 5px;
   @include setting.mq(sp-tb) {
     width: 43%;
-    padding: 1rem .5rem;
+    padding: 1rem 0.5rem;
   }
   @include setting.mq(dt) {
     min-width: 8.5rem;
@@ -48,13 +48,13 @@
   &[disabled="true"] {
     border: none;
     color: hsla(0, 0%, 40%, 1);
-    box-shadow: 1px 1px 3px 2px hsla(0, 0%, 0%, .3) inset;
+    box-shadow: 1px 1px 3px 2px hsla(0, 0%, 0%, 0.3) inset;
     cursor: not-allowed;
     &:hover,
     &:focus {
       background-color: var(--white);
       color: hsla(0, 0%, 40%, 1);
-      box-shadow: 1px 1px 3px 2px hsla(0, 0%, 0%, .3) inset;
+      box-shadow: 1px 1px 3px 2px hsla(0, 0%, 0%, 0.3) inset;
     }
   }
 }
@@ -63,7 +63,7 @@
   background-color: hsla(0, 0%, 85%, 1);
   color: var(--black);
   &:not(:last-of-type) {
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
   }
 }
 
@@ -87,8 +87,8 @@
       padding: 1.5rem;
       &:hover,
       &:focus {
-        padding: calc(1.5rem - .0625rem);
-        border: .0625rem solid var(--black);
+        padding: calc(1.5rem - 0.0625rem);
+        border: 0.0625rem solid var(--black);
         font-weight: bold;
       }
     }
@@ -112,7 +112,7 @@
       display: inline-block;
       width: auto;
       margin-right: 1rem;
-      transition: transform .25s var(--ease-out-quad);
+      transition: transform 0.25s var(--ease-out-quad);
     }
   }
   &[aria-expanded="true"] > summary:before {
@@ -126,7 +126,7 @@
   background-color: hsla(0, 0%, 90%, 1);
   color: var(--black);
   overflow: hidden;
-  transition: height .25s var(--ease-out-quad);
+  transition: height 0.25s var(--ease-out-quad);
   pointer-events: none;
   [open] & {
     transition-timing-function: var(--ease-out-quad);
@@ -134,7 +134,7 @@
 }
 
 .accordion-details__paragraph {
-  border-top: .0625rem solid hsla(0, 0%, 70%, 1);
+  border-top: 0.0625rem solid hsla(0, 0%, 70%, 1);
   @include setting.mq(sp-tb) {
     padding: 1rem;
   }

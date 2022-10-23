@@ -1,6 +1,6 @@
 .progress-label {
   display: block;
-  margin: auto auto 8px auto;
+  margin: auto auto 8px;
   text-align: center;
 }
 // .progress-wrapper {
@@ -19,28 +19,36 @@
   justify-content: center;
   width: 500px;
   height: 34px;
+  background-color: hsla(0, 0%, 47%, 0.55);
   padding: {
     right: 4px;
     left: 4px;
-  };
-  background-color: hsla(0, 0%, 47%, .55);
+  }
   // border-radius: 20px;
 }
 .progressbar {
+  position: relative;
   width: 0;
   height: 78%;
-  position: relative;
+  background-color: hsla(229, 73%, 19%, 1);
   // background-image: linear-gradient(-135deg,hsla(0, 0%, 100%, .15) 25%,transparent 25%,transparent 50%,hsla(0, 0%, 100%, .15) 50%,hsla(0, 0%, 100%, .15) 75%,transparent 75%,transparent);
   background-size: 1.5rem 1.5rem;
-  background-color: hsla(229, 73%, 19%, 1);
   text-decoration: none;
-  outline: none;
   overflow: hidden;
   animation: progress 2s var(--ease-in-quad) 1 forwards;
+  outline: none;
   appearance: none;
   @keyframes progress {
-    0% { width: 0; background-position: 0 0;}
-    2% { width: 2%; /* border-radius: 20px 0 0 20px; */}
-    to { width: 100%; /* border-radius: 20px; */background-position: 0px 90px; }
+    0% {
+      width: 0;
+      background-position: 0 0;
+    }
+    2% {
+      width: 2%; /* border-radius: 20px 0 0 20px; */
+    }
+    to {
+      width: 100%; /* border-radius: 20px; */
+      background-position: 0 90px;
+    }
   }
 }

@@ -4,10 +4,9 @@
   "description": "Webサイト・アプリ制作で使用されるUIやスタイルのコード見本・サンプル集です。   コーディングの参考、UI等の設計・作成方針の土台にでき、その上で作業効率にも寄与できるようなものを目指します。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint:eslint": "eslint",
-    "lint:css": "stylelint **/*.{css,scss,sass}",
-    "fix:css": "stylelint -fix **/*.{css,scss,sass}"
+    "lint:es": "eslint",
+    "lint:style": "stylelint",
+    "fix:style": "stylelint --fix"
   },
   "author": "ishimasar <ishimasar1106@gmail.com>",
   "license": "ISC",

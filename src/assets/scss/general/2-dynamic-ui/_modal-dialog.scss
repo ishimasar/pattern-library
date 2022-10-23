@@ -3,8 +3,8 @@
 .modal-dialog {
   position: relative;
   width: 100%;
-  max-width: 60rem;
   height: calc(100vh - 6rem);
+  max-width: 60rem;
   margin: auto;
   &:hover,
   &:focus {
@@ -45,17 +45,17 @@
     visibility: hidden;
   }
   &[open] {
-    animation: fade-in .25s ease-out, slide-down .25s ease-out;
+    animation: fade-in 0.25s ease-out, slide-down 0.25s ease-out;
   }
   &.is-motioned {
     max-width: calc((100% - 6px) - 2em);
     max-height: calc((100% - 6px) - 2em);
-    animation: fade-out .45s ease, slide-up .45s ease;
+    animation: fade-out 0.45s ease, slide-up 0.45s ease;
   }
   /* native backdrop */
   &::backdrop {
-    background-color: hsla(0, 0%, 0%, .5);
-    animation: backdrop-fade-in .35s ease-out;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    animation: backdrop-fade-in 0.35s ease-out;
   }
   /* polyfill backdrop */
   & + .backdrop {
@@ -64,8 +64,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: hsla(0, 0%, 0%, .5);
-    animation: fade-in .25s ease-out;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    animation: fade-in 0.25s ease-out;
   }
 }
 /* Safariのみ適用 */
@@ -92,8 +92,8 @@ _:future,
 .dialog-panel__button {
   display: inline-block;
   min-width: 5rem;
-  padding-top: .625rem;
-  padding-bottom: .525rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.525rem;
   border: 1px solid var(--border-color);
   text-align: center;
   line-height: 1.5;
@@ -138,26 +138,54 @@ _:future,
   font-size: 1.2rem;
 }
 @keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fade-out {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes slide-down {
-  0% { opacity: 0; transform: translate(0, -1rem); }
-  100% { opacity: 1; transform: translate(0, 0); }
+  0% {
+    opacity: 0;
+    transform: translate(0, -1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 @keyframes slide-up {
-  0% { opacity: 1; transform: translate(0, 0); }
-  100% { opacity: 0; transform: translate(0, -1rem); }
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -1rem);
+  }
 }
 @keyframes backdrop-fade-in {
-  0% { background-color: hsla(0, 0%, 0%, 0); }
-  100% { background-color: hsla(0, 0%, 0%, .5); }
+  0% {
+    background-color: hsla(0, 0%, 0%, 0);
+  }
+  100% {
+    background-color: hsla(0, 0%, 0%, 0.5);
+  }
 }
 @keyframes backdrop-fade-out {
-  0% { background-color: hsla(0, 0%, 0%, .5); }
-  100% { background-color: hsla(0, 0%, 0%, 0); }
+  0% {
+    background-color: hsla(0, 0%, 0%, 0.5);
+  }
+  100% {
+    background-color: hsla(0, 0%, 0%, 0);
+  }
 }

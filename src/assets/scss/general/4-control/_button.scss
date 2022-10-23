@@ -8,12 +8,12 @@
   border: 2px solid var(--black);
   text-align: center;
   text-decoration: none;
-  transition: all .3s;
+  transition: all 0.3s;
   &:hover,
   &:focus {
     background-color: hsla(0, 0%, 47%, 1);
     color: var(--white);
-    transition: all .3s;
+    transition: all 0.3s;
   }
 }
 
@@ -22,15 +22,15 @@
   top: 0;
   border: transparent;
   perspective: 19rem;
-  // Safari new
-  _::-webkit-full-page-media, _:future, :root & {
+  // Safari old
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
     perspective: 70rem;
   }
-  // Safari old
-  @media screen and (-webkit-min-device-pixel-ratio:0) {
-    ::i-block-chrome, & {
-      perspective: 70rem;
-    }
+  // Safari new
+  _::-webkit-full-page-media,
+  _:future,
+  :root & {
+    perspective: 70rem;
   }
   & > .after,
   & > .before {
@@ -45,7 +45,7 @@
     line-height: 3.5rem;
     color: hsla(29, 98%, 35%, 1);
     transform: rotateX(90deg);
-    transition: all .3s;
+    transition: all 0.3s;
     transform-origin: 50% 50% -2rem;
   }
   & > .before {
@@ -87,7 +87,7 @@
     width: 12rem;
     height: calc(4rem - 4px);
     background-color: hsla(204, 78%, 55%, 1);
-    transition: all .5s;
+    transition: all 0.5s;
   }
   &:before {
     left: 0;
@@ -105,7 +105,7 @@
     &:after {
       width: 0;
       background-color: hsla(204, 78%, 64%, 1);
-      transition: all .3s;
+      transition: all 0.3s;
     }
   }
 }

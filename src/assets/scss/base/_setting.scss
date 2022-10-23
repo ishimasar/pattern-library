@@ -1,4 +1,3 @@
-
 // # setting.scss
 // * CSS variable & Sass mixin setting / config
 // * CSS変数とSass Mixin(ミックスイン)設定ファイル
@@ -32,7 +31,7 @@ $breakpointVar: (
   "dtl": "print, screen and (min-width:64.0625em) and (max-width:100em)",
   "dth": "print, screen and (min-width:100.0625em)",
   "sp-tb": "screen and (max-width:64em)",
-  "tb-dth": "print, screen and (min-width:48em)"
+  "tb-dth": "print, screen and (min-width:48em)",
 ) !default;
 
 // ---
@@ -148,17 +147,32 @@ $margin-min: -2;
 $margin-max: 2;
 
 @for $i from $margin-min through $margin-max {
-  .mt#{$i * 2} {
-    margin-block-start: #{$i * 2}px !important;
-  }
-  .mr#{$i * 2} {
-    margin-inline-end: #{$i * 2}px !important;
-  }
-  .mb#{$i * 2} {
-    margin-block-end: #{$i * 2}px !important;
-  }
-  .ml#{$i * 2} {
-    margin-inline-start: #{$i * 2}px !important;
+  @if ($i != 0) {
+    .mt#{$i * 2} {
+      margin-block-start: #{$i * 2}px !important;
+    }
+    .mr#{$i * 2} {
+      margin-inline-end: #{$i * 2}px !important;
+    }
+    .mb#{$i * 2} {
+      margin-block-end: #{$i * 2}px !important;
+    }
+    .ml#{$i * 2} {
+      margin-inline-start: #{$i * 2}px !important;
+    }
+  } @else {
+    .mt0 {
+      margin-block-start: 0 !important;
+    }
+    .mr0 {
+      margin-inline-end: 0 !important;
+    }
+    .mb0 {
+      margin-block-end: 0 !important;
+    }
+    .ml0 {
+      margin-inline-start: 0 !important;
+    }
   }
 }
 
@@ -166,17 +180,32 @@ $padding-min: 2;
 $padding-max: 4;
 
 @for $i from $padding-min through $padding-max {
-  .pt#{$i * 2} {
-    padding-block-start: #{$i * 2}px !important;
-  }
-  .pr#{$i * 2} {
-    padding-inline-end: #{$i * 2}px  !important;
-  }
-  .pb#{$i * 2} {
-    padding-block-end: #{$i * 2}px !important;
-  }
-  .pl#{$i * 2} {
-    padding-inline-start: #{$i * 2}px !important;
+  @if ($i != 0) {
+    .pt#{$i * 2} {
+      padding-block-start: #{$i * 2}px !important;
+    }
+    .pr#{$i * 2} {
+      padding-inline-end: #{$i * 2}px !important;
+    }
+    .pb#{$i * 2} {
+      padding-block-end: #{$i * 2}px !important;
+    }
+    .pl#{$i * 2} {
+      padding-inline-start: #{$i * 2}px !important;
+    }
+  } @else {
+    .pt0 {
+      padding-block-start: 0 !important;
+    }
+    .pr0 {
+      padding-inline-end: 0 !important;
+    }
+    .pb0 {
+      padding-block-end: 0 !important;
+    }
+    .pl0 {
+      padding-inline-start: 0 !important;
+    }
   }
 }
 
@@ -230,7 +259,7 @@ $padding-max: 4;
 // ### calculation view width Mixin
 @function calcSize($num, $unit) {
   // ここに利用する単位の式を追加していく
-  @if ($unit=="vw") {
+  @if ($unit == "vw") {
     @return $num / $maxWidth * 100#{$unit};
   }
 }
@@ -239,11 +268,10 @@ $padding-max: 4;
 // * background-imageのRetina対応を行う
 // * 使用例）@include retinaImage('/img/bg_main_visual','png');
 @mixin retinaImage($file, $type) {
-  background-image: url($file+'.'+$type);
-  @media (-webkit-min-device-pixel-ratio: 2),
-    (-moz-min-device-pixel-ratio: 2) {
+  background-image: url($file + "." + $type);
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
     & {
-      background-image: url($file+'@2x.'+$type);
+      background-image: url($file + "@2x." + $type);
     }
   }
 }
@@ -259,10 +287,10 @@ $padding-max: 4;
     width: $width;
     height: 2px;
     background-color: var(--black);
-    @if ($pos=="top") {
+    @if ($pos == "top") {
       top: 0;
     }
-    @if ($pos=="bottom") {
+    @if ($pos == "bottom") {
       bottom: 0;
     }
   }
@@ -281,22 +309,18 @@ $padding-max: 4;
   box-sizing: border-box;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition:
-    transform cubic-bezier(.215, .61, .355, 1) .15s,
-    border-color cubic-bezier(.215, .61, .355, 1) .15s;
-  @if $pos=="left" {
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s,
+    border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+  @if $pos == "left" {
     border-width: 0 0 $width + px $width + px;
     transform: translate(0, -50%) rotate(45deg);
-  }
-  @else if $pos=="top" {
+  } @else if $pos == "top" {
     border-width: $width + px 0 0 $width + px;
     transform: translate(0, -50%) rotate(45deg);
-  }
-  @else if $pos=="bottom" {
+  } @else if $pos == "bottom" {
     border-width: 0 $width + px $width + px 0;
     transform: translate(0, -50%) rotate(45deg);
-  }
-  @else {
+  } @else {
     border-width: $width + px $width + px 0 0;
     transform: translate(0, -50%) rotate(45deg);
   }
@@ -307,28 +331,25 @@ $padding-max: 4;
   content: "";
   display: inline-block;
   position: relative;
-  top: -.1em;
+  top: -0.1em;
   width: #{$size}px;
   height: #{$size}px;
   border-top: 1.5px solid $baseColor;
   border-right: 1.5px solid $baseColor;
-  @if $pos=="top" {
+  @if $pos == "top" {
     transform: rotate(-45deg);
-  }
-  @else if $pos=="right" {
+  } @else if $pos == "right" {
     transform: rotate(45deg);
-  }
-  @else if $pos=="bottom" {
+  } @else if $pos == "bottom" {
     transform: rotate(135deg);
-  }
-  @else if $pos=="left" {
+  } @else if $pos == "left" {
     transform: rotate(-135deg);
   }
 }
 
 // #### 矢印 (→)
 @mixin arrow($direction, $color, $color2) {
-  @if $direction=="right"or $direction=="left" {
+  @if $direction == "right" or $direction == "left" {
     span {
       top: calc(50% - 2px);
       height: 4px;
@@ -356,7 +377,7 @@ $padding-max: 4;
       }
     }
   }
-  @if $direction=="top"or $direction=="bottom" {
+  @if $direction == "top" or $direction == "bottom" {
     span {
       right: 0;
       width: 4px;
@@ -374,7 +395,7 @@ $padding-max: 4;
       }
     }
   }
-  @if $direction=="right" {
+  @if $direction == "right" {
     span {
       &:before {
         right: 0;
@@ -408,7 +429,7 @@ $padding-max: 4;
       }
     }
   }
-  @if $direction=="left" {
+  @if $direction == "left" {
     span {
       &:before {
         bottom: 0;
@@ -445,7 +466,7 @@ $padding-max: 4;
       }
     }
   }
-  @if $direction=="bottom" {
+  @if $direction == "bottom" {
     span {
       &:before {
         right: 0;
@@ -480,7 +501,7 @@ $padding-max: 4;
       }
     }
   }
-  @if $direction=="top" {
+  @if $direction == "top" {
     span {
       &:before {
         top: 0;
@@ -521,18 +542,18 @@ $padding-max: 4;
   }
   span {
     position: absolute;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     &:before {
       content: "";
       position: absolute;
       border-style: solid;
-      transition: all .2s ease;
+      transition: all 0.2s ease;
     }
     &:after {
       content: "";
       position: absolute;
       background-color: $color;
-      transition: all .2s ease;
+      transition: all 0.2s ease;
     }
   }
   &:hover,
@@ -552,28 +573,27 @@ $padding-max: 4;
   width: 0;
   height: 0;
   border-style: solid;
-  transition:
-    transform cubic-bezier(.215, .61, .355, 1) .15s,
-    border-color cubic-bezier(.215, .61, .355, 1) .15s;
-  @if $pos=="bottom" {
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s,
+    border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+  @if $pos == "bottom" {
     border-top: $height + px $color solid;
     border-right: math.div($width, 2) + px transparent solid;
     border-bottom: 0 + px transparent solid;
     border-left: math.div($width, 2) + px transparent solid;
   }
-  @if $pos=="top" {
+  @if $pos == "top" {
     border-top: 0 + px transparent solid;
     border-right: math.div($width, 2) + px transparent solid;
     border-bottom: $height + px $color solid;
     border-left: math.div($width, 2) + px transparent solid;
   }
-  @if $pos=="left" {
+  @if $pos == "left" {
     border-top: math.div($height, 2) + px transparent solid;
     border-right: $width + px $color solid;
     border-bottom: math.div($height, 2) + px transparent solid;
     border-left: 0 + px transparent solid;
   }
-  @if $pos=="right" {
+  @if $pos == "right" {
     border-top: math.div($height, 2) + px transparent solid;
     border-right: 0 + px transparent solid;
     border-bottom: math.div($height, 2) + px transparent solid;
@@ -594,14 +614,15 @@ $padding-max: 4;
     box-sizing: border-box;
     &:hover,
     &:focus {
-      transition: transform cubic-bezier(.215, .61, .355, 1) .15s, border-color cubic-bezier(.215, .61, .355, 1) .15s;
+      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s,
+        border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
     }
     border: {
       width: 0 0 2px 2px;
       color: $color;
       style: solid;
     }
-    #{$pos}: -.9rem;
+    #{$pos}: -0.9rem;
   }
   &:after {
     content: "";
@@ -613,11 +634,12 @@ $padding-max: 4;
     border: 2px solid $color;
     box-sizing: border-box;
     @if $pos == "right" {
-      margin-left: .4rem;
+      margin-left: 0.4rem;
     }
     &:hover,
     &:focus {
-      transition: transform cubic-bezier(.215, .61, .355, 1) .15s, border-color cubic-bezier(.215, .61, .355, 1) .15s;
+      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s,
+        border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
     }
     #{$pos}: -1.1rem;
   }
@@ -658,8 +680,7 @@ $padding-max: 4;
   @if $max-width {
     width: $width;
     max-width: $max-width;
-  }
-  @else {
+  } @else {
     width: $width;
   }
   margin: {
@@ -689,12 +710,10 @@ $padding-max: 4;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  @else if $horizontal {
+  } @else if $horizontal {
     left: 50%;
     transform: translate(-50%, 0);
-  }
-  @else if $vertical {
+  } @else if $vertical {
     top: 50%;
     transform: translate(0, -50%);
   }
@@ -706,7 +725,7 @@ $padding-max: 4;
   width: 100%;
   height: 0;
   padding-top: ($height / $width) * 100%;
-  @if $image != null {
+  @if ($image != "") {
     background: url($image) 50% 50% no-repeat;
     background-size: cover;
   }

@@ -34,8 +34,8 @@
 }
 .radio:hover + label,
 .radio:focus + label {
-  opacity: .75;
-  transition: all .15s ease-in;
+  opacity: 0.75;
+  transition: all 0.15s ease-in;
 }
 .radio + label:before {
   content: "";
@@ -47,10 +47,9 @@
   height: 1.5rem;
   border: 2px solid hsla(0, 0%, 53%, 1);
   background-color: hsla(0, 0%, 100%, 1);
+  transform: translateY(-50%);
   border-radius: 50%;
   box-sizing: border-box;
-  border-radius: 50%;
-  transform: translateY(-50%);
 }
 .radio:checked + label:after {
   content: "";
@@ -61,12 +60,12 @@
   width: 1rem;
   height: 1rem;
   background: hsla(240, 100%, 30%, 1);
-  border-radius: 50%;
   transform: translateY(-50%);
+  border-radius: 50%;
 }
 .radio:checked + label:after {
   opacity: 1;
-  animation: scale-radio .2s ease-in-out normal running;
+  animation: scale-radio 0.2s ease-in-out normal running;
 }
 // [data-whatinput="keyboard"] .radio:focus + label:after {
 //   border-color: hsla(240, 100%, 30%, 1);
@@ -74,17 +73,17 @@
 // }
 .radio:disabled,
 .radio + label[disabled] {
-  opacity: .67;
+  opacity: 0.67;
   cursor: not-allowed;
 }
 @-webkit-keyframes scale-radio {
   0% {
     top: 43%;
-    transform: scale(.75) translateY(-50%);
+    transform: scale(0.75) translateY(-50%);
   }
   10% {
     top: 43%;
-    transform: scale(.75) translateY(-50%);
+    transform: scale(0.75) translateY(-50%);
   }
   83% {
     top: 50%;
@@ -98,11 +97,11 @@
 @keyframes scale-radio {
   0% {
     top: 43%;
-    transform: scale(.75) translateY(-50%);
+    transform: scale(0.75) translateY(-50%);
   }
   10% {
     top: 43%;
-    transform: scale(.75) translateY(-50%);
+    transform: scale(0.75) translateY(-50%);
   }
   83% {
     top: 50%;

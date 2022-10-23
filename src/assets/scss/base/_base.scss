@@ -11,15 +11,27 @@
  * (1) A modern CSS reset
  */
 
-body *, *::before, *::after {
-  box-sizing: border-box
+body *,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
-ul[role="list"], ol[role="list"] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -30,19 +42,20 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5
+  line-height: 1.5;
 }
 
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-img, picture {
-  max-width: 100%;
+img,
+picture {
   display: block;
+  max-width: 100%;
 }
 
-@media(prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
   }
@@ -58,7 +71,9 @@ img, picture {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-code, kbd, samp {
+code,
+kbd,
+samp {
   /* 1 */
   font-family: monospace;
   /* 2 */
@@ -68,7 +83,8 @@ code, kbd, samp {
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in all browsers.
  */
-sub, sup {
+sub,
+sup {
   position: relative;
   vertical-align: baseline;
   line-height: 0;
@@ -76,17 +92,21 @@ sub, sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 /**
  * 1. Change the font styles in all browsers.
  */
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   /* 1 */
   margin: 0;
   line-height: 1.15;
@@ -98,7 +118,8 @@ button, input, optgroup, select, textarea {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-button, select {
+button,
+select {
   /* 1 */
   text-transform: none;
 }
@@ -140,7 +161,7 @@ button:-moz-focusring,
  * Correct the padding in Firefox.
  */
 fieldset {
-  padding: .35em .75em .625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -199,13 +220,20 @@ input::-moz-focus-inner {
   border: 0;
 }
 
-ul, ol, dd {
+ul,
+ol,
+dd {
   list-style: none; // olの番号付きを利用する際は個別にdecimalを当てる
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-size: inherit;
   font-weight: inherit;
@@ -247,7 +275,8 @@ body {
   min-height: 100vh;
   margin: 0;
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic, Hiragino Sans, Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Roboto, Yu Gothic, YuGothic,
+    Hiragino Sans, Meiryo, sans-serif;
   font-weight: 400;
   font-feature-settings: "pkna" 1;
   color: var(--text-normal-color);
@@ -286,8 +315,8 @@ table {
 }
 
 caption {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   caption-side: bottom;
   text-align: left;
   color: hsla(208, 7%, 46%, 1);
@@ -299,7 +328,7 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Remove the default button styling in all browsers */
@@ -381,8 +410,8 @@ video:focus-visible,
 dialog:focus-visible,
 div:focus-visible,
 section:focus-visible {
-  outline: .125rem solid var(--focusring-color);
-  outline-offset: .0625rem;
+  outline: 0.125rem solid var(--focusring-color);
+  outline-offset: 0.0625rem;
 }
 
 /**

@@ -16,7 +16,7 @@
       bottom: 1.21875rem;
     }
     @include setting.mq(sp-tb) {
-      right: .8125rem;
+      right: 0.8125rem;
       bottom: 1.0625rem;
     }
   }
@@ -32,12 +32,12 @@
   @include setting.mq(sp-tb) {
     display: block;
     width: 100%;
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
   }
   &.-multi {
     @include setting.mq(dt) {
       align-items: flex-start;
-      margin-top: .625rem;
+      margin-top: 0.625rem;
     }
   }
 }
@@ -45,30 +45,28 @@
   display: inline-block;
   position: relative;
   max-width: 60rem;
-  margin: auto .0625rem auto -.0625rem;
-  border: .0625rem solid hsla(0, 0%, 20%, 1);
+  margin: auto 0.0625rem auto -0.0625rem;
+  border: 0.0625rem solid hsla(0, 0%, 20%, 1);
   line-height: 1.2;
-  box-shadow: .0625rem .0625rem 2px .0625rem hsla(0, 0%, 0%, .15);
+  box-shadow: 0.0625rem 0.0625rem 2px 0.0625rem hsla(0, 0%, 0%, 0.15);
   @include setting.mq(dt) {
     width: 75%;
-    padding: .65rem 1rem;
+    padding: 0.65rem 1rem;
     font-size: calc(var(--font-size-d));
     &:focus {
-      padding: calc(.65rem - .0625rem) calc(1rem - .0625rem);
+      padding: calc(0.65rem - 0.0625rem) calc(1rem - 0.0625rem);
     }
   }
   @include setting.mq(sp-tb) {
     width: 100%;
-    padding: .65rem 1.5rem .5rem .8rem;
-    font-size: calc(var(--font-size-c) - .1rem);
+    padding: 0.65rem 1.5rem 0.5rem 0.8rem;
+    font-size: calc(var(--font-size-c) - 0.1rem);
     &:focus {
-      padding:
-        calc(.65rem - .0625rem) calc(1.5rem - .0625rem) calc(.5rem - .0625rem)
-        calc(.8rem - .0625rem);
+      padding: calc(0.65rem - 0.0625rem) calc(1.5rem - 0.0625rem) calc(0.5rem - 0.0625rem) calc(0.8rem - 0.0625rem);
     }
   }
   &:focus {
-    border-width: .125rem;
+    border-width: 0.125rem;
   }
   &.-single-select {
     @include setting.mq(dt) {

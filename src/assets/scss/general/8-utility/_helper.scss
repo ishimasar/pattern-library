@@ -11,42 +11,85 @@ $sizes: 8;
 
 @mixin margin-classes {
   @for $i from -3 through 6 {
-     $margin: $i * 0.5;
-    .ml#{$i * $sizes} { margin-left: $margin + rem; }
-    // .mr#{$i * $sizes} { margin-right: $margin + rem; }
-    .mt#{$i * $sizes} { margin-top: $margin + rem; }
-    .mb#{$i * $sizes} { margin-bottom: $margin + rem; }
-    // .mx#{$i * $sizes} {
-    //   margin: {
-    //     right: $margin + rem;
-    //     left: $margin + rem;
-    //   }
-    .my#{$i * $sizes} {
-      margin: {
-        top: $margin + rem;
-        bottom: $margin + rem;
+    @if ($i != 0) {
+      $margin: $i * 0.5;
+      .ml#{$i * $sizes} {
+        margin-left: $margin + rem;
       }
+      // .mr#{$i * $sizes} { margin-right: $margin + rem; }
+      .mt#{$i * $sizes} {
+        margin-top: $margin + rem;
+      }
+      .mb#{$i * $sizes} {
+        margin-bottom: $margin + rem;
+      }
+      // .mx#{$i * $sizes} {
+      //   margin: {
+      //     right: $margin + rem;
+      //     left: $margin + rem;
+      //   }
+      .my#{$i * $sizes} {
+        margin: {
+          top: $margin + rem;
+          bottom: $margin + rem;
+        }
+      }
+      // .ma#{$i * $sizes} {
+      //   margin: {
+      //     top: $margin + rem;
+      //     right: $margin + rem;
+      //     bottom: $margin + rem;
+      //     left: $margin + rem;
+      //   }
+      // }
+    } @else {
+      $margin: 0;
+      .ml#{$i * $sizes} {
+        margin-left: $margin;
+      }
+      // .mr#{$i * $sizes} { margin-right: $margin; }
+      .mt#{$i * $sizes} {
+        margin-top: $margin;
+      }
+      .mb#{$i * $sizes} {
+        margin-bottom: $margin;
+      }
+      // .mx#{$i * $sizes} {
+      //   margin: {
+      //     right: $margin;
+      //     left: $margin;
+      //   }
+      .my#{$i * $sizes} {
+        margin: {
+          top: $margin;
+          bottom: $margin;
+        }
+      }
+      // .ma#{$i * $sizes} {
+      //   margin: {
+      //     top: $margin;
+      //     right: $margin;
+      //     bottom: $margin;
+      //     left: $margin;
+      //   }
+      // }
     }
-    // .ma#{$i * $sizes} {
-    //   margin: {
-    //     top: $margin + rem;
-    //     right: $margin + rem;
-    //     bottom: $margin + rem;
-    //     left: $margin + rem;
-    //   }
-    // }
   }
 }
 @include margin-classes;
 
 @mixin padding-classes {
-  @for $i from 0 through 6 {
+  @for $i from 1 through 6 {
     $padding: $i * 0.5;
-   .pl#{$i * $sizes} {padding-left: $padding + rem;}
-  //  .pr#{$i * $sizes} {padding-right: $padding + rem;}
-   .pt#{$i * $sizes} {padding-top: $padding + rem;}
-  //  .pb#{$i * $sizes} {padding-bottom: $padding + rem;}
- }
+    .pl#{$i * $sizes} {
+      padding-left: $padding + rem;
+    }
+    //  .pr#{$i * $sizes} {padding-right: $padding + rem;}
+    .pt#{$i * $sizes} {
+      padding-top: $padding + rem;
+    }
+    //  .pb#{$i * $sizes} {padding-bottom: $padding + rem;}
+  }
 }
 @include padding-classes;
 

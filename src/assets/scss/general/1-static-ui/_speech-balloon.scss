@@ -1,22 +1,22 @@
 .speech-balloon-wrap {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   .profile-photo {
     display: block;
-    clip-path: circle(50%);
     width: 90px;
     height: 90px;
+    clip-path: circle(50%);
   }
 }
 .speech-balloon {
   display: block;
   position: relative;
   padding: 1rem 2rem;
-  border: .0625rem solid var(--black);
+  border: 0.0625rem solid var(--black);
   line-height: 2;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   &.-left-arrow::after {
     content: "";
     position: absolute;
@@ -24,10 +24,10 @@
     left: -1px;
     width: 1.25rem;
     height: 1.25rem;
-    margin-bottom: .0625rem;
-    background-color: var(--white);
-    border: .0625rem solid;
+    margin-bottom: 0.0625rem;
+    border: 0.0625rem solid;
     border-color: var(--black) transparent transparent var(--black);
+    background-color: var(--white);
     transform: rotate(315deg) skew(15deg, 15deg) translateY(-50%);
   }
   &.-right-arrow::after {
@@ -37,10 +37,10 @@
     right: -19px;
     width: 1.25rem;
     height: 1.25rem;
-    margin-bottom: .0625rem;
-    background-color: var(--white);
-    border: .0625rem solid;
+    margin-bottom: 0.0625rem;
+    border: 0.0625rem solid;
     border-color: transparent var(--black) var(--black) transparent;
+    background-color: var(--white);
     transform: rotate(315deg) skew(15deg, 15deg) translateY(-50%);
   }
   &.-bottom-arrow::after {
@@ -50,10 +50,10 @@
     left: 47.25%;
     width: 1.25rem;
     height: 1.25rem;
-    margin-bottom: .0625rem;
-    background-color: var(--white);
-    border: .0625rem solid;
+    margin-bottom: 0.0625rem;
+    border: 0.0625rem solid;
     border-color: transparent var(--black) var(--black) transparent;
+    background-color: var(--white);
     transform: rotate(45deg) skew(15deg, 15deg) translate(-50%);
   }
   &.-bottom-left-arrow::after {
@@ -63,23 +63,23 @@
     left: 16%;
     width: 1.25rem;
     height: 1.25rem;
-    margin-bottom: .0625rem;
-    background-color: var(--white);
-    border: .0625rem solid;
+    margin-bottom: 0.0625rem;
+    border: 0.0625rem solid;
     border-color: transparent var(--black) var(--black) transparent;
+    background-color: var(--white);
     transform: rotate(45deg) skew(15deg, 15deg) translate(-50%);
   }
   &.-bottom-right-arrow::after {
     content: "";
     position: absolute;
-    bottom: -20px;
     right: 12%;
+    bottom: -20px;
     width: 1.25rem;
     height: 1.25rem;
-    margin-bottom: .0625rem;
-    background-color: var(--white);
-    border: .0625rem solid;
+    margin-bottom: 0.0625rem;
+    border: 0.0625rem solid;
     border-color: transparent var(--black) var(--black) transparent;
+    background-color: var(--white);
     transform: rotate(45deg) skew(15deg, 15deg) translate(-50%);
   }
 }

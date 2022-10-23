@@ -17,40 +17,35 @@
   font-family: "Brandon Grotesque Medium";
   font-style: normal;
   font-weight: normal;
-  src:
-    url(../font/BrandonGrotesque/Brandon_med.woff2) format(woff2),
+  src: url(../font/BrandonGrotesque/Brandon_med.woff2) format(woff2),
     url(../font/BrandonGrotesque/Brandon_med.woff) format(woff);
 }
 @font-face {
   font-family: "Brandon Grotesque Bold";
   font-style: normal;
   font-weight: normal;
-  src:
-    url(../font/BrandonGrotesque/Brandon_bld.woff2) format(woff2),
+  src: url(../font/BrandonGrotesque/Brandon_bld.woff2) format(woff2),
     url(../font/BrandonGrotesque/Brandon_bld.woff) format(woff);
 }
 @font-face {
   font-family: "Brandon Text Regular";
   font-style: normal;
   font-weight: normal;
-  src:
-    url(../font/BrandonText/BrandonText-Regular.woff2) format(woff2),
+  src: url(../font/BrandonText/BrandonText-Regular.woff2) format(woff2),
     url(../font/BrandonText/BrandonText-Regular.woff) format(woff);
 }
 @font-face {
   font-family: "Brandon Text Medium";
   font-style: normal;
   font-weight: normal;
-  src:
-    url(../font/BrandonText/BrandonText-Medium.woff2) format(woff2),
+  src: url(../font/BrandonText/BrandonText-Medium.woff2) format(woff2),
     url(../font/BrandonText/BrandonText-Medium.woff) format(woff);
 }
 @font-face {
   font-family: "Brandon Text Bold";
   font-style: normal;
   font-weight: normal;
-  src:
-    url(../font/BrandonText/BrandonText-Bold.woff2) format(woff2),
+  src: url(../font/BrandonText/BrandonText-Bold.woff2) format(woff2),
     url(../font/BrandonText/BrandonText-Bold.woff) format(woff);
 }
 // @font-face {
@@ -76,9 +71,7 @@
   font-style: normal;
   font-weight: 400;
 
-  src:
-    url(../font/NotoSansCJKjp-subset/NotoSansJp-Regular.woff2)
-    format(woff2),
+  src: url(../font/NotoSansCJKjp-subset/NotoSansJp-Regular.woff2) format(woff2),
     url(../font/NotoSansCJKjp-subset/NotoSansJp-Regular.woff) format(woff);
   // font-display: swap;
 }
@@ -86,9 +79,7 @@
   font-family: "Noto Sans JP";
   font-style: bold;
   font-weight: 700;
-  src:
-    url(../font/NotoSansCJKjp-subset/NotoSansJp-Bold.woff2)
-    format(woff2),
+  src: url(../font/NotoSansCJKjp-subset/NotoSansJp-Bold.woff2) format(woff2),
     url(../font/NotoSansCJKjp-subset/NotoSansJp-Bold.woff) format(woff);
   // font-display: swap;
 }
@@ -96,20 +87,15 @@
   font-family: "Noto Serif JP";
   font-style: normal;
   font-weight: 400;
-  src:
-    url(../font/NotoSerifCJKjp-subset/NotoSerifJp-Regular.woff2)
-    format(woff2),
-    url(../font/NotoSerifCJKjp-subset/NotoSerifJp-Regular.woff)
-    format(woff);
+  src: url(../font/NotoSerifCJKjp-subset/NotoSerifJp-Regular.woff2) format(woff2),
+    url(../font/NotoSerifCJKjp-subset/NotoSerifJp-Regular.woff) format(woff);
   // font-display: swap;
 }
 @font-face {
   font-family: "Noto Serif JP";
   font-style: bold;
   font-weight: 700;
-  src:
-    url(../font/NotoSerifCJKjp-subset/NotoSerifJp-Bold.woff2)
-    format(woff2),
+  src: url(../font/NotoSerifCJKjp-subset/NotoSerifJp-Bold.woff2) format(woff2),
     url(../font/NotoSerifCJKjp-subset/NotoSerifJp-Bold.woff) format(woff);
   // font-display: swap;
 }

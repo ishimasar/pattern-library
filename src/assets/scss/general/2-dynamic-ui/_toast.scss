@@ -10,7 +10,7 @@ html[data-whatinput][data-whatintent] {
   max-width: 300px;
   min-width: fit-content;
   margin: 4rem auto;
-  padding: .85rem 1rem .75rem;
+  padding: 0.85rem 1rem 0.75rem;
   border: 1px solid var(--border-color);
   text-align: center;
   line-height: 1.6;
@@ -36,45 +36,45 @@ html[data-whatinput][data-whatintent] {
     width: fit-content;
     max-width: 90%;
     margin: auto;
-    background-color: hsla(0, 0%, 90%, 1);
-    border-radius: .25rem;
     border: 1px solid var(--border-color);
-    animation: fade-in .25s var(--ease-in-cubic);
+    background-color: hsla(0, 0%, 90%, 1);
+    border-radius: 0.25rem;
+    animation: fade-in 0.25s var(--ease-in-cubic);
     &.is-bottom-right {
+      right: 5%;
+      transition: right 0.85s var(--ease-out-cubic);
       margin: {
         right: 0;
         left: auto;
       }
-      right: 5%;
-      transition: right .85s var(--ease-out-cubic);
     }
     &.is-bottom-left {
+      left: -5%;
+      transition: left 0.85s var(--ease-out-cubic);
       margin: {
         right: auto;
         left: 0;
       }
-      left: -5%;
-      transition: left .85s var(--ease-out-cubic);
     }
     &.is-upper-right {
+      top: initial;
+      right: 5%;
+      bottom: 300px;
+      transition: right 0.85s var(--ease-out-cubic);
       margin: {
         right: 0;
         left: auto;
       }
-      top: initial;
-      bottom: 300px;
-      right: 5%;
-      transition: right .85s var(--ease-out-cubic);
     }
     &.is-upper-left {
+      top: initial;
+      bottom: 300px;
+      left: -5%;
+      transition: left 0.85s var(--ease-out-cubic);
       margin: {
         right: auto;
         left: 0;
       }
-      top: initial;
-      bottom: 300px;
-      left: -5%;
-      transition: left .85s var(--ease-out-cubic);
     }
   }
   &[aria-hidden="true"] {
@@ -85,49 +85,49 @@ html[data-whatinput][data-whatintent] {
       display: block;
       position: relative;
       top: 10vh;
+      right: -100%;
+      transition: right 0.6s var(--ease-in-cubic);
       margin: {
         right: 0;
         left: auto;
       }
-      right: -100%;
-      transition: right .6s var(--ease-in-cubic);
     }
     &.is-bottom-left {
       display: block;
       position: relative;
       top: 10vh;
       left: -100%;
+      transition: left 0.6s var(--ease-in-cubic);
       margin: {
         right: auto;
         left: 0;
       }
-      transition: left .6s var(--ease-in-cubic);
     }
     &.is-upper-right {
       display: block;
       position: relative;
+      right: -100%;
       bottom: 300px;
+      transition: right 0.6s var(--ease-in-cubic);
       margin: {
         right: 0;
         left: auto;
       }
-      right: -100%;
-      transition: right .6s var(--ease-in-cubic);
     }
     &.is-upper-left {
       display: block;
       position: relative;
       bottom: 300px;
       left: -100%;
+      transition: left 0.6s var(--ease-in-cubic);
       margin: {
         right: auto;
         left: 0;
       }
-      transition: left .6s var(--ease-in-cubic);
     }
   }
   &.is-invisible {
-    animation: fade-out .5s var(--ease-in-cubic);
+    animation: fade-out 0.5s var(--ease-in-cubic);
     &.is-bottom-right,
     &.is-bottom-left,
     &.is-upper-right,
@@ -136,22 +136,22 @@ html[data-whatinput][data-whatintent] {
     }
   }
   > .text {
-    padding: .5rem  1rem .45rem;
+    padding: 0.5rem 1rem 0.45rem;
     text-align: center;
     font-weight: bold;
   }
   .supplement-line {
     display: inline-block;
     width: 100%;
-    border-top: 1px solid var(--border-color);
     margin-top: 3px;
     padding-top: 2px;
+    border-top: 1px solid var(--border-color);
   }
   .close-button {
     position: absolute;
     top: 0;
     right: 0;
-    padding: .15rem .6rem 1.2rem 1.4rem;
+    padding: 0.15rem 0.6rem 1.2rem 1.4rem;
     font-size: 1.2rem;
     &:hover,
     &:focus {

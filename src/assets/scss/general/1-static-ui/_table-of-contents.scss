@@ -1,7 +1,7 @@
 @use "../../base/setting";
 
 .toc-container {
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   border: 1px dotted hsla(0, 0%, 20%, 1);
   text-align: center;
   @include setting.mq(tb-dth) {
@@ -42,7 +42,7 @@
 .toc {
   list-style-type: disc;
   > li {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     margin-left: 1.4em;
     text-align: left;
   }
@@ -57,7 +57,7 @@
     }
   }
   @include setting.mq(sp) {
-    padding-top: .4rem;
+    padding-top: 0.4rem;
   }
   &.is-current {
     text-decoration: none;

@@ -21,23 +21,21 @@
   z-index: 1;
   width: 2.8rem;
   height: 2.8rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   border: 2px solid hsla(0, 0%, 100%, 1);
   background-color: hsla(180, 1%, 33%, 1);
   transform: translateX(0);
   border-radius: 50%;
-  box-shadow: .12rem .08rem .07rem .07rem hsla(0, 12%, 30%, .2);
-  transition:
-    transform .25s cubic-bezier(.55, .085, .68, .53),
-    background-color .5s cubic-bezier(.645, .045, .355, 1);
+  box-shadow: 0.12rem 0.08rem 0.07rem 0.07rem hsla(0, 12%, 30%, 0.2);
+  transition: transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53),
+    background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   cursor: pointer;
   appearance: none;
   &[aria-checked="true"] {
     background-color: hsla(173, 58%, 49%, 1);
     transform: translateX(3.2rem);
-    transition:
-      transform .25s cubic-bezier(.55, .085, .68, .53),
-      background-color .5s cubic-bezier(.645, .045, .355, 1);
+    transition: transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53),
+      background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
 .switch-rail {
@@ -66,13 +64,11 @@
   &.light-theme {
     background: hsla(0, 0%, 100%, 1);
     color: hsla(0, 0%, 20%, 1);
-    transition:
-      all .35s cubic-bezier(.55, .085, .68, .53),
-      color .4s cubic-bezier(.55, .085, .68, .53);
+    transition: all 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), color 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
   }
   &.dark-theme {
     background: hsla(0, 0%, 20%, 1);
     color: hsla(0, 0%, 93%, 1);
-    transition: all .38s, color .48s;
+    transition: all 0.38s, color 0.48s;
   }
 }

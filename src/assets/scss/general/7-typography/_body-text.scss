@@ -12,7 +12,7 @@
       text-decoration: none;
     }
     &[target="_blank"] > svg {
-      margin-left: .12rem;
+      margin-left: 0.12rem;
       font-size: calc(var(--font-size-c));
     }
   }
@@ -23,15 +23,15 @@
     background-color: transparent;
     text-decoration: underline;
     text-decoration-color: hsla(182, 100%, 87%, 1);
-    text-decoration-thickness: .6em;
-    text-underline-offset: -.25em;
+    text-decoration-thickness: 0.6em;
+    text-underline-offset: -0.25em;
     text-decoration-skip-ink: none;
   }
   & .shortcut {
-    margin: -.2em .3em 0;
-    padding: .1em .4em .15em;
+    margin: -0.2em 0.3em 0;
+    padding: 0.1em 0.4em 0.15em;
     background-color: hsla(0, 0%, 94%, 1);
     border-radius: 3px;
-    box-shadow: .1em .1em 0 hsla(0, 0%, 0%, .4);
+    box-shadow: 0.1em 0.1em 0 hsla(0, 0%, 0%, 0.4);
   }
 }

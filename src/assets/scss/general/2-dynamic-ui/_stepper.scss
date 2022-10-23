@@ -7,21 +7,21 @@
   margin: auto;
   .indicater {
     display: flex;
-    counter-increment: step-counter;
-    min-width: 44px;
     height: 44px;
+    min-width: 44px;
     border: solid 2px hsla(229, 73%, 19%, 1);
     background-color: var(--white);
-    border-radius: 50%;
     color: hsla(229, 73%, 19%, 1);
+    border-radius: 50%;
+    counter-increment: step-counter;
     &::before {
       content: counter(step-counter);
       margin: auto;
     }
     &[aria-current="step"] {
       background-color: hsla(229, 73%, 19%, 1);
-      font-weight: 600;
       font-size: var(--18px-rem);
+      font-weight: 600;
       color: var(--white);
     }
   }
@@ -58,9 +58,6 @@
   &[aria-hidden="true"] {
     display: none;
   }
-  .label {
-
-  }
   .control {
     display: flex;
     justify-content: space-evenly;
@@ -70,7 +67,7 @@
     position: relative;
     width: 4.1rem;
     height: 3rem;
-    padding-inline-start: .1rem;
+    padding-inline-start: 0.1rem;
     border: 2px solid var(--black);
     text-align: center;
     text-decoration: none;
@@ -78,8 +75,8 @@
       visibility: visible;
     }
     &[aria-hidden="true"] {
-      visibility: hidden;
       display: inline-block;
+      visibility: hidden;
     }
     &::before {
       content: "";

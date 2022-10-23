@@ -21,7 +21,7 @@
 } */
 .tab {
   display: inline-block;
-  padding: .65rem 1rem;
+  padding: 0.65rem 1rem;
   border-top: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
@@ -81,7 +81,7 @@
   }
 }
 .tabpanel__list > li {
-  margin: .8rem auto auto;
+  margin: 0.8rem auto auto;
 }
 .tabpanel__paragraph {
   margin: 1.4rem auto 0;

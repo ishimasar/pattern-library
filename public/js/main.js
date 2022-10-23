@@ -29,29 +29,50 @@ document.addEventListener('DOMContentLoaded', () => {
       const allOpen = document.getElementById('all-open');
       const allClose = document.getElementById('all-close');
       const observer = new MutationObserver(() => {
-        if (detailsEls[0].open === true && detailsEls[1].open === true && detailsEls[2].open === true && detailsEls[3].open === true && detailsEls[4].open === true) {
+        if (
+          detailsEls[0].open === true &&
+          detailsEls[1].open === true &&
+          detailsEls[2].open === true &&
+          detailsEls[3].open === true &&
+          detailsEls[4].open === true
+        ) {
           allOpen.setAttribute('disabled', 'true');
         } else {
           allOpen.removeAttribute('disabled');
         }
 
-        if (detailsEls[0].open === false && detailsEls[1].open === false && detailsEls[2].open === false && detailsEls[3].open === false && detailsEls[4].open === false) {
+        if (
+          detailsEls[0].open === false &&
+          detailsEls[1].open === false &&
+          detailsEls[2].open === false &&
+          detailsEls[3].open === false &&
+          detailsEls[4].open === false
+        ) {
           allClose.setAttribute('disabled', 'true');
         } else {
           allClose.removeAttribute('disabled');
         }
-      })
+      });
       observer.observe(detailsEls[i], {
         attributes: true,
         attributeFilter: ['open'],
-      })
+      });
     }
   }
 });
 
 const calendarBody = document.querySelector('#calendar-body') ? calendar() : false;
+calendarBody;
 
-const carousel = new Carousel('.js-carousel-cont', '.carousel__img', '.js-carousel-thumb', '.js-carousel-prev', '.js-carousel-next', '.js-carousel-play', '.js-carousel-pause');
+const carousel = new Carousel(
+  '.js-carousel-cont',
+  '.carousel__img',
+  '.js-carousel-thumb',
+  '.js-carousel-prev',
+  '.js-carousel-next',
+  '.js-carousel-play',
+  '.js-carousel-pause'
+);
 carousel.setter();
 
 const displayScreenData = new DisplayScreenData('pageTop');
@@ -59,6 +80,7 @@ displayScreenData.addElement();
 displayScreenData.displayData();
 
 const openButton = document.querySelector('.js-open-drawer') ? drawerMenu() : false;
+openButton;
 
 const modalDialog = new ModalDialog('modal-dialog');
 modalDialog.showDialog();
@@ -71,6 +93,9 @@ const rangeSliderScale = new RangeSlider('something', 'something-value');
 rangeSliderScale.changeRangeNum();
 
 const stepper = new Stepper('.js-stepper-next', '.js-stepper-back');
+stepper.stepNext();
+stepper.stepBack();
+stepper.stepPhase();
 
 const tab = new Tab('.tab-ui', ".tab[role='tab']", '.tabpanel-wrap', ".tabpanel[role='tabpanel']");
 tab.setHeight();
@@ -99,7 +124,10 @@ const uiModeSwitcher = new UiModeSwitcher('#switch1', '.switch-state-on', '.swit
 uiModeSwitcher.switchMode();
 
 const elem = document.querySelectorAll('.toc');
+elem;
 
 const passwordRevealCheckbox = new PasswordRevealCheckbox('.js-display-pass', 'js-show-pass');
+passwordRevealCheckbox.onShowPassword();
 
-const passwordRevealBottun = new PasswordRevealButton('js-input', 'js-reveal-btn');
+const passwordRevealButtun = new PasswordRevealButton('js-input', 'js-reveal-btn');
+passwordRevealButtun.onButtonClick();

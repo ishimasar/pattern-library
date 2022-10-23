@@ -33,12 +33,12 @@
     transition: var(--carousel-switch-effect);
     @include setting.mq(dt) {
       &:hover {
-        opacity: .92;
+        opacity: 0.92;
         transition: var(--in-transition);
       }
     }
     &:focus {
-      opacity: .92;
+      opacity: 0.92;
       transition: var(--in-transition);
     }
   }
@@ -73,7 +73,7 @@
 .carousel__control-next,
 .carousel__control-prev {
   position: absolute;
-  padding: .1rem .5rem;
+  padding: 0.1rem 0.5rem;
   text-align: center;
 }
 
@@ -147,16 +147,16 @@
 
 /* 前へナビ */
 .carousel__control-prev {
-  transition: all .3s var(--ease-out-quad);
+  transition: all 0.3s var(--ease-out-quad);
   @include setting.mq(sp-tb) {
-    left: .2rem;
+    left: 0.2rem;
     z-index: 1;
   }
   @include setting.mq(dt) {
     left: -2.2rem;
     &:hover {
       transform: translate(-10%, -50%) rotate(0);
-      transition: all .25s var(--ease-in-quad);
+      transition: all 0.25s var(--ease-in-quad);
     }
   }
   &:before {
@@ -166,16 +166,16 @@
 
 /* 次へナビ */
 .carousel__control-next {
-  transition: transform .3s var(--ease-out-quad);
+  transition: transform 0.3s var(--ease-out-quad);
   @include setting.mq(sp-tb) {
-    right: -.3rem;
+    right: -0.3rem;
     z-index: 1;
   }
   @include setting.mq(dt) {
     right: -2.2rem;
     &:hover {
       transform: translate(10%, -50%) rotate(0);
-      transition: transform .25s var(--ease-in-quad);
+      transition: transform 0.25s var(--ease-in-quad);
     }
   }
   &:before {
@@ -204,9 +204,9 @@
   justify-content: center;
   width: 100%;
   @include setting.mq(sp) {
-    gap: .5rem;
+    gap: 0.5rem;
     grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
-    margin-top: .8rem;
+    margin-top: 0.8rem;
   }
   @include setting.mq(tb-dth) {
     gap: 1rem;
@@ -222,23 +222,23 @@
   @include setting.mq(dt) {
     &:hover {
       opacity: 1;
-      transition: opacity .25s var(--ease-in-quad);
-      outline: .125rem solid var(--focusring-color);
-      outline-offset: .0625rem;
+      transition: opacity 0.25s var(--ease-in-quad);
+      outline: 0.125rem solid var(--focusring-color);
+      outline-offset: 0.0625rem;
     }
   }
   &[aria-selected="false"] {
-    opacity: .8;
-    transition: opacity .3s var(--ease-out-quad);
+    opacity: 0.8;
+    transition: opacity 0.3s var(--ease-out-quad);
   }
   &[aria-selected="true"] {
     opacity: 1;
-    outline: .2rem solid hsla(212, 100%, 57%, 1);
+    outline: 0.2rem solid hsla(212, 100%, 57%, 1);
     outline-offset: 0;
   }
   &:focus {
     opacity: 1;
-    transition: opacity .25s var(--ease-in-quad);
+    transition: opacity 0.25s var(--ease-in-quad);
   }
 }
 
