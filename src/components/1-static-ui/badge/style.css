@@ -8,7 +8,7 @@
 .nav {
   display: inline-block;
   padding: 16px;
-  border: 1px dashed var(--contrast-limit-gray);
+  border: 1px dashed hsl(0deg, 0%, 47%);
   line-height: 1.5;
 }
 
@@ -22,7 +22,7 @@
   min-width: 26px;
   min-height: 24px;
   padding: 1px 9px;
-  color: var(--white);
+  color: hsl(0deg, 100%, 100%);
   border-radius: 50px;
 }
 .badge.-red {
@@ -42,5 +42,5 @@
   display: block;
   width: 16px;
   height: 16px;
-  fill: var(--white);
+  fill: hsl(0deg, 100%, 100%);
 }

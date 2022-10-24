@@ -3,7 +3,7 @@
   align-items: center;
   width: 100%;
   padding: 1rem;
-  border: .0625rem solid var(--black);
+  border: 0.0625rem solid hsl(0deg, 0%, 20%);
 }
 @media print, screen and (min-width:64.0625em) {
   .avatar {
@@ -17,7 +17,7 @@
 }
 .avatar > .profile-photo {
   display: block;
-  clip-path: circle(50%);
+  border-radius: 50%;
 }
 @media print, screen and (min-width:48em) {
   .avatar > .profile-photo {
@@ -26,13 +26,15 @@
   }
 }
 .avatar .name {
-  font-size: large;
+  font-size: 1.1428571429rem;
   font-weight: bold;
 }
 .avatar .introduction {
   margin-top: 1rem;
 }
 .avatar .link {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   text-decoration: underline;
 }
@@ -50,10 +52,16 @@
   text-decoration: none;
 }
 @media screen and (max-width:47.96875em) {
-  .avatar.-full > .profile-photo, .avatar.-half > .profile-photo, .avatar.-one-third > .profile-photo {
-    width: 5rem;
-    height: 5rem;
+  .avatar.-full > .profile-photo {
+    width: 6rem;
+    height: 6rem;
   }
+  .avatar.-full .introduction {
+    font-size: var(--font-size-b);
+  }
+}
+.avatar.-full > .profile-photo {
+  margin: 0.125rem;
 }
 .avatar.-half {
   width: 50%;
@@ -66,9 +74,30 @@
     text-align: center;
   }
 }
+@media screen and (max-width:47.96875em) {
+  .avatar.-half > .profile-photo {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  .avatar.-half .introduction {
+    font-size: var(--font-size-b);
+  }
+}
 .avatar.-one-third {
   flex-direction: column;
   width: 33.3333333333%;
+}
+@media screen and (max-width:47.96875em) {
+  .avatar.-one-third > .profile-photo {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .avatar.-one-third .name {
+    font-size: var(--font-size-b);
+  }
+  .avatar.-one-third .introduction {
+    font-size: var(--font-size-b);
+  }
 }
 .avatar.-one-third .name {
   text-align: center;
@@ -77,8 +106,21 @@
 .avatar-wrap {
   display: flex;
   justify-content: space-between;
-  gap: .5rem;
+  gap: 0.5rem;
 }
-.avatar-wrap .avatar {
-  width: calc(33.3333333333% - .5rem);
+@media print, screen and (min-width:64.0625em) {
+  .avatar-wrap .avatar.-half {
+    width: calc(50% - 1.5rem);
+  }
+  .avatar-wrap .avatar.-one-third {
+    width: calc(33.3333333333% - 1.5rem);
+  }
+}
+@media screen and (max-width:64em) {
+  .avatar-wrap .avatar.-half {
+    width: calc(50% - 0.5rem);
+  }
+  .avatar-wrap .avatar.-one-third {
+    width: calc(33.3333333333% - 0.5rem);
+  }
 }

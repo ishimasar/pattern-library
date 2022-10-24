@@ -27,7 +27,7 @@
   border-left: 1px solid var(--border-color);
   text-align: center;
   text-decoration: none;
-  color: var(--black);
+  color: hsla(0, 0%, 20%, 1);
   border-radius: 5px 5px 0 0;
   @include setting.mq(tb-dth) {
     width: auto;
@@ -36,7 +36,7 @@
     &:hover,
     &:focus {
       background: hsla(0, 0%, 47%, 1);
-      color: var(--white);
+      color: hsla(0, 100%, 100%, 1);
       /* fade-in effect */
       /* transition: background-color .25s ease, color .25s ease; */
     }
@@ -49,8 +49,8 @@
 
   /* 選択されているタブのスタイル */
   &[aria-selected] {
-    background: var(--black);
-    color: var(--white);
+    background: hsla(0, 0%, 20%, 1);
+    color: hsla(0, 100%, 100%, 1);
   }
 }
 @include setting.mq(sp) {
@@ -63,7 +63,7 @@
   height: fit-content;
   min-height: 150px;
   border: 1px solid var(--border-color);
-  color: var(--black);
+  color: hsla(0, 0%, 20%, 1);
   overflow: hidden;
 }
 .tabpanel {
@@ -96,5 +96,5 @@
   max-width: 60rem;
   margin: 2rem auto;
   padding: 1rem 2rem;
-  border: 1px solid var(--black);
+  border: 1px solid hsla(0, 0%, 20%, 1);
 }

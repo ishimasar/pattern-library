@@ -8,8 +8,8 @@
   height: 1px;
   background-image: linear-gradient(
     to right,
-    var(--contrast-limit-gray),
-    var(--contrast-limit-gray) 3px,
+    hsla(0, 0%, 47%, 1),
+    hsla(0, 0%, 47%, 1) 3px,
     transparent 3px,
     transparent 8px
   );
@@ -26,8 +26,8 @@
   width: 9px;
   height: 9px;
   margin-left: 0.5rem;
-  border-top: 1.5px solid var(--black);
-  border-right: 1.5px solid var(--black);
+  border-top: 1.5px solid hsla(0, 0%, 20%, 1);
+  border-right: 1.5px solid hsla(0, 0%, 20%, 1);
   transform: rotate(-45deg);
 }
 .shape-arrow-right::after {
@@ -37,8 +37,8 @@
   width: 9px;
   height: 9px;
   margin-left: 0.5rem;
-  border-top: 1.5px solid var(--black);
-  border-right: 1.5px solid var(--black);
+  border-top: 1.5px solid hsla(0, 0%, 20%, 1);
+  border-right: 1.5px solid hsla(0, 0%, 20%, 1);
   transform: rotate(45deg);
 }
 .shape-arrow-bottom::after {
@@ -49,8 +49,8 @@
   width: 9px;
   height: 9px;
   margin-left: 0.5rem;
-  border-top: 1.5px solid var(--black);
-  border-right: 1.5px solid var(--black);
+  border-top: 1.5px solid hsla(0, 0%, 20%, 1);
+  border-right: 1.5px solid hsla(0, 0%, 20%, 1);
   transform: rotate(135deg);
 }
 .shape-arrow-left::after {
@@ -60,7 +60,7 @@
   width: 9px;
   height: 9px;
   margin-left: 0.5rem;
-  border-top: 1.5px solid var(--black);
-  border-right: 1.5px solid var(--black);
+  border-top: 1.5px solid hsla(0, 0%, 20%, 1);
+  border-right: 1.5px solid hsla(0, 0%, 20%, 1);
   transform: rotate(-135deg);
 }

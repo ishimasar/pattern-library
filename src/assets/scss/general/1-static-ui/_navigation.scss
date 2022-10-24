@@ -4,7 +4,7 @@
   @include setting.mq(sp) {
     width: 100%;
     border-top: 1px solid var(--line-color);
-    background-color: var(--white);
+    background-color: hsla(0, 100%, 100%, 1);
   }
   & .nav-list {
     display: flex;
@@ -15,12 +15,12 @@
     > li {
       width: 25%;
       &:first-of-type {
-        border: 1px solid var(--black);
+        border: 1px solid hsla(0, 0%, 20%, 1);
       }
       &:not(:first-of-type) {
-        border-top: 1px solid var(--black);
-        border-right: 1px solid var(--black);
-        border-bottom: 1px solid var(--black);
+        border-top: 1px solid hsla(0, 0%, 20%, 1);
+        border-right: 1px solid hsla(0, 0%, 20%, 1);
+        border-bottom: 1px solid hsla(0, 0%, 20%, 1);
       }
     }
   }
@@ -130,7 +130,7 @@
 .breadcrumb-container {
   width: 100%;
   border-top: 1px solid var(--line-color);
-  background-color: var(--white);
+  background-color: hsla(0, 100%, 100%, 1);
 }
 .breadcrumb-list {
   width: 100%;

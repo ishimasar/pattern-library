@@ -35,7 +35,6 @@ $screen: (
   @if (type-of($number) == "number" and not unitless($number)) {
     @return $number;
   }
-
   @return $number / ($number * 0 + 1);
 }
 
@@ -66,46 +65,16 @@ $screen: (
 }
 
 /* fluid size */
-@mixin flsz(
-  $max-font-size,
-  $min-font-size,
-  $max-viewport,
-  $min-viewport,
-  $property: "font-size"
-) {
-  $maxvw: 0;
-  $minvw: 0;
-
-  @if (type-of($max-viewport) ==number) {
-    $maxvw: $max-viewport;
-  }
-
-  @if (type-of($min-viewport) ==number) {
-    $minvw: $min-viewport;
-  }
-
+@mixin flsz($max-font-size, $min-font-size, $max-viewport, $min-viewport, $property: "font-size") {
   @each $key, $value in $screen {
-    @if (($key==$max-viewport) and ($maxvw==0)) {
+    @if (($key == $max-viewport) and ($maxvw == 0)) {
       $maxvw: $value;
     }
 
-    @if (($key==$min-viewport) and ($minvw==0)) {
+    @if (($key == $min-viewport) and ($minvw == 0)) {
       $minvw: $value;
     }
   }
-
-  $x: $minvw / 100;
-  $y: 100 * ($max-font-size - $min-font-size) / ($maxvw - $minvw);
-  $z: $min-font-size;
-
-  @if ($px2rem) {
-    $z: px2rem($z);
-  }
-
-  #{$property}: $z;
-
-  $maxmq: px2em($maxvw + 1);
-  $minmq: px2em($minvw + 1);
 
   @media (min-width: #{$minmq}) {
     #{$property}: calc(#{$z} + ((1vw - #{$x}) * #{strip-unit($y)}));
@@ -114,4 +83,27 @@ $screen: (
   @media (min-width: #{$maxmq}) {
     #{$property}: $max-font-size;
   }
+
+  @if (type-of($max-viewport) == number) {
+    $maxvw: $max-viewport;
+  }
+
+  @if (type-of($min-viewport) == number) {
+    $minvw: $min-viewport;
+  }
+
+  @if ($px2rem) {
+    $z: px2rem($z);
+  }
+  $maxvw: 0;
+  $minvw: 0;
+
+  $x: $minvw / 100;
+  $y: 100 * ($max-font-size - $min-font-size) / ($maxvw - $minvw);
+  $z: $min-font-size;
+
+  #{$property}: $z;
+
+  $maxmq: px2em($maxvw + 1);
+  $minmq: px2em($minvw + 1);
 }

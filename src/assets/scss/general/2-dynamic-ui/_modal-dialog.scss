@@ -24,7 +24,7 @@
   &:hover,
   &:focus {
     background-color: hsla(0, 0%, 47%, 1);
-    color: var(--white);
+    color: hsla(0, 100%, 100%, 1);
   }
 }
 .dialog-panel {
@@ -38,7 +38,7 @@
   margin: auto;
   padding: 0;
   border: 2px solid var(--border-color);
-  background: var(--white);
+  background: hsla(0, 100%, 100%, 1);
   border-radius: 5px;
   &:not([open]) {
     display: block;
@@ -104,7 +104,7 @@ _:future,
   &:hover,
   &:focus {
     background-color: hsla(0, 0%, 47%, 1);
-    color: var(--white);
+    color: hsla(0, 100%, 100%, 1);
   }
 }
 .dialog-panel__close {
@@ -113,15 +113,15 @@ _:future,
   right: 1rem;
   width: 2.3rem;
   height: 2.3rem;
-  background-color: var(--black);
+  background-color: hsla(0, 0%, 20%, 1);
   font-size: 2rem;
-  color: var(--white);
+  color: hsla(0, 100%, 100%, 1);
   border-radius: 50%;
   &:hover,
   &:focus {
     border: 1px solid hsla(0, 0%, 47%, 1);
-    background-color: var(--white);
-    color: var(--black);
+    background-color: hsla(0, 100%, 100%, 1);
+    color: hsla(0, 0%, 20%, 1);
     > .positioning {
       line-height: 1.9rem;
     }

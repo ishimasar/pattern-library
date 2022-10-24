@@ -5,14 +5,14 @@
   position: relative;
   width: 12.5rem;
   height: 4rem;
-  border: 2px solid var(--black);
+  border: 2px solid hsla(0, 0%, 20%, 1);
   text-align: center;
   text-decoration: none;
   transition: all 0.3s;
   &:hover,
   &:focus {
     background-color: hsla(0, 0%, 47%, 1);
-    color: var(--white);
+    color: hsla(0, 100%, 100%, 1);
     transition: all 0.3s;
   }
 }
@@ -76,7 +76,7 @@
 .double-door-effect {
   z-index: 2;
   border: 2px solid hsla(207, 96%, 33%, 1);
-  color: var(--white);
+  color: hsla(0, 100%, 100%, 1);
   &:before,
   &:after {
     content: "";
@@ -99,7 +99,7 @@
   &:hover,
   &:focus {
     border-color: hsla(207, 96%, 33%, 1);
-    background-color: var(--white);
+    background-color: hsla(0, 100%, 100%, 1);
     color: hsla(207, 96%, 33%, 1);
     &:before,
     &:after {

@@ -132,6 +132,11 @@ module.exports = {
       },
       {
         type: 'at-rule',
+        name: 'return',
+        hasBlock: true,
+      },
+      {
+        type: 'at-rule',
         name: 'if',
         hasBlock: true,
       },

@@ -14,7 +14,7 @@
   display: block;
   position: relative;
   padding: 1rem 2rem;
-  border: 0.0625rem solid var(--black);
+  border: 0.0625rem solid hsla(0, 0%, 20%, 1);
   line-height: 2;
   border-radius: 0.5rem;
   &.-left-arrow::after {
@@ -26,8 +26,8 @@
     height: 1.25rem;
     margin-bottom: 0.0625rem;
     border: 0.0625rem solid;
-    border-color: var(--black) transparent transparent var(--black);
-    background-color: var(--white);
+    border-color: hsla(0, 0%, 20%, 1) transparent transparent hsla(0, 0%, 20%, 1);
+    background-color: hsla(0, 100%, 100%, 1);
     transform: rotate(315deg) skew(15deg, 15deg) translateY(-50%);
   }
   &.-right-arrow::after {
@@ -39,8 +39,8 @@
     height: 1.25rem;
     margin-bottom: 0.0625rem;
     border: 0.0625rem solid;
-    border-color: transparent var(--black) var(--black) transparent;
-    background-color: var(--white);
+    border-color: transparent hsla(0, 0%, 20%, 1) hsla(0, 0%, 20%, 1) transparent;
+    background-color: hsla(0, 100%, 100%, 1);
     transform: rotate(315deg) skew(15deg, 15deg) translateY(-50%);
   }
   &.-bottom-arrow::after {
@@ -52,8 +52,8 @@
     height: 1.25rem;
     margin-bottom: 0.0625rem;
     border: 0.0625rem solid;
-    border-color: transparent var(--black) var(--black) transparent;
-    background-color: var(--white);
+    border-color: transparent hsla(0, 0%, 20%, 1) hsla(0, 0%, 20%, 1) transparent;
+    background-color: hsla(0, 100%, 100%, 1);
     transform: rotate(45deg) skew(15deg, 15deg) translate(-50%);
   }
   &.-bottom-left-arrow::after {
@@ -65,8 +65,8 @@
     height: 1.25rem;
     margin-bottom: 0.0625rem;
     border: 0.0625rem solid;
-    border-color: transparent var(--black) var(--black) transparent;
-    background-color: var(--white);
+    border-color: transparent hsla(0, 0%, 20%, 1) hsla(0, 0%, 20%, 1) transparent;
+    background-color: hsla(0, 100%, 100%, 1);
     transform: rotate(45deg) skew(15deg, 15deg) translate(-50%);
   }
   &.-bottom-right-arrow::after {
@@ -78,8 +78,8 @@
     height: 1.25rem;
     margin-bottom: 0.0625rem;
     border: 0.0625rem solid;
-    border-color: transparent var(--black) var(--black) transparent;
-    background-color: var(--white);
+    border-color: transparent hsla(0, 0%, 20%, 1) hsla(0, 0%, 20%, 1) transparent;
+    background-color: hsla(0, 100%, 100%, 1);
     transform: rotate(45deg) skew(15deg, 15deg) translate(-50%);
   }
 }

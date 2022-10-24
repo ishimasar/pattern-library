@@ -20,7 +20,7 @@
 }
 
 .accordion-all-button {
-  border: 1px solid var(--black);
+  border: 1px solid hsla(0, 0%, 20%, 1);
   border-radius: 5px;
   @include setting.mq(sp-tb) {
     width: 43%;
@@ -32,8 +32,8 @@
     transition: var(--out-transition);
     &:hover,
     &:focus {
-      background-color: var(--black);
-      color: var(--white);
+      background-color: hsla(0, 0%, 20%, 1);
+      color: hsla(0, 100%, 100%, 1);
       transition: var(--in-transition);
     }
   }
@@ -52,7 +52,7 @@
     cursor: not-allowed;
     &:hover,
     &:focus {
-      background-color: var(--white);
+      background-color: hsla(0, 100%, 100%, 1);
       color: hsla(0, 0%, 40%, 1);
       box-shadow: 1px 1px 3px 2px hsla(0, 0%, 0%, 0.3) inset;
     }
@@ -61,7 +61,7 @@
 
 .accordion-list > li {
   background-color: hsla(0, 0%, 85%, 1);
-  color: var(--black);
+  color: hsla(0, 0%, 20%, 1);
   &:not(:last-of-type) {
     margin-bottom: 0.25rem;
   }
@@ -88,18 +88,18 @@
       &:hover,
       &:focus {
         padding: calc(1.5rem - 0.0625rem);
-        border: 0.0625rem solid var(--black);
+        border: 0.0625rem solid hsla(0, 0%, 20%, 1);
         font-weight: bold;
       }
     }
     @include setting.mq(sp-tb) {
       &:before {
-        @include setting.triangle(11, 13, right, var(--black));
+        @include setting.triangle(11, 13, right, hsla(0, 0%, 20%, 1));
       }
     }
     @include setting.mq(dt) {
       &:before {
-        @include setting.triangle(13, 15, right, var(--black));
+        @include setting.triangle(13, 15, right, hsla(0, 0%, 20%, 1));
       }
     }
     &::marker {
@@ -124,7 +124,7 @@
 .accordion-details__content {
   height: 0;
   background-color: hsla(0, 0%, 90%, 1);
-  color: var(--black);
+  color: hsla(0, 0%, 20%, 1);
   overflow: hidden;
   transition: height 0.25s var(--ease-out-quad);
   pointer-events: none;

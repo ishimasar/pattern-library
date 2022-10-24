@@ -286,7 +286,7 @@ $padding-max: 4;
     left: 0;
     width: $width;
     height: 2px;
-    background-color: var(--black);
+    background-color: hsla(0, 0%, 20%, 1);
     @if ($pos == "top") {
       top: 0;
     }

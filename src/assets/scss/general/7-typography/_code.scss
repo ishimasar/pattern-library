@@ -168,7 +168,7 @@ div.code-toolbar > .toolbar span:focus {
   display: inline-block;
   padding: 0.2rem 0.8rem;
   // border: 1px solid hsla(0, 0%, 20%, 1);
-  background-color: var(--white);
+  background-color: hsla(0, 100%, 100%, 1);
   font-size: calc(var(--font-size-c) - 0.02rem);
   font-weight: normal;
   color: hsla(0, 0%, 20%, 1);

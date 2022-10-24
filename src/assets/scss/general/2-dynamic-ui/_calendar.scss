@@ -54,7 +54,7 @@
     caption-side: top;
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--black);
+    color: hsla(0, 0%, 20%, 1);
   }
   > .table-head > tr > th {
     width: calc(100% / 7);
@@ -83,7 +83,7 @@
       padding: 0.2rem;
       background-color: hsla(229, 90%, 54%, 1);
       font-weight: bold;
-      color: var(--white);
+      color: hsla(0, 100%, 100%, 1);
       border-radius: 50%;
     }
     &.prev-month-day,

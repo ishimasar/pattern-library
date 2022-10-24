@@ -7,10 +7,10 @@
   color: hsla(214, 85%, 36%, 1);
   overflow: hidden;
   border-radius: 50%;
-  -webkit-mask-image: linear-gradient(transparent 50%, var(--black) 50%),
-    linear-gradient(to right, transparent 50%, var(--black) 50%);
-  mask-image: linear-gradient(transparent 50%, var(--black) 50%),
-    linear-gradient(to right, transparent 50%, var(--black) 50%);
+  -webkit-mask-image: linear-gradient(transparent 50%, hsla(0, 0%, 20%, 1) 50%),
+    linear-gradient(to right, transparent 50%, hsla(0, 0%, 20%, 1) 50%);
+  mask-image: linear-gradient(transparent 50%, hsla(0, 0%, 20%, 1) 50%),
+    linear-gradient(to right, transparent 50%, hsla(0, 0%, 20%, 1) 50%);
   animation: loading-spinner-mask 6s infinite cubic-bezier(0.3, 0.6, 1, 1);
 }
 .loading-spinner::before {

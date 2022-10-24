@@ -60,7 +60,7 @@
   align-items: center;
   height: 50vh;
   padding: 2rem;
-  background-color: var(--white);
+  background-color: hsla(0, 100%, 100%, 1);
   &.light-theme {
     background: hsla(0, 0%, 100%, 1);
     color: hsla(0, 0%, 20%, 1);
