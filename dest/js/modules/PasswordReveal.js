@@ -11,6 +11,7 @@ export class PasswordRevealCheckbox {
   }
 
   onShowPassword() {
+    console.log(this.password, this.showPassword);
     const type = this.showPassword.checked ? 'text' : 'password';
     this.password.setAttribute('type', type);
   }

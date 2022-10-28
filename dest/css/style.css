@@ -5000,7 +5000,7 @@ typewritten-text:not(.active) .typewritten-text_start::after {
   top: 1rem;
   left: 1rem;
   line-height: 1;
-  font-family: Font Awesome 5 Free, sans-serif;
+  font-family: "Font Awesome 5 Free", sans-serif;
   font-size: calc(var(--font-size-g));
   font-weight: 900;
   color: hsl(0deg, 0%, 69%);
@@ -5262,16 +5262,6 @@ div.code-toolbar > .toolbar span:focus {
   color: inherit;
 }
 
-.code-highliter-prism span:not([class*=token]),
-.code-highliter-prism span:not([class=line-numbers-rows]),
-.code-highliter-prism span:not([class=file-name]) {
-  display: inline-block;
-  padding: 0.2rem 0.8rem;
-  background-color: hsl(0deg, 100%, 100%);
-  font-size: calc(var(--font-size-c) - 0.02rem);
-  font-weight: normal;
-  color: hsl(0deg, 0%, 20%);
-}
 .code-highliter-prism span:not([class*=token]):not(:first-of-type),
 .code-highliter-prism span:not([class=line-numbers-rows]):not(:first-of-type),
 .code-highliter-prism span:not([class=file-name]):not(:first-of-type) {

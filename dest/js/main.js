@@ -127,7 +127,7 @@ const elem = document.querySelectorAll('.toc');
 elem;
 
 const passwordRevealCheckbox = new PasswordRevealCheckbox('.js-display-pass', 'js-show-pass');
-passwordRevealCheckbox.onShowPassword();
+passwordRevealCheckbox;
 
 const passwordRevealButtun = new PasswordRevealButton('js-input', 'js-reveal-btn');
-passwordRevealButtun.onButtonClick();
+passwordRevealButtun;
