@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/ishimasar/.volta/tools/image/node/14.20.1/bin/node /Users/ishimasar/.yarn/bin/yarn.js add stylelint-config-recommended-scss
+  /Users/ishimasar/.volta/tools/image/node/14.20.1/bin/node /Users/ishimasar/.yarn/bin/yarn.js add markuplint
 
 PATH: 
   /Users/ishimasar/.volta/tools/image/npm/8.19.2/bin:/Users/ishimasar/.volta/tools/image/yarn/1.22.18/bin:/Users/ishimasar/.volta/tools/image/node/14.20.1/bin:/Users/ishimasar/.pyenv/shims:/Users/ishimasar/.pyenv/bin:/Users/ishimasar/.pyenv/bin:/Users/ishimasar/.yarn/bin:/Users/ishimasar/.config/yarn/global/node_modules/.bin:/Users/ishimasar/.volta/bin:/opt/homebrew/opt/openssl@1.1/bin:/Users/ishimasar/.rbenv/shims:/Users/ishimasar/.rbenv/bin:/opt/homebrew/bin:/opt/homebrew/opt/openssl@1.1/bin:/opt/homebrew/opt/openssl@1.1/bin:/usr/local/opt/postgresql@11/bin:/usr/local/opt/openssl@1.1/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/ishimasar/.pyenv/bin:/Users/ishimasar/opt/anaconda3/condabin:/Users/ishimasar/.yarn/bin:/Users/ishimasar/.config/yarn/global/node_modules/.bin:/Users/ishimasar/.volta/bin:/opt/homebrew/opt/openssl@1.1/bin:/Users/ishimasar/.rbenv/shims:/Users/ishimasar/.rbenv/bin:/opt/homebrew/bin:/usr/local/opt/postgresql@11/bin:/usr/local/opt/openssl@1.1/bin
@@ -33,9 +33,12 @@ npm manifest:
     "description": "Webサイト・アプリ制作で使用されるUIやスタイルのコード見本・サンプル集です。   コーディングの参考、UI等の設計・作成方針の土台にでき、その上で作業効率にも寄与できるようなものを目指します。",
     "main": "index.js",
     "scripts": {
-      "lint:eslint": "eslint",
-      "lint:css": "stylelint",
-      "fix:css": "stylelint --fix"
+      "hint:html": "htmlhint",
+      "lint:html": "markuplint **/*.html",
+      "lint:style": "stylelint",
+      "fix:style": "stylelint --fix",
+      "lint:es": "eslint",
+      "fix:es": "eslint --fix"
     },
     "author": "ishimasar <ishimasar1106@gmail.com>",
     "license": "ISC",
