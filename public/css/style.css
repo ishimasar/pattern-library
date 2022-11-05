@@ -3573,6 +3573,9 @@ input[type=password]::-ms-reveal {
   border: 0.0625rem solid hsl(0deg, 0%, 20%);
   line-height: 1.2;
   box-shadow: 0.0625rem 0.0625rem 2px 0.0625rem hsla(0deg, 0%, 0%, 0.15);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 @media print, screen and (min-width:64.0625em) {
   .selectbox {

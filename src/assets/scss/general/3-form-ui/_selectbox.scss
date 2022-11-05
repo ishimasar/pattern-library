@@ -49,6 +49,7 @@
   border: 0.0625rem solid hsla(0, 0%, 20%, 1);
   line-height: 1.2;
   box-shadow: 0.0625rem 0.0625rem 2px 0.0625rem hsla(0, 0%, 0%, 0.15);
+  appearance: none;
   @include setting.mq(dt) {
     width: 75%;
     padding: 0.65rem 1rem;
