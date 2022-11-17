@@ -3,41 +3,41 @@
   position: relative;
   width: auto;
   vertical-align: bottom;
-}
-
-.nav {
-  display: inline-block;
-  padding: 16px;
-  border: 1px dashed hsla(0, 0%, 47%, 1);
-  line-height: 1.5;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  inset-block-start: -12px;
-  inset-inline-end: -12px;
-  min-width: 26px;
-  min-height: 24px;
-  padding: 1px 9px;
-  color: hsla(0, 100%, 100%, 1);
-  border-radius: 50px;
-  &.-red {
-    background-color: hsla(0, 100%, 40%, 1);
+  > .link,
+  > .b-button {
+    display: inline-block;
+    width: 7.5rem;
+    padding: 17px;
+    border: 1px dashed hsla(0, 0%, 47%, 1);
+    text-align: center;
+    line-height: 1.5;
   }
-  &.-blue {
-    background-color: hsla(229, 73%, 19%, 1);
-  }
-  &.-icon-adj {
-    padding: 1px 5px;
-    .badge-image {
-      height: 24px;
+  & .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset-block-start: -12px;
+    inset-inline-end: -12px;
+    min-width: 26px;
+    min-height: 24px;
+    padding: 1px 9px;
+    color: hsla(0, 100%, 100%, 1);
+    border-radius: 50px;
+    &.-red {
+      background-color: hsla(0, 100%, 40%, 1);
+    }
+    &.-blue {
+      background-color: hsla(229, 73%, 19%, 1);
+    }
+    &.-icon-adj {
+      padding: 1px 5px;
+      .badge-image {
+        height: 24px;
+      }
     }
   }
 }
-
 .badge-image {
   display: block;
   width: 16px;

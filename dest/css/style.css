@@ -863,15 +863,16 @@ section:focus-visible {
   width: auto;
   vertical-align: bottom;
 }
-
-.nav {
+.badge-relative > .link,
+.badge-relative > .b-button {
   display: inline-block;
-  padding: 16px;
+  width: 7.5rem;
+  padding: 17px;
   border: 1px dashed hsl(0deg, 0%, 47%);
+  text-align: center;
   line-height: 1.5;
 }
-
-.badge {
+.badge-relative .badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -884,16 +885,16 @@ section:focus-visible {
   color: hsl(0deg, 100%, 100%);
   border-radius: 50px;
 }
-.badge.-red {
+.badge-relative .badge.-red {
   background-color: hsl(0deg, 100%, 40%);
 }
-.badge.-blue {
+.badge-relative .badge.-blue {
   background-color: hsl(229deg, 73%, 19%);
 }
-.badge.-icon-adj {
+.badge-relative .badge.-icon-adj {
   padding: 1px 5px;
 }
-.badge.-icon-adj .badge-image {
+.badge-relative .badge.-icon-adj .badge-image {
   height: 24px;
 }
 
