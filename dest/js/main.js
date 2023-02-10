@@ -3,6 +3,7 @@ import { calendar } from './modules/Calendar.js';
 import { Carousel } from './modules/Carousel.js';
 import { currentLocation } from './modules/CurrentLocation.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
+import { DropDownList } from './modules/DropDownList.js';
 import { drawerMenu } from './modules/DrawerMenu.js';
 import { ModalDialog } from './modules/ModalDialog.js';
 import { scrollSmooth } from './modules/SmoothScroll.js';
@@ -79,6 +80,9 @@ const displayScreenData = new DisplayScreenData('pageTop');
 displayScreenData.addElement();
 displayScreenData.displayData();
 
+const dropDownList = new DropDownList('.js-dropdown-list > li');
+dropDownList.onClick();
+
 const openButton = document.querySelector('.js-open-drawer') ? drawerMenu() : false;
 openButton;
 
@@ -92,7 +96,7 @@ rangeSlider.changeRangeNum();
 const rangeSliderScale = new RangeSlider('something', 'something-value');
 rangeSliderScale.changeRangeNum();
 
-const stepper = new Stepper('.js-stepper-next', '.js-stepper-back');
+const stepper = new Stepper('.js-step', '.js-stepper-next', '.js-stepper-back');
 stepper.stepNext();
 stepper.stepBack();
 stepper.stepPhase();

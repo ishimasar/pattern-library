@@ -569,7 +569,7 @@ $padding-max: 4;
 // #### 三角形
 @mixin triangle($width, $height, $pos, $color) {
   content: "";
-  display: block;
+  display: inline-block;
   width: 0;
   height: 0;
   border-style: solid;
@@ -753,4 +753,11 @@ $padding-max: 4;
   height: $size + rem;
   background-color: $color;
   border-radius: 50%;
+}
+
+@mixin divider($height, $color, $length, $line) {
+  width: 100%;
+  height: $height + px;
+  background-image: linear-gradient(to right, $color, $color 3px, transparent 3px, transparent 8px);
+  background-size: ($length + px) ($line + px);
 }

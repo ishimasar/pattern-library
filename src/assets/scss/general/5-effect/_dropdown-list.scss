@@ -1,0 +1,72 @@
+@use "../../base/setting";
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav-container > li {
+  position: relative;
+  width: calc(90vw / 3);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  &:last-of-type {
+    border-right: 1px solid var(--border-color);
+  }
+}
+
+.nav-container > li > button {
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  padding: .75rem;
+  text-align: center;
+}
+
+.dropdown-trigger {
+  & .triangle-bottom.ml16-after::after {
+    display: inline-block;
+    margin-left: 16px;
+    @include setting.triangle(14, 12, bottom, hsla(0, 0%, 20%, 1));
+  }
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  top: 43px;
+  background-color: hsla(0, 0%, 91%, 1);
+  width: 100%;
+  line-height: 2.75rem;
+  text-align: left;
+  font-weight: 400;
+}
+
+.dropdown-list[aria-hidden=true] {
+  display: none;
+}
+
+.dropdown-list[aria-hidden=false] {
+  display: block;
+}
+
+.dropdown-list > li a {
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  padding-left: 1.5rem;
+  box-sizing: border-box;
+  &.shape-arrow-right.ml12-after::after {
+    margin-left: 12px;
+  }
+}
+
+.dropdown-list > li:not(:first-of-type) {
+  border-top: 1px dotted hsla(0, 0%, 77%, 1);
+}
+
+.dropdown-list > li > a:hover {
+  background-color: hsla(0, 0%, 77%, 1);
+}

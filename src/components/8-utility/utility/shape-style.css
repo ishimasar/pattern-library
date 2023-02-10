@@ -12,3 +12,52 @@
   background-image: linear-gradient(to right, var(--contrast-limit-gray), var(--contrast-limit-gray) 3px, transparent 3px, transparent 8px);
   background-size: 5px 2px;
 }
+
+.shape-arrow-top::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 9px;
+  height: 9px;
+  margin-left: 0.5rem;
+  border-top: 1.5px solid hsl(0deg, 0%, 20%);
+  border-right: 1.5px solid hsl(0deg, 0%, 20%);
+  transform: rotate(-45deg);
+}
+
+.shape-arrow-right::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 9px;
+  height: 9px;
+  margin-left: 0.5rem;
+  border-top: 1.5px solid hsl(0deg, 0%, 20%);
+  border-right: 1.5px solid hsl(0deg, 0%, 20%);
+  transform: rotate(45deg);
+}
+
+.shape-arrow-bottom::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -0.2em;
+  width: 9px;
+  height: 9px;
+  margin-left: 0.5rem;
+  border-top: 1.5px solid hsl(0deg, 0%, 20%);
+  border-right: 1.5px solid hsl(0deg, 0%, 20%);
+  transform: rotate(135deg);
+}
+
+.shape-arrow-left::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 9px;
+  height: 9px;
+  margin-left: 0.5rem;
+  border-top: 1.5px solid hsl(0deg, 0%, 20%);
+  border-right: 1.5px solid hsl(0deg, 0%, 20%);
+  transform: rotate(-135deg);
+}/*# sourceMappingURL=style.css.map */
