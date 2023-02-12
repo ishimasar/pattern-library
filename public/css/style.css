@@ -3783,6 +3783,9 @@ input[type=range]:active::-webkit-slider-thumb {
   padding: 0.75rem;
   text-align: center;
 }
+.nav-container > li > button:hover, .nav-container > li > button:focus {
+  background-color: hsla(0deg, 0%, 77%, 0.3);
+}
 
 .dropdown-trigger .triangle-bottom.ml16-after::after {
   display: inline-block;
@@ -3802,7 +3805,7 @@ input[type=range]:active::-webkit-slider-thumb {
 .dropdown-list {
   display: none;
   position: absolute;
-  top: 43px;
+  top: 44px;
   background-color: hsl(0deg, 0%, 91%);
   width: 100%;
   line-height: 2.75rem;
@@ -3833,7 +3836,7 @@ input[type=range]:active::-webkit-slider-thumb {
   border-top: 1px dotted hsl(0deg, 0%, 77%);
 }
 
-.dropdown-list > li > a:hover {
+.dropdown-list > li > a:hover, .dropdown-list > li > a:focus {
   background-color: hsl(0deg, 0%, 77%);
 }
 

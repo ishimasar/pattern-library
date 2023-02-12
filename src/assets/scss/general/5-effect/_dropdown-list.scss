@@ -23,6 +23,10 @@
   margin: auto;
   padding: .75rem;
   text-align: center;
+  &:hover,
+  &:focus {
+    background-color: hsla(0, 0%, 77%, .3);
+  }
 }
 
 .dropdown-trigger {
@@ -36,7 +40,7 @@
 .dropdown-list {
   display: none;
   position: absolute;
-  top: 43px;
+  top: 44px;
   background-color: hsla(0, 0%, 91%, 1);
   width: 100%;
   line-height: 2.75rem;
@@ -67,6 +71,9 @@
   border-top: 1px dotted hsla(0, 0%, 77%, 1);
 }
 
-.dropdown-list > li > a:hover {
-  background-color: hsla(0, 0%, 77%, 1);
+.dropdown-list > li > a {
+  &:hover,
+  &:focus {
+    background-color: hsla(0, 0%, 77%, 1);
+  }
 }
