@@ -69,16 +69,12 @@
 }
 
 .dropdown-list[aria-hidden=true] {
-  animation: fadeOut .2s var(--ease-out-quad) 1 forwards;
-  @keyframes fadeOut{
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-  }
+  display: none;
 }
 
 .dropdown-list[aria-hidden=false] {
   display: block;
-  animation: fadeIn .25s var(--ease-in-quad) 1 forwards;
+  animation: fadeIn .15s var(--ease-in-quad) 1 forwards;
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }

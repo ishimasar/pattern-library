@@ -39,7 +39,6 @@ export class DropDownList {
           this.startingPoints[i].setAttribute('aria-pressed', 'false');
           this.dropDownList[i].setAttribute('aria-hidden', 'true');
         }
-        this.flg = true;
       });
     }
   }
