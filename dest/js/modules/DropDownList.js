@@ -38,6 +38,7 @@ export class DropDownList {
         if(e.target.closest('.js-dropdown-list') === null) {
           this.startingPoints[i].setAttribute('aria-pressed', 'false');
           this.dropDownList[i].setAttribute('aria-hidden', 'true');
+          this.dropDownList[i].firstElementChild.removeAttribute('tabindex');
         }
       });
     }
