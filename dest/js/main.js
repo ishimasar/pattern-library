@@ -3,7 +3,7 @@ import { calendar } from './modules/Calendar.js';
 import { Carousel } from './modules/Carousel.js';
 import { currentLocation } from './modules/CurrentLocation.js';
 import { DisplayScreenData } from './modules/DisplayScreenData.js';
-// import { DropDownList } from './modules/DropDownList.js';
+import { DropDownList } from './modules/DropDownList.js';
 import { drawerMenu } from './modules/DrawerMenu.js';
 import { ModalDialog } from './modules/ModalDialog.js';
 import { scrollSmooth } from './modules/SmoothScroll.js';
@@ -80,8 +80,8 @@ const displayScreenData = new DisplayScreenData('pageTop');
 displayScreenData.addElement();
 displayScreenData.displayData();
 
-// const dropDownList = new DropDownList('.js-trigger', '.js-target');
-// dropDownList.showList();
+const dropDownList = new DropDownList('.js-trigger', '.js-target');
+dropDownList.showList();
 
 const openButton = document.querySelector('.js-open-drawer') ? drawerMenu() : false;
 openButton;
