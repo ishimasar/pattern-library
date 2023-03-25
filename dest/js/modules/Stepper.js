@@ -2,8 +2,8 @@
  * Stepper UI class
  */
 export class Stepper {
-  constructor(next, back) {
-    this.indicaters = document.querySelectorAll('.js-step');
+  constructor(step, next, back) {
+    this.indicaters = document.querySelectorAll(step);
     this.next = document.querySelectorAll(next);
     this.back = document.querySelectorAll(back);
     this.label = document.querySelector('.stepper-contents .label');
@@ -19,8 +19,8 @@ export class Stepper {
         'click',
         (e) => {
           e.preventDefault();
-          this.container[i].setAttribute('aria-hidden', 'true');
-          this.container[i + 1].setAttribute('aria-hidden', 'false');
+          this.containerArray[i].setAttribute('aria-hidden', 'true');
+          this.containerArray[i + 1].setAttribute('aria-hidden', 'false');
           this.indicaters[i].removeAttribute('aria-current');
           this.indicaters[i + 1].setAttribute('aria-current', 'step');
         },
@@ -36,8 +36,8 @@ export class Stepper {
         'click',
         (e) => {
           e.preventDefault();
-          this.container[i].setAttribute('aria-hidden', 'true');
-          this.container[i - 1].setAttribute('aria-hidden', 'false');
+          this.containerArray[i].setAttribute('aria-hidden', 'true');
+          this.containerArray[i - 1].setAttribute('aria-hidden', 'false');
           this.indicaters[i].removeAttribute('aria-current');
           this.indicaters[i - 1].setAttribute('aria-current', 'step');
         },
