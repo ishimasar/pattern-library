@@ -47,11 +47,11 @@ export class Tab {
 
         for (let i = 0; i < this.tabs.length; i++) {
           // tabがaria-selected="true"を持ち、選択状態を示す場合
-          if (this.tabs[i].hasAttribute('aria-selected', 'true')) {
+          if (this.tabs[i].hasAttributes('aria-selected', 'true')) {
             // そのtabからaria-selected="true"を削除して非選択状態を示す
             this.tabs[i].removeAttribute('aria-selected', 'true');
           }
-          if (this.tabPanels[i].hasAttribute('tabindex', '0')) {
+          if (this.tabPanels[i].hasAttributes('tabindex', '0')) {
             this.tabPanels[i].removeAttribute('tabindex', '0');
           }
         }
@@ -62,7 +62,7 @@ export class Tab {
 
         for (let i = 0; i < this.tabPanels.length; i++) {
           // tabpanelがaria-hidden="false"を持ち、表示を示す場合
-          if (this.tabPanels[i].hasAttribute('aria-hidden', 'false')) {
+          if (this.tabPanels[i].hasAttributes('aria-hidden', 'false')) {
             // そのtabpanelにaria-hidden="true"を付与して非表示を示す
             this.tabPanels[i].setAttribute('aria-hidden', 'true');
           }

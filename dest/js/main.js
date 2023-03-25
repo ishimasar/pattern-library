@@ -80,7 +80,7 @@ const displayScreenData = new DisplayScreenData('pageTop');
 displayScreenData.addElement();
 displayScreenData.displayData();
 
-const dropDownList = new DropDownList('.js-dropdown-list > li');
+const dropDownList = new DropDownList('.js-trigger', '.js-target');
 dropDownList.onClick();
 
 const openButton = document.querySelector('.js-open-drawer') ? drawerMenu() : false;

@@ -28,6 +28,7 @@ export class ModalDialog {
         }
       });
     }
+    this.opneflag = false;
   }
   hideDialog() {
     if(this.wrap != null) {

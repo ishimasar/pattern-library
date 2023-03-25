@@ -2002,6 +2002,7 @@ section:focus-visible {
 @media screen and (max-width:64em) {
   .accordion-details > summary:before {
     content: "";
+    display: inline-block;
     width: 0;
     height: 0;
     border-style: solid;
@@ -2015,6 +2016,7 @@ section:focus-visible {
 @media print, screen and (min-width:64.0625em) {
   .accordion-details > summary:before {
     content: "";
+    display: inline-block;
     width: 0;
     height: 0;
     border-style: solid;
@@ -3404,6 +3406,7 @@ input[type=password]::-ms-reveal {
 }
 .selectbox-container.-pulldown:after {
   content: "";
+  display: inline-block;
   width: 0;
   height: 0;
   border-style: solid;
@@ -3780,11 +3783,29 @@ input[type=range]:active::-webkit-slider-thumb {
   padding: 0.75rem;
   text-align: center;
 }
+.nav-container > li > button:hover, .nav-container > li > button:focus {
+  background-color: hsla(0deg, 0%, 77%, 0.3);
+}
+
+.dropdown-trigger .triangle-bottom.ml16-after::after {
+  display: inline-block;
+  margin-left: 16px;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+  border-top: 12px hsl(0deg, 0%, 20%) solid;
+  border-right: 7px transparent solid;
+  border-bottom: 0px transparent solid;
+  border-left: 7px transparent solid;
+}
 
 .dropdown-list {
   display: none;
   position: absolute;
-  top: 43px;
+  top: 44px;
   background-color: hsl(0deg, 0%, 91%);
   width: 100%;
   line-height: 2.75rem;
@@ -3800,19 +3821,22 @@ input[type=range]:active::-webkit-slider-thumb {
   display: block;
 }
 
-.dropdown-list > li > a {
+.dropdown-list > li a {
   display: inline-block;
   width: 100%;
   margin: auto;
   padding-left: 1.5rem;
   box-sizing: border-box;
 }
+.dropdown-list > li a.shape-arrow-right.ml12-after::after {
+  margin-left: 12px;
+}
 
 .dropdown-list > li:not(:first-of-type) {
   border-top: 1px dotted hsl(0deg, 0%, 77%);
 }
 
-.dropdown-list > li > a:hover {
+.dropdown-list > li > a:hover, .dropdown-list > li > a:focus {
   background-color: hsl(0deg, 0%, 77%);
 }
 
@@ -5422,12 +5446,6 @@ div.code-toolbar > .toolbar span:focus {
           clip-path: inset(50%);
 }
 
-.inline,
-.inline::before,
-.inline::after {
-  display: inline-block;
-}
-
 .circle-figure {
   width: 5rem;
   height: 5rem;
@@ -5492,6 +5510,7 @@ div.code-toolbar > .toolbar span:focus {
 
 .triangle-top::after {
   content: "";
+  display: inline-block;
   width: 0;
   height: 0;
   border-style: solid;
@@ -5504,6 +5523,7 @@ div.code-toolbar > .toolbar span:focus {
 
 .triangle-right::after {
   content: "";
+  display: inline-block;
   width: 0;
   height: 0;
   border-style: solid;
@@ -5516,6 +5536,7 @@ div.code-toolbar > .toolbar span:focus {
 
 .triangle-bottom::after {
   content: "";
+  display: inline-block;
   width: 0;
   height: 0;
   border-style: solid;
@@ -5528,6 +5549,7 @@ div.code-toolbar > .toolbar span:focus {
 
 .triangle-left::after {
   content: "";
+  display: inline-block;
   width: 0;
   height: 0;
   border-style: solid;
